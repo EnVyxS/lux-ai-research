@@ -1,0 +1,22 @@
+{
+  "nama": "uji_resample",
+  "waktu_utc": "2026-07-27T23:28:25Z",
+  "sidik_kode": "91f898d81d1dfa4f379e2fd1fa30468896c26ab556a66fd8bfe777a832594de4",
+  "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "simbol_diuji": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "total_beda_kolom_jumlah": 0,
+  "lolos": true
+}

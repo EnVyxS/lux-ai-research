@@ -4,6 +4,11 @@ Jebakan yang ditangani di sini: arsip Binance MENGUBAH formatnya di tengah
 sejarah. Berkas lama tidak punya baris header, berkas yang lebih baru punya.
 Membaca keduanya dengan satu aturan tetap akan menelan baris header sebagai
 data atau membuang satu baris nyata. Deteksi dilakukan atas isi, bukan tanggal.
+
+Mode `teks=True` membaca seluruh sel sebagai string apa adanya. Itu wajib untuk
+uji integritas resample: begitu harga menjadi float, penjumlahan volume tidak
+lagi eksak dan ketidakcocokan yang muncul tidak bisa dibedakan antara kesalahan
+agregasi dan kesalahan pembulatan.
 """
 from __future__ import annotations
 
@@ -46,21 +51,35 @@ def punya_header(baris_pertama: str) -> bool:
     return False
 
 
-def baca_zip(data: bytes) -> pd.DataFrame:
-    """Baca satu zip klines arsip menjadi DataFrame berkolom kanonik."""
+def csv_mentah(data: bytes) -> bytes:
+    """Ambil satu-satunya CSV di dalam zip arsip."""
     with zipfile.ZipFile(io.BytesIO(data)) as z:
         nama = [n for n in z.namelist() if n.endswith(".csv")]
         if len(nama) != 1:
             raise RuntimeError(f"zip memuat {len(nama)} csv, diharapkan tepat satu")
-        mentah = z.read(nama[0])
+        return z.read(nama[0])
 
-    baris_pertama = mentah.split(b"\n", 1)[0].decode("utf-8", "replace")
-    if punya_header(baris_pertama):
-        df = pd.read_csv(io.BytesIO(mentah))
+
+def baris_pertama(data: bytes) -> str:
+    """Baris pertama CSV di dalam zip, untuk mengukur ada tidaknya header."""
+    return csv_mentah(data).split(b"\n", 1)[0].decode("utf-8", "replace")
+
+
+def baca_zip(data: bytes, teks: bool = False) -> pd.DataFrame:
+    """Baca satu zip klines arsip menjadi DataFrame berkolom kanonik.
+
+    `teks=True` mempertahankan setiap sel sebagai string apa adanya.
+    """
+    mentah = csv_mentah(data)
+    opsi = {"dtype": str, "keep_default_na": False} if teks else {}
+
+    pertama = mentah.split(b"\n", 1)[0].decode("utf-8", "replace")
+    if punya_header(pertama):
+        df = pd.read_csv(io.BytesIO(mentah), **opsi)
         df.columns = KOLOM[: len(df.columns)]
     else:
-        jumlah = baris_pertama.count(",") + 1
-        df = pd.read_csv(io.BytesIO(mentah), header=None, names=KOLOM[:jumlah])
+        jumlah = pertama.count(",") + 1
+        df = pd.read_csv(io.BytesIO(mentah), header=None, names=KOLOM[:jumlah], **opsi)
     return df
 
 

@@ -1,0 +1,55 @@
+name: probe-serapan
+
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/**'
+      - '.github/workflows/probe_serapan.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe-serapan
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: pasang dependensi
+        run: pip install -r requirements.txt
+
+      - name: identitas git
+        run: |
+          git config user.name "lux-ci"
+          git config user.email "lux-ci@users.noreply.github.com"
+
+      - name: commit progres berkala di latar
+        run: |
+          nohup bash -c 'while true; do sleep 600; git add -A reports/ 2>/dev/null || true; git commit -m "progres probe serapan [skip ci]" >/dev/null 2>&1 || continue; git pull --rebase --autostash >/dev/null 2>&1 || true; git push >/dev/null 2>&1 || true; done' > /dev/null 2>&1 &
+          echo "pencommit progres berjalan"
+
+      - name: jalankan probe
+        run: |
+          set +e
+          python -m lux_ai.serapan.probe > probe.log 2>&1
+          kode=$?
+          set -e
+          mkdir -p reports
+          tail -c 20000 probe.log > reports/probe_serapan.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/probe_status.json
+          git add -A reports/
+          git commit -m "laporan probe serapan run ${GITHUB_RUN_ID} [skip ci]" || true
+          git pull --rebase --autostash
+          git push
+          exit $kode

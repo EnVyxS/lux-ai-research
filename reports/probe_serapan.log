@@ -1,7 +1,7 @@
 {
   "nama": "probe_serapan",
-  "waktu_utc": "2026-07-27T23:09:15Z",
-  "sidik_kode": "3198f33836635821a1470399e141b0039a5b6eff2977dd686107031fb74b6e01",
+  "waktu_utc": "2026-07-27T23:36:27Z",
+  "sidik_kode": "1db7cf1b06e1ceda65deba2a0479cc3049d0d47a90f2725c31f8dd41f13389d0",
   "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
   "akar_prefix": "data/futures/um",
   "jumlah_simbol_semesta": 937,

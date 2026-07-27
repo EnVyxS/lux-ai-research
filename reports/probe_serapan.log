@@ -1,0 +1,36 @@
+{
+  "nama": "probe_serapan",
+  "waktu_utc": "2026-07-27T23:09:15Z",
+  "sidik_kode": "3198f33836635821a1470399e141b0039a5b6eff2977dd686107031fb74b6e01",
+  "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "akar_prefix": "data/futures/um",
+  "jumlah_simbol_semesta": 937,
+  "total_berkas_bulanan_1m": 21789,
+  "simbol_gagal_listing": [],
+  "probe_dipakai": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "delisting_klaim_terbukti": [
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "delisting_klaim_dibantah": [],
+  "rerata_byte_zip_per_simbol_bulan": 1186859,
+  "rerata_byte_parquet_per_simbol_bulan": 1797488,
+  "estimasi_total_zip_gb": 25.86,
+  "estimasi_total_parquet_gb": 39.17,
+  "catatan_estimasi": "Ekstrapolasi memakai rerata simbol probe yang condong LIKUID, jadi estimasi ini kemungkinan besar TERLALU TINGGI untuk semesta penuh yang banyak memuat simbol tipis. Perlakukan sebagai batas atas kasar."
+}

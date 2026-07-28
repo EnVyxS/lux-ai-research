@@ -10,6 +10,13 @@ name: pecahan-serapan
 # tidak boleh masuk riwayat repo. Yang di-commit tetap hanya manifes, log, dan
 # status.
 #
+# KC-17: sejak pecahan.py VERSI 6 ada DUA deret tar per pecahan --
+# pecahan_<i>.partNN.tar (parquet lolos gerbang) dan
+# pecahan_<i>_karantina.partNN.tar (parquet yang gagal gerbang, disisihkan bukan
+# dibuang). Keduanya di data/rilis, dengan berkas sidik terpisah SHA256SUMS dan
+# SHA256SUMS_KARANTINA supaya pengemas kedua tidak menimpa sidik yang pertama.
+# Karena itu glob unggahan kini SHA256SUMS*, bukan SHA256SUMS.
+#
 # Matriks kini 0..7, bukan 1..7. Pecahan 0 terukur pada run 30353584831 dengan
 # kode lama yang MENGHAPUS parquet, jadi ia satu-satunya bagian semesta yang
 # belum tersimpan. Agen tidak punya alat memicu workflow_dispatch, dan hanya
@@ -76,18 +83,20 @@ jobs:
           tag="serapan-pecahan-${PECAHAN_INDEKS}-${GITHUB_RUN_ID}"
           kode_unggah=0
           cacah_aset=0
+          cacah_aset_karantina=0
           if ls data/rilis/*.tar >/dev/null 2>&1; then
             cacah_aset=$(ls data/rilis/*.tar | wc -l)
+            cacah_aset_karantina=$(ls data/rilis/*_karantina.part*.tar 2>/dev/null | wc -l)
             gh release create "$tag" \
               --title "serapan pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID}" \
-              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; jalur data/parquet/<simbol>/ pulih apa adanya. Periksa dengan sha256sum -c SHA256SUMS." \
+              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; jalur data/parquet/<simbol>/ dan data/parquet_karantina/<simbol>/ pulih apa adanya. Periksa dengan sha256sum -c SHA256SUMS dan sha256sum -c SHA256SUMS_KARANTINA." \
               || true
-            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS --clobber
+            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS* --clobber
             kode_unggah=$?
             rm -f data/rilis/*.tar
           fi
 
-          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "cacah_aset_tar_karantina": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$cacah_aset_karantina" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
 
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
@@ -132,18 +141,20 @@ jobs:
           tag="serapan-pecahan-${PECAHAN_INDEKS}-${GITHUB_RUN_ID}"
           kode_unggah=0
           cacah_aset=0
+          cacah_aset_karantina=0
           if ls data/rilis/*.tar >/dev/null 2>&1; then
             cacah_aset=$(ls data/rilis/*.tar | wc -l)
+            cacah_aset_karantina=$(ls data/rilis/*_karantina.part*.tar 2>/dev/null | wc -l)
             gh release create "$tag" \
               --title "serapan pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID}" \
-              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; periksa dengan sha256sum -c SHA256SUMS." \
+              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; periksa dengan sha256sum -c SHA256SUMS dan sha256sum -c SHA256SUMS_KARANTINA." \
               || true
-            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS --clobber
+            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS* --clobber
             kode_unggah=$?
             rm -f data/rilis/*.tar
           fi
 
-          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "cacah_aset_tar_karantina": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$cacah_aset_karantina" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
 
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com

@@ -1,0 +1,242 @@
+{
+  "bukan_bukti": false,
+  "byte_parquet_karantina_total": 3286672,
+  "byte_parquet_total": 4120562805,
+  "byte_zip_total": 3351290433,
+  "cacah_gagal_checksum": 0,
+  "cacah_gagal_unduh": 0,
+  "cacah_karantina": 3,
+  "cacah_parquet_ditulis": 2408,
+  "cacah_parquet_tak_terkemas": 0,
+  "cacah_simbol_bulan_dengan_baris_dibuang": 0,
+  "catatan_bulan_parsial": "bulan pertama dan terakhir tiap simbol PARSIAL; rerata baris per bulan dilarang dikalikan begitu saja (aturan 28)",
+  "catatan_parquet": "parquet dialirkan ke tar terbelah <=1,8 GB lalu diunggah sebagai aset rilis; parquet_dipersistenkan true HANYA bila tiap tar dibaca ulang, sha256-nya cocok, dan cacah anggotanya sama dengan cacah berkas yang dikemas (aturan 24). cacah_parquet_tak_terkemas != 0 berarti ada parquet yang lenyap antara penulisan dan pengemasan",
+  "catatan_rentang": "hasil berlaku untuk pecahan 0 dari 8 saja, bukan untuk 19.598 bulan perpetual_usdt (aturan 20)",
+  "daftar_karantina": [
+    {
+      "baris": 42540,
+      "bulan": "2025-04",
+      "checksum_zip_sha256": "2f7ee61fb863d568005f98d4154e447e5f2037e5b5849b8d9954e1698b5cb88a",
+      "parquet_karantina": "data/parquet_karantina/AERGOUSDT/AERGOUSDT-1m-2025-04.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "baris": 44130,
+      "bulan": "2025-05",
+      "checksum_zip_sha256": "6626ba7fd8ce20c3c004017444d6e4531dd062252d77a76fdaba01acb922bb44",
+      "parquet_karantina": "data/parquet_karantina/CVCUSDT/CVCUSDT-1m-2025-05.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "simbol": "CVCUSDT"
+    },
+    {
+      "baris": 43935,
+      "bulan": "2025-07",
+      "checksum_zip_sha256": "ce98d6b55ddb10c4f4202e09ff8b0a8d75c1b1b2689a3427a175891053d551cf",
+      "parquet_karantina": "data/parquet_karantina/SLPUSDT/SLPUSDT-1m-2025-07.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "simbol": "SLPUSDT"
+    }
+  ],
+  "gerbang": {
+    "baris_diperiksa": 103264917,
+    "contoh_gagal": [
+      {
+        "bulan": "2025-04",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "AERGOUSDT"
+      },
+      {
+        "bulan": "2025-05",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "CVCUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "SLPUSDT"
+      }
+    ],
+    "pelanggaran_per_klausa": {
+      "deret_tidak_kosong": 0,
+      "jarak_60_detik": 3,
+      "satuan_milidetik": 0,
+      "selaras_menit": 0,
+      "tanpa_duplikat": 0,
+      "tanpa_menit_hilang": 3
+    },
+    "persen_lolos": 99.88,
+    "simbol_bulan_dinilai": 2411,
+    "simbol_bulan_gagal": 3,
+    "simbol_bulan_lolos": 2408,
+    "slot_diperiksa": 103266792
+  },
+  "jenis_instrumen_unik": [
+    "perpetual_usdt"
+  ],
+  "jumlah_baris": 103264917,
+  "jumlah_baris_dibuang": 0,
+  "karantina": {
+    "batas_daftar": 500,
+    "byte_parquet_karantina": 3286672,
+    "cacah_dibuang": 0,
+    "cacah_ditambal": 0,
+    "cacah_karantina": 3,
+    "cacah_tak_terunduh": 0,
+    "catatan_penggugur": "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+    "daftar_karantina": [
+      {
+        "baris": 42540,
+        "bulan": "2025-04",
+        "checksum_zip_sha256": "2f7ee61fb863d568005f98d4154e447e5f2037e5b5849b8d9954e1698b5cb88a",
+        "parquet_karantina": "data/parquet_karantina/AERGOUSDT/AERGOUSDT-1m-2025-04.parquet",
+        "pelanggaran": [
+          "jarak_60_detik",
+          "tanpa_menit_hilang"
+        ],
+        "simbol": "AERGOUSDT"
+      },
+      {
+        "baris": 44130,
+        "bulan": "2025-05",
+        "checksum_zip_sha256": "6626ba7fd8ce20c3c004017444d6e4531dd062252d77a76fdaba01acb922bb44",
+        "parquet_karantina": "data/parquet_karantina/CVCUSDT/CVCUSDT-1m-2025-05.parquet",
+        "pelanggaran": [
+          "jarak_60_detik",
+          "tanpa_menit_hilang"
+        ],
+        "simbol": "CVCUSDT"
+      },
+      {
+        "baris": 43935,
+        "bulan": "2025-07",
+        "checksum_zip_sha256": "ce98d6b55ddb10c4f4202e09ff8b0a8d75c1b1b2689a3427a175891053d551cf",
+        "parquet_karantina": "data/parquet_karantina/SLPUSDT/SLPUSDT-1m-2025-07.parquet",
+        "pelanggaran": [
+          "jarak_60_detik",
+          "tanpa_menit_hilang"
+        ],
+        "simbol": "SLPUSDT"
+      }
+    ],
+    "daftar_terpotong": false,
+    "kebijakan": "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal"
+  },
+  "kelas_risiko_kosong": [],
+  "kelas_risiko_tersentuh": {
+    "bulan_awal_2020_2021": 229,
+    "kendali_baru": 1214,
+    "non_ascii": 9,
+    "pra_header": 235,
+    "terhenti": 110
+  },
+  "mengemas": true,
+  "nisbah_parquet_per_zip": 1.2295,
+  "parquet_dipersistenkan": true,
+  "pecahan": {
+    "cacah_simbol": 99,
+    "cacah_simbol_gagal_daftar": 0,
+    "contoh_gagal_daftar": [],
+    "indeks": 0,
+    "total": 8
+  },
+  "penyebut": {
+    "simbol_bulan_diminta": 2411,
+    "simbol_bulan_terunduh": 2411
+  },
+  "rilis": {
+    "bagian": [
+      {
+        "byte": 1798359040,
+        "byte_taksir": 1798353920,
+        "byte_taksir_dibulatkan": 1798379520,
+        "cacah_berkas": 1042,
+        "jalur": "data/rilis/pecahan_0.part01.tar",
+        "melebihi_batas": false,
+        "nama": "pecahan_0.part01.tar",
+        "sha256": "5a04e219761ea949071a1ceafea44db1b64727f94f1c205bfdf6a4e2f3e3a889",
+        "taksiran_terlampaui": false
+      },
+      {
+        "byte": 1799782400,
+        "byte_taksir": 1799773696,
+        "byte_taksir_dibulatkan": 1799802880,
+        "cacah_berkas": 1067,
+        "jalur": "data/rilis/pecahan_0.part02.tar",
+        "melebihi_batas": false,
+        "nama": "pecahan_0.part02.tar",
+        "sha256": "0c507f34775aae35eef9a5d8a6fbd08f49e7b8eb12442a07dcb3b6329e890a14",
+        "taksiran_terlampaui": false
+      },
+      {
+        "byte": 526766080,
+        "byte_taksir": 526758400,
+        "byte_taksir_dibulatkan": 526786560,
+        "cacah_berkas": 299,
+        "jalur": "data/rilis/pecahan_0.part03.tar",
+        "melebihi_batas": false,
+        "nama": "pecahan_0.part03.tar",
+        "sha256": "00156941d3578159c22f425a3063262287733bc5478be384eddb606ae926e702",
+        "taksiran_terlampaui": false
+      }
+    ],
+    "batas_byte": 1800000000,
+    "berkas_sums": "data/rilis/SHA256SUMS",
+    "byte_anggota_total": 4120562805,
+    "byte_bagian_total": 4124907520,
+    "cacah_bagian": 3,
+    "cacah_bagian_melebihi_batas": 0,
+    "cacah_bagian_taksiran_terlampaui": 0,
+    "cacah_berkas": 2408,
+    "cacah_berkas_hilang": 0,
+    "cacah_berkas_melebihi_batas": 0,
+    "catatan_kompresi": "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+    "catatan_penggugur": "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti manifes menyebut parquet yang tidak ada di cakram. Ketiganya membatalkan klaim persistensi (aturan 24)",
+    "kepala_anggota": 1536,
+    "margin_rekam": 20480,
+    "nama_dasar": "pecahan_0",
+    "nisbah_bagian_per_anggota": 1.001054,
+    "rekam_tar": 10240,
+    "status": "TERKEMAS"
+  },
+  "selisih_cacah_bulan": {
+    "cacah_simbol_berselisih": 0,
+    "catatan": "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+    "contoh": []
+  },
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "dff5d33d98abc65d0fac9ebd55393c235358ed34e03a51dddeb6ea8d93bd7a63",
+  "status": "TERUKUR",
+  "sumber_rentang": "reports/semesta_rentang.json",
+  "verifikasi_rilis": {
+    "anggota_cocok": true,
+    "cacah_anggota_diharap": 2408,
+    "cacah_anggota_terbaca": 2408,
+    "cacah_bagian_hilang": 0,
+    "cacah_sha_cocok": 3,
+    "cacah_sha_tak_cocok": 0,
+    "nama_bagian_hilang": [],
+    "nama_sha_tak_cocok": [],
+    "sah": true
+  },
+  "versi_pecahan": 5,
+  "waktu_utc": "2026-07-28T20:05:31Z"
+}

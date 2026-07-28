@@ -30,6 +30,7 @@ def test_medan_penggugur_dilaporkan_walau_nol_dan_menangkap_pelanggaran():
     assert bersih["cacah_simbol_tanpa_bulan"] == 0
     assert bersih["bulan_paling_awal"] == "2020-01"
     assert bersih["bulan_paling_akhir"] == "2020-02"
+    assert bersih["status"] == rs.MENGUKUR
 
     kotor = rs.ringkas(
         {
@@ -47,6 +48,41 @@ def test_medan_penggugur_dilaporkan_walau_nol_dan_menangkap_pelanggaran():
     assert kotor["simbol_akhir_2024_05"] == 1
     assert kotor["entri_simbol_bulan"] == 8
 
+    # Aturan 30: penyebut nol tidak boleh tampak bersih (KC-7).
+    assert rs.ringkas({})["status"] == rs.TIDAK_MENGUKUR
+
+
+def test_jalur_cacah_menerima_simbol_ke_angka_dan_menolak_yang_bukan_angka():
+    terkumpul = rs.kumpulkan_cacah(
+        {
+            "bulan_per_simbol": {
+                "0GUSDT": 10,
+                "BTCUSDT": 78,
+                "XXXUSDT": "sepuluh",
+                "YYYUSDT": True,
+            },
+            "waktu_utc": "2026-07-28T09:09:38Z",
+        }
+    )
+    # bool BUKAN angka di sini; kalau lolos, cacah akan terhitung 1 secara diam-diam.
+    assert terkumpul["peta"] == {"0GUSDT": 10, "BTCUSDT": 78}
+    assert terkumpul["cacah_nilai_bukan_angka"] == 2
+
+    hasil = rs.ringkas_cacah(terkumpul["peta"])
+    assert hasil["cacah_simbol"] == 2
+    assert hasil["total_berkas_bulan"] == 88
+    assert hasil["cacah_minimum"] == 10
+    assert hasil["cacah_maksimum"] == 78
+    assert hasil["simbol_minimum"] == ["0GUSDT"]
+    assert hasil["cacah_nilai_negatif"] == 0
+    assert hasil["cacah_nilai_melebihi_78"] == 0
+    assert hasil["status"] == rs.MENGUKUR
+
+    aneh = rs.ringkas_cacah({"XUSDT": -1, "YUSDT": 100})
+    assert aneh["cacah_nilai_negatif"] == 1
+    assert aneh["cacah_nilai_melebihi_78"] == 1
+    assert rs.ringkas_cacah({})["status"] == rs.TIDAK_MENGUKUR
+
 
 def test_bentuk_tak_dikenali_ditandai_bukan_ditebak(tmp_path, monkeypatch):
     sumber = tmp_path / "semesta_bulan_1m.json"
@@ -61,13 +97,27 @@ def test_bentuk_tak_dikenali_ditandai_bukan_ditebak(tmp_path, monkeypatch):
     isi = _json.loads(laporan.read_text(encoding="utf-8"))
     assert isi["bentuk_tak_dikenali"] is True
     assert isi["bukan_bukti"] is True
+    assert isi["status"] == rs.TIDAK_MENGUKUR
     assert "ringkas" not in isi
 
-    # Sumber ada dan dikenali: melaporkan angka, bukan menandai tak dikenali.
+    # Jalur daftar bulan.
     sumber.write_text('{"per_simbol": {"BTCUSDT": ["2020-01"]}}', encoding="utf-8")
     assert rs.jalankan() == 0
     isi = _json.loads(laporan.read_text(encoding="utf-8"))
+    assert isi["jalur"] == "daftar_bulan"
     assert isi["bentuk_tak_dikenali"] is False
     assert isi["ringkas"]["cacah_simbol"] == 1
     assert isi["ringkas"]["entri_simbol_bulan"] == 1
     assert isi["sidik_data"]
+
+    # Jalur cacah bulan, bentuk sebenarnya berkas semesta.
+    sumber.write_text(
+        '{"bulan_per_simbol": {"0GUSDT": 10, "BTCUSDT": 78}, "waktu_utc": "x"}',
+        encoding="utf-8",
+    )
+    assert rs.jalankan() == 0
+    isi = _json.loads(laporan.read_text(encoding="utf-8"))
+    assert isi["jalur"] == "cacah_bulan"
+    assert isi["bentuk_tak_dikenali"] is False
+    assert isi["ringkas_cacah"]["total_berkas_bulan"] == 88
+    assert isi["status"] == rs.MENGUKUR

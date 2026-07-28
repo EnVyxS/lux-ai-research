@@ -1,9 +1,14 @@
 """Ringkas reports/semesta_bulan_1m.json DI RUNNER (utang 19).
 
 Agen tidak boleh membaca berkas sumber utuh; modul ini membacanya di runner dan
-menulis laporan kecil. Skema sumber BELUM pernah dilihat saat modul ini ditulis,
-jadi pengumpulan dibuat rekursif dan bentuk yang tidak dikenali DITANDAI, bukan
-ditebak. Keluaran diagnostik (aturan 10): "bukan_bukti": true.
+menulis laporan kecil. Skema sumber terungkap pada sesi 23 lewat
+`bentuk_semesta`: akar objek dengan dua kunci, `bulan_per_simbol` (peta simbol ->
+CACAH bulan, bertipe angka) dan `waktu_utc`. Jalur lama untuk peta simbol ->
+DAFTAR bulan sengaja DIPERTAHANKAN, sebab berkas survei lain memakai bentuk itu.
+Bentuk yang tidak dikenali tetap DITANDAI, bukan ditebak.
+
+Aturan 10: keluaran diagnostik menandai "bukan_bukti": true.
+Aturan 30: penyebut dicetak eksplisit; bila nol, status TIDAK MENGUKUR.
 """
 
 from __future__ import annotations
@@ -24,6 +29,9 @@ POLA_SIMBOL = re.compile(r"^[A-Z0-9_]{2,20}$")
 KUNCI_BULAN = ("bulan", "month", "bulan_1m")
 BATAS_AWAL = "2020-01"
 BATAS_AKHIR = "2026-06"
+BATAS_BULAN = 78  # 2020-01..2026-06 inklusif
+TIDAK_MENGUKUR = "TIDAK MENGUKUR"
+MENGUKUR = "MENGUKUR"
 
 
 def sidik_kode() -> str:
@@ -80,6 +88,51 @@ def kumpulkan(simpul, keluar=None) -> dict:
     return keluar
 
 
+def kumpulkan_cacah(simpul, keluar=None, penggugur=None) -> dict:
+    """Kumpulkan peta simbol -> CACAH bulan (angka bulat, bukan bool).
+
+    Nilai bertipe lain yang kuncinya berpola simbol dihitung sebagai penggugur
+    `cacah_nilai_bukan_angka`, tidak dipaksa menjadi angka.
+    """
+    if keluar is None:
+        keluar = {}
+    if penggugur is None:
+        penggugur = {"cacah_nilai_bukan_angka": 0}
+    if isinstance(simpul, dict):
+        for kunci, nilai in simpul.items():
+            simbol = POLA_SIMBOL.match(str(kunci))
+            if isinstance(nilai, (dict, list)):
+                kumpulkan_cacah(nilai, keluar, penggugur)
+            elif simbol and isinstance(nilai, int) and not isinstance(nilai, bool):
+                keluar[str(kunci)] = nilai
+            elif simbol:
+                penggugur["cacah_nilai_bukan_angka"] += 1
+    elif isinstance(simpul, list):
+        for item in simpul:
+            kumpulkan_cacah(item, keluar, penggugur)
+    return {"peta": keluar, **penggugur}
+
+
+def ringkas_cacah(peta: dict) -> dict:
+    """Ringkas peta simbol -> cacah bulan, dengan penyebut eksplisit."""
+    nilai = [peta[s] for s in sorted(peta)]
+    negatif = sum(1 for n in nilai if n < 0)
+    melebihi = sum(1 for n in nilai if n > BATAS_BULAN)
+    terkecil = min(nilai) if nilai else None
+    terbesar = max(nilai) if nilai else None
+    return {
+        "cacah_simbol": len(peta),
+        "total_berkas_bulan": sum(nilai),
+        "cacah_minimum": terkecil,
+        "cacah_maksimum": terbesar,
+        "simbol_minimum": sorted(s for s in peta if peta[s] == terkecil)[:5],
+        "simbol_maksimum": sorted(s for s in peta if peta[s] == terbesar)[:5],
+        "cacah_nilai_negatif": negatif,
+        "cacah_nilai_melebihi_78": melebihi,
+        "status": TIDAK_MENGUKUR if not peta else MENGUKUR,
+    }
+
+
 def ringkas(peta: dict) -> dict:
     """Ringkas peta simbol -> bulan, termasuk medan penggugur (aturan 24)."""
     simbol_tanpa_bulan = sorted(s for s, b in peta.items() if not b)
@@ -120,6 +173,7 @@ def ringkas(peta: dict) -> dict:
         "bulan_tidak_terurut": bulan_tidak_terurut,
         "bulan_di_luar_rentang_survei": bulan_di_luar_rentang_survei[:20],
         "cacah_bulan_di_luar_rentang_survei": len(bulan_di_luar_rentang_survei),
+        "status": TIDAK_MENGUKUR if not peta else MENGUKUR,
     }
 
 
@@ -131,14 +185,16 @@ def jalankan() -> int:
         "sidik_kode": sidik_kode(),
         "waktu_utc": sekarang(),
         "catatan_metode": (
-            "Peta simbol->bulan dikumpulkan rekursif; kunci diterima sebagai "
-            "simbol hanya bila nilainya memuat bulan berpola YYYY-MM. Bentuk "
-            "yang tidak menghasilkan satu pun simbol ditandai "
-            "bentuk_tak_dikenali, bukan ditebak (aturan 16)."
+            "Dua jalur: peta simbol->daftar bulan, atau peta simbol->cacah "
+            "bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci "
+            "diterima sebagai simbol hanya bila berpola simbol DAN nilainya "
+            "cocok salah satu jalur. Bila tak ada yang cocok, laporan menandai "
+            "bentuk_tak_dikenali, bukan menebak (aturan 16)."
         ),
     }
     if not SUMBER.exists():
         isi["bentuk_tak_dikenali"] = True
+        isi["status"] = TIDAK_MENGUKUR
         isi["galat"] = "berkas sumber tidak ada"
         tulis(LAPORAN, isi)
         return 1
@@ -149,12 +205,25 @@ def jalankan() -> int:
         akar = json.loads(mentah)
     except json.JSONDecodeError as galat:
         isi["bentuk_tak_dikenali"] = True
+        isi["status"] = TIDAK_MENGUKUR
         isi["galat"] = "json tidak sah: " + str(galat)
         tulis(LAPORAN, isi)
         return 1
-    peta = kumpulkan(akar)
-    isi["bentuk_tak_dikenali"] = not peta
-    isi["ringkas"] = ringkas(peta)
+    peta_bulan = kumpulkan(akar)
+    if peta_bulan:
+        isi["jalur"] = "daftar_bulan"
+        isi["bentuk_tak_dikenali"] = False
+        isi["ringkas"] = ringkas(peta_bulan)
+        isi["status"] = isi["ringkas"]["status"]
+        tulis(LAPORAN, isi)
+        return 0
+    terkumpul = kumpulkan_cacah(akar)
+    peta_cacah = terkumpul["peta"]
+    isi["jalur"] = "cacah_bulan" if peta_cacah else "tidak ada"
+    isi["bentuk_tak_dikenali"] = not peta_cacah
+    isi["cacah_nilai_bukan_angka"] = terkumpul["cacah_nilai_bukan_angka"]
+    isi["ringkas_cacah"] = ringkas_cacah(peta_cacah)
+    isi["status"] = isi["ringkas_cacah"]["status"]
     tulis(LAPORAN, isi)
     return 0
 

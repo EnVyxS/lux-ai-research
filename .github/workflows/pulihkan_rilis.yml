@@ -1,0 +1,129 @@
+name: pulihkan-rilis
+
+# Aturan 33: pemicu menyebut berkas modulnya saja, tanpa pemicu-diri.
+# Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
+# Aturan 45: workflow ini didorong dalam commit YANG SAMA dengan modul yang
+# memicunya, karena Actions memakai workflow pada commit pemicu.
+#
+# Workflow ini TIDAK menyalakan serapan. Pemicunya sempit ke
+# lux_ai/serapan/pulihkan.py supaya uji pemulihan bisa dijalankan tanpa
+# membakar delapan runner serapan selama +-1,5 jam masing-masing.
+#
+# Yang diuji: apakah aset rilis bisa diambil kembali oleh proses yang TIDAK
+# menulisnya. Unduh dengan gh, cocokkan sha256 terhadap sidik yang tersimpan di
+# manifes DI GIT (bukan terhadap SHA256SUMS di rilis), bongkar, baca parquet.
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/pulihkan.py'
+  workflow_dispatch:
+    inputs:
+      indeks:
+        description: 'indeks pecahan 0..7'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+jobs:
+  matriks:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        indeks: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: pulihkan pecahan ${{ matrix.indeks }}
+        env:
+          PULIH_INDEKS: ${{ matrix.indeks }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          df -h / | tail -1
+
+          # Tag disusun dari run_id di berkas status yang di-commit runner
+          # serapan, bukan diketik dari ingatan.
+          run_sumber=$(python -c "import json;print(json.load(open('reports/pecahan_${PULIH_INDEKS}_status.json'))['run_id'])")
+          tag="serapan-pecahan-${PULIH_INDEKS}-${run_sumber}"
+          mkdir -p data/unduh reports
+
+          gh release download "$tag" --dir data/unduh --pattern '*.tar'
+          kode_unduh=$?
+          cacah_unduh=0
+          if ls data/unduh/*.tar >/dev/null 2>&1; then
+            cacah_unduh=$(ls data/unduh/*.tar | wc -l)
+          fi
+
+          python -m lux_ai.serapan.pulihkan > pulihkan.log 2>&1
+          kode=$?
+          tail -c 40000 pulihkan.log > reports/pulihkan_pecahan_${PULIH_INDEKS}.log
+          rm -rf data/unduh data/pulih
+
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "tag_sumber": "%s",\n  "kode_unduh": %s,\n  "cacah_tar_terunduh": %s,\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PULIH_INDEKS" "$tag" "$kode_unduh" "$cacah_unduh" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pulihkan_pecahan_${PULIH_INDEKS}_status.json
+
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          for percobaan in 1 2 3 4 5 6 7 8; do
+            git add reports/pulihkan_pecahan_${PULIH_INDEKS}.json 2>/dev/null || true
+            git add reports/pulihkan_pecahan_${PULIH_INDEKS}.log reports/pulihkan_pecahan_${PULIH_INDEKS}_status.json
+            git commit -m "pemulihan pecahan ${PULIH_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
+            git pull --rebase --autostash && git push && break
+            sleep $((percobaan * 15))
+          done
+          exit $kode
+
+  tunggal:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: pulihkan satu pecahan
+        env:
+          PULIH_INDEKS: ${{ github.event.inputs.indeks || '0' }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          run_sumber=$(python -c "import json;print(json.load(open('reports/pecahan_${PULIH_INDEKS}_status.json'))['run_id'])")
+          tag="serapan-pecahan-${PULIH_INDEKS}-${run_sumber}"
+          mkdir -p data/unduh reports
+          gh release download "$tag" --dir data/unduh --pattern '*.tar'
+          kode_unduh=$?
+          cacah_unduh=0
+          if ls data/unduh/*.tar >/dev/null 2>&1; then
+            cacah_unduh=$(ls data/unduh/*.tar | wc -l)
+          fi
+          python -m lux_ai.serapan.pulihkan > pulihkan.log 2>&1
+          kode=$?
+          tail -c 40000 pulihkan.log > reports/pulihkan_pecahan_${PULIH_INDEKS}.log
+          rm -rf data/unduh data/pulih
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "tag_sumber": "%s",\n  "kode_unduh": %s,\n  "cacah_tar_terunduh": %s,\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PULIH_INDEKS" "$tag" "$kode_unduh" "$cacah_unduh" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pulihkan_pecahan_${PULIH_INDEKS}_status.json
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          git add reports/pulihkan_pecahan_${PULIH_INDEKS}.json 2>/dev/null || true
+          git add reports/pulihkan_pecahan_${PULIH_INDEKS}.log reports/pulihkan_pecahan_${PULIH_INDEKS}_status.json
+          git commit -m "pemulihan pecahan ${PULIH_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
+          git pull --rebase --autostash
+          git push
+          exit $kode

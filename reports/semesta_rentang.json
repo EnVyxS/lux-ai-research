@@ -1,0 +1,4689 @@
+{
+  "rentang": {
+    "0GUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "1000000BOBUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "1000000MOGUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "1000BONKUSDC": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "1000BONKUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "1000BTTCUSDT": {
+      "bulan_pertama": "2022-01",
+      "bulan_terakhir": "2022-04",
+      "cacah_bulan": 4
+    },
+    "1000CATUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "1000CHEEMSUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "1000FLOKIUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "1000LUNCBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "1000LUNCUSDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 46
+    },
+    "1000PEPEUSDC": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "1000PEPEUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "1000RATSUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "1000SATSUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "1000SHIBBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "1000SHIBUSDC": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "1000SHIBUSDT": {
+      "bulan_pertama": "2021-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 62
+    },
+    "1000WHYUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "1000XECUSDT": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 58
+    },
+    "1000XUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "1INCHUSDT": {
+      "bulan_pertama": "2020-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 67
+    },
+    "1MBABYDOGEUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "2ZUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "42USDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "4USDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "A2ZUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "AAOIUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "AAPLUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "AAVEUSDC": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "AAVEUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "ACEUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "ACHUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "ACTUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "ACUUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "ACXUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "ADABUSD": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 29
+    },
+    "ADAUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "ADAUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "ADBEUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "AERGOUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "AERGOUSDTSETTLED": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2025-04",
+      "cacah_bulan": 1
+    },
+    "AEROUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "AEVOUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "AGIXBUSD": {
+      "bulan_pertama": "2023-01",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 12
+    },
+    "AGIXUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "AGLDUSDT": {
+      "bulan_pertama": "2023-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 36
+    },
+    "AGTUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "AI16ZUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "AIAUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "AIAUSDTSETTLED": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-01",
+      "cacah_bulan": 1
+    },
+    "AIGENSYNUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "AINUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "AIOTUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "AIOUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "AIUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "AIXBTUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "AKEUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "AKROUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2022-05",
+      "cacah_bulan": 17
+    },
+    "AKTUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "ALABUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ALCHUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "ALGOUSDT": {
+      "bulan_pertama": "2020-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 73
+    },
+    "ALICEUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "ALLOUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "ALLUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "ALPACAUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "ALPHAUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "ALPINEUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "ALTUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "AMATUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "AMBBUSD": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 16
+    },
+    "AMBUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "AMDUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "AMZNUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "ANCBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "ANCUSDT": {
+      "bulan_pertama": "2022-03",
+      "bulan_terakhir": "2022-05",
+      "cacah_bulan": 3
+    },
+    "ANIMEUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "ANKRUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 66
+    },
+    "ANTHROPICUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ANTUSDT": {
+      "bulan_pertama": "2021-12",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 30
+    },
+    "APEBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "APEUSDT": {
+      "bulan_pertama": "2022-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 52
+    },
+    "API3USDT": {
+      "bulan_pertama": "2022-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 53
+    },
+    "APRUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "APTBUSD": {
+      "bulan_pertama": "2022-10",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 15
+    },
+    "APTUSDT": {
+      "bulan_pertama": "2022-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 45
+    },
+    "ARBUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "ARBUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "ARCUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "ARIAUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "ARKMUSDT": {
+      "bulan_pertama": "2023-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 36
+    },
+    "ARKUSDT": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 34
+    },
+    "ARMUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "ARPAUSDT": {
+      "bulan_pertama": "2021-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 57
+    },
+    "ARUSDT": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 58
+    },
+    "ARXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ASMLUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ASRUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "ASTERUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "ASTRUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "ASTSUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ATAUSDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 59
+    },
+    "ATHUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "ATOMUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "ATUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "AUCTIONBUSD": {
+      "bulan_pertama": "2022-08",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 17
+    },
+    "AUCTIONUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "AUDIOUSDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 34
+    },
+    "AUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "AVAAIUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "AVAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "AVAXBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "AVAXUSDC": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "AVAXUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "AVGOUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "AVNTUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "AWEUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "AXLUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "AXSUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "AXTIUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "AZTECUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "B2USDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "B3USDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "BABAUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "BABYUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "BADGERUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "BAKEUSDT": {
+      "bulan_pertama": "2021-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 62
+    },
+    "BALUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "BANANAS31USDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BANANAUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "BANDUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 72
+    },
+    "BANKUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "BANUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "BARDUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "BASEDUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "BASUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "BATUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "BBUSDT": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "BBXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "BCHUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "BCHUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "BDXNUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-03",
+      "cacah_bulan": 10
+    },
+    "BDXNUSDTSETTLED": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-04",
+      "cacah_bulan": 1
+    },
+    "BEAMXUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "BEATUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "BELUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "BERAUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "BEUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "BICOUSDT": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 34
+    },
+    "BIDUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BIGTIMEUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "BILLUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "BIOUSDC": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "BIOUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "BIRBUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "BLESSUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "BLUAIUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "BLUEBIRDUSDT": {
+      "bulan_pertama": "2022-11",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 19
+    },
+    "BLURUSDT": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "BLZUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "BMNRUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "BMTUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BNBBUSD": {
+      "bulan_pertama": "2021-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 30
+    },
+    "BNBUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "BNBUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "BNTUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "BNXUSDT": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 51
+    },
+    "BNXUSDTSETTLED": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2023-02",
+      "cacah_bulan": 6
+    },
+    "BOBUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "BOMEUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "BOMEUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "BONDUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "BRETTUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "BREVUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "BRKBUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "BROCCOLI714USDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BROCCOLIF3BUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BRUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "BSBUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "BSVUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "BSWUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "BTCBUSD": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 36
+    },
+    "BTCBUSD_210129": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2021-01",
+      "cacah_bulan": 1
+    },
+    "BTCBUSD_210226": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2021-01",
+      "cacah_bulan": 1
+    },
+    "BTCDOMUSDT": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 61
+    },
+    "BTCSTUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "BTCUSD1": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "BTCUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "BTCUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "BTCUSDT_210326": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2021-03",
+      "cacah_bulan": 2
+    },
+    "BTCUSDT_210625": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2021-06",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_210924": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2021-09",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_211231": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2021-12",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_220325": {
+      "bulan_pertama": "2021-12",
+      "bulan_terakhir": "2022-03",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_220624": {
+      "bulan_pertama": "2022-03",
+      "bulan_terakhir": "2022-06",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_220930": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2022-09",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_221230": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2022-12",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_230331": {
+      "bulan_pertama": "2022-12",
+      "bulan_terakhir": "2023-03",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_230630": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2023-06",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_230929": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2023-11",
+      "cacah_bulan": 6
+    },
+    "BTCUSDT_231229": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2024-01",
+      "cacah_bulan": 6
+    },
+    "BTCUSDT_240329": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2024-03",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_240628": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2024-07",
+      "cacah_bulan": 8
+    },
+    "BTCUSDT_240927": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2024-09",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_241227": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2024-12",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_250328": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2025-03",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_250627": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2025-06",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_250926": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2025-09",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_251226": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-01",
+      "cacah_bulan": 8
+    },
+    "BTCUSDT_260327": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-04",
+      "cacah_bulan": 8
+    },
+    "BTCUSDT_260626": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "BTCUSDT_260925": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "BTCUSDT_261225": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "BTRUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "BTSUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 40
+    },
+    "BTTUSDT": {
+      "bulan_pertama": "2021-04",
+      "bulan_terakhir": "2022-01",
+      "cacah_bulan": 10
+    },
+    "BTWUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "BULLAUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "BUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "BXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "BZRXUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2021-12",
+      "cacah_bulan": 16
+    },
+    "BZUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "C98USDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 59
+    },
+    "CAKEUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "CAPUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "CARVUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "CATIUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "CBRSUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "CCUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "CELOUSDT": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 58
+    },
+    "CELRUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "CETUSUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "CFGUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "CFXUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "CGPTUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "CHESSUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "CHILLGUYUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "CHIPUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "CHRUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "CHZUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 66
+    },
+    "CIENUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "CKBUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "CLANKERUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "CLOUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "CLUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "COAIUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "COCOSUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 16
+    },
+    "COHRUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "COINUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "COLLECTUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "COMBOUSDT": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 37
+    },
+    "COMMONUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "COMPUSDT": {
+      "bulan_pertama": "2020-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 73
+    },
+    "COOKIEUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "COPPERUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "COSTUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "COSUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "COTIUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "COWUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "CRCLUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "CRDOUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "CRMUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "CROSSUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "CRVUSDC": {
+      "bulan_pertama": "2024-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 24
+    },
+    "CRVUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "CRWDUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "CRWVUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "CSCOUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "CTKUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "CTKUSDTSETTLED": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2025-04",
+      "cacah_bulan": 1
+    },
+    "CTRUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "CTSIUSDT": {
+      "bulan_pertama": "2021-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 57
+    },
+    "CUDISUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "CUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "CVCUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "CVCUSDTSETTLED": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2025-05",
+      "cacah_bulan": 1
+    },
+    "CVXBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "CVXUSDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 46
+    },
+    "CVXUSDTSETTLED": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2025-07",
+      "cacah_bulan": 1
+    },
+    "CYBERUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "CYSUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "DAMUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "DARUSDT": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 51
+    },
+    "DASHUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "DEEPUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "DEFIUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "DEGENUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "DEGOUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "DELLUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "DENTUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "DEXEUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "DFUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "DGBUSDT": {
+      "bulan_pertama": "2021-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 63
+    },
+    "DIAUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "DISUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "DKNGUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "DMCUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "DODOBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "DODOUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2022-05",
+      "cacah_bulan": 16
+    },
+    "DODOXUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "DOGEBUSD": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 29
+    },
+    "DOGEUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "DOGEUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 72
+    },
+    "DOGSUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "DOLOUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "DOODUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "DOTBUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 19
+    },
+    "DOTECOUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2021-02",
+      "cacah_bulan": 2
+    },
+    "DOTUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "DRAMUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "DRIFTUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "DUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "DUSKUSDT": {
+      "bulan_pertama": "2022-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 54
+    },
+    "DYDXUSDT": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 58
+    },
+    "DYMUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "EBAYUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "EDENUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "EDGEUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "EDUUSDT": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "EGLDUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "EIGENUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "ELSAUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "ENAUSDC": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "ENAUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "ENJUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "ENSOUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "ENSUSDT": {
+      "bulan_pertama": "2021-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 56
+    },
+    "EOSUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2025-05",
+      "cacah_bulan": 65
+    },
+    "EPICUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "EPTUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "ERAUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "ESPORTSUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "ESPUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "ETCBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "ETCUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "ETHBTC": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "ETHBUSD": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 31
+    },
+    "ETHFIUSDC": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "ETHFIUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "ETHUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "ETHUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "ETHUSDT_210326": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2021-03",
+      "cacah_bulan": 2
+    },
+    "ETHUSDT_210625": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2021-06",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_210924": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2021-09",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_211231": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2021-12",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_220325": {
+      "bulan_pertama": "2021-12",
+      "bulan_terakhir": "2022-03",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_220624": {
+      "bulan_pertama": "2022-03",
+      "bulan_terakhir": "2022-06",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_220930": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2022-09",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_221230": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2022-12",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_230331": {
+      "bulan_pertama": "2022-12",
+      "bulan_terakhir": "2023-03",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_230630": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2023-06",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_230929": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2023-11",
+      "cacah_bulan": 6
+    },
+    "ETHUSDT_231229": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2024-01",
+      "cacah_bulan": 6
+    },
+    "ETHUSDT_240329": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2024-03",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_240628": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2024-07",
+      "cacah_bulan": 8
+    },
+    "ETHUSDT_240927": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2024-09",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_241227": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2024-12",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_250328": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2025-03",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_250627": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2025-06",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_250926": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2025-09",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_251226": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-01",
+      "cacah_bulan": 8
+    },
+    "ETHUSDT_260327": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-04",
+      "cacah_bulan": 8
+    },
+    "ETHUSDT_260626": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "ETHUSDT_260925": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "ETHUSDT_261225": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ETHWUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "EULUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "EVAAUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "EWJUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "EWTUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "EWYUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "EWZUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "FARTCOINUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "FETUSDT": {
+      "bulan_pertama": "2023-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 42
+    },
+    "FFUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "FHEUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "FIDAUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "FIGHTUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "FILBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "FILUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "FILUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "FIOUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "FISUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "FLMUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "FLNCUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "FLOCKUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "FLOWUSDT": {
+      "bulan_pertama": "2022-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 53
+    },
+    "FLUIDUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "FLUXUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "FOGOUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "FOLKSUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "FOOTBALLUSDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 21
+    },
+    "FORMUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "FORTHUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "FRAXUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "FRONTUSDT": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2024-09",
+      "cacah_bulan": 13
+    },
+    "FTMBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "FTMUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "FTTBUSD": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 28
+    },
+    "FTTUSDT": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 51
+    },
+    "FUNUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "FUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "FXSUSDT": {
+      "bulan_pertama": "2023-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 42
+    },
+    "GALABUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "GALAUSDT": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 58
+    },
+    "GALBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "GALUSDT": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2024-07",
+      "cacah_bulan": 27
+    },
+    "GASUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "GENIUSUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "GHSTUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "GIGGLEUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "GLMRUSDT": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 34
+    },
+    "GLMUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "GLWUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "GMEUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "GMTBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "GMTUSDT": {
+      "bulan_pertama": "2022-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 52
+    },
+    "GMXUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "GOATUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "GOOGLUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "GPSUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "GRASSUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "GRIFFAINUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "GRTUSDT": {
+      "bulan_pertama": "2020-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 67
+    },
+    "GTCUSDT": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 61
+    },
+    "GUAUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "GUNUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "GUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "GWEIUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "HAEDALUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "HANAUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "HBARUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "HBARUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "HDUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "HEIUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "HEMIUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "HFTUSDT": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "HIFIUSDT": {
+      "bulan_pertama": "2023-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 34
+    },
+    "HIGHUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "HIMSUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "HIPPOUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "HIVEUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "HMSTRUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "HNTUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 45
+    },
+    "HOLOUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "HOMEUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "HOODUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "HOOKUSDT": {
+      "bulan_pertama": "2023-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 42
+    },
+    "HOTUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "HPEUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "HUMAUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "HUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "HYPERUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "HYPEUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "HYUNDAIUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "IBMUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ICNTUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "ICPBUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-03",
+      "cacah_bulan": 10
+    },
+    "ICPUSDT": {
+      "bulan_pertama": "2021-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 62
+    },
+    "ICPUSDT_SETTLED": {
+      "bulan_pertama": "2022-01",
+      "bulan_terakhir": "2022-09",
+      "cacah_bulan": 9
+    },
+    "ICXUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "IDEXUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "IDOLUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "IDUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "ILVUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "IMXUSDT": {
+      "bulan_pertama": "2022-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 53
+    },
+    "INITUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "INJUSDT": {
+      "bulan_pertama": "2022-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 47
+    },
+    "INTCUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "INUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "INXUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "IOSTUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "IOTAUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "IOTXUSDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 59
+    },
+    "IOUSDT": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 25
+    },
+    "IPUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "IPUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "IRENUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "IRUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "IRYSUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "IWMUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "JASMYUSDT": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 51
+    },
+    "JCTUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "JELLYJELLYUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "JOEUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "JPMUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "JSTUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "JTOUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "JUPUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "KAIAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "KAITOUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "KAITOUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "KASUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "KATUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "KAVAUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 72
+    },
+    "KDAUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "KEEPUSDT": {
+      "bulan_pertama": "2021-06",
+      "bulan_terakhir": "2022-02",
+      "cacah_bulan": 9
+    },
+    "KERNELUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "KEYUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "KGENUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "KITEUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "KLACUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "KLAYUSDT": {
+      "bulan_pertama": "2021-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 57
+    },
+    "KMNOUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "KNCUSDT": {
+      "bulan_pertama": "2020-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 73
+    },
+    "KOMAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "KORUUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "KSMUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "LABUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "LAUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "LAYERUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "LDOBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "LDOUSDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 46
+    },
+    "LENDUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2020-11",
+      "cacah_bulan": 5
+    },
+    "LEVERBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "LEVERUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "LIGHTUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "LINAUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "LINEAUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "LINKBUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 19
+    },
+    "LINKUSDC": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "LINKUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "LISTAUSDT": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 25
+    },
+    "LITEUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "LITUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 65
+    },
+    "LITUSDTSETTLED": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2025-12",
+      "cacah_bulan": 1
+    },
+    "LLYUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "LOKAUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "LOOMUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "LPTUSDT": {
+      "bulan_pertama": "2021-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 56
+    },
+    "LQTYUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "LRCUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "LRCXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "LSKUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "LTCBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "LTCUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "LTCUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "LUMIAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "LUNA2BUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-03",
+      "cacah_bulan": 10
+    },
+    "LUNA2USDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 46
+    },
+    "LUNABUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2022-05",
+      "cacah_bulan": 1
+    },
+    "LUNAUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2022-05",
+      "cacah_bulan": 17
+    },
+    "LYNUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "MAGICUSDT": {
+      "bulan_pertama": "2023-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 42
+    },
+    "MAGMAUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "MANAUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "MANTAUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "MANTRAUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "MASKUSDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 59
+    },
+    "MATICBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "MATICUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2024-09",
+      "cacah_bulan": 6
+    },
+    "MATICUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2024-09",
+      "cacah_bulan": 48
+    },
+    "MAVIAUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "MAVIAUSDTSETTLED": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2025-03",
+      "cacah_bulan": 1
+    },
+    "MAVUSDT": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 37
+    },
+    "MBLUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 7
+    },
+    "MBOXUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "MDTUSDT": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 37
+    },
+    "MEGAUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "MELANIAUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "MEMEFIUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "MEMEUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "MERLUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "METAUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "METISUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "METUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "MEUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "MEWUSDT": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 25
+    },
+    "MILKUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "MINAUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "MINAUSDTSETTLED": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2023-02",
+      "cacah_bulan": 1
+    },
+    "MIRAUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "MITOUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "MKRUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "MLNUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "MMTUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "MOCAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "MONUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "MOODENGUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "MORPHOUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "MOVEUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "MOVRUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "MRVLUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "MSFTUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "MSTRUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "MTLUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "MUBARAKUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "MUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "MUUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "MVLLUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "MYROUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "MYXUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "NAORISUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "NATGASUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "NBISUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "NEARBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "NEARUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "NEARUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "NEIROETHUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "NEIROUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "NEOUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "NEOUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "NEWTUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "NFLXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "NFPUSDT": {
+      "bulan_pertama": "2023-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 31
+    },
+    "NIGHTUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "NILUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "NKNUSDT": {
+      "bulan_pertama": "2021-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 63
+    },
+    "NMRUSDT": {
+      "bulan_pertama": "2023-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 37
+    },
+    "NOKUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "NOMUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "NOTUSDT": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "NOWUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "NTRNUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "NULSUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "NUUSDT": {
+      "bulan_pertama": "2021-10",
+      "bulan_terakhir": "2022-02",
+      "cacah_bulan": 5
+    },
+    "NVDAUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "NVOUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "NXPCUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "OBOLUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "OCEANUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "OGNUSDT": {
+      "bulan_pertama": "2021-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 63
+    },
+    "OGUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "OLUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "OMGUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 72
+    },
+    "OMNIUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "OMUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "ONDOUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "ONDSUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ONEUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "ONGUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "ONTUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "ONUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "OPENAIUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "OPENUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "OPGUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "OPNUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "OPUSDT": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 49
+    },
+    "ORBSUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "ORCAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "ORCLUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "ORDERUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "ORDIUSDC": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "ORDIUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "OUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "OXTUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "PARTIUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "PAXGUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "PAYPUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "PENDLEUSDT": {
+      "bulan_pertama": "2023-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 36
+    },
+    "PENGUUSDC": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "PENGUUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "PEOPLEUSDT": {
+      "bulan_pertama": "2021-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 55
+    },
+    "PERPUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "PHAROSUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "PHAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "PHBBUSD": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 16
+    },
+    "PHBUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "PIEVERSEUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "PIPPINUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "PIXELUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "PLAYUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "PLTRUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "PLUMEUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "PNUTUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "PNUTUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "POLUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "POLYXUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "PONKEUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "POPCATUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "PORT3USDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "PORTALUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "POWERUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "POWRUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "PRLUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "PROMPTUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "PROMUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "PROVEUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "PTBUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "PUFFERUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "PUMPBTCUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "PUMPUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "PUMPUSDTSETTLED": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2025-07",
+      "cacah_bulan": 1
+    },
+    "PUNDIXUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "PYTHUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "QCOMUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "QNTUSDT": {
+      "bulan_pertama": "2022-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 45
+    },
+    "QNTXUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "QQQUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "QTUMUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "QUICKUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "QUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "RADUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "RAREUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "RAVEUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "RAYSOLUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "RAYUSDT": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 59
+    },
+    "RDNTUSDT": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "RECALLUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "REDUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "REEFUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 65
+    },
+    "REIUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "RENDERUSDT": {
+      "bulan_pertama": "2024-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 24
+    },
+    "RENUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "RESOLVUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "REUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "REZUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "RIFUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "RIVERUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "RIVNUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "RKLBUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "RLCUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 72
+    },
+    "RLSUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "RNDRUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2024-07",
+      "cacah_bulan": 18
+    },
+    "ROBOUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "RONINUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "ROSEUSDT": {
+      "bulan_pertama": "2021-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 55
+    },
+    "RPLUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "RSRUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 69
+    },
+    "RUNEUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "RVNUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 65
+    },
+    "RVVUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "SAFEUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "SAGAUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "SAHARAUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "SAMSUNGUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SANDBUSD": {
+      "bulan_pertama": "2022-07",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 18
+    },
+    "SANDUSDT": {
+      "bulan_pertama": "2021-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 66
+    },
+    "SANTOSUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "SAPIENUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "SCRTUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "SCRUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "SCUSDT": {
+      "bulan_pertama": "2021-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 63
+    },
+    "SEIUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "SENTUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "SFPUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 65
+    },
+    "SHELLUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "SIGNUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "SIRENUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "SKATEUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "SKHYNIXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SKLUSDT": {
+      "bulan_pertama": "2020-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 67
+    },
+    "SKRUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "SKYAIUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "SKYUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "SLERFUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "SLPUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "SLPUSDTSETTLED": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2025-07",
+      "cacah_bulan": 1
+    },
+    "SLXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SMCIUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SNDKUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "SNTUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "SNXUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "SOLBUSD": {
+      "bulan_pertama": "2021-09",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 28
+    },
+    "SOLUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "SOLUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "SOLVUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "SOMIUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "SONICUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "SONYUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SOONUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "SOPHUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "SOXLUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "SPACEUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "SPCXUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "SPELLUSDT": {
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 46
+    },
+    "SPKUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "SPORTFUNUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "SPXUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "SPYUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "SQDUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "SQQQUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SRMUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 45
+    },
+    "SSVUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "STABLEUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "STARUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "STBLUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "STEEMUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "STGUSDT": {
+      "bulan_pertama": "2022-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 47
+    },
+    "STMXUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "STORJUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "STOUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "STPTUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "STRAXUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "STRKUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "STXUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "STXXUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SUIUSDC": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "SUIUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "SUNUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "SUPERUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "SUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "SUSHIUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "SWARMSUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "SWELLUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "SXPUSDT": {
+      "bulan_pertama": "2020-07",
+      "bulan_terakhir": "2026-05",
+      "cacah_bulan": 71
+    },
+    "SXPUSDTSETTLED": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "SXTUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "SYNUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "SYRUPUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "SYSUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "TACUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "TAGUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "TAIKOUSDT": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "TAKEUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "TANSSIUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "TAOUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "TAUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "THETAUSDT": {
+      "bulan_pertama": "2020-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 74
+    },
+    "THEUSDT": {
+      "bulan_pertama": "2024-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 20
+    },
+    "TIAUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "TIAUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "TLMBUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 19
+    },
+    "TLMUSDT": {
+      "bulan_pertama": "2021-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 60
+    },
+    "TLMUSDTSETTLED": {
+      "bulan_pertama": "2022-01",
+      "bulan_terakhir": "2023-03",
+      "cacah_bulan": 9
+    },
+    "TNSRUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "TOKENUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "TOMOUSDT": {
+      "bulan_pertama": "2020-10",
+      "bulan_terakhir": "2024-05",
+      "cacah_bulan": 44
+    },
+    "TONUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "TOSHIUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "TOWNSUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "TQQQUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "TRADOORUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "TRBUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "TREEUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "TRIAUSDT": {
+      "bulan_pertama": "2026-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 5
+    },
+    "TROYUSDT": {
+      "bulan_pertama": "2024-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 21
+    },
+    "TRUMPUSDC": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "TRUMPUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "TRUSTUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "TRUTHUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "TRUUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "TRXBUSD": {
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 20
+    },
+    "TRXUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "TSLAUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "TSMUSDT": {
+      "bulan_pertama": "2026-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 3
+    },
+    "TSTUSDT": {
+      "bulan_pertama": "2025-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 17
+    },
+    "TURBOUSDT": {
+      "bulan_pertama": "2024-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 26
+    },
+    "TURTLEUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "TUSDT": {
+      "bulan_pertama": "2023-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 41
+    },
+    "TUTUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "TWTUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "UAIUSDT": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "UBERUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "UBUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "UMAUSDT": {
+      "bulan_pertama": "2023-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 38
+    },
+    "UNFIUSDT": {
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 65
+    },
+    "UNIBUSD": {
+      "bulan_pertama": "2022-08",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 17
+    },
+    "UNIUSDC": {
+      "bulan_pertama": "2025-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 13
+    },
+    "UNIUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 70
+    },
+    "URNMUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "USARUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "USDCUSDT": {
+      "bulan_pertama": "2023-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 40
+    },
+    "USELESSUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "USTCUSDT": {
+      "bulan_pertama": "2023-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32
+    },
+    "USUALUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "USUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "UVXYUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "UXLINKUSDT": {
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 22
+    },
+    "VANAUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "VANRYUSDT": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "VELODROMEUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "VELVETUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "VETUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "VFYUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "VICUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "VIDTUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "VINEUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "VIRTUALUSDT": {
+      "bulan_pertama": "2024-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 19
+    },
+    "VOXELUSDT": {
+      "bulan_pertama": "2024-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 23
+    },
+    "VTHOUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "VUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "VVVUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "WALUSDT": {
+      "bulan_pertama": "2025-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 16
+    },
+    "WAVESBUSD": {
+      "bulan_pertama": "2022-06",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 19
+    },
+    "WAVESUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "WAXPUSDT": {
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 33
+    },
+    "WCTUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "WDCUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "WETUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "WIFUSDC": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "WIFUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "WLDUSDC": {
+      "bulan_pertama": "2024-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28
+    },
+    "WLDUSDT": {
+      "bulan_pertama": "2023-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 36
+    },
+    "WLFIUSDC": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "WLFIUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "WMTUSDT": {
+      "bulan_pertama": "2026-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 2
+    },
+    "WOOUSDT": {
+      "bulan_pertama": "2022-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 51
+    },
+    "WUSDT": {
+      "bulan_pertama": "2024-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 27
+    },
+    "XAGUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "XAIUSDT": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "XANUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "XAUTUSDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    },
+    "XAUUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "XCNUSDT": {
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 15
+    },
+    "XEMUSDT": {
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64
+    },
+    "XLEUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "XLMUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "XMRUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "XNYUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "XPDUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "XPINUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "XPLUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "XPTUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "XRPBUSD": {
+      "bulan_pertama": "2021-08",
+      "bulan_terakhir": "2023-12",
+      "cacah_bulan": 29
+    },
+    "XRPUSDC": {
+      "bulan_pertama": "2024-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 30
+    },
+    "XRPUSDT": {
+      "bulan_pertama": "2020-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 78
+    },
+    "XTZUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "XVGUSDT": {
+      "bulan_pertama": "2023-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 36
+    },
+    "XVSUSDT": {
+      "bulan_pertama": "2023-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 39
+    },
+    "YALAUSDT": {
+      "bulan_pertama": "2025-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 11
+    },
+    "YBUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "YFIIUSDT": {
+      "bulan_pertama": "2020-09",
+      "bulan_terakhir": "2022-04",
+      "cacah_bulan": 20
+    },
+    "YFIUSDT": {
+      "bulan_pertama": "2020-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 71
+    },
+    "YGGUSDT": {
+      "bulan_pertama": "2023-08",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 35
+    },
+    "ZAMAUSDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "ZBTUSDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "ZECUSDC": {
+      "bulan_pertama": "2025-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 8
+    },
+    "ZECUSDT": {
+      "bulan_pertama": "2020-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 77
+    },
+    "ZENUSDT": {
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 68
+    },
+    "ZEREBROUSDT": {
+      "bulan_pertama": "2025-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 18
+    },
+    "ZESTUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ZETAUSDT": {
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 29
+    },
+    "ZILUSDT": {
+      "bulan_pertama": "2020-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 73
+    },
+    "ZKCUSDT": {
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 10
+    },
+    "ZKJUSDT": {
+      "bulan_pertama": "2025-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 14
+    },
+    "ZKPUSDT": {
+      "bulan_pertama": "2025-12",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 7
+    },
+    "ZKUSDT": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 25
+    },
+    "ZMUSDT": {
+      "bulan_pertama": "2026-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 1
+    },
+    "ZORAUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "ZRCUSDT": {
+      "bulan_pertama": "2025-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 12
+    },
+    "ZROUSDT": {
+      "bulan_pertama": "2024-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 25
+    },
+    "ZRXUSDT": {
+      "bulan_pertama": "2020-06",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 73
+    },
+    "币安人生USDT": {
+      "bulan_pertama": "2025-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 9
+    },
+    "我踏马来了USDT": {
+      "bulan_pertama": "2026-01",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 6
+    },
+    "龙虾USDT": {
+      "bulan_pertama": "2026-03",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 4
+    }
+  }
+}

@@ -1,61 +1,7 @@
-........................................F............................... [ 40%]
-........................................F..F............................ [ 80%]
-...................................                                      [100%]
+........................................................................ [ 39%]
+..........................................F..F.......................... [ 79%]
+.....................................                                    [100%]
 =================================== FAILURES ===================================
-_____________________ test_ringkas_menghitung_gerbang_buta _____________________
-
-    def test_ringkas_menghitung_gerbang_buta():
-        catatan = [
-            {
-                "simbol": "BNXUSDT",
-                "bulan": "2022-04",
-                "posisi": "tengah",
-                "bulanan_tersedia": True,
-                "cacah_baris_1m": 41550,
-                "kelas": ["pra_header", "terhenti"],
-                "tepi_total": 210,
-                "menit_tepi_hadir_di_harian": 210,
-                "gerbang_lolos": True,
-                "hari_tepi_diperiksa": 1,
-                "hari_tepi_tidak_tersedia": 0,
-                "selisih_tak_terjelaskan": 0,
-                "putusan": "TEPI_TERPOTONG",
-            },
-            {
-                "simbol": "AUSDT",
-                "bulan": "2025-03",
-                "posisi": "pertama",
-                "bulanan_tersedia": True,
-                "cacah_baris_1m": 1000,
-                "kelas": ["kendali_baru"],
-                "tepi_total": 500,
-                "menit_tepi_hadir_di_harian": 0,
-                "gerbang_lolos": True,
-                "hari_tepi_diperiksa": 1,
-                "hari_tepi_tidak_tersedia": 0,
-                "selisih_tak_terjelaskan": 0,
-                "putusan": "TEPI_TAK_TERJELASKAN",
-            },
-        ]
-        hasil = k15.ringkas(catatan)
-        assert hasil["status"] == "TERUKUR"
-        assert hasil["bulan_tengah_diperiksa"] == 1
-        assert hasil["cacah_bulan_pertama_dikecualikan"] == 1
-        # bulan pertama TIDAK ikut menghitung tepi
-        assert hasil["total_menit_tepi"] == 210
-        assert hasil["cacah_gerbang_lolos_padahal_tepi_terpotong"] == 1
->       assert hasil["kelas_risiko_kosong"] == ["non_ascii"]
-E       AssertionError: assert ['non_ascii',...al_2020_2021'] == ['non_ascii']
-E         
-E         Left contains one more item: 'bulan_awal_2020_2021'
-E         
-E         Full diff:
-E           [
-E               'non_ascii',
-E         +     'bulan_awal_2020_2021',
-E           ]
-
-tests/test_diagnosa_kc15.py:140: AssertionError
 ___________ test_pengemas_membelah_menghapus_sumber_dan_menulis_sums ___________
 
 tmp_path = PosixPath('/tmp/pytest-of-runner/pytest-0/test_pengemas_membelah_menghap0')
@@ -97,15 +43,6 @@ E       assert False is True
 
 tests/test_rilis.py:110: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_diagnosa_kc15.py::test_ringkas_menghitung_gerbang_buta - AssertionError: assert ['non_ascii',...al_2020_2021'] == ['non_ascii']
-  
-  Left contains one more item: 'bulan_awal_2020_2021'
-  
-  Full diff:
-    [
-        'non_ascii',
-  +     'bulan_awal_2020_2021',
-    ]
 FAILED tests/test_rilis.py::test_pengemas_membelah_menghapus_sumber_dan_menulis_sums - assert 6 == 0
 FAILED tests/test_rilis.py::test_verifikasi_sah_lalu_gugur_saat_tar_dirusak - assert False is True
-3 failed, 176 passed in 0.72s
+2 failed, 179 passed in 0.65s

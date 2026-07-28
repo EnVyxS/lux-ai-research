@@ -1,0 +1,136 @@
+{
+  "bukan_bukti": false,
+  "cacah_checksum_tak_stabil": 0,
+  "cacah_mendukung_h_a002a": 3,
+  "cacah_mendukung_h_a002b": 0,
+  "cacah_tidak_mengukur": 0,
+  "catatan_penggugur": "slot_5m_hadir_saat_1m_hilang > 0 berarti 5m punya data ketika 1m tidak; itu MENGGUGURKAN premis 'arsip 1m adalah kebenaran' dan ADR-A002 wajib ditinjau ulang (aturan 24)",
+  "catatan_rentang": "berlaku untuk 3 simbol-bulan yang GAGAL di pecahan 0 saja; pecahan 1..7 belum diperiksa, jadi dilarang menyimpulkan untuk seluruh semesta (aturan 20)",
+  "rincian": [
+    {
+      "banding": {
+        "15m": {
+          "cacah_baris": 2836,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 44,
+          "slot_menaungi_menit_hilang": 44,
+          "tersedia": true
+        },
+        "5m": {
+          "cacah_baris": 8508,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 132,
+          "slot_menaungi_menit_hilang": 132,
+          "tersedia": true
+        }
+      },
+      "blok_terpanjang_menit": 660,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-04",
+      "cacah_baris_1m": 42540,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 660,
+      "checksum_1m": "2f7ee61fb863d568005f98d4154e447e5f2037e5b5849b8d9954e1698b5cb88a",
+      "checksum_1m_ulang": "2f7ee61fb863d568005f98d4154e447e5f2037e5b5849b8d9954e1698b5cb88a",
+      "checksum_stabil": true,
+      "contoh_blok": [
+        {
+          "akhir_ms": 1744801140000,
+          "mulai_ms": 1744761600000,
+          "panjang_menit": 660
+        }
+      ],
+      "putusan": "MENDUKUNG_H-A002a",
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "banding": {
+        "15m": {
+          "cacah_baris": 2942,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 34,
+          "slot_menaungi_menit_hilang": 34,
+          "tersedia": true
+        },
+        "5m": {
+          "cacah_baris": 8826,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 102,
+          "slot_menaungi_menit_hilang": 102,
+          "tersedia": true
+        }
+      },
+      "blok_terpanjang_menit": 510,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-05",
+      "cacah_baris_1m": 44130,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 510,
+      "checksum_1m": "6626ba7fd8ce20c3c004017444d6e4531dd062252d77a76fdaba01acb922bb44",
+      "checksum_1m_ulang": "6626ba7fd8ce20c3c004017444d6e4531dd062252d77a76fdaba01acb922bb44",
+      "checksum_stabil": true,
+      "contoh_blok": [
+        {
+          "akhir_ms": 1747384140000,
+          "mulai_ms": 1747353600000,
+          "panjang_menit": 510
+        }
+      ],
+      "putusan": "MENDUKUNG_H-A002a",
+      "simbol": "CVCUSDT"
+    },
+    {
+      "banding": {
+        "15m": {
+          "cacah_baris": 2929,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 47,
+          "slot_menaungi_menit_hilang": 47,
+          "tersedia": true
+        },
+        "5m": {
+          "cacah_baris": 8787,
+          "contoh_slot_hadir": [],
+          "slot_hadir_saat_1m_hilang": 0,
+          "slot_kosong_saat_1m_hilang": 141,
+          "slot_menaungi_menit_hilang": 141,
+          "tersedia": true
+        }
+      },
+      "blok_terpanjang_menit": 705,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-07",
+      "cacah_baris_1m": 43935,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 705,
+      "checksum_1m": "ce98d6b55ddb10c4f4202e09ff8b0a8d75c1b1b2689a3427a175891053d551cf",
+      "checksum_1m_ulang": "ce98d6b55ddb10c4f4202e09ff8b0a8d75c1b1b2689a3427a175891053d551cf",
+      "checksum_stabil": true,
+      "contoh_blok": [
+        {
+          "akhir_ms": 1753271040000,
+          "mulai_ms": 1753228800000,
+          "panjang_menit": 705
+        }
+      ],
+      "putusan": "MENDUKUNG_H-A002a",
+      "simbol": "SLPUSDT"
+    }
+  ],
+  "sidik_kode": "3795881e6d7fe5a08ad01e5c95cf1ef4f4cdd8dd3861472ecc0c9af645cfc656",
+  "simbol_bulan_diperiksa": 3,
+  "slot_5m_hadir_saat_1m_hilang": 0,
+  "status": "TERUKUR",
+  "tersangka": [
+    "AERGOUSDT 2025-04",
+    "CVCUSDT 2025-05",
+    "SLPUSDT 2025-07"
+  ],
+  "total_menit_hilang": 1875,
+  "waktu_utc": "2026-07-28T12:25:25Z"
+}

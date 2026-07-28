@@ -57,7 +57,7 @@
   },
   "mengemas": true,
   "nisbah_parquet_per_zip": 1.2293,
-  "parquet_dipersistenkan": false,
+  "parquet_dipersistenkan": true,
   "pecahan": {
     "cacah_simbol": 99,
     "cacah_simbol_gagal_daftar": 0,
@@ -73,36 +73,36 @@
     "bagian": [
       {
         "byte": 1799792640,
-        "byte_taksir": 1798722560,
-        "byte_taksir_dibulatkan": 1798748160,
+        "byte_taksir": 1799788544,
+        "byte_taksir_dibulatkan": 1799813120,
         "cacah_berkas": 1041,
         "jalur": "data/rilis/pecahan_2.part01.tar",
         "melebihi_batas": false,
         "nama": "pecahan_2.part01.tar",
-        "sha256": "9a4980f72af5a8505d6e89dbf12acb7e21385dbdc82d404b74bba4595130f966",
-        "taksiran_terlampaui": true
+        "sha256": "863c3d3984eab2be90dc6bb77850908c5b4c3c5518f681a9c310815e601952db",
+        "taksiran_terlampaui": false
       },
       {
-        "byte": 1800017920,
-        "byte_taksir": 1798829568,
-        "byte_taksir_dibulatkan": 1798850560,
-        "cacah_berkas": 1156,
+        "byte": 1798041600,
+        "byte_taksir": 1798036480,
+        "byte_taksir_dibulatkan": 1798062080,
+        "cacah_berkas": 1155,
         "jalur": "data/rilis/pecahan_2.part02.tar",
-        "melebihi_batas": true,
+        "melebihi_batas": false,
         "nama": "pecahan_2.part02.tar",
-        "sha256": "e0e450dae26ef3c4c46c1048366bb26d15e52f3c0b8f9cd9a15a58c01f7e23f6",
-        "taksiran_terlampaui": true
+        "sha256": "a6554bf0d9e728e992002480bd724fa43f3dbf9536a760021c9c35f098c92fb3",
+        "taksiran_terlampaui": false
       },
       {
-        "byte": 239165440,
-        "byte_taksir": 239021568,
-        "byte_taksir_dibulatkan": 239042560,
-        "cacah_berkas": 140,
+        "byte": 241141760,
+        "byte_taksir": 241141760,
+        "byte_taksir_dibulatkan": 241162240,
+        "cacah_berkas": 141,
         "jalur": "data/rilis/pecahan_2.part03.tar",
         "melebihi_batas": false,
         "nama": "pecahan_2.part03.tar",
-        "sha256": "eb776fe3aca07c05e2feb505d576f9b8b438c14a0024fdbf895bc34ab6d7146f",
-        "taksiran_terlampaui": true
+        "sha256": "8de1d5f6c5049c93bd2dce91bb26fff74f2df6c24a1b85860d2d903e813b7d64",
+        "taksiran_terlampaui": false
       }
     ],
     "batas_byte": 1800000000,
@@ -110,13 +110,14 @@
     "byte_anggota_total": 3834773373,
     "byte_bagian_total": 3838976000,
     "cacah_bagian": 3,
-    "cacah_bagian_melebihi_batas": 1,
-    "cacah_bagian_taksiran_terlampaui": 3,
+    "cacah_bagian_melebihi_batas": 0,
+    "cacah_bagian_taksiran_terlampaui": 0,
     "cacah_berkas": 2337,
     "cacah_berkas_hilang": 0,
     "cacah_berkas_melebihi_batas": 0,
-    "catatan_kompresi": "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah bantalan 512 byte per anggota, pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+    "catatan_kompresi": "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
     "catatan_penggugur": "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti manifes menyebut parquet yang tidak ada di cakram. Ketiganya membatalkan klaim persistensi (aturan 24)",
+    "kepala_anggota": 1536,
     "margin_rekam": 20480,
     "nama_dasar": "pecahan_2",
     "nisbah_bagian_per_anggota": 1.001096,
@@ -129,7 +130,7 @@
     "contoh": []
   },
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "cbd4655169a366b2e06aa4fc3de23e3b74c23fd99a37eeaad180dac24199864d",
+  "sidik_kode": "32f427b362ccb5ef97dfa38cd42c5e75576ac5baf5ffbf7de0c19f8b96b2cdd8",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "verifikasi_rilis": {
@@ -141,8 +142,8 @@
     "cacah_sha_tak_cocok": 0,
     "nama_bagian_hilang": [],
     "nama_sha_tak_cocok": [],
-    "sah": false
+    "sah": true
   },
-  "versi_pecahan": 3,
-  "waktu_utc": "2026-07-28T17:02:42Z"
+  "versi_pecahan": 4,
+  "waktu_utc": "2026-07-28T18:39:07Z"
 }

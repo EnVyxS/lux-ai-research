@@ -1,7 +1,7 @@
 {
   "nama": "uji_resample",
-  "waktu_utc": "2026-07-27T23:28:25Z",
-  "sidik_kode": "91f898d81d1dfa4f379e2fd1fa30468896c26ab556a66fd8bfe777a832594de4",
+  "waktu_utc": "2026-07-28T07:09:35Z",
+  "sidik_kode": "d2262a93278f4cdf3b80f180501ac42407b1aa27bfcfeae45cd59101ec63d344",
   "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
   "simbol_diuji": [
     "BTCUSDT",
@@ -17,6 +17,27 @@
     "COCOSUSDT",
     "BTSUSDT"
   ],
-  "total_beda_kolom_jumlah": 0,
-  "lolos": true
+  "ringkas_era": {
+    "bulan_diuji_total": 24,
+    "bulan_era_tanpa_header": 10,
+    "bulan_era_berheader": 14,
+    "bulan_era_tak_terukur": 0,
+    "simbol_dengan_bulan_era_tanpa_header": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "SRMUSDT",
+      "BTSUSDT"
+    ],
+    "batas_header_dipakai": "2022-01",
+    "tanggal_tak_sepakat_dengan_isi": []
+  },
+  "total_bar_asli_dibandingkan": 226468,
+  "total_beda_kolom_jumlah": 20,
+  "lolos": false
 }

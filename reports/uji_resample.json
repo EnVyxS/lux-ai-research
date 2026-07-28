@@ -1,645 +1,1761 @@
 {
-  "lolos": true,
+  "lolos": false,
   "nama": "uji_resample",
   "pengukuran": [
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-01",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-01",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 78,
-      "simbol": "BTCUSDT"
+      "simbol": "BTCUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2976,
+            "baris_asli": 2976,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8928,
+            "baris_asli": 8928,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 44640,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-01",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-01",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-01",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 78,
-      "simbol": "ETHUSDT"
+      "simbol": "ETHUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2976,
+            "baris_asli": 2976,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8928,
+            "baris_asli": 8928,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 2,
+              "low": 2,
+              "open": 5,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "167.45",
+                "kolom": "open",
+                "open_time": 1579553400000,
+                "resample": "167.48"
+              },
+              {
+                "asli": "167.47",
+                "kolom": "high",
+                "open_time": 1579553400000,
+                "resample": "167.48"
+              },
+              {
+                "asli": "167.31",
+                "kolom": "open",
+                "open_time": 1579556400000,
+                "resample": "167.32"
+              },
+              {
+                "asli": "167.31",
+                "kolom": "high",
+                "open_time": 1579556400000,
+                "resample": "167.32"
+              },
+              {
+                "asli": "167.29",
+                "kolom": "open",
+                "open_time": 1579557000000,
+                "resample": "167.26"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 44640,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-01",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-02",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-02",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 77,
-      "simbol": "BNBUSDT"
+      "simbol": "BNBUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 1888,
+            "baris_asli": 1888,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 1,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "18.608",
+                "kolom": "open",
+                "open_time": 1582911000000,
+                "resample": "18.601"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 5664,
+            "baris_asli": 5664,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 2,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "18.580",
+                "kolom": "open",
+                "open_time": 1582910700000,
+                "resample": "18.579"
+              },
+              {
+                "asli": "18.608",
+                "kolom": "open",
+                "open_time": 1582911000000,
+                "resample": "18.601"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 28319,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-02",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-09",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-09",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 70,
-      "simbol": "SOLUSDT"
+      "simbol": "SOLUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 1604,
+            "baris_asli": 1604,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 4812,
+            "baris_asli": 4812,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 1,
+              "low": 1,
+              "open": 2,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "3.1230",
+                "kolom": "open",
+                "open_time": 1601165100000,
+                "resample": "3.1242"
+              },
+              {
+                "asli": "3.1230",
+                "kolom": "high",
+                "open_time": 1601165100000,
+                "resample": "3.1242"
+              },
+              {
+                "asli": "3.1289",
+                "kolom": "open",
+                "open_time": 1601165400000,
+                "resample": "3.1207"
+              },
+              {
+                "asli": "3.1289",
+                "kolom": "low",
+                "open_time": 1601165400000,
+                "resample": "3.1207"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 24060,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-09",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-01",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-01",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 78,
-      "simbol": "XRPUSDT"
+      "simbol": "XRPUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2463,
+            "baris_asli": 2463,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 1,
+              "high": 0,
+              "low": 5,
+              "open": 9,
+              "quote_volume": 2,
+              "taker_buy_base": 2,
+              "taker_buy_quote": 2,
+              "trades": 2,
+              "volume": 2
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.2032",
+                "kolom": "open",
+                "open_time": 1578300300000,
+                "resample": "0.1970"
+              },
+              {
+                "asli": "0.2032",
+                "kolom": "low",
+                "open_time": 1578300300000,
+                "resample": "0.1970"
+              },
+              {
+                "asli": "0.2013",
+                "kolom": "open",
+                "open_time": 1578301200000,
+                "resample": "0.2041"
+              },
+              {
+                "asli": "0.2048",
+                "kolom": "open",
+                "open_time": 1578302100000,
+                "resample": "0.2041"
+              },
+              {
+                "asli": "0.2043",
+                "kolom": "low",
+                "open_time": 1578302100000,
+                "resample": "0.2041"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7388,
+            "baris_asli": 7388,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 1,
+              "high": 7,
+              "low": 11,
+              "open": 27,
+              "quote_volume": 2,
+              "taker_buy_base": 2,
+              "taker_buy_quote": 2,
+              "trades": 2,
+              "volume": 2
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.2032",
+                "kolom": "open",
+                "open_time": 1578300900000,
+                "resample": "0.1970"
+              },
+              {
+                "asli": "0.2032",
+                "kolom": "low",
+                "open_time": 1578300900000,
+                "resample": "0.1970"
+              },
+              {
+                "asli": "0.2013",
+                "kolom": "open",
+                "open_time": 1578301200000,
+                "resample": "0.2041"
+              },
+              {
+                "asli": "0.2013",
+                "kolom": "high",
+                "open_time": 1578301200000,
+                "resample": "0.2041"
+              },
+              {
+                "asli": "0.2030",
+                "kolom": "open",
+                "open_time": 1578301800000,
+                "resample": "0.2004"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 36939,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-01",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-01",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-01",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 78,
-      "simbol": "ADAUSDT"
+      "simbol": "ADAUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 64,
+            "baris_asli": 64,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 192,
+            "baris_asli": 192,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 959,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-01",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-07",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-07",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 72,
-      "simbol": "DOGEUSDT"
+      "simbol": "DOGEUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2076,
+            "baris_asli": 2076,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 3,
+              "low": 6,
+              "open": 53,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.003141",
+                "kolom": "open",
+                "open_time": 1594688400000,
+                "resample": "0.003143"
+              },
+              {
+                "asli": "0.003142",
+                "kolom": "high",
+                "open_time": 1594688400000,
+                "resample": "0.003143"
+              },
+              {
+                "asli": "0.003136",
+                "kolom": "open",
+                "open_time": 1594694700000,
+                "resample": "0.003134"
+              },
+              {
+                "asli": "0.003285",
+                "kolom": "open",
+                "open_time": 1594767600000,
+                "resample": "0.003287"
+              },
+              {
+                "asli": "0.002919",
+                "kolom": "open",
+                "open_time": 1594906200000,
+                "resample": "0.002920"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 6228,
+            "baris_asli": 6228,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 22,
+              "low": 37,
+              "open": 170,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.003628",
+                "kolom": "open",
+                "open_time": 1594491900000,
+                "resample": "0.003627"
+              },
+              {
+                "asli": "0.003628",
+                "kolom": "low",
+                "open_time": 1594491900000,
+                "resample": "0.003627"
+              },
+              {
+                "asli": "0.003669",
+                "kolom": "open",
+                "open_time": 1594577100000,
+                "resample": "0.003666"
+              },
+              {
+                "asli": "0.003665",
+                "kolom": "open",
+                "open_time": 1594584300000,
+                "resample": "0.003669"
+              },
+              {
+                "asli": "0.003668",
+                "kolom": "high",
+                "open_time": 1594584300000,
+                "resample": "0.003669"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 31140,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-07",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-01",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-01",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 78,
-      "simbol": "LINKUSDT"
+      "simbol": "LINKUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 1408,
+            "baris_asli": 1408,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 3,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "2.648",
+                "kolom": "open",
+                "open_time": 1579724100000,
+                "resample": "2.646"
+              },
+              {
+                "asli": "2.655",
+                "kolom": "open",
+                "open_time": 1579726800000,
+                "resample": "2.654"
+              },
+              {
+                "asli": "2.656",
+                "kolom": "open",
+                "open_time": 1579729500000,
+                "resample": "2.655"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 4224,
+            "baris_asli": 4224,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 1,
+              "low": 2,
+              "open": 9,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "2.648",
+                "kolom": "open",
+                "open_time": 1579724100000,
+                "resample": "2.646"
+              },
+              {
+                "asli": "2.648",
+                "kolom": "open",
+                "open_time": 1579724700000,
+                "resample": "2.647"
+              },
+              {
+                "asli": "2.648",
+                "kolom": "open",
+                "open_time": 1579725300000,
+                "resample": "2.646"
+              },
+              {
+                "asli": "2.655",
+                "kolom": "open",
+                "open_time": 1579726800000,
+                "resample": "2.654"
+              },
+              {
+                "asli": "2.655",
+                "kolom": "low",
+                "open_time": 1579726800000,
+                "resample": "2.654"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 21120,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-01",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2880,
-        "baris_asli": 2880,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 8640,
-        "baris_asli": 8640,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 43200,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": true,
       "bulan_1m_pertama": "2022-04",
       "bulan_1m_terakhir": "2026-06",
-      "bulan_diuji": "2026-06",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2022-04",
+      "bulan_bersama_terakhir": "2026-06",
       "jumlah_bulan_bersama": 51,
-      "simbol": "FTTUSDT"
+      "simbol": "FTTUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 1522,
+            "baris_asli": 1522,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 3,
+              "low": 1,
+              "open": 23,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "42.1530",
+                "kolom": "open",
+                "open_time": 1650000600000,
+                "resample": "42.2150"
+              },
+              {
+                "asli": "42.1530",
+                "kolom": "high",
+                "open_time": 1650000600000,
+                "resample": "42.2150"
+              },
+              {
+                "asli": "42.4140",
+                "kolom": "open",
+                "open_time": 1650049200000,
+                "resample": "42.3880"
+              },
+              {
+                "asli": "42.3950",
+                "kolom": "low",
+                "open_time": 1650049200000,
+                "resample": "42.3880"
+              },
+              {
+                "asli": "42.7770",
+                "kolom": "open",
+                "open_time": 1650099600000,
+                "resample": "42.7780"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 4566,
+            "baris_asli": 4566,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 5,
+              "low": 4,
+              "open": 30,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "42.1530",
+                "kolom": "open",
+                "open_time": 1650000600000,
+                "resample": "42.2150"
+              },
+              {
+                "asli": "42.1530",
+                "kolom": "high",
+                "open_time": 1650000600000,
+                "resample": "42.2150"
+              },
+              {
+                "asli": "41.9100",
+                "kolom": "open",
+                "open_time": 1650003000000,
+                "resample": "41.8930"
+              },
+              {
+                "asli": "42.3270",
+                "kolom": "open",
+                "open_time": 1650033300000,
+                "resample": "42.3280"
+              },
+              {
+                "asli": "42.4790",
+                "kolom": "open",
+                "open_time": 1650047700000,
+                "resample": "42.4590"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 22830,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2022-04",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2880,
+            "baris_asli": 2880,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 8640,
+            "baris_asli": 8640,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 43200,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2026-06",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2621,
-        "baris_asli": 2621,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 7863,
-        "baris_asli": 7863,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 39311,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2020-09",
       "bulan_1m_terakhir": "2024-05",
-      "bulan_diuji": "2024-05",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2020-09",
+      "bulan_bersama_terakhir": "2024-05",
       "jumlah_bulan_bersama": 45,
-      "simbol": "SRMUSDT"
+      "simbol": "SRMUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2488,
+            "baris_asli": 2488,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 3,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "2.1378",
+                "kolom": "open",
+                "open_time": 1599607800000,
+                "resample": "2.1369"
+              },
+              {
+                "asli": "1.8590",
+                "kolom": "open",
+                "open_time": 1600819200000,
+                "resample": "1.8597"
+              },
+              {
+                "asli": "1.7456",
+                "kolom": "open",
+                "open_time": 1600905600000,
+                "resample": "1.7442"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7464,
+            "baris_asli": 7464,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 1,
+              "low": 0,
+              "open": 13,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "2.5510",
+                "kolom": "open",
+                "open_time": 1599433800000,
+                "resample": "2.5508"
+              },
+              {
+                "asli": "2.4165",
+                "kolom": "open",
+                "open_time": 1599460800000,
+                "resample": "2.4195"
+              },
+              {
+                "asli": "2.3618",
+                "kolom": "open",
+                "open_time": 1599506700000,
+                "resample": "2.3623"
+              },
+              {
+                "asli": "2.3122",
+                "kolom": "open",
+                "open_time": 1599511800000,
+                "resample": "2.3102"
+              },
+              {
+                "asli": "2.2013",
+                "kolom": "open",
+                "open_time": 1599584700000,
+                "resample": "2.2030"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 37319,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2020-09",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2621,
+            "baris_asli": 2621,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7863,
+            "baris_asli": 7863,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 39311,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2024-05",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2622,
-        "baris_asli": 2622,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 7864,
-        "baris_asli": 7864,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 39317,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": true,
       "bulan_1m_pertama": "2023-02",
       "bulan_1m_terakhir": "2024-05",
-      "bulan_diuji": "2024-05",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2023-02",
+      "bulan_bersama_terakhir": "2024-05",
       "jumlah_bulan_bersama": 16,
-      "simbol": "COCOSUSDT"
+      "simbol": "COCOSUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 709,
+            "baris_asli": 709,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 2127,
+            "baris_asli": 2127,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 10635,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2023-02",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2622,
+            "baris_asli": 2622,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7864,
+            "baris_asli": 7864,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 39317,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2024-05",
+          "peran": "akhir"
+        }
+      ]
     },
     {
-      "15m": {
-        "bar_cocok_waktu": 2621,
-        "baris_asli": 2621,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "5m": {
-        "bar_cocok_waktu": 7862,
-        "baris_asli": 7862,
-        "baris_asli_dibuang": 0,
-        "beda_per_kolom": {
-          "close": 0,
-          "high": 0,
-          "low": 0,
-          "open": 0,
-          "quote_volume": 0,
-          "taker_buy_base": 0,
-          "taker_buy_quote": 0,
-          "trades": 0,
-          "volume": 0
-        },
-        "contoh_beda": [],
-        "contoh_hanya_di_asli": [],
-        "contoh_hanya_di_resample": [],
-        "jumlah_hanya_di_asli": 0,
-        "jumlah_hanya_di_resample": 0
-      },
-      "baris_1m": 39310,
-      "baris_1m_dibuang": 0,
-      "berheader_bulan_diuji": true,
-      "berheader_bulan_pertama": false,
       "bulan_1m_pertama": "2021-02",
       "bulan_1m_terakhir": "2024-05",
-      "bulan_diuji": "2024-05",
+      "bulan_awal_tertinggal_dari_1m": false,
+      "bulan_bersama_pertama": "2021-02",
+      "bulan_bersama_terakhir": "2024-05",
       "jumlah_bulan_bersama": 40,
-      "simbol": "BTSUSDT"
+      "simbol": "BTSUSDT",
+      "uji_bulan": [
+        {
+          "15m": {
+            "bar_cocok_waktu": 2660,
+            "baris_asli": 2660,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 1,
+              "low": 1,
+              "open": 25,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.03913",
+                "kolom": "open",
+                "open_time": 1612201500000,
+                "resample": "0.03918"
+              },
+              {
+                "asli": "0.04075",
+                "kolom": "open",
+                "open_time": 1612214100000,
+                "resample": "0.04071"
+              },
+              {
+                "asli": "0.03994",
+                "kolom": "open",
+                "open_time": 1612305900000,
+                "resample": "0.03991"
+              },
+              {
+                "asli": "0.03992",
+                "kolom": "low",
+                "open_time": 1612305900000,
+                "resample": "0.03991"
+              },
+              {
+                "asli": "0.04112",
+                "kolom": "open",
+                "open_time": 1612332000000,
+                "resample": "0.04114"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7980,
+            "baris_asli": 7980,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 9,
+              "low": 14,
+              "open": 93,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [
+              {
+                "asli": "0.03913",
+                "kolom": "open",
+                "open_time": 1612201500000,
+                "resample": "0.03918"
+              },
+              {
+                "asli": "0.04074",
+                "kolom": "open",
+                "open_time": 1612204500000,
+                "resample": "0.04078"
+              },
+              {
+                "asli": "0.03996",
+                "kolom": "open",
+                "open_time": 1612207200000,
+                "resample": "0.03987"
+              },
+              {
+                "asli": "0.03991",
+                "kolom": "low",
+                "open_time": 1612207200000,
+                "resample": "0.03987"
+              },
+              {
+                "asli": "0.03998",
+                "kolom": "open",
+                "open_time": 1612207500000,
+                "resample": "0.03991"
+              }
+            ],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 39900,
+          "baris_1m_dibuang": 0,
+          "berheader": false,
+          "bulan": "2021-02",
+          "peran": "awal"
+        },
+        {
+          "15m": {
+            "bar_cocok_waktu": 2621,
+            "baris_asli": 2621,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "5m": {
+            "bar_cocok_waktu": 7862,
+            "baris_asli": 7862,
+            "baris_asli_dibuang": 0,
+            "beda_per_kolom": {
+              "close": 0,
+              "high": 0,
+              "low": 0,
+              "open": 0,
+              "quote_volume": 0,
+              "taker_buy_base": 0,
+              "taker_buy_quote": 0,
+              "trades": 0,
+              "volume": 0
+            },
+            "contoh_beda": [],
+            "contoh_hanya_di_asli": [],
+            "contoh_hanya_di_resample": [],
+            "jumlah_hanya_di_asli": 0,
+            "jumlah_hanya_di_resample": 0
+          },
+          "baris_1m": 39310,
+          "baris_1m_dibuang": 0,
+          "berheader": true,
+          "bulan": "2024-05",
+          "peran": "akhir"
+        }
+      ]
     }
   ],
-  "sidik_kode": "91f898d81d1dfa4f379e2fd1fa30468896c26ab556a66fd8bfe777a832594de4",
+  "ringkas_era": {
+    "batas_header_dipakai": "2022-01",
+    "bulan_diuji_total": 24,
+    "bulan_era_berheader": 14,
+    "bulan_era_tak_terukur": 0,
+    "bulan_era_tanpa_header": 10,
+    "simbol_dengan_bulan_era_tanpa_header": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "BNBUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT",
+      "LINKUSDT",
+      "SRMUSDT",
+      "BTSUSDT"
+    ],
+    "tanggal_tak_sepakat_dengan_isi": []
+  },
+  "sidik_kode": "d2262a93278f4cdf3b80f180501ac42407b1aa27bfcfeae45cd59101ec63d344",
   "simbol_diuji": [
     "BTCUSDT",
     "ETHUSDT",
@@ -655,6 +1771,7 @@
     "BTSUSDT"
   ],
   "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
-  "total_beda_kolom_jumlah": 0,
-  "waktu_utc": "2026-07-27T23:28:25Z"
+  "total_bar_asli_dibandingkan": 226468,
+  "total_beda_kolom_jumlah": 20,
+  "waktu_utc": "2026-07-28T07:09:35Z"
 }

@@ -1,6 +1,6 @@
 """Uji jalur funding tanpa jaringan sama sekali.
 
-Dua belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
+Lima belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
 cacah butir yang dikumpulkan pytest. Ini disengaja: kekeliruan R-148 lahir dari
 mencacah fungsi padahal pytest mencacah butir.
 """
@@ -131,3 +131,35 @@ def test_klasifikasi_lubang_seluruh_bulan_hilang_tidak_dicacah_ganda():
     # bulan di luar riwayat klines diabaikan, bukan menambah cacah
     lain = funding.klasifikasi_lubang(bulan, bulan + ["2030-01"])
     assert lain["hilang"] == 3
+
+
+def test_mulai_lubang_ekor_bulan_pertama_akhiran():
+    bulan = ["2025-05", "2025-06", "2025-07", "2025-08"]
+    assert funding.mulai_lubang_ekor(bulan, ["2025-07", "2025-08"]) == "2025-07"
+    # lubang di tengah bukan lubang ekor
+    assert funding.mulai_lubang_ekor(bulan, ["2025-06"]) is None
+    # tanpa lubang sama sekali
+    assert funding.mulai_lubang_ekor(bulan, []) is None
+    # seluruh bulan hilang dihitung sebagai awal, jadi ekornya kosong
+    assert funding.mulai_lubang_ekor(bulan, bulan) is None
+
+
+def test_jarak_bulan_melintasi_pergantian_tahun():
+    assert funding.jarak_bulan("2025-07", "2026-06") == 11
+    assert funding.jarak_bulan("2026-06", "2026-06") == 0
+    assert funding.jarak_bulan("2026-06", "2025-07") == -11
+    assert funding.jarak_bulan("bukan-bulan", "2026-06") is None
+
+
+def test_histogram_menyaring_none_dan_melaporkan_seri():
+    h = funding.histogram(["2025-07", "2025-07", "2024-01", None])
+    assert h == {"2024-01": 1, "2025-07": 2}
+    puncak = funding.puncak_histogram(h)
+    assert puncak["kunci"] == "2025-07"
+    assert puncak["cacah"] == 2
+    assert puncak["seri"] is False
+    # seri dimenangkan kunci terkecil, tetapi keseriannya dilaporkan
+    seri = funding.puncak_histogram({"2024-01": 2, "2025-07": 2})
+    assert seri["kunci"] == "2024-01"
+    assert seri["seri"] is True
+    assert funding.puncak_histogram({}) == {"kunci": None, "cacah": 0, "seri": False}

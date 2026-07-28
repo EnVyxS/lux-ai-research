@@ -21,16 +21,16 @@ Rancangan dan biayanya:
    mengubahnya, keduanya bisa hanyut, dan itu risiko yang dicatat, bukan
    disembunyikan.
 
-VERSI 2 menambal tiga kekurangan VERSI 1 yang baru terlihat saat adjudikasi
-(jurnal 66 dan 67):
+Riwayat versi:
 
-- baris sampel ringkas ikut tercetak ke log, sehingga ramalan tentang header
-  dapat diadjudikasi tanpa membaca JSON penuh berisi 787 baris per-simbol;
-- daftar selisih ditulis PENUH ke berkas terpisah, karena daftar terpotong 500
-  dari 880 tidak sah dipakai menyimpulkan bentuk sebaran (aturan 20);
-- bentuk lubang diukur, bukan dilihat sekilas: tiap bulan hilang digolongkan
-  awal, ekor, atau tengah, dengan medan penggugur yang membatalkan seluruh
-  angka bentuk-lubang bila cacahnya bocor.
+- VERSI 1 mengukur ketersediaan; hasilnya 880 bulan klines tanpa funding.
+- VERSI 2 menambahkan bukti sampel ke log, daftar penuh, dan klasifikasi lubang;
+  hasilnya 826 dari 880 lubang berada di EKOR riwayat simbol.
+- VERSI 3 menjawab pertanyaan yang lahir dari itu: apakah ekor-ekor tersebut
+  mulai pada bulan yang SAMA. Puluhan simbol yang berhenti serempak berbunyi
+  seperti satu peristiwa di sisi arsip, bukan seperti puluhan delisting
+  kebetulan — tetapi itu dugaan yang dilihat dengan mata pada daftar terpotong,
+  dan dugaan tidak boleh dipakai sebelum jadi angka (aturan 16).
 
 Laporan ini **diagnostik** (`bukan_bukti: true`, aturan 10). Ia tidak mengubah
 satu baris pun manifes serapan.
@@ -51,7 +51,7 @@ from typing import Any, Dict, List, Optional, Sequence
 
 from . import arsip
 
-VERSI = 2
+VERSI = 3
 SUMBER_RENTANG = "reports/semesta_rentang.json"
 KELUARAN = "reports/funding_semesta.json"
 KELUARAN_SELISIH = "reports/funding_selisih_penuh.json"
@@ -114,6 +114,25 @@ def selisih_bulan(
     }
 
 
+def _akhiran_hilang(bulan_klines: Sequence[str], hilang: Sequence[str]) -> List[str]:
+    """Bulan-bulan akhiran berurutan yang hilang, setelah awalan dikurangi."""
+    urut = sorted(str(b) for b in bulan_klines)
+    kurang = {str(b) for b in hilang}
+    awal = 0
+    for b in urut:
+        if b in kurang:
+            awal += 1
+        else:
+            break
+    ekor: List[str] = []
+    for b in reversed(urut[awal:]):
+        if b in kurang:
+            ekor.append(b)
+        else:
+            break
+    return sorted(ekor)
+
+
 def klasifikasi_lubang(
     bulan_klines: Sequence[str], hilang: Sequence[str]
 ) -> Dict[str, int]:
@@ -132,14 +151,53 @@ def klasifikasi_lubang(
             awal += 1
         else:
             break
-    ekor = 0
-    for b in reversed(urut[awal:]):
-        if b in kurang:
-            ekor += 1
-        else:
-            break
+    ekor = len(_akhiran_hilang(urut, kurang))
     total = sum(1 for b in urut if b in kurang)
     return {"awal": awal, "ekor": ekor, "tengah": total - awal - ekor, "hilang": total}
+
+
+def mulai_lubang_ekor(
+    bulan_klines: Sequence[str], hilang: Sequence[str]
+) -> Optional[str]:
+    """Bulan PERTAMA dari lubang ekor, atau None bila tidak ada lubang ekor.
+
+    None dan "tidak ada lubang" adalah keadaan yang sama di sini, tetapi None
+    tidak boleh diam-diam menjadi nol di histogram; pemanggil wajib menyaringnya
+    (aturan 46).
+    """
+    ekor = _akhiran_hilang(bulan_klines, hilang)
+    return ekor[0] if ekor else None
+
+
+def jarak_bulan(awal: str, akhir: str) -> Optional[int]:
+    """Selisih kalender dalam bulan; None bila salah satu tidak berbentuk YYYY-MM."""
+    try:
+        ta, ba = str(awal).split("-")
+        tb, bb = str(akhir).split("-")
+        return (int(tb) * 12 + int(bb)) - (int(ta) * 12 + int(ba))
+    except (ValueError, AttributeError):
+        return None
+
+
+def histogram(nilai: Sequence[Any]) -> Dict[str, int]:
+    """Cacah kemunculan, kunci terurut. None disaring, bukan dijadikan kunci."""
+    cacah: Dict[str, int] = {}
+    for n in nilai:
+        if n is None:
+            continue
+        kunci = str(n)
+        cacah[kunci] = cacah.get(kunci, 0) + 1
+    return {k: cacah[k] for k in sorted(cacah)}
+
+
+def puncak_histogram(h: Dict[str, int]) -> Dict[str, Any]:
+    """Kunci dengan cacah terbesar; seri dimenangkan kunci terkecil, dan
+    keseriannya DILAPORKAN, bukan disembunyikan."""
+    if not h:
+        return {"kunci": None, "cacah": 0, "seri": False}
+    tertinggi = max(h.values())
+    kandidat = sorted(k for k, v in h.items() if v == tertinggi)
+    return {"kunci": kandidat[0], "cacah": tertinggi, "seri": len(kandidat) > 1}
 
 
 def kelas_bulan(simbol: str, bulan: str, bulan_terakhir: str = "") -> List[str]:
@@ -336,6 +394,9 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     cacah_bulan_funding = 0
     lubang = {"awal": 0, "ekor": 0, "tengah": 0, "hilang": 0}
     tanpa_funding_sama_sekali = 0
+    mulai_ekor: List[str] = []
+    jarak_terakhir: List[int] = []
+    cacah_simbol_ekor = 0
 
     for nama in simbol:
         isi = rentang.get(nama) or {}
@@ -354,12 +415,23 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         bentuk = klasifikasi_lubang(bulan_k, beda["klines_tanpa_funding"])
         for kunci in lubang:
             lubang[kunci] += bentuk[kunci]
+        mulai = mulai_lubang_ekor(bulan_k, beda["klines_tanpa_funding"])
+        jarak = None
+        if mulai is not None:
+            cacah_simbol_ekor += 1
+            mulai_ekor.append(mulai)
+            if bulan_k and bulan_f:
+                jarak = jarak_bulan(bulan_f[-1], bulan_k[-1])
+                if jarak is not None:
+                    jarak_terakhir.append(jarak)
         per_simbol.append(
             {
                 "simbol": nama,
                 "cacah_bulan_klines": len(bulan_k),
                 "cacah_bulan_funding": len(bulan_f),
                 "bentuk_lubang": bentuk,
+                "mulai_lubang_ekor": mulai,
+                "jarak_bulan_terakhir": jarak,
                 "klines_tanpa_funding": beda["klines_tanpa_funding"],
                 "funding_tanpa_klines": beda["funding_tanpa_klines"],
             }
@@ -379,6 +451,8 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     ringkas = ringkas_selisih(per_simbol)
     kelas = kelas_tersentuh(sampel)
     byte_sampel = [int(s.get("byte_zip") or 0) for s in sampel if not s.get("gagal_unduh")]
+    hist_mulai = histogram(mulai_ekor)
+    hist_jarak = histogram(jarak_terakhir)
 
     laporan: Dict[str, Any] = {
         "status": "TERUKUR" if simbol else "TIDAK MENGUKUR",
@@ -389,6 +463,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
             "simbol_terdaftar": len(per_simbol),
             "bulan_klines": cacah_bulan_klines,
             "bulan_funding": cacah_bulan_funding,
+            "simbol_dengan_lubang_ekor": cacah_simbol_ekor,
         },
         "cacah_simbol_gagal_daftar": len(gagal_daftar),
         "contoh_gagal_daftar": gagal_daftar[:10],
@@ -399,6 +474,9 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
             "tengah": lubang["tengah"],
             "hilang": lubang["hilang"],
         },
+        "histogram_mulai_lubang_ekor": hist_mulai,
+        "puncak_mulai_lubang_ekor": puncak_histogram(hist_mulai),
+        "histogram_jarak_bulan_terakhir": hist_jarak,
         "cacah_sampel": len(sampel),
         "cacah_sampel_gagal_unduh": sum(1 for s in sampel if s.get("gagal_unduh")),
         "cacah_sampel_gagal_checksum": sum(1 for s in sampel if s.get("gagal_checksum")),
@@ -415,6 +493,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         laporan["cacah_bulan_klines_tanpa_funding"]
         - (lubang["awal"] + lubang["ekor"] + lubang["tengah"])
     )
+    laporan["selisih_histogram"] = cacah_simbol_ekor - sum(hist_mulai.values())
     laporan["catatan_bukan_bukti"] = (
         "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK "
         "menulis funding_ada di manifes mana pun"
@@ -424,8 +503,8 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 "
         "berarti semesta yang dilihat modul ini bukan semesta manifes serapan, "
         "sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti "
-        "cacah bentuk_lubang bocor dan seluruh angka awal/ekor/tengah batal "
-        "(aturan 24)"
+        "cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram "
+        "bulan-mulai bocor dan seluruh angka kohort batal (aturan 24)"
     )
     laporan["catatan_metode"] = (
         "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan "
@@ -437,6 +516,19 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang "
         "seluruh bulannya tanpa funding masuk awal saja, jadi angka ekor adalah "
         "batas BAWAH bagi gejala hilang-di-akhir, bukan taksiran tengahnya"
+    )
+    laporan["catatan_kohort"] = (
+        "histogram_mulai_lubang_ekor mencacah SIMBOL, bukan bulan; satu simbol "
+        "menyumbang tepat satu bulan-mulai. Puncak yang tinggi menunjukkan "
+        "banyak simbol berhenti serempak, tetapi TIDAK dengan sendirinya "
+        "membuktikan sebabnya ada di sisi arsip: bulan yang sama juga bisa "
+        "lahir dari satu gelombang delisting. Membedakan keduanya memerlukan "
+        "sumber di luar arsip dan BELUM dilakukan"
+    )
+    laporan["catatan_jarak"] = (
+        "jarak_bulan_terakhir = bulan klines terakhir dikurangi bulan funding "
+        "terakhir, dihitung hanya untuk simbol yang punya lubang ekor; simbol "
+        "tanpa lubang ekor tidak menyumbang nol, ia tidak menyumbang apa pun"
     )
     laporan["catatan_rentang"] = (
         "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json "

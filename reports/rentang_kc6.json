@@ -1,0 +1,6487 @@
+{
+  "bukan_bukti": true,
+  "nama": "rentang_kc6",
+  "pengukuran": [
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-01",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1577836800000,
+        "menit_terakhir": 1580515140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2784,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8352,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 41760,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 41760,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580515200000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 41760
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 5,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 5,
+        "bucket_open_beda": 5,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "167.45",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579553400000,
+            "resample_open": "167.48"
+          },
+          {
+            "asli_open": "167.31",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579556400000,
+            "resample_open": "167.32"
+          },
+          {
+            "asli_open": "167.29",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579557000000,
+            "resample_open": "167.26"
+          },
+          {
+            "asli_open": "176.87",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580276400000,
+            "resample_open": "176.86"
+          },
+          {
+            "asli_open": "176.64",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580324100000,
+            "resample_open": "176.60"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 5,
+        "open_beda_menit_pertama_ada": 5,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-01",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1577836800000,
+        "menit_terakhir": 1580515140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2784,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8352,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 41760,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 41760,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580515200000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 41760
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 1888,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "18.608",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1582911000000,
+            "resample_open": "18.601"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 2,
+        "bucket_dibandingkan": 5664,
+        "bucket_ohlc_beda": 2,
+        "bucket_open_beda": 2,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "18.580",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1582910700000,
+            "resample_open": "18.579"
+          },
+          {
+            "asli_open": "18.608",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1582911000000,
+            "resample_open": "18.601"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 2,
+        "open_beda_menit_pertama_ada": 2,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 28319,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 28319,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1581321660000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 28319
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "12.035",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1585457100000,
+            "resample_open": "12.036"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 2,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 2,
+        "bucket_open_beda": 2,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "12.035",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1585457100000,
+            "resample_open": "12.036"
+          },
+          {
+            "asli_open": "12.046",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1585457700000,
+            "resample_open": "12.047"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 2,
+        "open_beda_menit_pertama_ada": 2,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "13.546",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1586122500000,
+            "resample_open": "13.541"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 13,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 13,
+        "bucket_open_beda": 13,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "17.298",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1588967100000,
+            "resample_open": "17.299"
+          },
+          {
+            "asli_open": "17.175",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589048100000,
+            "resample_open": "17.172"
+          },
+          {
+            "asli_open": "16.240",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589440500000,
+            "resample_open": "16.235"
+          },
+          {
+            "asli_open": "16.159",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589692500000,
+            "resample_open": "16.157"
+          },
+          {
+            "asli_open": "16.530",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589831100000,
+            "resample_open": "16.532"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 13,
+        "open_beda_menit_pertama_ada": 13,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 47,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 47,
+        "bucket_open_beda": 47,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "17.053",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588912800000,
+            "resample_open": "17.056"
+          },
+          {
+            "asli_open": "17.299",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588965900000,
+            "resample_open": "17.298"
+          },
+          {
+            "asli_open": "17.298",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588967100000,
+            "resample_open": "17.299"
+          },
+          {
+            "asli_open": "17.201",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588971000000,
+            "resample_open": "17.200"
+          },
+          {
+            "asli_open": "17.175",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1589048100000,
+            "resample_open": "17.172"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 47,
+        "open_beda_menit_pertama_ada": 47,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 5,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 5,
+        "bucket_open_beda": 5,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "17.405",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1591031700000,
+            "resample_open": "17.403"
+          },
+          {
+            "asli_open": "18.074",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1591090200000,
+            "resample_open": "18.073"
+          },
+          {
+            "asli_open": "17.209",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1591158600000,
+            "resample_open": "17.210"
+          },
+          {
+            "asli_open": "17.223",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1591173900000,
+            "resample_open": "17.224"
+          },
+          {
+            "asli_open": "16.452",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1592938800000,
+            "resample_open": "16.456"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 5,
+        "open_beda_menit_pertama_ada": 5,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 11,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 11,
+        "bucket_open_beda": 11,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "17.405",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1591031700000,
+            "resample_open": "17.403"
+          },
+          {
+            "asli_open": "18.033",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1591080600000,
+            "resample_open": "18.028"
+          },
+          {
+            "asli_open": "18.074",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1591090200000,
+            "resample_open": "18.073"
+          },
+          {
+            "asli_open": "17.209",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1591158600000,
+            "resample_open": "17.210"
+          },
+          {
+            "asli_open": "17.223",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1591173900000,
+            "resample_open": "17.224"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 11,
+        "open_beda_menit_pertama_ada": 11,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1593561600000,
+        "menit_terakhir": 1596239940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 1604,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 2,
+        "bucket_dibandingkan": 4812,
+        "bucket_ohlc_beda": 2,
+        "bucket_open_beda": 2,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "3.1230",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601165100000,
+            "resample_open": "3.1242"
+          },
+          {
+            "asli_open": "3.1289",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601165400000,
+            "resample_open": "3.1207"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 2,
+        "open_beda_menit_pertama_ada": 2,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-09",
+      "celah": {
+        "baris": 24060,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 24060,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1600066800000,
+        "menit_terakhir": 1601510340000,
+        "slot_dalam_rentang": 24060
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 3,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 3,
+        "bucket_open_beda": 3,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.4841",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604006100000,
+            "resample_open": "1.4840"
+          },
+          {
+            "asli_open": "1.4582",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604093400000,
+            "resample_open": "1.4583"
+          },
+          {
+            "asli_open": "1.4433",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604108700000,
+            "resample_open": "1.4425"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 3,
+        "open_beda_menit_pertama_ada": 3,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 6,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 6,
+        "bucket_open_beda": 6,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "2.5051",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1602278700000,
+            "resample_open": "2.5054"
+          },
+          {
+            "asli_open": "2.4100",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1602634200000,
+            "resample_open": "2.4071"
+          },
+          {
+            "asli_open": "1.4841",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604006100000,
+            "resample_open": "1.4840"
+          },
+          {
+            "asli_open": "1.4582",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604093400000,
+            "resample_open": "1.4583"
+          },
+          {
+            "asli_open": "1.4433",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604108700000,
+            "resample_open": "1.4425"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 6,
+        "open_beda_menit_pertama_ada": 6,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-10",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1601510400000,
+        "menit_terakhir": 1604188740000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.4001",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604539800000,
+            "resample_open": "1.4003"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 9,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 9,
+        "bucket_open_beda": 9,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.4859",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604355900000,
+            "resample_open": "1.4856"
+          },
+          {
+            "asli_open": "1.4265",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604440200000,
+            "resample_open": "1.4266"
+          },
+          {
+            "asli_open": "1.4016",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604535900000,
+            "resample_open": "1.4010"
+          },
+          {
+            "asli_open": "1.4003",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604536800000,
+            "resample_open": "1.4005"
+          },
+          {
+            "asli_open": "1.4001",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604539800000,
+            "resample_open": "1.4003"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 9,
+        "open_beda_menit_pertama_ada": 9,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-11",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1604188800000,
+        "menit_terakhir": 1606780740000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 3,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 3,
+        "bucket_open_beda": 3,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.8505",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607318100000,
+            "resample_open": "1.8504"
+          },
+          {
+            "asli_open": "1.6840",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1608414300000,
+            "resample_open": "1.6839"
+          },
+          {
+            "asli_open": "1.6407",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1608485400000,
+            "resample_open": "1.6403"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 3,
+        "open_beda_menit_pertama_ada": 3,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 9,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 9,
+        "bucket_open_beda": 9,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.8505",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607318100000,
+            "resample_open": "1.8504"
+          },
+          {
+            "asli_open": "1.8541",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607326800000,
+            "resample_open": "1.8540"
+          },
+          {
+            "asli_open": "1.8438",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607333700000,
+            "resample_open": "1.8452"
+          },
+          {
+            "asli_open": "1.5047",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607810700000,
+            "resample_open": "1.5045"
+          },
+          {
+            "asli_open": "1.5945",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607919000000,
+            "resample_open": "1.5939"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 9,
+        "open_beda_menit_pertama_ada": 9,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-12",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1606780800000,
+        "menit_terakhir": 1609459140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-01",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1609459200000,
+        "menit_terakhir": 1612137540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2688,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8064,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-02",
+      "celah": {
+        "baris": 40320,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 40320,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1612137600000,
+        "menit_terakhir": 1614556740000,
+        "slot_dalam_rentang": 40320
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-08",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1690848000000,
+        "menit_terakhir": 1693526340000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 10,
+        "bucket_dibandingkan": 2463,
+        "bucket_ohlc_beda": 10,
+        "bucket_open_beda": 9,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.2032",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1578300300000,
+            "resample_open": "0.1970"
+          },
+          {
+            "asli_open": "0.2013",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1578301200000,
+            "resample_open": "0.2041"
+          },
+          {
+            "asli_open": "0.2048",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1578302100000,
+            "resample_open": "0.2041"
+          },
+          {
+            "asli_open": "0.2286",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1579218300000,
+            "resample_open": "0.2290"
+          },
+          {
+            "asli_open": "0.2291",
+            "kolom_beda": [
+              "low",
+              "close"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1579220100000,
+            "resample_open": "0.2291"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 9,
+        "open_beda_menit_pertama_ada": 9,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 28,
+        "bucket_dibandingkan": 7388,
+        "bucket_ohlc_beda": 28,
+        "bucket_open_beda": 27,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.2032",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1578300900000,
+            "resample_open": "0.1970"
+          },
+          {
+            "asli_open": "0.2013",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1578301200000,
+            "resample_open": "0.2041"
+          },
+          {
+            "asli_open": "0.2030",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1578301800000,
+            "resample_open": "0.2004"
+          },
+          {
+            "asli_open": "0.2092",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1578303600000,
+            "resample_open": "0.2097"
+          },
+          {
+            "asli_open": "0.2286",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579218300000,
+            "resample_open": "0.2290"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 27,
+        "open_beda_menit_pertama_ada": 27,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-01",
+      "celah": {
+        "baris": 36939,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 36939,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1578298860000,
+        "menit_terakhir": 1580515140000,
+        "slot_dalam_rentang": 36939
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2784,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8352,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.2561",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1582668300000,
+            "resample_open": "0.2562"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 41760,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 41760,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580515200000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 41760
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 64,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 192,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-01",
+      "celah": {
+        "baris": 959,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 959,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580457660000,
+        "menit_terakhir": 1580515140000,
+        "slot_dalam_rentang": 959
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 4,
+        "bucket_dibandingkan": 2784,
+        "bucket_ohlc_beda": 4,
+        "bucket_open_beda": 4,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.05713",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1580770800000,
+            "resample_open": "0.05715"
+          },
+          {
+            "asli_open": "0.05732",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1580782500000,
+            "resample_open": "0.05731"
+          },
+          {
+            "asli_open": "0.05624",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1580841000000,
+            "resample_open": "0.05626"
+          },
+          {
+            "asli_open": "0.06092",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1581216300000,
+            "resample_open": "0.06081"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 4,
+        "open_beda_menit_pertama_ada": 4,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 20,
+        "bucket_dibandingkan": 8352,
+        "bucket_ohlc_beda": 20,
+        "bucket_open_beda": 20,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.05719",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580767500000,
+            "resample_open": "0.05715"
+          },
+          {
+            "asli_open": "0.05733",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580769600000,
+            "resample_open": "0.05736"
+          },
+          {
+            "asli_open": "0.05713",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580770800000,
+            "resample_open": "0.05715"
+          },
+          {
+            "asli_open": "0.05701",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580772000000,
+            "resample_open": "0.05704"
+          },
+          {
+            "asli_open": "0.05717",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1580774100000,
+            "resample_open": "0.05718"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 20,
+        "open_beda_menit_pertama_ada": 20,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 41760,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 41760,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580515200000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 41760
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 19,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 19,
+        "bucket_open_beda": 19,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04875",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1583343900000,
+            "resample_open": "0.04874"
+          },
+          {
+            "asli_open": "0.04751",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1583665200000,
+            "resample_open": "0.04752"
+          },
+          {
+            "asli_open": "0.04480",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1583692200000,
+            "resample_open": "0.04486"
+          },
+          {
+            "asli_open": "0.04469",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1583699400000,
+            "resample_open": "0.04466"
+          },
+          {
+            "asli_open": "0.04454",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1583702100000,
+            "resample_open": "0.04456"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 19,
+        "open_beda_menit_pertama_ada": 19,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 58,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 58,
+        "bucket_open_beda": 58,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04877",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1583341800000,
+            "resample_open": "0.04873"
+          },
+          {
+            "asli_open": "0.04875",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1583343900000,
+            "resample_open": "0.04874"
+          },
+          {
+            "asli_open": "0.04756",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1583644200000,
+            "resample_open": "0.04762"
+          },
+          {
+            "asli_open": "0.04751",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1583665200000,
+            "resample_open": "0.04752"
+          },
+          {
+            "asli_open": "0.04480",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1583692200000,
+            "resample_open": "0.04486"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 58,
+        "open_beda_menit_pertama_ada": 58,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 2,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 2,
+        "bucket_open_beda": 2,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.03210",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1586074500000,
+            "resample_open": "0.03209"
+          },
+          {
+            "asli_open": "0.03218",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1586076300000,
+            "resample_open": "0.03217"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 2,
+        "open_beda_menit_pertama_ada": 2,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 7,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 7,
+        "bucket_open_beda": 7,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.03197",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1585866300000,
+            "resample_open": "0.03198"
+          },
+          {
+            "asli_open": "0.03213",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1586014800000,
+            "resample_open": "0.03214"
+          },
+          {
+            "asli_open": "0.03215",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1586015700000,
+            "resample_open": "0.03216"
+          },
+          {
+            "asli_open": "0.03230",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1586056800000,
+            "resample_open": "0.03229"
+          },
+          {
+            "asli_open": "0.03210",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1586074500000,
+            "resample_open": "0.03209"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 7,
+        "open_beda_menit_pertama_ada": 7,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 31,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 31,
+        "bucket_open_beda": 31,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.05168",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1588925700000,
+            "resample_open": "0.05173"
+          },
+          {
+            "asli_open": "0.05127",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1588949100000,
+            "resample_open": "0.05128"
+          },
+          {
+            "asli_open": "0.05040",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589341500000,
+            "resample_open": "0.05041"
+          },
+          {
+            "asli_open": "0.05026",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589342400000,
+            "resample_open": "0.05033"
+          },
+          {
+            "asli_open": "0.04987",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1589350500000,
+            "resample_open": "0.04983"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 31,
+        "open_beda_menit_pertama_ada": 31,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 134,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 134,
+        "bucket_open_beda": 134,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04955",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588814700000,
+            "resample_open": "0.04954"
+          },
+          {
+            "asli_open": "0.04937",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588817100000,
+            "resample_open": "0.04932"
+          },
+          {
+            "asli_open": "0.04941",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588817400000,
+            "resample_open": "0.04943"
+          },
+          {
+            "asli_open": "0.04910",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588851600000,
+            "resample_open": "0.04911"
+          },
+          {
+            "asli_open": "0.04907",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1588852200000,
+            "resample_open": "0.04909"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 134,
+        "open_beda_menit_pertama_ada": 134,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 53,
+        "bucket_dibandingkan": 2076,
+        "bucket_ohlc_beda": 53,
+        "bucket_open_beda": 53,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003141",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1594688400000,
+            "resample_open": "0.003143"
+          },
+          {
+            "asli_open": "0.003136",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1594694700000,
+            "resample_open": "0.003134"
+          },
+          {
+            "asli_open": "0.003285",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1594767600000,
+            "resample_open": "0.003287"
+          },
+          {
+            "asli_open": "0.002919",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1594906200000,
+            "resample_open": "0.002920"
+          },
+          {
+            "asli_open": "0.002944",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1594934100000,
+            "resample_open": "0.002945"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 53,
+        "open_beda_menit_pertama_ada": 53,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 170,
+        "bucket_dibandingkan": 6228,
+        "bucket_ohlc_beda": 170,
+        "bucket_open_beda": 170,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003628",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1594491900000,
+            "resample_open": "0.003627"
+          },
+          {
+            "asli_open": "0.003669",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1594577100000,
+            "resample_open": "0.003666"
+          },
+          {
+            "asli_open": "0.003665",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1594584300000,
+            "resample_open": "0.003669"
+          },
+          {
+            "asli_open": "0.003638",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1594590600000,
+            "resample_open": "0.003641"
+          },
+          {
+            "asli_open": "0.003543",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1594614900000,
+            "resample_open": "0.003542"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 170,
+        "open_beda_menit_pertama_ada": 170,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-07",
+      "celah": {
+        "baris": 31140,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 31140,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1594371600000,
+        "menit_terakhir": 1596239940000,
+        "slot_dalam_rentang": 31140
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 56,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 56,
+        "bucket_open_beda": 56,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003210",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1596243600000,
+            "resample_open": "0.003212"
+          },
+          {
+            "asli_open": "0.003212",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1596246300000,
+            "resample_open": "0.003213"
+          },
+          {
+            "asli_open": "0.003388",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1596478500000,
+            "resample_open": "0.003389"
+          },
+          {
+            "asli_open": "0.003375",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1596497400000,
+            "resample_open": "0.003376"
+          },
+          {
+            "asli_open": "0.003521",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1596627000000,
+            "resample_open": "0.003520"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 56,
+        "open_beda_menit_pertama_ada": 56,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 228,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 228,
+        "bucket_open_beda": 228,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003210",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1596243600000,
+            "resample_open": "0.003212"
+          },
+          {
+            "asli_open": "0.003212",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1596246300000,
+            "resample_open": "0.003213"
+          },
+          {
+            "asli_open": "0.003392",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1596363600000,
+            "resample_open": "0.003393"
+          },
+          {
+            "asli_open": "0.003404",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1596446700000,
+            "resample_open": "0.003403"
+          },
+          {
+            "asli_open": "0.003388",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1596478500000,
+            "resample_open": "0.003389"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 228,
+        "open_beda_menit_pertama_ada": 228,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-08",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1596240000000,
+        "menit_terakhir": 1598918340000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 73,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 73,
+        "bucket_open_beda": 73,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003227",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1598935500000,
+            "resample_open": "0.003229"
+          },
+          {
+            "asli_open": "0.003247",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1598994900000,
+            "resample_open": "0.003245"
+          },
+          {
+            "asli_open": "0.003090",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1599072300000,
+            "resample_open": "0.003089"
+          },
+          {
+            "asli_open": "0.003128",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1599083100000,
+            "resample_open": "0.003127"
+          },
+          {
+            "asli_open": "0.003120",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1599084900000,
+            "resample_open": "0.003121"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 73,
+        "open_beda_menit_pertama_ada": 73,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 295,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 295,
+        "bucket_open_beda": 295,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003215",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1598928000000,
+            "resample_open": "0.003217"
+          },
+          {
+            "asli_open": "0.003227",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1598932500000,
+            "resample_open": "0.003228"
+          },
+          {
+            "asli_open": "0.003227",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1598935500000,
+            "resample_open": "0.003229"
+          },
+          {
+            "asli_open": "0.003225",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1598937000000,
+            "resample_open": "0.003226"
+          },
+          {
+            "asli_open": "0.003262",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1598953800000,
+            "resample_open": "0.003261"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 295,
+        "open_beda_menit_pertama_ada": 295,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-09",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1598918400000,
+        "menit_terakhir": 1601510340000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 89,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 89,
+        "bucket_open_beda": 89,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.002662",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1601550900000,
+            "resample_open": "0.002660"
+          },
+          {
+            "asli_open": "0.002618",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1601609400000,
+            "resample_open": "0.002617"
+          },
+          {
+            "asli_open": "0.002587",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1601685900000,
+            "resample_open": "0.002585"
+          },
+          {
+            "asli_open": "0.002594",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1601699400000,
+            "resample_open": "0.002593"
+          },
+          {
+            "asli_open": "0.002592",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1601700300000,
+            "resample_open": "0.002593"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 89,
+        "open_beda_menit_pertama_ada": 89,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 405,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 405,
+        "bucket_open_beda": 405,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.002652",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601519100000,
+            "resample_open": "0.002653"
+          },
+          {
+            "asli_open": "0.002648",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601522700000,
+            "resample_open": "0.002649"
+          },
+          {
+            "asli_open": "0.002645",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601523600000,
+            "resample_open": "0.002646"
+          },
+          {
+            "asli_open": "0.002651",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601534100000,
+            "resample_open": "0.002649"
+          },
+          {
+            "asli_open": "0.002652",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601537100000,
+            "resample_open": "0.002653"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 405,
+        "open_beda_menit_pertama_ada": 405,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-10",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1601510400000,
+        "menit_terakhir": 1604188740000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 16,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 16,
+        "bucket_open_beda": 16,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.002580",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604280600000,
+            "resample_open": "0.002581"
+          },
+          {
+            "asli_open": "0.002559",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604565900000,
+            "resample_open": "0.002558"
+          },
+          {
+            "asli_open": "0.002780",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1605150900000,
+            "resample_open": "0.002781"
+          },
+          {
+            "asli_open": "0.002766",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1605207600000,
+            "resample_open": "0.002767"
+          },
+          {
+            "asli_open": "0.002815",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1605282300000,
+            "resample_open": "0.002816"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 16,
+        "open_beda_menit_pertama_ada": 16,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 86,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 86,
+        "bucket_open_beda": 86,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.002570",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604217300000,
+            "resample_open": "0.002571"
+          },
+          {
+            "asli_open": "0.002576",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604242500000,
+            "resample_open": "0.002575"
+          },
+          {
+            "asli_open": "0.002571",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604253300000,
+            "resample_open": "0.002570"
+          },
+          {
+            "asli_open": "0.002581",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604278500000,
+            "resample_open": "0.002580"
+          },
+          {
+            "asli_open": "0.002580",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604280600000,
+            "resample_open": "0.002581"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 86,
+        "open_beda_menit_pertama_ada": 86,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-11",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1604188800000,
+        "menit_terakhir": 1606780740000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 31,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 31,
+        "bucket_open_beda": 31,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003415",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607031000000,
+            "resample_open": "0.003416"
+          },
+          {
+            "asli_open": "0.003324",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607130900000,
+            "resample_open": "0.003319"
+          },
+          {
+            "asli_open": "0.003378",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607161500000,
+            "resample_open": "0.003377"
+          },
+          {
+            "asli_open": "0.003375",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607177700000,
+            "resample_open": "0.003372"
+          },
+          {
+            "asli_open": "0.003370",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607318100000,
+            "resample_open": "0.003371"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 31,
+        "open_beda_menit_pertama_ada": 31,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 171,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 171,
+        "bucket_open_beda": 171,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.003385",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1606860300000,
+            "resample_open": "0.003386"
+          },
+          {
+            "asli_open": "0.003384",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1606906500000,
+            "resample_open": "0.003385"
+          },
+          {
+            "asli_open": "0.003405",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607022300000,
+            "resample_open": "0.003406"
+          },
+          {
+            "asli_open": "0.003415",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607031000000,
+            "resample_open": "0.003416"
+          },
+          {
+            "asli_open": "0.003436",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607037000000,
+            "resample_open": "0.003437"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 171,
+        "open_beda_menit_pertama_ada": 171,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-12",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1606780800000,
+        "menit_terakhir": 1609459140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1688169600000,
+        "menit_terakhir": 1690847940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 3,
+        "bucket_dibandingkan": 1408,
+        "bucket_ohlc_beda": 3,
+        "bucket_open_beda": 3,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "2.648",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1579724100000,
+            "resample_open": "2.646"
+          },
+          {
+            "asli_open": "2.655",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1579726800000,
+            "resample_open": "2.654"
+          },
+          {
+            "asli_open": "2.656",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1579729500000,
+            "resample_open": "2.655"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 3,
+        "open_beda_menit_pertama_ada": 3,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 9,
+        "bucket_dibandingkan": 4224,
+        "bucket_ohlc_beda": 9,
+        "bucket_open_beda": 9,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "2.648",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579724100000,
+            "resample_open": "2.646"
+          },
+          {
+            "asli_open": "2.648",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579724700000,
+            "resample_open": "2.647"
+          },
+          {
+            "asli_open": "2.648",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579725300000,
+            "resample_open": "2.646"
+          },
+          {
+            "asli_open": "2.655",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579726800000,
+            "resample_open": "2.654"
+          },
+          {
+            "asli_open": "2.656",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1579728900000,
+            "resample_open": "2.660"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 9,
+        "open_beda_menit_pertama_ada": 9,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-01",
+      "celah": {
+        "baris": 21120,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 21120,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1579248000000,
+        "menit_terakhir": 1580515140000,
+        "slot_dalam_rentang": 21120
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2784,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8352,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "3.970",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1582910700000,
+            "resample_open": "3.980"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-02",
+      "celah": {
+        "baris": 41760,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 41760,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1580515200000,
+        "menit_terakhir": 1583020740000,
+        "slot_dalam_rentang": 41760
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1583020800000,
+        "menit_terakhir": 1585699140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1585699200000,
+        "menit_terakhir": 1588291140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1588291200000,
+        "menit_terakhir": 1590969540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1590969600000,
+        "menit_terakhir": 1593561540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "7.206",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1681109400000,
+            "resample_open": "7.204"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 23,
+        "bucket_dibandingkan": 1522,
+        "bucket_ohlc_beda": 23,
+        "bucket_open_beda": 23,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "42.1530",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1650000600000,
+            "resample_open": "42.2150"
+          },
+          {
+            "asli_open": "42.4140",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1650049200000,
+            "resample_open": "42.3880"
+          },
+          {
+            "asli_open": "42.7770",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1650099600000,
+            "resample_open": "42.7780"
+          },
+          {
+            "asli_open": "42.7710",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1650100500000,
+            "resample_open": "42.7690"
+          },
+          {
+            "asli_open": "42.7940",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1650103200000,
+            "resample_open": "42.8080"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 23,
+        "open_beda_menit_pertama_ada": 23,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 30,
+        "bucket_dibandingkan": 4566,
+        "bucket_ohlc_beda": 30,
+        "bucket_open_beda": 30,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "42.1530",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1650000600000,
+            "resample_open": "42.2150"
+          },
+          {
+            "asli_open": "41.9100",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1650003000000,
+            "resample_open": "41.8930"
+          },
+          {
+            "asli_open": "42.3270",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1650033300000,
+            "resample_open": "42.3280"
+          },
+          {
+            "asli_open": "42.4790",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1650047700000,
+            "resample_open": "42.4590"
+          },
+          {
+            "asli_open": "42.4140",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1650049200000,
+            "resample_open": "42.3880"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 30,
+        "open_beda_menit_pertama_ada": 30,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-04",
+      "celah": {
+        "baris": 22830,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 22830,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1649993400000,
+        "menit_terakhir": 1651363140000,
+        "slot_dalam_rentang": 22830
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 3,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 3,
+        "bucket_open_beda": 3,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "38.8950",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1651445100000,
+            "resample_open": "38.8660"
+          },
+          {
+            "asli_open": "30.3120",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1653211800000,
+            "resample_open": "30.3100"
+          },
+          {
+            "asli_open": "30.4410",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1653255000000,
+            "resample_open": "30.4400"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 3,
+        "open_beda_menit_pertama_ada": 3,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 4,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 4,
+        "bucket_open_beda": 4,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "39.6220",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1651717200000,
+            "resample_open": "39.6370"
+          },
+          {
+            "asli_open": "30.3120",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1653211800000,
+            "resample_open": "30.3100"
+          },
+          {
+            "asli_open": "30.4410",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1653255000000,
+            "resample_open": "30.4400"
+          },
+          {
+            "asli_open": "27.0450",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1653859500000,
+            "resample_open": "27.0460"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 4,
+        "open_beda_menit_pertama_ada": 4,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1651363200000,
+        "menit_terakhir": 1654041540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "25.9660",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1654304100000,
+            "resample_open": "25.9510"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1654041600000,
+        "menit_terakhir": 1656633540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1656633600000,
+        "menit_terakhir": 1659311940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-08",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1659312000000,
+        "menit_terakhir": 1661990340000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-09",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1661990400000,
+        "menit_terakhir": 1664582340000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2024-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1714521600000,
+        "menit_terakhir": 1717199940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 3,
+        "bucket_dibandingkan": 2488,
+        "bucket_ohlc_beda": 3,
+        "bucket_open_beda": 3,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "2.1378",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1599607800000,
+            "resample_open": "2.1369"
+          },
+          {
+            "asli_open": "1.8590",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1600819200000,
+            "resample_open": "1.8597"
+          },
+          {
+            "asli_open": "1.7456",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1600905600000,
+            "resample_open": "1.7442"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 3,
+        "open_beda_menit_pertama_ada": 3,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 13,
+        "bucket_dibandingkan": 7464,
+        "bucket_ohlc_beda": 13,
+        "bucket_open_beda": 13,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "2.5510",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1599433800000,
+            "resample_open": "2.5508"
+          },
+          {
+            "asli_open": "2.4165",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1599460800000,
+            "resample_open": "2.4195"
+          },
+          {
+            "asli_open": "2.3618",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1599506700000,
+            "resample_open": "2.3623"
+          },
+          {
+            "asli_open": "2.3122",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1599511800000,
+            "resample_open": "2.3102"
+          },
+          {
+            "asli_open": "2.2013",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1599584700000,
+            "resample_open": "2.2030"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 13,
+        "open_beda_menit_pertama_ada": 13,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-09",
+      "celah": {
+        "baris": 37319,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 37319,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1599271260000,
+        "menit_terakhir": 1601510340000,
+        "slot_dalam_rentang": 37319
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 8,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 8,
+        "bucket_open_beda": 8,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.1940",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1603156500000,
+            "resample_open": "1.1938"
+          },
+          {
+            "asli_open": "1.0716",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1603276200000,
+            "resample_open": "1.0717"
+          },
+          {
+            "asli_open": "1.1162",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1603424700000,
+            "resample_open": "1.1163"
+          },
+          {
+            "asli_open": "1.1135",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1603426500000,
+            "resample_open": "1.1136"
+          },
+          {
+            "asli_open": "1.0809",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1603523700000,
+            "resample_open": "1.0808"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 8,
+        "open_beda_menit_pertama_ada": 8,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 29,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 29,
+        "bucket_open_beda": 29,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.5593",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601880900000,
+            "resample_open": "1.5589"
+          },
+          {
+            "asli_open": "1.5631",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1601898600000,
+            "resample_open": "1.5625"
+          },
+          {
+            "asli_open": "1.3614",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1602288600000,
+            "resample_open": "1.3621"
+          },
+          {
+            "asli_open": "1.2584",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1602374700000,
+            "resample_open": "1.2567"
+          },
+          {
+            "asli_open": "1.2470",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1602384900000,
+            "resample_open": "1.2468"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 29,
+        "open_beda_menit_pertama_ada": 29,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-10",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1601510400000,
+        "menit_terakhir": 1604188740000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 12,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 12,
+        "bucket_open_beda": 12,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.9752",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604207700000,
+            "resample_open": "0.9753"
+          },
+          {
+            "asli_open": "0.9719",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604209500000,
+            "resample_open": "0.9713"
+          },
+          {
+            "asli_open": "0.9595",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604223900000,
+            "resample_open": "0.9600"
+          },
+          {
+            "asli_open": "0.9676",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604238300000,
+            "resample_open": "0.9675"
+          },
+          {
+            "asli_open": "0.9809",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1604288700000,
+            "resample_open": "0.9808"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 12,
+        "open_beda_menit_pertama_ada": 12,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 38,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 38,
+        "bucket_open_beda": 38,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.9776",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604189100000,
+            "resample_open": "0.9760"
+          },
+          {
+            "asli_open": "0.9790",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604200200000,
+            "resample_open": "0.9791"
+          },
+          {
+            "asli_open": "0.9752",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604207700000,
+            "resample_open": "0.9753"
+          },
+          {
+            "asli_open": "0.9719",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604209500000,
+            "resample_open": "0.9713"
+          },
+          {
+            "asli_open": "0.9595",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1604223900000,
+            "resample_open": "0.9600"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 38,
+        "open_beda_menit_pertama_ada": 38,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-11",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1604188800000,
+        "menit_terakhir": 1606780740000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 9,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 9,
+        "bucket_open_beda": 9,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.1722",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607206500000,
+            "resample_open": "1.1719"
+          },
+          {
+            "asli_open": "1.0618",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607751900000,
+            "resample_open": "1.0615"
+          },
+          {
+            "asli_open": "1.0563",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607808600000,
+            "resample_open": "1.0562"
+          },
+          {
+            "asli_open": "1.0596",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607935500000,
+            "resample_open": "1.0595"
+          },
+          {
+            "asli_open": "1.0720",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1607996700000,
+            "resample_open": "1.0723"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 9,
+        "open_beda_menit_pertama_ada": 9,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 29,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 29,
+        "bucket_open_beda": 29,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.1722",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607206500000,
+            "resample_open": "1.1719"
+          },
+          {
+            "asli_open": "1.1520",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607235000000,
+            "resample_open": "1.1518"
+          },
+          {
+            "asli_open": "1.1341",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607322900000,
+            "resample_open": "1.1338"
+          },
+          {
+            "asli_open": "1.1298",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607334000000,
+            "resample_open": "1.1297"
+          },
+          {
+            "asli_open": "1.1024",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1607552400000,
+            "resample_open": "1.1028"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 29,
+        "open_beda_menit_pertama_ada": 29,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2020-12",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1606780800000,
+        "menit_terakhir": 1609459140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-01",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1609459200000,
+        "menit_terakhir": 1612137540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2688,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8064,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-02",
+      "celah": {
+        "baris": 40320,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 40320,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1612137600000,
+        "menit_terakhir": 1614556740000,
+        "slot_dalam_rentang": 40320
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1656633600000,
+        "menit_terakhir": 1659311940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 709,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2127,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-02",
+      "celah": {
+        "baris": 10635,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 10635,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1676990700000,
+        "menit_terakhir": 1677628740000,
+        "slot_dalam_rentang": 10635
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "1.372000",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1680206100000,
+            "resample_open": "1.373000"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1677628800000,
+        "menit_terakhir": 1680307140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1680307200000,
+        "menit_terakhir": 1682899140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1682899200000,
+        "menit_terakhir": 1685577540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1685577600000,
+        "menit_terakhir": 1688169540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1688169600000,
+        "menit_terakhir": 1690847940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2023-10",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1696118400000,
+        "menit_terakhir": 1698796740000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 25,
+        "bucket_dibandingkan": 2660,
+        "bucket_ohlc_beda": 25,
+        "bucket_open_beda": 25,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.03913",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1612201500000,
+            "resample_open": "0.03918"
+          },
+          {
+            "asli_open": "0.04075",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1612214100000,
+            "resample_open": "0.04071"
+          },
+          {
+            "asli_open": "0.03994",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1612305900000,
+            "resample_open": "0.03991"
+          },
+          {
+            "asli_open": "0.04112",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1612332000000,
+            "resample_open": "0.04114"
+          },
+          {
+            "asli_open": "0.04176",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1612381500000,
+            "resample_open": "0.04175"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 25,
+        "open_beda_menit_pertama_ada": 25,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 93,
+        "bucket_dibandingkan": 7980,
+        "bucket_ohlc_beda": 93,
+        "bucket_open_beda": 93,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.03913",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1612201500000,
+            "resample_open": "0.03918"
+          },
+          {
+            "asli_open": "0.04074",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1612204500000,
+            "resample_open": "0.04078"
+          },
+          {
+            "asli_open": "0.03996",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1612207200000,
+            "resample_open": "0.03987"
+          },
+          {
+            "asli_open": "0.03998",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1612207500000,
+            "resample_open": "0.03991"
+          },
+          {
+            "asli_open": "0.04075",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1612214100000,
+            "resample_open": "0.04071"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 93,
+        "open_beda_menit_pertama_ada": 93,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-02",
+      "celah": {
+        "baris": 39900,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 39900,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1612162800000,
+        "menit_terakhir": 1614556740000,
+        "slot_dalam_rentang": 39900
+      },
+      "indeks_bulan": 1,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 17,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 17,
+        "bucket_open_beda": 17,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04679",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1614663000000,
+            "resample_open": "0.04688"
+          },
+          {
+            "asli_open": "0.04651",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1614683700000,
+            "resample_open": "0.04654"
+          },
+          {
+            "asli_open": "0.04630",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1614738600000,
+            "resample_open": "0.04632"
+          },
+          {
+            "asli_open": "0.04639",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1614741300000,
+            "resample_open": "0.04638"
+          },
+          {
+            "asli_open": "0.04946",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1614862800000,
+            "resample_open": "0.04947"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 17,
+        "open_beda_menit_pertama_ada": 17,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 57,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 57,
+        "bucket_open_beda": 57,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04452",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1614559800000,
+            "resample_open": "0.04448"
+          },
+          {
+            "asli_open": "0.04398",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1614576300000,
+            "resample_open": "0.04399"
+          },
+          {
+            "asli_open": "0.04358",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1614577800000,
+            "resample_open": "0.04360"
+          },
+          {
+            "asli_open": "0.04328",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1614585000000,
+            "resample_open": "0.04329"
+          },
+          {
+            "asli_open": "0.04636",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1614624600000,
+            "resample_open": "0.04637"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 57,
+        "open_beda_menit_pertama_ada": 57,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-03",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1614556800000,
+        "menit_terakhir": 1617235140000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 2,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-04",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1617235200000,
+        "menit_terakhir": 1619827140000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 3,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-05",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1619827200000,
+        "menit_terakhir": 1622505540000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 4,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 2880,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.05044",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1623816900000,
+            "resample_open": "0.05041"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 7,
+        "bucket_dibandingkan": 8640,
+        "bucket_ohlc_beda": 7,
+        "bucket_open_beda": 7,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.05743",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1622583300000,
+            "resample_open": "0.05742"
+          },
+          {
+            "asli_open": "0.04812",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1623611100000,
+            "resample_open": "0.04810"
+          },
+          {
+            "asli_open": "0.04927",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1623655500000,
+            "resample_open": "0.04929"
+          },
+          {
+            "asli_open": "0.05044",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1623816900000,
+            "resample_open": "0.05041"
+          },
+          {
+            "asli_open": "0.05088",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1623994800000,
+            "resample_open": "0.05087"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 7,
+        "open_beda_menit_pertama_ada": 7,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-06",
+      "celah": {
+        "baris": 43200,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 43200,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1622505600000,
+        "menit_terakhir": 1625097540000,
+        "slot_dalam_rentang": 43200
+      },
+      "indeks_bulan": 5,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 1,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04529",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 15,
+            "open_time": 1625431500000,
+            "resample_open": "0.04528"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 1,
+        "open_beda_menit_pertama_ada": 1,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 7,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 7,
+        "bucket_open_beda": 7,
+        "contoh_tak_terjelaskan": [
+          {
+            "asli_open": "0.04182",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1625282700000,
+            "resample_open": "0.04181"
+          },
+          {
+            "asli_open": "0.04520",
+            "kolom_beda": [
+              "open",
+              "low"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1625398500000,
+            "resample_open": "0.04518"
+          },
+          {
+            "asli_open": "0.04529",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1625431500000,
+            "resample_open": "0.04528"
+          },
+          {
+            "asli_open": "0.04132",
+            "kolom_beda": [
+              "open"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1625952300000,
+            "resample_open": "0.04130"
+          },
+          {
+            "asli_open": "0.04220",
+            "kolom_beda": [
+              "open",
+              "high"
+            ],
+            "menit_terisi": 5,
+            "open_time": 1626032100000,
+            "resample_open": "0.04221"
+          }
+        ],
+        "open_beda_bucket_menit_penuh": 7,
+        "open_beda_menit_pertama_ada": 7,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2021-07",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1625097600000,
+        "menit_terakhir": 1627775940000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 6,
+      "peran": "awal",
+      "simbol": "BTSUSDT"
+    },
+    {
+      "15m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 2976,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "5m": {
+        "beda_tak_terjelaskan_h1": 0,
+        "bucket_dibandingkan": 8928,
+        "bucket_ohlc_beda": 0,
+        "bucket_open_beda": 0,
+        "contoh_tak_terjelaskan": [],
+        "open_beda_bucket_menit_penuh": 0,
+        "open_beda_menit_pertama_ada": 0,
+        "open_beda_menit_pertama_hilang": 0
+      },
+      "baris_1m_dibuang": 0,
+      "bulan": "2022-10",
+      "celah": {
+        "baris": 44640,
+        "cap_tidak_selaras_menit": 0,
+        "cap_unik": 44640,
+        "duplikat": 0,
+        "jarak_bukan_60_detik": 0,
+        "menit_hilang_dalam_rentang": 0,
+        "menit_pertama": 1664582400000,
+        "menit_terakhir": 1667260740000,
+        "slot_dalam_rentang": 44640
+      },
+      "indeks_bulan": 0,
+      "peran": "kendali",
+      "simbol": "BTSUSDT"
+    }
+  ],
+  "rencana": [
+    {
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "bulan_bersama": 78,
+      "kendali": "2023-04",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "bulan_bersama": 78,
+      "kendali": "2023-04",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "awal": [
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07"
+      ],
+      "bulan_bersama": 77,
+      "kendali": "2023-04",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "awal": [
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02"
+      ],
+      "bulan_bersama": 70,
+      "kendali": "2023-08",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "bulan_bersama": 78,
+      "kendali": "2023-04",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "bulan_bersama": 78,
+      "kendali": "2023-04",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "awal": [
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12"
+      ],
+      "bulan_bersama": 72,
+      "kendali": "2023-07",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "bulan_bersama": 78,
+      "kendali": "2023-04",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "awal": [
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09"
+      ],
+      "bulan_bersama": 51,
+      "kendali": "2024-05",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "awal": [
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02"
+      ],
+      "bulan_bersama": 45,
+      "kendali": "2022-07",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "awal": [
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07"
+      ],
+      "bulan_bersama": 16,
+      "kendali": "2023-10",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "awal": [
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07"
+      ],
+      "bulan_bersama": 40,
+      "kendali": "2022-10",
+      "simbol": "BTSUSDT"
+    }
+  ],
+  "ringkas": {
+    "bulan_diukur": 84,
+    "duplikat_total": 0,
+    "galat": [],
+    "k_awal": 6,
+    "menit_hilang_total": 0,
+    "per_simbol": {
+      "ADAUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-01",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 24,
+            "bucket_open_beda": 24,
+            "bulan": "2020-02",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 77,
+            "bucket_open_beda": 77,
+            "bulan": "2020-03",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 9,
+            "bucket_open_beda": 9,
+            "bulan": "2020-04",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 165,
+            "bucket_open_beda": 165,
+            "bulan": "2020-05",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-06",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "BNBUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 3,
+            "bucket_open_beda": 3,
+            "bulan": "2020-02",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 3,
+            "bucket_open_beda": 3,
+            "bulan": "2020-03",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2020-04",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 60,
+            "bucket_open_beda": 60,
+            "bulan": "2020-05",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 16,
+            "bucket_open_beda": 16,
+            "bulan": "2020-06",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-07",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "BTCUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-01",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-02",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-03",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-04",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-05",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-06",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "BTSUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 118,
+            "bucket_open_beda": 118,
+            "bulan": "2021-02",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 74,
+            "bucket_open_beda": 74,
+            "bulan": "2021-03",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-04",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-05",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 8,
+            "bucket_open_beda": 8,
+            "bulan": "2021-06",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 8,
+            "bucket_open_beda": 8,
+            "bulan": "2021-07",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2022-10",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "COCOSUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-02",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2023-03",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-05",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-06",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-07",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-10",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "DOGEUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 223,
+            "bucket_open_beda": 223,
+            "bulan": "2020-07",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 284,
+            "bucket_open_beda": 284,
+            "bulan": "2020-08",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 368,
+            "bucket_open_beda": 368,
+            "bulan": "2020-09",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 494,
+            "bucket_open_beda": 494,
+            "bulan": "2020-10",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 102,
+            "bucket_open_beda": 102,
+            "bulan": "2020-11",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 202,
+            "bucket_open_beda": 202,
+            "bulan": "2020-12",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-07",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "ETHUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 5,
+            "bucket_open_beda": 5,
+            "bulan": "2020-01",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-02",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-03",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-04",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-05",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-06",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "FTTUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 53,
+            "bucket_open_beda": 53,
+            "bulan": "2022-04",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 7,
+            "bucket_open_beda": 7,
+            "bulan": "2022-05",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2022-06",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2022-07",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2022-08",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2022-09",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2024-05",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "LINKUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 12,
+            "bucket_open_beda": 12,
+            "bulan": "2020-01",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2020-02",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-03",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-04",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-05",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-06",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "SOLUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 2,
+            "bucket_open_beda": 2,
+            "bulan": "2020-09",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 9,
+            "bucket_open_beda": 9,
+            "bulan": "2020-10",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 10,
+            "bucket_open_beda": 10,
+            "bulan": "2020-11",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 12,
+            "bucket_open_beda": 12,
+            "bulan": "2020-12",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-01",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-02",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-08",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "SRMUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 16,
+            "bucket_open_beda": 16,
+            "bulan": "2020-09",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 37,
+            "bucket_open_beda": 37,
+            "bulan": "2020-10",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 50,
+            "bucket_open_beda": 50,
+            "bulan": "2020-11",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 38,
+            "bucket_open_beda": 38,
+            "bulan": "2020-12",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-01",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2021-02",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2022-07",
+            "indeks_bulan": 0
+          }
+        ]
+      },
+      "XRPUSDT": {
+        "awal": [
+          {
+            "beda_tak_terjelaskan_h1": 38,
+            "bucket_open_beda": 36,
+            "bulan": "2020-01",
+            "indeks_bulan": 1
+          },
+          {
+            "beda_tak_terjelaskan_h1": 1,
+            "bucket_open_beda": 1,
+            "bulan": "2020-02",
+            "indeks_bulan": 2
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-03",
+            "indeks_bulan": 3
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-04",
+            "indeks_bulan": 4
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-05",
+            "indeks_bulan": 5
+          },
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2020-06",
+            "indeks_bulan": 6
+          }
+        ],
+        "kendali": [
+          {
+            "beda_tak_terjelaskan_h1": 0,
+            "bucket_open_beda": 0,
+            "bulan": "2023-04",
+            "indeks_bulan": 0
+          }
+        ]
+      }
+    },
+    "persen_kendali_atas_awal": 0.04,
+    "simbol_kendali_beda": [
+      "LINKUSDT"
+    ],
+    "simbol_masih_beda_di_bulan_terakhir_awal": [
+      "BTSUSDT",
+      "DOGEUSDT"
+    ],
+    "simbol_menurun": [
+      "BNBUSDT",
+      "BTSUSDT",
+      "DOGEUSDT",
+      "ETHUSDT",
+      "FTTUSDT",
+      "LINKUSDT",
+      "SOLUSDT",
+      "SRMUSDT",
+      "XRPUSDT"
+    ],
+    "simbol_reda_di_dalam_k": [
+      "BNBUSDT",
+      "ETHUSDT",
+      "FTTUSDT",
+      "LINKUSDT",
+      "SOLUSDT",
+      "SRMUSDT",
+      "XRPUSDT"
+    ],
+    "total_bucket_beda_awal": 2530,
+    "total_bucket_beda_kendali": 1
+  },
+  "sidik_kode": "42ca87a0eae3d3bd4c33c970dbf4e85b5ae3c3677e234ebb8d552856dc09065b",
+  "simbol_diukur": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "waktu_utc": "2026-07-28T07:57:56Z"
+}

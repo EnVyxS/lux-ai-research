@@ -1,0 +1,794 @@
+{
+  "nama": "rentang_kc6",
+  "bukan_bukti": true,
+  "waktu_utc": "2026-07-28T07:57:56Z",
+  "sidik_kode": "42ca87a0eae3d3bd4c33c970dbf4e85b5ae3c3677e234ebb8d552856dc09065b",
+  "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "simbol_diukur": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "rencana": [
+    {
+      "bulan_bersama": 78,
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "kendali": "2023-04",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "bulan_bersama": 78,
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "kendali": "2023-04",
+      "simbol": "ETHUSDT"
+    },
+    {
+      "bulan_bersama": 77,
+      "awal": [
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06",
+        "2020-07"
+      ],
+      "kendali": "2023-04",
+      "simbol": "BNBUSDT"
+    },
+    {
+      "bulan_bersama": 70,
+      "awal": [
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02"
+      ],
+      "kendali": "2023-08",
+      "simbol": "SOLUSDT"
+    },
+    {
+      "bulan_bersama": 78,
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "kendali": "2023-04",
+      "simbol": "XRPUSDT"
+    },
+    {
+      "bulan_bersama": 78,
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "kendali": "2023-04",
+      "simbol": "ADAUSDT"
+    },
+    {
+      "bulan_bersama": 72,
+      "awal": [
+        "2020-07",
+        "2020-08",
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12"
+      ],
+      "kendali": "2023-07",
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "bulan_bersama": 78,
+      "awal": [
+        "2020-01",
+        "2020-02",
+        "2020-03",
+        "2020-04",
+        "2020-05",
+        "2020-06"
+      ],
+      "kendali": "2023-04",
+      "simbol": "LINKUSDT"
+    },
+    {
+      "bulan_bersama": 51,
+      "awal": [
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09"
+      ],
+      "kendali": "2024-05",
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan_bersama": 45,
+      "awal": [
+        "2020-09",
+        "2020-10",
+        "2020-11",
+        "2020-12",
+        "2021-01",
+        "2021-02"
+      ],
+      "kendali": "2022-07",
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan_bersama": 16,
+      "awal": [
+        "2023-02",
+        "2023-03",
+        "2023-04",
+        "2023-05",
+        "2023-06",
+        "2023-07"
+      ],
+      "kendali": "2023-10",
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan_bersama": 40,
+      "awal": [
+        "2021-02",
+        "2021-03",
+        "2021-04",
+        "2021-05",
+        "2021-06",
+        "2021-07"
+      ],
+      "kendali": "2022-10",
+      "simbol": "BTSUSDT"
+    }
+  ],
+  "ringkas": {
+    "k_awal": 6,
+    "bulan_diukur": 84,
+    "total_bucket_beda_awal": 2530,
+    "total_bucket_beda_kendali": 1,
+    "persen_kendali_atas_awal": 0.04,
+    "menit_hilang_total": 0,
+    "duplikat_total": 0,
+    "simbol_kendali_beda": [
+      "LINKUSDT"
+    ],
+    "simbol_masih_beda_di_bulan_terakhir_awal": [
+      "BTSUSDT",
+      "DOGEUSDT"
+    ],
+    "simbol_reda_di_dalam_k": [
+      "BNBUSDT",
+      "ETHUSDT",
+      "FTTUSDT",
+      "LINKUSDT",
+      "SOLUSDT",
+      "SRMUSDT",
+      "XRPUSDT"
+    ],
+    "simbol_menurun": [
+      "BNBUSDT",
+      "BTSUSDT",
+      "DOGEUSDT",
+      "ETHUSDT",
+      "FTTUSDT",
+      "LINKUSDT",
+      "SOLUSDT",
+      "SRMUSDT",
+      "XRPUSDT"
+    ],
+    "galat": [],
+    "per_simbol": {
+      "BTCUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-01",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "ETHUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-01",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 5,
+            "beda_tak_terjelaskan_h1": 5
+          },
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "BNBUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 3,
+            "beda_tak_terjelaskan_h1": 3
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 3,
+            "beda_tak_terjelaskan_h1": 3
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 60,
+            "beda_tak_terjelaskan_h1": 60
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 16,
+            "beda_tak_terjelaskan_h1": 16
+          },
+          {
+            "bulan": "2020-07",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "SOLUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-09",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 2,
+            "beda_tak_terjelaskan_h1": 2
+          },
+          {
+            "bulan": "2020-10",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 9,
+            "beda_tak_terjelaskan_h1": 9
+          },
+          {
+            "bulan": "2020-11",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 10,
+            "beda_tak_terjelaskan_h1": 10
+          },
+          {
+            "bulan": "2020-12",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 12,
+            "beda_tak_terjelaskan_h1": 12
+          },
+          {
+            "bulan": "2021-01",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2021-02",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-08",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "XRPUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-01",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 36,
+            "beda_tak_terjelaskan_h1": 38
+          },
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "ADAUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-01",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 24,
+            "beda_tak_terjelaskan_h1": 24
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 77,
+            "beda_tak_terjelaskan_h1": 77
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 9,
+            "beda_tak_terjelaskan_h1": 9
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 165,
+            "beda_tak_terjelaskan_h1": 165
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "DOGEUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-07",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 223,
+            "beda_tak_terjelaskan_h1": 223
+          },
+          {
+            "bulan": "2020-08",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 284,
+            "beda_tak_terjelaskan_h1": 284
+          },
+          {
+            "bulan": "2020-09",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 368,
+            "beda_tak_terjelaskan_h1": 368
+          },
+          {
+            "bulan": "2020-10",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 494,
+            "beda_tak_terjelaskan_h1": 494
+          },
+          {
+            "bulan": "2020-11",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 102,
+            "beda_tak_terjelaskan_h1": 102
+          },
+          {
+            "bulan": "2020-12",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 202,
+            "beda_tak_terjelaskan_h1": 202
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-07",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "LINKUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-01",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 12,
+            "beda_tak_terjelaskan_h1": 12
+          },
+          {
+            "bulan": "2020-02",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          },
+          {
+            "bulan": "2020-03",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-04",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-05",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2020-06",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          }
+        ]
+      },
+      "FTTUSDT": {
+        "awal": [
+          {
+            "bulan": "2022-04",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 53,
+            "beda_tak_terjelaskan_h1": 53
+          },
+          {
+            "bulan": "2022-05",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 7,
+            "beda_tak_terjelaskan_h1": 7
+          },
+          {
+            "bulan": "2022-06",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          },
+          {
+            "bulan": "2022-07",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2022-08",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2022-09",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2024-05",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "SRMUSDT": {
+        "awal": [
+          {
+            "bulan": "2020-09",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 16,
+            "beda_tak_terjelaskan_h1": 16
+          },
+          {
+            "bulan": "2020-10",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 37,
+            "beda_tak_terjelaskan_h1": 37
+          },
+          {
+            "bulan": "2020-11",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 50,
+            "beda_tak_terjelaskan_h1": 50
+          },
+          {
+            "bulan": "2020-12",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 38,
+            "beda_tak_terjelaskan_h1": 38
+          },
+          {
+            "bulan": "2021-01",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2021-02",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2022-07",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "COCOSUSDT": {
+        "awal": [
+          {
+            "bulan": "2023-02",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2023-03",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 1,
+            "beda_tak_terjelaskan_h1": 1
+          },
+          {
+            "bulan": "2023-04",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2023-05",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2023-06",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2023-07",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2023-10",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      },
+      "BTSUSDT": {
+        "awal": [
+          {
+            "bulan": "2021-02",
+            "indeks_bulan": 1,
+            "bucket_open_beda": 118,
+            "beda_tak_terjelaskan_h1": 118
+          },
+          {
+            "bulan": "2021-03",
+            "indeks_bulan": 2,
+            "bucket_open_beda": 74,
+            "beda_tak_terjelaskan_h1": 74
+          },
+          {
+            "bulan": "2021-04",
+            "indeks_bulan": 3,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2021-05",
+            "indeks_bulan": 4,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          },
+          {
+            "bulan": "2021-06",
+            "indeks_bulan": 5,
+            "bucket_open_beda": 8,
+            "beda_tak_terjelaskan_h1": 8
+          },
+          {
+            "bulan": "2021-07",
+            "indeks_bulan": 6,
+            "bucket_open_beda": 8,
+            "beda_tak_terjelaskan_h1": 8
+          }
+        ],
+        "kendali": [
+          {
+            "bulan": "2022-10",
+            "indeks_bulan": 0,
+            "bucket_open_beda": 0,
+            "beda_tak_terjelaskan_h1": 0
+          }
+        ]
+      }
+    }
+  }
+}

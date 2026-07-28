@@ -1,0 +1,24 @@
+{
+  "bentuk_tak_dikenali": true,
+  "bukan_bukti": true,
+  "byte_sumber": 18884,
+  "catatan_metode": "Peta simbol->bulan dikumpulkan rekursif; kunci diterima sebagai simbol hanya bila nilainya memuat bulan berpola YYYY-MM. Bentuk yang tidak menghasilkan satu pun simbol ditandai bentuk_tak_dikenali, bukan ditebak (aturan 16).",
+  "nama": "ringkas_semesta",
+  "ringkas": {
+    "bulan_di_luar_rentang_survei": [],
+    "bulan_duplikat": 0,
+    "bulan_paling_akhir": null,
+    "bulan_paling_awal": null,
+    "bulan_tidak_terurut": 0,
+    "cacah_bulan_di_luar_rentang_survei": 0,
+    "cacah_simbol": 0,
+    "cacah_simbol_tanpa_bulan": 0,
+    "entri_simbol_bulan": 0,
+    "simbol_akhir_2024_05": 0,
+    "simbol_tanpa_bulan": []
+  },
+  "sidik_data": "fae1210f16a021d38d6928887ccae26a91ff2c2ae9c3b6ec9298f448d1209d1d",
+  "sidik_kode": "c33d32a0fd26c8661db8b984db7fd860544cf8579514088af8fb3c676c3fec04",
+  "sumber": "reports/semesta_bulan_1m.json",
+  "waktu_utc": "2026-07-28T08:56:38Z"
+}

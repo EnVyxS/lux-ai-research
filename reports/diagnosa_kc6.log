@@ -1,0 +1,141 @@
+{
+  "nama": "diagnosa_kc6",
+  "bukan_bukti": true,
+  "waktu_utc": "2026-07-28T07:31:53Z",
+  "sidik_kode": "e9513d781eea09a45c9260b39939905bf9bdb01d66770793fbda9ce814c74c79",
+  "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "simbol_diukur": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "LINKUSDT",
+    "FTTUSDT",
+    "SRMUSDT",
+    "COCOSUSDT",
+    "BTSUSDT"
+  ],
+  "ringkas": {
+    "bulan_diukur": 12,
+    "bucket_ohlc_beda_total": 470,
+    "bucket_open_beda_total": 468,
+    "open_beda_menit_pertama_hilang_total": 0,
+    "persen_terjelaskan_h1": 0.0,
+    "beda_tak_terjelaskan_h1_total": 470,
+    "bulan_tanpa_celah": [
+      {
+        "simbol": "BTCUSDT",
+        "bulan": "2020-01"
+      },
+      {
+        "simbol": "ETHUSDT",
+        "bulan": "2020-01"
+      },
+      {
+        "simbol": "BNBUSDT",
+        "bulan": "2020-02"
+      },
+      {
+        "simbol": "SOLUSDT",
+        "bulan": "2020-09"
+      },
+      {
+        "simbol": "XRPUSDT",
+        "bulan": "2020-01"
+      },
+      {
+        "simbol": "ADAUSDT",
+        "bulan": "2020-01"
+      },
+      {
+        "simbol": "DOGEUSDT",
+        "bulan": "2020-07"
+      },
+      {
+        "simbol": "LINKUSDT",
+        "bulan": "2020-01"
+      },
+      {
+        "simbol": "FTTUSDT",
+        "bulan": "2022-04"
+      },
+      {
+        "simbol": "SRMUSDT",
+        "bulan": "2020-09"
+      },
+      {
+        "simbol": "COCOSUSDT",
+        "bulan": "2023-02"
+      },
+      {
+        "simbol": "BTSUSDT",
+        "bulan": "2021-02"
+      }
+    ],
+    "per_simbol": {
+      "BTCUSDT": {
+        "bucket_open_beda": 0,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": null
+      },
+      "ETHUSDT": {
+        "bucket_open_beda": 5,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "BNBUSDT": {
+        "bucket_open_beda": 3,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "SOLUSDT": {
+        "bucket_open_beda": 2,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "XRPUSDT": {
+        "bucket_open_beda": 36,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "ADAUSDT": {
+        "bucket_open_beda": 0,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": null
+      },
+      "DOGEUSDT": {
+        "bucket_open_beda": 223,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "LINKUSDT": {
+        "bucket_open_beda": 12,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "FTTUSDT": {
+        "bucket_open_beda": 53,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "SRMUSDT": {
+        "bucket_open_beda": 16,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      },
+      "COCOSUSDT": {
+        "bucket_open_beda": 0,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": null
+      },
+      "BTSUSDT": {
+        "bucket_open_beda": 118,
+        "open_beda_menit_pertama_hilang": 0,
+        "persen_terjelaskan_h1": 0.0
+      }
+    }
+  }
+}

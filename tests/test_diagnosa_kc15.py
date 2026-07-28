@@ -3,6 +3,7 @@
 import datetime as dt
 
 from lux_ai.serapan import diagnosa_kc15 as k15
+from lux_ai.serapan import serap
 
 MS_MENIT = 60_000
 
@@ -76,6 +77,29 @@ def test_kelas_simbol_menandai_lapis():
     assert baru == ["kendali_baru"]
 
 
+def test_kelas_dengan_bulan_menandai_bulan_pra_2022():
+    assert k15.kelas_dengan_bulan(["pra_header"], "2021-06") == [
+        "pra_header",
+        "bulan_awal_2020_2021",
+    ]
+    assert k15.kelas_dengan_bulan(["pra_header"], "2022-04") == ["pra_header"]
+    # idempoten
+    sekali = k15.kelas_dengan_bulan(["pra_header"], "2020-12")
+    assert k15.kelas_dengan_bulan(sekali, "2020-12") == sekali
+
+
+def test_seluruh_kelas_risiko_dapat_ditandai():
+    """Aturan 37: tiap kelas di serap.KELAS_RISIKO harus bisa muncul."""
+    kelas = k15.kelas_dengan_bulan(
+        k15.kelas_simbol(
+            {"bulan_pertama": "2021-01", "bulan_terakhir": "2023-01"}, "AB\u00c7USDT"
+        ),
+        "2021-06",
+    )
+    assert set(kelas) >= {"pra_header", "terhenti", "non_ascii", "bulan_awal_2020_2021"}
+    assert set(serap.KELAS_RISIKO) - set(kelas) == {"kendali_baru"}
+
+
 def test_pilih_simbol_mewakili_kelas_dan_deterministik():
     rentang = {
         "AUSDT": {"bulan_pertama": "2025-06", "bulan_terakhir": "2026-07"},
@@ -137,7 +161,7 @@ def test_ringkas_menghitung_gerbang_buta():
     # bulan pertama TIDAK ikut menghitung tepi
     assert hasil["total_menit_tepi"] == 210
     assert hasil["cacah_gerbang_lolos_padahal_tepi_terpotong"] == 1
-    assert hasil["kelas_risiko_kosong"] == ["non_ascii"]
+    assert hasil["kelas_risiko_kosong"] == ["non_ascii", "bulan_awal_2020_2021"]
 
 
 def test_ringkas_tanpa_bulan_tengah_tidak_mengukur():

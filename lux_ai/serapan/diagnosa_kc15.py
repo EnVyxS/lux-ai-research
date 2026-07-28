@@ -126,6 +126,7 @@ def bulan_tengah_terpilih(daftar: Sequence[str]) -> str:
 
 
 def kelas_simbol(isi: Dict[str, Any], simbol: str) -> List[str]:
+    """Kelas risiko yang melekat pada SIMBOL, belum pada bulannya."""
     kelas: List[str] = []
     pertama = str(isi.get("bulan_pertama") or "")
     terakhir = str(isi.get("bulan_terakhir") or "")
@@ -138,6 +139,19 @@ def kelas_simbol(isi: Dict[str, Any], simbol: str) -> List[str]:
     if serap.non_ascii(simbol):
         kelas.append("non_ascii")
     return kelas
+
+
+def kelas_dengan_bulan(kelas: Sequence[str], bulan: str) -> List[str]:
+    """Tambahkan kelas yang hanya bisa ditentukan oleh BULAN yang dipilih.
+
+    Tanpa ini `bulan_awal_2020_2021` akan selalu dilaporkan KOSONG walau bulan
+    pra-2022 benar-benar tersampel — laporan kelas kosong yang bohong justru
+    yang dilarang aturan 37.
+    """
+    hasil = list(kelas)
+    if bulan and bulan < serap.BATAS_HEADER and "bulan_awal_2020_2021" not in hasil:
+        hasil.append("bulan_awal_2020_2021")
+    return hasil
 
 
 def pilih_simbol(
@@ -180,7 +194,7 @@ def periksa_hari_tepi(
         return catatan
     catatan["tersedia"] = True
     catatan["checksum"] = arsip.sha256_bytes(data)
-    df, dibuang = klines.rapikan(klines.baca_zip(data))
+    df, dibuang = klines.rapikan(klines.baca_zip(data, teks=True))
     stempel = set(int(x) for x in df["open_time"].tolist())
     hadir = sorted(int(t) for t in dicari if int(t) in stempel)
     catatan["cacah_baris_harian"] = len(stempel)
@@ -197,7 +211,7 @@ def periksa_satu(
         "simbol": simbol,
         "bulan": bulan,
         "pecahan": indeks,
-        "kelas": list(kelas),
+        "kelas": kelas_dengan_bulan(kelas, bulan),
         "bulan_pertama_arsip": (sorted(bulan_arsip)[0] if bulan_arsip else ""),
         "bulan_terakhir_arsip": (sorted(bulan_arsip)[-1] if bulan_arsip else ""),
         "posisi": posisi_bulan(bulan, bulan_arsip),

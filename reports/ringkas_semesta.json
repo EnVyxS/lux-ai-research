@@ -1,24 +1,37 @@
 {
-  "bentuk_tak_dikenali": true,
+  "bentuk_tak_dikenali": false,
   "bukan_bukti": true,
   "byte_sumber": 18884,
-  "catatan_metode": "Peta simbol->bulan dikumpulkan rekursif; kunci diterima sebagai simbol hanya bila nilainya memuat bulan berpola YYYY-MM. Bentuk yang tidak menghasilkan satu pun simbol ditandai bentuk_tak_dikenali, bukan ditebak (aturan 16).",
+  "cacah_nilai_bukan_angka": 0,
+  "catatan_metode": "Dua jalur: peta simbol->daftar bulan, atau peta simbol->cacah bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci diterima sebagai simbol hanya bila berpola simbol DAN nilainya cocok salah satu jalur. Bila tak ada yang cocok, laporan menandai bentuk_tak_dikenali, bukan menebak (aturan 16).",
+  "jalur": "cacah_bulan",
   "nama": "ringkas_semesta",
-  "ringkas": {
-    "bulan_di_luar_rentang_survei": [],
-    "bulan_duplikat": 0,
-    "bulan_paling_akhir": null,
-    "bulan_paling_awal": null,
-    "bulan_tidak_terurut": 0,
-    "cacah_bulan_di_luar_rentang_survei": 0,
-    "cacah_simbol": 0,
-    "cacah_simbol_tanpa_bulan": 0,
-    "entri_simbol_bulan": 0,
-    "simbol_akhir_2024_05": 0,
-    "simbol_tanpa_bulan": []
+  "ringkas_cacah": {
+    "cacah_maksimum": 78,
+    "cacah_minimum": 1,
+    "cacah_nilai_melebihi_78": 0,
+    "cacah_nilai_negatif": 0,
+    "cacah_simbol": 934,
+    "simbol_maksimum": [
+      "ADAUSDT",
+      "BCHUSDT",
+      "BTCUSDT",
+      "ETCUSDT",
+      "ETHUSDT"
+    ],
+    "simbol_minimum": [
+      "AAOIUSDT",
+      "ADBEUSDT",
+      "AERGOUSDTSETTLED",
+      "AIAUSDTSETTLED",
+      "ALABUSDT"
+    ],
+    "status": "MENGUKUR",
+    "total_berkas_bulan": 21770
   },
-  "sidik_data": "fae1210f16a021d38d6928887ccae26a91ff2c2ae9c3b6ec9298f448d1209d1d",
-  "sidik_kode": "c33d32a0fd26c8661db8b984db7fd860544cf8579514088af8fb3c676c3fec04",
+  "sidik_data": "7d287ab615f7f4af43c26aaaead92d2c31df3de0ba3ba6ac6c148c6d27d4e60e",
+  "sidik_kode": "22bdbae7715b9b5ae81abdf24532444c640114d39b1a9e3fd7047a4bee986784",
+  "status": "MENGUKUR",
   "sumber": "reports/semesta_bulan_1m.json",
-  "waktu_utc": "2026-07-28T08:56:38Z"
+  "waktu_utc": "2026-07-28T09:23:59Z"
 }

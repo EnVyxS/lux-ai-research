@@ -21,10 +21,21 @@ Rancangan dan biayanya:
    mengubahnya, keduanya bisa hanyut, dan itu risiko yang dicatat, bukan
    disembunyikan.
 
+VERSI 2 menambal tiga kekurangan VERSI 1 yang baru terlihat saat adjudikasi
+(jurnal 66 dan 67):
+
+- baris sampel ringkas ikut tercetak ke log, sehingga ramalan tentang header
+  dapat diadjudikasi tanpa membaca JSON penuh berisi 787 baris per-simbol;
+- daftar selisih ditulis PENUH ke berkas terpisah, karena daftar terpotong 500
+  dari 880 tidak sah dipakai menyimpulkan bentuk sebaran (aturan 20);
+- bentuk lubang diukur, bukan dilihat sekilas: tiap bulan hilang digolongkan
+  awal, ekor, atau tengah, dengan medan penggugur yang membatalkan seluruh
+  angka bentuk-lubang bila cacahnya bocor.
+
 Laporan ini **diagnostik** (`bukan_bukti: true`, aturan 10). Ia tidak mengubah
 satu baris pun manifes serapan.
 
-Aturan yang ditegakkan: 7, 10, 16, 20, 22, 24, 30, 32, 36, 37, 41, 44, 46.
+Aturan yang ditegakkan: 7, 10, 16, 20, 21, 22, 24, 30, 32, 36, 37, 41, 44, 46.
 """
 
 from __future__ import annotations
@@ -40,9 +51,10 @@ from typing import Any, Dict, List, Optional, Sequence
 
 from . import arsip
 
-VERSI = 1
+VERSI = 2
 SUMBER_RENTANG = "reports/semesta_rentang.json"
 KELUARAN = "reports/funding_semesta.json"
+KELUARAN_SELISIH = "reports/funding_selisih_penuh.json"
 JENIS_DIIZINKAN = "perpetual_usdt"
 
 # Diulang dari serap.py dengan sadar; lihat butir 4 di docstring.
@@ -57,9 +69,24 @@ BATAS_DAFTAR = 500
 KELAS_PRA_UNDUH = ("bulan_awal_2020_2021", "non_ascii", "terhenti", "kendali_baru")
 KELAS_RISIKO = ("pra_header",) + KELAS_PRA_UNDUH
 
+MEDAN_SAMPEL_RINGKAS = (
+    "simbol",
+    "bulan",
+    "kelas_terpilih",
+    "berheader",
+    "byte_zip",
+    "cacah_baris",
+    "gagal_unduh",
+    "gagal_checksum",
+)
+
 
 def nama_keluaran() -> str:
     return KELUARAN
+
+
+def nama_keluaran_selisih() -> str:
+    return KELUARAN_SELISIH
 
 
 def sidik_kode() -> str:
@@ -85,6 +112,34 @@ def selisih_bulan(
         "klines_tanpa_funding": sorted(k - f),
         "funding_tanpa_klines": sorted(f - k),
     }
+
+
+def klasifikasi_lubang(
+    bulan_klines: Sequence[str], hilang: Sequence[str]
+) -> Dict[str, int]:
+    """Golongkan tiap bulan hilang: awalan, akhiran, atau tengah riwayat simbol.
+
+    Awalan dihitung lebih dulu, akhiran dihitung dari SISA setelah awalan,
+    sehingga simbol yang seluruh bulannya hilang tercacah sekali saja sebagai
+    `awal` dan tidak pernah ganda. `hilang` yang memuat bulan di luar riwayat
+    klines diabaikan; hanya irisannya yang dicacah.
+    """
+    urut = sorted(str(b) for b in bulan_klines)
+    kurang = {str(b) for b in hilang}
+    awal = 0
+    for b in urut:
+        if b in kurang:
+            awal += 1
+        else:
+            break
+    ekor = 0
+    for b in reversed(urut[awal:]):
+        if b in kurang:
+            ekor += 1
+        else:
+            break
+    total = sum(1 for b in urut if b in kurang)
+    return {"awal": awal, "ekor": ekor, "tengah": total - awal - ekor, "hilang": total}
 
 
 def kelas_bulan(simbol: str, bulan: str, bulan_terakhir: str = "") -> List[str]:
@@ -197,10 +252,21 @@ def ukur_satu(simbol: str, bulan: str, kelas_terpilih: Optional[str] = None) -> 
     return baris
 
 
-def ringkas_selisih(
-    per_simbol: List[Dict[str, Any]], batas: int = BATAS_DAFTAR
-) -> Dict[str, Any]:
-    """Cacah kedua arah selisih; daftarnya dipotong dan pemotongannya dilapor."""
+def ringkas_sampel(sampel: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Baris sampel sekecil mungkin, cukup untuk mengadjudikasi tanpa JSON penuh.
+
+    `berheader` sengaja dipertahankan apa adanya, termasuk `None`: null dan
+    false adalah dua keadaan berbeda, dan menyamakannya persis kesalahan yang
+    dilarang aturan 46.
+    """
+    keluar: List[Dict[str, Any]] = []
+    for s in sampel:
+        keluar.append({medan: s.get(medan) for medan in MEDAN_SAMPEL_RINGKAS})
+    return keluar
+
+
+def daftar_penuh(per_simbol: List[Dict[str, Any]]) -> Dict[str, List[str]]:
+    """Kedua daftar selisih TANPA dipotong, untuk berkas terpisah."""
     ktf: List[str] = []
     ftk: List[str] = []
     for baris in per_simbol:
@@ -209,8 +275,19 @@ def ringkas_selisih(
             ktf.append(f"{simbol}:{b}")
         for b in baris.get("funding_tanpa_klines") or []:
             ftk.append(f"{simbol}:{b}")
-    ktf.sort()
-    ftk.sort()
+    return {
+        "klines_tanpa_funding": sorted(ktf),
+        "funding_tanpa_klines": sorted(ftk),
+    }
+
+
+def ringkas_selisih(
+    per_simbol: List[Dict[str, Any]], batas: int = BATAS_DAFTAR
+) -> Dict[str, Any]:
+    """Cacah kedua arah selisih; daftarnya dipotong dan pemotongannya dilapor."""
+    penuh = daftar_penuh(per_simbol)
+    ktf = penuh["klines_tanpa_funding"]
+    ftk = penuh["funding_tanpa_klines"]
     return {
         "cacah_bulan_klines_tanpa_funding": len(ktf),
         "cacah_bulan_funding_tanpa_klines": len(ftk),
@@ -218,6 +295,7 @@ def ringkas_selisih(
         "daftar_funding_tanpa_klines": ftk[:batas],
         "daftar_terpotong": len(ktf) > batas or len(ftk) > batas,
         "batas_daftar": batas,
+        "berkas_daftar_penuh": KELUARAN_SELISIH,
     }
 
 
@@ -256,6 +334,8 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     gagal_daftar: List[str] = []
     cacah_bulan_klines = 0
     cacah_bulan_funding = 0
+    lubang = {"awal": 0, "ekor": 0, "tengah": 0, "hilang": 0}
+    tanpa_funding_sama_sekali = 0
 
     for nama in simbol:
         isi = rentang.get(nama) or {}
@@ -268,12 +348,18 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
             continue
         cacah_bulan_klines += len(bulan_k)
         cacah_bulan_funding += len(bulan_f)
+        if bulan_k and not bulan_f:
+            tanpa_funding_sama_sekali += 1
         beda = selisih_bulan(bulan_k, bulan_f)
+        bentuk = klasifikasi_lubang(bulan_k, beda["klines_tanpa_funding"])
+        for kunci in lubang:
+            lubang[kunci] += bentuk[kunci]
         per_simbol.append(
             {
                 "simbol": nama,
                 "cacah_bulan_klines": len(bulan_k),
                 "cacah_bulan_funding": len(bulan_f),
+                "bentuk_lubang": bentuk,
                 "klines_tanpa_funding": beda["klines_tanpa_funding"],
                 "funding_tanpa_klines": beda["funding_tanpa_klines"],
             }
@@ -306,6 +392,13 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         },
         "cacah_simbol_gagal_daftar": len(gagal_daftar),
         "contoh_gagal_daftar": gagal_daftar[:10],
+        "cacah_simbol_tanpa_funding_sama_sekali": tanpa_funding_sama_sekali,
+        "bentuk_lubang": {
+            "awal": lubang["awal"],
+            "ekor": lubang["ekor"],
+            "tengah": lubang["tengah"],
+            "hilang": lubang["hilang"],
+        },
         "cacah_sampel": len(sampel),
         "cacah_sampel_gagal_unduh": sum(1 for s in sampel if s.get("gagal_unduh")),
         "cacah_sampel_gagal_checksum": sum(1 for s in sampel if s.get("gagal_checksum")),
@@ -313,10 +406,15 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "byte_zip_sampel_maks": max(byte_sampel) if byte_sampel else None,
         "kelas_risiko_tersentuh": kelas,
         "kelas_risiko_kosong": [n for n, v in kelas.items() if not v],
+        "sampel_ringkas": ringkas_sampel(sampel),
         "sampel": sampel,
         "per_simbol": per_simbol,
     }
     laporan.update(ringkas)
+    laporan["selisih_klasifikasi"] = (
+        laporan["cacah_bulan_klines_tanpa_funding"]
+        - (lubang["awal"] + lubang["ekor"] + lubang["tengah"])
+    )
     laporan["catatan_bukan_bukti"] = (
         "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK "
         "menulis funding_ada di manifes mana pun"
@@ -325,13 +423,20 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh "
         "cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 "
         "berarti semesta yang dilihat modul ini bukan semesta manifes serapan, "
-        "sehingga perbandingannya tidak sah (aturan 24)"
+        "sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti "
+        "cacah bentuk_lubang bocor dan seluruh angka awal/ekor/tengah batal "
+        "(aturan 24)"
     )
     laporan["catatan_metode"] = (
         "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan "
         "sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di "
         "listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya "
         "yang pertama yang diukur di sini"
+    )
+    laporan["catatan_bentuk_lubang"] = (
+        "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang "
+        "seluruh bulannya tanpa funding masuk awal saja, jadi angka ekor adalah "
+        "batas BAWAH bagi gejala hilang-di-akhir, bukan taksiran tengahnya"
     )
     laporan["catatan_rentang"] = (
         "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json "
@@ -347,12 +452,21 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     laporan["sidik_kode"] = sidik_kode()
     laporan["waktu_utc"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    tujuan = basis / KELUARAN
-    tujuan.parent.mkdir(parents=True, exist_ok=True)
-    tujuan.write_text(
-        json.dumps(laporan, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
+    penuh = daftar_penuh(per_simbol)
+    penuh["cacah_klines_tanpa_funding"] = len(penuh["klines_tanpa_funding"])
+    penuh["cacah_funding_tanpa_klines"] = len(penuh["funding_tanpa_klines"])
+    penuh["versi_funding"] = VERSI
+    penuh["sidik_kode"] = laporan["sidik_kode"]
+    penuh["sidik_data"] = laporan["sidik_data"]
+    penuh["waktu_utc"] = laporan["waktu_utc"]
+
+    for nama_berkas, isi_berkas in ((KELUARAN, laporan), (KELUARAN_SELISIH, penuh)):
+        tujuan = basis / nama_berkas
+        tujuan.parent.mkdir(parents=True, exist_ok=True)
+        tujuan.write_text(
+            json.dumps(isi_berkas, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
     return laporan
 
 

@@ -1,6 +1,6 @@
 """Uji jalur funding tanpa jaringan sama sekali.
 
-Sembilan fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
+Dua belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
 cacah butir yang dikumpulkan pytest. Ini disengaja: kekeliruan R-148 lahir dari
 mencacah fungsi padahal pytest mencacah butir.
 """
@@ -95,3 +95,39 @@ def test_ringkas_selisih_memotong_daftar_dan_melaporkannya():
     assert len(hasil["daftar_klines_tanpa_funding"]) == 2
     assert hasil["daftar_terpotong"] is True
     assert hasil["batas_daftar"] == 2
+
+
+def test_ringkas_sampel_mempertahankan_null_berheader():
+    """null dan false adalah dua keadaan berbeda (aturan 46)."""
+    ringkas = funding.ringkas_sampel(
+        [
+            {"simbol": "AAA", "bulan": "2021-03", "berheader": None, "byte_zip": 0},
+            {"simbol": "BBB", "bulan": "2025-03", "berheader": False, "byte_zip": 500},
+        ]
+    )
+    assert ringkas[0]["berheader"] is None
+    assert ringkas[1]["berheader"] is False
+    assert ringkas[0]["gagal_unduh"] is None  # medan absen tetap hadir sebagai null
+    assert set(ringkas[0]) == set(funding.MEDAN_SAMPEL_RINGKAS)
+
+
+def test_klasifikasi_lubang_membedakan_awal_ekor_tengah():
+    bulan = ["2024-01", "2024-02", "2024-03", "2024-04", "2024-05", "2024-06"]
+    hasil = funding.klasifikasi_lubang(bulan, ["2024-01", "2024-03", "2024-05", "2024-06"])
+    assert hasil["awal"] == 1
+    assert hasil["ekor"] == 2
+    assert hasil["tengah"] == 1
+    assert hasil["hilang"] == 4
+    assert hasil["awal"] + hasil["ekor"] + hasil["tengah"] == hasil["hilang"]
+
+
+def test_klasifikasi_lubang_seluruh_bulan_hilang_tidak_dicacah_ganda():
+    bulan = ["2024-01", "2024-02", "2024-03"]
+    hasil = funding.klasifikasi_lubang(bulan, bulan)
+    assert hasil["awal"] == 3
+    assert hasil["ekor"] == 0
+    assert hasil["tengah"] == 0
+    assert hasil["hilang"] == 3
+    # bulan di luar riwayat klines diabaikan, bukan menambah cacah
+    lain = funding.klasifikasi_lubang(bulan, bulan + ["2030-01"])
+    assert lain["hilang"] == 3

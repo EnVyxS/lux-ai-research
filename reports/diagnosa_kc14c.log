@@ -1,0 +1,626 @@
+{
+  "banding_menit_hilang_gerbang": {
+    "1": {
+      "cocok": true,
+      "dihitung_ulang": 2160,
+      "gerbang": 2160
+    },
+    "3": {
+      "cocok": true,
+      "dihitung_ulang": 615,
+      "gerbang": 615
+    },
+    "4": {
+      "cocok": true,
+      "dihitung_ulang": 1050,
+      "gerbang": 1050
+    },
+    "6": {
+      "cocok": true,
+      "dihitung_ulang": 7200,
+      "gerbang": 7200
+    },
+    "7": {
+      "cocok": true,
+      "dihitung_ulang": 675,
+      "gerbang": 675
+    }
+  },
+  "bukan_bukti": false,
+  "cacah_h_a003_gugur": 6,
+  "cacah_hari_dilewati": 0,
+  "cacah_hari_tidak_tersedia": 0,
+  "cacah_mendukung_h_a003": 3,
+  "cacah_pecahan_tak_cocok": 0,
+  "cacah_semua_blok_mulai_00_utc": 9,
+  "cacah_tidak_mengukur": 0,
+  "cacah_total_kelipatan_15": 9,
+  "catatan_batas_uji": "uji ini TIDAK bisa memisahkan jeda pasar dari cacat di HULU arsip (H-A004), karena harian dan bulanan mungkin dirakit dari sumber yang sama; fapi 451 dari runner sehingga pemisah non-arsip tidak tersedia",
+  "catatan_kelas_risiko": "kelas non_ascii KOSONG di antara kedua belas tersangka; kelas pra_header, terhenti, bulan_awal_2020_2021, kendali_baru belum dipetakan per tersangka dan tidak boleh dianggap nol (aturan 37)",
+  "catatan_penggugur": "menit_hadir_di_harian_saat_bulanan_hilang > 0 berarti berkas HARIAN memuat menit yang absen dari berkas BULANAN: arsip bulanan cacat, KC-15 dinamai, dan seluruh serapan berbasis berkas bulanan wajib ditinjau (aturan 24)",
+  "catatan_rentang": "9 simbol-bulan yang GAGAL gerbang di pecahan 1..7; bersama 3 dari pecahan 0 itulah SELURUH populasi gagal dari 19.598 simbol-bulan. Bukan sampel dari 19.586 yang LOLOS, jadi tidak berlaku bagi mereka (aturan 20)",
+  "hari_diperiksa": 11,
+  "menit_hadir_di_harian_saat_bulanan_hilang": 7200,
+  "menit_hilang_per_pecahan": {
+    "1": 2160,
+    "3": 615,
+    "4": 1050,
+    "6": 7200,
+    "7": 675
+  },
+  "rincian": [
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 690,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-07",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 43950,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 690,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "fbd6ba0ac9fdb0b9b91cd642bd5b1a33347bead8ca3a0d395c531db1227e76fa",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1753270140000,
+          "mulai_ms": 1753228800000,
+          "panjang_menit": 690
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 750,
+          "checksum": "6fa9b2883f8e552c79e336de68e98957b3b738097bf5aa32fc7f8a09f323cf5c",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 690,
+          "stempel_pertama_ms": 1753270200000,
+          "stempel_terakhir_ms": 1753315140000,
+          "tanggal": "2025-07-23",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/CVXUSDT/1m/CVXUSDT-1m-2025-07-23.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 1,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "CVXUSDT",
+      "tanggal_terdampak": [
+        "2025-07-23"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/CVXUSDT/1m/CVXUSDT-1m-2025-07.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 1020,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-03",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 43620,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 1020,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "6740ef66e5ca320f2cdf0a39fea64eb50feef201767d07e169937b40276822a0",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1743008340000,
+          "mulai_ms": 1742947200000,
+          "panjang_menit": 1020
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 420,
+          "checksum": "c2b216a16d750895b48433e90e16166543f0585b23026865602a163670274e1c",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 1020,
+          "stempel_pertama_ms": 1743008400000,
+          "stempel_terakhir_ms": 1743033540000,
+          "tanggal": "2025-03-26",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/MAVIAUSDT/1m/MAVIAUSDT-1m-2025-03-26.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 1,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "MAVIAUSDT",
+      "tanggal_terdampak": [
+        "2025-03-26"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/MAVIAUSDT/1m/MAVIAUSDT-1m-2025-03.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 450,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-07",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 44190,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 450,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "d1803ab84fb6ff7766389db88f4f10834a09f695988c7ad59650dbffb4b53fc9",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1752132540000,
+          "mulai_ms": 1752105600000,
+          "panjang_menit": 450
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 990,
+          "checksum": "4b3e0e88d9f38dff53b5d0b404e8f072657aa7f9ed5f10ced5ff938caf06dc4c",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 450,
+          "stempel_pertama_ms": 1752132600000,
+          "stempel_terakhir_ms": 1752191940000,
+          "tanggal": "2025-07-10",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/PUMPUSDT/1m/PUMPUSDT-1m-2025-07-10.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 1,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "PUMPUSDT",
+      "tanggal_terdampak": [
+        "2025-07-10"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/PUMPUSDT/1m/PUMPUSDT-1m-2025-07.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 615,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-04",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 42585,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 615,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "dc794b3d58b7eb51020b8bc4068445974a92b0f54915690d8e716b9757113e49",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1746008040000,
+          "mulai_ms": 1745971200000,
+          "panjang_menit": 615
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 825,
+          "checksum": "87527eb8de6b6d4c41c0d307b9d94ec0386141da809830ad040b86cfc2d1c3d2",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 615,
+          "stempel_pertama_ms": 1746008100000,
+          "stempel_terakhir_ms": 1746057540000,
+          "tanggal": "2025-04-30",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/CTKUSDT/1m/CTKUSDT-1m-2025-04-30.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 3,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "CTKUSDT",
+      "tanggal_terdampak": [
+        "2025-04-30"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/CTKUSDT/1m/CTKUSDT-1m-2025-04.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 1050,
+      "blok_tunggal_menit": 0,
+      "bulan": "2025-12",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 43590,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 1050,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "bae610ec185a70f19fbfb9b0a420a7fef86c60e5dd3a20000eab4769a75c2793",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1766510940000,
+          "mulai_ms": 1766448000000,
+          "panjang_menit": 1050
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 390,
+          "checksum": "f1abf2a9741fdba6e0cb23365235df377550b6161cbaa03a0b9ff712abe4a196",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 1050,
+          "stempel_pertama_ms": 1766511000000,
+          "stempel_terakhir_ms": 1766534340000,
+          "tanggal": "2025-12-23",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/LITUSDT/1m/LITUSDT-1m-2025-12-23.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 4,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "LITUSDT",
+      "tanggal_terdampak": [
+        "2025-12-23"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/LITUSDT/1m/LITUSDT-1m-2025-12.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 1440,
+      "blok_tunggal_menit": 0,
+      "bulan": "2022-04",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 41550,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 1440,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "14bd69375c9d0a7bddd4fde807a44fb91e778a6f727e83a11915a28dbabe5be3",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1650239940000,
+          "mulai_ms": 1650153600000,
+          "panjang_menit": 1440
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 1440,
+          "checksum": "07628bb3b9892bd916000f88e7958729afb810c6b1ef0a531e891bc7105699c7",
+          "contoh_menit_hadir": [
+            1650153600000,
+            1650153660000,
+            1650153720000,
+            1650153780000,
+            1650153840000,
+            1650153900000,
+            1650153960000,
+            1650154020000,
+            1650154080000,
+            1650154140000,
+            1650154200000,
+            1650154260000,
+            1650154320000,
+            1650154380000,
+            1650154440000,
+            1650154500000,
+            1650154560000,
+            1650154620000,
+            1650154680000,
+            1650154740000
+          ],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+          "menit_hilang_di_bulanan": 1440,
+          "stempel_pertama_ms": 1650153600000,
+          "stempel_terakhir_ms": 1650239940000,
+          "tanggal": "2022-04-17",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/BNXUSDT/1m/BNXUSDT-1m-2022-04-17.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+      "pecahan": 6,
+      "putusan": "MENDUKUNG_H-A003",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "BNXUSDT",
+      "tanggal_terdampak": [
+        "2022-04-17"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/BNXUSDT/1m/BNXUSDT-1m-2022-04.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 1440,
+      "blok_tunggal_menit": 0,
+      "bulan": "2022-06",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 41760,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 1440,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "0e5ac9ccd9b6acf1fe1ae9f73d4da8de62f83cca6e46d7e6bce202bc4b22c58e",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1654819140000,
+          "mulai_ms": 1654732800000,
+          "panjang_menit": 1440
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 1440,
+          "checksum": "ad03a522699ec69f48f12679c0b74bf4138c1c4fd8e8379e0ab923459b738a7c",
+          "contoh_menit_hadir": [
+            1654732800000,
+            1654732860000,
+            1654732920000,
+            1654732980000,
+            1654733040000,
+            1654733100000,
+            1654733160000,
+            1654733220000,
+            1654733280000,
+            1654733340000,
+            1654733400000,
+            1654733460000,
+            1654733520000,
+            1654733580000,
+            1654733640000,
+            1654733700000,
+            1654733760000,
+            1654733820000,
+            1654733880000,
+            1654733940000
+          ],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+          "menit_hilang_di_bulanan": 1440,
+          "stempel_pertama_ms": 1654732800000,
+          "stempel_terakhir_ms": 1654819140000,
+          "tanggal": "2022-06-09",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/BNXUSDT/1m/BNXUSDT-1m-2022-06-09.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+      "pecahan": 6,
+      "putusan": "MENDUKUNG_H-A003",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "BNXUSDT",
+      "tanggal_terdampak": [
+        "2022-06-09"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/BNXUSDT/1m/BNXUSDT-1m-2022-06.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 4320,
+      "blok_tunggal_menit": 0,
+      "bulan": "2022-08",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 40320,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 4320,
+      "cacah_tanggal_terdampak": 3,
+      "checksum_bulanan": "e990e000d7e2716f19774e377f3724b16a5e26161731e5dfbe215a608b2e8d09",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1660348740000,
+          "mulai_ms": 1660089600000,
+          "panjang_menit": 4320
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 3,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 1440,
+          "checksum": "38f68e9072aecce5949bf81a3a49b2d2c573adcc8ddb5ad8d916f1a7fee8b87e",
+          "contoh_menit_hadir": [
+            1660089600000,
+            1660089660000,
+            1660089720000,
+            1660089780000,
+            1660089840000,
+            1660089900000,
+            1660089960000,
+            1660090020000,
+            1660090080000,
+            1660090140000,
+            1660090200000,
+            1660090260000,
+            1660090320000,
+            1660090380000,
+            1660090440000,
+            1660090500000,
+            1660090560000,
+            1660090620000,
+            1660090680000,
+            1660090740000
+          ],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+          "menit_hilang_di_bulanan": 1440,
+          "stempel_pertama_ms": 1660089600000,
+          "stempel_terakhir_ms": 1660175940000,
+          "tanggal": "2022-08-10",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/BNXUSDT/1m/BNXUSDT-1m-2022-08-10.zip"
+        },
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 1440,
+          "checksum": "1475eaee43e9fa175099d4075ed3e370453ec330101d2b1164614db85bf7d666",
+          "contoh_menit_hadir": [
+            1660176000000,
+            1660176060000,
+            1660176120000,
+            1660176180000,
+            1660176240000,
+            1660176300000,
+            1660176360000,
+            1660176420000,
+            1660176480000,
+            1660176540000,
+            1660176600000,
+            1660176660000,
+            1660176720000,
+            1660176780000,
+            1660176840000,
+            1660176900000,
+            1660176960000,
+            1660177020000,
+            1660177080000,
+            1660177140000
+          ],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+          "menit_hilang_di_bulanan": 1440,
+          "stempel_pertama_ms": 1660176000000,
+          "stempel_terakhir_ms": 1660262340000,
+          "tanggal": "2022-08-11",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/BNXUSDT/1m/BNXUSDT-1m-2022-08-11.zip"
+        },
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 1440,
+          "checksum": "097b83acb1ca60347c00948640e8d00f91902a568774021fc77dd1852d468284",
+          "contoh_menit_hadir": [
+            1660262400000,
+            1660262460000,
+            1660262520000,
+            1660262580000,
+            1660262640000,
+            1660262700000,
+            1660262760000,
+            1660262820000,
+            1660262880000,
+            1660262940000,
+            1660263000000,
+            1660263060000,
+            1660263120000,
+            1660263180000,
+            1660263240000,
+            1660263300000,
+            1660263360000,
+            1660263420000,
+            1660263480000,
+            1660263540000
+          ],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 1440,
+          "menit_hilang_di_bulanan": 1440,
+          "stempel_pertama_ms": 1660262400000,
+          "stempel_terakhir_ms": 1660348740000,
+          "tanggal": "2022-08-12",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/BNXUSDT/1m/BNXUSDT-1m-2022-08-12.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 4320,
+      "pecahan": 6,
+      "putusan": "MENDUKUNG_H-A003",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "BNXUSDT",
+      "tanggal_terdampak": [
+        "2022-08-10",
+        "2022-08-11",
+        "2022-08-12"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/BNXUSDT/1m/BNXUSDT-1m-2022-08.zip"
+    },
+    {
+      "blok_mulai_00_utc": 1,
+      "blok_terpanjang_menit": 675,
+      "blok_tunggal_menit": 0,
+      "bulan": "2026-01",
+      "bulanan_tersedia": true,
+      "cacah_baris_1m": 43965,
+      "cacah_blok": 1,
+      "cacah_menit_hilang": 675,
+      "cacah_tanggal_terdampak": 1,
+      "checksum_bulanan": "d4429e5097a1db4af941d9928edb201601ae6d26da6b74c4af3f318d51ffadf6",
+      "contoh_blok": [
+        {
+          "akhir_ms": 1768907640000,
+          "mulai_ms": 1768867200000,
+          "panjang_menit": 675
+        }
+      ],
+      "hari_dilewati": 0,
+      "hari_diperiksa": 1,
+      "hari_tidak_tersedia": 0,
+      "harian": [
+        {
+          "baris_dibuang": 0,
+          "cacah_baris_harian": 765,
+          "checksum": "e73b8ce02986fe61569d66f8435584c83a3626bab5b1e58518b167b0d50702b3",
+          "contoh_menit_hadir": [],
+          "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+          "menit_hilang_di_bulanan": 675,
+          "stempel_pertama_ms": 1768907700000,
+          "stempel_terakhir_ms": 1768953540000,
+          "tanggal": "2026-01-20",
+          "tersedia": true,
+          "url": "https://data.binance.vision/data/futures/um/daily/klines/AIAUSDT/1m/AIAUSDT-1m-2026-01-20.zip"
+        }
+      ],
+      "menit_hadir_di_harian_saat_bulanan_hilang": 0,
+      "pecahan": 7,
+      "putusan": "H-A003_GUGUR",
+      "semua_blok_mulai_00_utc": true,
+      "simbol": "AIAUSDT",
+      "tanggal_terdampak": [
+        "2026-01-20"
+      ],
+      "total_kelipatan_15": true,
+      "url_bulanan": "https://data.binance.vision/data/futures/um/monthly/klines/AIAUSDT/1m/AIAUSDT-1m-2026-01.zip"
+    }
+  ],
+  "sidik_kode": "487d93c0f53cd069a50307daf5c99b88faaad9449440365c2866f659e4ddfe05",
+  "simbol_bulan_diminta": 9,
+  "simbol_bulan_diperiksa": 9,
+  "status": "TERUKUR",
+  "tersangka": [
+    "CVXUSDT 2025-07 (pecahan 1)",
+    "MAVIAUSDT 2025-03 (pecahan 1)",
+    "PUMPUSDT 2025-07 (pecahan 1)",
+    "CTKUSDT 2025-04 (pecahan 3)",
+    "LITUSDT 2025-12 (pecahan 4)",
+    "BNXUSDT 2022-04 (pecahan 6)",
+    "BNXUSDT 2022-06 (pecahan 6)",
+    "BNXUSDT 2022-08 (pecahan 6)",
+    "AIAUSDT 2026-01 (pecahan 7)"
+  ],
+  "total_menit_hilang": 11700,
+  "waktu_utc": "2026-07-28T14:20:54Z"
+}

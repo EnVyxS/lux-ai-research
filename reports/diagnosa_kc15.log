@@ -57,11 +57,9 @@
   "catatan_penggugur": "cacah_gerbang_lolos_padahal_tepi_terpotong > 0 berarti gerbang meloloskan simbol-bulan yang datanya benar-benar terpotong di tepi, dan enam klausa ADR-A004 tidak cukup (aturan 24)",
   "catatan_rentang": "sampel bulan tengah dari kedelapan pecahan; kesimpulan tidak boleh diperluas ke 19.598 simbol-bulan (aturan 20)",
   "hari_tepi_diperiksa": 1,
-  "kelas_risiko_kosong": [
-    "bulan_awal_2020_2021"
-  ],
+  "kelas_risiko_kosong": [],
   "kelas_risiko_tersentuh": {
-    "bulan_awal_2020_2021": 0,
+    "bulan_awal_2020_2021": 1,
     "kendali_baru": 12,
     "non_ascii": 3,
     "pra_header": 11,
@@ -69,12 +67,12 @@
   },
   "menit_tepi_hadir_di_harian": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "c27c0debe03efad77b5d6505e33a2e33eb83c325e4335459fd74896a839ed9a3",
+  "sidik_kode": "ad18ac320dac42eedff1f7a8ecd65aa826460994cb1ad7aeeab93f7238890497",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "tersangka_tepi": [
     "BNXUSDT 2022-04"
   ],
   "total_menit_tepi": 0,
-  "waktu_utc": "2026-07-28T14:36:55Z"
+  "waktu_utc": "2026-07-28T14:39:29Z"
 }

@@ -14,8 +14,8 @@ bukan potong blok dan bukan atas simbol-bulan:
 **Daftar bulan DITANYAKAN ke arsip** lewat `arsip.bulan_tersedia`, tidak
 diturunkan dari `bulan_pertama..bulan_terakhir`: `semesta_rentang.json` hanya
 menyimpan ujung dan `cacah_bulan`, sehingga simbol yang pernah jeda akan
-menghasilkan bulan hantu bila rentangnya sekadar dibentangkan. Pada pecahan 0
-selisihnya nol untuk 99 simbol; itu tetap dilaporkan, tidak diasumsikan
+menghasilkan bulan hantu bila rentangnya sekadar dibentangkan. Selisihnya nol
+pada kedelapan pecahan sejauh ini; itu tetap dilaporkan, tidak diasumsikan
 (aturan 36).
 
 **Persistensi (ADR-A006 bagian 2/2).** Dulu parquet ditulis, diukur, lalu
@@ -31,19 +31,27 @@ setiap tar, sha256-nya cocok, dan cacah anggotanya sama dengan cacah berkas yang
 dikemas. Klaim persistensi diikat pada pembacaan ulang, bukan pada niat
 mengunggah (aturan 24).
 
-**VERSI 3 → 4.** VERSI 3 berjalan penuh dan hijau (run `30376241019`), tetapi
-medan penggugurnya menolak klaim persistensinya sendiri: model ukuran tar
-mengabaikan header **pax** 1.024 byte per anggota, sehingga tiga bagian pecahan
-1 melampaui taksirannya dan satu melewati batas 1,8 GB. `rilis.py` sudah
-diperbaiki (kepala anggota 3 blok) dan diuji pada 120 anggota, bukan 6
-(aturan 43); CI 187 uji hijau pada commit `4b02bb74`. VERSI 4 menjalankan ulang
-seluruh matriks di atas model yang benar.
+Riwayat VERSI:
+
+- **3** — pengemas dinyalakan. Run `30376241019` hijau, tetapi medan
+  penggugurnya menolak klaimnya sendiri: model ukuran tar mengabaikan header
+  **pax** 1.024 byte per anggota.
+- **4** — model diperbaiki (kepala anggota 3 blok). Run `30383278359`:
+  `verifikasi_rilis.sah` = `true` di ketujuh pecahan, 17.178 parquet
+  terpersistensi, 20 bagian tar, nol taksiran terlampaui.
+- **5** — matriks diperluas ke `0..7`. Pecahan 0 diukur pada run 30353584831
+  dengan kode lama yang menghapus parquet, sehingga ia satu-satunya bagian
+  semesta yang belum tersimpan (2.408 simbol-bulan lolos, ±4,12 GB). Menjalankan
+  ulang kedelapan pecahan memang membuang ±1,5 jam runner untuk data yang sudah
+  sah, tetapi hasilnya seluruh semesta terpersistensi di bawah SATU `run_id` dan
+  SATU `sidik_kode` — provenans yang jauh lebih mudah diaudit daripada menjahit
+  dua run berbeda.
 
 **VERSI** dinaikkan setiap kali pecahan perlu dijalankan ulang. Pemicu-diri
 workflow sudah dicabut (aturan 33), dan modul inilah satu-satunya pemicu run,
 sehingga menaikkan VERSI adalah cara sengaja untuk menyalakannya.
 
-Aturan yang ditegakkan: 18, 20, 22, 24, 25, 28, 30, 32, 33, 36, 37, 43.
+Aturan yang ditegakkan: 18, 20, 22, 24, 25, 28, 30, 32, 33, 36, 37, 43, 44.
 """
 
 from __future__ import annotations
@@ -57,7 +65,7 @@ from typing import Any, Dict, List, Optional
 
 from . import arsip, rilis, serap
 
-VERSI = 4
+VERSI = 5
 SUMBER_RENTANG = serap.SUMBER_RENTANG
 TOTAL_PECAHAN = 8
 JENIS_DIIZINKAN = serap.JENIS_DIIZINKAN

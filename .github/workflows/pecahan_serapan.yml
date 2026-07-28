@@ -3,16 +3,19 @@ name: pecahan-serapan
 # Aturan 33: pemicu menyebut berkas modulnya saja, tanpa pemicu-diri.
 # Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
 #
-# ADR-A006 bagian 2/2: parquet kini DIPERSISTENKAN. Ia dialirkan ke tar
-# terbelah <=1,8 GB oleh lux_ai/serapan/rilis.py (sumbernya dihapus segera
-# setelah masuk tar, jadi puncak cakram tetap ~ satu ukuran pecahan), lalu
-# diunggah sebagai ASET RILIS ke tag serapan-pecahan-<i>-<run_id>. Aset rilis,
-# bukan git: 32,71 GB tidak boleh masuk riwayat repo. Yang di-commit tetap hanya
-# manifes, log, dan status.
+# ADR-A006 bagian 2/2: parquet DIPERSISTENKAN. Ia dialirkan ke tar terbelah
+# <=1,8 GB oleh lux_ai/serapan/rilis.py (sumbernya dihapus segera setelah masuk
+# tar, jadi puncak cakram tetap ~ satu ukuran pecahan), lalu diunggah sebagai
+# ASET RILIS ke tag serapan-pecahan-<i>-<run_id>. Aset rilis, bukan git: 32,71 GB
+# tidak boleh masuk riwayat repo. Yang di-commit tetap hanya manifes, log, dan
+# status.
 #
-# Push atas pecahan.py menjalankan MATRIKS pecahan 1..7 secara paralel; pecahan
-# 0 sudah terukur pada run 30353584831. Untuk mengulang satu pecahan saja,
-# pakai workflow_dispatch.
+# Matriks kini 0..7, bukan 1..7. Pecahan 0 terukur pada run 30353584831 dengan
+# kode lama yang MENGHAPUS parquet, jadi ia satu-satunya bagian semesta yang
+# belum tersimpan. Agen tidak punya alat memicu workflow_dispatch, dan hanya
+# pecahan.py yang ada di paths; karena itu seluruh delapan pecahan dijalankan
+# ulang sekali agar semesta terpersistensi di bawah SATU run_id dan SATU
+# sidik_kode. Untuk mengulang satu pecahan saja, pakai workflow_dispatch.
 on:
   push:
     paths:
@@ -42,9 +45,9 @@ jobs:
     timeout-minutes: 330
     strategy:
       fail-fast: false
-      max-parallel: 7
+      max-parallel: 8
       matrix:
-        indeks: [1, 2, 3, 4, 5, 6, 7]
+        indeks: [0, 1, 2, 3, 4, 5, 6, 7]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -88,7 +91,7 @@ jobs:
 
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
-          # Tujuh job mendorong ke cabang yang sama; ulang-coba dengan rebase.
+          # Delapan job mendorong ke cabang yang sama; ulang-coba dengan rebase.
           for percobaan in 1 2 3 4 5 6 7 8; do
             git add reports/manifes_pecahan_${PECAHAN_INDEKS}.json 2>/dev/null || true
             git add reports/pecahan_${PECAHAN_INDEKS}.log reports/pecahan_${PECAHAN_INDEKS}_status.json

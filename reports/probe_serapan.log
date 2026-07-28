@@ -1,7 +1,7 @@
 {
   "nama": "probe_serapan",
-  "waktu_utc": "2026-07-28T06:24:59Z",
-  "sidik_kode": "1db7cf1b06e1ceda65deba2a0479cc3049d0d47a90f2725c31f8dd41f13389d0",
+  "waktu_utc": "2026-07-28T06:57:04Z",
+  "sidik_kode": "c9b4cf35cda531f49e88ce933866b5eb614e5bace8e235be713bd115e9317380",
   "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
   "akar_prefix": "data/futures/um",
   "jumlah_simbol_semesta": 937,
@@ -21,16 +21,55 @@
     "COCOSUSDT",
     "BTSUSDT"
   ],
-  "delisting_klaim_terbukti": [
-    "FTTUSDT",
+  "bulan_acuan_dari_probe_likuid": "2026-06",
+  "jeda_mati_bulan": 2,
+  "klaim_delisting_diukur": [
+    {
+      "simbol": "FTTUSDT",
+      "ada_di_indeks": true,
+      "bulan_terakhir": "2026-06",
+      "bulan_acuan": "2026-06",
+      "selisih_bulan": 0,
+      "terhenti": false
+    },
+    {
+      "simbol": "SRMUSDT",
+      "ada_di_indeks": true,
+      "bulan_terakhir": "2024-05",
+      "bulan_acuan": "2026-06",
+      "selisih_bulan": 25,
+      "terhenti": true
+    },
+    {
+      "simbol": "COCOSUSDT",
+      "ada_di_indeks": true,
+      "bulan_terakhir": "2024-05",
+      "bulan_acuan": "2026-06",
+      "selisih_bulan": 25,
+      "terhenti": true
+    },
+    {
+      "simbol": "BTSUSDT",
+      "ada_di_indeks": true,
+      "bulan_terakhir": "2024-05",
+      "bulan_acuan": "2026-06",
+      "selisih_bulan": 25,
+      "terhenti": true
+    }
+  ],
+  "klaim_delisting_terhenti": [
     "SRMUSDT",
     "COCOSUSDT",
     "BTSUSDT"
   ],
-  "delisting_klaim_dibantah": [],
+  "klaim_delisting_masih_terbit": [
+    "FTTUSDT"
+  ],
+  "klaim_delisting_tidak_di_indeks": [],
   "rerata_byte_zip_per_simbol_bulan": 1186859,
   "rerata_byte_parquet_per_simbol_bulan": 1797488,
   "estimasi_total_zip_gb": 25.86,
   "estimasi_total_parquet_gb": 39.17,
-  "catatan_estimasi": "Ekstrapolasi memakai rerata simbol probe yang condong LIKUID, jadi estimasi ini kemungkinan besar TERLALU TINGGI untuk semesta penuh yang banyak memuat simbol tipis. Perlakukan sebagai batas atas kasar."
+  "catatan_estimasi": "Ekstrapolasi memakai rerata simbol probe yang condong LIKUID, jadi estimasi ini kemungkinan besar TERLALU TINGGI untuk semesta penuh yang banyak memuat simbol tipis. Perlakukan sebagai batas atas kasar.",
+  "catatan_delisting": "Delisting diukur dari jarak bulan terakhir simbol terhadap bulan_acuan_dari_probe_likuid, BUKAN dari kehadiran di indeks arsip. Medan lama delisting_klaim_terbukti dihapus karena namanya menjanjikan lebih daripada yang diukurnya (KC-5, aturan 16)."
 }

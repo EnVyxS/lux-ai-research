@@ -19,9 +19,11 @@
   "cacah_simbol_tanpa_funding_sama_sekali": 0,
   "catatan_bentuk_lubang": "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang seluruh bulannya tanpa funding masuk awal saja, jadi angka ekor adalah batas BAWAH bagi gejala hilang-di-akhir, bukan taksiran tengahnya",
   "catatan_bukan_bukti": "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK menulis funding_ada di manifes mana pun",
+  "catatan_jarak": "jarak_bulan_terakhir = bulan klines terakhir dikurangi bulan funding terakhir, dihitung hanya untuk simbol yang punya lubang ekor; simbol tanpa lubang ekor tidak menyumbang nol, ia tidak menyumbang apa pun",
   "catatan_kelas_kosong": "kelas risiko tanpa kandidat tidak menghasilkan wakil sampel; klaim apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan dari kasus lain (aturan 41, 46)",
+  "catatan_kohort": "histogram_mulai_lubang_ekor mencacah SIMBOL, bukan bulan; satu simbol menyumbang tepat satu bulan-mulai. Puncak yang tinggi menunjukkan banyak simbol berhenti serempak, tetapi TIDAK dengan sendirinya membuktikan sebabnya ada di sisi arsip: bulan yang sama juga bisa lahir dari satu gelombang delisting. Membedakan keduanya memerlukan sumber di luar arsip dan BELUM dilakukan",
   "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya yang pertama yang diukur di sini",
-  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor dan seluruh angka awal/ekor/tengah batal (aturan 24)",
+  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram bulan-mulai bocor dan seluruh angka kohort batal (aturan 24)",
   "catatan_rentang": "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json saja, bukan untuk 937 simbol arsip (aturan 20)",
   "contoh_gagal_daftar": [],
   "daftar_funding_tanpa_klines": [
@@ -616,6 +618,35 @@
     "NULSUSDT:2025-10"
   ],
   "daftar_terpotong": true,
+  "histogram_jarak_bulan_terakhir": {
+    "1": 5,
+    "10": 1,
+    "11": 1,
+    "12": 38,
+    "2": 18,
+    "3": 8,
+    "4": 7,
+    "5": 10,
+    "6": 7,
+    "7": 11,
+    "8": 3,
+    "9": 7
+  },
+  "histogram_mulai_lubang_ekor": {
+    "2020-11": 1,
+    "2025-07": 38,
+    "2025-08": 1,
+    "2025-09": 1,
+    "2025-10": 7,
+    "2025-11": 3,
+    "2025-12": 11,
+    "2026-01": 8,
+    "2026-02": 9,
+    "2026-03": 7,
+    "2026-04": 8,
+    "2026-05": 18,
+    "2026-06": 4
+  },
   "kelas_risiko_kosong": [
     "pra_header"
   ],
@@ -629,8 +660,14 @@
   "penyebut": {
     "bulan_funding": 18805,
     "bulan_klines": 19598,
+    "simbol_dengan_lubang_ekor": 116,
     "simbol_diminta": 787,
     "simbol_terdaftar": 787
+  },
+  "puncak_mulai_lubang_ekor": {
+    "cacah": 38,
+    "kunci": "2025-07",
+    "seri": false
   },
   "sampel_ringkas": [
     {
@@ -674,11 +711,12 @@
       "simbol": "0GUSDT"
     }
   ],
+  "selisih_histogram": 0,
   "selisih_klasifikasi": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "9e2790eab5ab11e31165f022d268da009eba65894ba3c91e49a23049d7c7d90e",
+  "sidik_kode": "188fde8e346efb27f18084a0d4f427980c4c741cae36821c25302ba9ea40776f",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
-  "versi_funding": 2,
-  "waktu_utc": "2026-07-28T23:16:41Z"
+  "versi_funding": 3,
+  "waktu_utc": "2026-07-28T23:40:56Z"
 }

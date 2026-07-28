@@ -39,13 +39,25 @@ Riwayat VERSI:
 - **4** — model diperbaiki (kepala anggota 3 blok). Run `30383278359`:
   `verifikasi_rilis.sah` = `true` di ketujuh pecahan, 17.178 parquet
   terpersistensi, 20 bagian tar, nol taksiran terlampaui.
-- **5** — matriks diperluas ke `0..7`. Pecahan 0 diukur pada run 30353584831
-  dengan kode lama yang menghapus parquet, sehingga ia satu-satunya bagian
-  semesta yang belum tersimpan (2.408 simbol-bulan lolos, ±4,12 GB). Menjalankan
-  ulang kedelapan pecahan memang membuang ±1,5 jam runner untuk data yang sudah
-  sah, tetapi hasilnya seluruh semesta terpersistensi di bawah SATU `run_id` dan
-  SATU `sidik_kode` — provenans yang jauh lebih mudah diaudit daripada menjahit
-  dua run berbeda.
+- **5** — matriks diperluas ke `0..7`. Run `30389402113`: kedelapan pecahan sah,
+  **19.586 parquet, 23 bagian, 32.706.262.375 byte**, seluruhnya di bawah SATU
+  `run_id` dan SATU `sidik_kode`.
+- **6** — **KC-17.** Sampai VERSI 5, pengemas hanya menerima `baris["parquet"]`.
+  Baris karantina menaruh jalurnya di `baris["parquet_karantina"]`, sehingga
+  **12 berkas (13.247.705 byte) diukur, didaftar, lalu lenyap bersama runner** —
+  padahal ADR-A006 berbunyi "disisihkan, bukan dibuang". Ukurannya 0,04% semesta,
+  tetapi justru berkas itulah bahan bukti KC-14 dan KC-15 dan bahan baku
+  pemulihan ADR-A007. VERSI 6 mengemasnya ke tar kedua dengan berkas sidik
+  sendiri, dan menambah medan penggugur `cacah_karantina_tak_terkemas`.
+
+  Dua jebakan yang sudah diperiksa sebelum run, bukan sesudah:
+  - `tutup()` semula selalu menulis `data/rilis/SHA256SUMS`, jadi pengemas kedua
+    akan MENIMPA sidik bagian utama tanpa satu pun medan penggugur menyala;
+    karena itu `rilis.py` kini menerima `nama_sums`;
+  - pengemas tanpa anggota menghasilkan `sah` = false. Pecahan 2 dan 5 memang
+    nol karantina, jadi pengemas karantina dibuat MALAS — hanya begitu baris
+    karantina pertama muncul — dan "nol karantina" tidak boleh dibaca sebagai
+    kegagalan persistensi.
 
 **VERSI** dinaikkan setiap kali pecahan perlu dijalankan ulang. Pemicu-diri
 workflow sudah dicabut (aturan 33), dan modul inilah satu-satunya pemicu run,
@@ -65,7 +77,7 @@ from typing import Any, Dict, List, Optional
 
 from . import arsip, rilis, serap
 
-VERSI = 5
+VERSI = 6
 SUMBER_RENTANG = serap.SUMBER_RENTANG
 TOTAL_PECAHAN = 8
 JENIS_DIIZINKAN = serap.JENIS_DIIZINKAN
@@ -77,6 +89,10 @@ def nama_keluaran(indeks: int) -> str:
 
 def nama_dasar_rilis(indeks: int) -> str:
     return f"pecahan_{indeks}"
+
+
+def nama_dasar_karantina(indeks: int) -> str:
+    return f"pecahan_{indeks}_karantina"
 
 
 def sidik_kode() -> str:
@@ -151,11 +167,15 @@ def jalankan(
         if mengemas
         else None
     )
+    # Dibuat MALAS: pecahan tanpa karantina tidak boleh menghasilkan pengemas
+    # kosong, karena laporan pengemas kosong berstatus tidak sah.
+    pengemas_kar: Optional[rilis.PengemasBerbelah] = None
 
     manifes: List[Dict[str, Any]] = []
     selisih_bulan: List[Dict[str, Any]] = []
     gagal_daftar: List[str] = []
     cacah_parquet_ditulis = 0
+    cacah_parquet_karantina_ditulis = 0
 
     for nama in simbol:
         isi = rentang.get(nama) or {}
@@ -179,6 +199,7 @@ def jalankan(
         for b in bulan:
             baris = serap.serap_satu(nama, b, akar=akar, terhenti=mati)
             jalur_rel = baris.get("parquet")
+            jalur_kar = baris.get("parquet_karantina")
             if jalur_rel:
                 cacah_parquet_ditulis += 1
                 if pengemas is not None:
@@ -188,6 +209,18 @@ def jalankan(
                     jalur = basis / str(jalur_rel)
                     if jalur.exists():
                         jalur.unlink()
+            elif jalur_kar:
+                # KC-17: karantina dikemas, TIDAK PERNAH dihapus tanpa dikemas.
+                cacah_parquet_karantina_ditulis += 1
+                if mengemas:
+                    if pengemas_kar is None:
+                        pengemas_kar = rilis.PengemasBerbelah(
+                            akar=akar,
+                            nama_dasar=nama_dasar_karantina(indeks),
+                            nama_sums=rilis.NAMA_SUMS_KARANTINA,
+                        )
+                    hasil = pengemas_kar.tambah(str(jalur_kar))
+                    baris["dikemas_karantina"] = bool(hasil.get("ditambahkan"))
             manifes.append(baris)
 
     laporan_rilis: Optional[Dict[str, Any]] = None
@@ -195,6 +228,36 @@ def jalankan(
     if pengemas is not None:
         laporan_rilis = pengemas.tutup()
         periksa_rilis = rilis.verifikasi(akar, laporan_rilis)
+
+    laporan_kar: Optional[Dict[str, Any]] = None
+    periksa_kar: Optional[Dict[str, Any]] = None
+    if pengemas_kar is not None:
+        laporan_kar = pengemas_kar.tutup()
+        periksa_kar = rilis.verifikasi(akar, laporan_kar)
+
+    if mengemas:
+        tak_terkemas: Optional[int] = cacah_parquet_ditulis - int(
+            (laporan_rilis or {}).get("cacah_berkas") or 0
+        )
+        kar_tak_terkemas: Optional[int] = cacah_parquet_karantina_ditulis - int(
+            (laporan_kar or {}).get("cacah_berkas") or 0
+        )
+        karantina_sah = (
+            True
+            if cacah_parquet_karantina_ditulis == 0
+            else bool(periksa_kar and periksa_kar.get("sah") is True)
+        )
+        dipersistenkan = (
+            bool(periksa_rilis and periksa_rilis.get("sah") is True)
+            and tak_terkemas == 0
+            and kar_tak_terkemas == 0
+            and karantina_sah
+        )
+    else:
+        tak_terkemas = None
+        kar_tak_terkemas = None
+        karantina_sah = False
+        dipersistenkan = False
 
     laporan = serap.ringkas(manifes)
     laporan["bukan_bukti"] = False
@@ -216,17 +279,16 @@ def jalankan(
         ),
     }
     laporan["cacah_parquet_ditulis"] = cacah_parquet_ditulis
+    laporan["cacah_parquet_karantina_ditulis"] = cacah_parquet_karantina_ditulis
     laporan["mengemas"] = mengemas
     laporan["rilis"] = laporan_rilis
     laporan["verifikasi_rilis"] = periksa_rilis
-    laporan["cacah_parquet_tak_terkemas"] = (
-        cacah_parquet_ditulis - int((laporan_rilis or {}).get("cacah_berkas") or 0)
-        if mengemas
-        else None
-    )
-    laporan["parquet_dipersistenkan"] = bool(
-        periksa_rilis and periksa_rilis.get("sah") is True
-    )
+    laporan["rilis_karantina"] = laporan_kar
+    laporan["verifikasi_rilis_karantina"] = periksa_kar
+    laporan["cacah_parquet_tak_terkemas"] = tak_terkemas
+    laporan["cacah_karantina_tak_terkemas"] = kar_tak_terkemas
+    laporan["karantina_dipersistenkan"] = bool(mengemas and karantina_sah)
+    laporan["parquet_dipersistenkan"] = bool(dipersistenkan)
     laporan["catatan_parquet"] = (
         "parquet dialirkan ke tar terbelah <=1,8 GB lalu diunggah sebagai aset "
         "rilis; parquet_dipersistenkan true HANYA bila tiap tar dibaca ulang, "
@@ -235,6 +297,14 @@ def jalankan(
         "yang lenyap antara penulisan dan pengemasan"
         if mengemas
         else "PECAHAN_KEMAS tidak aktif: parquet ditulis, diukur, lalu dihapus"
+    )
+    laporan["catatan_karantina_persistensi"] = (
+        "KC-17: sampai VERSI 5 parquet karantina diukur lalu lenyap bersama "
+        "runner. Sejak VERSI 6 ia dikemas ke tar terpisah dengan berkas sidik "
+        "SHA256SUMS_KARANTINA. cacah_karantina_tak_terkemas != 0 berarti cacat "
+        "itu kambuh. Pecahan tanpa karantina melaporkan rilis_karantina null dan "
+        "karantina_dipersistenkan true dengan penyebut nol — itu BUKAN bukti "
+        "pengemas karantina bekerja (aturan 30, 41)"
     )
     laporan["catatan_rentang"] = (
         f"hasil berlaku untuk pecahan {indeks} dari {total} saja, bukan untuk "

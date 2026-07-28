@@ -37,6 +37,15 @@ masih lebih kecil daripada satu rekam. **Margin tetap menyembunyikan galat yang
 menskala** — lihat aturan 43. Karena itu uji regresi modul ini memakai 120
 anggota, bukan 6.
 
+## Dua pengemas dalam satu direktori (KC-17)
+
+Semula `tutup()` selalu menulis `data/rilis/SHA256SUMS`. Begitu pengemas KEDUA
+dipakai untuk parquet karantina di direktori yang sama, berkas itu akan tertimpa
+dan sidik bagian utama lenyap tanpa satu pun medan penggugur menyala. Karena itu
+nama berkas sidik kini dapat dipilih lewat `nama_sums`, dan pengemas karantina
+memakai `NAMA_SUMS_KARANTINA`. Keduanya tetap di `data/rilis` supaya satu glob
+unggahan cukup, dan nama asetnya tidak pernah bertabrakan di satu tag rilis.
+
 Semua keputusan pembelahan lewat SATU fungsi, `taksir_bagian()`, supaya model
 ukuran tidak bisa berbeda antara `rencana_belah` dan `PengemasBerbelah`
 (aturan 9).
@@ -67,6 +76,7 @@ BYTE_AKHIR_TAR = 2 * BLOK_TAR  # dua blok nol penutup arsip
 REKAM_TAR = tarfile.RECORDSIZE  # 10.240 byte; ukuran tar selalu kelipatan ini
 MARGIN_REKAM = 2 * REKAM_TAR  # bantalan sisa pembulatan
 NAMA_SUMS = "SHA256SUMS"
+NAMA_SUMS_KARANTINA = "SHA256SUMS_KARANTINA"
 AKAR_RILIS = "data/rilis"
 POTONG_BACA = 1024 * 1024
 
@@ -146,6 +156,7 @@ class PengemasBerbelah:
         nama_dasar: str = "parquet",
         tujuan: str = AKAR_RILIS,
         batas: int = BATAS_BAGIAN,
+        nama_sums: str = NAMA_SUMS,
     ) -> None:
         if batas_terlalu_kecil(batas):
             raise ValueError(
@@ -156,6 +167,7 @@ class PengemasBerbelah:
         self.tujuan = self.akar / tujuan
         self.rel_tujuan = tujuan
         self.batas = int(batas)
+        self.nama_sums = nama_sums
         self.tujuan.mkdir(parents=True, exist_ok=True)
         self._tar: Optional[tarfile.TarFile] = None
         self._jalur_kini: Optional[Path] = None
@@ -243,13 +255,13 @@ class PengemasBerbelah:
         }
 
     def tutup(self) -> Dict[str, Any]:
-        """Tutup bagian terakhir, tulis SHA256SUMS, kembalikan laporan."""
+        """Tutup bagian terakhir, tulis berkas sidik, kembalikan laporan."""
         self._tutup_bagian()
         jalur_sums: Optional[str] = None
         if self.bagian:
-            berkas_sums = self.tujuan / NAMA_SUMS
+            berkas_sums = self.tujuan / self.nama_sums
             berkas_sums.write_text(baris_sums(self.bagian), encoding="utf-8")
-            jalur_sums = str(Path(self.rel_tujuan) / NAMA_SUMS)
+            jalur_sums = str(Path(self.rel_tujuan) / self.nama_sums)
         return self.laporan(jalur_sums)
 
     def laporan(self, jalur_sums: Optional[str] = None) -> Dict[str, Any]:
@@ -257,6 +269,7 @@ class PengemasBerbelah:
         return {
             "status": "TERKEMAS" if self.bagian else "TIDAK MENGEMAS",
             "nama_dasar": self.nama_dasar,
+            "nama_sums": self.nama_sums,
             "batas_byte": self.batas,
             "rekam_tar": REKAM_TAR,
             "margin_rekam": MARGIN_REKAM,

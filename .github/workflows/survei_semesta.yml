@@ -1,10 +1,13 @@
 name: survei-semesta
 
+# Aturan 34: hanya berkas milik workflow ini yang di-add. Nama diambil dari
+# lux_ai/serapan/survei.py: LAPORAN, RENTANG, PROGRES.
+# Pemicu-diri dicabut (aturan 33): survei berbiaya 330 menit dan tidak boleh
+# menyala hanya karena ymlnya disunting. Pakai workflow_dispatch.
 on:
   push:
     paths:
       - 'lux_ai/serapan/survei.py'
-      - '.github/workflows/survei_semesta.yml'
   workflow_dispatch:
 
 permissions:
@@ -38,7 +41,8 @@ jobs:
           printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/survei_status.json
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
-          git add reports
+          git add reports/survei_semesta.json reports/semesta_rentang.json reports/survei_progres.json 2>/dev/null || true
+          git add reports/survei_semesta.log reports/survei_status.json
           git commit -m "laporan survei semesta ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
           git pull --rebase --autostash
           git push

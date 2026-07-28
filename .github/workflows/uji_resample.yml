@@ -1,12 +1,12 @@
 name: uji-resample
 
+# Aturan 33 dan 34: pemicu-diri dicabut, add hanya berkas berawalan uji_resample.
 on:
   push:
     paths:
       - 'lux_ai/serapan/resample.py'
       - 'lux_ai/serapan/uji_resample.py'
       - 'lux_ai/serapan/klines.py'
-      - '.github/workflows/uji_resample.yml'
   workflow_dispatch:
 
 permissions:
@@ -40,7 +40,8 @@ jobs:
           printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/uji_resample_status.json
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
-          git add reports
+          git add reports/uji_resample.json 2>/dev/null || true
+          git add reports/uji_resample.log reports/uji_resample_status.json
           git commit -m "laporan uji resample ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
           git pull --rebase --autostash
           git push

@@ -1,10 +1,11 @@
 name: rentang-kc6
 
+# Aturan 33 dan 34: pemicu-diri dicabut (biaya 300 menit), add hanya berkas
+# berawalan rentang_kc6.
 on:
   push:
     paths:
       - 'lux_ai/serapan/rentang_kc6.py'
-      - '.github/workflows/rentang_kc6.yml'
   workflow_dispatch:
 
 permissions:
@@ -38,7 +39,8 @@ jobs:
           printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/rentang_kc6_status.json
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
-          git add reports
+          git add reports/rentang_kc6.json 2>/dev/null || true
+          git add reports/rentang_kc6.log reports/rentang_kc6_status.json
           git commit -m "laporan rentang kc6 ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
           git pull --rebase --autostash
           git push

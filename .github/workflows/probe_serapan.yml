@@ -1,10 +1,15 @@
 name: probe-serapan
 
+# Aturan 33: pemicu menyebut BERKAS yang benar-benar dipakai, bukan pola
+# direktori. Pemicu lama 'lux_ai/serapan/**' menyalakan run 330 menit setiap
+# kali berkas apa pun di paket serapan disentuh.
+# Pemicu-diri ('.github/workflows/probe_serapan.yml') sengaja DICABUT: menyunting
+# workflow tidak boleh membakar lima setengah jam runner. Jalankan ulang lewat
+# workflow_dispatch.
 on:
   push:
     paths:
-      - 'lux_ai/serapan/**'
-      - '.github/workflows/probe_serapan.yml'
+      - 'lux_ai/serapan/probe.py'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +25,8 @@ jobs:
     timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -34,10 +41,10 @@ jobs:
           git config user.name "lux-ci"
           git config user.email "lux-ci@users.noreply.github.com"
 
-      - name: commit progres berkala di latar
-        run: |
-          nohup bash -c 'while true; do sleep 600; git add -A reports/ 2>/dev/null || true; git commit -m "progres probe serapan [skip ci]" >/dev/null 2>&1 || continue; git pull --rebase --autostash >/dev/null 2>&1 || true; git push >/dev/null 2>&1 || true; done' > /dev/null 2>&1 &
-          echo "pencommit progres berjalan"
+      # Gelung latar 'while true; do sleep 600; git add -A reports/ ...' DIHAPUS.
+      # Ia meng-commit borongan (aturan 34) dan diduga menjadi sebab anomali tree
+      # yang terlihat pada enam commit. Progres kini hanya ditulis modulnya
+      # sendiri ke berkas, dan di-commit sekali di akhir.
 
       - name: jalankan probe
         run: |
@@ -48,7 +55,8 @@ jobs:
           mkdir -p reports
           tail -c 20000 probe.log > reports/probe_serapan.log
           printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/probe_status.json
-          git add -A reports/
+          git add reports/probe_serapan.json reports/probe_serapan.log reports/probe_status.json reports/probe_progres.json 2>/dev/null || true
+          git add reports/probe_serapan.log reports/probe_status.json
           git commit -m "laporan probe serapan run ${GITHUB_RUN_ID} [skip ci]" || true
           git pull --rebase --autostash
           git push

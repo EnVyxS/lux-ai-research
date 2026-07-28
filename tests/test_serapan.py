@@ -9,7 +9,7 @@ import zipfile
 
 import pandas as pd
 
-from lux_ai.serapan import arsip, klines
+from lux_ai.serapan import arsip, klines, probe, survei
 
 
 def test_url_klines_memakai_prefix_data():
@@ -95,3 +95,63 @@ def test_semesta_simbol_tidak_menyaring_pair_aktif():
     potongan = sumber.split("def semesta_simbol", 1)[1].split("\ndef ", 1)[0]
     for terlarang in ("exchangeInfo", "fapi", "TRADING"):
         assert terlarang not in potongan
+
+
+# --- KC-5: cara probe mengukur klaim delisting -------------------------------
+# Aturan 12: yang diuji di sini adalah CARA MENGUKUR, dengan kasus positif
+# (simbol yang memang berhenti) dan kasus negatif (simbol yang masih terbit
+# padahal ada di daftar klaim).
+
+
+def test_klaim_delisting_tidak_memakai_kehadiran_di_indeks():
+    """Kasus yang menjatuhkan versi lama: FTTUSDT ada di indeks TAPI masih terbit."""
+    baris = probe.nilai_klaim_delisting(
+        ["FTTUSDT", "SRMUSDT"],
+        {"FTTUSDT": "2026-06", "SRMUSDT": "2024-05"},
+        "2026-06",
+    )
+    per_simbol = {b["simbol"]: b for b in baris}
+    assert per_simbol["FTTUSDT"]["ada_di_indeks"] is True
+    assert per_simbol["FTTUSDT"]["terhenti"] is False
+    assert per_simbol["FTTUSDT"]["selisih_bulan"] == 0
+    assert per_simbol["SRMUSDT"]["terhenti"] is True
+    assert per_simbol["SRMUSDT"]["selisih_bulan"] == 25
+
+
+def test_klaim_delisting_tanpa_bulan_terakhir_tidak_diputuskan():
+    """Tanpa bulan terakhir tidak ada yang bisa diukur; jangan menebak."""
+    (baris,) = probe.nilai_klaim_delisting(["HANTUUSDT"], {}, "2026-06")
+    assert baris["ada_di_indeks"] is False
+    assert baris["bulan_terakhir"] is None
+    assert baris["selisih_bulan"] is None
+    assert baris["terhenti"] is None
+
+
+def test_klaim_delisting_memakai_definisi_tunggal_dari_survei():
+    """Probe dilarang punya ambang delisting sendiri.
+
+    Bila kelak ada yang menyalin ulang ambangnya ke probe.py dan mengubahnya,
+    perbandingan ini akan gagal untuk salah satu jarak bulan.
+    """
+    bulan = ["2026-06", "2026-05", "2026-04", "2026-03", "2025-12", "2024-05"]
+    baris = probe.nilai_klaim_delisting(
+        [f"S{i}" for i in range(len(bulan))],
+        {f"S{i}": b for i, b in enumerate(bulan)},
+        "2026-06",
+    )
+    for b in baris:
+        assert b["terhenti"] == survei.terhenti(b["bulan_terakhir"], "2026-06")
+        assert b["selisih_bulan"] == survei.selisih_bulan(b["bulan_terakhir"], "2026-06")
+
+
+def test_klaim_delisting_mencatat_bulan_acuannya():
+    """Aturan 20: putusan tanpa rentang acuan tidak bisa ditafsirkan.
+
+    Simbol yang sama bisa terhenti terhadap satu acuan dan hidup terhadap acuan
+    lain, jadi acuannya wajib ikut tercatat di tiap baris.
+    """
+    (jauh,) = probe.nilai_klaim_delisting(["X"], {"X": "2024-05"}, "2026-06")
+    (dekat,) = probe.nilai_klaim_delisting(["X"], {"X": "2024-05"}, "2024-05")
+    assert jauh["bulan_acuan"] == "2026-06" and dekat["bulan_acuan"] == "2024-05"
+    assert jauh["terhenti"] is True
+    assert dekat["terhenti"] is False

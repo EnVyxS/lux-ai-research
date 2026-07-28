@@ -52,11 +52,10 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
     2020-2023, sifat itu TIDAK terbukti untuk 2024-2026. Ramalan yang menyangkut
     seluruh sejarah hanya boleh dihitung tepat bila sampelnya menjangkau seluruh
     sejarah.
-21. **[baru v7]** Setiap angka ringkasan yang saya tulis sendiri (cacah baris
-    tabel, total, persentase) wajib dihitung ulang dari barisnya saat berkas
-    diperbarui. Papan skor v6 menulis "tepat 8" padahal barisnya 7. Angka
-    ringkasan yang tidak pernah dihitung ulang adalah klaim, sama seperti angka
-    warisan.
+21. **[v7]** Setiap angka ringkasan yang saya tulis sendiri (cacah baris tabel,
+    total, persentase) wajib dihitung ulang dari barisnya saat berkas diperbarui.
+    Papan skor v6 menulis "tepat 8" padahal barisnya 7. Angka ringkasan yang
+    tidak pernah dihitung ulang adalah klaim, sama seperti angka warisan.
 
 ## Kelas cacat
 
@@ -107,12 +106,17 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-19 | Peralihan header 2022-01 berlaku untuk SELURUH simbol | menunggu (baru 3 simbol) |
 | R-20 | Serapan penuh: 0 berkas non-milidetik dan 0 pelanggaran batas header | menunggu |
 
-Cacah dihitung ulang baris demi baris (aturan 21): TEPAT 8 (R-1, R-5, R-9, R-11,
-R-13, R-15, R-16, R-17, R-18 — sembilan baris, jadi **TEPAT 9**), MELESET 5
-(R-4, R-6, R-8, R-10, R-14), MELESET SEPARUH 1 (R-3), TIDAK TERADJUDIKASI 1
-(R-2), MENUNGGU 4 (R-7, R-12, R-19, R-20) ditambah P-1..P-3. Total baris R:
-9+5+1+1+4 = 20 = R-1..R-20. Catatan: STATE v6 menulis "tepat 8" padahal saat itu
-barisnya 7; koreksi itu sudah masuk ke jurnal 08.
+Cacah dihitung ulang baris demi baris (aturan 21):
+
+- TEPAT 9: R-1, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18.
+- MELESET 5: R-4, R-6, R-8, R-10, R-14.
+- MELESET SEPARUH 1: R-3.
+- TIDAK TERADJUDIKASI 1: R-2.
+- MENUNGGU 4: R-7, R-12, R-19, R-20.
+
+Jumlah 9+5+1+1+4 = 20, sama dengan cacah baris R-1..R-20. Prediksi P-1..P-3
+dihitung terpisah dan ketiganya masih menunggu. STATE v6 menulis "tepat 8"
+padahal barisnya 7 saat itu; koreksinya ada di `journal/2026-07-28-08.md`.
 
 ## Daftar ADR
 

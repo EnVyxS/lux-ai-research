@@ -1,4 +1,4 @@
-# PROMPT KELANJUTAN — versi 13
+# PROMPT KELANJUTAN — versi 14
 
 Salin isi berkas ini sebagai prompt pembuka sesi berikutnya.
 
@@ -16,10 +16,11 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
    `connections.mcpServer_github.runTool({toolName, toolArguments})`. `owner` dan
    `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
 3. Baca dari `main` repo `EnVyxS/lux-ai-research`, berurutan:
-   - `PROMPT_KELANJUTAN.md` (versi 13) — berkas ini
-   - `STATE.md` (versi 14) — aturan 1-28, kelas cacat KC-1..KC-6, papan skor
+   - `PROMPT_KELANJUTAN.md` (versi 14) — berkas ini
+   - `STATE.md` (versi 15) — aturan 1-29, kelas cacat KC-1..KC-6, papan skor
      R-1..R-43, daftar utang 1-24. INI YANG PALING PENTING.
-   - `decisions/ADR-A001.md`, `decisions/ADR-A002.md`, `decisions/ADR-A004.md`
+   - `decisions/ADR-A004.md` dan bagian "Amandemen A-1" di
+     `decisions/ADR-A002.md`; `decisions/ADR-A001.md` bila perlu
    - `journal/2026-07-28-20.md` (adjudikasi terakhir); jurnal 16-19 bila perlu
      latar
    - `lux_ai/serapan/gerbang_1m.py` sebelum menyentuh serapan
@@ -46,15 +47,16 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
 
 ## POSISI HARI INI (2026-07-28, akhir sesi 20)
 
-- Kontinuitas: STATE v14 + PROMPT v13. Commit kode terakhir `ac342940`.
+- Kontinuitas: STATE v15 + PROMPT v14. Commit kode terakhir `ac342940`.
 - Jumlah uji **90, terverifikasi** (CI run 30342486568, `kode_keluar: 0`).
-- KC-6 diputus (ADR-A004), penerapannya ada dalam kode (`gerbang_1m.py`,
-  enam klausa, teruji positif dan negatif), dan LAJUNYA kini diketahui:
-  0,3199% pada bulan awal, 0,0007% pada bulan kendali, dari 931.527 bucket.
+- KC-6 diputus (ADR-A004), diterapkan dalam kode (`gerbang_1m.py`, enam klausa,
+  teruji positif dan negatif), lajunya diketahui (0,3199% bulan awal, 0,0007%
+  bulan kendali, dari 931.527 bucket), dan amandemennya sudah tercatat di
+  `decisions/ADR-A002.md`.
 - Papan skor: 24 TEPAT, 11 MELESET, 1 MELESET SEPARUH, 1 TIDAK TERADJUDIKASI,
   6 MENUNGGU (R-7, R-19, R-20, R-28, R-36, R-37).
-- Utang tersisa yang aktif: 19 (`semesta_bulan_1m.json` belum dibaca), 22
-  (catatan silang di ADR-A002), 24 (gerbang belum melihat data sungguhan).
+- Utang aktif tinggal **19** (`semesta_bulan_1m.json` belum dibaca) dan **24**
+  (gerbang belum melihat data sungguhan).
 
 ## PEKERJAAN BERIKUTNYA, BERURUTAN
 
@@ -65,8 +67,8 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
    akhir_sejati, satuan stempel, hasil gerbang), parquet sebagai aset rilis,
    karantina 7 hari. Mengadjudikasi R-7, R-19, R-20, R-36, R-37 dan melunasi
    utang 24. Tulis ramalan SEBELUM run; patuhi aturan 26, 27, dan 28.
-2. **Utang murah sambil menunggu run**: utang 22 (catatan silang di
-   `ADR-A002.md`), utang 19 (`reports/semesta_bulan_1m.json`).
+2. **Utang 19 sambil menunggu run**: ringkas `reports/semesta_bulan_1m.json` di
+   runner, jangan dibaca utuh.
 3. **Paralel, boleh sekarang (aturan 3)**: ADR-A003 taksonomi rezim; juri T4
    dengan biaya sejak hari pertama (fee taker/maker terpisah, funding tiap
    jadwal, slippage selalu merugikan); lapisan validasi (uji bulanan berpasangan
@@ -77,9 +79,9 @@ Adjudikasi riset tetap TERKUNCI sampai manifes semesta penuh terverifikasi.
 ## PENOMORAN BERIKUTNYA
 
 ADR-A003 (dicadangkan) dan ADR-A005 (bila perlu). Hipotesis pertama H-A001
-(belum ada). Jurnal berikutnya `journal/2026-07-28-21.md`. STATE berikutnya v15.
-PROMPT berikutnya v14. Ramalan berikutnya R-44. N_percobaan = 0. Aturan terakhir
-28. Kelas cacat terakhir KC-6. Utang terakhir 24.
+(belum ada). Jurnal berikutnya `journal/2026-07-28-21.md`. STATE berikutnya v16.
+PROMPT berikutnya v15. Ramalan berikutnya R-44. N_percobaan = 0. Aturan terakhir
+29. Kelas cacat terakhir KC-6. Utang terakhir 24.
 
 ## KEBIASAAN YANG MENYELAMATKAN RISET INI
 
@@ -92,6 +94,10 @@ PROMPT berikutnya v14. Ramalan berikutnya R-44. N_percobaan = 0. Aturan terakhir
 - Hitung ulang setiap angka ringkasan baris demi baris (aturan 21).
 - Setiap pengukuran sebab wajib memuat medan yang bisa MENGGUGURKAN hipotesis
   yang dipercaya (aturan 24); parameter cakupannya dipatok di muka (aturan 25).
+- Amandemen ADR ditulis sebagai bagian terpisah, teks lama tidak dihapus
+  (aturan 29).
+- Bila dua berkas kontinuitas sempat tidak sinkron, catat ketidakcocokannya
+  terbuka di jurnal alih-alih membiarkannya diam-diam.
 - Pisahkan fakta dari asumsi. Tanpa bukti berkas atau alat, tulis "Ini
   memerlukan verifikasi."
 - "lanjut" dari operator berarti teruskan tanpa konfirmasi.

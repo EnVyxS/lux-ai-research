@@ -1,4 +1,4 @@
-# STATE — versi 14
+# STATE — versi 15
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
 
@@ -62,6 +62,9 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
 28. **[v14]** Ekstrapolasi cacah dari sampel bulan AWAL ke bulan lain dilarang
     tanpa menyatakan bahwa bulan awal PARSIAL dan mengoreksinya. R-42 meleset
     46% justru karena mengalikan rerata bulan parsial dengan jumlah bulan penuh.
+29. **[v15]** Bila sebuah ADR diamandemen, teks lama TIDAK dihapus. Amandemen
+    ditulis sebagai bagian terpisah bernomor, dan penunjuk silang dipasang di
+    kepala berkas DAN di kepala bagian yang diamandemen.
 
 ## Kelas cacat
 
@@ -85,7 +88,8 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
    - Tidak ada N yang aman untuk "buang N bulan pertama": pada N = 6, DOGEUSDT
      masih 202 dan BTSUSDT masih 8.
    - **Diselesaikan oleh ADR-A004**, yang kini ADA DALAM KODE:
-     `lux_ai/serapan/gerbang_1m.py`.
+     `lux_ai/serapan/gerbang_1m.py`, dan tercatat sebagai Amandemen A-1 di
+     `decisions/ADR-A002.md`.
    - BELUM terjawab: mana yang benar, 1m atau 5m/15m terbitan. Ini memerlukan
      verifikasi dari sumber independen yang tidak kami punya.
 
@@ -161,8 +165,11 @@ dihitung terpisah dan ketiganya masih menunggu.
 ## Daftar ADR
 
 - ADR-A001 — aturan dasar riset. DITERIMA.
-- ADR-A002 — serapan data arsip. DITERIMA; **§3 DIAMANDEMEN oleh ADR-A004**:
-  kesamaan dengan 5m/15m terbitan bukan lagi gerbang, melainkan diagnostik.
+- ADR-A002 — serapan data arsip. DITERIMA; **§3 DIAMANDEMEN oleh ADR-A004**,
+  tercatat sebagai bagian "Amandemen A-1" di dalam berkasnya sendiri (commit
+  `4995940c7aeccf303900c19afb3320029b04b113`, blob
+  `3017056456087297e0a83bacbc0d12e7d8e66d36`): kesamaan dengan 5m/15m terbitan
+  bukan lagi gerbang, melainkan diagnostik.
 - ADR-A003 — taksonomi rezim/klasifikasi. BELUM ADA.
 - ADR-A004 — kebijakan KC-6. **DITERIMA 2026-07-28.** 1m satu-satunya sumber
   kebenaran; gerbang mengikat = integritas struktural deret 1m; 5m/15m terbitan
@@ -186,7 +193,7 @@ data arsip sungguhan (utang 24).
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI. Survei semesta SELESAI. KC-6 terukur, diputus (ADR-A004), dan lajunya diketahui. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
+| T1 Serapan | Probe SELESAI. Survei semesta SELESAI. KC-6 terukur, diputus (ADR-A004), lajunya diketahui, dan amandemennya tercatat di ADR-A002. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -249,13 +256,18 @@ sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 16. ~~ADR-A004~~ DIBAYAR: diterima 2026-07-28.
 17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 90 terverifikasi.
 18. ~~Jurnal 08 dan 09 belum dibaca ulang dari `main`~~ DIBAYAR.
-19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca.
+19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca. Jangan
+    dibaca utuh; ringkas di runner seperti pola `penyebut_kc6.py`.
 20. ~~Sejauh mana KC-6 bertahan~~ DIBAYAR: 84 simbol-bulan (jurnal 16).
 21. ~~Penyebut `rentang_kc6.json`~~ DIBAYAR: 790.983 awal, 140.544 kendali,
     931.527 total (jurnal 20).
-22. `decisions/ADR-A002.md` belum diberi catatan silang bahwa §3-nya diamandemen
-    ADR-A004.
+22. ~~Catatan silang amandemen §3 di `decisions/ADR-A002.md`~~ DIBAYAR: commit
+    `4995940c`, bagian Amandemen A-1 + penunjuk di kepala berkas dan kepala §3;
+    berkas sudah dibaca ulang dari `main` dan ekornya hadir.
 23. ~~Gerbang integritas 1m belum ada dalam kode~~ DIBAYAR: `gerbang_1m.py`.
 24. `gerbang_1m` belum pernah melihat data arsip sungguhan dan belum dipanggil
     jalur serapan mana pun. Sampai itu terjadi, kalimat "gerbang integritas
     berlaku atas 21.789 simbol-bulan" dilarang ditulis.
+
+Utang AKTIF yang tersisa dan bisa dikerjakan sekarang: **19** dan **24**.
+Utang 1-5, 7, dan 11 menunggu tahap lain.

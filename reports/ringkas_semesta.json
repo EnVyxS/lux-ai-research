@@ -2,10 +2,18 @@
   "bentuk_tak_dikenali": false,
   "bukan_bukti": true,
   "byte_sumber": 18884,
+  "cacah_kunci_ditolak_pola": 3,
   "cacah_nilai_bukan_angka": 0,
-  "catatan_metode": "Dua jalur: peta simbol->daftar bulan, atau peta simbol->cacah bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci diterima sebagai simbol hanya bila berpola simbol DAN nilainya cocok salah satu jalur. Bila tak ada yang cocok, laporan menandai bentuk_tak_dikenali, bukan menebak (aturan 16).",
+  "catatan_metode": "Dua jalur: peta simbol->daftar bulan, atau peta simbol->cacah bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci yang ditolak POLA_SIMBOL padahal nilainya angka dihitung terpisah, tidak dibuang diam-diam (jurnal 24). Bila tak ada jalur yang cocok, laporan menandai bentuk_tak_dikenali, bukan menebak.",
+  "contoh_kunci_ditolak": [
+    "\u5e01\u5b89\u4eba\u751fUSDT",
+    "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+    "\u9f99\u867eUSDT"
+  ],
   "jalur": "cacah_bulan",
+  "jumlah_diterima_dan_ditolak": 937,
   "nama": "ringkas_semesta",
+  "panjang_nama_terpanjang": 16,
   "ringkas_cacah": {
     "cacah_maksimum": 78,
     "cacah_minimum": 1,
@@ -29,9 +37,9 @@
     "status": "MENGUKUR",
     "total_berkas_bulan": 21770
   },
-  "sidik_data": "7d287ab615f7f4af43c26aaaead92d2c31df3de0ba3ba6ac6c148c6d27d4e60e",
-  "sidik_kode": "22bdbae7715b9b5ae81abdf24532444c640114d39b1a9e3fd7047a4bee986784",
+  "sidik_data": "ced89c146afab4c8cbdb077b9c073e40efd3ab77cbf9838f21a884897fd25821",
+  "sidik_kode": "4d3820fbfd37c817ba031cc44d7cb991c2f21760d126e3672d428914aa30db2c",
   "status": "MENGUKUR",
   "sumber": "reports/semesta_bulan_1m.json",
-  "waktu_utc": "2026-07-28T09:23:59Z"
+  "waktu_utc": "2026-07-28T09:34:39Z"
 }

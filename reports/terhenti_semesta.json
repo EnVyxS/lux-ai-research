@@ -1,0 +1,36 @@
+{
+  "ambang_survei": "2026-04",
+  "ambang_taksonomi": "2026-05",
+  "bukan_bukti": true,
+  "bulan_tutup_terakhir": "2026-06",
+  "cacah_hanya_survei": 0,
+  "cacah_hanya_taksonomi": 1,
+  "cacah_per_bulan_terakhir_ekor": {
+    "2026-03": 1,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 808
+  },
+  "cacah_terhenti_survei": 128,
+  "cacah_terhenti_taksonomi": 129,
+  "hanya_survei": [],
+  "hanya_taksonomi": [
+    "SXPUSDT"
+  ],
+  "jeda_mati_bulan": 2,
+  "penyebut": {
+    "cacah_simbol": 937,
+    "entri_dibaca": 937
+  },
+  "rincian_selisih": [
+    {
+      "bulan_terakhir": "2026-05",
+      "simbol": "SXPUSDT"
+    }
+  ],
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "f4fe76754a9c7cba0f5993dac38f5b63dc28d27f451df5a90536ee405c5e54cd",
+  "status": "TERUKUR",
+  "sumber": "reports/semesta_rentang.json",
+  "sumber_byte": 110662
+}

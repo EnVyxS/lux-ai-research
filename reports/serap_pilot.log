@@ -1,0 +1,51 @@
+{
+  "bukan_bukti": false,
+  "byte_parquet_total": 9762433,
+  "byte_zip_total": 8034539,
+  "cacah_gagal_checksum": 0,
+  "cacah_gagal_unduh": 0,
+  "cacah_simbol_bulan_dengan_baris_dibuang": 0,
+  "cakupan_disampel": [
+    "0GUSDT:2025-09",
+    "0GUSDT:2026-01",
+    "1000000BOBUSDT:2025-06",
+    "1000000BOBUSDT:2025-12",
+    "1000000MOGUSDT:2024-11",
+    "1000000MOGUSDT:2025-08"
+  ],
+  "catatan_bukan_bukti": "manifes serapan adalah artefak mengikat, bukan diagnostik; gerbangnya boleh menjatuhkan simbol-bulan",
+  "catatan_funding": "pilot tidak mengambil funding; funding_ada sengaja null",
+  "catatan_rentang": "kesimpulan hanya berlaku untuk simbol-bulan pada cakupan_disampel, bukan untuk 19.598 bulan perpetual_usdt",
+  "gerbang": {
+    "baris_diperiksa": 223875,
+    "contoh_gagal": [],
+    "pelanggaran_per_klausa": {
+      "deret_tidak_kosong": 0,
+      "jarak_60_detik": 0,
+      "satuan_milidetik": 0,
+      "selaras_menit": 0,
+      "tanpa_duplikat": 0,
+      "tanpa_menit_hilang": 0
+    },
+    "persen_lolos": 100.0,
+    "simbol_bulan_dinilai": 6,
+    "simbol_bulan_gagal": 0,
+    "simbol_bulan_lolos": 6,
+    "slot_diperiksa": 223875
+  },
+  "jenis_instrumen_unik": [
+    "perpetual_usdt"
+  ],
+  "jumlah_baris": 223875,
+  "jumlah_baris_dibuang": 0,
+  "nisbah_parquet_per_zip": 1.2151,
+  "penyebut": {
+    "simbol_bulan_diminta": 6,
+    "simbol_bulan_terunduh": 6
+  },
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "f6a0f86926873f2a9c57b6cc1cfa7eadf67fc2f84210dc0e359cb55d5c1324b8",
+  "status": "TERUKUR",
+  "sumber_rentang": "reports/semesta_rentang.json",
+  "waktu_utc": "2026-07-28T10:59:07Z"
+}

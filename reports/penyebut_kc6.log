@@ -1,0 +1,38 @@
+{
+  "nama": "penyebut_kc6",
+  "bukan_bukti": true,
+  "waktu_utc": "2026-07-28T08:28:09Z",
+  "sidik_kode": "88a8ed735ba69311095532c4fff1cca38acb05c6f0a864bdd22a43b47e6e7132",
+  "sidik_data": "7f389bedfd4fa0f39f22455824ae1f8d673ba86c63e494d0a2d05389073a994c",
+  "sumber": "reports/rentang_kc6.json",
+  "byte_sumber": 177608,
+  "catatan_metode": "Simpul dikumpulkan rekursif dari setiap dict yang punya medan bucket_dibandingkan. Kelompok awal/kendali disimpulkan dari penanda teks di laporan sumber, bukan dari medan khusus; karena itu namanya kelompok_dari_penanda_teks (aturan 16).",
+  "ringkas": {
+    "per_kelompok": {
+      "awal": {
+        "simpul": 144,
+        "bucket_dibandingkan": 790983,
+        "bucket_ohlc_beda": 2532,
+        "bucket_open_beda": 2530,
+        "laju_open_beda_persen": 0.3199,
+        "laju_ohlc_beda_persen": 0.3201
+      },
+      "kendali": {
+        "simpul": 24,
+        "bucket_dibandingkan": 140544,
+        "bucket_ohlc_beda": 1,
+        "bucket_open_beda": 1,
+        "laju_open_beda_persen": 0.0007,
+        "laju_ohlc_beda_persen": 0.0007
+      }
+    },
+    "total": {
+      "simpul": 168,
+      "bucket_dibandingkan": 931527,
+      "bucket_ohlc_beda": 2533,
+      "bucket_open_beda": 2531,
+      "laju_open_beda_persen": 0.2717,
+      "laju_ohlc_beda_persen": 0.2719
+    }
+  }
+}

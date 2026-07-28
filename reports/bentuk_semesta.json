@@ -1,0 +1,36 @@
+{
+  "bukan_bukti": true,
+  "byte_sumber": 18884,
+  "catatan_metode": "Hanya kerangka: tipe akar, kunci tingkat atas (maks 40), tipe dan cacah elemen tiap nilai, serta satu cabang pertama terpotong 200 aksara. Tidak ada klaim tentang isi data.",
+  "kerangka": {
+    "cabang_pertama": {
+      "contoh": "10",
+      "jejak": [
+        "bulan_per_simbol",
+        "0GUSDT"
+      ],
+      "tipe": "angka"
+    },
+    "cacah_elemen_nilai": {
+      "bulan_per_simbol": 937
+    },
+    "cacah_kunci_tingkat_atas": 2,
+    "kunci_dipotong": false,
+    "kunci_tingkat_atas": [
+      "bulan_per_simbol",
+      "waktu_utc"
+    ],
+    "status": "MENGUKUR",
+    "tipe_akar": "objek",
+    "tipe_nilai": {
+      "bulan_per_simbol": "objek",
+      "waktu_utc": "teks"
+    }
+  },
+  "nama": "bentuk_semesta",
+  "sidik_data": "f435f4706fbb1be8421a0028088acae25a7311fdb31bd6cbfb391d95ef003811",
+  "sidik_kode": "dd43e21e0d2ab9cc1abe80ca96c10f680ac03f806b70aa26c88e2b869292d501",
+  "status": "MENGUKUR",
+  "sumber": "reports/semesta_bulan_1m.json",
+  "waktu_utc": "2026-07-28T09:09:38Z"
+}

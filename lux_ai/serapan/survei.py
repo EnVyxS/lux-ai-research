@@ -1,6 +1,6 @@
 """Survei semesta arsip: rentang hidup tiap simbol dan sifat format berkas.
 
-Satu run membayar empat utang verifikasi sekaligus, dan tiap medan dinamai
+Satu run membayar beberapa utang verifikasi sekaligus, dan tiap medan dinamai
 menurut apa yang benar-benar diukurnya (aturan 16).
 
 1. Rentang bulan 1m tiap simbol dari indeks arsip.
@@ -10,10 +10,14 @@ menurut apa yang benar-benar diukurnya (aturan 16).
 3. Stempel waktu bar terakhir simbol yang sudah mati, diukur dari isi berkas.
 4. Bulan persis arsip berpindah dari format tanpa header ke format berheader,
    diukur bulan demi bulan tanpa mengandaikan peralihannya monoton.
+5. Satuan stempel waktu tiap bulan yang diunduh. Arsip Binance pernah berpindah
+   dari milidetik ke mikrodetik, dan kode yang mengandaikan satu satuan akan
+   salah menyusun ember waktu tanpa memberi tanda apa pun.
 
-Sekalian diukur PANJANG DIGIT stempel waktu tiap bulan yang diunduh. Arsip
-Binance pernah berpindah dari milidetik ke mikrodetik, dan kode yang mengandaikan
-satu satuan akan salah menyusun ember waktu tanpa memberi tanda apa pun.
+Rentang pemeriksaan format kini MENJANGKAU SELURUH SEJARAH (2020-01..2026-06).
+Versi sebelumnya berhenti di 2023-12, sehingga kesimpulannya tidak boleh
+diterapkan pada berkas 2024-2026 (aturan 20). Justru berkas barulah yang paling
+berisiko memakai mikrodetik, jadi rentang itu wajib disampel, bukan diandaikan.
 """
 from __future__ import annotations
 
@@ -33,7 +37,7 @@ BATAS_R8 = "2026-01"
 SIMBOL_AKHIR = ["SRMUSDT", "COCOSUSDT", "BTSUSDT"]
 SIMBOL_HEADER = ["BTCUSDT", "ETHUSDT", "LINKUSDT"]
 AWAL_HEADER = "2020-01"
-AKHIR_HEADER = "2023-12"
+AKHIR_HEADER = "2026-06"
 
 
 def sidik_kode() -> str:
@@ -113,6 +117,28 @@ def satuan_stempel(nilai: int) -> str:
     return "tidak_dikenali"
 
 
+def ringkas_satuan(peta: dict) -> dict:
+    """Ringkas peta {bulan: satuan} menjadi daftar satuan yang benar-benar ada.
+
+    `seragam` hanya benar bila SEMUA bulan yang disampel memakai satu satuan.
+    Peta kosong berarti tidak ada yang diukur, jadi `seragam` False: tidak
+    mengukur apa pun tidak boleh terbaca sebagai bukti keseragaman (aturan 18).
+    Bulan pertama yang satuannya berbeda dari bulan paling awal dilaporkan agar
+    peralihan satuan, bila ada, bisa ditunjuk tanggalnya.
+    """
+    urut = sorted(peta)
+    if not urut:
+        return {"bulan_disampel": 0, "satuan_unik": [], "seragam": False, "bulan_satuan_berubah": None}
+    pertama = peta[urut[0]]
+    berubah = next((b for b in urut if peta[b] != pertama), None)
+    return {
+        "bulan_disampel": len(urut),
+        "satuan_unik": sorted(set(peta.values())),
+        "seragam": len(set(peta.values())) == 1,
+        "bulan_satuan_berubah": berubah,
+    }
+
+
 def iso_dari_stempel(nilai: int) -> str:
     satuan = satuan_stempel(nilai)
     if satuan == "mikrodetik":
@@ -180,21 +206,27 @@ def ukur_bar_terakhir(simbol: str, bulan: str) -> dict:
 
 
 def ukur_header(simbol: str, bulan_tersedia: list) -> dict:
-    """Ada tidaknya header, bulan demi bulan, tanpa mengandaikan monoton."""
+    """Ada tidaknya header dan satuan stempel, bulan demi bulan, tanpa andaian."""
     diminta = set(bulan_dalam_rentang(AWAL_HEADER, AKHIR_HEADER))
     peta = {}
     digit = {}
+    satuan = {}
     for bulan in sorted(diminta & set(bulan_tersedia)):
         data = arsip.unduh_terverifikasi(arsip.url_klines(simbol, "1m", bulan))
         baris = klines.baris_pertama(data)
         peta[bulan] = klines.punya_header(baris)
         df, _ = klines.rapikan(klines.baca_zip(data, teks=True))
-        digit[bulan] = len(str(int(df["open_time"].iloc[0])))
+        stempel = int(df["open_time"].iloc[0])
+        digit[bulan] = len(str(stempel))
+        satuan[bulan] = satuan_stempel(stempel)
         _progres(tahap="header", simbol=simbol, terakhir=bulan)
     hasil = ringkas_header(peta)
     hasil["simbol"] = simbol
+    hasil["rentang_disampel"] = f"{AWAL_HEADER}..{AKHIR_HEADER}"
+    hasil["ringkas_satuan"] = ringkas_satuan(satuan)
     hasil["berheader_per_bulan"] = peta
     hasil["panjang_digit_stempel_per_bulan"] = digit
+    hasil["satuan_stempel_per_bulan"] = satuan
     return hasil
 
 
@@ -218,6 +250,14 @@ def jalankan() -> int:
             bulan = arsip.bulan_tersedia(s, "1m")
             header.append(ukur_header(s, bulan))
 
+    semua_satuan = {}
+    for h in header:
+        for bulan, sat in h["satuan_stempel_per_bulan"].items():
+            semua_satuan[f"{h['simbol']}:{bulan}"] = sat
+    for a in akhir:
+        semua_satuan[f"{a['simbol']}:{a['bulan']}"] = a["satuan_stempel"]
+    gabungan = ringkas_satuan(semua_satuan)
+
     laporan = {
         "nama": "survei_semesta",
         "waktu_utc": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -233,15 +273,19 @@ def jalankan() -> int:
         "batas_r8": BATAS_R8,
         "cacah_bulan_terakhir_lebih_tua_dari_batas_r8": cacah_lebih_tua(rentang, BATAS_R8),
         "bulan_pertama_paling_awal": min(r["bulan_pertama"] for r in rentang.values()),
+        "rentang_format_disampel": f"{AWAL_HEADER}..{AKHIR_HEADER}",
+        "satuan_stempel_gabungan": gabungan,
         "bar_terakhir_simbol_mati": akhir,
         "peralihan_header": header,
         "catatan": "cacah_simbol_terhenti mengukur jarak bulan terakhir simbol terhadap bulan tutup semesta, BUKAN kehadiran di indeks arsip",
+        "catatan_rentang": "sifat format dan satuan stempel hanya terbukti untuk berkas yang benar-benar disampel pada rentang_format_disampel dan untuk bulan bar_terakhir_simbol_mati",
     }
     _tulis(LAPORAN, laporan)
     _progres(tahap="selesai", cacah_simbol=len(rentang))
     print(json.dumps({k: v for k, v in laporan.items() if k not in ("peralihan_header",)}, indent=2, ensure_ascii=False))
+    besar = ("berheader_per_bulan", "panjang_digit_stempel_per_bulan", "satuan_stempel_per_bulan")
     for h in header:
-        print(json.dumps({k: v for k, v in h.items() if k != "berheader_per_bulan"}, indent=2, ensure_ascii=False))
+        print(json.dumps({k: v for k, v in h.items() if k not in besar}, indent=2, ensure_ascii=False))
     return 0
 
 

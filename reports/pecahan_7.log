@@ -114,7 +114,7 @@
         "jalur": "data/rilis/pecahan_7.part01.tar",
         "melebihi_batas": false,
         "nama": "pecahan_7.part01.tar",
-        "sha256": "b87a5de0383a614567a74a8130af5552a4b09fa27f2e05917b4a997376df55ba",
+        "sha256": "cb39e1fb829abbc93c3f592cc5b81ead21658460918032a04fa820228ea62a8e",
         "taksiran_terlampaui": false
       },
       {
@@ -125,7 +125,7 @@
         "jalur": "data/rilis/pecahan_7.part02.tar",
         "melebihi_batas": false,
         "nama": "pecahan_7.part02.tar",
-        "sha256": "d33a4305aba53b762668f7b1f2289a9ca9c4082106f2896c0390adb4ebfa0c8c",
+        "sha256": "a60c045c28b592cb1fcb5f378b9fa63ae403bcf829243689901236ad748086d2",
         "taksiran_terlampaui": false
       },
       {
@@ -136,7 +136,7 @@
         "jalur": "data/rilis/pecahan_7.part03.tar",
         "melebihi_batas": false,
         "nama": "pecahan_7.part03.tar",
-        "sha256": "83e34bb3acd0f26415a592bc41d46fb0c0067b5531efc7a5c0e6ee2cac443280",
+        "sha256": "be4a6d293878006a2e117d1b04faef07f551799051a7d0f5185f47a10deec889",
         "taksiran_terlampaui": false
       }
     ],
@@ -165,7 +165,7 @@
     "contoh": []
   },
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "32f427b362ccb5ef97dfa38cd42c5e75576ac5baf5ffbf7de0c19f8b96b2cdd8",
+  "sidik_kode": "dff5d33d98abc65d0fac9ebd55393c235358ed34e03a51dddeb6ea8d93bd7a63",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "verifikasi_rilis": {
@@ -179,6 +179,6 @@
     "nama_sha_tak_cocok": [],
     "sah": true
   },
-  "versi_pecahan": 4,
-  "waktu_utc": "2026-07-28T18:32:36Z"
+  "versi_pecahan": 5,
+  "waktu_utc": "2026-07-28T19:44:36Z"
 }

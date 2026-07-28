@@ -1,4 +1,4 @@
-# STATE — versi 7
+# STATE — versi 8
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
 
@@ -56,6 +56,10 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
     total, persentase) wajib dihitung ulang dari barisnya saat berkas diperbarui.
     Papan skor v6 menulis "tepat 8" padahal barisnya 7. Angka ringkasan yang
     tidak pernah dihitung ulang adalah klaim, sama seperti angka warisan.
+22. **[v8]** `sidik_kode` wajib mencakup SELURUH berkas yang ikut menentukan isi
+    laporan, termasuk modul yang dipanggil dari modul lain. Sidik yang tidak
+    mencakup ketergantungannya memberi rasa aman palsu: laporan bisa berubah
+    tanpa sidiknya berubah.
 
 ## Kelas cacat
 
@@ -70,9 +74,11 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
    tanpa header s.d. 2021-12, berheader sejak 2022-01, monoton sepanjang 78
    bulan untuk tiga simbol. Penangkalnya: deteksi header dari ISI baris pertama.
 5. **KC-5 (repo ini)** — label yang mengukur hal lain daripada namanya.
-   `delisting_klaim_terbukti` di `probe.py` hanya mengukur kehadiran di indeks.
-   Ukuran benar ada di `survei.terhenti`; medan lama BELUM diganti. Bentuk
-   pikiran yang sama membuat ramalan R-8 dan R-14 saya meleset jauh.
+   Medan `delisting_klaim_terbukti` di `probe.py` hanya mengukur kehadiran di
+   indeks arsip. DIPERBAIKI 2026-07-28: medan itu dihapus dan diganti
+   `nilai_klaim_delisting` yang memakai `survei.terhenti`, dengan empat uji
+   termasuk kasus negatif FTTUSDT. Bentuk pikiran yang sama membuat ramalan R-8
+   dan R-14 saya meleset jauh; kodenya sembuh, kebiasaannya tetap dijaga.
 
 ## Papan skor hipotesis
 
@@ -86,7 +92,7 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | P-2 | Menyalakan detektor non-trendline tidak memperbaiki ekspektasi | menunggu |
 | P-3 | Rasio isi rendah didominasi gerbang `rr1 < min_rr` dan `htf_score = 3` | menunggu |
 | R-1 | Indeks arsip memuat lebih dari 450 simbol | TEPAT: 937 |
-| R-2 | Minimal 3 dari 4 klaim delisting terbukti ada di indeks | TIDAK TERADJUDIKASI (KC-5) |
+| R-2 | Minimal 3 dari 4 klaim delisting terbukti | TEPAT: 3 dari 4; FTTUSDT terbantah |
 | R-3 | Simbol-bulan 1m likuid 1,5-4 MB zip; parquet lebih kecil dari zip | MELESET SEPARUH: parquet 1,51x lebih besar |
 | R-4 | Estimasi total lebih besar dari 40-60 GB | MELESET: 25,86 GB zip / 39,17 GB parquet |
 | R-5 | Berkas terbaru berheader, yang lama tidak | TEPAT |
@@ -100,23 +106,25 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-13 | Peralihan format seragam dan jatuh sebelum 2022-04 | TEPAT: 2022-01 |
 | R-14 | Lebih dari 300 simbol berstatus terhenti | MELESET: 128 |
 | R-15 | Peralihan header monoton dan sama untuk ketiga simbol | TEPAT |
-| R-16 | Seluruh bulan yang diperiksa memakai stempel milidetik | TEPAT (kini 2020-01..2026-06, 237 bulan) |
+| R-16 | Seluruh bulan yang diperiksa memakai stempel milidetik | TEPAT (2020-01..2026-06, 237 bulan) |
 | R-17 | Tiga simbol mati berhenti pada tanggal UTC yang sama | TEPAT: 2024-05-28 |
 | R-18 | Bulan 2024-06..2026-06 juga milidetik 13 digit | TEPAT: seragam, `bulan_satuan_berubah` null |
 | R-19 | Peralihan header 2022-01 berlaku untuk SELURUH simbol | menunggu (baru 3 simbol) |
 | R-20 | Serapan penuh: 0 berkas non-milidetik dan 0 pelanggaran batas header | menunggu |
+| R-21 | Probe baru: terhenti SRM/COCOS/BTS, FTT masih terbit, acuan 2026-06 | TEPAT: keempat medan cocok |
+| R-22 | Angka infrastruktur terulang ketiga kali persis | TEPAT: 937, 21.789, 1.186.859, 1.797.488 |
 
 Cacah dihitung ulang baris demi baris (aturan 21):
 
-- TEPAT 9: R-1, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18.
+- TEPAT 12: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18, R-21, R-22.
 - MELESET 5: R-4, R-6, R-8, R-10, R-14.
 - MELESET SEPARUH 1: R-3.
-- TIDAK TERADJUDIKASI 1: R-2.
+- TIDAK TERADJUDIKASI 0.
 - MENUNGGU 4: R-7, R-12, R-19, R-20.
 
-Jumlah 9+5+1+1+4 = 20, sama dengan cacah baris R-1..R-20. Prediksi P-1..P-3
-dihitung terpisah dan ketiganya masih menunggu. STATE v6 menulis "tepat 8"
-padahal barisnya 7 saat itu; koreksinya ada di `journal/2026-07-28-08.md`.
+Jumlah 12+5+1+0+4 = 22, sama dengan cacah baris R-1..R-22. P-1..P-3 dihitung
+terpisah dan ketiganya masih menunggu. Tidak ada lagi baris TIDAK
+TERADJUDIKASI: R-2 lunas setelah alat ukurnya dibetulkan.
 
 ## Daftar ADR
 
@@ -130,7 +138,7 @@ padahal barisnya 7 saat itu; koreksinya ada di `journal/2026-07-28-08.md`.
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI (terulang). Gerbang resample LULUS. Survei semesta SELESAI dua kali, rentang penuh 2020-01..2026-06. Serapan penuh BELUM dibangun |
+| T1 Serapan | Probe SELESAI (tiga run). Gerbang resample LULUS. Survei semesta SELESAI dua kali, rentang penuh 2020-01..2026-06. Serapan penuh BELUM dibangun |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -142,24 +150,26 @@ padahal barisnya 7 saat itu; koreksinya ada di `journal/2026-07-28-08.md`.
 |---|---|---|
 | Simbol di indeks arsip | 937 (tiga run) | `probe_serapan.json`, `survei_semesta.json` |
 | Simbol punya bulan 1m | 937, gagal listing 0 | `survei_semesta.json` |
-| Berkas bulanan 1m | 21.789 (dua run) | `probe_serapan.json` |
+| Berkas bulanan 1m | 21.789 (tiga run) | `probe_serapan.json` |
 | Rentang arsip | 2020-01 s.d. 2026-06 | `survei_semesta.json` |
 | Simbol terhenti (jeda ≥ 2 bulan) | 128 dari 937 (13,7%) | idem |
 | Simbol masih terbit | 809 | idem |
 | Bulan terakhir lebih tua dari 2026-01 | 121 | idem |
-| Peralihan format | tanpa header s.d. 2021-12, berheader sejak 2022-01, monoton, 3 simbol × 78 bulan | idem |
+| Klaim delisting operator | 3 dari 4 terhenti (SRM, COCOS, BTS); FTTUSDT masih terbit sampai 2026-06 | `probe_serapan.json` run 30336009153 |
+| Peralihan format | tanpa header s.d. 2021-12, berheader sejak 2022-01, monoton, 3 simbol × 78 bulan | `survei_semesta.json` |
 | Satuan stempel | milidetik pada 237 bulan yang disampel 2020-01..2026-06, seragam | idem |
 | Bar terakhir SRM / COCOS / BTS | 2024-05-28 07:10 / 07:16 / 07:09 UTC | idem |
-| Rerata byte zip / parquet | 1.186.859 / 1.797.488 | `probe_serapan.json` |
+| Rerata byte zip / parquet | 1.186.859 / 1.797.488 (tiga run) | `probe_serapan.json` |
 | Batas atas total zip / parquet | 25,86 GB / 39,17 GB | idem |
+| Baris bulan penuh likuid | 43.200; `baris_dibuang` 0 dan `celah_bukan_60_detik` 0 untuk 12 simbol | idem |
 | Bar 5m / 15m dibandingkan | 8.640 / 2.880 per simbol likuid, 0 beda pada 9 kolom | `uji_resample.json` |
 
 ## Jumlah uji
 
-42 uji tanpa jaringan (CI run 30334215015, commit `8ebe75c3`, `kode_keluar: 0`).
-`test_kontinuitas.py` 7, `test_serapan.py` 8, `test_resample.py` 11,
-`test_survei.py` 16. Sepuluh di antaranya menguji CARA MENGUKUR, bukan hasilnya.
-Belum ada uji numerik atas strategi.
+46 uji tanpa jaringan (CI run 30336075738, commit `7fdc81cc`, `kode_keluar: 0`).
+`test_kontinuitas.py` 7, `test_serapan.py` 12, `test_resample.py` 11,
+`test_survei.py` 16. Empat belas di antaranya menguji CARA MENGUKUR, bukan
+hasilnya. Belum ada uji numerik atas strategi.
 
 ## Utang verifikasi yang belum dibayar
 
@@ -178,6 +188,7 @@ Belum ada uji numerik atas strategi.
     seluruh semesta masih klaim (R-19).
 12. Gerbang resample baru menguji satu bulan berheader per simbol. Era tanpa
     header belum diuji resample-nya (R-12).
-13. `probe.py` masih memakai medan `delisting_klaim_terbukti` yang salah ukur.
+13. ~~Medan `delisting_klaim_terbukti` yang salah ukur~~ DIBAYAR: dihapus,
+    diganti pengukuran jarak bulan; run 30336009153 membuktikannya bekerja.
 14. ~~Satuan stempel 2024-06..2026-06~~ DIBAYAR: milidetik, 237 bulan disampel,
     `seragam: true`. Untuk 937 simbol penuh masih klaim (R-20).

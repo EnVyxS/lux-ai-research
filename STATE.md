@@ -1,4 +1,4 @@
-# STATE — versi 15
+# STATE — versi 16
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
 
@@ -65,6 +65,17 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
 29. **[v15]** Bila sebuah ADR diamandemen, teks lama TIDAK dihapus. Amandemen
     ditulis sebagai bagian terpisah bernomor, dan penunjuk silang dipasang di
     kepala berkas DAN di kepala bagian yang diamandemen.
+30. **[v16]** Setiap laporan diagnostik wajib memuat PENYEBUT-nya secara
+    eksplisit, dan bila penyebut itu nol, laporan wajib berstatus
+    `TIDAK MENGUKUR`. Ramalan atas medan penggugur DILARANG diadjudikasi TEPAT
+    bila penyebutnya nol; status yang benar adalah TIDAK TERADJUDIKASI.
+31. **[v16]** Setiap laporan wajib mencatat `sidik_data` sumbernya, dan setiap
+    perbandingan antar-run wajib menyebut apakah `sidik_data`-nya sama. Cacah
+    byte TIDAK cukup membuktikan dua pengukuran memakai masukan yang sama.
+32. **[v16]** Nama pasar TIDAK boleh dianggap ASCII. Setiap penyaring nama wajib
+    mencatat CACAH dan CONTOH yang ditolaknya; menolak tanpa mencatat dilarang.
+    Pada serapan, nama simbol wajib di-percent-encode saat menyusun URL arsip,
+    dan nama berkas keluaran wajib diamankan untuk sistem berkas.
 
 ## Kelas cacat
 
@@ -92,10 +103,38 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
      `decisions/ADR-A002.md`.
    - BELUM terjawab: mana yang benar, 1m atau 5m/15m terbitan. Ini memerlukan
      verifikasi dari sumber independen yang tidak kami punya.
+7. **KC-7 (repo ini)** — laporan yang tampak BERSIH padahal penyebutnya NOL.
+   `ringkas_semesta` pertama melaporkan duplikat 0, tidak terurut 0, di luar
+   rentang 0 — seluruhnya atas 0 simbol yang diperiksa. Nol pelanggaran atas nol
+   pengamatan bukan bukti kebersihan, melainkan bukti pengukuran tidak terjadi.
+   Lebih berbahaya daripada R-42 sebab arahnya menyanjung hipotesis.
+   Penangkalnya aturan 30.
+8. **KC-8 (repo ini)** — sumber bergerak, dikira tetap, karena hanya UKURANNYA
+   yang dicocokkan. `reports/semesta_bulan_1m.json` selalu 18.884 B pada empat
+   pembacaan, tetapi `sidik_data`-nya berbeda tiap kali (`fae1210f…`,
+   `f435f470…`, `7d287ab6…`, `ced89c14…`). Dugaan: medan `waktu_utc` di dalamnya
+   ditulis ulang berkala dengan stempel berpanjang tetap (H-A003, bertahan,
+   belum terbukti). Datanya sendiri tidak berubah: 934 dan 21.770 terulang persis
+   pada dua run bersidik berbeda. Penangkalnya aturan 31.
+9. **KC-9 (repo ini)** — penyaring ASCII-sentris membuang entitas SAH tanpa
+   jejak. `POLA_SIMBOL = [A-Z0-9_]{2,20}` membuang tiga pasar bernama huruf
+   Tionghoa (币安人生USDT, 我踏马来了USDT, 龙虾USDT) yang memikul 19 berkas-bulan.
+   Panjang bukan sebabnya: `panjang_nama_terpanjang` = 16. Penangkalnya
+   aturan 32. Akibat langsung ke serapan penuh dicatat pada utang 7.
 
 ## Papan skor hipotesis
 
-Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
+Hipotesis RISET: kosong. Selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
+
+Hipotesis INFRASTRUKTUR (bukan hipotesis riset, tidak masuk N_percobaan):
+
+| Kode | Isi | Status |
+|---|---|---|
+| H1 | Beda KC-6 dijelaskan celah menit | GUGUR (jurnal 14) |
+| H2 | Beda KC-6 bukan dari celah menit | bertahan |
+| H-A002a | Selisih 937−934 adalah ulah penyaring saya | **TERBUKTI** (934+3=937) |
+| H-A002b | Semesta memang kehilangan tiga simbol | **GUGUR** |
+| H-A003 | `semesta_bulan_1m.json` ditulis ulang berkala, isi data tetap | bertahan, belum terbukti |
 
 ## Papan skor prediksi
 
@@ -147,20 +186,32 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-41 | CI commit penyebut: tepat 90 uji, kode keluar 0, percobaan pertama | TEPAT: run 30342486568 |
 | R-42 | Penyebut total 84 simbol-bulan antara 550.000 dan 750.000 | MELESET: 931.527 |
 | R-43 | Laju open beda bulan awal antara 0,2% dan 0,8% | TEPAT: 0,3199% |
+| R-44 | `semesta_bulan_1m.json`: 937 simbol dan 21.789 entri | MELESET: 0 dan 0 (pengumpul tak mengenali skema) |
+| R-45 | Bila tidak tepat, selisih < 10 simbol dan < 218 entri | MELESET: selisih 100% |
+| R-46 | Bulan paling awal 2020-01, paling akhir 2026-06; akhir 2024-05 antara 3 dan 60 | MELESET: null; berkas tak memuat nama bulan |
+| R-47 | CI commit ringkas_semesta: tepat 93 uji, kode 0, percobaan pertama | TEPAT: run 30344455134 |
+| R-48 | Akar berkas objek, kunci tingkat atas ≤ 5 | TEPAT: objek, 2 kunci |
+| R-49 | Kerangka cukup menyusun ulang pengumpul tanpa run tambahan | TEPAT |
+| R-50 | `cacah_simbol` 937 dan total nilai 21.789 | MELESET: 934 dan 21.770 |
+| R-51 | Bila total tidak tepat, selisihnya di bawah 218 | TEPAT: selisih 19 |
+| R-52 | Cacah bulan terkecil 1; terbesar antara 72 dan 78 | TEPAT: 1 dan 78 |
+| R-53 | `cacah_kunci_ditolak_pola` = 3, ketiganya bernama > 20 aksara | MELESET SEPARUH: cacah 3 tepat, sebab salah (non-ASCII, terpanjang 16) |
+| R-54 | `cacah_simbol` + `cacah_kunci_ditolak_pola` = 937 | TEPAT: 934 + 3 |
+| R-55 | `sidik_data` berubah lagi sementara `byte_sumber` tetap 18.884 | TEPAT: `ced89c14…` |
 
 Cacah dihitung ulang baris demi baris (aturan 21):
 
-- TEPAT — 24 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
+- TEPAT — 31 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
   R-21, R-22, R-24, R-25, R-27, R-29, R-32, R-33, R-34, R-35, R-38, R-39, R-41,
-  R-43.
-- MELESET — 11 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26, R-30, R-31,
-  R-42.
-- MELESET SEPARUH — 1 baris: R-3.
+  R-43, R-47, R-48, R-49, R-51, R-52, R-54, R-55.
+- MELESET — 15 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26, R-30, R-31,
+  R-42, R-44, R-45, R-46, R-50.
+- MELESET SEPARUH — 2 baris: R-3, R-53.
 - TIDAK TERADJUDIKASI — 1 baris: R-40.
 - MENUNGGU — 6 baris: R-7, R-19, R-20, R-28, R-36, R-37.
 
-24 + 11 + 1 + 1 + 6 = 43, sama dengan cacah baris R-1 sampai R-43. P-1..P-3
-dihitung terpisah dan ketiganya masih menunggu.
+31 + 15 + 2 + 1 + 6 = 55, sama dengan cacah baris R-1 sampai R-55. P-1..P-3
+dihitung terpisah dan ketiganya masih menunggu. Ramalan berikutnya R-56.
 
 ## Daftar ADR
 
@@ -193,7 +244,7 @@ data arsip sungguhan (utang 24).
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI. Survei semesta SELESAI. KC-6 terukur, diputus (ADR-A004), lajunya diketahui, dan amandemennya tercatat di ADR-A002. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
+| T1 Serapan | Probe SELESAI. Survei semesta SELESAI dan kini TERINGKAS (utang 19 dibayar). KC-6 terukur, diputus (ADR-A004), lajunya diketahui, dan amandemennya tercatat di ADR-A002. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan, dan pemeriksaan KC-9 atas `arsip.py` |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -203,10 +254,12 @@ data arsip sungguhan (utang 24).
 
 | Besaran | Nilai | Sumber |
 |---|---|---|
-| Simbol di indeks arsip | 937 (tiga run) | `probe_serapan.json` |
-| Berkas bulanan 1m | 21.789 (tiga run) | idem |
+| Simbol di indeks arsip | 937 (empat run) | `probe_serapan.json`, `ringkas_semesta.json` |
+| — di antaranya bernama non-ASCII | 3 (币安人生USDT, 我踏马来了USDT, 龙虾USDT) | `ringkas_semesta.json` |
+| Berkas bulanan 1m | 21.789 (= 21.770 ASCII + 19 non-ASCII) | idem |
 | Rentang arsip | 2020-01 s.d. 2026-06 | `survei_semesta.json` |
-| Simbol terhenti / masih terbit | 128 / 809 | idem |
+| Bulan per simbol: terkecil / terbesar | 1 / 78 | `ringkas_semesta.json` |
+| Simbol terhenti / masih terbit | 128 / 809 | `survei_semesta.json` |
 | Klaim delisting operator | 3 dari 4 terhenti; FTTUSDT masih terbit | `probe_serapan.json` |
 | Peralihan format | tanpa header s.d. 2021-12; teruji 12 simbol | `uji_resample.json` |
 | Satuan stempel | milidetik, 237 bulan disampel, seragam | `survei_semesta.json` |
@@ -231,10 +284,16 @@ Catatan: `bucket_ohlc_beda` awal = 2.532, dua lebih banyak daripada `open` beda.
 Bulan ke-6 masih beda pada DOGEUSDT (202) dan BTSUSDT (8). Simbol bersih
 sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 
+`reports/ringkas_semesta.json` (run terakhir 2026-07-28T09:34:39Z, `sidik_kode`
+`4d3820fb…`, `sidik_data` `ced89c14…`, jalur `cacah_bulan`, status `MENGUKUR`):
+934 simbol diterima, 3 kunci ditolak pola, 0 nilai bukan angka,
+`jumlah_diterima_dan_ditolak` = 937, `panjang_nama_terpanjang` = 16.
+
 ## Jumlah uji
 
-**90, TERVERIFIKASI** — `reports/ci_terakhir.json`, run 30342486568, commit
-`ac342940`, `kode_keluar: 0`, `"90 tests collected in 0.37s"`.
+**96, TERVERIFIKASI** — `reports/ci_terakhir.json`, run 30347164329, commit
+`f270354ca8a5c3d585fcdef943123370b7702826`, `kode_keluar: 0`,
+`"96 tests collected in 0.36s"`.
 
 ## Utang verifikasi yang belum dibayar
 
@@ -244,7 +303,12 @@ sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 4. Klaim temuan N (kendala mengikat = kapasitas margin) belum diuji angkanya.
 5. Angka 0,3232R dan 0,306R warisan belum diverifikasi.
 6. ~~Ukuran ADR-A001~~ DIBAYAR.
-7. Percent-encoding simbol non-ASCII belum teruji.
+7. **Percent-encoding simbol non-ASCII belum teruji. NAIK PANGKAT jadi
+   penghalang serapan penuh (KC-9, aturan 32):** tiga pasar bernama huruf
+   Tionghoa dengan 19 berkas-bulan akan hilang tanpa suara bila `arsip.py`
+   menempelkan nama mentah ke URL, memakai nama simbol apa adanya sebagai nama
+   berkas parquet, atau memakai kunci manifes ASCII saja. Ketiga titik itu WAJIB
+   diperiksa sebelum serapan penuh dijalankan.
 8. ~~Klaim warisan 40-60 GB / 34.000 berkas~~ DIBAYAR: dibantah.
 9. ~~Tanggal berhenti SRM/COCOS/BTS~~ DIBAYAR: 2024-05-28 UTC.
 10. ~~R-5~~ DIBAYAR.
@@ -254,10 +318,13 @@ sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 14. ~~Satuan stempel 2024-06..2026-06~~ DIBAYAR.
 15. ~~Sebab KC-6~~ DIBAYAR: H1 gugur, arsip 1m utuh.
 16. ~~ADR-A004~~ DIBAYAR: diterima 2026-07-28.
-17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 90 terverifikasi.
+17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 96 terverifikasi.
 18. ~~Jurnal 08 dan 09 belum dibaca ulang dari `main`~~ DIBAYAR.
-19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca. Jangan
-    dibaca utuh; ringkas di runner seperti pola `penyebut_kc6.py`.
+19. ~~`reports/semesta_bulan_1m.json` belum pernah dibaca~~ **DIBAYAR** (jurnal
+    23–25): diringkas di runner, tidak pernah dibaca utuh oleh agen. Skemanya
+    `{bulan_per_simbol: {simbol: CACAH bulan}, waktu_utc}`; ia tidak memuat nama
+    bulan sama sekali, sehingga pertanyaan bulan awal/akhir hanya bisa dijawab
+    `semesta_rentang.json`. Hasilnya menegakkan kembali 937 dan 21.789.
 20. ~~Sejauh mana KC-6 bertahan~~ DIBAYAR: 84 simbol-bulan (jurnal 16).
 21. ~~Penyebut `rentang_kc6.json`~~ DIBAYAR: 790.983 awal, 140.544 kendali,
     931.527 total (jurnal 20).
@@ -268,6 +335,14 @@ sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 24. `gerbang_1m` belum pernah melihat data arsip sungguhan dan belum dipanggil
     jalur serapan mana pun. Sampai itu terjadi, kalimat "gerbang integritas
     berlaku atas 21.789 simbol-bulan" dilarang ditulis.
+25. **[baru]** H-A003 belum terbukti: siapa yang menulis ulang
+    `reports/semesta_bulan_1m.json` dan apa yang berubah di dalamnya belum
+    diperiksa. Sampai itu jelas, setiap perbandingan antar-run atas berkas itu
+    wajib menyebut `sidik_data`-nya (aturan 31).
+26. **[baru]** Berkas yang belum pernah dibaca ulang dari `main` sesudah
+    didorong: `journal/2026-07-28-17.md`, `-19.md`, `tests/test_penyebut_kc6.py`,
+    `.github/workflows/penyebut_kc6.yml`, `lux_ai/serapan/bentuk_semesta.py`.
+    CI hijau hanyalah bukti tidak langsung.
 
-Utang AKTIF yang tersisa dan bisa dikerjakan sekarang: **19** dan **24**.
-Utang 1-5, 7, dan 11 menunggu tahap lain.
+Utang AKTIF yang tersisa dan bisa dikerjakan sekarang: **7, 24, 25, 26**.
+Utang 1-5 dan 11 menunggu tahap lain.

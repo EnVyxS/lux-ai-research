@@ -4,6 +4,10 @@ name: pecahan-serapan
 # Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
 # Parquet TIDAK diunggah dan TIDAK di-commit; ia diukur lalu dihapus di runner
 # (lihat pecahan.py dan ADR-A006 yang akan memutuskan persistensi).
+#
+# Push atas pecahan.py menjalankan MATRIKS pecahan 1..7 secara paralel; pecahan
+# 0 sudah terukur pada run 30353584831. Untuk mengulang satu pecahan saja,
+# pakai workflow_dispatch.
 on:
   push:
     paths:
@@ -22,12 +26,51 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: pecahan-serapan
-  cancel-in-progress: false
-
 jobs:
-  pecahan:
+  matriks:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        indeks: [1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: jalankan pecahan ${{ matrix.indeks }}
+        env:
+          PECAHAN_INDEKS: ${{ matrix.indeks }}
+          PECAHAN_TOTAL: '8'
+        run: |
+          set +e
+          python -m lux_ai.serapan.pecahan > pecahan.log 2>&1
+          kode=$?
+          mkdir -p reports
+          tail -c 40000 pecahan.log > reports/pecahan_${PECAHAN_INDEKS}.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          # Tujuh job mendorong ke cabang yang sama; ulang-coba dengan rebase.
+          for percobaan in 1 2 3 4 5 6 7 8; do
+            git add reports/manifes_pecahan_${PECAHAN_INDEKS}.json 2>/dev/null || true
+            git add reports/pecahan_${PECAHAN_INDEKS}.log reports/pecahan_${PECAHAN_INDEKS}_status.json
+            git commit -m "manifes pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
+            git pull --rebase --autostash && git push && break
+            sleep $((percobaan * 15))
+          done
+          exit $kode
+
+  tunggal:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     timeout-minutes: 330
     steps:
@@ -40,7 +83,7 @@ jobs:
           cache: 'pip'
       - name: pasang kebutuhan
         run: pip install -r requirements.txt
-      - name: jalankan pecahan
+      - name: jalankan pecahan tunggal
         env:
           PECAHAN_INDEKS: ${{ github.event.inputs.indeks || '0' }}
           PECAHAN_TOTAL: '8'
@@ -50,13 +93,13 @@ jobs:
           python -m lux_ai.serapan.pecahan > pecahan.log 2>&1
           kode=$?
           mkdir -p reports
-          tail -c 40000 pecahan.log > reports/pecahan_serapan.log
-          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_serapan_status.json
+          tail -c 40000 pecahan.log > reports/pecahan_${PECAHAN_INDEKS}.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
-          git add reports/manifes_pecahan_0.json reports/manifes_pecahan_1.json reports/manifes_pecahan_2.json reports/manifes_pecahan_3.json reports/manifes_pecahan_4.json reports/manifes_pecahan_5.json reports/manifes_pecahan_6.json reports/manifes_pecahan_7.json 2>/dev/null || true
-          git add reports/pecahan_serapan.log reports/pecahan_serapan_status.json
-          git commit -m "manifes pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
+          git add reports/manifes_pecahan_${PECAHAN_INDEKS}.json 2>/dev/null || true
+          git add reports/pecahan_${PECAHAN_INDEKS}.log reports/pecahan_${PECAHAN_INDEKS}_status.json
+          git commit -m "manifes pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
           git pull --rebase --autostash
           git push
           exit $kode

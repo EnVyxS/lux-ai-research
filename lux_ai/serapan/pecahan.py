@@ -14,12 +14,17 @@ bukan potong blok dan bukan atas simbol-bulan:
 **Daftar bulan DITANYAKAN ke arsip** lewat `arsip.bulan_tersedia`, tidak
 diturunkan dari `bulan_pertama..bulan_terakhir`: `semesta_rentang.json` hanya
 menyimpan ujung dan `cacah_bulan`, sehingga simbol yang pernah jeda akan
-menghasilkan bulan hantu bila rentangnya sekadar dibentangkan. Selisih antara
-cacah bulan arsip dan `cacah_bulan` dilaporkan, tidak didiamkan (aturan 36).
+menghasilkan bulan hantu bila rentangnya sekadar dibentangkan. Pada pecahan 0
+selisihnya nol untuk 99 simbol; itu tetap dilaporkan, tidak diasumsikan
+(aturan 36).
 
 **Parquet TIDAK dipersistenkan.** Ia ditulis, diukur, lalu dihapus. Aset rilis
-GitHub berbatas 2 GB per berkas sementara satu pecahan ≈ 4,9 GB; bentuk
+GitHub berbatas 2 GB per berkas sementara satu pecahan ≈ 4,1 GB; bentuk
 persistensi diputuskan ADR-A006. Yang di-commit hanya manifesnya.
+
+**VERSI** dinaikkan setiap kali pecahan perlu dijalankan ulang. Pemicu-diri
+workflow sudah dicabut (aturan 33), dan modul inilah satu-satunya pemicu run,
+sehingga menaikkan VERSI adalah cara sengaja untuk menyalakannya.
 
 Aturan yang ditegakkan: 18, 20, 24, 25, 28, 30, 32, 36, 37.
 """
@@ -35,6 +40,7 @@ from typing import Any, Dict, List
 
 from . import arsip, serap
 
+VERSI = 2
 SUMBER_RENTANG = serap.SUMBER_RENTANG
 TOTAL_PECAHAN = 8
 JENIS_DIIZINKAN = serap.JENIS_DIIZINKAN
@@ -120,6 +126,7 @@ def jalankan(
 
     laporan = serap.ringkas(manifes)
     laporan["bukan_bukti"] = False
+    laporan["versi_pecahan"] = VERSI
     laporan["pecahan"] = {
         "indeks": indeks,
         "total": total,

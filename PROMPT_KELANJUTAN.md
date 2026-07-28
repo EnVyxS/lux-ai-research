@@ -1,4 +1,4 @@
-# PROMPT KELANJUTAN v15
+# PROMPT KELANJUTAN v16
 
 Kamu melanjutkan riset LUX-AI. Operator: Diva Juan Nur Taqarrub, GitHub EnVyxS,
 zona waktu Asia/Jakarta, bahasa kerja Indonesia. Jangan mulai bekerja sebelum
@@ -11,14 +11,13 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
 2. Semua operasi GitHub lewat
    `connections.mcpServer_github.runTool({toolName, toolArguments})`. `owner` dan
    `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
-3. Baca dari main repo `EnVyxS/lux-ai-research`, berurutan: `PROMPT_KELANJUTAN.md`
-   (v15); `STATE.md` — **PERINGATAN: STATE masih v15 dan TERTINGGAL tujuh sesi**
-   (belum memuat aturan 30–32, KC-7..KC-9, papan skor R-44..R-55, utang 19 lunas);
-   `journal/2026-07-28-{22,23,24,25}.md` yang memuat keadaan mutakhir sebenarnya;
-   `decisions/ADR-A002.md` (beserta Amandemen A-1) dan `decisions/ADR-A004.md`;
-   `PETA_MODUL.md` bila menyentuh modul warisan.
-4. **Pekerjaan pertama sesi berikutnya adalah menulis STATE v16**, sebelum
-   pekerjaan teknis baru.
+3. Baca dari main repo `EnVyxS/lux-ai-research`, berurutan:
+   `PROMPT_KELANJUTAN.md` (v16); **`STATE.md` (v16) — kini MUTAKHIR dan sinkron,
+   aturan 1-32, KC-1..KC-9, papan skor R-1..R-55, utang 1-26. INI YANG PALING
+   PENTING**; `decisions/ADR-A001.md`, `ADR-A002.md` (beserta Amandemen A-1),
+   `ADR-A004.md`; `journal/2026-07-28-25.md`; `PETA_MODUL.md` bila menyentuh
+   modul warisan.
+4. Baru setelah itu jalankan pekerjaan teknis.
 
 ## BATASAN YANG MAHAL DIPELAJARI ULANG
 
@@ -35,72 +34,65 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
 - Dilarang menulis apa pun di luar repo lux-ai-research. lux-research boleh
   DIBACA saja; hasil dan angkanya tidak pernah boleh masuk.
 
-## POSISI HARI INI (2026-07-28, sesi 25)
+## POSISI HARI INI (2026-07-28, akhir sesi 25)
 
-- HEAD: `3244550d62bb39137dc4f80df6bce1bc465a4c3f` (jurnal 25).
-- CI terakhir: run **30347164329**, commit `f270354c`, 09:34:55Z, `kode_keluar: 0`,
+- HEAD pekerjaan teknis: `f270354ca8a5c3d585fcdef943123370b7702826`
+  (`ringkas_semesta.py` v3). Jurnal terakhir `journal/2026-07-28-25.md`
+  (commit `3244550d…`). STATE v16 dan PROMPT v16 didorong sesudahnya.
+- CI terakhir: run **30347164329**, commit `f270354c`, `kode_keluar: 0`,
   **96 uji**.
-- **Utang 19 LUNAS.** Semesta sah: **937 simbol, 21.789 berkas-bulan**,
-  2020-01..2026-06. `reports/ringkas_semesta.json` melaporkan 934 diterima + 3
-  ditolak = 937; tiga yang ditolak bernama huruf Tionghoa (币安人生USDT,
-  我踏马来了USDT, 龙虾USDT) dan memikul tepat 19 berkas-bulan.
-- Utang AKTIF tinggal **24** (serapan penuh).
+- Semesta sah: **937 simbol, 21.789 berkas-bulan**, 2020-01..2026-06, bulan per
+  simbol 1..78. Utang 19 LUNAS.
+- **KC-9 baru**: 3 dari 937 pasar bernama huruf Tionghoa (币安人生USDT,
+  我踏马来了USDT, 龙虾USDT), memikul 19 berkas-bulan. Aturan 32 lahir dari sini.
+- Utang AKTIF: **7** (percent-encoding, penghalang serapan), **24** (serapan
+  penuh), **25** (H-A003 belum terbukti), **26** (lima berkas belum dibaca ulang).
 - Aturan terakhir **32**. Kelas cacat terakhir **KC-9**. Ramalan berikutnya
-  **R-56**. Jurnal berikutnya `journal/2026-07-28-26.md`. STATE berikutnya v16.
-  PROMPT berikutnya v16.
+  **R-56**. Jurnal berikutnya `journal/2026-07-28-26.md`. STATE berikutnya v17.
+  PROMPT berikutnya v17. N_percobaan = 0.
 
-## PAPAN SKOR (sesudah R-55)
+## PAPAN SKOR (R-1..R-55)
 
 TEPAT 31 · MELESET 15 · MELESET SEPARUH 2 (R-3, R-53) · TIDAK TERADJUDIKASI 1
-(R-40) · MENUNGGU 6 (R-7, R-19, R-20, R-28, R-36, R-37). Total 55.
-Adjudikasi sesi 22–25: R-44 R-45 R-46 MELESET; R-47 R-48 R-49 R-51 R-52 R-54
-R-55 TEPAT; R-50 MELESET; R-53 MELESET SEPARUH.
-
-## ATURAN BARU YANG BELUM MASUK STATE
-
-- **30.** Setiap laporan diagnostik wajib memuat penyebutnya eksplisit; bila
-  penyebut nol, status `TIDAK MENGUKUR`. Ramalan atas medan penggugur tidak
-  boleh TEPAT bila penyebutnya nol. (KC-7: bersih palsu karena penyebut nol.)
-- **31.** Setiap laporan wajib mencatat `sidik_data` sumber; perbandingan
-  antar-run wajib menyebut apakah `sidik_data`-nya sama. (KC-8: sumber bergerak,
-  dikira tetap karena hanya ukurannya dicocokkan — `byte_sumber` 18.884 tetap
-  sama sementara sidik berubah tiga kali.)
-- **32.** Nama pasar TIDAK boleh dianggap ASCII. Setiap penyaring nama wajib
-  mencatat cacah dan contoh yang DITOLAK. Pada serapan, nama simbol wajib
-  di-percent-encode di URL dan diamankan untuk nama berkas. (KC-9.)
+(R-40) · MENUNGGU 6 (R-7, R-19, R-20, R-28, R-36, R-37). Rinciannya di STATE v16.
 
 ## PEKERJAAN BERIKUTNYA, BERURUTAN
 
-1. **STATE v16** (paling mendesak): aturan 30–32, KC-7..KC-9, papan skor di atas,
-   utang 19 lunas, hipotesis H-A002a TERBUKTI / H-A002b GUGUR / H-A003 bertahan.
-2. **Periksa `lux_ai/serapan/arsip.py` terhadap KC-9** sebelum serapan penuh:
-   percent-encoding URL, keamanan nama berkas keluaran, kunci manifes non-ASCII.
-   Tiga simbol dan 19 berkas-bulan akan hilang tanpa suara bila ini dilewatkan.
-3. **Serapan penuh** (utang 24) per ADR-A002 §9 sebagaimana diamandemen ADR-A004:
-   8 pecahan (~2.724 berkas, ~1,0 jam, ~4,9 GB tiap pecahan), tiap simbol-bulan
-   melewati `gerbang_1m.nilai_deret`, manifes per simbol-bulan, parquet sebagai
-   aset rilis, karantina 7 hari. Mengadjudikasi R-7, R-19, R-20, R-36, R-37.
-   Pra-registrasi R-56 dst. SEBELUM run; patuhi aturan 25–32.
-4. Paralel (aturan 3): ADR-A003 taksonomi rezim; juri T4 berbiaya sejak hari
-   pertama; lapisan validasi (uji bulanan berpasangan + Sidak, ≥300 permutasi per
-   TANGGAL UTC, PBO dan DSR numpy murni).
-5. Baca ulang yang tertunggak: `journal/2026-07-28-17.md`, `-19.md`,
+1. **Utang 7 — periksa `lux_ai/serapan/arsip.py` terhadap KC-9** sebelum serapan
+   penuh, pada tiga titik: (a) `url_klines` dan `url_funding` menempelkan nama
+   simbol mentah tanpa percent-encoding; (b) nama berkas parquet memakai nama
+   simbol apa adanya; (c) kunci manifes berasumsi ASCII. Tulis uji dengan kasus
+   POSITIF dan NEGATIF memakai ketiga nama Tionghoa itu (aturan 12).
+   Pra-registrasi R-56 dst. sebelum run.
+2. **Utang 24 — serapan penuh** per ADR-A002 §9 sebagaimana diamandemen
+   ADR-A004: 8 pecahan (~2.724 berkas, ~1,0 jam, ~4,9 GB tiap pecahan), tiap
+   simbol-bulan melewati `gerbang_1m.nilai_deret`, manifes per simbol-bulan
+   (nama, baris, rentang waktu, checksum, sumber, funding_ada, baris_dibuang,
+   berheader, awal_sejati, akhir_sejati, satuan stempel, hasil gerbang), parquet
+   sebagai aset rilis, karantina 7 hari. Mengadjudikasi R-7, R-19, R-20, R-36,
+   R-37.
+3. **Utang 26** — baca ulang dari `main`: `journal/2026-07-28-17.md`, `-19.md`,
    `tests/test_penyebut_kc6.py`, `.github/workflows/penyebut_kc6.yml`,
    `lux_ai/serapan/bentuk_semesta.py`.
-6. Utang lama yang masih berdiri: 1, 2, 3, 4, 5, 7, 11.
+4. Paralel, boleh sekarang (aturan 3): ADR-A003 taksonomi rezim; juri T4 dengan
+   biaya sejak hari pertama; lapisan validasi (uji bulanan berpasangan + Sidak,
+   ≥300 permutasi per TANGGAL UTC, PBO dan DSR numpy murni).
+5. Utang lama yang menunggu tahap lain: 1, 2, 3, 4, 5, 11.
 
 Adjudikasi riset tetap TERKUNCI sampai manifes semesta penuh terverifikasi
 (aturan 3).
 
 ## KEBIASAAN
 
-Tulis ramalan SEBELUM run lalu adjudikasi jujur (15 ramalan sudah MELESET).
-Hitung ulang setiap angka ringkasan baris demi baris (aturan 21). Setiap
-pengukuran sebab wajib memuat medan yang bisa MENGGUGURKAN hipotesis yang
-dipercaya (aturan 24). Bila sebuah ramalan tepat angkanya tetapi salah sebabnya,
-catat MELESET SEPARUH dan kejar sebabnya — R-53 nyaris membuat saya memperbaiki
-batas panjang padahal cacatnya ASCII. Pisahkan fakta dari asumsi; tanpa bukti
-tulis "Ini memerlukan verifikasi." Bila dua berkas kontinuitas sempat tidak
-sinkron, catat ketidakcocokannya terbuka di jurnal alih-alih membiarkannya
-diam-diam. "lanjut" berarti teruskan tanpa konfirmasi. Bila konteks hampir penuh,
-HENTIKAN pekerjaan teknis dan perbarui berkas kontinuitas dulu.
+Tulis ramalan SEBELUM run lalu adjudikasi jujur (15 sudah MELESET, 2 MELESET
+SEPARUH). Hitung ulang setiap angka ringkasan baris demi baris (aturan 21).
+Setiap pengukuran sebab wajib memuat medan yang bisa MENGGUGURKAN hipotesis yang
+dipercaya (aturan 24). Bila ramalan tepat angkanya tetapi salah sebabnya, catat
+MELESET SEPARUH dan kejar sebabnya — R-53 nyaris membuat saya memperbaiki batas
+panjang padahal cacatnya ASCII. Nol pelanggaran atas nol pengamatan bukan
+kebersihan (aturan 30). Ukuran berkas yang sama bukan bukti data yang sama
+(aturan 31). Pisahkan fakta dari asumsi; tanpa bukti tulis "Ini memerlukan
+verifikasi." Kegagalan yang berbunyi keras lebih murah daripada keberhasilan
+yang berbohong: jangan menulis pengumpul "toleran" yang menebak. "lanjut"
+berarti teruskan tanpa konfirmasi. Bila konteks hampir penuh, HENTIKAN pekerjaan
+teknis dan perbarui berkas kontinuitas dulu.

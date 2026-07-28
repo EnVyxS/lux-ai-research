@@ -1,0 +1,7326 @@
+{
+  "batas_daftar": 500,
+  "bukan_bukti": true,
+  "byte_zip_sampel_maks": 1942,
+  "byte_zip_sampel_min": 433,
+  "cacah_bulan_funding_tanpa_klines": 87,
+  "cacah_bulan_klines_tanpa_funding": 880,
+  "cacah_sampel": 4,
+  "cacah_sampel_gagal_checksum": 0,
+  "cacah_sampel_gagal_unduh": 0,
+  "cacah_simbol_gagal_daftar": 0,
+  "catatan_bukan_bukti": "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK menulis funding_ada di manifes mana pun",
+  "catatan_kelas_kosong": "kelas risiko tanpa kandidat tidak menghasilkan wakil sampel; klaim apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan dari kasus lain (aturan 41, 46)",
+  "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya yang pertama yang diukur di sini",
+  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah (aturan 24)",
+  "catatan_rentang": "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json saja, bukan untuk 937 simbol arsip (aturan 20)",
+  "contoh_gagal_daftar": [],
+  "daftar_funding_tanpa_klines": [
+    "ANTUSDT:2024-06",
+    "ANTUSDT:2024-07",
+    "AUDIOUSDT:2024-06",
+    "AUDIOUSDT:2024-07",
+    "BNTUSDT:2021-01",
+    "BNTUSDT:2021-02",
+    "BNTUSDT:2021-03",
+    "BNTUSDT:2021-04",
+    "BTSUSDT:2024-06",
+    "BTSUSDT:2024-07",
+    "BTSUSDT:2024-08",
+    "BZUSDT:2026-03",
+    "CLUSDT:2026-03",
+    "COCOSUSDT:2024-06",
+    "COCOSUSDT:2024-07",
+    "DOTECOUSDT:2021-03",
+    "EOSUSDT:2025-06",
+    "EOSUSDT:2025-07",
+    "EOSUSDT:2025-08",
+    "EOSUSDT:2025-09",
+    "EOSUSDT:2025-10",
+    "EOSUSDT:2025-11",
+    "EOSUSDT:2025-12",
+    "EOSUSDT:2026-01",
+    "EOSUSDT:2026-02",
+    "EOSUSDT:2026-03",
+    "EOSUSDT:2026-04",
+    "EOSUSDT:2026-05",
+    "EOSUSDT:2026-06",
+    "FOOTBALLUSDT:2022-08",
+    "FOOTBALLUSDT:2024-06",
+    "FOOTBALLUSDT:2024-07",
+    "FRONTUSDT:2024-10",
+    "FRONTUSDT:2024-11",
+    "FRONTUSDT:2024-12",
+    "FRONTUSDT:2025-01",
+    "FRONTUSDT:2025-02",
+    "FRONTUSDT:2025-03",
+    "FRONTUSDT:2025-04",
+    "FRONTUSDT:2025-05",
+    "FRONTUSDT:2025-06",
+    "FRONTUSDT:2025-07",
+    "FRONTUSDT:2025-08",
+    "FRONTUSDT:2025-09",
+    "FRONTUSDT:2025-10",
+    "FRONTUSDT:2025-11",
+    "FRONTUSDT:2025-12",
+    "FRONTUSDT:2026-01",
+    "FRONTUSDT:2026-02",
+    "FRONTUSDT:2026-03",
+    "FRONTUSDT:2026-04",
+    "FRONTUSDT:2026-05",
+    "FRONTUSDT:2026-06",
+    "GALUSDT:2024-08",
+    "HNTUSDT:2024-06",
+    "HNTUSDT:2024-07",
+    "HNTUSDT:2024-08",
+    "MATICUSDT:2024-10",
+    "MATICUSDT:2024-11",
+    "MATICUSDT:2024-12",
+    "MATICUSDT:2025-01",
+    "MATICUSDT:2025-02",
+    "MATICUSDT:2025-03",
+    "MATICUSDT:2025-04",
+    "MATICUSDT:2025-05",
+    "MATICUSDT:2025-06",
+    "MATICUSDT:2025-07",
+    "MATICUSDT:2025-08",
+    "MATICUSDT:2025-09",
+    "MATICUSDT:2025-10",
+    "MATICUSDT:2025-11",
+    "MATICUSDT:2025-12",
+    "MATICUSDT:2026-01",
+    "MATICUSDT:2026-02",
+    "MATICUSDT:2026-03",
+    "MATICUSDT:2026-04",
+    "MATICUSDT:2026-05",
+    "MATICUSDT:2026-06",
+    "MBLUSDT:2024-06",
+    "MBLUSDT:2024-07",
+    "NATGASUSDT:2026-03",
+    "RNDRUSDT:2024-08",
+    "SRMUSDT:2024-06",
+    "SRMUSDT:2024-07",
+    "TOMOUSDT:2024-06",
+    "TOMOUSDT:2024-07",
+    "TOMOUSDT:2024-08"
+  ],
+  "daftar_klines_tanpa_funding": [
+    "1000WHYUSDT:2026-04",
+    "1000WHYUSDT:2026-05",
+    "1000WHYUSDT:2026-06",
+    "1000XUSDT:2025-12",
+    "1000XUSDT:2026-01",
+    "1000XUSDT:2026-02",
+    "1000XUSDT:2026-03",
+    "1000XUSDT:2026-04",
+    "1000XUSDT:2026-05",
+    "1000XUSDT:2026-06",
+    "42USDT:2026-02",
+    "42USDT:2026-03",
+    "42USDT:2026-04",
+    "42USDT:2026-05",
+    "42USDT:2026-06",
+    "A2ZUSDT:2026-04",
+    "A2ZUSDT:2026-05",
+    "A2ZUSDT:2026-06",
+    "AGIXUSDT:2025-07",
+    "AGIXUSDT:2025-08",
+    "AGIXUSDT:2025-09",
+    "AGIXUSDT:2025-10",
+    "AGIXUSDT:2025-11",
+    "AGIXUSDT:2025-12",
+    "AGIXUSDT:2026-01",
+    "AGIXUSDT:2026-02",
+    "AGIXUSDT:2026-03",
+    "AGIXUSDT:2026-04",
+    "AGIXUSDT:2026-05",
+    "AGIXUSDT:2026-06",
+    "AI16ZUSDT:2025-12",
+    "AI16ZUSDT:2026-01",
+    "AI16ZUSDT:2026-02",
+    "AI16ZUSDT:2026-03",
+    "AI16ZUSDT:2026-04",
+    "AI16ZUSDT:2026-05",
+    "AI16ZUSDT:2026-06",
+    "AIUSDT:2026-05",
+    "AIUSDT:2026-06",
+    "ALPACAUSDT:2025-07",
+    "ALPACAUSDT:2025-08",
+    "ALPACAUSDT:2025-09",
+    "ALPACAUSDT:2025-10",
+    "ALPACAUSDT:2025-11",
+    "ALPACAUSDT:2025-12",
+    "ALPACAUSDT:2026-01",
+    "ALPACAUSDT:2026-02",
+    "ALPACAUSDT:2026-03",
+    "ALPACAUSDT:2026-04",
+    "ALPACAUSDT:2026-05",
+    "ALPACAUSDT:2026-06",
+    "ALPHAUSDT:2025-10",
+    "ALPHAUSDT:2025-11",
+    "ALPHAUSDT:2025-12",
+    "ALPHAUSDT:2026-01",
+    "ALPHAUSDT:2026-02",
+    "ALPHAUSDT:2026-03",
+    "ALPHAUSDT:2026-04",
+    "ALPHAUSDT:2026-05",
+    "ALPHAUSDT:2026-06",
+    "AMBUSDT:2025-07",
+    "AMBUSDT:2025-08",
+    "AMBUSDT:2025-09",
+    "AMBUSDT:2025-10",
+    "AMBUSDT:2025-11",
+    "AMBUSDT:2025-12",
+    "AMBUSDT:2026-01",
+    "AMBUSDT:2026-02",
+    "AMBUSDT:2026-03",
+    "AMBUSDT:2026-04",
+    "AMBUSDT:2026-05",
+    "AMBUSDT:2026-06",
+    "ATAUSDT:2026-06",
+    "B3USDT:2026-05",
+    "B3USDT:2026-06",
+    "BADGERUSDT:2025-07",
+    "BADGERUSDT:2025-08",
+    "BADGERUSDT:2025-09",
+    "BADGERUSDT:2025-10",
+    "BADGERUSDT:2025-11",
+    "BADGERUSDT:2025-12",
+    "BADGERUSDT:2026-01",
+    "BADGERUSDT:2026-02",
+    "BADGERUSDT:2026-03",
+    "BADGERUSDT:2026-04",
+    "BADGERUSDT:2026-05",
+    "BADGERUSDT:2026-06",
+    "BAKEUSDT:2025-11",
+    "BAKEUSDT:2025-12",
+    "BAKEUSDT:2026-01",
+    "BAKEUSDT:2026-02",
+    "BAKEUSDT:2026-03",
+    "BAKEUSDT:2026-04",
+    "BAKEUSDT:2026-05",
+    "BAKEUSDT:2026-06",
+    "BALUSDT:2025-07",
+    "BALUSDT:2025-08",
+    "BALUSDT:2025-09",
+    "BALUSDT:2025-10",
+    "BALUSDT:2025-11",
+    "BALUSDT:2025-12",
+    "BALUSDT:2026-01",
+    "BALUSDT:2026-02",
+    "BALUSDT:2026-03",
+    "BALUSDT:2026-04",
+    "BALUSDT:2026-05",
+    "BALUSDT:2026-06",
+    "BIDUSDT:2026-02",
+    "BIDUSDT:2026-03",
+    "BIDUSDT:2026-04",
+    "BIDUSDT:2026-05",
+    "BIDUSDT:2026-06",
+    "BLZUSDT:2025-07",
+    "BLZUSDT:2025-08",
+    "BLZUSDT:2025-09",
+    "BLZUSDT:2025-10",
+    "BLZUSDT:2025-11",
+    "BLZUSDT:2025-12",
+    "BLZUSDT:2026-01",
+    "BLZUSDT:2026-02",
+    "BLZUSDT:2026-03",
+    "BLZUSDT:2026-04",
+    "BLZUSDT:2026-05",
+    "BLZUSDT:2026-06",
+    "BNXUSDT:2022-04",
+    "BNXUSDT:2022-05",
+    "BNXUSDT:2022-06",
+    "BNXUSDT:2022-07",
+    "BNXUSDT:2022-08",
+    "BNXUSDT:2022-09",
+    "BNXUSDT:2022-10",
+    "BNXUSDT:2022-11",
+    "BNXUSDT:2022-12",
+    "BNXUSDT:2023-01",
+    "BNXUSDT:2025-07",
+    "BNXUSDT:2025-08",
+    "BNXUSDT:2025-09",
+    "BNXUSDT:2025-10",
+    "BNXUSDT:2025-11",
+    "BNXUSDT:2025-12",
+    "BNXUSDT:2026-01",
+    "BNXUSDT:2026-02",
+    "BNXUSDT:2026-03",
+    "BNXUSDT:2026-04",
+    "BNXUSDT:2026-05",
+    "BNXUSDT:2026-06",
+    "BOBUSDT:2026-05",
+    "BOBUSDT:2026-06",
+    "BONDUSDT:2025-07",
+    "BONDUSDT:2025-08",
+    "BONDUSDT:2025-09",
+    "BONDUSDT:2025-10",
+    "BONDUSDT:2025-11",
+    "BONDUSDT:2025-12",
+    "BONDUSDT:2026-01",
+    "BONDUSDT:2026-02",
+    "BONDUSDT:2026-03",
+    "BONDUSDT:2026-04",
+    "BONDUSDT:2026-05",
+    "BONDUSDT:2026-06",
+    "BSWUSDT:2025-10",
+    "BSWUSDT:2025-11",
+    "BSWUSDT:2025-12",
+    "BSWUSDT:2026-01",
+    "BSWUSDT:2026-02",
+    "BSWUSDT:2026-03",
+    "BSWUSDT:2026-04",
+    "BSWUSDT:2026-05",
+    "BSWUSDT:2026-06",
+    "BTCSTUSDT:2022-01",
+    "CHESSUSDT:2026-03",
+    "CHESSUSDT:2026-04",
+    "CHESSUSDT:2026-05",
+    "CHESSUSDT:2026-06",
+    "COMBOUSDT:2025-07",
+    "COMBOUSDT:2025-08",
+    "COMBOUSDT:2025-09",
+    "COMBOUSDT:2025-10",
+    "COMBOUSDT:2025-11",
+    "COMBOUSDT:2025-12",
+    "COMBOUSDT:2026-01",
+    "COMBOUSDT:2026-02",
+    "COMBOUSDT:2026-03",
+    "COMBOUSDT:2026-04",
+    "COMBOUSDT:2026-05",
+    "COMBOUSDT:2026-06",
+    "COMMONUSDT:2026-02",
+    "COMMONUSDT:2026-03",
+    "COMMONUSDT:2026-04",
+    "COMMONUSDT:2026-05",
+    "COMMONUSDT:2026-06",
+    "CUDISUSDT:2026-02",
+    "CUDISUSDT:2026-03",
+    "CUDISUSDT:2026-04",
+    "CUDISUSDT:2026-05",
+    "CUDISUSDT:2026-06",
+    "DAMUSDT:2026-05",
+    "DAMUSDT:2026-06",
+    "DARUSDT:2025-07",
+    "DARUSDT:2025-08",
+    "DARUSDT:2025-09",
+    "DARUSDT:2025-10",
+    "DARUSDT:2025-11",
+    "DARUSDT:2025-12",
+    "DARUSDT:2026-01",
+    "DARUSDT:2026-02",
+    "DARUSDT:2026-03",
+    "DARUSDT:2026-04",
+    "DARUSDT:2026-05",
+    "DARUSDT:2026-06",
+    "DEGENUSDT:2026-05",
+    "DEGENUSDT:2026-06",
+    "DEGOUSDT:2026-05",
+    "DEGOUSDT:2026-06",
+    "DENTUSDT:2026-05",
+    "DENTUSDT:2026-06",
+    "DFUSDT:2026-03",
+    "DFUSDT:2026-04",
+    "DFUSDT:2026-05",
+    "DFUSDT:2026-06",
+    "DGBUSDT:2025-07",
+    "DGBUSDT:2025-08",
+    "DGBUSDT:2025-09",
+    "DGBUSDT:2025-10",
+    "DGBUSDT:2025-11",
+    "DGBUSDT:2025-12",
+    "DGBUSDT:2026-01",
+    "DGBUSDT:2026-02",
+    "DGBUSDT:2026-03",
+    "DGBUSDT:2026-04",
+    "DGBUSDT:2026-05",
+    "DGBUSDT:2026-06",
+    "DMCUSDT:2026-02",
+    "DMCUSDT:2026-03",
+    "DMCUSDT:2026-04",
+    "DMCUSDT:2026-05",
+    "DMCUSDT:2026-06",
+    "EPTUSDT:2026-02",
+    "EPTUSDT:2026-03",
+    "EPTUSDT:2026-04",
+    "EPTUSDT:2026-05",
+    "EPTUSDT:2026-06",
+    "FIOUSDT:2026-05",
+    "FIOUSDT:2026-06",
+    "FISUSDT:2026-01",
+    "FISUSDT:2026-02",
+    "FISUSDT:2026-03",
+    "FISUSDT:2026-04",
+    "FISUSDT:2026-05",
+    "FISUSDT:2026-06",
+    "FLMUSDT:2025-12",
+    "FLMUSDT:2026-01",
+    "FLMUSDT:2026-02",
+    "FLMUSDT:2026-03",
+    "FLMUSDT:2026-04",
+    "FLMUSDT:2026-05",
+    "FLMUSDT:2026-06",
+    "FORTHUSDT:2026-04",
+    "FORTHUSDT:2026-05",
+    "FORTHUSDT:2026-06",
+    "FTMUSDT:2025-07",
+    "FTMUSDT:2025-08",
+    "FTMUSDT:2025-09",
+    "FTMUSDT:2025-10",
+    "FTMUSDT:2025-11",
+    "FTMUSDT:2025-12",
+    "FTMUSDT:2026-01",
+    "FTMUSDT:2026-02",
+    "FTMUSDT:2026-03",
+    "FTMUSDT:2026-04",
+    "FTMUSDT:2026-05",
+    "FTMUSDT:2026-06",
+    "FTTUSDT:2025-07",
+    "FTTUSDT:2025-08",
+    "FTTUSDT:2025-09",
+    "FTTUSDT:2025-10",
+    "FTTUSDT:2025-11",
+    "FTTUSDT:2025-12",
+    "FTTUSDT:2026-01",
+    "FTTUSDT:2026-02",
+    "FTTUSDT:2026-03",
+    "FTTUSDT:2026-04",
+    "FTTUSDT:2026-05",
+    "FTTUSDT:2026-06",
+    "FUNUSDT:2026-05",
+    "FUNUSDT:2026-06",
+    "FXSUSDT:2026-02",
+    "FXSUSDT:2026-03",
+    "FXSUSDT:2026-04",
+    "FXSUSDT:2026-05",
+    "FXSUSDT:2026-06",
+    "GHSTUSDT:2026-03",
+    "GHSTUSDT:2026-04",
+    "GHSTUSDT:2026-05",
+    "GHSTUSDT:2026-06",
+    "GLMRUSDT:2025-07",
+    "GLMRUSDT:2025-08",
+    "GLMRUSDT:2025-09",
+    "GLMRUSDT:2025-10",
+    "GLMRUSDT:2025-11",
+    "GLMRUSDT:2025-12",
+    "GLMRUSDT:2026-01",
+    "GLMRUSDT:2026-02",
+    "GLMRUSDT:2026-03",
+    "GLMRUSDT:2026-04",
+    "GLMRUSDT:2026-05",
+    "GLMRUSDT:2026-06",
+    "HIFIUSDT:2025-11",
+    "HIFIUSDT:2025-12",
+    "HIFIUSDT:2026-01",
+    "HIFIUSDT:2026-02",
+    "HIFIUSDT:2026-03",
+    "HIFIUSDT:2026-04",
+    "HIFIUSDT:2026-05",
+    "HIFIUSDT:2026-06",
+    "HIPPOUSDT:2026-05",
+    "HIPPOUSDT:2026-06",
+    "HOOKUSDT:2026-04",
+    "HOOKUSDT:2026-05",
+    "HOOKUSDT:2026-06",
+    "ICPUSDT:2021-05",
+    "ICPUSDT:2021-06",
+    "ICPUSDT:2021-07",
+    "ICPUSDT:2021-08",
+    "ICPUSDT:2021-09",
+    "ICPUSDT:2021-10",
+    "ICPUSDT:2021-11",
+    "ICPUSDT:2021-12",
+    "ICPUSDT:2022-01",
+    "ICPUSDT:2022-02",
+    "ICPUSDT:2022-03",
+    "ICPUSDT:2022-04",
+    "ICPUSDT:2022-05",
+    "ICPUSDT:2022-06",
+    "ICPUSDT:2022-07",
+    "ICPUSDT:2022-08",
+    "IDEXUSDT:2025-07",
+    "IDEXUSDT:2025-08",
+    "IDEXUSDT:2025-09",
+    "IDEXUSDT:2025-10",
+    "IDEXUSDT:2025-11",
+    "IDEXUSDT:2025-12",
+    "IDEXUSDT:2026-01",
+    "IDEXUSDT:2026-02",
+    "IDEXUSDT:2026-03",
+    "IDEXUSDT:2026-04",
+    "IDEXUSDT:2026-05",
+    "IDEXUSDT:2026-06",
+    "IRUSDT:2026-05",
+    "IRUSDT:2026-06",
+    "JUPUSDT:2024-01",
+    "KDAUSDT:2025-12",
+    "KDAUSDT:2026-01",
+    "KDAUSDT:2026-02",
+    "KDAUSDT:2026-03",
+    "KDAUSDT:2026-04",
+    "KDAUSDT:2026-05",
+    "KDAUSDT:2026-06",
+    "KEYUSDT:2025-07",
+    "KEYUSDT:2025-08",
+    "KEYUSDT:2025-09",
+    "KEYUSDT:2025-10",
+    "KEYUSDT:2025-11",
+    "KEYUSDT:2025-12",
+    "KEYUSDT:2026-01",
+    "KEYUSDT:2026-02",
+    "KEYUSDT:2026-03",
+    "KEYUSDT:2026-04",
+    "KEYUSDT:2026-05",
+    "KEYUSDT:2026-06",
+    "KLAYUSDT:2025-07",
+    "KLAYUSDT:2025-08",
+    "KLAYUSDT:2025-09",
+    "KLAYUSDT:2025-10",
+    "KLAYUSDT:2025-11",
+    "KLAYUSDT:2025-12",
+    "KLAYUSDT:2026-01",
+    "KLAYUSDT:2026-02",
+    "KLAYUSDT:2026-03",
+    "KLAYUSDT:2026-04",
+    "KLAYUSDT:2026-05",
+    "KLAYUSDT:2026-06",
+    "LENDUSDT:2020-11",
+    "LEVERUSDT:2025-10",
+    "LEVERUSDT:2025-11",
+    "LEVERUSDT:2025-12",
+    "LEVERUSDT:2026-01",
+    "LEVERUSDT:2026-02",
+    "LEVERUSDT:2026-03",
+    "LEVERUSDT:2026-04",
+    "LEVERUSDT:2026-05",
+    "LEVERUSDT:2026-06",
+    "LINAUSDT:2025-07",
+    "LINAUSDT:2025-08",
+    "LINAUSDT:2025-09",
+    "LINAUSDT:2025-10",
+    "LINAUSDT:2025-11",
+    "LINAUSDT:2025-12",
+    "LINAUSDT:2026-01",
+    "LINAUSDT:2026-02",
+    "LINAUSDT:2026-03",
+    "LINAUSDT:2026-04",
+    "LINAUSDT:2026-05",
+    "LINAUSDT:2026-06",
+    "LITUSDT:2025-07",
+    "LITUSDT:2025-08",
+    "LITUSDT:2025-09",
+    "LITUSDT:2025-10",
+    "LITUSDT:2025-11",
+    "LOKAUSDT:2025-08",
+    "LOKAUSDT:2025-09",
+    "LOKAUSDT:2025-10",
+    "LOKAUSDT:2025-11",
+    "LOKAUSDT:2025-12",
+    "LOKAUSDT:2026-01",
+    "LOKAUSDT:2026-02",
+    "LOKAUSDT:2026-03",
+    "LOKAUSDT:2026-04",
+    "LOKAUSDT:2026-05",
+    "LOKAUSDT:2026-06",
+    "LOOMUSDT:2025-07",
+    "LOOMUSDT:2025-08",
+    "LOOMUSDT:2025-09",
+    "LOOMUSDT:2025-10",
+    "LOOMUSDT:2025-11",
+    "LOOMUSDT:2025-12",
+    "LOOMUSDT:2026-01",
+    "LOOMUSDT:2026-02",
+    "LOOMUSDT:2026-03",
+    "LOOMUSDT:2026-04",
+    "LOOMUSDT:2026-05",
+    "LOOMUSDT:2026-06",
+    "LRCUSDT:2026-04",
+    "LRCUSDT:2026-05",
+    "LRCUSDT:2026-06",
+    "MDTUSDT:2025-07",
+    "MDTUSDT:2025-08",
+    "MDTUSDT:2025-09",
+    "MDTUSDT:2025-10",
+    "MDTUSDT:2025-11",
+    "MDTUSDT:2025-12",
+    "MDTUSDT:2026-01",
+    "MDTUSDT:2026-02",
+    "MDTUSDT:2026-03",
+    "MDTUSDT:2026-04",
+    "MDTUSDT:2026-05",
+    "MDTUSDT:2026-06",
+    "MEMEFIUSDT:2025-09",
+    "MEMEFIUSDT:2025-10",
+    "MEMEFIUSDT:2025-11",
+    "MEMEFIUSDT:2025-12",
+    "MEMEFIUSDT:2026-01",
+    "MEMEFIUSDT:2026-02",
+    "MEMEFIUSDT:2026-03",
+    "MEMEFIUSDT:2026-04",
+    "MEMEFIUSDT:2026-05",
+    "MEMEFIUSDT:2026-06",
+    "MILKUSDT:2026-01",
+    "MILKUSDT:2026-02",
+    "MILKUSDT:2026-03",
+    "MILKUSDT:2026-04",
+    "MILKUSDT:2026-05",
+    "MILKUSDT:2026-06",
+    "MKRUSDT:2025-10",
+    "MKRUSDT:2025-11",
+    "MKRUSDT:2025-12",
+    "MKRUSDT:2026-01",
+    "MKRUSDT:2026-02",
+    "MKRUSDT:2026-03",
+    "MKRUSDT:2026-04",
+    "MKRUSDT:2026-05",
+    "MKRUSDT:2026-06",
+    "MLNUSDT:2026-06",
+    "MYROUSDT:2025-12",
+    "MYROUSDT:2026-01",
+    "MYROUSDT:2026-02",
+    "MYROUSDT:2026-03",
+    "MYROUSDT:2026-04",
+    "MYROUSDT:2026-05",
+    "MYROUSDT:2026-06",
+    "NEIROETHUSDT:2025-10",
+    "NEIROETHUSDT:2025-11",
+    "NEIROETHUSDT:2025-12",
+    "NEIROETHUSDT:2026-01",
+    "NEIROETHUSDT:2026-02",
+    "NEIROETHUSDT:2026-03",
+    "NEIROETHUSDT:2026-04",
+    "NEIROETHUSDT:2026-05",
+    "NEIROETHUSDT:2026-06",
+    "NKNUSDT:2026-03",
+    "NKNUSDT:2026-04",
+    "NKNUSDT:2026-05",
+    "NKNUSDT:2026-06",
+    "NTRNUSDT:2026-04",
+    "NTRNUSDT:2026-05",
+    "NTRNUSDT:2026-06",
+    "NULSUSDT:2025-07",
+    "NULSUSDT:2025-08",
+    "NULSUSDT:2025-09",
+    "NULSUSDT:2025-10"
+  ],
+  "daftar_terpotong": true,
+  "kelas_risiko_kosong": [
+    "pra_header"
+  ],
+  "kelas_risiko_tersentuh": {
+    "bulan_awal_2020_2021": 1,
+    "kendali_baru": 2,
+    "non_ascii": 1,
+    "pra_header": 0,
+    "terhenti": 1
+  },
+  "penyebut": {
+    "bulan_funding": 18805,
+    "bulan_klines": 19598,
+    "simbol_diminta": 787,
+    "simbol_terdaftar": 787
+  },
+  "per_simbol": [
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "0GUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000000BOBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000000MOGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000BONKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000BTTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000CATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000CHEEMSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 38,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000FLOKIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 46,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000LUNCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 38,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000PEPEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000RATSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000SATSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 62,
+      "cacah_bulan_klines": 62,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000SHIBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "1000WHYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 58,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1000XECUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "1000XUSDT"
+    },
+    {
+      "cacah_bulan_funding": 67,
+      "cacah_bulan_klines": 67,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1INCHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "1MBABYDOGEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "2ZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "42USDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "4USDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "A2ZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AAOIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AAPLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AAVEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ACEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ACHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ACTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ACUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ACXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ADAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ADBEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AEROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AEVOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 36,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AGLDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AGTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AIGENSYNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AIOTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AIOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "AIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AIXBTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AKEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AKROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AKTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALABUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALCHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 73,
+      "cacah_bulan_klines": 73,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALGOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALICEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALLOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALPINEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ALTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AMATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "AMBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AMDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AMZNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ANCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ANIMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 66,
+      "cacah_bulan_klines": 66,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ANKRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ANTHROPICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "ANTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 52,
+      "cacah_bulan_klines": 52,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "APEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 53,
+      "cacah_bulan_klines": 53,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "API3USDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "APRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 45,
+      "cacah_bulan_klines": 45,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "APTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 36,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARKMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 34,
+      "cacah_bulan_klines": 34,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 57,
+      "cacah_bulan_klines": 57,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARPAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 58,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ARXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ASMLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ASRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ASTERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ASTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ASTSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 59,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-06"
+      ],
+      "simbol": "ATAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ATHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ATOMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AUCTIONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 34,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "AUDIOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AVAAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AVAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AVAXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AVGOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AVNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AWEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AXLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 68,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AXSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AXTIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "AZTECUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "B2USDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "B3USDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BABAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BABYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 54,
+      "cacah_bulan_klines": 62,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BANANAS31USDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BANANAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 72,
+      "cacah_bulan_klines": 72,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BANDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BANKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BANUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BARDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BASEDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BASUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 26,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BBXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BCHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BDXNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BEAMXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BEATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 68,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BELUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BERAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 34,
+      "cacah_bulan_klines": 34,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BICOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BIDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BIGTIMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BILLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BIOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BIRBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BLESSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BLUAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 39,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BLURUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BLZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BMNRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BMTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BNBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [
+        "2021-01",
+        "2021-02",
+        "2021-03",
+        "2021-04"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "BNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 51,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BNXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BOBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BOMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BONDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BRETTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BREVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BRKBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BROCCOLI714USDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BROCCOLIF3BUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BSBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BSVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "BSWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 63,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2022-01"
+      ],
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 43,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07",
+        "2024-08"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "BTSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BTTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BTWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BULLAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "BZRXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [
+        "2026-03"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "BZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 59,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "C98USDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CAKEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CAPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CARVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CATIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CBRSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 58,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CELOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CELRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CETUSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CFGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CFXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CGPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "CHESSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CHILLGUYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CHIPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CHRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 66,
+      "cacah_bulan_klines": 66,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CHZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CIENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CKBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CLANKERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CLOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [
+        "2026-03"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "CLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COHRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COLLECTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 37,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 73,
+      "cacah_bulan_klines": 73,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COMPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COOKIEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COPPERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COTIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "COWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRCLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRDOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CROSSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRWDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CRWVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CSCOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 68,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CTKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 57,
+      "cacah_bulan_klines": 57,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CTSIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CUSDT"
+    },
+    {
+      "cacah_bulan_funding": 68,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CVCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 46,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CVXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 35,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CYBERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "CYSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DAMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 51,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DASHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DEEPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DEGENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DEGOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DELLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 62,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DENTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DEXEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 51,
+      "cacah_bulan_klines": 63,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DGBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DKNGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "DMCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DODOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 35,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DODOXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 72,
+      "cacah_bulan_klines": 72,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DOGEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DOGSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DOLOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DOODUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [
+        "2021-03"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "DOTECOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 71,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DOTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DRAMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DRIFTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DUSDT"
+    },
+    {
+      "cacah_bulan_funding": 54,
+      "cacah_bulan_klines": 54,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DUSKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 58,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DYDXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "DYMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EBAYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EDENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EDGEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 39,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EDUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EGLDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EIGENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ELSAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ENAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ENJUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ENSOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 56,
+      "cacah_bulan_klines": 56,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ENSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "EOSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EPICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "EPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ERAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ESPORTSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ESPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ETCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ETHFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ETHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ETHWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EULUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EVAAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EWJUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EWTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EWYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "EWZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FARTCOINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 42,
+      "cacah_bulan_klines": 42,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FETUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FHEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FIDAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FIGHTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FILUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FIOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 63,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FLMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FLNCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FLOCKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 53,
+      "cacah_bulan_klines": 53,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FLOWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FLUIDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FLUXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FOGOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FOLKSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 24,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [
+        "2022-08",
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "FOOTBALLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FORMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FORTHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FRAXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 34,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "FRONTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FTMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 51,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FTTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FUNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "FUSDT"
+    },
+    {
+      "cacah_bulan_funding": 37,
+      "cacah_bulan_klines": 42,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "FXSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 58,
+      "cacah_bulan_klines": 58,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GALAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [
+        "2024-08"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "GALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GASUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GENIUSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "GHSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GIGGLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 34,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GLMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GLWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 52,
+      "cacah_bulan_klines": 52,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GMTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GMXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GOATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GOOGLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GPSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GRASSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GRIFFAINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 67,
+      "cacah_bulan_klines": 67,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GRTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 61,
+      "cacah_bulan_klines": 61,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GUAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GUNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "GWEIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HAEDALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HANAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HBARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HEIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HEMIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 39,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HFTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 34,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HIGHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HIMSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "HIPPOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HIVEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HMSTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 48,
+      "cacah_bulan_klines": 45,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07",
+        "2024-08"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "HNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HOLOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HOMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HOODUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 42,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "HOOKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HOTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HPEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HUMAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HYPERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HYPEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "HYUNDAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IBMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ICNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 62,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2021-05",
+        "2021-06",
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08"
+      ],
+      "simbol": "ICPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ICXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IDOLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ILVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 53,
+      "cacah_bulan_klines": 53,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IMXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "INITUSDT"
+    },
+    {
+      "cacah_bulan_funding": 47,
+      "cacah_bulan_klines": 47,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "INJUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "INTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "INUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "INXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IOSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IOTAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 59,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IOTXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 25,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IRENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "IRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IRYSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "IWMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 51,
+      "cacah_bulan_klines": 51,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JASMYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JCTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JELLYJELLYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JOEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JPMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "JTOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2024-01"
+      ],
+      "simbol": "JUPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KAIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KAITOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KASUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 72,
+      "cacah_bulan_klines": 72,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KAVAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "KDAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KEEPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KERNELUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "KEYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KGENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KITEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KLACUSDT"
+    },
+    {
+      "cacah_bulan_funding": 45,
+      "cacah_bulan_klines": 57,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KMNOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 73,
+      "cacah_bulan_klines": 73,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KNCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KOMAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KORUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "KSMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LABUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LAYERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 46,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LDOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2020-11"
+      ],
+      "simbol": "LENDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LIGHTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 52,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "LINAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LINEAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LINKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 25,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LISTAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LITEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 60,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11"
+      ],
+      "simbol": "LITUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LLYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 56,
+      "cacah_bulan_klines": 56,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LQTYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 66,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "LRCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LRCXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LSKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LUMIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 46,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LUNA2USDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LUNAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "LYNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 42,
+      "cacah_bulan_klines": 42,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MAGICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MAGMAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MANAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MANTAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MANTRAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 59,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MASKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 48,
+      "funding_tanpa_klines": [
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "MATICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 37,
+      "cacah_bulan_klines": 37,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MAVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "MBLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MBOXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 37,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "MDTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MEGAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MELANIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MEMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MERLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "METAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "METISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "METUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 25,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MEWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "MILKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MINAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MIRAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MITOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 62,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "MKRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-06"
+      ],
+      "simbol": "MLNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MMTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MOCAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MOODENGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MORPHOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MOVEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MOVRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MRVLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MSFTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MSTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MTLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MUBARAKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MVLLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "MYROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "MYXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NAORISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [
+        "2026-03"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "NATGASUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NBISUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NEARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NEIROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NEOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NEWTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NFLXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 31,
+      "cacah_bulan_klines": 31,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NFPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NIGHTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NILUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 63,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "NKNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 37,
+      "cacah_bulan_klines": 37,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NMRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NOKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NOMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 26,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NOTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NOWUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "NTRNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "NULSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NVDAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NVOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "NXPCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 56,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "cacah_bulan_funding": 63,
+      "cacah_bulan_klines": 63,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OGNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 60,
+      "cacah_bulan_klines": 72,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OMGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONDOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONDSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 64,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OPENAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OPENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OPGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OPNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 49,
+      "cacah_bulan_klines": 49,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ORCAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ORCLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ORDERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ORDIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "OUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "OXTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PARTIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PAXGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PAYPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 36,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PENDLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PENGUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 55,
+      "cacah_bulan_klines": 55,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PEOPLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "PERPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PHAROSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PHAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-06"
+      ],
+      "simbol": "PHBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PIEVERSEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PIPPINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PIXELUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PLAYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PLTRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PLUMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PNUTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "POLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "POLYXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "POPCATUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "PORT3USDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PORTALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "POWERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "POWRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PRLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PROMPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PROMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PROVEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PTBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "PUFFERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PUMPBTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PUMPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PUNDIXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "PYTHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "QCOMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 45,
+      "cacah_bulan_klines": 45,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "QNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "QNTXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "QQQUSDT"
+    },
+    {
+      "cacah_bulan_funding": 76,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2020-02"
+      ],
+      "simbol": "QTUMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "QUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RADUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RAREUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RAVEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RAYSOLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 47,
+      "cacah_bulan_klines": 59,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RAYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 39,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RDNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RECALLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "REDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 53,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "REEFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "REIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 24,
+      "cacah_bulan_klines": 24,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RENDERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 57,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RESOLVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "REUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "REZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RIFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RIVERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RIVNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RKLBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 72,
+      "cacah_bulan_klines": 72,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RLCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RLSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [
+        "2024-08"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "RNDRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ROBOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RONINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 55,
+      "cacah_bulan_klines": 55,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ROSEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RPLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 69,
+      "cacah_bulan_klines": 69,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RSRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RUNEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 65,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "RVNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "RVVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SAFEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SAGAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SAHARAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SAMSUNGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 66,
+      "cacah_bulan_klines": 66,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SANDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SANTOSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SAPIENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SCRTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SCRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 51,
+      "cacah_bulan_klines": 63,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "SCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 35,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SEIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SENTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 65,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SFPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SHELLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SIGNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SIRENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SKHYNIXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 67,
+      "cacah_bulan_klines": 67,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SKLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SKRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SKYAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SKYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SLPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SLXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SMCIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SNDKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "SNTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 71,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SNXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOLVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOMIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SONICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SONYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOPHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SOXLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPACEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPCXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 46,
+      "cacah_bulan_klines": 46,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPELLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPORTFUNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SPYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SQDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SQQQUSDT"
+    },
+    {
+      "cacah_bulan_funding": 47,
+      "cacah_bulan_klines": 45,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "SRMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SSVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STABLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STBLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STEEMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 47,
+      "cacah_bulan_klines": 47,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 52,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "STMXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STORJUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "STPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 21,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STRKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "STXXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 38,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SUIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SUNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SUPERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SUSHIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SWARMSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 66,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "simbol": "SXPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SXTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 23,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SYNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 14,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "SYRUPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 22,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-06"
+      ],
+      "simbol": "SYSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TACUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TAGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 13,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TAIKOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TAKEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TAOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 74,
+      "cacah_bulan_klines": 74,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "THETAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "THEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 60,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2021-07",
+        "2021-08",
+        "2021-09",
+        "2021-10",
+        "2021-11",
+        "2021-12",
+        "2022-01",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-05",
+        "2022-06",
+        "2022-07",
+        "2022-08",
+        "2022-09",
+        "2022-10",
+        "2022-11",
+        "2022-12",
+        "2023-01",
+        "2023-02"
+      ],
+      "simbol": "TLMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TNSRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 47,
+      "cacah_bulan_klines": 44,
+      "funding_tanpa_klines": [
+        "2024-06",
+        "2024-07",
+        "2024-08"
+      ],
+      "klines_tanpa_funding": [],
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TONUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TOSHIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TOWNSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TQQQUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRADOORUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TREEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 5,
+      "cacah_bulan_klines": 5,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRIAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 21,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "TROYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRUMPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRUSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRUTHUSDT"
+    },
+    {
+      "cacah_bulan_funding": 38,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "TRUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TRXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TSLAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 3,
+      "cacah_bulan_klines": 3,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TSMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 17,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TSTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 26,
+      "cacah_bulan_klines": 26,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TURBOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TURTLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 41,
+      "cacah_bulan_klines": 41,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TUTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "TWTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 8,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UBERUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 38,
+      "cacah_bulan_klines": 38,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UMAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 53,
+      "cacah_bulan_klines": 65,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 70,
+      "cacah_bulan_klines": 70,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UNIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "URNMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USARUSDT"
+    },
+    {
+      "cacah_bulan_funding": 40,
+      "cacah_bulan_klines": 40,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USDCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USELESSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 32,
+      "cacah_bulan_klines": 32,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USTCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USUALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "USUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "UVXYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 13,
+      "cacah_bulan_klines": 22,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VANAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 28,
+      "cacah_bulan_klines": 28,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VANRYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VELODROMEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VELVETUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VETUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "VFYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VICUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "VINEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 19,
+      "cacah_bulan_klines": 19,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VIRTUALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 17,
+      "cacah_bulan_klines": 23,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VTHOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "VVVUSDT"
+    },
+    {
+      "cacah_bulan_funding": 16,
+      "cacah_bulan_klines": 16,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WALUSDT"
+    },
+    {
+      "cacah_bulan_funding": 59,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "cacah_bulan_funding": 33,
+      "cacah_bulan_klines": 33,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WAXPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 15,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WCTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WDCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WETUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WIFUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 36,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WLDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WLFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 2,
+      "cacah_bulan_klines": 2,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WMTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 51,
+      "cacah_bulan_klines": 51,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WOOUSDT"
+    },
+    {
+      "cacah_bulan_funding": 27,
+      "cacah_bulan_klines": 27,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "WUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XAGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 30,
+      "cacah_bulan_klines": 30,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XAIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XANUSDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XAUTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XAUUSDT"
+    },
+    {
+      "cacah_bulan_funding": 8,
+      "cacah_bulan_klines": 15,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "XCNUSDT"
+    },
+    {
+      "cacah_bulan_funding": 52,
+      "cacah_bulan_klines": 64,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "XEMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XLEUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XLMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XMRUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XNYUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XPDUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XPINUSDT"
+    },
+    {
+      "cacah_bulan_funding": 11,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XPLUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XPTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 78,
+      "cacah_bulan_klines": 78,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XRPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XTZUSDT"
+    },
+    {
+      "cacah_bulan_funding": 36,
+      "cacah_bulan_klines": 36,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XVGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 39,
+      "cacah_bulan_klines": 39,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "XVSUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 11,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "YALAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "YBUSDT"
+    },
+    {
+      "cacah_bulan_funding": 20,
+      "cacah_bulan_klines": 20,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "YFIIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 71,
+      "cacah_bulan_klines": 71,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "YFIUSDT"
+    },
+    {
+      "cacah_bulan_funding": 35,
+      "cacah_bulan_klines": 35,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "YGGUSDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZAMAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZBTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 77,
+      "cacah_bulan_klines": 77,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZECUSDT"
+    },
+    {
+      "cacah_bulan_funding": 68,
+      "cacah_bulan_klines": 68,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZENUSDT"
+    },
+    {
+      "cacah_bulan_funding": 18,
+      "cacah_bulan_klines": 18,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZEREBROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZESTUSDT"
+    },
+    {
+      "cacah_bulan_funding": 29,
+      "cacah_bulan_klines": 29,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZETAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 73,
+      "cacah_bulan_klines": 73,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZILUSDT"
+    },
+    {
+      "cacah_bulan_funding": 10,
+      "cacah_bulan_klines": 10,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZKCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 14,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "ZKJUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 7,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZKPUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 25,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZKUSDT"
+    },
+    {
+      "cacah_bulan_funding": 1,
+      "cacah_bulan_klines": 1,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZMUSDT"
+    },
+    {
+      "cacah_bulan_funding": 12,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZORAUSDT"
+    },
+    {
+      "cacah_bulan_funding": 7,
+      "cacah_bulan_klines": 12,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "simbol": "ZRCUSDT"
+    },
+    {
+      "cacah_bulan_funding": 25,
+      "cacah_bulan_klines": 25,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZROUSDT"
+    },
+    {
+      "cacah_bulan_funding": 73,
+      "cacah_bulan_klines": 73,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "ZRXUSDT"
+    },
+    {
+      "cacah_bulan_funding": 9,
+      "cacah_bulan_klines": 9,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "币安人生USDT"
+    },
+    {
+      "cacah_bulan_funding": 6,
+      "cacah_bulan_klines": 6,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "我踏马来了USDT"
+    },
+    {
+      "cacah_bulan_funding": 4,
+      "cacah_bulan_klines": 4,
+      "funding_tanpa_klines": [],
+      "klines_tanpa_funding": [],
+      "simbol": "龙虾USDT"
+    }
+  ],
+  "sampel": [
+    {
+      "baris_pertama": "calc_time,funding_interval_hours,last_funding_rate",
+      "berheader": true,
+      "berkas_dalam_zip": "1000SHIBUSDT-fundingRate-2021-05.csv",
+      "bulan": "2021-05",
+      "byte_zip": 747,
+      "cacah_baris": 64,
+      "checksum_zip_sha256": "a5859365a898713e475e06f6e8064dc1c1f7f76b7fd9d9212cb503a78f050e0c",
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "galat": null,
+      "kelas": [
+        "bulan_awal_2020_2021"
+      ],
+      "kelas_terpilih": "bulan_awal_2020_2021",
+      "simbol": "1000SHIBUSDT",
+      "sumber_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000SHIBUSDT/1000SHIBUSDT-fundingRate-2021-05.zip"
+    },
+    {
+      "baris_pertama": "calc_time,funding_interval_hours,last_funding_rate",
+      "berheader": true,
+      "berkas_dalam_zip": "币安人生USDT-fundingRate-2025-10.csv",
+      "bulan": "2025-10",
+      "byte_zip": 834,
+      "cacah_baris": 69,
+      "checksum_zip_sha256": "a1dd4dda3021e1e1df8098046431aab188935c6b4013cd6af2de6bd6d6379206",
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "galat": null,
+      "kelas": [
+        "non_ascii",
+        "kendali_baru"
+      ],
+      "kelas_terpilih": "non_ascii",
+      "simbol": "币安人生USDT",
+      "sumber_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/%E5%B8%81%E5%AE%89%E4%BA%BA%E7%94%9FUSDT/%E5%B8%81%E5%AE%89%E4%BA%BA%E7%94%9FUSDT-fundingRate-2025-10.zip"
+    },
+    {
+      "baris_pertama": "calc_time,funding_interval_hours,last_funding_rate",
+      "berheader": true,
+      "berkas_dalam_zip": "1000BTTCUSDT-fundingRate-2022-01.csv",
+      "bulan": "2022-01",
+      "byte_zip": 433,
+      "cacah_baris": 17,
+      "checksum_zip_sha256": "6cd2277a23fcd7e2f33f576586663b91beae71fbeb2e0c9da67f3061e04d5d7e",
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "galat": null,
+      "kelas": [
+        "terhenti"
+      ],
+      "kelas_terpilih": "terhenti",
+      "simbol": "1000BTTCUSDT",
+      "sumber_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/1000BTTCUSDT/1000BTTCUSDT-fundingRate-2022-01.zip"
+    },
+    {
+      "baris_pertama": "calc_time,funding_interval_hours,last_funding_rate",
+      "berheader": true,
+      "berkas_dalam_zip": "0GUSDT-fundingRate-2025-09.csv",
+      "bulan": "2025-09",
+      "byte_zip": 1942,
+      "cacah_baris": 233,
+      "checksum_zip_sha256": "47abead08fff4166753e9ac93f8837d0edba5a6ddbebc8bd01492ae4451cc023",
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "galat": null,
+      "kelas": [
+        "kendali_baru"
+      ],
+      "kelas_terpilih": "kendali_baru",
+      "simbol": "0GUSDT",
+      "sumber_url": "https://data.binance.vision/data/futures/um/monthly/fundingRate/0GUSDT/0GUSDT-fundingRate-2025-09.zip"
+    }
+  ],
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "8ad92ed838f535d91d0ccf6c3299ac576b9388b799f64f5fd03279b25f9c511a",
+  "status": "TERUKUR",
+  "sumber_rentang": "reports/semesta_rentang.json",
+  "versi_funding": 1,
+  "waktu_utc": "2026-07-28T22:44:04Z"
+}

@@ -2,8 +2,13 @@ name: pecahan-serapan
 
 # Aturan 33: pemicu menyebut berkas modulnya saja, tanpa pemicu-diri.
 # Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
-# Parquet TIDAK diunggah dan TIDAK di-commit; ia diukur lalu dihapus di runner
-# (lihat pecahan.py dan ADR-A006 yang akan memutuskan persistensi).
+#
+# ADR-A006 bagian 2/2: parquet kini DIPERSISTENKAN. Ia dialirkan ke tar
+# terbelah <=1,8 GB oleh lux_ai/serapan/rilis.py (sumbernya dihapus segera
+# setelah masuk tar, jadi puncak cakram tetap ~ satu ukuran pecahan), lalu
+# diunggah sebagai ASET RILIS ke tag serapan-pecahan-<i>-<run_id>. Aset rilis,
+# bukan git: 32,71 GB tidak boleh masuk riwayat repo. Yang di-commit tetap hanya
+# manifes, log, dan status.
 #
 # Push atas pecahan.py menjalankan MATRIKS pecahan 1..7 secara paralel; pecahan
 # 0 sudah terukur pada run 30353584831. Untuk mengulang satu pecahan saja,
@@ -22,6 +27,10 @@ on:
         description: 'batas simbol untuk uji cepat (0 = tanpa batas)'
         required: false
         default: '0'
+      kemas:
+        description: 'kemas parquet jadi aset rilis (1 = ya)'
+        required: false
+        default: '1'
 
 permissions:
   contents: write
@@ -50,13 +59,33 @@ jobs:
         env:
           PECAHAN_INDEKS: ${{ matrix.indeks }}
           PECAHAN_TOTAL: '8'
+          PECAHAN_KEMAS: '1'
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
           python -m lux_ai.serapan.pecahan > pecahan.log 2>&1
           kode=$?
           mkdir -p reports
           tail -c 40000 pecahan.log > reports/pecahan_${PECAHAN_INDEKS}.log
-          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+
+          # Unggah aset rilis. Kegagalan unggah TIDAK boleh menghapus manifes;
+          # ia dicatat sebagai angka di berkas status (aturan 24).
+          tag="serapan-pecahan-${PECAHAN_INDEKS}-${GITHUB_RUN_ID}"
+          kode_unggah=0
+          cacah_aset=0
+          if ls data/rilis/*.tar >/dev/null 2>&1; then
+            cacah_aset=$(ls data/rilis/*.tar | wc -l)
+            gh release create "$tag" \
+              --title "serapan pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID}" \
+              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; jalur data/parquet/<simbol>/ pulih apa adanya. Periksa dengan sha256sum -c SHA256SUMS." \
+              || true
+            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS --clobber
+            kode_unggah=$?
+            rm -f data/rilis/*.tar
+          fi
+
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
           # Tujuh job mendorong ke cabang yang sama; ulang-coba dengan rebase.
@@ -88,13 +117,31 @@ jobs:
           PECAHAN_INDEKS: ${{ github.event.inputs.indeks || '0' }}
           PECAHAN_TOTAL: '8'
           PECAHAN_BATAS_SIMBOL: ${{ github.event.inputs.batas_simbol || '0' }}
+          PECAHAN_KEMAS: ${{ github.event.inputs.kemas || '1' }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
           python -m lux_ai.serapan.pecahan > pecahan.log 2>&1
           kode=$?
           mkdir -p reports
           tail -c 40000 pecahan.log > reports/pecahan_${PECAHAN_INDEKS}.log
-          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+
+          tag="serapan-pecahan-${PECAHAN_INDEKS}-${GITHUB_RUN_ID}"
+          kode_unggah=0
+          cacah_aset=0
+          if ls data/rilis/*.tar >/dev/null 2>&1; then
+            cacah_aset=$(ls data/rilis/*.tar | wc -l)
+            gh release create "$tag" \
+              --title "serapan pecahan ${PECAHAN_INDEKS} run ${GITHUB_RUN_ID}" \
+              --notes "parquet 1m pecahan ${PECAHAN_INDEKS}/8, commit ${GITHUB_SHA}. Bongkar tiap bagian ke akar repo; periksa dengan sha256sum -c SHA256SUMS." \
+              || true
+            gh release upload "$tag" data/rilis/*.tar data/rilis/SHA256SUMS --clobber
+            kode_unggah=$?
+            rm -f data/rilis/*.tar
+          fi
+
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "kode_keluar": %s,\n  "tag_rilis": "%s",\n  "cacah_aset_tar": %s,\n  "kode_unggah": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$PECAHAN_INDEKS" "$kode" "$tag" "$cacah_aset" "$kode_unggah" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/pecahan_${PECAHAN_INDEKS}_status.json
+
           git config user.name lux-ci
           git config user.email lux-ci@users.noreply.github.com
           git add reports/manifes_pecahan_${PECAHAN_INDEKS}.json 2>/dev/null || true

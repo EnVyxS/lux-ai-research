@@ -1,6 +1,14 @@
-# STATE — versi 9
+# STATE — versi 9 (koreksi 1)
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
+
+## Koreksi dalam emisi ini
+
+Emisi pertama v9 (blob `7f7c42f1886bc865fb13ea4e926c0a2cda4659bc`) menulis
+"MENUNGGU 5" lalu mengoreksi dirinya sendiri menjadi 6 dalam kalimat yang sama.
+Totalnya benar, barisnya tidak. Ini pelanggaran ketiga atas aturan 21 dan saya
+catat, bukan saya hapus diam-diam. Cacah di bawah sudah dihitung ulang.
+Jumlah uji 53 juga sudah naik status dari klaim menjadi terverifikasi.
 
 ## Aturan bernomor
 
@@ -66,14 +74,14 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
    (`tanggal_tak_sepakat_dengan_isi` kosong), bukan lagi 3.
 5. **KC-5 (repo ini)** — label yang mengukur hal lain daripada namanya.
    DIPERBAIKI 2026-07-28 lewat `nilai_klaim_delisting`; empat uji menjaganya.
-6. **KC-6 (arsip, BARU v9)** — berkas 1m dan berkas 5m/15m terbitan Binance
-   TIDAK sepakat di bulan-bulan awal simbol. Terukur: 609 sel OHLC berbeda dari
-   ~905.872 perbandingan (0,067%), seluruhnya di bulan awal, didominasi `open`,
-   `close` hanya beda 2 kali. Bukan cacat kode kami. Bukan pula soal header:
-   FTTUSDT 2022-04 berheader dan gagal, COCOSUSDT 2023-02 berheader dan bersih.
-   Sebabnya BELUM terukur; dua hipotesis bersaing (H1 celah menit, H2 sumber
-   agregasi berbeda) dan ETHUSDT 2020-01 dengan 44.640 baris penuh namun tetap
-   berbeda adalah bukti tandingan untuk H1.
+6. **KC-6 (arsip)** — berkas 1m dan berkas 5m/15m terbitan Binance TIDAK sepakat
+   di bulan-bulan awal simbol. Terukur: 609 sel OHLC berbeda dari ~905.872
+   perbandingan (0,067%), seluruhnya di bulan awal, didominasi `open`, `close`
+   hanya beda 2 kali. Bukan cacat kode kami. Bukan pula soal header: FTTUSDT
+   2022-04 berheader dan gagal, COCOSUSDT 2023-02 berheader dan bersih. Sebabnya
+   BELUM terukur; dua hipotesis bersaing (H1 celah menit, H2 sumber agregasi
+   berbeda) dan ETHUSDT 2020-01 dengan 44.640 baris penuh namun tetap berbeda
+   adalah bukti tandingan untuk H1.
 
 ## Papan skor hipotesis
 
@@ -97,7 +105,7 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-9 | Gerbang OHLC lolos untuk 12 simbol probe (bulan akhir) | TEPAT: 12/12 |
 | R-10 | `trades` cocok, `quote_volume` beda sebagian | MELESET: cocok persis |
 | R-11 | Run probe kedua mengulang 937 dan 21.789 persis | TEPAT |
-| R-12 | Resample pada bulan PERTAMA tiap simbol juga cocok eksak | **MELESET: 609 sel OHLC beda** |
+| R-12 | Resample pada bulan PERTAMA tiap simbol juga cocok eksak | MELESET: 609 sel OHLC beda |
 | R-13 | Peralihan format seragam dan jatuh sebelum 2022-04 | TEPAT: 2022-01 |
 | R-14 | Lebih dari 300 simbol berstatus terhenti | MELESET: 128 |
 | R-15 | Peralihan header monoton dan sama untuk ketiga simbol | TEPAT |
@@ -108,7 +116,7 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-20 | Serapan penuh: 0 berkas non-milidetik dan 0 pelanggaran batas header | menunggu |
 | R-21 | Probe baru: terhenti SRM/COCOS/BTS, FTT masih terbit | TEPAT |
 | R-22 | Angka infrastruktur terulang ketiga kali persis | TEPAT |
-| R-23 | Gerbang dua bulan lolos, `total_beda_kolom_jumlah` = 0 | **MELESET pada kedua klausa** |
+| R-23 | Gerbang dua bulan lolos, `total_beda_kolom_jumlah` = 0 | MELESET pada kedua klausa |
 | R-24 | `tanggal_tak_sepakat_dengan_isi` kosong | TEPAT |
 | R-25 | `bulan_era_tanpa_header` = 10 | TEPAT |
 | R-26 | ≥ 90% bucket `open` beda pada DOGE/BTS berimpit dengan celah menit | menunggu |
@@ -117,15 +125,15 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 
 Cacah dihitung ulang baris demi baris (aturan 21):
 
-- TEPAT 14: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18, R-21, R-22,
-  R-24, R-25.
-- MELESET 7: R-4, R-6, R-8, R-10, R-12, R-14, R-23.
-- MELESET SEPARUH 1: R-3.
-- TIDAK TERADJUDIKASI 0.
-- MENUNGGU 5: R-7, R-19, R-20, R-26, R-27, R-28 — enam baris; MENUNGGU 6.
+- TEPAT — 14 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
+  R-21, R-22, R-24, R-25.
+- MELESET — 7 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23.
+- MELESET SEPARUH — 1 baris: R-3.
+- TIDAK TERADJUDIKASI — 0 baris.
+- MENUNGGU — 6 baris: R-7, R-19, R-20, R-26, R-27, R-28.
 
-Jumlah 14+7+1+0+6 = 28, sama dengan cacah baris R-1..R-28. P-1..P-3 dihitung
-terpisah dan ketiganya masih menunggu.
+14 + 7 + 1 + 0 + 6 = 28, sama dengan cacah baris R-1 sampai R-28. P-1 sampai P-3
+dihitung terpisah dan ketiganya masih menunggu.
 
 ## Daftar ADR
 
@@ -141,7 +149,7 @@ terpisah dan ketiganya masih menunggu.
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI (tiga run). Survei semesta SELESAI. Gerbang resample **MERAH** pada bulan awal (KC-6); serapan penuh TERKUNCI sampai ADR-A004 |
+| T1 Serapan | Probe SELESAI (tiga run). Survei semesta SELESAI. Gerbang resample MERAH pada bulan awal (KC-6); serapan penuh TERKUNCI sampai ADR-A004 |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -167,10 +175,10 @@ terpisah dan ketiganya masih menunggu.
 
 ## Jumlah uji
 
-53 menurut hitungan berkas (7 + 12 + 11 + 16 + 7 baru di
-`tests/test_uji_resample.py`). Laporan CI untuk commit `aaf0f679` BELUM dibaca,
-jadi angka 53 masih klaim, bukan angka terverifikasi. Angka terakhir yang
-terverifikasi adalah 46 (run 30336075738).
+**53, TERVERIFIKASI** — `reports/ci_terakhir.json`, run **30338089143**, commit
+`5d27ce7c`, `kode_keluar: 0`, `cacah_uji: "53 tests collected in 0.34s"`,
+2026-07-28T07:21:46Z. Rinciannya menurut berkas: 7 kontinuitas + 12 serapan +
+11 resample + 16 survei + 7 uji_resample.
 
 ## Utang verifikasi yang belum dibayar
 
@@ -185,13 +193,15 @@ terverifikasi adalah 46 (run 30336075738).
 9. ~~Tanggal berhenti SRM/COCOS/BTS~~ DIBAYAR: 2024-05-28 UTC.
 10. ~~R-5~~ DIBAYAR.
 11. Peralihan format kini teruji 12 simbol; untuk 937 simbol masih klaim (R-19).
-12. ~~Era tanpa header belum diuji resample~~ DIBAYAR: sudah diuji, dan hasilnya
+12. ~~Era tanpa header belum diuji resample~~ DIBAYAR: sudah diuji, hasilnya
     MERAH. Utangnya lunas; masalahnya baru dimulai.
 13. ~~Medan `delisting_klaim_terbukti`~~ DIBAYAR.
 14. ~~Satuan stempel 2024-06..2026-06~~ DIBAYAR.
-15. **BARU**: sebab KC-6 belum terukur. Butuh pengukuran per-bucket: apakah bar
-    yang `open`-nya beda berimpit dengan celah menit (R-26, R-27).
-16. **BARU**: ADR-A004 (kebijakan bulan awal) belum ditulis; serapan penuh
-    terkunci sampai ada.
-17. **BARU**: laporan CI commit `aaf0f679` belum dibaca; jumlah uji 53 belum
-    terverifikasi.
+15. Sebab KC-6 belum terukur. Butuh pengukuran per-bucket: apakah bar yang
+    `open`-nya beda berimpit dengan celah menit (R-26, R-27).
+16. ADR-A004 (kebijakan bulan awal) belum ditulis; serapan penuh terkunci
+    sampai ada.
+17. ~~Jumlah uji 53~~ DIBAYAR: run 30338089143.
+18. Jurnal 08 dan 09 belum pernah dibaca ulang dari `main`; blob sha-nya belum
+    terukur.
+19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca.

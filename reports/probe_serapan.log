@@ -1,6 +1,6 @@
 {
   "nama": "probe_serapan",
-  "waktu_utc": "2026-07-28T08:38:16Z",
+  "waktu_utc": "2026-07-28T09:05:22Z",
   "sidik_kode": "c9b4cf35cda531f49e88ce933866b5eb614e5bace8e235be713bd115e9317380",
   "sumber_arsip": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
   "akar_prefix": "data/futures/um",

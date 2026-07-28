@@ -6,10 +6,13 @@
   "cacah_gagal_checksum": 0,
   "cacah_gagal_unduh": 0,
   "cacah_karantina": 3,
+  "cacah_karantina_tak_terkemas": 0,
   "cacah_parquet_ditulis": 2465,
+  "cacah_parquet_karantina_ditulis": 3,
   "cacah_parquet_tak_terkemas": 0,
   "cacah_simbol_bulan_dengan_baris_dibuang": 0,
   "catatan_bulan_parsial": "bulan pertama dan terakhir tiap simbol PARSIAL; rerata baris per bulan dilarang dikalikan begitu saja (aturan 28)",
+  "catatan_karantina_persistensi": "KC-17: sampai VERSI 5 parquet karantina diukur lalu lenyap bersama runner. Sejak VERSI 6 ia dikemas ke tar terpisah dengan berkas sidik SHA256SUMS_KARANTINA. cacah_karantina_tak_terkemas != 0 berarti cacat itu kambuh. Pecahan tanpa karantina melaporkan rilis_karantina null dan karantina_dipersistenkan true dengan penyebut nol — itu BUKAN bukti pengemas karantina bekerja (aturan 30, 41)",
   "catatan_parquet": "parquet dialirkan ke tar terbelah <=1,8 GB lalu diunggah sebagai aset rilis; parquet_dipersistenkan true HANYA bila tiap tar dibaca ulang, sha256-nya cocok, dan cacah anggotanya sama dengan cacah berkas yang dikemas (aturan 24). cacah_parquet_tak_terkemas != 0 berarti ada parquet yang lenyap antara penulisan dan pengemasan",
   "catatan_rentang": "hasil berlaku untuk pecahan 1 dari 8 saja, bukan untuk 19.598 bulan perpetual_usdt (aturan 20)",
   "daftar_karantina": [
@@ -140,6 +143,7 @@
     "daftar_terpotong": false,
     "kebijakan": "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal"
   },
+  "karantina_dipersistenkan": true,
   "kelas_risiko_kosong": [],
   "kelas_risiko_tersentuh": {
     "bulan_awal_2020_2021": 204,
@@ -20868,6 +20872,7 @@
       "byte_parquet_karantina": 826146,
       "byte_zip": 605676,
       "checksum_zip_sha256": "fbd6ba0ac9fdb0b9b91cd642bd5b1a33347bead8ca3a0d395c531db1227e76fa",
+      "dikemas_karantina": true,
       "funding_ada": null,
       "gagal_checksum": false,
       "gagal_unduh": false,
@@ -39198,6 +39203,7 @@
       "byte_parquet_karantina": 652094,
       "byte_zip": 471074,
       "checksum_zip_sha256": "6740ef66e5ca320f2cdf0a39fea64eb50feef201767d07e169937b40276822a0",
+      "dikemas_karantina": true,
       "funding_ada": null,
       "gagal_checksum": false,
       "gagal_unduh": false,
@@ -51786,6 +51792,7 @@
       "byte_parquet_karantina": 1688972,
       "byte_zip": 1425464,
       "checksum_zip_sha256": "d1803ab84fb6ff7766389db88f4f10834a09f695988c7ad59650dbffb4b53fc9",
+      "dikemas_karantina": true,
       "funding_ada": null,
       "gagal_checksum": false,
       "gagal_unduh": false,
@@ -71752,7 +71759,7 @@
         "jalur": "data/rilis/pecahan_1.part01.tar",
         "melebihi_batas": false,
         "nama": "pecahan_1.part01.tar",
-        "sha256": "e57153c7e50ceff0f79fbafaa58a869e70acd1462a4e31330853c53efedfecf1",
+        "sha256": "dd7867001dbbf4ef1b7425938a3c3dda5163dfcba080d96908d0f5a5fcd50a5c",
         "taksiran_terlampaui": false
       },
       {
@@ -71763,7 +71770,7 @@
         "jalur": "data/rilis/pecahan_1.part02.tar",
         "melebihi_batas": false,
         "nama": "pecahan_1.part02.tar",
-        "sha256": "6b9b32a74d79dfdd0a0a1c1b3d8c1c330600e3365551752360f00d73ea3b6d71",
+        "sha256": "9c01389d33f38d55a764e81ffc91c08f8d9c15605d2116c84cb3914d5d5fe7b5",
         "taksiran_terlampaui": false
       },
       {
@@ -71774,7 +71781,7 @@
         "jalur": "data/rilis/pecahan_1.part03.tar",
         "melebihi_batas": false,
         "nama": "pecahan_1.part03.tar",
-        "sha256": "85f7800b00848d36603a4baf8e72cc72d0700a6cc3b0d6d9c3e77fb187651015",
+        "sha256": "97c054402886e923b858f781c39a1d493325e1b7f4a6952970756950b2292a08",
         "taksiran_terlampaui": false
       }
     ],
@@ -71793,7 +71800,42 @@
     "kepala_anggota": 1536,
     "margin_rekam": 20480,
     "nama_dasar": "pecahan_1",
+    "nama_sums": "SHA256SUMS",
     "nisbah_bagian_per_anggota": 1.001035,
+    "rekam_tar": 10240,
+    "status": "TERKEMAS"
+  },
+  "rilis_karantina": {
+    "bagian": [
+      {
+        "byte": 3174400,
+        "byte_taksir": 3173376,
+        "byte_taksir_dibulatkan": 3194880,
+        "cacah_berkas": 3,
+        "jalur": "data/rilis/pecahan_1_karantina.part01.tar",
+        "melebihi_batas": false,
+        "nama": "pecahan_1_karantina.part01.tar",
+        "sha256": "f2377bf557528853c91395638fa41c108c09e4b70b0a284224bec25de2c48ba8",
+        "taksiran_terlampaui": false
+      }
+    ],
+    "batas_byte": 1800000000,
+    "berkas_sums": "data/rilis/SHA256SUMS_KARANTINA",
+    "byte_anggota_total": 3167212,
+    "byte_bagian_total": 3174400,
+    "cacah_bagian": 1,
+    "cacah_bagian_melebihi_batas": 0,
+    "cacah_bagian_taksiran_terlampaui": 0,
+    "cacah_berkas": 3,
+    "cacah_berkas_hilang": 0,
+    "cacah_berkas_melebihi_batas": 0,
+    "catatan_kompresi": "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+    "catatan_penggugur": "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti manifes menyebut parquet yang tidak ada di cakram. Ketiganya membatalkan klaim persistensi (aturan 24)",
+    "kepala_anggota": 1536,
+    "margin_rekam": 20480,
+    "nama_dasar": "pecahan_1_karantina",
+    "nama_sums": "SHA256SUMS_KARANTINA",
+    "nisbah_bagian_per_anggota": 1.00227,
     "rekam_tar": 10240,
     "status": "TERKEMAS"
   },
@@ -71803,7 +71845,7 @@
     "contoh": []
   },
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "dff5d33d98abc65d0fac9ebd55393c235358ed34e03a51dddeb6ea8d93bd7a63",
+  "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "verifikasi_rilis": {
@@ -71817,6 +71859,17 @@
     "nama_sha_tak_cocok": [],
     "sah": true
   },
-  "versi_pecahan": 5,
-  "waktu_utc": "2026-07-28T19:55:08Z"
+  "verifikasi_rilis_karantina": {
+    "anggota_cocok": true,
+    "cacah_anggota_diharap": 3,
+    "cacah_anggota_terbaca": 3,
+    "cacah_bagian_hilang": 0,
+    "cacah_sha_cocok": 1,
+    "cacah_sha_tak_cocok": 0,
+    "nama_bagian_hilang": [],
+    "nama_sha_tak_cocok": [],
+    "sah": true
+  },
+  "versi_pecahan": 6,
+  "waktu_utc": "2026-07-28T21:44:49Z"
 }

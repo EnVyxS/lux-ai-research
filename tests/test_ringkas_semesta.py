@@ -84,6 +84,32 @@ def test_jalur_cacah_menerima_simbol_ke_angka_dan_menolak_yang_bukan_angka():
     assert rs.ringkas_cacah({})["status"] == rs.TIDAK_MENGUKUR
 
 
+def test_kunci_ditolak_pola_dihitung_bukan_dibuang_diam_diam():
+    # Nama 21 aksara: melebihi batas POLA_SIMBOL, nilainya tetap angka.
+    panjang = "AERGOUSDTSETTLEDXTRAA"
+    assert len(panjang) == 21
+    terkumpul = rs.kumpulkan_cacah(
+        {
+            "bulan_per_simbol": {
+                "BTCUSDT": 78,
+                panjang: 5,
+                "huruf kecil": 7,
+            },
+            "waktu_utc": "2026-07-28T09:23:59Z",
+        }
+    )
+    assert terkumpul["peta"] == {"BTCUSDT": 78}
+    assert terkumpul["cacah_kunci_ditolak_pola"] == 2
+    assert panjang in terkumpul["contoh_kunci_ditolak"]
+    assert terkumpul["panjang_nama_terpanjang"] == 21
+    assert terkumpul["cacah_nilai_bukan_angka"] == 0
+
+    # Kasus negatif: tanpa kunci menyimpang, penggugur wajib tetap ada dan nol.
+    rapi = rs.kumpulkan_cacah({"bulan_per_simbol": {"BTCUSDT": 78}})
+    assert rapi["cacah_kunci_ditolak_pola"] == 0
+    assert rapi["contoh_kunci_ditolak"] == []
+
+
 def test_bentuk_tak_dikenali_ditandai_bukan_ditebak(tmp_path, monkeypatch):
     sumber = tmp_path / "semesta_bulan_1m.json"
     laporan = tmp_path / "ringkas_semesta.json"
@@ -112,7 +138,8 @@ def test_bentuk_tak_dikenali_ditandai_bukan_ditebak(tmp_path, monkeypatch):
 
     # Jalur cacah bulan, bentuk sebenarnya berkas semesta.
     sumber.write_text(
-        '{"bulan_per_simbol": {"0GUSDT": 10, "BTCUSDT": 78}, "waktu_utc": "x"}',
+        '{"bulan_per_simbol": {"0GUSDT": 10, "BTCUSDT": 78, "nama_panjang_sekali_x": 1},'
+        ' "waktu_utc": "x"}',
         encoding="utf-8",
     )
     assert rs.jalankan() == 0
@@ -120,4 +147,6 @@ def test_bentuk_tak_dikenali_ditandai_bukan_ditebak(tmp_path, monkeypatch):
     assert isi["jalur"] == "cacah_bulan"
     assert isi["bentuk_tak_dikenali"] is False
     assert isi["ringkas_cacah"]["total_berkas_bulan"] == 88
+    assert isi["cacah_kunci_ditolak_pola"] == 1
+    assert isi["jumlah_diterima_dan_ditolak"] == 3
     assert isi["status"] == rs.MENGUKUR

@@ -7,8 +7,14 @@ CACAH bulan, bertipe angka) dan `waktu_utc`. Jalur lama untuk peta simbol ->
 DAFTAR bulan sengaja DIPERTAHANKAN, sebab berkas survei lain memakai bentuk itu.
 Bentuk yang tidak dikenali tetap DITANDAI, bukan ditebak.
 
+Sesi 24: pengukuran memberi 934 simbol, bukan 937. Karena itu kunci yang GAGAL
+`POLA_SIMBOL` padahal nilainya angka kini dihitung sebagai
+`cacah_kunci_ditolak_pola`, lengkap dengan contohnya. Sebelumnya kunci semacam
+itu lenyap tanpa jejak, dan penyaring saya sendiri bisa mencuri simbol.
+
 Aturan 10: keluaran diagnostik menandai "bukan_bukti": true.
 Aturan 30: penyebut dicetak eksplisit; bila nol, status TIDAK MENGUKUR.
+Aturan 31: `sidik_data` sumber selalu dicatat.
 """
 
 from __future__ import annotations
@@ -30,6 +36,7 @@ KUNCI_BULAN = ("bulan", "month", "bulan_1m")
 BATAS_AWAL = "2020-01"
 BATAS_AKHIR = "2026-06"
 BATAS_BULAN = 78  # 2020-01..2026-06 inklusif
+BATAS_CONTOH_KUNCI = 10
 TIDAK_MENGUKUR = "TIDAK MENGUKUR"
 MENGUKUR = "MENGUKUR"
 
@@ -88,25 +95,46 @@ def kumpulkan(simpul, keluar=None) -> dict:
     return keluar
 
 
+def penggugur_kosong() -> dict:
+    return {
+        "cacah_nilai_bukan_angka": 0,
+        "cacah_kunci_ditolak_pola": 0,
+        "contoh_kunci_ditolak": [],
+        "panjang_nama_terpanjang": 0,
+    }
+
+
 def kumpulkan_cacah(simpul, keluar=None, penggugur=None) -> dict:
     """Kumpulkan peta simbol -> CACAH bulan (angka bulat, bukan bool).
 
-    Nilai bertipe lain yang kuncinya berpola simbol dihitung sebagai penggugur
-    `cacah_nilai_bukan_angka`, tidak dipaksa menjadi angka.
+    Tiga nasib sebuah kunci dicatat, tidak ada yang dibuang diam-diam:
+    diterima; lolos pola tetapi nilainya bukan angka; atau ditolak pola padahal
+    nilainya angka (`cacah_kunci_ditolak_pola`).
     """
     if keluar is None:
         keluar = {}
     if penggugur is None:
-        penggugur = {"cacah_nilai_bukan_angka": 0}
+        penggugur = penggugur_kosong()
     if isinstance(simpul, dict):
         for kunci, nilai in simpul.items():
-            simbol = POLA_SIMBOL.match(str(kunci))
+            teks = str(kunci)
+            simbol = POLA_SIMBOL.match(teks)
+            angka = isinstance(nilai, int) and not isinstance(nilai, bool)
             if isinstance(nilai, (dict, list)):
                 kumpulkan_cacah(nilai, keluar, penggugur)
-            elif simbol and isinstance(nilai, int) and not isinstance(nilai, bool):
-                keluar[str(kunci)] = nilai
+                continue
+            if simbol and angka:
+                keluar[teks] = nilai
             elif simbol:
                 penggugur["cacah_nilai_bukan_angka"] += 1
+            elif angka:
+                penggugur["cacah_kunci_ditolak_pola"] += 1
+                if len(penggugur["contoh_kunci_ditolak"]) < BATAS_CONTOH_KUNCI:
+                    penggugur["contoh_kunci_ditolak"].append(teks)
+            else:
+                continue
+            if len(teks) > penggugur["panjang_nama_terpanjang"]:
+                penggugur["panjang_nama_terpanjang"] = len(teks)
     elif isinstance(simpul, list):
         for item in simpul:
             kumpulkan_cacah(item, keluar, penggugur)
@@ -186,10 +214,10 @@ def jalankan() -> int:
         "waktu_utc": sekarang(),
         "catatan_metode": (
             "Dua jalur: peta simbol->daftar bulan, atau peta simbol->cacah "
-            "bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci "
-            "diterima sebagai simbol hanya bila berpola simbol DAN nilainya "
-            "cocok salah satu jalur. Bila tak ada yang cocok, laporan menandai "
-            "bentuk_tak_dikenali, bukan menebak (aturan 16)."
+            "bulan (bentuk sebenarnya berkas ini, lihat jurnal 23). Kunci yang "
+            "ditolak POLA_SIMBOL padahal nilainya angka dihitung terpisah, "
+            "tidak dibuang diam-diam (jurnal 24). Bila tak ada jalur yang "
+            "cocok, laporan menandai bentuk_tak_dikenali, bukan menebak."
         ),
     }
     if not SUMBER.exists():
@@ -218,11 +246,14 @@ def jalankan() -> int:
         tulis(LAPORAN, isi)
         return 0
     terkumpul = kumpulkan_cacah(akar)
-    peta_cacah = terkumpul["peta"]
+    peta_cacah = terkumpul.pop("peta")
     isi["jalur"] = "cacah_bulan" if peta_cacah else "tidak ada"
     isi["bentuk_tak_dikenali"] = not peta_cacah
-    isi["cacah_nilai_bukan_angka"] = terkumpul["cacah_nilai_bukan_angka"]
+    isi.update(terkumpul)
     isi["ringkas_cacah"] = ringkas_cacah(peta_cacah)
+    isi["jumlah_diterima_dan_ditolak"] = (
+        isi["ringkas_cacah"]["cacah_simbol"] + terkumpul["cacah_kunci_ditolak_pola"]
+    )
     isi["status"] = isi["ringkas_cacah"]["status"]
     tulis(LAPORAN, isi)
     return 0

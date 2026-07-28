@@ -1,75 +1,121 @@
-# PROMPT KELANJUTAN — v8
+# PROMPT KELANJUTAN — versi 9
 
-Ditulis 2026-07-28. Berkas ini untuk sesi baru atau akun Notion baru: bacalah
-ini lebih dulu, lalu `STATE.md`, lalu dua jurnal terakhir. Jangan mengandalkan
-ingatan percakapan.
+Ditulis 2026-07-28 15.00 WIB. Menggantikan v8 (blob `3f94b82335dfbad038ae35be79ec9b87b79f6135`).
+Tempel SELURUH berkas ini sebagai pesan pertama di sesi atau akun Notion baru.
 
-## Posisi sekarang
+---
 
-- Repo tunggal yang boleh ditulis: **`EnVyxS/lux-ai-research`** (publik, cabang
-  `main`). `lux-research` dan `lux-scalp-research` boleh DIBACA, tidak boleh
-  ditulis, dan HASIL/angkanya tidak boleh masuk ke sini.
-- HEAD saat berkas ini ditulis: commit STATE v9 koreksi 1 + PROMPT v8. HEAD
-  sebelumnya `5d27ce7c135ea2d668d62f7c7920d5f077601148`.
-- Aturan bernomor: **23**. Kelas cacat: **6**. Uji: **53 terverifikasi**
-  (CI run 30338089143, `kode_keluar: 0`).
-- Penomoran berikutnya: jurnal `journal/2026-07-28-13.md`, STATE v10, PROMPT v9,
-  ramalan **R-29**, ADR **A003** (taksonomi) dan **A004** (kebijakan bulan awal),
-  hipotesis pertama masih **H-A001** (belum ada). N_percobaan = 0.
+## Kepada asisten yang membaca ini
 
-## Keadaan pipeline dalam satu paragraf
+Kamu melanjutkan riset LUX-AI. Operator: Diva Juan Nur Taqarrub, GitHub `EnVyxS`,
+zona waktu Asia/Jakarta, bahasa kerja Indonesia. Jangan mulai bekerja sebelum
+menyelesaikan LANGKAH 0 di bawah. Berkas di repo adalah kebenaran; prompt ini
+hanya peta menuju berkas itu.
 
-T0 dan survei arsip selesai. Semesta arsip terukur: 937 simbol, 21.789 berkas
-1m, 2020-01 s.d. 2026-06, batas atas 25,86 GB zip / 39,17 GB parquet. Gerbang
-integritas resample HIJAU untuk bulan terakhir tiap simbol probe (tiga kali
-berturut-turut) tetapi **MERAH untuk bulan awal**: 609 sel OHLC berbeda dari
-~905.872 perbandingan pada 24 bulan (KC-6). Karena itu **serapan penuh
-TERKUNCI** sampai ADR-A004 memutuskan perlakuan bulan awal, dan aturan 23
-melarang melonggarkan gerbang sebelum sebab kegagalannya terukur.
+## LANGKAH 0 — wajib, berurutan
 
-## Tiga langkah berikutnya, berurutan
+1. Baca dokumentasi modul sandbox (`connections.fs.readFiles`) sebelum memanggil
+   fungsi apa pun. Dilarang menebak bentuk masukan alat.
+2. Semua operasi GitHub lewat
+   `connections.mcpServer_github.runTool({toolName, toolArguments})`.
+   `owner` dan `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
+3. Baca dari `main` repo `EnVyxS/lux-ai-research`, berurutan:
+   - `STATE.md` (versi 10) — aturan 1-24, kelas cacat KC-1..KC-6, papan skor
+     R-1..R-31, daftar utang 1-20. INI YANG PALING PENTING.
+   - `decisions/ADR-A001.md` dan `decisions/ADR-A002.md`.
+   - `journal/2026-07-28-14.md` — putusan terakhir.
+   - `PETA_MODUL.md` bila menyentuh modul warisan.
+4. Baru setelah itu jalankan pekerjaan teknis.
 
-1. **Ukur sebab KC-6.** Tambahkan pengukuran per-bucket di
-   `lux_ai/serapan/uji_resample.py` (atau modul diagnostik terpisah bertanda
-   `"bukan_bukti": true` bila ia tidak menyentuh gerbang): untuk tiap bucket yang
-   `open`-nya berbeda, catat apakah menit pertama bucket itu ADA di berkas 1m,
-   dan cacah celah menit per bulan. Ini mengadjudikasi **R-26** dan **R-27**.
-   Uji cara mengukurnya lebih dulu (aturan 12).
-2. **Tulis ADR-A004** setelah sebabnya terukur, bukan sebelumnya. Pilihannya
-   antara: mengecualikan bulan pertama tiap simbol dari backtest (sejalan dengan
-   aturan 17), atau memakai berkas 5m/15m ASLI untuk bulan-bulan itu (melanggar
-   ADR-A002 §3, jadi butuh amandemen tertulis). Angka pendukung wajib ada di ADR.
-3. **Serapan penuh** 8 pecahan (~2.724 berkas / ~4,9 GB / ~1 jam per pecahan)
-   dengan manifes per simbol-bulan: `nama, baris, rentang waktu, checksum,
+## Batasan yang mahal dipelajari ulang
+
+- Sandbox agen TIDAK punya jaringan. Semua unduhan dan pengukuran arsip
+  dijalankan GitHub Actions; agen hanya boleh percaya artefak yang di-commit.
+- Tidak ada alat untuk membaca status GitHub Actions. Status hanya diketahui dari
+  berkas laporan yang di-commit workflow itu sendiri.
+- Tidak ada API patch. `push_files` menulis ulang seluruh isi berkas. Rancang
+  berkas kecil.
+- Setelah mendorong berkas panjang, BACA ULANG dari `main` dan pastikan ekornya
+  hadir (aturan tak bernomor tapi mengikat).
+- Runner: numpy, pandas, pyarrow, pyyaml, pytest tersedia; TIDAK ada scipy dan
+  requests. `data.binance.vision` bisa diakses; `fapi.binance.com` memberi 451.
+- Dilarang menulis apa pun di luar repo `lux-ai-research`. `lux-research` boleh
+  DIBACA saja; hasil dan angkanya tidak pernah boleh masuk.
+
+## Posisi hari ini
+
+HEAD `979d0fee3cd8df75a9a2c0ca0f0ec4fcd0573abe` (di atasnya ada pohon laporan
+yang di-commit runner). Jumlah uji **61, terverifikasi** lewat CI run 30338666532.
+
+T1 serapan: probe 12 simbol SELESAI (tiga run konsisten: 937 simbol, 21.789
+berkas 1m). Survei semesta SELESAI (2020-01..2026-06; 128 terhenti, 809 hidup;
+stempel milidetik seragam pada 237 bulan disampel; batas header 2022-01).
+
+Gerbang resample: bulan AKHIR 12/12 bersih. Bulan AWAL **MERAH**, 9 dari 12
+simbol gagal. Serapan penuh TERKUNCI sampai ADR-A004 ada (aturan 23).
+
+## KC-6 — apa yang sudah terukur
+
+Berkas 1m dan berkas 5m/15m terbitan Binance tidak sepakat pada bulan awal hidup
+simbol. Diagnostik run 30338666516 (`reports/diagnosa_kc6.json`, bertanda
+`"bukan_bukti": true`) mengukur 91.335 bucket pada 12 bulan awal:
+
+- 468 bucket ber-`open` beda, 470 bucket ber-OHLC beda.
+- **0** di antaranya punya menit pertama yang hilang; `persen_terjelaskan_h1` = 0,0.
+- **12 dari 12** bulan awal bersih sempurna: 0 duplikat, 0 menit hilang, 0 jarak
+  bukan 60 detik.
+- Simbol beda: DOGE 223, BTS 118, FTT 53, XRP 38, SRM 16, LINK 12, ETH 5, BNB 3,
+  SOL 2. Bersih: BTC, ADA, COCOS.
+
+**H1 (celah menit) GUGUR.** Arsip 1m utuh; kekurangan data kami bukan sebabnya.
+Yang bertahan **H2**: kedua produk dibangun dari agregasi berbeda di sisi Binance.
+Sebagian beda ~3% (XRPUSDT 2020-01: `open` 0,1970 lawan 0,2032), jadi kebijakan
+berbentuk toleransi TIDAK SAH — ambang yang menampung 3% akan menampung
+pergerakan harga sungguhan dan gerbang berhenti mengukur apa pun.
+
+## Pekerjaan berikutnya, berurutan
+
+1. **Ukur SEJAUH MANA KC-6 bertahan** (utang 20). Perluas
+   `lux_ai/serapan/diagnosa_kc6.py` ke K bulan pertama tiap simbol ditambah satu
+   bulan kendali di tengah hidup simbol. Ini mengadjudikasi R-30 dan R-31.
+   Aturan 20 melarang menyimpulkan di luar rentang yang disampel, dan sejauh ini
+   HANYA bulan pertama yang disampel.
+2. **Tulis ADR-A004** (utang 16) setelah angka nomor 1 ada. Pilihannya:
+   mengecualikan bulan awal, mengkarantinanya, atau memakai berkas 5m/15m ASLI
+   untuk bulan itu (bertentangan dengan ADR-A002 §3, butuh amandemen tertulis).
+   Bukan toleransi.
+3. **Serapan penuh** per ADR-A002 §9: 8 pecahan (~2.724 berkas, ~1,0 jam, ~4,9 GB
+   tiap pecahan), manifes per simbol-bulan (nama, baris, rentang waktu, checksum,
    sumber, funding_ada, baris_dibuang, berheader, awal_sejati, akhir_sejati,
-   satuan stempel`. Ini mengadjudikasi **R-7**, **R-19**, **R-20**. Parquet per
-   simbol-bulan sebagai aset rilis; karantina 7 hari.
+   satuan stempel), parquet sebagai aset rilis, karantina 7 hari. Mengadjudikasi
+   R-7, R-19, R-20.
+4. **Paralel, boleh sekarang** (aturan 3 mengizinkan pembangunan juri di atas 12
+   simbol probe): ADR-A003 taksonomi rezim; juri T4 dengan biaya sejak hari
+   pertama (fee taker/maker terpisah, funding tiap jadwal, slippage selalu
+   merugikan); lapisan validasi (uji bulanan berpasangan + Sidak, ≥300 permutasi
+   per TANGGAL UTC, PBO dan DSR numpy murni).
+5. Utang kecil: baca ulang jurnal 08 dan 09 dari `main` (utang 18); baca
+   `reports/semesta_bulan_1m.json` (utang 19).
 
-Paralel yang diizinkan (aturan 3): membangun juri T4 dan lapisan validasi (uji
-bulanan berpasangan + Sidak, permutasi ≥300 per TANGGAL UTC, PBO dan DSR numpy
-murni) di atas 12 simbol probe. Adjudikasi riset tetap terkunci sampai manifes
-semesta terverifikasi.
+Adjudikasi riset tetap TERKUNCI sampai manifes semesta penuh terverifikasi.
 
-## Cara kerja yang tidak boleh dilupakan
+## Penomoran berikutnya
 
-- Seluruh operasi GitHub lewat
-  `connections.mcpServer_github.runTool({toolName, toolArguments})`, dengan
-  `owner`/`repo` HANYA di dalam `toolArguments`.
-- Sandbox agen TIDAK punya jaringan. Semua pengukuran arsip dijalankan runner;
-  agen hanya boleh percaya artefak yang di-commit.
-- Tidak ada API patch: setiap penulisan mengganti seluruh isi berkas. Setelah
-  mendorong berkas panjang, BACA ULANG dari `main` dan pastikan ekornya hadir.
-- Tidak ada alat untuk membaca status GitHub Actions. Status hanya diketahui
-  dari `reports/*_status.json` yang di-commit workflow.
-- Commit ke `journal/`, `decisions/`, `hipotesis/`, `reports/` sengaja tidak
-  memicu CI; berkas `.md` di akar memicu.
-- Ramalan ditulis SEBELUM run, di commit yang sama dengan kodenya.
-- Setiap angka ringkasan dihitung ulang baris demi baris saat berkas diperbarui
-  (aturan 21). Ini sudah tiga kali saya langgar; periksa cacah papan skor tiap
-  kali menyentuhnya.
+ADR berikutnya **ADR-A003** (dicadangkan) dan **ADR-A004** (wajib). Hipotesis
+pertama **H-A001** (belum ada). Jurnal berikutnya `journal/2026-07-28-15.md`.
+STATE berikutnya **v11**. PROMPT berikutnya **v10**. Ramalan berikutnya **R-32**.
+N_percobaan = 0. Aturan terakhir **24**. Kelas cacat terakhir **KC-6**.
 
-## Berkas yang wajib dibaca di sesi baru
+## Kebiasaan yang menyelamatkan riset ini
 
-`STATE.md`, `journal/2026-07-28-12.md` (adjudikasi KC-6),
-`journal/2026-07-28-11.md` (pra-registrasi R-23..R-25), `decisions/ADR-A001.md`,
-`decisions/ADR-A002.md`, `PETA_MODUL.md`.
+- Tulis ramalan SEBELUM run, lalu adjudikasi jujur. Sudah 8 ramalan MELESET,
+  termasuk beberapa yang paling saya yakini; itu tandanya papan skor bekerja.
+- Hitung ulang setiap angka ringkasan baris demi baris saat berkas diperbarui
+  (aturan 21 lahir dari tiga kali salah hitung).
+- Setiap pengukuran sebab wajib memuat medan yang bisa MENGGUGURKAN hipotesis
+  yang sedang dipercaya (aturan 24).
+- Pisahkan fakta dari asumsi. Tanpa bukti berkas atau alat, tulis "Ini memerlukan
+  verifikasi."
+- "lanjut" dari operator berarti teruskan tanpa konfirmasi.
+- Perbarui STATE.md, jurnal, dan berkas ini secara berkala. Bila konteks hampir
+  penuh, HENTIKAN pekerjaan teknis dan perbarui berkas kontinuitas dulu.

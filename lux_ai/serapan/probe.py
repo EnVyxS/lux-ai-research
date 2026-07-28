@@ -4,6 +4,14 @@ Keluaran: `reports/probe_serapan.json`. Angka di dalamnya adalah PENGUKURAN
 INFRASTRUKTUR, bukan bukti tentang strategi apa pun. Serapan penuh tidak boleh
 dijalankan sebelum angka-angka ini masuk ke ADR-A002 bagian 7.
 
+KC-5 diperbaiki di sini. Versi pertama melaporkan `delisting_klaim_terbukti`
+yang isinya cuma simbol yang ADA di indeks arsip. Arsip menyimpan simbol mati
+selamanya, jadi kehadiran di indeks tidak mengukur delisting sama sekali, dan
+FTTUSDT sempat dilabeli "terbukti delisting" padahal ia masih terbit sampai
+bulan terakhir semesta. Ukuran yang sah adalah jarak bulan terakhir simbol
+terhadap bulan acuan, dan fungsinya dipakai bersama dari `survei.py` supaya
+hanya ada SATU definisi delisting di repo ini.
+
 Dijalankan sebagai `python -m lux_ai.serapan.probe` dari workflow.
 """
 from __future__ import annotations
@@ -14,7 +22,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import arsip, klines
+from . import arsip, klines, survei
 
 AKAR_REPO = Path(__file__).resolve().parents[2]
 LAPORAN = AKAR_REPO / "reports" / "probe_serapan.json"
@@ -32,15 +40,15 @@ PROBE_LIKUID = [
     "LINKUSDT",
 ]
 
-# Klaim: keempatnya sudah delisting dari USDS-M. Klaim ini DIUJI oleh run ini.
-# Simbol yang tidak ada di indeks arsip dicatat sebagai klaim yang dibantah.
+# Klaim: keempatnya sudah delisting dari USDS-M. Klaim ini DIUJI oleh run ini,
+# dan diuji dari bulan terakhir tiap simbol, bukan dari kehadirannya di indeks.
 PROBE_DELISTING_KLAIM = ["FTTUSDT", "SRMUSDT", "COCOSUSDT", "BTSUSDT"]
 
 
 def sidik_kode() -> str:
     """Hash modul serapan yang terlibat, agar laporan dapat direproduksi."""
     h = hashlib.sha256()
-    for nama in sorted(["arsip.py", "klines.py", "probe.py"]):
+    for nama in sorted(["arsip.py", "klines.py", "probe.py", "survei.py"]):
         h.update((Path(__file__).parent / nama).read_bytes())
     return h.hexdigest()
 
@@ -52,6 +60,35 @@ def tulis(path: Path, isi: dict) -> None:
 
 def sekarang() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def nilai_klaim_delisting(klaim: list, bulan_terakhir: dict, bulan_acuan: str) -> list:
+    """Uji tiap klaim delisting terhadap bulan terakhir simbolnya.
+
+    Tiap baris menyebut apa yang benar-benar diketahui: apakah simbol ada di
+    indeks, kapan bulan terakhirnya, berapa bulan ia tertinggal dari acuan, dan
+    putusan `terhenti` yang memakai definisi tunggal di `survei.terhenti`.
+    Simbol yang tidak ada di indeks TIDAK diputuskan terhenti maupun hidup:
+    tanpa bulan terakhir, tidak ada yang bisa diukur.
+    """
+    keluar = []
+    for s in klaim:
+        akhir = bulan_terakhir.get(s)
+        baris = {
+            "simbol": s,
+            "ada_di_indeks": s in bulan_terakhir,
+            "bulan_terakhir": akhir,
+            "bulan_acuan": bulan_acuan,
+        }
+        if akhir is None:
+            baris["selisih_bulan"] = None
+            baris["terhenti"] = None
+            baris["catatan"] = "tidak ada di indeks arsip, jadi tidak ada yang bisa diukur"
+        else:
+            baris["selisih_bulan"] = survei.selisih_bulan(akhir, bulan_acuan)
+            baris["terhenti"] = survei.terhenti(akhir, bulan_acuan)
+        keluar.append(baris)
+    return keluar
 
 
 def ukur_simbol(simbol: str) -> dict:
@@ -110,9 +147,9 @@ def jalankan() -> dict:
     tulis(PROGRES, catatan)
 
     ada = set(semesta)
-    delisting_terbukti = [s for s in PROBE_DELISTING_KLAIM if s in ada]
-    delisting_dibantah = [s for s in PROBE_DELISTING_KLAIM if s not in ada]
-    probe = [s for s in PROBE_LIKUID if s in ada] + delisting_terbukti
+    klaim_ada_di_indeks = [s for s in PROBE_DELISTING_KLAIM if s in ada]
+    klaim_tidak_di_indeks = [s for s in PROBE_DELISTING_KLAIM if s not in ada]
+    probe = [s for s in PROBE_LIKUID if s in ada] + klaim_ada_di_indeks
 
     pengukuran = []
     for i, simbol in enumerate(probe, 1):
@@ -123,6 +160,20 @@ def jalankan() -> dict:
         catatan["probe_selesai"] = f"{i}/{len(probe)}"
         catatan["terakhir"] = simbol
         tulis(PROGRES, catatan)
+
+    # Bulan acuan diambil dari simbol likuid yang jelas masih terbit. Ini acuan
+    # LOKAL milik run probe; bulan tutup semesta yang sahih ada di
+    # reports/survei_semesta.json, dan namanya menyebut asalnya apa adanya.
+    bulan_terakhir = {
+        p["simbol"]: p.get("bulan_terakhir") for p in pengukuran if p.get("bulan_terakhir")
+    }
+    acuan_likuid = [bulan_terakhir[s] for s in PROBE_LIKUID if s in bulan_terakhir]
+    bulan_acuan = max(acuan_likuid) if acuan_likuid else None
+    klaim_diukur = (
+        nilai_klaim_delisting(PROBE_DELISTING_KLAIM, bulan_terakhir, bulan_acuan)
+        if bulan_acuan
+        else []
+    )
 
     catatan["tahap"] = "cacah bulan seluruh semesta"
     tulis(PROGRES, catatan)
@@ -155,8 +206,14 @@ def jalankan() -> dict:
         "total_berkas_bulanan_1m": total_bulan,
         "simbol_gagal_listing": gagal_listing,
         "probe_dipakai": probe,
-        "delisting_klaim_terbukti": delisting_terbukti,
-        "delisting_klaim_dibantah": delisting_dibantah,
+        "bulan_acuan_dari_probe_likuid": bulan_acuan,
+        "jeda_mati_bulan": survei.JEDA_MATI_BULAN,
+        "klaim_delisting_diukur": klaim_diukur,
+        "klaim_delisting_terhenti": [b["simbol"] for b in klaim_diukur if b["terhenti"] is True],
+        "klaim_delisting_masih_terbit": [
+            b["simbol"] for b in klaim_diukur if b["terhenti"] is False
+        ],
+        "klaim_delisting_tidak_di_indeks": klaim_tidak_di_indeks,
         "pengukuran": pengukuran,
         "rerata_byte_zip_per_simbol_bulan": round(rerata_zip),
         "rerata_byte_parquet_per_simbol_bulan": round(rerata_parquet),
@@ -166,6 +223,12 @@ def jalankan() -> dict:
             "Ekstrapolasi memakai rerata simbol probe yang condong LIKUID, jadi "
             "estimasi ini kemungkinan besar TERLALU TINGGI untuk semesta penuh "
             "yang banyak memuat simbol tipis. Perlakukan sebagai batas atas kasar."
+        ),
+        "catatan_delisting": (
+            "Delisting diukur dari jarak bulan terakhir simbol terhadap "
+            "bulan_acuan_dari_probe_likuid, BUKAN dari kehadiran di indeks arsip. "
+            "Medan lama delisting_klaim_terbukti dihapus karena namanya "
+            "menjanjikan lebih daripada yang diukurnya (KC-5, aturan 16)."
         ),
     }
     tulis(LAPORAN, laporan)

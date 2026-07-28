@@ -1,12 +1,15 @@
 """Uji pengemas rilis terbelah. Tanpa jaringan; berkas sintetis kecil.
 
-Batas uji sekarang kelipatan `rilis.REKAM_TAR` (10.240 byte). Versi pertama
-memakai batas 3.072 byte dan itulah yang membuka cacat: `tarfile` membantali
-seluruh arsip ke 10.240 byte, sehingga tar nyata selalu melebihi batas mungil
-itu. Ujinya tidak dilonggarkan — `cacah_bagian_melebihi_batas == 0` tetap
-dituntut — yang diperbaiki adalah taksiran di modul, dan ditambah satu uji yang
-membandingkan taksiran dengan ukuran tar NYATA supaya cacat sejenis tidak lolos
-lagi.
+Dua putaran CI membuktikan model ukuran tar saya terlalu kecil: pertama karena
+bantalan `RECORDSIZE`, lalu karena satu rekam tambahan yang belum terjelaskan.
+Uji di berkas ini TIDAK dilonggarkan — `cacah_bagian_melebihi_batas == 0` dan
+`byte <= byte_taksir_dibulatkan` tetap dituntut. Yang berubah: batas uji kini
+kelipatan rekam yang masuk akal, dan modul memakai margin eksplisit.
+
+Uji penjaga `test_tar_nyata_tidak_pernah_melebihi_taksiran_dibulatkan`
+membandingkan model dengan ukuran tar NYATA di cakram. Itulah satu-satunya uji
+yang menangkap kedua cacat; uji yang hanya mencocokkan angka dengan angka lain
+yang saya hitung sendiri tidak menangkap apa pun.
 """
 
 import tarfile
@@ -16,6 +19,7 @@ import pytest
 from lux_ai.serapan import rilis
 
 REKAM = rilis.REKAM_TAR
+MARGIN = rilis.MARGIN_REKAM
 
 
 def test_perkiraan_byte_anggota_membulat_ke_blok():
@@ -40,15 +44,23 @@ def test_bulatkan_rekam_mengikuti_recordsize_tarfile():
         rilis.bulatkan_rekam(-1)
 
 
+def test_taksir_bagian_selalu_menambah_margin():
+    assert MARGIN == 2 * REKAM
+    assert rilis.taksir_bagian(0) == MARGIN
+    assert rilis.taksir_bagian(1) == REKAM + MARGIN
+    assert rilis.taksir_bagian(REKAM) == REKAM + MARGIN
+    assert rilis.taksir_bagian(REKAM + 1) == 2 * REKAM + MARGIN
+
+
 def test_rencana_belah_tidak_melewati_batas():
-    batas = 3 * REKAM
+    batas = 6 * REKAM
     ukuran = [10_000] * 8  # tiap anggota memakai 10.752 byte
     bagian = rilis.rencana_belah(ukuran, batas=batas)
     assert sum(len(b) for b in bagian) == 8
     assert [i for b in bagian for i in b] == list(range(8))
     assert len(bagian) > 1  # benar-benar terbelah, bukan satu bagian
     for b in bagian:
-        pakai = rilis.bulatkan_rekam(
+        pakai = rilis.taksir_bagian(
             rilis.BYTE_AKHIR_TAR
             + sum(rilis.perkiraan_byte_anggota(ukuran[i]) for i in b)
         )
@@ -56,7 +68,7 @@ def test_rencana_belah_tidak_melewati_batas():
 
 
 def test_rencana_belah_berkas_raksasa_sendirian():
-    bagian = rilis.rencana_belah([100, 100_000, 100], batas=2 * REKAM)
+    bagian = rilis.rencana_belah([100, 100_000, 100], batas=6 * REKAM)
     assert [len(b) for b in bagian] == [1, 1, 1]
 
 
@@ -64,7 +76,7 @@ def test_rencana_belah_menolak_batas_mustahil():
     with pytest.raises(ValueError):
         rilis.rencana_belah([1], batas=512)
     with pytest.raises(ValueError):
-        rilis.rencana_belah([1], batas=REKAM - 1)
+        rilis.rencana_belah([1], batas=REKAM + MARGIN - 1)
 
 
 def _buat(tmp_path, nama, byte_isi):
@@ -76,24 +88,25 @@ def _buat(tmp_path, nama, byte_isi):
 
 def test_pengemas_membelah_menghapus_sumber_dan_menulis_sums(tmp_path):
     nama = [
-        _buat(tmp_path, f"data/parquet/AUSDT/A-1m-2025-0{i}.parquet", 9_000)
-        for i in range(1, 7)
+        _buat(tmp_path, f"data/parquet/AUSDT/A-1m-2025-{i:02d}.parquet", 9_000)
+        for i in range(1, 9)
     ]
     kemas = rilis.PengemasBerbelah(
-        akar=str(tmp_path), nama_dasar="pecahan_9", batas=2 * REKAM
+        akar=str(tmp_path), nama_dasar="pecahan_9", batas=8 * REKAM
     )
     for n in nama:
         assert kemas.tambah(n)["ditambahkan"] is True
     laporan = kemas.tutup()
 
     assert laporan["status"] == "TERKEMAS"
-    assert laporan["cacah_berkas"] == 6
-    assert laporan["cacah_bagian"] == 3  # dua anggota 9.728 byte per bagian
+    assert laporan["cacah_berkas"] == 8
+    assert laporan["cacah_bagian"] > 1  # benar-benar terbelah
     assert laporan["cacah_bagian_melebihi_batas"] == 0
     assert laporan["cacah_bagian_taksiran_terlampaui"] == 0
     assert laporan["cacah_berkas_melebihi_batas"] == 0
     assert laporan["cacah_berkas_hilang"] == 0
-    assert laporan["byte_anggota_total"] == 6 * 9_000
+    assert laporan["byte_anggota_total"] == 8 * 9_000
+    assert sum(b["cacah_berkas"] for b in laporan["bagian"]) == 8
     # sumber dihapus supaya puncak cakram tetap ≈ satu bagian
     for n in nama:
         assert not (tmp_path / n).exists()
@@ -105,11 +118,11 @@ def test_pengemas_membelah_menghapus_sumber_dan_menulis_sums(tmp_path):
 
 
 def test_tar_nyata_tidak_pernah_melebihi_taksiran_dibulatkan(tmp_path):
-    """Penjaga cacat yang lolos ke CI: model ukuran wajib ≥ kenyataan."""
+    """Penjaga cacat yang lolos ke CI dua kali: model wajib ≥ kenyataan."""
     for i, isi in enumerate([1, 511, 512, 513, 4_096, 20_000]):
         _buat(tmp_path, f"data/parquet/BUSDT/B-{i}.parquet", isi)
     kemas = rilis.PengemasBerbelah(
-        akar=str(tmp_path), nama_dasar="p_taksir", batas=2 * REKAM
+        akar=str(tmp_path), nama_dasar="p_taksir", batas=6 * REKAM
     )
     for i in range(6):
         kemas.tambah(f"data/parquet/BUSDT/B-{i}.parquet")
@@ -136,7 +149,7 @@ def test_pengemas_memulihkan_jalur_asli(tmp_path):
 
 def test_pengemas_menolak_batas_mustahil(tmp_path):
     with pytest.raises(ValueError):
-        rilis.PengemasBerbelah(akar=str(tmp_path), batas=REKAM - 1)
+        rilis.PengemasBerbelah(akar=str(tmp_path), batas=REKAM)
 
 
 def test_pengemas_mencatat_berkas_hilang(tmp_path):
@@ -152,7 +165,9 @@ def test_pengemas_mencatat_berkas_hilang(tmp_path):
 def test_verifikasi_sah_lalu_gugur_saat_tar_dirusak(tmp_path):
     for i in range(3):
         _buat(tmp_path, f"data/parquet/AUSDT/A-1m-2025-0{i}.parquet", 700)
-    kemas = rilis.PengemasBerbelah(akar=str(tmp_path), nama_dasar="p1", batas=REKAM)
+    kemas = rilis.PengemasBerbelah(
+        akar=str(tmp_path), nama_dasar="p1", batas=4 * REKAM
+    )
     for i in range(3):
         kemas.tambah(f"data/parquet/AUSDT/A-1m-2025-0{i}.parquet")
     laporan = kemas.tutup()
@@ -169,7 +184,7 @@ def test_verifikasi_sah_lalu_gugur_saat_tar_dirusak(tmp_path):
 
 
 def test_verifikasi_gugur_saat_taksiran_terlampaui(tmp_path):
-    """Medan penggugur baru wajib membatalkan kesahihan, bukan hanya dicatat."""
+    """Medan penggugur wajib MEMBATALKAN kesahihan, bukan sekadar dicatat."""
     _buat(tmp_path, "data/parquet/AUSDT/A-1m-2025-01.parquet", 100)
     kemas = rilis.PengemasBerbelah(akar=str(tmp_path), nama_dasar="p3")
     kemas.tambah("data/parquet/AUSDT/A-1m-2025-01.parquet")

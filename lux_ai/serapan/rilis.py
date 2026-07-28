@@ -13,32 +13,39 @@ Rancangan:
 - **Tar tanpa gzip.** Parquet sudah terkompresi; gzip di atasnya membakar CPU
   untuk penghematan yang mendekati nol.
 - **Batas 1,8 GB**, bukan 2 GB, menyisakan ruang bagi kepala tar dan bantalan.
-  Ukuran bagian ditaksir SEBELUM anggota ditambahkan; bila taksirannya melewati
-  batas, bagian baru dibuka lebih dulu.
 - **Berkas tunggal yang lebih besar dari batas tidak dipecah byte-nya.** Ia
   ditempatkan di bagiannya sendiri dan dicatat di `cacah_berkas_melebihi_batas`.
   Memecah satu berkas parquet akan membuat bagian tar tak bisa dibaca sendiri.
 
-Dua lapis bantalan tar, dan lapis kedua sempat saya lupakan:
+## Ukuran tar: apa yang saya tahu, dan apa yang tidak
 
-1. tiap anggota memakai satu blok kepala 512 byte + isinya dibulatkan ke 512;
-2. **seluruh arsip dibulatkan ke `tarfile.RECORDSIZE` = 10.240 byte.**
+Yang TERUKUR dan pasti:
 
-Versi pertama modul ini hanya menghitung lapis 1. Akibatnya tar mungil bisa
-nyata berukuran 10.240 byte sementara taksirannya 2.560, dan medan penggugur
-`cacah_bagian_melebihi_batas` menyala pada batas kecil. CI menangkapnya (2 uji
-gagal, run `30369683601`). Pada batas produksi 1,8 GB selisih 10 KB itu tak
-berarti, tetapi taksiran yang tidak sepadan dengan kenyataan adalah cacat model,
-dan cacat model dibetulkan di modelnya — bukan dengan melonggarkan uji atau
-medan penggugur (aturan 23).
+1. tiap anggota memakai satu blok kepala 512 byte + isi dibulatkan ke 512;
+2. ukuran tar nyata selalu kelipatan `tarfile.RECORDSIZE` = 10.240 byte;
+3. **tar nyata bisa satu rekam LEBIH BESAR daripada yang diramalkan aritmetika
+   blok + dua blok penutup.** Diukur CI run `30370456172`: bagian dengan 9.216
+   byte anggota berukuran nyata 20.480, bukan 10.240.
+
+Yang TIDAK saya ketahui: mengapa rekam tambahan itu ada. **Ini memerlukan
+verifikasi.** Karena itu modul ini berhenti memodelkan isi perut pustaka dan
+memakai **margin eksplisit** `MARGIN_REKAM` = 2 rekam. Dua, bukan satu, supaya
+marginnya tidak persis sebesar gejala yang baru satu kali terukur — sampel satu
+tidak boleh menjadi angka pas (aturan 39). Pada batas produksi 1,8 GB, 20 KB itu
+0,001%; harganya nol dan ia menutup ketidaktahuan yang nyata.
+
+Semua keputusan pembelahan lewat SATU fungsi, `taksir_bagian()`, supaya model
+ukuran tidak bisa berbeda antara `rencana_belah` dan `PengemasBerbelah`
+(aturan 9).
 
 Medan penggugur (aturan 24): `cacah_bagian_melebihi_batas`,
 `cacah_berkas_melebihi_batas`, `cacah_bagian_taksiran_terlampaui`, dan
 `verifikasi()` yang membaca ulang tiap tar lalu mencocokkan cacah anggota dan
 sha256. Bila salah satu tidak nol atau tidak cocok, rilisnya TIDAK sah dan tidak
-boleh dianggap persistensi.
+boleh dianggap persistensi. `cacah_bagian_taksiran_terlampaui` menangkap cacat
+model ini dua kali berturut-turut; ia tidak boleh dilunakkan.
 
-Aturan yang ditegakkan: 7, 8, 16, 21, 23, 24, 30, 32.
+Aturan yang ditegakkan: 7, 8, 9, 16, 21, 23, 24, 30, 32, 39.
 """
 
 from __future__ import annotations
@@ -52,7 +59,8 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence
 BATAS_BAGIAN = 1_800_000_000
 BLOK_TAR = 512
 BYTE_AKHIR_TAR = 2 * BLOK_TAR  # dua blok nol penutup arsip
-REKAM_TAR = tarfile.RECORDSIZE  # 10.240 byte; seluruh arsip dibulatkan ke ini
+REKAM_TAR = tarfile.RECORDSIZE  # 10.240 byte; ukuran tar selalu kelipatan ini
+MARGIN_REKAM = 2 * REKAM_TAR  # bantalan tak terjelaskan yang terukur di CI
 NAMA_SUMS = "SHA256SUMS"
 AKAR_RILIS = "data/rilis"
 POTONG_BACA = 1024 * 1024
@@ -68,11 +76,7 @@ def perkiraan_byte_anggota(ukuran: int) -> int:
 
 
 def bulatkan_rekam(byte: int) -> int:
-    """Bulatkan ke atas ke kelipatan `REKAM_TAR`, seperti yang `tarfile` tulis.
-
-    Fungsi murni dan sengaja terpisah supaya lapis bantalan kedua punya nama,
-    punya uji sendiri, dan tidak bisa lagi terlupakan diam-diam (aturan 16).
-    """
+    """Bulatkan ke atas ke kelipatan `REKAM_TAR`, seperti yang `tarfile` tulis."""
     byte = int(byte)
     if byte < 0:
         raise ValueError("byte tidak boleh negatif")
@@ -80,26 +84,37 @@ def bulatkan_rekam(byte: int) -> int:
     return rekam * REKAM_TAR
 
 
+def taksir_bagian(byte_anggota_berbantalan: int) -> int:
+    """Taksiran ATAS ukuran satu bagian tar; satu-satunya model yang dipakai.
+
+    Sengaja konservatif: pembulatan rekam ditambah `MARGIN_REKAM`. Taksiran yang
+    lebih kecil daripada kenyataan pernah membuat medan penggugur menyala palsu
+    dua kali (CI run `30369683601` dan `30370456172`); taksiran yang lebih besar
+    hanya membuat bagian sedikit lebih kecil daripada perlu.
+    """
+    return bulatkan_rekam(byte_anggota_berbantalan) + MARGIN_REKAM
+
+
 def batas_terlalu_kecil(batas: int) -> bool:
-    """Batas mustahil: tak sanggup memuat satu rekam pun."""
-    return int(batas) < REKAM_TAR
+    """Batas mustahil: tak sanggup memuat satu rekam beserta marginnya."""
+    return int(batas) < REKAM_TAR + MARGIN_REKAM
 
 
 def rencana_belah(ukuran: Sequence[int], batas: int = BATAS_BAGIAN) -> List[List[int]]:
     """Bagi indeks berkas ke bagian-bagian tar, tanpa menyentuh cakram.
 
     Fungsi murni, supaya aritmetika pembelahan bisa diuji tanpa jaringan dan
-    tanpa berkas besar (aturan 13-14). `PengemasBerbelah` memakai aturan
-    keputusan yang sama, termasuk pembulatan rekam.
+    tanpa berkas besar (aturan 13-14). `PengemasBerbelah` memakai `taksir_bagian`
+    yang sama persis.
     """
     if batas_terlalu_kecil(batas):
-        raise ValueError("batas terlalu kecil untuk memuat satu rekam tar")
+        raise ValueError("batas terlalu kecil untuk memuat satu rekam beserta margin")
     bagian: List[List[int]] = []
     kini: List[int] = []
     byte_kini = BYTE_AKHIR_TAR
     for i, u in enumerate(ukuran):
         tambahan = perkiraan_byte_anggota(u)
-        if kini and bulatkan_rekam(byte_kini + tambahan) > batas:
+        if kini and taksir_bagian(byte_kini + tambahan) > batas:
             bagian.append(kini)
             kini = []
             byte_kini = BYTE_AKHIR_TAR
@@ -134,7 +149,9 @@ class PengemasBerbelah:
         batas: int = BATAS_BAGIAN,
     ) -> None:
         if batas_terlalu_kecil(batas):
-            raise ValueError("batas terlalu kecil untuk memuat satu rekam tar")
+            raise ValueError(
+                "batas terlalu kecil untuk memuat satu rekam beserta margin"
+            )
         self.akar = Path(akar)
         self.nama_dasar = nama_dasar
         self.tujuan = self.akar / tujuan
@@ -170,18 +187,18 @@ class PengemasBerbelah:
         self._tar = None
         jalur = self._jalur_kini
         byte_nyata = int(jalur.stat().st_size)
-        taksir_bulat = bulatkan_rekam(self._byte_taksir)
+        taksir = taksir_bagian(self._byte_taksir)
         self.bagian.append(
             {
                 "nama": jalur.name,
                 "jalur": str(Path(self.rel_tujuan) / jalur.name),
                 "byte": byte_nyata,
                 "byte_taksir": self._byte_taksir,
-                "byte_taksir_dibulatkan": taksir_bulat,
+                "byte_taksir_dibulatkan": taksir,
                 "cacah_berkas": self._cacah_kini,
                 "sha256": sha256_berkas(jalur),
                 "melebihi_batas": byte_nyata > self.batas,
-                "taksiran_terlampaui": byte_nyata > taksir_bulat,
+                "taksiran_terlampaui": byte_nyata > taksir,
             }
         )
         self._jalur_kini = None
@@ -204,14 +221,14 @@ class PengemasBerbelah:
 
         ukuran = int(sumber.stat().st_size)
         tambahan = perkiraan_byte_anggota(ukuran)
-        if bulatkan_rekam(BYTE_AKHIR_TAR + tambahan) > self.batas:
+        if taksir_bagian(BYTE_AKHIR_TAR + tambahan) > self.batas:
             self.cacah_berkas_melebihi_batas += 1
 
         if self._tar is None:
             self._buka()
         elif (
             self._cacah_kini
-            and bulatkan_rekam(self._byte_taksir + tambahan) > self.batas
+            and taksir_bagian(self._byte_taksir + tambahan) > self.batas
         ):
             self._tutup_bagian()
             self._buka()
@@ -248,6 +265,7 @@ class PengemasBerbelah:
             "nama_dasar": self.nama_dasar,
             "batas_byte": self.batas,
             "rekam_tar": REKAM_TAR,
+            "margin_rekam": MARGIN_REKAM,
             "cacah_bagian": len(self.bagian),
             "cacah_berkas": self.cacah_berkas,
             "byte_anggota_total": self.byte_anggota_total,
@@ -278,7 +296,7 @@ class PengemasBerbelah:
             "catatan_kompresi": (
                 "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per "
                 "anggota mendekati 1 dan selisihnya adalah bantalan 512 byte per "
-                "anggota ditambah pembulatan rekam 10.240 byte per bagian"
+                "anggota, pembulatan rekam 10.240 byte, dan margin 20.480 byte"
             ),
         }
 

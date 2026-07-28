@@ -1,0 +1,67 @@
+{
+  "bukan_bukti": false,
+  "byte_parquet_total": 4574062521,
+  "byte_zip_total": 3706400014,
+  "cacah_gagal_checksum": 0,
+  "cacah_gagal_unduh": 0,
+  "cacah_simbol_bulan_dengan_baris_dibuang": 0,
+  "catatan_bulan_parsial": "bulan pertama dan terakhir tiap simbol PARSIAL; rerata baris per bulan dilarang dikalikan begitu saja (aturan 28)",
+  "catatan_parquet": "parquet ditulis, diukur, lalu dihapus; bentuk persistensi menunggu ADR-A006",
+  "catatan_rentang": "hasil berlaku untuk pecahan 5 dari 8 saja, bukan untuk 19.598 bulan perpetual_usdt (aturan 20)",
+  "gerbang": {
+    "baris_diperiksa": 117671896,
+    "contoh_gagal": [],
+    "pelanggaran_per_klausa": {
+      "deret_tidak_kosong": 0,
+      "jarak_60_detik": 0,
+      "satuan_milidetik": 0,
+      "selaras_menit": 0,
+      "tanpa_duplikat": 0,
+      "tanpa_menit_hilang": 0
+    },
+    "persen_lolos": 100.0,
+    "simbol_bulan_dinilai": 2741,
+    "simbol_bulan_gagal": 0,
+    "simbol_bulan_lolos": 2741,
+    "slot_diperiksa": 117671896
+  },
+  "jenis_instrumen_unik": [
+    "perpetual_usdt"
+  ],
+  "jumlah_baris": 117671896,
+  "jumlah_baris_dibuang": 0,
+  "kelas_risiko_kosong": [
+    "non_ascii"
+  ],
+  "kelas_risiko_tersentuh": {
+    "bulan_awal_2020_2021": 297,
+    "kendali_baru": 1307,
+    "non_ascii": 0,
+    "pra_header": 305,
+    "terhenti": 21
+  },
+  "nisbah_parquet_per_zip": 1.2341,
+  "parquet_dipersistenkan": false,
+  "pecahan": {
+    "cacah_simbol": 98,
+    "cacah_simbol_gagal_daftar": 0,
+    "contoh_gagal_daftar": [],
+    "indeks": 5,
+    "total": 8
+  },
+  "penyebut": {
+    "simbol_bulan_diminta": 2741,
+    "simbol_bulan_terunduh": 2741
+  },
+  "selisih_cacah_bulan": {
+    "cacah_simbol_berselisih": 0,
+    "catatan": "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+    "contoh": []
+  },
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "059df499e83b8d6c3c6b7f87f0dc220ea051e322c7c33f8b0351b0cbe12369ec",
+  "status": "TERUKUR",
+  "sumber_rentang": "reports/semesta_rentang.json",
+  "versi_pecahan": 2,
+  "waktu_utc": "2026-07-28T13:38:15Z"
+}

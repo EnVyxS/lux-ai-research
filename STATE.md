@@ -1,13 +1,13 @@
-# STATE — versi 24
+# STATE — versi 25
 
 Diperbarui: 2026-07-29 (sesi 53). Aturan hanya BERTAMBAH; jangan menulis ulang
-dari ingatan. v24 disusun di atas teks v23 yang dibaca langsung dari `main`
-(blob `c28a00be`), ditambah kedelapan log run **`30389402113`**.
+dari ingatan. v25 disusun di atas teks v24 yang dibaca langsung dari `main`
+(blob `ae5a077f`), ditambah kedelapan log run **`30396803601`**.
 
-Peristiwa terbesar sejak v23: **data serapan akhirnya bertahan.** 19.586 parquet
-yang lolos gerbang kini tersimpan sebagai aset rilis terverifikasi. Sejak v20
-STATE selalu menutup dengan kalimat "semesta ini masih ANGKA tanpa data";
-kalimat itu tidak berlaku lagi.
+Peristiwa terbesar sejak v24: **semesta bertahan UTUH, termasuk yang cacat.**
+v24 menutup dengan satu lubang — 12 parquet karantina diukur lalu lenyap. Lubang
+itu tertutup. Yang tersisa bukan lagi soal apa yang disimpan, melainkan apakah
+yang tersimpan bisa diambil kembali oleh mesin lain.
 
 ## Aturan bernomor
 
@@ -53,6 +53,13 @@ definisi berdampingan.
     tafsir dan meleset di bawah tafsir lain, ia diadjudikasi MELESET. Lahir dari
     R-131, yang pitanya disusun untuk delapan pecahan tetapi medannya hanya ada
     pada tujuh.
+45. **[v25] Keatomikan push pemicu.** Sebuah push yang MENYALAKAN run wajib
+    memuat setiap berkas yang run itu bergantung padanya, dan daftar berkas itu
+    wajib dihitung ulang tepat sebelum dikirim. GitHub Actions memakai berkas
+    workflow pada commit PEMICU, sehingga perbaikan workflow yang menyusul di
+    commit berikutnya TIDAK berlaku untuk run yang sedang berjalan. Lahir dari
+    `57a04f1e`: empat berkas direncanakan, tiga terkirim, dan run VERSI 6
+    berjalan dengan workflow lama sehingga `SHA256SUMS_KARANTINA` tidak terunggah.
 
 ## Kelas cacat
 
@@ -62,22 +69,24 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
 - **KC-14 [v21, dipersempit v22] — menit hilang NYATA di arsip 1m, hadir di
   KEDUA representasi.** **9** simbol-bulan, **6.375 menit** (425×15). Sebab
   tidak diketahui (H-A004, tak dapat diuji). Kebijakan: karantina (ADR-A006).
+  Kesembilan berkasnya kini TERSIMPAN sebagai aset tar karantina.
 - **KC-15 [v22] — berkas klines BULANAN dapat kehilangan HARI UTC penuh yang
   datanya utuh di berkas HARIAN.** **3** simbol-bulan, semuanya BNXUSDT 2022,
   **7.200 menit = 5×1440**. Kebijakan: ADR-A007 (pemulihan dari harian).
+  Ketiga berkasnya kini TERSIMPAN — ini bahan baku pemulihannya.
 - 9 + 3 = **12** karantina; 6.375 + 7.200 = **13.575** menit ✅
-- **KC-16 DITARIK [v23] — nomornya TETAP kosong selamanya.** Dugaan "gerbang
-  buta terhadap tepi bulan" GUGUR; 210 menit BNXUSDT 2022-04 adalah awal
-  pengutipan yang sah.
+- **KC-16 DITARIK [v23] — nomornya TETAP kosong selamanya.**
 - **KC-17 [v24] — parquet karantina tidak dipersistenkan meskipun diukur dan
-  didaftar.** Pengemas di `pecahan.py` hanya menerima `baris.get("parquet")`,
-  sedangkan baris karantina menaruh jalurnya di `parquet_karantina`. Akibatnya
-  **12 berkas, 13.247.705 B** hilang bersama runner, padahal ADR-A006 berbunyi
-  "disisihkan, bukan dibuang". Bukti dua arah: kode, dan selisih
-  `simbol_bulan_dinilai` − `cacah_berkas` = cacah karantina di tiap pecahan.
-  **Koreksi penomoran (aturan 29):** jurnal 59 menamainya KC-16. Nomor itu sudah
-  terikat permanen pada tuduhan yang ditarik di v23, jadi kelas ini bernomor
-  **KC-17**; jurnal 59 dibiarkan apa adanya dan koreksinya dicatat di sini.
+  didaftar. DITUTUP [v25].** Sebab: pengemas hanya menerima `baris.get("parquet")`,
+  sedangkan baris karantina menaruh jalurnya di `parquet_karantina`; 12 berkas,
+  13.247.705 B hilang bersama runner. Perbaikan: `pecahan.py` VERSI 6 dengan
+  pengemas kedua yang dibuat MALAS, `rilis.PengemasBerbelah(nama_sums=…)`, dan
+  medan penggugur `cacah_karantina_tak_terkemas`. Bukti penutupan bukan
+  keberadaan tar, melainkan `verifikasi_rilis_karantina` yang membaca ulang tiap
+  tar, mencocokkan sha256, dan menemukan cacah anggota sama dengan cacah berkas
+  yang dikemas pada keenam pecahan yang punya karantina (run `30396803601`).
+  **Koreksi penomoran (aturan 29):** jurnal 59 menamainya KC-16; nomor itu
+  terikat permanen pada tuduhan yang ditarik di v23.
 
 ## Hipotesis
 
@@ -86,41 +95,36 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
 - **H-A003: MENANG pada 3, GUGUR pada 9.**
 - **H-A004: TIDAK TERUJI dan tidak dapat diuji** (`fapi.binance.com` → 451).
 - **H-A005: GUGUR pada rentang yang disampel [v23]** (37 bulan tengah).
-- **H-A006 [v24] — serapan bersifat deterministik.** MENANG pada rentang luas:
-  kedelapan pecahan pada run `30389402113` menghasilkan `jumlah_baris`,
-  `byte_parquet_total`, cacah karantina, dan `nisbah_parquet_per_zip` yang
-  identik dengan run `30383278359` (pecahan 1..7) dan `30353584831` (pecahan 0),
-  melintasi tiga versi kode. Belum diuji pada rentang waktu panjang — arsip
-  historis bisa saja direvisi kelak.
+- **H-A006 — serapan bersifat deterministik. MENANG, kini pada EMPAT run
+  melintasi empat versi kode.** Run `30396803601` (VERSI 6) menghasilkan
+  `jumlah_baris`, `byte_parquet_total`, cacah karantina, dan
+  `nisbah_parquet_per_zip` yang identik byte demi byte dengan `30389402113`
+  (VERSI 5), `30383278359` (VERSI 4, pecahan 1..7), dan `30353584831` (pecahan
+  0). `sidik_data` tetap `6128fbb0…` di seluruhnya. Belum diuji pada rentang
+  waktu panjang — arsip historis bisa saja direvisi kelak.
 
 ## Papan skor prediksi
 
 R-1..R-120 dirinci v23: TEPAT 78, MELESET 28, SEPARUH 4, TIDAK TERADJUDIKASI 4,
-MENUNGGU 6 = 120. R-121..R-131 di jurnal 56. R-132..R-138 di jurnal 56–58.
+MENUNGGU 6 = 120. R-121..R-138 di jurnal 56–58 dan tabel v24.
 
 | # | Prediksi | Status |
 |---|---|---|
-| R-129 | nisbah bagian per anggota 1,0000..1,0100 | TEPAT (1,00103..1,00114) |
-| R-130 | `cacah_berkas` = `cacah_parquet_ditulis` | TEPAT |
-| R-131 | total `byte_anggota_total` 31,4..34,0 GB | **MELESET** (28,59 GB pada tujuh pecahan; aturan 44) |
-| R-132 | perbaikan pax lolos CI | TEPAT (187 uji, kode 0) |
-| R-133 | uji 120 anggota menangkap cacat lama | TEPAT |
-| R-134 | `sah` = true di ketujuh pecahan VERSI 4 | TEPAT |
-| R-135 | 3 bagian tiap pecahan; total 21 ± 2 | **SEPARUH** (total 20 ✓; pecahan 3 tetap 2) |
-| R-136 | kedelapan `sah`; pecahan 0: 2.408 anggota, 3 bagian, 4,10..4,14 GB | TEPAT |
-| R-137 | 19.586 anggota; 32,69..32,72 GB | TEPAT (19.586; 32.706.262.375 B) |
-| R-138 | 23 ± 2 bagian; nol taksiran terlampaui | TEPAT (23; 0) |
+| R-139 | karantina: nol tak terkemas, 12 anggota, 13.247.705 B, tiap tar < 5 MB | TEPAT (tar terbesar 4.433.920 B) |
+| R-140 | 19.586 anggota utama; 19.586+12 = 19.598; `sah` ×8 | TEPAT |
+| R-141 | nol perubahan angka serapan vs `30389402113` | TEPAT (baris, zip, parquet, menit hilang identik) |
+| R-142 | `rilis_karantina` null tepat di P2 dan P5; `cacah_aset_tar` 4,4,3,3,4,3,4,4 = 29 | TEPAT |
+| R-143 | CI 190 uji, kode 0 | TEPAT (run `30396875564`) |
 
-**Total R-1..R-141** (aturan 21): TEPAT **91**; MELESET **32**; SEPARUH **5**;
-TIDAK TERADJUDIKASI **4**; MENUNGGU **9** (R-7, R-19, R-20, R-28, R-36, R-37,
-R-139, R-140, R-141). 91+32+5+4+9 = **141** ✅ Ramalan berikutnya **R-142**.
-N_percobaan = 0.
+**Total R-1..R-143** (aturan 21): TEPAT **96**; MELESET **32**; SEPARUH **5**;
+TIDAK TERADJUDIKASI **4**; MENUNGGU **6** (R-7, R-19, R-20, R-28, R-36, R-37).
+96+32+5+4+6 = **143** ✅ Ramalan berikutnya **R-144**. N_percobaan = 0.
 
-Catatan kejujuran: jurnal 57 mengadjudikasi ulang R-104..R-106 yang sebenarnya
-sudah TEPAT sejak jurnal 50. Pengukuran ulangnya sah, tetapi tidak dihitung dua
-kali di sini. Dan tujuh TEPAT terakhir sebagian besar berpita longgar atau
-disusun setelah sebagian besar buktinya terlihat — satu-satunya yang benar-benar
-berisiko adalah R-131 dan R-135, dan keduanya jatuh.
+Catatan kejujuran yang wajib dibaca bersama angka 96 itu: lima TEPAT terakhir
+didaftarkan sebelum run, tetapi hanya R-139 dan R-141 yang benar-benar bisa
+gugur oleh satu byte. R-142 dan R-143 berisiko rendah dan disebut begitu sejak
+pendaftarannya. Rasio TEPAT yang menanjak di sini BUKAN tanda ramalan yang makin
+baik; sebagian besar adalah pengulangan sistem yang sudah stabil.
 
 ## Daftar ADR
 
@@ -130,47 +134,61 @@ berisiko adalah R-131 dan R-135, dan keduanya jatuh.
 - ADR-A003 taksonomi rezim. BELUM ADA (nomor dicadangkan).
 - ADR-A004 kebijakan KC-6. DITERIMA; berdiri dengan enam klausa.
 - ADR-A005 jenis instrumen tahap pertama. DITERIMA.
-- **ADR-A006 karantina + persistensi. DITERIMA dan DITERAPKAN untuk data yang
-  LOLOS gerbang** (`rilis.py` VERSI pax, `pecahan.py` VERSI 5, workflow dengan
-  `gh release create/upload`). **BELUM LENGKAP:** parquet karantina (KC-17).
+- **ADR-A006 karantina + persistensi. DITERIMA dan DITERAPKAN SEPENUHNYA** —
+  data lolos dan data karantina keduanya bertahan sebagai aset rilis
+  terverifikasi (`pecahan.py` VERSI 6, `rilis.py` dengan `nama_sums`, workflow
+  v4). Sisa satu-satunya: pemulihan di luar runner belum pernah diuji.
 - **ADR-A007 serapan hibrida. DIUSULKAN**, belum diterima, belum
-  diimplementasikan.
+  diimplementasikan. Bahan bakunya kini tersedia (3 tar BNXUSDT).
 - ADR berikutnya **A008**.
 
-## Serapan semesta `perpetual_usdt` — TERUKUR DAN TERPERSISTENSI
+## Serapan semesta `perpetual_usdt` — TERUKUR DAN TERPERSISTENSI UTUH
 
-Sumber tunggal: run **`30389402113`**, commit `6ee68891`, `versi_pecahan` **5**,
-`sidik_kode` **`dff5d33d98abc65d0fac9ebd55393c235358ed34e03a51dddeb6ea8d93bd7a63`**,
+Sumber tunggal: run **`30396803601`**, commit `57a04f1e`, `versi_pecahan` **6**,
+`sidik_kode` **`237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601`**,
 `sidik_data` `6128fbb0…`, kode keluar 0 dan kode unggah 0 di kedelapan job.
 
-| i | simbol | simbol-bulan | baris | menit hilang | gagal | nisbah | anggota tar | bagian | byte anggota |
-|---|---|---|---|---|---|---|---|---|---|
-| 0 | 99 | 2.411 | 103.264.917 | 1.875 | 3 | 1,2295 | 2.408 | 3 | 4.120.562.805 |
-| 1 | 99 | 2.468 | 105.765.980 | 2.160 | 3 | 1,2268 | 2.465 | 3 | 4.269.971.639 |
-| 2 | 99 | 2.337 | 100.058.416 | 0 | 0 | 1,2293 | 2.337 | 3 | 3.834.773.373 |
-| 3 | 98 | 2.154 | 91.884.319 | 615 | 1 | 1,2356 | 2.153 | 2 | 3.382.222.173 |
-| 4 | 98 | 2.497 | 106.865.397 | 1.050 | 1 | 1,2327 | 2.496 | 3 | 4.199.469.659 |
-| 5 | 98 | 2.741 | 117.671.896 | 0 | 0 | 1,2341 | 2.741 | 3 | 4.574.062.521 |
-| 6 | 98 | 2.652 | 114.013.851 | 7.200 | 3 | 1,2399 | 2.649 | 3 | 4.449.859.316 |
-| 7 | 98 | 2.338 | 100.317.358 | 675 | 1 | 1,2334 | 2.337 | 3 | 3.875.340.889 |
+| i | simbol | simbol-bulan | baris | menit hilang | karantina | nisbah | anggota utama | bagian utama | byte anggota | tar karantina | byte karantina |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 99 | 2.411 | 103.264.917 | 1.875 | 3 | 1,2295 | 2.408 | 3 | 4.120.562.805 | 1 | 3.286.672 |
+| 1 | 99 | 2.468 | 105.765.980 | 2.160 | 3 | 1,2268 | 2.465 | 3 | 4.269.971.639 | 1 | 3.167.212 |
+| 2 | 99 | 2.337 | 100.058.416 | 0 | 0 | 1,2293 | 2.337 | 3 | 3.834.773.373 | — | 0 |
+| 3 | 98 | 2.154 | 91.884.319 | 615 | 1 | 1,2356 | 2.153 | 2 | 3.382.222.173 | 1 | 442.398 |
+| 4 | 98 | 2.497 | 106.865.397 | 1.050 | 1 | 1,2327 | 2.496 | 3 | 4.199.469.659 | 1 | 837.910 |
+| 5 | 98 | 2.741 | 117.671.896 | 0 | 0 | 1,2341 | 2.741 | 3 | 4.574.062.521 | — | 0 |
+| 6 | 98 | 2.652 | 114.013.851 | 7.200 | 3 | 1,2399 | 2.649 | 3 | 4.449.859.316 | 1 | 4.420.728 |
+| 7 | 98 | 2.338 | 100.317.358 | 675 | 1 | 1,2334 | 2.337 | 3 | 3.875.340.889 | 1 | 1.092.785 |
 
 - Simbol **787**; simbol-bulan **19.598**; baris **839.842.134**; slot
   **839.855.709**; menit hilang **13.575**.
 - Gerbang: lolos **19.586**, gagal **12**, `persen_lolos` **99,9388**.
-- Zip **26.532.925.083 B**; parquet **32.706.262.375 B**; nisbah **1,2327**.
-  Ketiganya dijumlahkan ulang dari kedelapan log dan cocok sampai byte terakhir.
+- Zip **26.532.925.083 B**; parquet **32.706.262.375 B**; nisbah **1,2327**;
+  parquet karantina **13.247.705 B**. Semuanya dijumlahkan ulang dari kedelapan
+  log dan cocok sampai byte terakhir.
 - Kelas risiko: pra_header 1.952, bulan_awal_2020_2021 1.889, terhenti 587,
   non_ascii **19** (9 di P0, 6 di P1, 4 di P2; kosong dan dinyatakan kosong di
   P3..P7 — aturan 37), kendali_baru 10.007.
-- **`parquet_dipersistenkan: true` di kedelapan laporan.** 19.586 anggota, 23
-  bagian tar ≤1,8 GB, tiap bagian dibaca ulang dengan sha256 cocok,
-  `cacah_bagian_taksiran_terlampaui` 0, `cacah_berkas_hilang` 0.
-- Tag rilis: `serapan-pecahan-<i>-30389402113`, aset `pecahan_<i>.partNN.tar` +
-  `SHA256SUMS`. Tag lama `…-30376241019` (tak sah, taksiran terlampaui) dan
-  `…-30383278359` (sah, tanpa pecahan 0) masih ada.
-- **Batas kesahihan yang tersisa:** aset rilis belum pernah diunduh dan dibongkar
-  di luar runner yang menulisnya, jadi klaim "dapat dipulihkan" belum lengkap.
-  Dan parquet karantina tidak ikut tersimpan (KC-17).
+- **`parquet_dipersistenkan: true` dan `karantina_dipersistenkan: true` di
+  kedelapan laporan.** 19.586 anggota utama dalam **23** bagian tar; 12 anggota
+  karantina dalam **6** bagian tar; total **29** aset tar. Tiap bagian dibaca
+  ulang dengan sha256 cocok; `cacah_bagian_taksiran_terlampaui` 0,
+  `cacah_berkas_hilang` 0, `cacah_parquet_tak_terkemas` 0,
+  `cacah_karantina_tak_terkemas` 0.
+- P2 dan P5 melaporkan `rilis_karantina: null` dan `karantina_dipersistenkan:
+  true` dengan **penyebut nol** — itu bukan bukti pengemas karantina bekerja
+  (aturan 30, 41). Buktinya ada pada enam pecahan lain.
+- Tag rilis: `serapan-pecahan-<i>-30396803601`, aset `pecahan_<i>.partNN.tar`,
+  `pecahan_<i>_karantina.part01.tar`, dan `SHA256SUMS`. Tag lama
+  `…-30376241019` (tak sah), `…-30383278359` (tanpa P0), `…-30389402113` (sah,
+  tanpa karantina) masih ada.
+- **Cacat unggah run ini (aturan 45):** `SHA256SUMS_KARANTINA` TIDAK terunggah
+  karena workflow v4 baru mendarat setelah run menyala. Sidik keenam tar
+  karantina tercatat di `journal/2026-07-29-61.md` dan di
+  `reports/manifes_pecahan_<i>.json`, jadi dapat diverifikasi dari git. Berlaku
+  otomatis mulai run berikutnya.
+- **Batas kesahihan yang tersisa — satu-satunya, dan besar:** aset rilis belum
+  pernah diunduh dan dibongkar di luar runner yang menulisnya. `kode_unggah` 0
+  hanya berarti perintah `gh` pulang tanpa galat.
 
 ## Model ukuran tar — tiga ronde, satu sebab
 
@@ -179,22 +197,25 @@ Ronde 1 dan 2 memakai kepala 512 B dan gagal di produksi; sebabnya **header pax
 1.024 B per anggota** yang ditulis `tarfile` Python ≥3.8 ketika sebuah medan
 (misalnya `mtime` pecahan) tidak muat di header ustar. Dengan
 `KEPALA_ANGGOTA = 1536` sisa taksiran runtuh ke nol atau tepat ke margin pada
-seluruh 23 bagian. Konstanta: `BATAS_BAGIAN` 1.800.000.000, `BLOK_TAR` 512,
-`BLOK_PAX` 1024, `REKAM_TAR` 10240, `MARGIN_REKAM` 20480.
+seluruh 29 bagian, termasuk keenam tar karantina yang bercacah anggota sangat
+kecil (1 atau 3) — di sana `nisbah_bagian_per_anggota` naik sampai 1,0184 dan
+tetap tidak melampaui taksiran. Konstanta: `BATAS_BAGIAN` 1.800.000.000,
+`BLOK_TAR` 512, `BLOK_PAX` 1024, `REKAM_TAR` 10240, `MARGIN_REKAM` 20480.
 
 ## Jumlah uji
 
-**187 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30383126672`, commit
-`4b02bb74`, `kode_keluar` 0. Termasuk 17 uji `tests/test_rilis.py`.
+**190 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30396875564`, commit
+`5de57a2b`, `kode_keluar` 0. Termasuk 17 uji `tests/test_rilis.py` dan 3 uji
+`tests/test_rilis_karantina.py`.
 
 ## Utang verifikasi
 
 1-5 dan 11 menunggu tahap juri/klasifikasi. 6-23, 25-28 LUNAS.
 
-24. **AKTIF, sebagian LUNAS.**
-    - **persistensi data lolos: LUNAS** (run `30389402113`);
-    - **persistensi karantina: BELUM** — KC-17, perbaikan direncanakan VERSI 6;
-    - pemulihan aset di luar runner: belum pernah diuji;
+24. **AKTIF, sebagian besar LUNAS.**
+    - **persistensi data lolos: LUNAS** (run `30389402113`, diulang `30396803601`);
+    - **persistensi karantina: LUNAS** (run `30396803601`, KC-17 ditutup);
+    - **pemulihan aset di luar runner: BELUM — kini utang tunggal terbesar;**
     - jalur **funding** (`funding_ada` null di seluruh manifes);
     - medan `dugaan_pengganti` (ADR-A005);
     - pemulihan harian ADR-A007 (`sumber_baris`, `cacah_baris_dipulihkan`);

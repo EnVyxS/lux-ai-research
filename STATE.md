@@ -1,4 +1,4 @@
-# STATE — versi 10
+# STATE — versi 11
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
 
@@ -55,6 +55,10 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
 24. **[v10]** Setiap pengukuran sebab wajib memuat medan yang dapat MENGGUGURKAN
     hipotesis yang sedang saya percayai, dan medan itu dilaporkan walau nilainya
     nol. Instrumen yang hanya bisa membenarkan dugaan pembuatnya bukan instrumen.
+25. **[v11]** Parameter cakupan sebuah pengukuran (mis. K bulan yang disampel,
+    cara memilih bulan kendali) wajib dipatok tertulis SEBELUM run dan tidak
+    boleh disetel ulang setelah hasilnya terlihat. Menyetelnya kemudian adalah
+    KC-1 dalam bentuk lain, dan membatalkan ramalan yang bergantung padanya.
 
 ## Kelas cacat
 
@@ -76,7 +80,7 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
    agregasi yang berbeda di sisi Binance (H2). Sebagian beda mencapai ~3%
    (XRPUSDT 2020-01: 0,1970 lawan 0,2032), jadi kebijakan berbentuk toleransi
    tidak sah. Yang BELUM terukur: berapa lama gejala ini bertahan sepanjang hidup
-   simbol (R-30, R-31).
+   simbol (R-30..R-35); pengukurannya sedang berjalan lewat `rentang_kc6`.
 
 ## Papan skor hipotesis
 
@@ -114,12 +118,16 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-23 | Gerbang dua bulan lolos, `total_beda_kolom_jumlah` = 0 | MELESET pada kedua klausa |
 | R-24 | `tanggal_tak_sepakat_dengan_isi` kosong | TEPAT |
 | R-25 | `bulan_era_tanpa_header` = 10 | TEPAT |
-| R-26 | ≥ 90% bucket `open` beda pada DOGE/BTS berimpit dengan celah menit | **MELESET: 0%** |
-| R-27 | ETHUSDT 2020-01 benar-benar tanpa celah, sehingga H1 gugur untuk ETH | **TEPAT** |
+| R-26 | ≥ 90% bucket `open` beda pada DOGE/BTS berimpit dengan celah menit | MELESET: 0% |
+| R-27 | ETHUSDT 2020-01 benar-benar tanpa celah, sehingga H1 gugur untuk ETH | TEPAT |
 | R-28 | 12 bulan akhir tetap 0 beda pada run berikutnya | menunggu |
-| R-29 | `beda_tak_terjelaskan_h1` positif pada minimal dua simbol | **TEPAT: sembilan** |
+| R-29 | `beda_tak_terjelaskan_h1` positif pada minimal dua simbol | TEPAT: sembilan |
 | R-30 | Beda menurun dan mencapai nol dalam enam bulan pertama (DOGE, BTS) | menunggu |
 | R-31 | Bulan kendali di tengah hidup simbol menunjukkan 0 beda | menunggu |
+| R-32 | Dari 9 simbol beda, ≥ 7 punya beda bulan ke-6 lebih kecil dari bulan ke-1 | menunggu |
+| R-33 | `menit_hilang_total` dan `duplikat_total` tetap 0 di seluruh bulan disampel | menunggu |
+| R-34 | Minimal satu simbol masih beda > 0 pada bulan ke-6 | menunggu |
+| R-35 | Total beda bulan kendali < 10% total beda bulan pertama | menunggu |
 
 Cacah dihitung ulang baris demi baris (aturan 21):
 
@@ -128,10 +136,11 @@ Cacah dihitung ulang baris demi baris (aturan 21):
 - MELESET — 8 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26.
 - MELESET SEPARUH — 1 baris: R-3.
 - TIDAK TERADJUDIKASI — 0 baris.
-- MENUNGGU — 6 baris: R-7, R-19, R-20, R-28, R-30, R-31.
+- MENUNGGU — 10 baris: R-7, R-19, R-20, R-28, R-30, R-31, R-32, R-33, R-34,
+  R-35.
 
-16 + 8 + 1 + 0 + 6 = 31, sama dengan cacah baris R-1 sampai R-31. P-1 sampai P-3
-dihitung terpisah dan ketiganya masih menunggu.
+16 + 8 + 1 + 0 + 10 = 35, sama dengan cacah baris R-1 sampai R-35. P-1 sampai
+P-3 dihitung terpisah dan ketiganya masih menunggu.
 
 ## Daftar ADR
 
@@ -141,14 +150,14 @@ dihitung terpisah dan ketiganya masih menunggu.
 - ADR-A003 — taksonomi rezim/klasifikasi. BELUM ADA.
 - ADR-A004 — kebijakan bulan awal simbol menghadapi KC-6. WAJIB ADA sebelum
   serapan penuh. Dasar sebagian sudah terukur (H1 gugur, toleransi tidak sah);
-  masih menunggu pengukuran SEJAUH MANA gejala bertahan (R-30, R-31).
+  masih menunggu pengukuran SEJAUH MANA gejala bertahan (R-30..R-35).
 
 ## Status pipeline
 
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI (tiga run). Survei semesta SELESAI. Gerbang resample MERAH pada bulan awal; sebab terukur sebagian (H1 gugur); serapan penuh TERKUNCI sampai ADR-A004 |
+| T1 Serapan | Probe SELESAI (tiga run). Survei semesta SELESAI. Gerbang resample MERAH pada bulan awal; sebab terukur sebagian (H1 gugur); perluasan rentang SEDANG BERJALAN; serapan penuh TERKUNCI sampai ADR-A004 |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -186,10 +195,15 @@ Sumber `reports/diagnosa_kc6.json`, run 30338666516, bertanda
 | Bulan awal tanpa celah menit sama sekali | 12 dari 12 |
 | Simbol dengan beda positif | 9 (DOGE 223, BTS 118, FTT 53, XRP 38, SRM 16, LINK 12, ETH 5, BNB 3, SOL 2) |
 
+`reports/rentang_kc6.json` BELUM ADA saat baris ini ditulis. Ini memerlukan
+verifikasi dari berkas laporan yang di-commit runner.
+
 ## Jumlah uji
 
-**61, TERVERIFIKASI** — `reports/ci_terakhir.json`, run **30338666532**, commit
-`1a5e0666`, `kode_keluar: 0`, `cacah_uji: "61 tests collected in 0.37s"`.
+**71, KLAIM** — 61 terverifikasi (`reports/ci_terakhir.json`, run 30338666532,
+commit `1a5e0666`) ditambah 10 uji baru di `tests/test_rentang_kc6.py` yang
+BELUM diverifikasi CI. Angka ini turun kembali menjadi 61 terverifikasi sampai
+`reports/ci_terakhir.json` berikutnya dibaca.
 
 ## Utang verifikasi yang belum dibayar
 
@@ -210,8 +224,11 @@ Sumber `reports/diagnosa_kc6.json`, run 30338666516, bertanda
 15. ~~Sebab KC-6 belum terukur~~ DIBAYAR SEBAGIAN: H1 gugur, arsip 1m utuh.
     Sisanya menjadi utang 20.
 16. ADR-A004 belum ditulis; serapan penuh terkunci sampai ada.
-17. ~~Jumlah uji~~ DIBAYAR: 61 terverifikasi.
+17. Jumlah uji kembali menjadi KLAIM (71) sampai CI berikutnya dibaca.
 18. Jurnal 08 dan 09 belum pernah dibaca ulang dari `main`.
 19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca.
-20. **BARU**: sejauh mana KC-6 bertahan sepanjang hidup simbol belum terukur.
-    Baru bulan pertama yang disampel (aturan 20). R-30 dan R-31 menunggu.
+20. Sejauh mana KC-6 bertahan: pengukuran SEDANG BERJALAN. Modul
+    `lux_ai/serapan/rentang_kc6.py` dan workflow `rentang-kc6` sudah didorong ke
+    `main` (commit `daed2cf7`); pra-registrasi di `journal/2026-07-28-15.md`.
+    Utang ini baru lunas setelah `reports/rentang_kc6.json` dibaca dari `main`
+    dan R-30..R-35 diadjudikasi.

@@ -1,0 +1,63 @@
+{
+  "akhir_semesta_diasumsikan": "2026-06",
+  "bukan_bukti": true,
+  "bulan_paling_akhir": "2026-06",
+  "bulan_paling_awal": "2020-01",
+  "bulan_per_jenis": {
+    "basis_non_fiat": 39,
+    "futures_kedaluwarsa": 258,
+    "indeks": 151,
+    "perpetual_busd": 812,
+    "perpetual_usd1": 2,
+    "perpetual_usdc": 893,
+    "perpetual_usdt": 19598,
+    "sisa_settled": 36,
+    "tak_tergolong": 0
+  },
+  "cacah_hidup": 808,
+  "cacah_per_jenis": {
+    "basis_non_fiat": 1,
+    "futures_kedaluwarsa": 50,
+    "indeks": 3,
+    "perpetual_busd": 41,
+    "perpetual_usd1": 1,
+    "perpetual_usdc": 39,
+    "perpetual_usdt": 787,
+    "sisa_settled": 15,
+    "tak_tergolong": 0
+  },
+  "cacah_tak_tergolong": 0,
+  "cacah_terhenti": 129,
+  "catatan_batas": "Saham, ETF, dan komoditas yang di-token-kan (mis. AAPLUSDT, XAUUSDT) TIDAK dapat dibedakan dari perpetual koin lewat bentuk nama, sehingga di sini mereka masuk perpetual_usdt. Memisahkannya menuntut daftar instrumen dari bursa. Ini memerlukan verifikasi.",
+  "contoh_tak_tergolong": [],
+  "daftar_indeks_eksplisit": [
+    "BLUEBIRDUSDT",
+    "BTCDOMUSDT",
+    "DEFIUSDT"
+  ],
+  "jumlah_bulan_total": 21789,
+  "non_ascii": {
+    "cacah": 3,
+    "contoh": [
+      "币安人生USDT",
+      "我踏马来了USDT",
+      "龙虾USDT"
+    ],
+    "jumlah_bulan": 19
+  },
+  "penyebut": {
+    "cacah_entri_cacat": 0,
+    "cacah_simbol": 937,
+    "contoh_entri_cacat": [],
+    "entri_dibaca": 937
+  },
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "f19e89d23700a3e4da905947ec51016bbe97eed033e950d9646a4a126e1dc407",
+  "status": "TERUKUR",
+  "sumber": "reports/semesta_rentang.json",
+  "sumber_bersidik": false,
+  "sumber_byte": 110662,
+  "sumber_kunci_tingkat_atas": [
+    "rentang"
+  ]
+}

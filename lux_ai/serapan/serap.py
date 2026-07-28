@@ -4,19 +4,16 @@ Menempuh seluruh rantai yang nanti dipakai serapan penuh (utang 24):
 unduh terverifikasi checksum -> baca zip -> rapikan -> gerbang integritas 1m
 (ADR-A004) -> tulis parquet -> catat manifes per simbol-bulan.
 
-Dijalankan lebih dulu atas SEDIKIT simbol-bulan. Serapan penuh yang gagal di
-jam keempat jauh lebih mahal daripada pilot yang gagal di menit kedua.
-
 Cakupan instrumen mengikuti ADR-A005 §1: hanya `perpetual_usdt`.
 
-Aturan yang ditegakkan di sini:
-- 16: tiap medan dinamai menurut apa yang benar-benar diukurnya.
-- 18: cacah yang benar-benar diperiksa selalu dilaporkan.
-- 20: laporan menyebut simbol-bulan yang benar-benar disampel.
-- 24: `baris_dibuang` dan `cacah_simbol_bulan_dengan_baris_dibuang` dilaporkan
-  walau nol; keduanya dapat menggugurkan premis "arsip 1m utuh".
-- 30: penyebut eksplisit; penyebut nol berarti `TIDAK MENGUKUR`.
-- 32: nama simbol non-ASCII diamankan untuk sistem berkas tanpa dibuang.
+**Versi 2 (KC-13, aturan 37).** Versi 1 memilih tiga simbol pertama menurut
+abjad. Deterministik, dan bias: yang terpilih adalah 0GUSDT dan dua pasar 2024-
+2025, sehingga format pra-2022 tanpa header, simbol non-ASCII, dan simbol
+terhenti tidak tersentuh sama sekali. Pemilihan kini BERLAPIS: tiap kelas
+risiko yang diketahui wajib diwakili, dan laporan menyebut kelas mana yang
+benar-benar tersentuh, walau nol.
+
+Aturan yang ditegakkan di sini: 16, 18, 20, 24, 25, 30, 32, 37.
 """
 
 from __future__ import annotations
@@ -35,9 +32,11 @@ MANIFES = "reports/manifes_pilot.json"
 AKAR_PARQUET = "data/parquet"
 
 # Cakupan pilot dipatok tertulis SEBELUM run (aturan 25).
-PILOT_CACAH_SIMBOL = 3
-PILOT_BULAN_PER_SIMBOL = 2
 JENIS_DIIZINKAN = "perpetual_usdt"
+BATAS_HEADER = "2022-01"  # KC-4: sebelum bulan ini arsip tanpa header
+BATAS_BARU = "2025-01"
+BATAS_HIDUP = "2026-05"
+KELAS_RISIKO = ("pra_header", "non_ascii", "terhenti", "bulan_awal_2020_2021", "kendali_baru")
 
 AMAN = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._-")
 
@@ -52,74 +51,106 @@ def sidik_kode() -> str:
 
 
 def nama_aman(simbol: str) -> str:
-    """Nama berkas yang aman tanpa MEMBUANG simbol non-ASCII (aturan 32).
+    """Nama berkas aman tanpa MEMBUANG simbol non-ASCII (aturan 32, KC-9)."""
+    return "".join(ch if ch in AMAN else f"u{ord(ch):04X}" for ch in simbol)
 
-    币安人生USDT tidak boleh hilang diam-diam seperti pada KC-9; ia diubah
-    menjadi bentuk yang dapat dipulihkan.
-    """
-    keluar = []
-    for ch in simbol:
-        keluar.append(ch if ch in AMAN else f"u{ord(ch):04X}")
-    return "".join(keluar)
+
+def non_ascii(simbol: str) -> bool:
+    return any(ord(ch) > 127 for ch in simbol)
 
 
 def iso_dari_ms(nilai) -> str:
     if nilai is None:
         return ""
-    detik = int(nilai) / 1000
-    return dt.datetime.fromtimestamp(detik, dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return dt.datetime.fromtimestamp(int(nilai) / 1000, dt.timezone.utc).strftime(
+        "%Y-%m-%dT%H:%M:%SZ"
+    )
 
 
-def pilih_pilot(
-    rentang: Dict[str, Any],
-    jenis_dari,
-    cacah_simbol: int = PILOT_CACAH_SIMBOL,
-    bulan_per_simbol: int = PILOT_BULAN_PER_SIMBOL,
-) -> List[Tuple[str, str]]:
-    """Pilih simbol-bulan pilot secara DETERMINISTIK.
+def _tengah(awal: str, akhir: str) -> str:
+    ta, ba = (int(x) for x in awal.split("-"))
+    tb, bb = (int(x) for x in akhir.split("-"))
+    total = ((ta * 12 + ba - 1) + (tb * 12 + bb - 1)) // 2
+    return f"{total // 12:04d}-{total % 12 + 1:02d}"
 
-    Deterministik supaya pilot bisa diulang persis; urut abjad supaya pilihannya
-    tidak bisa saya sesuaikan setelah melihat hasil (aturan 25).
-    Tiap simbol menyumbang bulan PERTAMA-nya (paling berisiko, format lama tanpa
-    header) dan bulan TENGAH masa hidupnya (kendali).
+
+def pilih_berlapis(rentang: Dict[str, Any], jenis_dari) -> List[Tuple[str, str]]:
+    """Pilih simbol-bulan sehingga TIAP kelas risiko terwakili (aturan 37).
+
+    Tetap deterministik: di dalam tiap lapis, kandidat diurut abjad dan yang
+    pertama diambil. Yang berubah dari versi 1 adalah lapisnya, bukan cara
+    memilih di dalam lapis, sehingga hasilnya tetap bisa diulang persis.
     """
-    layak = []
-    for simbol in sorted(rentang):
-        isi = rentang[simbol]
-        if not isinstance(isi, dict):
-            continue
-        if jenis_dari(simbol) != JENIS_DIIZINKAN:
-            continue
-        awal = isi.get("bulan_pertama")
-        akhir = isi.get("bulan_terakhir")
-        if not isinstance(awal, str) or not isinstance(akhir, str):
-            continue
-        layak.append((simbol, awal, akhir))
-        if len(layak) >= cacah_simbol:
-            break
+    layak = {
+        s: isi
+        for s, isi in sorted(rentang.items())
+        if isinstance(isi, dict)
+        and isinstance(isi.get("bulan_pertama"), str)
+        and isinstance(isi.get("bulan_terakhir"), str)
+        and jenis_dari(s) == JENIS_DIIZINKAN
+    }
 
     pasangan: List[Tuple[str, str]] = []
-    for simbol, awal, akhir in layak:
-        bulan = [awal]
-        if bulan_per_simbol > 1 and akhir != awal:
-            ta, ba = (int(x) for x in awal.split("-"))
-            tb, bb = (int(x) for x in akhir.split("-"))
-            total = ((ta * 12 + ba - 1) + (tb * 12 + bb - 1)) // 2
-            tengah = f"{total // 12:04d}-{total % 12 + 1:02d}"
-            if tengah not in bulan:
-                bulan.append(tengah)
-        for b in bulan[:bulan_per_simbol]:
-            pasangan.append((simbol, b))
+
+    def tambah(simbol: str, bulan: str) -> None:
+        if simbol and bulan and (simbol, bulan) not in pasangan:
+            pasangan.append((simbol, bulan))
+
+    # Lapis 1: simbol tertua yang hidup sejak sebelum batas header.
+    tua = [s for s, i in layak.items() if i["bulan_pertama"] < BATAS_HEADER]
+    if tua:
+        s = sorted(tua, key=lambda x: (layak[x]["bulan_pertama"], x))[0]
+        tambah(s, layak[s]["bulan_pertama"])
+        tambah(s, _tengah(layak[s]["bulan_pertama"], layak[s]["bulan_terakhir"]))
+
+    # Lapis 2: simbol bernama non-ASCII (KC-9).
+    aneh = [s for s in layak if non_ascii(s)]
+    if aneh:
+        s = sorted(aneh)[0]
+        tambah(s, layak[s]["bulan_pertama"])
+
+    # Lapis 3: simbol yang sudah terhenti.
+    mati = [s for s, i in layak.items() if i["bulan_terakhir"] < BATAS_HIDUP]
+    if mati:
+        s = sorted(mati)[0]
+        tambah(s, layak[s]["bulan_terakhir"])
+
+    # Lapis 4: kendali, pasar baru.
+    baru = [s for s, i in layak.items() if i["bulan_pertama"] >= BATAS_BARU]
+    if baru:
+        s = sorted(baru)[0]
+        tambah(s, layak[s]["bulan_pertama"])
+
     return pasangan
 
 
-def serap_satu(simbol: str, bulan: str, akar: str = ".") -> Dict[str, Any]:
+def kelas_risiko_tersentuh(manifes: List[Dict[str, Any]]) -> Dict[str, int]:
+    """Cacah tiap kelas risiko yang benar-benar tersentuh, dilaporkan walau nol."""
+    cacah = {nama: 0 for nama in KELAS_RISIKO}
+    for b in manifes:
+        simbol = str(b.get("simbol") or "")
+        bulan = str(b.get("bulan") or "")
+        if b.get("berheader") is False:
+            cacah["pra_header"] += 1
+        if non_ascii(simbol):
+            cacah["non_ascii"] += 1
+        if b.get("terhenti"):
+            cacah["terhenti"] += 1
+        if bulan and bulan < "2022-01":
+            cacah["bulan_awal_2020_2021"] += 1
+        if bulan and bulan >= BATAS_BARU:
+            cacah["kendali_baru"] += 1
+    return cacah
+
+
+def serap_satu(simbol: str, bulan: str, akar: str = ".", terhenti: bool = False) -> Dict[str, Any]:
     """Serap satu simbol-bulan dan kembalikan satu baris manifes."""
     url = arsip.url_klines(simbol, "1m", bulan)
     baris: Dict[str, Any] = {
         "simbol": simbol,
         "bulan": bulan,
         "jenis_instrumen": JENIS_DIIZINKAN,
+        "terhenti": bool(terhenti),
         "sumber_url": url,
         "gagal_unduh": False,
         "gagal_checksum": False,
@@ -142,8 +173,7 @@ def serap_satu(simbol: str, bulan: str, akar: str = ".") -> Dict[str, Any]:
     baris["baris"] = int(len(df))
     baris["baris_dibuang"] = int(dibuang)
 
-    cap = [int(t) for t in df["open_time"].tolist()]
-    putusan = gerbang_1m.nilai_deret(cap, simbol, bulan)
+    putusan = gerbang_1m.nilai_deret([int(t) for t in df["open_time"].tolist()], simbol, bulan)
     baris["gerbang_lolos"] = bool(putusan["lolos"])
     baris["gerbang_pelanggaran"] = list(putusan["pelanggaran"])
     baris["satuan_stempel"] = putusan["ukuran"]["satuan_stempel_dari_besaran"]
@@ -151,15 +181,15 @@ def serap_satu(simbol: str, bulan: str, akar: str = ".") -> Dict[str, Any]:
     baris["akhir_sejati"] = putusan["ukuran"]["menit_terakhir"]
     baris["awal_sejati_utc"] = iso_dari_ms(putusan["ukuran"]["menit_pertama"])
     baris["akhir_sejati_utc"] = iso_dari_ms(putusan["ukuran"]["menit_terakhir"])
-    # Funding TIDAK diambil pada pilot. Ditulis apa adanya, bukan diisi nol.
-    baris["funding_ada"] = None
+    baris["funding_ada"] = None  # pilot tidak mengambil funding; jangan diisi nol
 
     if putusan["lolos"]:
-        nama = f"{nama_aman(simbol)}-1m-{bulan}.parquet"
-        tujuan = Path(akar) / AKAR_PARQUET / nama_aman(simbol) / nama
+        aman = nama_aman(simbol)
+        nama = f"{aman}-1m-{bulan}.parquet"
+        tujuan = Path(akar) / AKAR_PARQUET / aman / nama
         tujuan.parent.mkdir(parents=True, exist_ok=True)
         klines.tulis_parquet(df, str(tujuan))
-        baris["parquet"] = str(Path(AKAR_PARQUET) / nama_aman(simbol) / nama)
+        baris["parquet"] = str(Path(AKAR_PARQUET) / aman / nama)
         baris["byte_parquet"] = int(tujuan.stat().st_size)
     else:
         baris["parquet"] = None
@@ -181,6 +211,8 @@ def ringkas(manifes: List[Dict[str, Any]]) -> Dict[str, Any]:
             "cacah_simbol_bulan_dengan_baris_dibuang": 0,
             "jumlah_baris_dibuang": 0,
             "nisbah_parquet_per_zip": None,
+            "kelas_risiko_tersentuh": {nama: 0 for nama in KELAS_RISIKO},
+            "kelas_risiko_kosong": list(KELAS_RISIKO),
         }
     gagal_unduh = sum(1 for b in manifes if b.get("gagal_unduh"))
     gagal_checksum = sum(1 for b in manifes if b.get("gagal_checksum"))
@@ -188,7 +220,7 @@ def ringkas(manifes: List[Dict[str, Any]]) -> Dict[str, Any]:
     byte_zip = sum(int(b.get("byte_zip") or 0) for b in manifes)
     byte_parquet = sum(int(b.get("byte_parquet") or 0) for b in manifes)
     putusan = [b["_putusan"] for b in manifes if isinstance(b.get("_putusan"), dict)]
-    jenis = sorted({str(b.get("jenis_instrumen")) for b in manifes})
+    kelas = kelas_risiko_tersentuh(manifes)
     return {
         "status": "TERUKUR",
         "penyebut": {
@@ -203,7 +235,9 @@ def ringkas(manifes: List[Dict[str, Any]]) -> Dict[str, Any]:
         "byte_zip_total": byte_zip,
         "byte_parquet_total": byte_parquet,
         "nisbah_parquet_per_zip": round(byte_parquet / byte_zip, 4) if byte_zip else None,
-        "jenis_instrumen_unik": jenis,
+        "jenis_instrumen_unik": sorted({str(b.get("jenis_instrumen")) for b in manifes}),
+        "kelas_risiko_tersentuh": kelas,
+        "kelas_risiko_kosong": [nama for nama, n in kelas.items() if not n],
         "gerbang": gerbang_1m.ringkas_gerbang(putusan),
     }
 
@@ -217,10 +251,16 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     if not isinstance(rentang, dict):
         rentang = {}
 
-    batas = int(os.environ.get("PILOT_CACAH_SIMBOL", PILOT_CACAH_SIMBOL))
-    pasangan = pilih_pilot(rentang, taksonomi.jenis_instrumen, cacah_simbol=batas)
+    pasangan = pilih_berlapis(rentang, taksonomi.jenis_instrumen)
+    batas = int(os.environ.get("PILOT_BATAS_SIMBOL_BULAN", "0") or 0)
+    if batas > 0:
+        pasangan = pasangan[:batas]
 
-    manifes = [serap_satu(s, b, akar=akar) for s, b in pasangan]
+    manifes = []
+    for s, b in pasangan:
+        mati = bool(rentang.get(s, {}).get("bulan_terakhir", "") < BATAS_HIDUP)
+        manifes.append(serap_satu(s, b, akar=akar, terhenti=mati))
+
     laporan = ringkas(manifes)
     laporan["bukan_bukti"] = False
     laporan["catatan_bukan_bukti"] = (
@@ -233,6 +273,10 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "bukan untuk 19.598 bulan perpetual_usdt"
     )
     laporan["catatan_funding"] = "pilot tidak mengambil funding; funding_ada sengaja null"
+    laporan["catatan_kc13"] = (
+        "pemilihan berlapis menggantikan urutan abjad versi 1 yang membuat "
+        "pra_header, non_ascii, dan terhenti tidak pernah tersentuh"
+    )
     laporan["manifes"] = [
         {k: v for k, v in b.items() if not k.startswith("_")} for b in manifes
     ]
@@ -252,8 +296,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
 
 def main() -> None:
     hasil = jalankan()
-    ringkasan = {k: v for k, v in hasil.items() if k != "manifes"}
-    print(json.dumps(ringkasan, ensure_ascii=False, indent=2, sort_keys=True))
+    print(json.dumps({k: v for k, v in hasil.items() if k != "manifes"}, ensure_ascii=False, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

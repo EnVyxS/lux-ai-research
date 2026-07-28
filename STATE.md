@@ -1,9 +1,14 @@
-# STATE — versi 21
+# STATE — versi 22
 
-Diperbarui: 2026-07-28 (sesi 50). Aturan hanya BERTAMBAH; jangan menulis ulang
-dari ingatan. v21 disusun di atas teks v20 (blob
-`b8a6a6d2d09cee050c6ab89948a31a37f6bcd724`) yang dibaca UTUH dari `main` pada
-sesi ini, ditambah kedelapan laporan pecahan, diagnosa KC-14 dan KC-14b.
+Diperbarui: 2026-07-28 (sesi 51). Aturan hanya BERTAMBAH; jangan menulis ulang
+dari ingatan. v22 disusun di atas teks v21 (blob
+`ad969f7ea7a05fa45578b82d3033be43f3fe5e13`) yang dibaca UTUH dari `main` pada
+sesi ini, ditambah `reports/diagnosa_kc14c.json` dan pembacaan
+`lux_ai/serapan/gerbang_1m.py`.
+
+Dua baris v21 kini SALAH dan diperbaiki di sini: "KC-15 masih DICADANGKAN" dan
+"H-A003 GUGUR". Keduanya benar untuk tiga tersangka pertama dan salah untuk
+sembilan berikutnya. Aturan 29: yang lama tidak dihapus, statusnya dipersempit.
 
 ## Aturan bernomor
 
@@ -31,85 +36,123 @@ definisi berdampingan.
     angka uji, bahkan dengan kata "perkiraan". Lahir dari selisih 135 (taksiran
     STATE v20 / PROMPT v22) lawan **141** (run `30359672326`).
 
+39. **[v22]** Keseragaman yang terukur pada sampel DILARANG dipakai sebagai
+    angka ramalan untuk anggota di luar sampel. Bila tiga kasus pertama
+    seragam, ramalan untuk sembilan berikutnya wajib menyebut pita atau
+    kemungkinan campuran, bukan nilai tunggal hasil perluasan. Lahir dari
+    R-114: nol pada tiga tersangka KC-14b diperluas menjadi "nol untuk
+    kesembilan", padahal tiga di antaranya bernilai 7.200. Ini aturan 20 yang
+    dilanggar di dalam angka ramalan, bukan di dalam kesimpulan.
+
+40. **[v22]** Tiap laporan yang mencacah baris sebuah simbol-bulan wajib
+    memuat uji silang aritmetika terhadap menit KALENDER bulan itu
+    (`baris + hilang_di_tengah + tepi = menit_kalender`) dan melaporkan
+    selisihnya walau nol. Lahir dari BNXUSDT 2022-04: 41.550 + 1.440 = 42.990
+    sementara April punya 43.200 menit; 210 menit tak terpertanggungjawabkan
+    baru terlihat setelah hitung ulang manual, bukan dari medan laporan.
+
 ## Kelas cacat
 
 KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-9 teruji
 pada berkas nyata. KC-13 (keterwakilan sampel) → penangkalnya aturan 37.
 
-- **KC-14 [v21] — menit hilang NYATA di arsip 1m.** Terukur pada seluruh semesta
-  `perpetual_usdt`: **12 dari 19.598** simbol-bulan dijatuhkan gerbang pada
-  klausa `tanpa_menit_hilang` + `jarak_60_detik`; total **13.575 menit** hilang
-  (0,0000162 dari seluruh menit). Empat klausa lain (`deret_tidak_kosong`,
-  `satuan_milidetik`, `selaras_menit`, `tanpa_duplikat`) **nol di kedelapan
-  pecahan**, jadi KC-14 adalah menit hilang, BUKAN kerusakan format — ADR-A004
-  tidak perlu ditinjau ulang. Sebab lubang **tidak diketahui**; lihat H-A003 dan
-  H-A004 di bawah. Kebijakannya ADR-A006: karantina.
-- **KC-15 masih DICADANGKAN.** Hanya dipakai bila terbukti berkas HARIAN memuat
-  menit yang absen dari berkas BULANAN. Pada tiga tersangka pertama itu TIDAK
-  terbukti (diagnosa KC-14b), sembilan sisanya sedang diukur (diagnosa KC-14c).
+- **KC-14 [v21, dipersempit v22] — menit hilang NYATA di arsip 1m, hadir di
+  KEDUA representasi.** Terukur pada **9** simbol-bulan; **6.375 menit**
+  (6.375 = 425×15). Untuk kesembilan, berkas HARIAN memuat tepat
+  `1440 − panjang_lubang` baris dan mulai persis saat lubang bulanan berakhir:
+  harian dan bulanan sepakat menit demi menit. Sebab **tidak diketahui**; lihat
+  H-A004. Kebijakan: karantina (ADR-A006).
+- **KC-15 [v22] — DINAMAI, TERBUKTI: berkas klines BULANAN dapat kehilangan
+  hari UTC penuh yang datanya utuh di berkas HARIAN.** Terukur pada **3**
+  simbol-bulan, semuanya BNXUSDT 2022: 2022-04 (2022-04-17), 2022-06
+  (2022-06-09), 2022-08 (2022-08-10, -11, -12). **7.200 menit = 5×1440**, tiap
+  berkas harian memuat 1.440 baris penuh dengan checksum terverifikasi.
+  Sumber: `reports/diagnosa_kc14c.json` blob `a3e8f675`, run `30367836338`,
+  commit `f3096288`, `sidik_kode` `487d93c0…`, `kode_keluar` 0.
+  Kebijakan: ADR-A007 (pemulihan dari berkas harian).
+- 9 + 3 = **12** simbol-bulan karantina, dan 6.375 + 7.200 = **13.575** menit —
+  cocok dengan total semesta yang dihitung lewat jalur berbeda ✅.
+- **KC-16 BELUM DINAMAI.** Dicadangkan untuk pemotongan TEPI bulan yang lolos
+  gerbang. Petunjuknya satu kasus (BNXUSDT 2022-04, 210 menit) dan sedang
+  diukur; jangan dipakai sebelum laporan tepi ada. `gerbang_1m.py` SUDAH dibaca
+  dan ia tidak cacat: `ukur_deret` sengaja mengukur dari stempel pertama sampai
+  terakhir yang ada, dengan alasan tertulis bahwa bulan pertama sebuah simbol
+  memang mulai di tengah bulan (aturan 28). Yang belum diketahui adalah
+  akibatnya pada bulan TENGAH.
 
 ## Hipotesis
 
 - H-A001: belum diuji.
 - H-A002a (bursa berhenti mengutip) / H-A002b (kerusakan satu interval):
   H-A002b **GUGUR** (`slot_5m_hadir_saat_1m_hilang` = 0 pada 5m dan 15m).
-- **H-A003 (cacat perakitan arsip BULANAN): GUGUR.** Berkas harian ketiga
-  tersangka berisi 1440 − panjang_lubang baris, mulai tepat saat lubang bulanan
-  berakhir; harian dan bulanan sepakat menit demi menit
-  (`reports/diagnosa_kc14b.json` blob `2f2b179c`, `sidik_kode` `e675a617…`).
-- **H-A004 [v21] (cacat di HULU arsip, sebelum pemecahan harian maupun bulanan):
-  TIDAK TERUJI dan tidak dapat diuji dengan akses sekarang.** Pemisahnya butuh
-  sumber non-arsip; `fapi.binance.com` memberi 451 dari runner. Konsekuensi:
-  dilarang menulis "lubang itu jeda pasar" sebagai fakta. Status resmi: sebab
-  tidak diketahui, simbol-bulannya dikarantina.
+- **H-A003 (cacat perakitan arsip BULANAN): MENANG pada 3 simbol-bulan, GUGUR
+  pada 9.** v21 mencatatnya GUGUR berdasarkan tiga tersangka pertama saja; itu
+  benar untuk ketiganya dan salah sebagai putusan umum. Bukti kemenangan:
+  `menit_hadir_di_harian_saat_bulanan_hilang` = **7.200** pada BNXUSDT 2022-04,
+  2022-06, 2022-08 (`cacah_mendukung_h_a003` = 3, `cacah_h_a003_gugur` = 6).
+- **H-A004 [v21] (cacat di HULU arsip): TIDAK TERUJI dan tidak dapat diuji
+  dengan akses sekarang.** Pemisahnya butuh sumber non-arsip;
+  `fapi.binance.com` memberi 451 dari runner. Berlaku untuk 9 kasus KC-14 yang
+  tersisa. Dilarang menulis "lubang itu jeda pasar" sebagai fakta.
+- **H-A005 [v22] (KC-15 juga memotong TEPI bulan, dan pemotongan itu lolos
+  gerbang): SEDANG DIUJI** oleh `lux_ai/serapan/diagnosa_kc15.py`, ramalan
+  R-117..R-120.
 
 ## Papan skor prediksi
 
 R-1..R-99 seperti dirinci v20. R-100..R-103 diadjudikasi di jurnal 47
-(R-103 MELESET: nisbah 1,2295 lawan ramalan 1,30..1,60). R-107..R-109 TEPAT
-(jurnal 49).
+(R-103 MELESET). R-104..R-112 diadjudikasi di jurnal 50 (semuanya TEPAT).
 
 | # | Prediksi | Status |
 |---|---|---|
-| R-104 | simbol-bulan pecahan 1..7 = 17.187 ± 60; total 19.598 | TEPAT (17.187 / 19.598) |
-| R-105 | `simbol_bulan_gagal` pecahan 1..7 di pita 5..60 | TEPAT (9) |
-| R-106 | hanya 2 klausa dilanggar; baris_dibuang 0..5 | TEPAT (2 klausa; 0) |
-| R-110 | `cacah_hari_tersedia` = 3 | TEPAT |
-| R-111 | `menit_hadir_di_harian_saat_bulanan_hilang` = 0 | TEPAT (H-A003 gugur) |
-| R-112 | baris harian 780 / 930 / 735 | TEPAT (bukan ramalan mandiri) |
+| R-113 | total menit hilang 9 tersangka = 11.700, rincian per pecahan | TEPAT (11.700; 2.160/615/1.050/7.200/675) |
+| R-114 | `menit_hadir_di_harian_saat_bulanan_hilang` = 0 untuk kesembilan | **MELESET (7.200 pada 3 → KC-15)** |
+| R-115 | ≥6 dari 9 blok mulai 00:00 UTC; ≥8 dari 9 kelipatan 15 | TEPAT (9 dan 9) |
+| R-116 | `cacah_hari_tidak_tersedia` = 0 | TEPAT (0; `hari_diperiksa` 11) |
 
-**Total R-1..R-112** (aturan 21): TEPAT **73**; MELESET **26**; SEPARUH **4**;
+**Total R-1..R-116** (aturan 21): TEPAT **76**; MELESET **27**; SEPARUH **4**;
 TIDAK TERADJUDIKASI **3**; MENUNGGU **6** (R-7, R-19, R-20, R-28, R-36, R-37).
-73+26+4+3+6 = **112** ✅.
+76+27+4+3+6 = **116** ✅.
 
-MENUNGGU tambahan yang baru dipra-registrasi (jurnal 50): R-113, R-114, R-115,
-R-116 — diagnosa KC-14c. Ramalan berikutnya **R-117**. N_percobaan = 0.
+MENUNGGU tambahan yang dipra-registrasi di jurnal 51: R-117 (BNXUSDT 2022-04
+tepi = 210 dan hadir di harian), R-118 (cacah bulan tengah bertepi tak nol di
+pita 0..6 dari 40 sampel), R-119 (total menit tepi 0..1.200), R-120 (gerbang
+meloloskan bulan bertepi terpotong bila R-118 > 0; bila R-118 = 0 maka TIDAK
+TERADJUDIKASI, bukan TEPAT). Ramalan berikutnya **R-121**. N_percobaan = 0.
 
-Catatan kejujuran: enam TEPAT beruntun pada sesi 50, tetapi R-104 dibatasi angka
-19.598 yang sudah dipatok ADR-A005, pita R-105 sangat lebar, dan R-112 hanyalah
-aritmetika turunan R-111. Yang benar-benar berisiko hanya R-106 dan R-111.
+Catatan kejujuran: deret enam TEPAT beruntun putus pada R-114, satu-satunya
+ramalan sesi 51 yang benar-benar berisiko. R-113 hanya penjumlahan angka
+gerbang yang sudah dibaca, dan pita R-115/R-116 longgar. Lahir aturan 39.
 
 ## Daftar ADR
 
 - ADR-A001 aturan dasar. DITERIMA.
-- ADR-A002 serapan. DITERIMA; §3 DIAMANDEMEN oleh ADR-A004; §9 soal persistensi
-  DIGANTI oleh ADR-A006 Keputusan 3.
+- ADR-A002 serapan. DITERIMA; §3 DIAMANDEMEN oleh ADR-A004, lalu DIAMANDEMEN
+  LAGI oleh ADR-A007 (sumber berkas); §9 soal persistensi DIGANTI oleh ADR-A006
+  Keputusan 3.
 - ADR-A003 taksonomi rezim. BELUM ADA (nomor dicadangkan).
 - ADR-A004 kebijakan KC-6. DITERIMA; berdiri (klausa format nol pelanggaran).
-- ADR-A005 jenis instrumen tahap pertama. DITERIMA. 787 simbol, 19.598 bulan —
-  **kini terverifikasi dari arsip, bukan dari survei saja**.
-- **ADR-A006 nasib simbol-bulan yang dijatuhkan gerbang + persistensi parquet.
-  DITERIMA (sesi 48).** Karantina, bukan buang dan bukan tambal; interpolasi,
-  forward-fill, dan penurunan ambang DILARANG; parquet dipersistenkan sebagai
-  rilis tar terbelah ≤1,8 GB + `SHA256SUMS`. **Belum diterapkan ke kode.**
-- ADR berikutnya **A007**.
+  Kemungkinan bertambah klausa ketujuh bila R-118/R-120 menang.
+- ADR-A005 jenis instrumen tahap pertama. DITERIMA. 787 simbol, 19.598 bulan,
+  terverifikasi dari arsip.
+- **ADR-A006** karantina + persistensi parquet. DITERIMA (sesi 48).
+  **SEBAGIAN DITERAPKAN (sesi 51):** `lux_ai/serapan/rilis.py`
+  (`PengemasBerbelah`, batas 1,8 GB, `SHA256SUMS`, `verifikasi()`) dan
+  `serap.py` Versi 3 (`karantina`, `parquet_karantina`, `cacah_karantina`,
+  `daftar_karantina`, `cacah_dibuang`/`cacah_ditambal` sebagai medan penggugur,
+  pohon `data/parquet_karantina/`). **BELUM:** menyambungkan pengemas ke
+  `pecahan.py` dan mengunggah tar sebagai aset rilis.
+- **ADR-A007 [v22] serapan hibrida: bulanan sebagai dasar, harian sebagai
+  pemulih terverifikasi checksum. DIUSULKAN**, menunggu R-117..R-120. Gerbang
+  dijalankan ULANG tanpa pelunakan ambang; tiap baris membawa `sumber_baris`.
+- ADR berikutnya **A008**.
 
 ## Serapan semesta `perpetual_usdt` — TERUKUR PENUH
 
 Sumber: `reports/pecahan_serapan.log` blob `1dc3e929` (pecahan 0, run
-`30353584831`, `sidik_kode` `22c17f4f…`) dan `reports/pecahan_1..7.log`
-(run `30358650719`, `sidik_kode` seragam `059df499…`, `versi_pecahan` 2,
-kode keluar 0 semuanya). `sidik_data` `6128fbb0…` di kedelapan.
+`30353584831`) dan `reports/pecahan_1..7.log` (run `30358650719`, `sidik_kode`
+seragam `059df499…`, `versi_pecahan` 2, kode keluar 0 semuanya). `sidik_data`
+`6128fbb0…` di kedelapan.
 
 | i | simbol | simbol-bulan | baris | menit hilang | gagal | nisbah |
 |---|---|---|---|---|---|---|
@@ -123,51 +166,69 @@ kode keluar 0 semuanya). `sidik_data` `6128fbb0…` di kedelapan.
 | 7 | 98 | 2.338 | 100.317.358 | 675 | 1 | 1,2334 |
 
 - Simbol **787**; simbol-bulan **19.598**; baris **839.842.134**; slot
-  **839.855.709**; menit hilang **13.575**.
+  **839.855.709**; menit hilang **13.575** = 6.375 (KC-14) + 7.200 (KC-15).
 - Gerbang: lolos **19.586**, gagal **12**, `persen_lolos` semesta **99,9388**.
 - 0 gagal unduh, 0 gagal checksum, 0 baris dibuang, 0 simbol gagal didaftar,
   `selisih_cacah_bulan.cacah_simbol_berselisih` = 0, `jenis_instrumen_unik` =
   `[perpetual_usdt]` — di kedelapan pecahan.
 - Ukuran: zip **26.532.925.083 B** (26,53 GB); parquet **32.706.262.375 B**
-  (32,71 GB); nisbah semesta **1,2327**. Ramalan probe lama (1,51 → 39,17 GB)
-  meleset ≈6,5 GB ke atas.
+  (32,71 GB); nisbah semesta **1,2327**.
 - Kelas risiko gabungan (aturan 37): pra_header 1.952, bulan_awal_2020_2021
-  1.889, terhenti 587, non_ascii 19, kendali_baru 10.007. non_ascii KOSONG di
-  pecahan 3,4,5,6,7 dan dinyatakan terbuka di `kelas_risiko_kosong`.
+  1.889, terhenti 587, non_ascii 19, kendali_baru 10.007.
 - **Parquet tidak bertahan.** `parquet_dipersistenkan: false` di kedelapan
-  laporan: ditulis, diukur, dihapus. Sampai ADR-A006 Keputusan 3 diterapkan,
-  semesta ini adalah ANGKA tanpa data.
+  laporan. Sampai pengemas tersambung ke `pecahan.py`, semesta ini adalah ANGKA
+  tanpa data.
+- **Batas kesahihan yang perlu diingat:** hari yang lenyap penuh dari berkas
+  bulanan SELALU melanggar `tanpa_menit_hilang`, jadi 19.586 yang lolos tidak
+  dapat menyembunyikan hari dalaman yang hilang. Yang belum terjamin adalah
+  TEPI bulan; itu yang diukur diagnosa KC-15.
 
-## Daftar karantina ADR-A006 — 12 simbol-bulan (lengkap, bukan sampel)
+## Daftar karantina ADR-A006 — 12 simbol-bulan, kini terpisah dua sebab
 
-AERGOUSDT 2025-04 · CVCUSDT 2025-05 · SLPUSDT 2025-07 (pecahan 0) ·
-CVXUSDT 2025-07 · MAVIAUSDT 2025-03 · PUMPUSDT 2025-07 (pecahan 1) ·
-CTKUSDT 2025-04 (3) · LITUSDT 2025-12 (4) · BNXUSDT 2022-04, 2022-06, 2022-08
-(6) · AIAUSDT 2026-01 (7). Semua pada dua klausa yang sama.
+**KC-14 (9, lubang nyata di kedua representasi, 6.375 menit):**
+AERGOUSDT 2025-04 (660) · CVCUSDT 2025-05 (510) · SLPUSDT 2025-07 (705)
+[pecahan 0] · CVXUSDT 2025-07 (690) · MAVIAUSDT 2025-03 (1.020) ·
+PUMPUSDT 2025-07 (450) [1] · CTKUSDT 2025-04 (615) [3] ·
+LITUSDT 2025-12 (1.050) [4] · AIAUSDT 2026-01 (675) [7].
+660+510+705+690+1.020+450+615+1.050+675 = **6.375** ✅
 
-Pada tiap pecahan panjang `contoh_gagal` = `simbol_bulan_gagal`, jadi daftar ini
-tidak terpotong batas contoh. Menit hilang per pecahan seluruhnya kelipatan 15;
-BNXUSDT menyumbang 7.200 menit (5 hari) di tiga bulan 2022 — satu-satunya
-tersangka pra-2023 dan satu-satunya yang berulang. **Ini memerlukan verifikasi.**
+**KC-15 (3, hari penuh hilang hanya di bulanan, 7.200 menit, DAPAT DIPULIHKAN):**
+BNXUSDT 2022-04 (1.440) · 2022-06 (1.440) · 2022-08 (4.320) [pecahan 6].
+
+Seluruh dua belas melanggar dua klausa yang sama (`tanpa_menit_hilang` +
+`jarak_60_detik`), tiap kasus satu blok tunggal, semua blok mulai tepat 00:00
+UTC, semua panjang kelipatan 15 menit — 12 dari 12. Pada tiap pecahan panjang
+`contoh_gagal` = `simbol_bulan_gagal`, jadi daftar ini tidak terpotong batas
+contoh.
+
+**Selisih yang belum terjelaskan:** BNXUSDT 2022-04 punya 41.550 baris +
+1.440 menit lubang = 42.990, sedangkan April punya 43.200 menit → **210 menit**
+(14×15) di tepi bulan, tak terlihat gerbang maupun penghitung lubang. Delapan
+simbol-bulan karantina lain pas tanpa sisa. **Ini memerlukan verifikasi**
+(diagnosa KC-15, R-117).
 
 ## Jumlah uji
 
 **141 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30359672326`, commit
-`6af0b252`, `kode_keluar: 0`, `"141 tests collected in 0.38s"`. Setelah itu
-ditambah `tests/test_diagnosa_kc14c.py` (8 uji) — cacah barunya hanya sah dari
-laporan CI berikutnya (aturan 38).
+`6af0b252`, `kode_keluar: 0`, `"141 tests collected in 0.38s"`. Sesudah itu
+ditambahkan `tests/test_diagnosa_kc14c.py`, `tests/test_rilis.py`,
+`tests/test_karantina_a006.py`, `tests/test_diagnosa_kc15.py`. Cacah barunya
+hanya sah dari laporan CI berikutnya (aturan 38) — jangan tulis jumlahnya di
+sini sebelum itu.
 
 ## Utang verifikasi
 
 1-5 dan 11 menunggu tahap juri/klasifikasi. 6-23, 25-28 LUNAS.
 
-24. **AKTIF — sisa pekerjaan bukan pengukuran lagi.** Pengukuran semesta SELESAI
-    (787 / 19.598 / 839.842.134). Yang belum:
-    - **persistensi** parquet sebagai rilis tar terbelah ≤1,8 GB + `SHA256SUMS`
-      (ADR-A006 Keputusan 3) — tanpa ini tiap run mahal hanya menghasilkan angka;
-    - medan `karantina`, `cacah_karantina`, `daftar_karantina` di `serap.ringkas`;
+24. **AKTIF.** Pengukuran semesta SELESAI (787 / 19.598 / 839.842.134). Yang
+    belum:
+    - **persistensi**: pengemas `rilis.py` sudah ada dan berpengujian, tetapi
+      belum tersambung ke `pecahan.py` dan belum mengunggah aset rilis;
+    - medan `karantina`, `cacah_karantina`, `daftar_karantina` — **SUDAH ADA**
+      di `serap.py` Versi 3;
     - jalur **funding** (`funding_ada` masih null di seluruh manifes);
     - medan `dugaan_pengganti` (ADR-A005);
+    - pemulihan harian ADR-A007 (`sumber_baris`, `cacah_baris_dipulihkan`);
     - karantina artefak 7 hari.
     Mengadjudikasi R-7, R-19, R-20, R-36, R-37.
 
@@ -180,6 +241,10 @@ laporan CI berikutnya (aturan 38).
 - `.decode("utf-8","replace")` di `klines` membungkam byte rusak.
 - Apakah BUSD/USDC layak digabung dengan USDT.
 - Keamanan `arsip.bulan_tersedia` untuk simbol Tionghoa.
-- Sebab KC-14 (H-A004) — tidak dapat diuji dengan akses sekarang.
-- Nisbah parquet/zip: kini 1,2327 atas 19.598 berkas, jadi taksiran probe 1,51
-  resmi ditolak; ini bukan lagi keterbatasan sampel (aturan 20 terpenuhi).
+- Sebab KC-14 pada 9 kasus (H-A004) — tidak dapat diuji dengan akses sekarang.
+- **Sebab KC-15 tidak diketahui.** Ketiganya BNXUSDT 2022, satu-satunya simbol
+  pra-2023 di antara dua belas karantina dan satu-satunya yang berulang. Apakah
+  KC-15 khas simbol, khas tahun 2022, atau tersebar: belum terukur.
+- Apakah KC-15 juga memotong tepi bulan (H-A005) — sedang diukur.
+- Berapa banyak bulan TENGAH di antara 19.586 yang lolos punya tepi tak nol —
+  sedang diukur atas 40 sampel; kesimpulan tidak boleh diperluas (aturan 20).

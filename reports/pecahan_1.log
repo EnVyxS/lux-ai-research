@@ -1,0 +1,90 @@
+{
+  "bukan_bukti": false,
+  "byte_parquet_total": 4269971639,
+  "byte_zip_total": 3480701577,
+  "cacah_gagal_checksum": 0,
+  "cacah_gagal_unduh": 0,
+  "cacah_simbol_bulan_dengan_baris_dibuang": 0,
+  "catatan_bulan_parsial": "bulan pertama dan terakhir tiap simbol PARSIAL; rerata baris per bulan dilarang dikalikan begitu saja (aturan 28)",
+  "catatan_parquet": "parquet ditulis, diukur, lalu dihapus; bentuk persistensi menunggu ADR-A006",
+  "catatan_rentang": "hasil berlaku untuk pecahan 1 dari 8 saja, bukan untuk 19.598 bulan perpetual_usdt (aturan 20)",
+  "gerbang": {
+    "baris_diperiksa": 105765980,
+    "contoh_gagal": [
+      {
+        "bulan": "2025-07",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "CVXUSDT"
+      },
+      {
+        "bulan": "2025-03",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "MAVIAUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "pelanggaran": [
+          "tanpa_menit_hilang",
+          "jarak_60_detik"
+        ],
+        "simbol": "PUMPUSDT"
+      }
+    ],
+    "pelanggaran_per_klausa": {
+      "deret_tidak_kosong": 0,
+      "jarak_60_detik": 3,
+      "satuan_milidetik": 0,
+      "selaras_menit": 0,
+      "tanpa_duplikat": 0,
+      "tanpa_menit_hilang": 3
+    },
+    "persen_lolos": 99.88,
+    "simbol_bulan_dinilai": 2468,
+    "simbol_bulan_gagal": 3,
+    "simbol_bulan_lolos": 2465,
+    "slot_diperiksa": 105768140
+  },
+  "jenis_instrumen_unik": [
+    "perpetual_usdt"
+  ],
+  "jumlah_baris": 105765980,
+  "jumlah_baris_dibuang": 0,
+  "kelas_risiko_kosong": [],
+  "kelas_risiko_tersentuh": {
+    "bulan_awal_2020_2021": 204,
+    "kendali_baru": 1302,
+    "non_ascii": 6,
+    "pra_header": 216,
+    "terhenti": 15
+  },
+  "nisbah_parquet_per_zip": 1.2268,
+  "parquet_dipersistenkan": false,
+  "pecahan": {
+    "cacah_simbol": 99,
+    "cacah_simbol_gagal_daftar": 0,
+    "contoh_gagal_daftar": [],
+    "indeks": 1,
+    "total": 8
+  },
+  "penyebut": {
+    "simbol_bulan_diminta": 2468,
+    "simbol_bulan_terunduh": 2468
+  },
+  "selisih_cacah_bulan": {
+    "cacah_simbol_berselisih": 0,
+    "catatan": "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+    "contoh": []
+  },
+  "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+  "sidik_kode": "059df499e83b8d6c3c6b7f87f0dc220ea051e322c7c33f8b0351b0cbe12369ec",
+  "status": "TERUKUR",
+  "sumber_rentang": "reports/semesta_rentang.json",
+  "versi_pecahan": 2,
+  "waktu_utc": "2026-07-28T13:25:30Z"
+}

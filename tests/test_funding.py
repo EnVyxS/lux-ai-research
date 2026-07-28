@@ -1,13 +1,14 @@
 """Uji jalur funding tanpa jaringan sama sekali.
 
-Lima belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
+Delapan belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
 cacah butir yang dikumpulkan pytest. Ini disengaja: kekeliruan R-148 lahir dari
-mencacah fungsi padahal pytest mencacah butir.
+mencacah fungsi padahal pytest mencacah butir (aturan 47).
 """
 
 from __future__ import annotations
 
 import io
+import urllib.error
 import zipfile
 
 from lux_ai.serapan import funding
@@ -163,3 +164,52 @@ def test_histogram_menyaring_none_dan_melaporkan_seri():
     assert seri["kunci"] == "2024-01"
     assert seri["seri"] is True
     assert funding.puncak_histogram({}) == {"kunci": None, "cacah": 0, "seri": False}
+
+
+def test_periksa_url_membedakan_404_dari_galat_jaringan(monkeypatch):
+    """Server menjawab 'tidak ada' bukan hal yang sama dengan server bisu."""
+
+    def tolak(*_args, **_kwargs):
+        raise urllib.error.HTTPError("http://x", 404, "Not Found", None, None)
+
+    monkeypatch.setattr(funding.urllib.request, "urlopen", tolak)
+    empat_nol_empat = funding.periksa_url("http://x")
+    assert empat_nol_empat["kode_http"] == 404
+    assert empat_nol_empat["galat"] is None
+
+    def bisu(*_args, **_kwargs):
+        raise urllib.error.URLError("nama tidak dapat diselesaikan")
+
+    monkeypatch.setattr(funding.urllib.request, "urlopen", bisu)
+    galat = funding.periksa_url("http://x")
+    assert galat["kode_http"] is None
+    assert galat["galat"]
+
+
+def test_uji_cdn_kohort_dan_kendali_berpasangan():
+    """Kendali wajib simbol yang sama pada bulan berbeda: satu variabel saja."""
+    assert len(funding.UJI_KOHORT) == len(funding.UJI_KENDALI) == 3
+    kohort = dict(funding.UJI_KOHORT)
+    kendali = dict(funding.UJI_KENDALI)
+    assert set(kohort) == set(kendali)
+    for simbol in kohort:
+        assert kohort[simbol] != kendali[simbol]
+    # tidak ada pasangan yang sama persis di kedua daftar
+    assert not set(funding.UJI_KOHORT) & set(funding.UJI_KENDALI)
+
+
+def test_ringkas_uji_cdn_gugur_saat_kendali_gagal():
+    kohort = [{"kode_http": 404}, {"kode_http": 404}, {"kode_http": None, "galat": "putus"}]
+    kendali_baik = [{"kode_http": 200, "checksum_cocok": True}] * 2
+    hasil = funding.ringkas_uji_cdn(kohort, kendali_baik)
+    assert hasil["cacah_kohort_404"] == 2
+    assert hasil["cacah_kohort_galat"] == 1
+    assert hasil["kendali_sah"] is True
+
+    # kendali yang terambil tetapi checksumnya tidak cocok TIDAK mensahkan
+    hasil_cacat = funding.ringkas_uji_cdn(
+        kohort, [{"kode_http": 200, "checksum_cocok": None}]
+    )
+    assert hasil_cacat["kendali_sah"] is False
+    # kendali kosong juga tidak mensahkan apa pun
+    assert funding.ringkas_uji_cdn(kohort, [])["kendali_sah"] is False

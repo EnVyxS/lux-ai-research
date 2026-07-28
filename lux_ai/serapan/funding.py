@@ -26,16 +26,21 @@ Riwayat versi:
 - VERSI 1 mengukur ketersediaan; hasilnya 880 bulan klines tanpa funding.
 - VERSI 2 menambahkan bukti sampel ke log, daftar penuh, dan klasifikasi lubang;
   hasilnya 826 dari 880 lubang berada di EKOR riwayat simbol.
-- VERSI 3 menjawab pertanyaan yang lahir dari itu: apakah ekor-ekor tersebut
-  mulai pada bulan yang SAMA. Puluhan simbol yang berhenti serempak berbunyi
-  seperti satu peristiwa di sisi arsip, bukan seperti puluhan delisting
-  kebetulan — tetapi itu dugaan yang dilihat dengan mata pada daftar terpotong,
-  dan dugaan tidak boleh dipakai sebelum jadi angka (aturan 16).
+- VERSI 3 mengukur bentuk kohortnya: 38 simbol memulai lubang ekor tepat di
+  2025-07, dan ketiga puluh delapan itu berjarak persis 12 bulan dari bulan
+  klines terakhirnya. 456 simbol-bulan, 51,8% dari seluruh lubang.
+- VERSI 4 menjawab keberatan yang sejak VERSI 1 tertulis di catatan metode:
+  seluruh angka di atas berasal dari LISTING, dan ketiadaan nama di listing
+  bukan ketiadaan berkas di CDN. Di sini berkas kohort diminta LANGSUNG.
+  Permintaan itu tidak berarti apa-apa tanpa KENDALI: tanpa berkas pembanding
+  yang terdaftar dan berhasil diambil, kode 404 tidak dapat dibedakan dari
+  jalur unduh yang rusak (aturan 24). Kendalinya dipilih dari simbol yang sama
+  pada bulan bertetangga, sehingga hanya satu hal yang berbeda: bulannya.
 
 Laporan ini **diagnostik** (`bukan_bukti: true`, aturan 10). Ia tidak mengubah
 satu baris pun manifes serapan.
 
-Aturan yang ditegakkan: 7, 10, 16, 20, 21, 22, 24, 30, 32, 36, 37, 41, 44, 46.
+Aturan yang ditegakkan: 7, 10, 16, 20, 21, 22, 24, 30, 32, 36, 37, 41, 44, 46, 47.
 """
 
 from __future__ import annotations
@@ -45,13 +50,15 @@ import hashlib
 import io
 import json
 import os
+import urllib.error
+import urllib.request
 import zipfile
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from . import arsip
 
-VERSI = 3
+VERSI = 4
 SUMBER_RENTANG = "reports/semesta_rentang.json"
 KELUARAN = "reports/funding_semesta.json"
 KELUARAN_SELISIH = "reports/funding_selisih_penuh.json"
@@ -78,6 +85,20 @@ MEDAN_SAMPEL_RINGKAS = (
     "cacah_baris",
     "gagal_unduh",
     "gagal_checksum",
+)
+
+# Uji CDN. Kohort: bulan pertama lubang ekor bagi tiga anggota kohort 2025-07
+# yang terukur di VERSI 3. Kendali: simbol yang SAMA pada bulan bertetangga yang
+# terdaftar, sehingga satu-satunya yang berbeda adalah bulannya.
+UJI_KOHORT: Tuple[Tuple[str, str], ...] = (
+    ("FTMUSDT", "2025-07"),
+    ("KLAYUSDT", "2025-07"),
+    ("LOOMUSDT", "2025-07"),
+)
+UJI_KENDALI: Tuple[Tuple[str, str], ...] = (
+    ("FTMUSDT", "2025-06"),
+    ("KLAYUSDT", "2025-06"),
+    ("LOOMUSDT", "2025-06"),
 )
 
 
@@ -198,6 +219,109 @@ def puncak_histogram(h: Dict[str, int]) -> Dict[str, Any]:
     tertinggi = max(h.values())
     kandidat = sorted(k for k, v in h.items() if v == tertinggi)
     return {"kunci": kandidat[0], "cacah": tertinggi, "seri": len(kandidat) > 1}
+
+
+def periksa_url(url: str, timeout: int = 60) -> Dict[str, Any]:
+    """Minta satu URL dan laporkan kode HTTP apa adanya.
+
+    404 (server menjawab: tidak ada) dan galat jaringan (server tidak menjawab)
+    adalah dua keadaan yang berbeda. Menyamakan keduanya persis kesalahan yang
+    dilarang aturan 46, maka `kode_http` tetap None saat yang terjadi adalah
+    galat, dan `galat` tetap None saat yang terjadi adalah 404.
+    """
+    baris: Dict[str, Any] = {
+        "url": url,
+        "kode_http": None,
+        "byte": None,
+        "checksum_sha256": None,
+        "teks_awal": None,
+        "galat": None,
+    }
+    try:
+        with urllib.request.urlopen(url, timeout=timeout) as jawab:
+            data = jawab.read()
+            baris["kode_http"] = int(getattr(jawab, "status", 200) or 200)
+            baris["byte"] = len(data)
+            baris["checksum_sha256"] = hashlib.sha256(data).hexdigest()
+            baris["teks_awal"] = data[:200].decode("utf-8", "replace")
+    except urllib.error.HTTPError as exc:
+        baris["kode_http"] = int(exc.code)
+    except Exception as exc:  # noqa: BLE001
+        baris["galat"] = str(exc)[:200]
+    return baris
+
+
+def periksa_berkas_funding(simbol: str, bulan: str, peran: str) -> Dict[str, Any]:
+    """Minta satu berkas funding langsung ke CDN, lalu cocokkan checksum resmi.
+
+    `checksum_cocok` bernilai None bila berkas tidak terambil; None berarti
+    "tidak dapat diperiksa", bukan "tidak cocok".
+    """
+    url = arsip.url_funding(simbol, bulan)
+    baris = periksa_url(url)
+    baris["simbol"] = simbol
+    baris["bulan"] = bulan
+    baris["peran"] = peran
+    baris["checksum_cocok"] = None
+    if baris["kode_http"] == 200 and baris["checksum_sha256"]:
+        sidik = periksa_url(url + ".CHECKSUM")
+        baris["kode_http_checksum"] = sidik["kode_http"]
+        teks = sidik.get("teks_awal") or ""
+        if sidik["kode_http"] == 200 and teks:
+            baris["checksum_cocok"] = baris["checksum_sha256"] in teks.split()
+    return baris
+
+
+def ringkas_uji_cdn(
+    kohort: List[Dict[str, Any]], kendali: List[Dict[str, Any]]
+) -> Dict[str, Any]:
+    """Cacah hasil uji CDN, dengan kendali sebagai medan penggugur.
+
+    Bila kendali tidak seluruhnya 200 dan cocok checksum, jalur unduh sendiri
+    yang tidak dapat dipercaya, dan seluruh angka kohort di blok ini batal.
+    """
+    kendali_200 = sum(1 for b in kendali if b.get("kode_http") == 200)
+    kendali_cocok = sum(1 for b in kendali if b.get("checksum_cocok") is True)
+    sah = bool(kendali) and kendali_200 == len(kendali) and kendali_cocok == len(kendali)
+    return {
+        "cacah_kohort_diminta": len(kohort),
+        "cacah_kohort_404": sum(1 for b in kohort if b.get("kode_http") == 404),
+        "cacah_kohort_200": sum(1 for b in kohort if b.get("kode_http") == 200),
+        "cacah_kohort_galat": sum(1 for b in kohort if b.get("galat")),
+        "cacah_kendali_diminta": len(kendali),
+        "cacah_kendali_200": kendali_200,
+        "cacah_kendali_checksum_cocok": kendali_cocok,
+        "kendali_sah": sah,
+        "catatan": (
+            "bila kendali_sah false, jalur unduh tidak terbukti bekerja dan "
+            "seluruh cacah kohort di blok ini BATAL (aturan 24); 404 berarti "
+            "server menjawab tidak ada, galat berarti server tidak menjawab, "
+            "dan keduanya tidak boleh disamakan (aturan 46)"
+        ),
+    }
+
+
+def jalankan_uji_cdn() -> Dict[str, Any]:
+    """Uji kohort dan kendali berdampingan; keduanya selalu dijalankan."""
+    kohort = [periksa_berkas_funding(s, b, "kohort") for s, b in UJI_KOHORT]
+    kendali = [periksa_berkas_funding(s, b, "kendali") for s, b in UJI_KENDALI]
+    hasil = ringkas_uji_cdn(kohort, kendali)
+    hasil["baris"] = [
+        {
+            m: b.get(m)
+            for m in (
+                "peran",
+                "simbol",
+                "bulan",
+                "kode_http",
+                "byte",
+                "checksum_cocok",
+                "galat",
+            )
+        }
+        for b in kohort + kendali
+    ]
+    return hasil
 
 
 def kelas_bulan(simbol: str, bulan: str, bulan_terakhir: str = "") -> List[str]:
@@ -477,6 +601,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "histogram_mulai_lubang_ekor": hist_mulai,
         "puncak_mulai_lubang_ekor": puncak_histogram(hist_mulai),
         "histogram_jarak_bulan_terakhir": hist_jarak,
+        "uji_cdn": jalankan_uji_cdn(),
         "cacah_sampel": len(sampel),
         "cacah_sampel_gagal_unduh": sum(1 for s in sampel if s.get("gagal_unduh")),
         "cacah_sampel_gagal_checksum": sum(1 for s in sampel if s.get("gagal_checksum")),
@@ -504,13 +629,15 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "berarti semesta yang dilihat modul ini bukan semesta manifes serapan, "
         "sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti "
         "cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram "
-        "bulan-mulai bocor dan seluruh angka kohort batal (aturan 24)"
+        "bulan-mulai bocor dan seluruh angka kohort batal; uji_cdn.kendali_sah "
+        "== false berarti jalur unduh tidak terbukti dan seluruh cacah uji_cdn "
+        "batal (aturan 24)"
     )
     laporan["catatan_metode"] = (
         "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan "
         "sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di "
-        "listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya "
-        "yang pertama yang diukur di sini"
+        "listing dan ketiadaan berkas di CDN adalah dua hal berbeda; blok "
+        "uji_cdn memeriksa perbedaan itu pada enam berkas saja, bukan pada 880"
     )
     laporan["catatan_bentuk_lubang"] = (
         "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang "
@@ -524,6 +651,11 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "membuktikan sebabnya ada di sisi arsip: bulan yang sama juga bisa "
         "lahir dari satu gelombang delisting. Membedakan keduanya memerlukan "
         "sumber di luar arsip dan BELUM dilakukan"
+    )
+    laporan["catatan_uji_cdn"] = (
+        "uji_cdn menyentuh tiga berkas kohort dan tiga kendali; hasilnya berlaku "
+        "untuk enam berkas itu saja dan tidak boleh digeneralkan ke 456 "
+        "simbol-bulan kohort tanpa pengukuran lanjutan (aturan 20)"
     )
     laporan["catatan_jarak"] = (
         "jarak_bulan_terakhir = bulan klines terakhir dikurangi bulan funding "

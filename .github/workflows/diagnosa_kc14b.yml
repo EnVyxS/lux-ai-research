@@ -1,0 +1,45 @@
+name: diagnosa-kc14b
+
+# Aturan 33: pemicu menyebut berkas modulnya saja, tanpa pemicu-diri.
+# Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
+# Beban sangat ringan: 3 berkas harian kecil.
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/diagnosa_kc14b.py'
+
+permissions:
+  contents: write
+
+jobs:
+  diagnosa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: jalankan diagnosa
+        run: |
+          set +e
+          python -m lux_ai.serapan.diagnosa_kc14b > kc14b.log 2>&1
+          kode=$?
+          mkdir -p reports
+          tail -c 40000 kc14b.log > reports/diagnosa_kc14b.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/diagnosa_kc14b_status.json
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          git add reports/diagnosa_kc14b.json 2>/dev/null || true
+          git add reports/diagnosa_kc14b.log reports/diagnosa_kc14b_status.json
+          git commit -m "diagnosa kc14b run ${GITHUB_RUN_ID} [skip ci]" || true
+          for percobaan in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break
+            sleep $((percobaan * 15))
+          done
+          exit $kode

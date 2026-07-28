@@ -1,5 +1,12 @@
 {
   "batas_daftar": 500,
+  "bentuk_lubang": {
+    "awal": 48,
+    "ekor": 826,
+    "hilang": 880,
+    "tengah": 6
+  },
+  "berkas_daftar_penuh": "reports/funding_selisih_penuh.json",
   "bukan_bukti": true,
   "byte_zip_sampel_maks": 1942,
   "byte_zip_sampel_min": 433,
@@ -9,10 +16,12 @@
   "cacah_sampel_gagal_checksum": 0,
   "cacah_sampel_gagal_unduh": 0,
   "cacah_simbol_gagal_daftar": 0,
+  "cacah_simbol_tanpa_funding_sama_sekali": 0,
+  "catatan_bentuk_lubang": "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang seluruh bulannya tanpa funding masuk awal saja, jadi angka ekor adalah batas BAWAH bagi gejala hilang-di-akhir, bukan taksiran tengahnya",
   "catatan_bukan_bukti": "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK menulis funding_ada di manifes mana pun",
   "catatan_kelas_kosong": "kelas risiko tanpa kandidat tidak menghasilkan wakil sampel; klaim apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan dari kasus lain (aturan 41, 46)",
   "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya yang pertama yang diukur di sini",
-  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah (aturan 24)",
+  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor dan seluruh angka awal/ekor/tengah batal (aturan 24)",
   "catatan_rentang": "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json saja, bukan untuk 937 simbol arsip (aturan 20)",
   "contoh_gagal_daftar": [],
   "daftar_funding_tanpa_klines": [
@@ -623,10 +632,53 @@
     "simbol_diminta": 787,
     "simbol_terdaftar": 787
   },
+  "sampel_ringkas": [
+    {
+      "berheader": true,
+      "bulan": "2021-05",
+      "byte_zip": 747,
+      "cacah_baris": 64,
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "kelas_terpilih": "bulan_awal_2020_2021",
+      "simbol": "1000SHIBUSDT"
+    },
+    {
+      "berheader": true,
+      "bulan": "2025-10",
+      "byte_zip": 834,
+      "cacah_baris": 69,
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "kelas_terpilih": "non_ascii",
+      "simbol": "币安人生USDT"
+    },
+    {
+      "berheader": true,
+      "bulan": "2022-01",
+      "byte_zip": 433,
+      "cacah_baris": 17,
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "kelas_terpilih": "terhenti",
+      "simbol": "1000BTTCUSDT"
+    },
+    {
+      "berheader": true,
+      "bulan": "2025-09",
+      "byte_zip": 1942,
+      "cacah_baris": 233,
+      "gagal_checksum": false,
+      "gagal_unduh": false,
+      "kelas_terpilih": "kendali_baru",
+      "simbol": "0GUSDT"
+    }
+  ],
+  "selisih_klasifikasi": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "8ad92ed838f535d91d0ccf6c3299ac576b9388b799f64f5fd03279b25f9c511a",
+  "sidik_kode": "9e2790eab5ab11e31165f022d268da009eba65894ba3c91e49a23049d7c7d90e",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
-  "versi_funding": 1,
-  "waktu_utc": "2026-07-28T22:44:04Z"
+  "versi_funding": 2,
+  "waktu_utc": "2026-07-28T23:16:41Z"
 }

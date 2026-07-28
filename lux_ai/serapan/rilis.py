@@ -17,22 +17,25 @@ Rancangan:
   ditempatkan di bagiannya sendiri dan dicatat di `cacah_berkas_melebihi_batas`.
   Memecah satu berkas parquet akan membuat bagian tar tak bisa dibaca sendiri.
 
-## Ukuran tar: apa yang saya tahu, dan apa yang tidak
+## Ukuran tar: tiga lapis, dua di antaranya mahal dipelajari
 
-Yang TERUKUR dan pasti:
+1. **Isi tiap anggota** dibulatkan ke blok 512 byte.
+2. **Kepala tiap anggota = 3 blok, bukan 1.** Sejak Python 3.8 `tarfile` memakai
+   format **PAX** sebagai baku, dan pax menulis header tambahan (satu blok
+   kepala + satu blok isi = 1.024 byte) untuk anggota yang butuh field
+   diperluas — di sini `mtime` berpecahan detik, yang dimiliki hampir semua
+   parquet yang baru ditulis. Terukur pada run **`30376241019`**: bagian dengan
+   1.055 anggota meleset 1.054.720 byte dari taksiran, 1.044 anggota meleset
+   1.044.480, dan 366 anggota meleset 348.160 — semuanya ≈ 1.024 byte per
+   anggota. Taksiran + 1.055 × 1.024 cocok dengan tar nyata sampai sisa 512 byte.
+3. **Seluruh arsip** dibulatkan ke `tarfile.RECORDSIZE` = 10.240 byte, dan
+   `MARGIN_REKAM` (2 rekam) ditambahkan sebagai bantalan sisa.
 
-1. tiap anggota memakai satu blok kepala 512 byte + isi dibulatkan ke 512;
-2. ukuran tar nyata selalu kelipatan `tarfile.RECORDSIZE` = 10.240 byte;
-3. **tar nyata bisa satu rekam LEBIH BESAR daripada yang diramalkan aritmetika
-   blok + dua blok penutup.** Diukur CI run `30370456172`: bagian dengan 9.216
-   byte anggota berukuran nyata 20.480, bukan 10.240.
-
-Yang TIDAK saya ketahui: mengapa rekam tambahan itu ada. **Ini memerlukan
-verifikasi.** Karena itu modul ini berhenti memodelkan isi perut pustaka dan
-memakai **margin eksplisit** `MARGIN_REKAM` = 2 rekam. Dua, bukan satu, supaya
-marginnya tidak persis sebesar gejala yang baru satu kali terukur — sampel satu
-tidak boleh menjadi angka pas (aturan 39). Pada batas produksi 1,8 GB, 20 KB itu
-0,001%; harganya nol dan ia menutup ketidaktahuan yang nyata.
+Sejarah yang wajib diingat: lapis 2 sempat muncul sebagai "tar selalu satu rekam
+lebih besar" (jurnal 54), karena pada uji sintetis 6 anggota galat 6 × 1.024
+masih lebih kecil daripada satu rekam. **Margin tetap menyembunyikan galat yang
+menskala** — lihat aturan 43. Karena itu uji regresi modul ini memakai 120
+anggota, bukan 6.
 
 Semua keputusan pembelahan lewat SATU fungsi, `taksir_bagian()`, supaya model
 ukuran tidak bisa berbeda antara `rencana_belah` dan `PengemasBerbelah`
@@ -42,10 +45,10 @@ Medan penggugur (aturan 24): `cacah_bagian_melebihi_batas`,
 `cacah_berkas_melebihi_batas`, `cacah_bagian_taksiran_terlampaui`, dan
 `verifikasi()` yang membaca ulang tiap tar lalu mencocokkan cacah anggota dan
 sha256. Bila salah satu tidak nol atau tidak cocok, rilisnya TIDAK sah dan tidak
-boleh dianggap persistensi. `cacah_bagian_taksiran_terlampaui` menangkap cacat
-model ini dua kali berturut-turut; ia tidak boleh dilunakkan.
+boleh dianggap persistensi. Medan itulah yang menangkap cacat pax pada skala
+nyata setelah 16 uji sintetis lolos; ia tidak boleh dilunakkan.
 
-Aturan yang ditegakkan: 7, 8, 9, 16, 21, 23, 24, 30, 32, 39.
+Aturan yang ditegakkan: 7, 8, 9, 16, 21, 23, 24, 30, 32, 39, 43.
 """
 
 from __future__ import annotations
@@ -58,21 +61,28 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence
 # 1,8 GB desimal. Aset rilis GitHub berbatas 2 GB; sisanya bantalan tar.
 BATAS_BAGIAN = 1_800_000_000
 BLOK_TAR = 512
+BLOK_PAX = 2 * BLOK_TAR  # header pax: satu blok kepala + satu blok isi
+KEPALA_ANGGOTA = BLOK_TAR + BLOK_PAX  # 1.536 byte per anggota
 BYTE_AKHIR_TAR = 2 * BLOK_TAR  # dua blok nol penutup arsip
 REKAM_TAR = tarfile.RECORDSIZE  # 10.240 byte; ukuran tar selalu kelipatan ini
-MARGIN_REKAM = 2 * REKAM_TAR  # bantalan tak terjelaskan yang terukur di CI
+MARGIN_REKAM = 2 * REKAM_TAR  # bantalan sisa pembulatan
 NAMA_SUMS = "SHA256SUMS"
 AKAR_RILIS = "data/rilis"
 POTONG_BACA = 1024 * 1024
 
 
 def perkiraan_byte_anggota(ukuran: int) -> int:
-    """Byte yang dipakai satu anggota tar: satu blok kepala + isi berbantalan."""
+    """Byte yang dipakai satu anggota tar: kepala 3 blok + isi berbantalan.
+
+    Tiga blok, bukan satu: format pax menambahkan 1.024 byte per anggota. Galat
+    ini menskala dengan cacah anggota, jadi ia TIDAK boleh diserahkan kepada
+    margin (aturan 43).
+    """
     ukuran = int(ukuran)
     if ukuran < 0:
         raise ValueError("ukuran anggota tidak boleh negatif")
     blok_isi = (ukuran + BLOK_TAR - 1) // BLOK_TAR
-    return BLOK_TAR + blok_isi * BLOK_TAR
+    return KEPALA_ANGGOTA + blok_isi * BLOK_TAR
 
 
 def bulatkan_rekam(byte: int) -> int:
@@ -85,13 +95,7 @@ def bulatkan_rekam(byte: int) -> int:
 
 
 def taksir_bagian(byte_anggota_berbantalan: int) -> int:
-    """Taksiran ATAS ukuran satu bagian tar; satu-satunya model yang dipakai.
-
-    Sengaja konservatif: pembulatan rekam ditambah `MARGIN_REKAM`. Taksiran yang
-    lebih kecil daripada kenyataan pernah membuat medan penggugur menyala palsu
-    dua kali (CI run `30369683601` dan `30370456172`); taksiran yang lebih besar
-    hanya membuat bagian sedikit lebih kecil daripada perlu.
-    """
+    """Taksiran ATAS ukuran satu bagian tar; satu-satunya model yang dipakai."""
     return bulatkan_rekam(byte_anggota_berbantalan) + MARGIN_REKAM
 
 
@@ -101,12 +105,7 @@ def batas_terlalu_kecil(batas: int) -> bool:
 
 
 def rencana_belah(ukuran: Sequence[int], batas: int = BATAS_BAGIAN) -> List[List[int]]:
-    """Bagi indeks berkas ke bagian-bagian tar, tanpa menyentuh cakram.
-
-    Fungsi murni, supaya aritmetika pembelahan bisa diuji tanpa jaringan dan
-    tanpa berkas besar (aturan 13-14). `PengemasBerbelah` memakai `taksir_bagian`
-    yang sama persis.
-    """
+    """Bagi indeks berkas ke bagian-bagian tar, tanpa menyentuh cakram."""
     if batas_terlalu_kecil(batas):
         raise ValueError("batas terlalu kecil untuk memuat satu rekam beserta margin")
     bagian: List[List[int]] = []
@@ -208,12 +207,7 @@ class PengemasBerbelah:
     # —— antarmuka ——
 
     def tambah(self, jalur_relatif: str, hapus: bool = True) -> Dict[str, Any]:
-        """Masukkan satu berkas ke tar; sumbernya dihapus bila `hapus`.
-
-        Nama di dalam tar adalah `jalur_relatif` apa adanya, sehingga struktur
-        `data/parquet/<simbol>/<berkas>.parquet` pulih persis saat dibongkar.
-        Simbol non-ASCII sudah diamankan `serap.nama_aman` (aturan 32).
-        """
+        """Masukkan satu berkas ke tar; sumbernya dihapus bila `hapus`."""
         sumber = self.akar / jalur_relatif
         if not sumber.exists():
             self.cacah_berkas_hilang += 1
@@ -266,6 +260,7 @@ class PengemasBerbelah:
             "batas_byte": self.batas,
             "rekam_tar": REKAM_TAR,
             "margin_rekam": MARGIN_REKAM,
+            "kepala_anggota": KEPALA_ANGGOTA,
             "cacah_bagian": len(self.bagian),
             "cacah_berkas": self.cacah_berkas,
             "byte_anggota_total": self.byte_anggota_total,
@@ -295,19 +290,15 @@ class PengemasBerbelah:
             ),
             "catatan_kompresi": (
                 "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per "
-                "anggota mendekati 1 dan selisihnya adalah bantalan 512 byte per "
-                "anggota, pembulatan rekam 10.240 byte, dan margin 20.480 byte"
+                "anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per "
+                "anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan "
+                "margin 20.480 byte"
             ),
         }
 
 
 def verifikasi(akar: str, laporan: Dict[str, Any]) -> Dict[str, Any]:
-    """Baca ulang tiap bagian tar: cocokkan sha256 dan cacah anggotanya.
-
-    Dipisah dari pengemasan supaya bisa dijalankan di langkah workflow lain,
-    setelah aset diunggah, dan supaya kegagalannya terbaca sebagai angka, bukan
-    sebagai jejak tumpukan.
-    """
+    """Baca ulang tiap bagian tar: cocokkan sha256 dan cacah anggotanya."""
     basis = Path(akar)
     cocok = 0
     tak_cocok: List[str] = []

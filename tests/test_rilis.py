@@ -1,15 +1,18 @@
 """Uji pengemas rilis terbelah. Tanpa jaringan; berkas sintetis kecil.
 
-Dua putaran CI membuktikan model ukuran tar saya terlalu kecil: pertama karena
-bantalan `RECORDSIZE`, lalu karena satu rekam tambahan yang belum terjelaskan.
-Uji di berkas ini TIDAK dilonggarkan — `cacah_bagian_melebihi_batas == 0` dan
-`byte <= byte_taksir_dibulatkan` tetap dituntut. Yang berubah: batas uji kini
-kelipatan rekam yang masuk akal, dan modul memakai margin eksplisit.
+Tiga putaran membuktikan model ukuran tar saya terlalu kecil: bantalan
+`RECORDSIZE`, lalu "satu rekam misterius", lalu — pada 1.055 anggota nyata di
+run `30376241019` — sebabnya yang sebenarnya: header **pax** 1.024 byte per
+anggota.
 
-Uji penjaga `test_tar_nyata_tidak_pernah_melebihi_taksiran_dibulatkan`
-membandingkan model dengan ukuran tar NYATA di cakram. Itulah satu-satunya uji
-yang menangkap kedua cacat; uji yang hanya mencocokkan angka dengan angka lain
-yang saya hitung sendiri tidak menangkap apa pun.
+Pelajaran yang dibakukan di sini (aturan 43): galat yang menskala per item TIDAK
+boleh diuji dengan segelintir item, karena margin tetap akan menelannya. Karena
+itu `test_taksiran_tahan_pada_banyak_anggota` memakai 120 anggota; dengan model
+lama uji itu gagal telak, dengan model 6 anggota ia lolos padahal cacat.
+
+Tidak satu pun tuntutan dilonggarkan: `cacah_bagian_melebihi_batas == 0`,
+`cacah_bagian_taksiran_terlampaui == 0`, dan `byte <= byte_taksir_dibulatkan`
+tetap berlaku.
 """
 
 import tarfile
@@ -20,13 +23,15 @@ from lux_ai.serapan import rilis
 
 REKAM = rilis.REKAM_TAR
 MARGIN = rilis.MARGIN_REKAM
+KEPALA = rilis.KEPALA_ANGGOTA
 
 
 def test_perkiraan_byte_anggota_membulat_ke_blok():
-    assert rilis.perkiraan_byte_anggota(0) == 512
-    assert rilis.perkiraan_byte_anggota(1) == 1024
-    assert rilis.perkiraan_byte_anggota(512) == 1024
-    assert rilis.perkiraan_byte_anggota(513) == 1536
+    assert KEPALA == 1536  # kepala tar 512 + pax 1.024
+    assert rilis.perkiraan_byte_anggota(0) == KEPALA
+    assert rilis.perkiraan_byte_anggota(1) == KEPALA + 512
+    assert rilis.perkiraan_byte_anggota(512) == KEPALA + 512
+    assert rilis.perkiraan_byte_anggota(513) == KEPALA + 1024
 
 
 def test_perkiraan_byte_anggota_menolak_negatif():
@@ -54,11 +59,11 @@ def test_taksir_bagian_selalu_menambah_margin():
 
 def test_rencana_belah_tidak_melewati_batas():
     batas = 6 * REKAM
-    ukuran = [10_000] * 8  # tiap anggota memakai 10.752 byte
+    ukuran = [10_000] * 8
     bagian = rilis.rencana_belah(ukuran, batas=batas)
     assert sum(len(b) for b in bagian) == 8
     assert [i for b in bagian for i in b] == list(range(8))
-    assert len(bagian) > 1  # benar-benar terbelah, bukan satu bagian
+    assert len(bagian) > 1
     for b in bagian:
         pakai = rilis.taksir_bagian(
             rilis.BYTE_AKHIR_TAR
@@ -100,14 +105,13 @@ def test_pengemas_membelah_menghapus_sumber_dan_menulis_sums(tmp_path):
 
     assert laporan["status"] == "TERKEMAS"
     assert laporan["cacah_berkas"] == 8
-    assert laporan["cacah_bagian"] > 1  # benar-benar terbelah
+    assert laporan["cacah_bagian"] > 1
     assert laporan["cacah_bagian_melebihi_batas"] == 0
     assert laporan["cacah_bagian_taksiran_terlampaui"] == 0
     assert laporan["cacah_berkas_melebihi_batas"] == 0
     assert laporan["cacah_berkas_hilang"] == 0
     assert laporan["byte_anggota_total"] == 8 * 9_000
     assert sum(b["cacah_berkas"] for b in laporan["bagian"]) == 8
-    # sumber dihapus supaya puncak cakram tetap ≈ satu bagian
     for n in nama:
         assert not (tmp_path / n).exists()
     sums = tmp_path / "data/rilis/SHA256SUMS"
@@ -118,7 +122,7 @@ def test_pengemas_membelah_menghapus_sumber_dan_menulis_sums(tmp_path):
 
 
 def test_tar_nyata_tidak_pernah_melebihi_taksiran_dibulatkan(tmp_path):
-    """Penjaga cacat yang lolos ke CI dua kali: model wajib ≥ kenyataan."""
+    """Model wajib >= kenyataan, pada berbagai ukuran isi."""
     for i, isi in enumerate([1, 511, 512, 513, 4_096, 20_000]):
         _buat(tmp_path, f"data/parquet/BUSDT/B-{i}.parquet", isi)
     kemas = rilis.PengemasBerbelah(
@@ -131,10 +135,34 @@ def test_tar_nyata_tidak_pernah_melebihi_taksiran_dibulatkan(tmp_path):
     assert laporan["cacah_berkas"] == 6
     for b in laporan["bagian"]:
         assert b["byte"] <= b["byte_taksir_dibulatkan"]
-        assert b["byte"] % REKAM == 0  # tarfile selalu rata rekam
+        assert b["byte"] % REKAM == 0
         assert b["byte"] <= laporan["batas_byte"]
     assert laporan["cacah_bagian_taksiran_terlampaui"] == 0
     assert laporan["cacah_bagian_melebihi_batas"] == 0
+
+
+def test_taksiran_tahan_pada_banyak_anggota(tmp_path):
+    """Aturan 43: galat per anggota wajib diuji pada cacah anggota yang besar.
+
+    120 anggota × 1.024 byte pax = 122.880 byte, jauh melampaui margin 20.480.
+    Dengan model lama (kepala satu blok) uji ini gagal telak; dengan enam anggota
+    ia lolos meski modelnya cacat — persis cara cacat pax lolos ke produksi.
+    """
+    for i in range(120):
+        _buat(tmp_path, f"data/parquet/CUSDT/C-{i:03d}.parquet", 100)
+    kemas = rilis.PengemasBerbelah(akar=str(tmp_path), nama_dasar="p_banyak")
+    for i in range(120):
+        kemas.tambah(f"data/parquet/CUSDT/C-{i:03d}.parquet")
+    laporan = kemas.tutup()
+
+    assert laporan["cacah_berkas"] == 120
+    assert laporan["cacah_bagian"] == 1
+    bagian = laporan["bagian"][0]
+    assert bagian["cacah_berkas"] == 120
+    assert bagian["byte"] <= bagian["byte_taksir_dibulatkan"]
+    # rapat, bukan sekadar longgar: sisa di luar margin < satu rekam
+    assert bagian["byte_taksir_dibulatkan"] - MARGIN - bagian["byte"] < REKAM
+    assert laporan["cacah_bagian_taksiran_terlampaui"] == 0
 
 
 def test_pengemas_memulihkan_jalur_asli(tmp_path):

@@ -1,6 +1,8 @@
 # ADR-A002 — Serapan data arsip Binance USDS-M
 
 Status: DITERIMA. Tanggal keputusan: 2026-07-28.
+**§3 DIAMANDEMEN oleh ADR-A004 pada 2026-07-28** — lihat bagian "Amandemen" di
+bawah sebelum memakai bagian 3.
 Bagian 7 diisi pada 2026-07-28 dari `reports/probe_serapan.json`
 (run 30312616216, commit `55837eac88bf293933f61c91ec5ab2a54695882d`,
 `kode_keluar: 0`, `sidik_kode`
@@ -37,6 +39,10 @@ TERVERIFIKASI: 937 simbol di indeks, jauh di atas jumlah pair aktif; simbol
 dengan data berhenti di 2024-05 ikut terbawa.
 
 ### 3. Rentang waktu dan interval
+
+**PERINGATAN: bagian ini DIAMANDEMEN oleh ADR-A004 (2026-07-28). Baca bagian
+"Amandemen" di bawah. Butir tentang `5m`/`15m` asli sebagai uji integritas TIDAK
+lagi berlaku sebagai gerbang.**
 
 - Yang DIUNDUH: `1m` saja, ditambah `fundingRate`.
 - Interval lain diturunkan lewat resample dari 1m.
@@ -150,6 +156,46 @@ Keputusan: simbol-bulan yang klines-nya ada tetapi funding-nya tidak ada DITANDA
 asimetri arah kesalahan: menganggap funding nol pada bulan yang datanya hilang
 adalah memberi makan siang gratis kepada strategi, dan itu persis jenis kesalahan
 yang riset ini dibangun untuk mencegah.
+
+## Amandemen
+
+### A-1 — §3 diamandemen oleh ADR-A004 (2026-07-28)
+
+ADR-A002 §3 memperlakukan berkas `5m`/`15m` terbitan Binance sebagai alat uji
+integritas resample, dan ADR-A002 mensyaratkan kesamaan hasil resample dengan
+berkas terbitan itu sebagai GERBANG. Gerbang itu MERAH pada bulan-bulan awal dan
+sebabnya sudah diukur, sehingga aturan 23 terpenuhi untuk mengubahnya.
+
+Apa yang diukur (`reports/diagnosa_kc6.json`, `reports/rentang_kc6.json`,
+`reports/penyebut_kc6.json`; 84 simbol-bulan, 12 simbol × 6 bulan awal + 1 bulan
+kendali):
+
+- Deret 1m UTUH pada 84 dari 84 simbol-bulan: 0 menit hilang, 0 duplikat, jarak
+  antar-baris selalu 60 detik. Hipotesis "beda disebabkan celah menit" GUGUR.
+- Bulan awal: 2.530 dari 790.983 bucket berbeda pada `open` = 0,3199%.
+- Bulan kendali: 1 dari 140.544 = 0,0007%; langka, tetapi tidak pernah nol.
+- Beda terbesar mencapai ~3% pada harga (XRPUSDT 2020-01: 0,1970 lawan 0,2032),
+  jadi kebijakan toleransi tidak sah.
+
+Yang berubah:
+
+1. Kesamaan dengan berkas `5m`/`15m` terbitan **bukan lagi gerbang**, melainkan
+   DIAGNOSTIK, dan tunduk pada aturan 10 (`"bukan_bukti": true`).
+2. Gerbang yang MENGIKAT untuk serapan adalah integritas struktural deret 1m,
+   dirumuskan di ADR-A004 §2 dan diterapkan di `lux_ai/serapan/gerbang_1m.py`.
+3. Berkas `5m`/`15m` terbitan tidak diserap ke dalam kumpulan data riset. Seluruh
+   interval di atas 1m diturunkan lewat resample, tanpa pengecualian.
+4. Tidak ada toleransi harga dan tidak ada pengecualian "buang N bulan pertama":
+   pada N = 6, DOGEUSDT masih berbeda 202 bucket dan BTSUSDT 8.
+
+Yang TIDAK berubah: bagian 1, 2, 4, 5, 6, 7, 8, 9, dan 10 tetap berlaku apa
+adanya.
+
+Pertanyaan yang MASIH TERBUKA: mana yang benar bila 1m dan 5m/15m terbitan tidak
+sepakat. Ini memerlukan verifikasi dari sumber independen yang tidak kami punya.
+ADR-A004 memilih 1m sebagai sumber kebenaran karena ia satu-satunya deret yang
+integritas strukturalnya dapat kami uji sendiri, bukan karena kami membuktikan
+ia benar.
 
 ## Konsekuensi
 

@@ -1,7 +1,10 @@
 {
-  "run_id": "30358650719",
-  "commit": "8f86d8beb9858bac4603452c8daf23b27489ac7a",
+  "run_id": "30376241019",
+  "commit": "dcd7218d0ac285fd2c769305afb489b7d8634859",
   "indeks": "7",
   "kode_keluar": 0,
-  "waktu_utc": "2026-07-28T13:23:08Z"
+  "tag_rilis": "serapan-pecahan-7-30376241019",
+  "cacah_aset_tar": 3,
+  "kode_unggah": 0,
+  "waktu_utc": "2026-07-28T17:03:19Z"
 }

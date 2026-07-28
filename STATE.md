@@ -1,6 +1,8 @@
-# STATE — versi 16
+# STATE — versi 17
 
-Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
+Diperbarui: 2026-07-28 (sesi 36). Aturan hanya BERTAMBAH; jangan menulis ulang
+dari ingatan. Versi ini disusun setelah v16 dibaca UTUH dari `main` (blob
+`dd9970640fa2a5e2b57d66c410a410c137bab14c`), bukan dari rekonstruksi.
 
 ## Aturan bernomor
 
@@ -76,6 +78,15 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
     mencatat CACAH dan CONTOH yang ditolaknya; menolak tanpa mencatat dilarang.
     Pada serapan, nama simbol wajib di-percent-encode saat menyusun URL arsip,
     dan nama berkas keluaran wajib diamankan untuk sistem berkas.
+33. **[v17]** Workflow yang menyentuh jaringan wajib dipicu oleh berkas yang
+    benar-benar dipakainya, bukan oleh pola direktori. Bila cakupan pemicu
+    diperluas, alasannya wajib ditulis di jurnal pada commit yang sama.
+34. **[v17]** Dilarang meng-commit direktori laporan secara borongan (`git add
+    reports` atau `git add -A reports/`). Setiap workflow hanya boleh meng-add
+    berkas yang dinamainya sendiri. Alasannya ketertelusuran: berkas yang
+    di-commit oleh job yang bukan pemiliknya membuat pertanyaan "siapa menulis
+    angka ini" menjadi mahal — terbukti memakan empat sesi dan dua hipotesis
+    gugur (jurnal 30–34).
 
 ## Kelas cacat
 
@@ -107,20 +118,36 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
    `ringkas_semesta` pertama melaporkan duplikat 0, tidak terurut 0, di luar
    rentang 0 — seluruhnya atas 0 simbol yang diperiksa. Nol pelanggaran atas nol
    pengamatan bukan bukti kebersihan, melainkan bukti pengukuran tidak terjadi.
-   Lebih berbahaya daripada R-42 sebab arahnya menyanjung hipotesis.
    Penangkalnya aturan 30.
 8. **KC-8 (repo ini)** — sumber bergerak, dikira tetap, karena hanya UKURANNYA
    yang dicocokkan. `reports/semesta_bulan_1m.json` selalu 18.884 B pada empat
    pembacaan, tetapi `sidik_data`-nya berbeda tiap kali (`fae1210f…`,
-   `f435f470…`, `7d287ab6…`, `ced89c14…`). Dugaan: medan `waktu_utc` di dalamnya
-   ditulis ulang berkala dengan stempel berpanjang tetap (H-A003, bertahan,
-   belum terbukti). Datanya sendiri tidak berubah: 934 dan 21.770 terulang persis
-   pada dua run bersidik berbeda. Penangkalnya aturan 31.
+   `f435f470…`, `7d287ab6…`, `ced89c14…`). **SEBABNYA KINI DIKETAHUI** (jurnal
+   33–34): workflow `probe-serapan` menulis ulang laporannya tiap run dan
+   meng-commit seluruh direktori. Datanya sendiri tidak berubah: 934 dan 21.770
+   terulang persis pada dua run bersidik berbeda. Penangkalnya aturan 31.
 9. **KC-9 (repo ini)** — penyaring ASCII-sentris membuang entitas SAH tanpa
    jejak. `POLA_SIMBOL = [A-Z0-9_]{2,20}` membuang tiga pasar bernama huruf
    Tionghoa (币安人生USDT, 我踏马来了USDT, 龙虾USDT) yang memikul 19 berkas-bulan.
    Panjang bukan sebabnya: `panjang_nama_terpanjang` = 16. Penangkalnya
-   aturan 32. Akibat langsung ke serapan penuh dicatat pada utang 7.
+   aturan 32. Titik (a) URL arsip sudah AMAN dan kini dijaga enam uji
+   (`tests/test_arsip_kc9.py`); titik (b) nama berkas dan (c) kunci manifes
+   menjadi syarat rancangan utang 24.
+10. **KC-10 (repo ini)** — pemicu LUAS pada workflow berjaringan.
+    `probe_serapan.yml` dipicu oleh `paths: lux_ai/serapan/**`, direktori yang
+    menampung setiap modul baru. Akibatnya setiap dorongan modul menyalakan run
+    pengunduhan beranggaran 330 menit yang tidak diminta siapa pun. Sensus penuh:
+    **1 dari 9** workflow. Penangkalnya aturan 33.
+11. **KC-11 (repo ini)** — commit borongan direktori laporan. `git add reports`
+    atau `git add -A reports/` membuat sebuah job meng-commit berkas yang bukan
+    keluarannya. Sensus penuh: **6 dari 9** workflow (`survei_semesta`,
+    `penyebut_kc6`, `diagnosa_kc6`, `rentang_kc6`, `uji_resample`,
+    `probe_serapan`); tiga yang patuh adalah `ci`, `ringkas_semesta`,
+    `bentuk_semesta`. `probe_serapan` memperberatnya dengan gelung latar
+    `while true` + `sleep 600` yang meng-commit tiap 10 menit selama job hidup
+    (1 dari 9). Diduga inilah sebab **anomali tree** yang tercatat berkali-kali
+    — belum dibuktikan langsung, ini memerlukan verifikasi. Penangkalnya
+    aturan 34.
 
 ## Papan skor hipotesis
 
@@ -134,84 +161,68 @@ Hipotesis INFRASTRUKTUR (bukan hipotesis riset, tidak masuk N_percobaan):
 | H2 | Beda KC-6 bukan dari celah menit | bertahan |
 | H-A002a | Selisih 937−934 adalah ulah penyaring saya | **TERBUKTI** (934+3=937) |
 | H-A002b | Semesta memang kehilangan tiga simbol | **GUGUR** |
-| H-A003 | `semesta_bulan_1m.json` ditulis ulang berkala, isi data tetap | bertahan, belum terbukti |
+| H-A003 | `semesta_bulan_1m.json` ditulis ulang berkala, isi data tetap | **TERBUKTI intinya, mekanismenya salah** |
+| H-A004 | CI yang meng-commitnya lewat `git add reports` polos | **GUGUR** (jurnal 32) |
+| H-A005 | `probe_serapan.yml` dipicu `push` tanpa `paths:` | **GUGUR** (jurnal 34) |
+
+Catatan kejujuran atas H-A003: jurnal 30 menyatakannya GUGUR karena tidak ada
+`schedule:`. Setelah penulisnya ditemukan (jurnal 33–34), inti klaimnya —
+ditulis ulang berkala, isi data tetap — ternyata BENAR; yang salah adalah
+mekanisme yang saya andaikan. Vonis "gugur" di jurnal 30 terlalu cepat, dan
+koreksi ini ditulis terbuka alih-alih menyunting jurnal lama.
 
 ## Papan skor prediksi
 
+R-1..R-55 tercatat lengkap di STATE v16 (blob `dd997064…`) dan tidak disalin
+ulang di sini agar berkas ini tetap kecil. Rekapitulasinya: TEPAT 31, MELESET
+15, MELESET SEPARUH 2, TIDAK TERADJUDIKASI 1, MENUNGGU 6 = 55.
+
 | # | Prediksi | Status |
 |---|---|---|
-| P-1 | Ekspektasi B0 di bawah 0,10R setelah biaya dan GAGAL kriteria 1 | menunggu |
-| P-2 | Menyalakan detektor non-trendline tidak memperbaiki ekspektasi | menunggu |
-| P-3 | Rasio isi rendah didominasi gerbang `rr1 < min_rr` dan `htf_score = 3` | menunggu |
-| R-1 | Indeks arsip memuat lebih dari 450 simbol | TEPAT: 937 |
-| R-2 | Minimal 3 dari 4 klaim delisting terbukti | TEPAT: 3 dari 4 |
-| R-3 | Simbol-bulan 1m likuid 1,5-4 MB zip; parquet lebih kecil dari zip | MELESET SEPARUH |
-| R-4 | Estimasi total lebih besar dari 40-60 GB | MELESET: 25,86 / 39,17 GB |
-| R-5 | Berkas terbaru berheader, yang lama tidak | TEPAT |
-| R-6 | OHLC cocok; volume beda tipis karena pembulatan | MELESET pada volume |
-| R-7 | Total parquet semesta penuh di bawah 25 GB | menunggu |
-| R-8 | Lebih dari 300 simbol berbulan terakhir lebih tua dari 2026-01 | MELESET: 121 |
-| R-9 | Gerbang OHLC lolos untuk 12 simbol probe (bulan akhir) | TEPAT: 12/12 |
-| R-10 | `trades` cocok, `quote_volume` beda sebagian | MELESET: cocok persis |
-| R-11 | Run probe kedua mengulang 937 dan 21.789 persis | TEPAT |
-| R-12 | Resample pada bulan PERTAMA tiap simbol juga cocok eksak | MELESET: 609 sel beda |
-| R-13 | Peralihan format seragam dan jatuh sebelum 2022-04 | TEPAT: 2022-01 |
-| R-14 | Lebih dari 300 simbol berstatus terhenti | MELESET: 128 |
-| R-15 | Peralihan header monoton dan sama untuk ketiga simbol | TEPAT |
-| R-16 | Seluruh bulan yang diperiksa memakai stempel milidetik | TEPAT (237 bulan) |
-| R-17 | Tiga simbol mati berhenti pada tanggal UTC yang sama | TEPAT: 2024-05-28 |
-| R-18 | Bulan 2024-06..2026-06 juga milidetik 13 digit | TEPAT |
-| R-19 | Peralihan header 2022-01 berlaku untuk SELURUH simbol | menunggu |
-| R-20 | Serapan penuh: 0 berkas non-milidetik, 0 pelanggaran batas header | menunggu |
-| R-21 | Probe baru: terhenti SRM/COCOS/BTS, FTT masih terbit | TEPAT |
-| R-22 | Angka infrastruktur terulang ketiga kali persis | TEPAT |
-| R-23 | Gerbang dua bulan lolos, `total_beda_kolom_jumlah` = 0 | MELESET pada keduanya |
-| R-24 | `tanggal_tak_sepakat_dengan_isi` kosong | TEPAT |
-| R-25 | `bulan_era_tanpa_header` = 10 | TEPAT |
-| R-26 | ≥ 90% bucket `open` beda DOGE/BTS berimpit dengan celah menit | MELESET: 0% |
-| R-27 | ETHUSDT 2020-01 tanpa celah, sehingga H1 gugur untuk ETH | TEPAT |
-| R-28 | 12 bulan akhir tetap 0 beda pada run berikutnya | menunggu |
-| R-29 | `beda_tak_terjelaskan_h1` positif pada minimal dua simbol | TEPAT: sembilan |
-| R-30 | DOGE & BTS: beda menurun dan mencapai nol dalam 6 bulan pertama | MELESET: DOGE naik s.d. 494 lalu 202; BTS bangkit 0 → 8 |
-| R-31 | Bulan kendali menunjukkan 0 beda pada SELURUH simbol | MELESET: LINKUSDT 2023-04 = 1 |
-| R-32 | ≥ 7 dari 9 simbol: beda bulan ke-6 < bulan ke-1 | TEPAT: 9 dari 9 |
-| R-33 | `menit_hilang_total` dan `duplikat_total` tetap 0 di 84 bulan | TEPAT |
-| R-34 | Minimal satu simbol masih beda > 0 pada bulan ke-6 | TEPAT: DOGE 202, BTS 8 |
-| R-35 | Total beda bulan kendali < 10% total beda bulan pertama | TEPAT: 1 lawan 468 |
-| R-36 | Serapan penuh: gerbang integritas 1m lolos ≥ 99% simbol-bulan | menunggu |
-| R-37 | Simbol-bulan dengan menit hilang pada serapan penuh: 1..200 | menunggu |
-| R-38 | CI commit gerbang: tepat 87 uji, kode keluar 0, percobaan pertama | TEPAT: run 30341471061 |
-| R-39 | `ukur_deret` sepakat dengan `celah_menit` pada 4 kasus uji | TEPAT |
-| R-40 | Bersyarat: bila R-39 kalah, medan berbeda ≤ 2 dari 36 | TIDAK TERADJUDIKASI (aturan 27) |
-| R-41 | CI commit penyebut: tepat 90 uji, kode keluar 0, percobaan pertama | TEPAT: run 30342486568 |
-| R-42 | Penyebut total 84 simbol-bulan antara 550.000 dan 750.000 | MELESET: 931.527 |
-| R-43 | Laju open beda bulan awal antara 0,2% dan 0,8% | TEPAT: 0,3199% |
-| R-44 | `semesta_bulan_1m.json`: 937 simbol dan 21.789 entri | MELESET: 0 dan 0 (pengumpul tak mengenali skema) |
-| R-45 | Bila tidak tepat, selisih < 10 simbol dan < 218 entri | MELESET: selisih 100% |
-| R-46 | Bulan paling awal 2020-01, paling akhir 2026-06; akhir 2024-05 antara 3 dan 60 | MELESET: null; berkas tak memuat nama bulan |
-| R-47 | CI commit ringkas_semesta: tepat 93 uji, kode 0, percobaan pertama | TEPAT: run 30344455134 |
-| R-48 | Akar berkas objek, kunci tingkat atas ≤ 5 | TEPAT: objek, 2 kunci |
-| R-49 | Kerangka cukup menyusun ulang pengumpul tanpa run tambahan | TEPAT |
-| R-50 | `cacah_simbol` 937 dan total nilai 21.789 | MELESET: 934 dan 21.770 |
-| R-51 | Bila total tidak tepat, selisihnya di bawah 218 | TEPAT: selisih 19 |
-| R-52 | Cacah bulan terkecil 1; terbesar antara 72 dan 78 | TEPAT: 1 dan 78 |
-| R-53 | `cacah_kunci_ditolak_pola` = 3, ketiganya bernama > 20 aksara | MELESET SEPARUH: cacah 3 tepat, sebab salah (non-ASCII, terpanjang 16) |
-| R-54 | `cacah_simbol` + `cacah_kunci_ditolak_pola` = 937 | TEPAT: 934 + 3 |
-| R-55 | `sidik_data` berubah lagi sementara `byte_sumber` tetap 18.884 | TEPAT: `ced89c14…` |
+| R-56 | `arsip.py` tidak percent-encode nama simbol di URL | MELESET: `segmen()` ada, 5 titik pakai |
+| R-57 | `arsip.py` menyusun nama berkas dari nama simbol | MELESET: 0 pembentuk nama berkas |
+| R-58 | 0 pemanggilan `quote`/`encode` di `arsip.py` | MELESET: ≥ 2 |
+| R-59 | CI uji KC-9: 102 uji, kode keluar 0 | TEPAT: run 30349383760 |
+| R-60 | Enam uji baru lulus tanpa mengubah `arsip.py` | TEPAT |
+| R-61 | Uji gagal 0..1 | TEPAT: 0 |
+| R-62 | Nama simbol muncul 0..1 kali di `klines.py` | TEPAT: 0 |
+| R-63 | 0 `.upper()` / `encode("ascii")` di `klines.py` | TEPAT |
+| R-64 | Titik (b) KC-9 menjadi syarat rancangan utang 24 | TEPAT |
+| R-65 | `survei_semesta.yml` punya `schedule:`, 1..2 baris `cron:` | MELESET: 0 |
+| R-66 | Workflow itu menulis `semesta_bulan_1m.json` dan commit `[skip ci]` | MELESET SEPARUH: `[skip ci]` benar, penulisnya bukan |
+| R-67 | Workflow yang sama menulis `semesta_rentang.json` | TIDAK TERADJUDIKASI: penyebut salah pilih |
+| R-68 | `survei.py` menulis hanya di dalam fungsi; 0 penulisan tingkat modul | TEPAT |
+| R-69 | Dua workflow tersangka memakai `git add reports` (2 dari 2) | MELESET: 0 dari 2 |
+| R-70 | Kata `survei` muncul 0 kali di kedua yml | TEPAT |
+| R-71 | `ci.yml` memakai `git add reports` polos (1) | MELESET: 0 |
+| R-72 | `ci.yml` menjalankan pytest atas seluruh `tests/` | TEPAT |
+| R-73 | Berkas `reports/` bernama di `ci.yml`: 0..2 | TEPAT: 2 |
+| R-74 | Riwayat berkas: 3..6 commit pada 08:50Z–09:40Z | TEPAT: 3 |
+| R-75 | Pengarangnya bot CI, bukan `push_files` saya | TEPAT: `lux-ci` |
+| R-76 | Pesan commit menyebut survei atau penyebut KC-6 | MELESET: probe serapan |
+| R-77 | `probe_serapan.yml` tanpa `paths:` (cacah 0) | MELESET: ada, cacah 1 |
+| R-78 | Berkas itu commit borongan, cacah 1 | MELESET SEPARUH: borongan benar, cacah 2, bentuk `-A` |
+| R-79 | Kata `journal` muncul 0 kali di berkas itu | TEPAT |
+| R-80 | Tiga workflow terakhir memakai `paths:` sempit; 0 memakai `serapan/**` | TEPAT |
+| R-81 | 1..2 dari ketiganya commit borongan | MELESET: 3 dari 3 |
+| R-82 | `while true` muncul 0 kali di ketiganya | TEPAT |
 
-Cacah dihitung ulang baris demi baris (aturan 21):
+Cacah dihitung ulang baris demi baris (aturan 21), R-56..R-82:
 
-- TEPAT — 31 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
-  R-21, R-22, R-24, R-25, R-27, R-29, R-32, R-33, R-34, R-35, R-38, R-39, R-41,
-  R-43, R-47, R-48, R-49, R-51, R-52, R-54, R-55.
-- MELESET — 15 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26, R-30, R-31,
-  R-42, R-44, R-45, R-46, R-50.
-- MELESET SEPARUH — 2 baris: R-3, R-53.
-- TIDAK TERADJUDIKASI — 1 baris: R-40.
-- MENUNGGU — 6 baris: R-7, R-19, R-20, R-28, R-36, R-37.
+- TEPAT — 15: R-59, R-60, R-61, R-62, R-63, R-64, R-68, R-70, R-72, R-73, R-74,
+  R-75, R-79, R-80, R-82.
+- MELESET — 9: R-56, R-57, R-58, R-65, R-69, R-71, R-76, R-77, R-81.
+- MELESET SEPARUH — 2: R-66, R-78.
+- TIDAK TERADJUDIKASI — 1: R-67.
 
-31 + 15 + 2 + 1 + 6 = 55, sama dengan cacah baris R-1 sampai R-55. P-1..P-3
-dihitung terpisah dan ketiganya masih menunggu. Ramalan berikutnya R-56.
+15 + 9 + 2 + 1 = 27, sama dengan cacah baris R-56 sampai R-82.
+
+**Total R-1..R-82:** TEPAT 31+15 = **46**; MELESET 15+9 = **24**; MELESET
+SEPARUH 2+2 = **4**; TIDAK TERADJUDIKASI 1+1 = **2**; MENUNGGU **6** (R-7, R-19,
+R-20, R-28, R-36, R-37). 46+24+4+2+6 = **82**. ✅
+
+P-1..P-3 dihitung terpisah dan ketiganya masih menunggu. Ramalan berikutnya
+**R-83**.
 
 ## Daftar ADR
 
@@ -219,8 +230,7 @@ dihitung terpisah dan ketiganya masih menunggu. Ramalan berikutnya R-56.
 - ADR-A002 — serapan data arsip. DITERIMA; **§3 DIAMANDEMEN oleh ADR-A004**,
   tercatat sebagai bagian "Amandemen A-1" di dalam berkasnya sendiri (commit
   `4995940c7aeccf303900c19afb3320029b04b113`, blob
-  `3017056456087297e0a83bacbc0d12e7d8e66d36`): kesamaan dengan 5m/15m terbitan
-  bukan lagi gerbang, melainkan diagnostik.
+  `3017056456087297e0a83bacbc0d12e7d8e66d36`).
 - ADR-A003 — taksonomi rezim/klasifikasi. BELUM ADA.
 - ADR-A004 — kebijakan KC-6. **DITERIMA 2026-07-28.** 1m satu-satunya sumber
   kebenaran; gerbang mengikat = integritas struktural deret 1m; 5m/15m terbitan
@@ -231,20 +241,41 @@ dihitung terpisah dan ketiganya masih menunggu. Ramalan berikutnya R-56.
 
 `lux_ai/serapan/gerbang_1m.py`, enam klausa per simbol-bulan:
 `deret_tidak_kosong`, `tanpa_duplikat`, `tanpa_menit_hilang`, `jarak_60_detik`,
-`selaras_menit`, `satuan_milidetik`. Klausa pertama tambahan operasional (berkas
-kosong akan lolos kelima klausa lain secara hampa). Ringkasannya wajib memuat
-`baris_diperiksa` dan `slot_diperiksa` (aturan 18) serta `simbol_bulan_gagal`
-dan `pelanggaran_per_klausa` walau nol (aturan 24). Rumus `ukur_deret` DISALIN
-dari `diagnosa_kc6.celah_menit`, bukan diimpor (aturan 10); uji perbandingan
-medan bersama menjaga keduanya tidak menyimpang. Modul ini BELUM pernah melihat
-data arsip sungguhan (utang 24).
+`selaras_menit`, `satuan_milidetik`. Ringkasannya wajib memuat `baris_diperiksa`
+dan `slot_diperiksa` (aturan 18) serta `simbol_bulan_gagal` dan
+`pelanggaran_per_klausa` walau nol (aturan 24). Rumus `ukur_deret` DISALIN dari
+`diagnosa_kc6.celah_menit`, bukan diimpor (aturan 10).
+
+**Cacat rumus yang sengaja dibiarkan:** `menit_hilang_dalam_rentang` bisa
+NEGATIF bila dua stempel jatuh pada menit yang sama, sebab rumusnya dijaga
+identik dengan `celah_menit`. Yang menangkapnya adalah klausa `selaras_menit`,
+bukan rumusnya sendiri. Medan itu DILARANG dipakai sendirian (syarat rancangan
+utang 24).
+
+Modul ini BELUM pernah melihat data arsip sungguhan (utang 24).
+
+## Sensus workflow (9 dari 9 terbaca, sesi 36)
+
+| Workflow | Pemicu | Commit | Anggaran |
+|---|---|---|---|
+| `ci` | push (paths-ignore journal/decisions/reports) | 2 berkas bernama | bawaan |
+| `ringkas_semesta` | `ringkas_semesta.py` | 3 berkas bernama | 20 mnt |
+| `bentuk_semesta` | `bentuk_semesta.py` | 3 berkas bernama | 20 mnt |
+| `survei_semesta` | `survei.py` | `git add reports` | 330 mnt |
+| `penyebut_kc6` | modulnya | `git add reports` | 20 mnt |
+| `diagnosa_kc6` | `diagnosa_kc6.py` | `git add reports` | 120 mnt |
+| `rentang_kc6` | `rentang_kc6.py` | `git add reports` | 300 mnt |
+| `uji_resample` | `resample.py`, `uji_resample.py`, `klines.py` | `git add reports` | 120 mnt |
+| `probe_serapan` | **`lux_ai/serapan/**`** | `git add -A reports/` ×2 + gelung latar | 330 mnt |
+
+Patuh aturan 34: 3. Melanggar: 6. 3 + 6 = 9. ✅
 
 ## Status pipeline
 
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI. Survei semesta SELESAI dan kini TERINGKAS (utang 19 dibayar). KC-6 terukur, diputus (ADR-A004), lajunya diketahui, dan amandemennya tercatat di ADR-A002. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan, dan pemeriksaan KC-9 atas `arsip.py` |
+| T1 Serapan | Probe SELESAI. Survei semesta SELESAI dan TERINGKAS. KC-6 terukur dan diputus (ADR-A004). Gerbang integritas 1m ADA dalam kode dan teruji. KC-9 titik (a) aman dan dijaga uji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -260,42 +291,20 @@ data arsip sungguhan (utang 24).
 | Rentang arsip | 2020-01 s.d. 2026-06 | `survei_semesta.json` |
 | Bulan per simbol: terkecil / terbesar | 1 / 78 | `ringkas_semesta.json` |
 | Simbol terhenti / masih terbit | 128 / 809 | `survei_semesta.json` |
-| Klaim delisting operator | 3 dari 4 terhenti; FTTUSDT masih terbit | `probe_serapan.json` |
 | Peralihan format | tanpa header s.d. 2021-12; teruji 12 simbol | `uji_resample.json` |
 | Satuan stempel | milidetik, 237 bulan disampel, seragam | `survei_semesta.json` |
-| Rerata byte zip / parquet | 1.186.859 / 1.797.488 | `probe_serapan.json` |
-| Batas atas total zip / parquet | 25,86 GB / 39,17 GB | idem |
+| Batas atas total zip / parquet | 25,86 GB / 39,17 GB | `probe_serapan.json` |
 | Gerbang resample bulan AKHIR | 12/12 bersih | `uji_resample.json` |
 | Integritas 1m | 84 dari 84 simbol-bulan bersih sempurna | `rentang_kc6.json` |
 
-## Angka diagnostik (bukan bukti)
-
-`reports/rentang_kc6.json` (run 30339979270) dan `reports/penyebut_kc6.json`
-(run 30342486655, `sidik_data` `7f389bed…a994c`), 84 simbol-bulan × 2 interval
-= 168 simpul:
-
-| Kelompok | simpul | bucket dibandingkan | open beda | laju |
-|---|---|---|---|---|
-| awal | 144 | 790.983 | 2.530 | 0,3199% |
-| kendali | 24 | 140.544 | 1 | 0,0007% |
-| total | 168 | 931.527 | 2.531 | 0,2717% |
-
-Catatan: `bucket_ohlc_beda` awal = 2.532, dua lebih banyak daripada `open` beda.
-Bulan ke-6 masih beda pada DOGEUSDT (202) dan BTSUSDT (8). Simbol bersih
-sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
-
-`reports/ringkas_semesta.json` (run terakhir 2026-07-28T09:34:39Z, `sidik_kode`
-`4d3820fb…`, `sidik_data` `ced89c14…`, jalur `cacah_bulan`, status `MENGUKUR`):
-934 simbol diterima, 3 kunci ditolak pola, 0 nilai bukan angka,
-`jumlah_diterima_dan_ditolak` = 937, `panjang_nama_terpanjang` = 16.
-
 ## Jumlah uji
 
-**96, TERVERIFIKASI** — `reports/ci_terakhir.json`, run 30347164329, commit
-`f270354ca8a5c3d585fcdef943123370b7702826`, `kode_keluar: 0`,
-`"96 tests collected in 0.36s"`.
+**102, TERVERIFIKASI** — `reports/ci_terakhir.json` (blob
+`21001dc2876f24e0dcfb06fbefaed7e4d43da4e5`), run **30349383760**, commit
+`65e4f5f9ff657cca66712823739d402cabecb545`, 2026-07-28T10:06:20Z,
+`kode_keluar: 0`, `"102 tests collected in 0.36s"`.
 
-## Utang verifikasi yang belum dibayar
+## Utang verifikasi
 
 1. Temuan A dan B (rasio isi 5,84%; 96% trendline break) menunggu juri.
 2. Temuan G: klaim "30 pair dipilih alfabetis" belum ditemukan buktinya.
@@ -303,46 +312,37 @@ sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 4. Klaim temuan N (kendala mengikat = kapasitas margin) belum diuji angkanya.
 5. Angka 0,3232R dan 0,306R warisan belum diverifikasi.
 6. ~~Ukuran ADR-A001~~ DIBAYAR.
-7. **Percent-encoding simbol non-ASCII belum teruji. NAIK PANGKAT jadi
-   penghalang serapan penuh (KC-9, aturan 32):** tiga pasar bernama huruf
-   Tionghoa dengan 19 berkas-bulan akan hilang tanpa suara bila `arsip.py`
-   menempelkan nama mentah ke URL, memakai nama simbol apa adanya sebagai nama
-   berkas parquet, atau memakai kunci manifes ASCII saja. Ketiga titik itu WAJIB
-   diperiksa sebelum serapan penuh dijalankan.
-8. ~~Klaim warisan 40-60 GB / 34.000 berkas~~ DIBAYAR: dibantah.
-9. ~~Tanggal berhenti SRM/COCOS/BTS~~ DIBAYAR: 2024-05-28 UTC.
-10. ~~R-5~~ DIBAYAR.
-11. Peralihan format teruji 12 simbol; untuk 937 simbol masih klaim (R-19).
-12. ~~Era tanpa header belum diuji resample~~ DIBAYAR.
-13. ~~Medan `delisting_klaim_terbukti`~~ DIBAYAR.
-14. ~~Satuan stempel 2024-06..2026-06~~ DIBAYAR.
-15. ~~Sebab KC-6~~ DIBAYAR: H1 gugur, arsip 1m utuh.
-16. ~~ADR-A004~~ DIBAYAR: diterima 2026-07-28.
-17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 96 terverifikasi.
-18. ~~Jurnal 08 dan 09 belum dibaca ulang dari `main`~~ DIBAYAR.
-19. ~~`reports/semesta_bulan_1m.json` belum pernah dibaca~~ **DIBAYAR** (jurnal
-    23–25): diringkas di runner, tidak pernah dibaca utuh oleh agen. Skemanya
-    `{bulan_per_simbol: {simbol: CACAH bulan}, waktu_utc}`; ia tidak memuat nama
-    bulan sama sekali, sehingga pertanyaan bulan awal/akhir hanya bisa dijawab
-    `semesta_rentang.json`. Hasilnya menegakkan kembali 937 dan 21.789.
-20. ~~Sejauh mana KC-6 bertahan~~ DIBAYAR: 84 simbol-bulan (jurnal 16).
-21. ~~Penyebut `rentang_kc6.json`~~ DIBAYAR: 790.983 awal, 140.544 kendali,
-    931.527 total (jurnal 20).
-22. ~~Catatan silang amandemen §3 di `decisions/ADR-A002.md`~~ DIBAYAR: commit
-    `4995940c`, bagian Amandemen A-1 + penunjuk di kepala berkas dan kepala §3;
-    berkas sudah dibaca ulang dari `main` dan ekornya hadir.
-23. ~~Gerbang integritas 1m belum ada dalam kode~~ DIBAYAR: `gerbang_1m.py`.
-24. `gerbang_1m` belum pernah melihat data arsip sungguhan dan belum dipanggil
-    jalur serapan mana pun. Sampai itu terjadi, kalimat "gerbang integritas
-    berlaku atas 21.789 simbol-bulan" dilarang ditulis.
-25. **[baru]** H-A003 belum terbukti: siapa yang menulis ulang
-    `reports/semesta_bulan_1m.json` dan apa yang berubah di dalamnya belum
-    diperiksa. Sampai itu jelas, setiap perbandingan antar-run atas berkas itu
-    wajib menyebut `sidik_data`-nya (aturan 31).
-26. **[baru]** Berkas yang belum pernah dibaca ulang dari `main` sesudah
-    didorong: `journal/2026-07-28-17.md`, `-19.md`, `tests/test_penyebut_kc6.py`,
-    `.github/workflows/penyebut_kc6.yml`, `lux_ai/serapan/bentuk_semesta.py`.
-    CI hijau hanyalah bukti tidak langsung.
+7. ~~Percent-encoding simbol non-ASCII~~ **LUNAS** (jurnal 26–28): titik (a)
+   sudah aman lewat `arsip.segmen()` dan dijaga `tests/test_arsip_kc9.py`;
+   titik (b) dan (c) melebur menjadi syarat rancangan utang 24.
+8-23. DIBAYAR (rincian di STATE v16).
+24. **AKTIF — satu-satunya pekerjaan besar tersisa.** `gerbang_1m` belum pernah
+    melihat data arsip sungguhan dan belum dipanggil jalur serapan mana pun.
+    Sampai itu terjadi, kalimat "gerbang integritas berlaku atas 21.789
+    simbol-bulan" dilarang ditulis. **Tujuh syarat rancangan mengikat:**
+    (a) nama berkas parquet diamankan untuk sistem berkas, bukan disalin mentah;
+    (b) kunci manifes sadar non-ASCII sejak baris pertama;
+    (c) `baris_dibuang` dari `klines.rapikan` wajib masuk manifes (aturan 18);
+    (d) `menit_hilang_dalam_rentang` dilarang dipakai tanpa `selaras_menit`;
+    (e) commit hanya berkas bernama (aturan 34);
+    (f) pemicu workflow sempit (aturan 33);
+    (g) tambalan enam workflow pelanggar aturan 34 + tiga cacat `probe_serapan`
+        digabung ke commit yang sama, supaya hanya satu run menyala.
+25. ~~Siapa menulis ulang `semesta_bulan_1m.json`~~ **LUNAS** (jurnal 33–34):
+    workflow `probe-serapan` lewat bot `lux-ci`; irama 13–25 menit berasal dari
+    gelung latar 10 menit dan dari dorongan saya sendiri ke `lux_ai/serapan/**`.
+26. ~~Lima berkas belum dibaca ulang dari `main`~~ **LUNAS** (jurnal 29): kelima
+    berkas dibaca ulang, nol terpotong.
 
-Utang AKTIF yang tersisa dan bisa dikerjakan sekarang: **7, 24, 25, 26**.
-Utang 1-5 dan 11 menunggu tahap lain.
+Utang AKTIF: **24 saja**. Utang 1-5 dan 11 menunggu tahap lain.
+
+## Temuan sampingan yang belum diukur
+
+- `klines.baris_pertama`/`baca_zip` memakai `.decode("utf-8", "replace")`,
+  mengganti byte rusak dengan U+FFFD tanpa bersuara — kerabat KC-9. Dampaknya
+  *diduga* kecil karena hanya untuk deteksi header. **Ini memerlukan verifikasi.**
+- Apakah `arsip.bulan_tersedia` (prefix mentah → `urlencode`) aman untuk simbol
+  Tionghoa: belum diperiksa.
+- Anomali tree (pembacaan setelah push dilayani dari tree berbeda, blob sha
+  selalu cocok): calon penjelasannya gelung latar `probe_serapan` (KC-11).
+  **Belum dibuktikan langsung.**

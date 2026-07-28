@@ -1,4 +1,4 @@
-# PROMPT KELANJUTAN — versi 12
+# PROMPT KELANJUTAN — versi 13
 
 Salin isi berkas ini sebagai prompt pembuka sesi berikutnya.
 
@@ -16,11 +16,12 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
    `connections.mcpServer_github.runTool({toolName, toolArguments})`. `owner` dan
    `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
 3. Baca dari `main` repo `EnVyxS/lux-ai-research`, berurutan:
-   - `PROMPT_KELANJUTAN.md` (versi 12) — berkas ini
-   - `STATE.md` (versi 13) — aturan 1-27, kelas cacat KC-1..KC-6, papan skor
-     R-1..R-40, daftar utang 1-24. INI YANG PALING PENTING.
+   - `PROMPT_KELANJUTAN.md` (versi 13) — berkas ini
+   - `STATE.md` (versi 14) — aturan 1-28, kelas cacat KC-1..KC-6, papan skor
+     R-1..R-43, daftar utang 1-24. INI YANG PALING PENTING.
    - `decisions/ADR-A001.md`, `decisions/ADR-A002.md`, `decisions/ADR-A004.md`
-   - `journal/2026-07-28-17.md` dan `journal/2026-07-28-18.md`
+   - `journal/2026-07-28-20.md` (adjudikasi terakhir); jurnal 16-19 bila perlu
+     latar
    - `lux_ai/serapan/gerbang_1m.py` sebelum menyentuh serapan
    - `PETA_MODUL.md` bila menyentuh modul warisan
 4. Baru setelah itu jalankan pekerjaan teknis.
@@ -36,23 +37,24 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
   berkas kecil.
 - Setelah mendorong berkas panjang, BACA ULANG dari `main` dan pastikan ekornya
   hadir.
-- Laporan besar (mis. `rentang_kc6.json` 177 KB) jangan dibaca utuh; baca
-  `reports/<nama>.log` atau berkas statusnya.
+- Laporan besar jangan dibaca utuh. Polanya sudah terbukti: tulis modul kecil
+  yang meringkasnya di runner (lihat `penyebut_kc6.py`), lalu baca ringkasannya.
 - Runner: numpy, pandas, pyarrow, pyyaml, pytest tersedia; TIDAK ada scipy dan
   requests. `data.binance.vision` bisa diakses; `fapi.binance.com` memberi 451.
 - Dilarang menulis apa pun di luar repo `lux-ai-research`. `lux-research` boleh
   DIBACA saja; hasil dan angkanya tidak pernah boleh masuk.
 
-## POSISI HARI INI (2026-07-28, akhir sesi 18)
+## POSISI HARI INI (2026-07-28, akhir sesi 20)
 
-- Kontinuitas: STATE v13 + PROMPT v12. Commit terakhir kode `5e24f6b0`
-  (`gerbang_1m.py` + 16 uji + jurnal 17).
-- Jumlah uji **87, terverifikasi** (CI run 30341471061, `kode_keluar: 0`).
-- KC-6 sudah diputus (ADR-A004) DAN penerapannya sudah ada dalam kode:
-  `lux_ai/serapan/gerbang_1m.py`, enam klausa, teruji positif dan negatif.
-- Papan skor: 22 TEPAT, 10 MELESET, 1 MELESET SEPARUH, 1 TIDAK TERADJUDIKASI,
+- Kontinuitas: STATE v14 + PROMPT v13. Commit kode terakhir `ac342940`.
+- Jumlah uji **90, terverifikasi** (CI run 30342486568, `kode_keluar: 0`).
+- KC-6 diputus (ADR-A004), penerapannya ada dalam kode (`gerbang_1m.py`,
+  enam klausa, teruji positif dan negatif), dan LAJUNYA kini diketahui:
+  0,3199% pada bulan awal, 0,0007% pada bulan kendali, dari 931.527 bucket.
+- Papan skor: 24 TEPAT, 11 MELESET, 1 MELESET SEPARUH, 1 TIDAK TERADJUDIKASI,
   6 MENUNGGU (R-7, R-19, R-20, R-28, R-36, R-37).
-- Yang BELUM: gerbang itu belum pernah melihat data arsip sungguhan (utang 24).
+- Utang tersisa yang aktif: 19 (`semesta_bulan_1m.json` belum dibaca), 22
+  (catatan silang di ADR-A002), 24 (gerbang belum melihat data sungguhan).
 
 ## PEKERJAAN BERIKUTNYA, BERURUTAN
 
@@ -62,10 +64,9 @@ menyelesaikan LANGKAH 0. Berkas di repo adalah kebenaran; prompt ini hanya peta.
    waktu, checksum, sumber, funding_ada, baris_dibuang, berheader, awal_sejati,
    akhir_sejati, satuan stempel, hasil gerbang), parquet sebagai aset rilis,
    karantina 7 hari. Mengadjudikasi R-7, R-19, R-20, R-36, R-37 dan melunasi
-   utang 24. Tulis ramalannya SEBELUM run, dan patuhi aturan 26 dan 27.
-2. **Utang murah sambil menunggu run**: utang 21 (penyebut `rentang_kc6.json`),
-   utang 22 (catatan silang di `ADR-A002.md`), utang 19
-   (`reports/semesta_bulan_1m.json`).
+   utang 24. Tulis ramalan SEBELUM run; patuhi aturan 26, 27, dan 28.
+2. **Utang murah sambil menunggu run**: utang 22 (catatan silang di
+   `ADR-A002.md`), utang 19 (`reports/semesta_bulan_1m.json`).
 3. **Paralel, boleh sekarang (aturan 3)**: ADR-A003 taksonomi rezim; juri T4
    dengan biaya sejak hari pertama (fee taker/maker terpisah, funding tiap
    jadwal, slippage selalu merugikan); lapisan validasi (uji bulanan berpasangan
@@ -76,16 +77,18 @@ Adjudikasi riset tetap TERKUNCI sampai manifes semesta penuh terverifikasi.
 ## PENOMORAN BERIKUTNYA
 
 ADR-A003 (dicadangkan) dan ADR-A005 (bila perlu). Hipotesis pertama H-A001
-(belum ada). Jurnal berikutnya `journal/2026-07-28-19.md`. STATE berikutnya v14.
-PROMPT berikutnya v13. Ramalan berikutnya R-41. N_percobaan = 0. Aturan terakhir
-27. Kelas cacat terakhir KC-6. Utang terakhir 24.
+(belum ada). Jurnal berikutnya `journal/2026-07-28-21.md`. STATE berikutnya v15.
+PROMPT berikutnya v14. Ramalan berikutnya R-44. N_percobaan = 0. Aturan terakhir
+28. Kelas cacat terakhir KC-6. Utang terakhir 24.
 
 ## KEBIASAAN YANG MENYELAMATKAN RISET INI
 
-- Tulis ramalan SEBELUM run, lalu adjudikasi jujur. Sudah 10 ramalan MELESET dan
+- Tulis ramalan SEBELUM run, lalu adjudikasi jujur. Sudah 11 ramalan MELESET dan
   1 tidak teradjudikasi karena ditulis bersyarat.
-- Ramalan mutlak wajib berpasangan dengan ramalan besaran (aturan 26), dan
-  pendampingnya dilarang bersyarat (aturan 27).
+- Ramalan mutlak wajib berpasangan dengan ramalan besaran (aturan 26),
+  pendampingnya dilarang bersyarat (aturan 27), dan ekstrapolasi dari bulan awal
+  wajib dikoreksi untuk bulan parsial (aturan 28).
+- Cacah mutlak tanpa penyebut hampir selalu menyesatkan; cari penyebutnya.
 - Hitung ulang setiap angka ringkasan baris demi baris (aturan 21).
 - Setiap pengukuran sebab wajib memuat medan yang bisa MENGGUGURKAN hipotesis
   yang dipercaya (aturan 24); parameter cakupannya dipatok di muka (aturan 25).

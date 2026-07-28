@@ -1,4 +1,4 @@
-# STATE — versi 13
+# STATE — versi 14
 
 Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingatan.
 
@@ -56,14 +56,12 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
     cara memilih bulan kendali) wajib dipatok tertulis SEBELUM run dan tidak
     boleh disetel ulang setelah hasilnya terlihat.
 26. **[v12]** Ramalan yang memakai kata mutlak ("nol", "seluruh", "tidak ada")
-    wajib disertai ramalan BESARAN pendamping. R-31 ("0 beda pada seluruh
-    simbol") meleset oleh 1 bucket sementara R-35 ("< 10%") tepat atas data yang
-    sama: tanpa pasangan besaran, papan skor mencatat kekalahan yang tidak
-    memberi tahu apa pun tentang besarnya gejala.
+    wajib disertai ramalan BESARAN pendamping.
 27. **[v13]** Ramalan pendamping besaran dilarang BERSYARAT pada hasil ramalan
-    lain. R-40 ditulis "seandainya R-39 tidak sepakat, ..." sehingga ia hanya
-    bisa diadjudikasi ketika R-39 kalah; ramalan seperti itu jaring pengaman,
-    bukan ramalan. Ramalan bersyarat dihitung TIDAK TERADJUDIKASI.
+    lain. Ramalan bersyarat dihitung TIDAK TERADJUDIKASI.
+28. **[v14]** Ekstrapolasi cacah dari sampel bulan AWAL ke bulan lain dilarang
+    tanpa menyatakan bahwa bulan awal PARSIAL dan mengoreksinya. R-42 meleset
+    46% justru karena mengalikan rerata bulan parsial dengan jumlah bulan penuh.
 
 ## Kelas cacat
 
@@ -75,16 +73,17 @@ Diperbarui: 2026-07-28. Aturan hanya BERTAMBAH; jangan menulis ulang dari ingata
 5. **KC-5 (repo ini)** — label yang mengukur hal lain daripada namanya.
    DIPERBAIKI lewat `nilai_klaim_delisting`.
 6. **KC-6 (arsip)** — berkas 1m dan berkas 5m/15m terbitan Binance TIDAK
-   sepakat. **Sebab dan luasnya terukur** pada 84 simbol-bulan (12 simbol × 6
-   bulan awal + 1 bulan kendali):
+   sepakat. Terukur pada 84 simbol-bulan (12 simbol × 6 bulan awal + 1 kendali):
    - Deret 1m UTUH: 0 menit hilang, 0 duplikat, 0 jarak bukan 60 detik pada 84
      dari 84 simbol-bulan. Hipotesis celah menit (H1) mati.
-   - 2.530 bucket `open` beda pada bulan awal; hanya **1** pada seluruh bulan
-     kendali (LINKUSDT 2023-04) → gejala runtuh 0,04% di tengah hidup simbol,
-     tetapi **tidak menjadi nol**.
+   - Bulan awal: 2.530 dari **790.983** bucket beda = **0,3199%**.
+   - Bulan kendali: 1 dari **140.544** = **0,0007%**, yaitu 457 kali lebih
+     jarang, tetapi tidak nol (LINKUSDT 2023-04).
+   - Gejalanya LANGKA, bukan lazim. Itu tidak mengubah ADR-A004, yang berdiri di
+     atas besar beda (~3% pada XRPUSDT 2020-01) dan atas kenyataan bahwa ia tak
+     pernah nol — bukan di atas lajunya.
    - Tidak ada N yang aman untuk "buang N bulan pertama": pada N = 6, DOGEUSDT
      masih 202 dan BTSUSDT masih 8.
-   - Beda mencapai ~3% (XRPUSDT 2020-01), sehingga toleransi tidak sah.
    - **Diselesaikan oleh ADR-A004**, yang kini ADA DALAM KODE:
      `lux_ai/serapan/gerbang_1m.py`.
    - BELUM terjawab: mana yang benar, 1m atau 5m/15m terbitan. Ini memerlukan
@@ -141,17 +140,22 @@ Kosong. Hipotesis selesai: 0. Kandidat: 0. Ditolak: 0. N_percobaan: 0.
 | R-38 | CI commit gerbang: tepat 87 uji, kode keluar 0, percobaan pertama | TEPAT: run 30341471061 |
 | R-39 | `ukur_deret` sepakat dengan `celah_menit` pada 4 kasus uji | TEPAT |
 | R-40 | Bersyarat: bila R-39 kalah, medan berbeda ≤ 2 dari 36 | TIDAK TERADJUDIKASI (aturan 27) |
+| R-41 | CI commit penyebut: tepat 90 uji, kode keluar 0, percobaan pertama | TEPAT: run 30342486568 |
+| R-42 | Penyebut total 84 simbol-bulan antara 550.000 dan 750.000 | MELESET: 931.527 |
+| R-43 | Laju open beda bulan awal antara 0,2% dan 0,8% | TEPAT: 0,3199% |
 
 Cacah dihitung ulang baris demi baris (aturan 21):
 
-- TEPAT — 22 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
-  R-21, R-22, R-24, R-25, R-27, R-29, R-32, R-33, R-34, R-35, R-38, R-39.
-- MELESET — 10 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26, R-30, R-31.
+- TEPAT — 24 baris: R-1, R-2, R-5, R-9, R-11, R-13, R-15, R-16, R-17, R-18,
+  R-21, R-22, R-24, R-25, R-27, R-29, R-32, R-33, R-34, R-35, R-38, R-39, R-41,
+  R-43.
+- MELESET — 11 baris: R-4, R-6, R-8, R-10, R-12, R-14, R-23, R-26, R-30, R-31,
+  R-42.
 - MELESET SEPARUH — 1 baris: R-3.
 - TIDAK TERADJUDIKASI — 1 baris: R-40.
 - MENUNGGU — 6 baris: R-7, R-19, R-20, R-28, R-36, R-37.
 
-22 + 10 + 1 + 1 + 6 = 40, sama dengan cacah baris R-1 sampai R-40. P-1..P-3
+24 + 11 + 1 + 1 + 6 = 43, sama dengan cacah baris R-1 sampai R-43. P-1..P-3
 dihitung terpisah dan ketiganya masih menunggu.
 
 ## Daftar ADR
@@ -182,7 +186,7 @@ data arsip sungguhan (utang 24).
 | Tahap | Status |
 |---|---|
 | T0 Peta modul | SELESAI |
-| T1 Serapan | Probe SELESAI. Survei semesta SELESAI. KC-6 terukur dan diputus (ADR-A004). Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
+| T1 Serapan | Probe SELESAI. Survei semesta SELESAI. KC-6 terukur, diputus (ADR-A004), dan lajunya diketahui. Gerbang integritas 1m ADA dalam kode dan teruji. Yang kurang: jalur serapan penuh + manifes per simbol-bulan |
 | T2 Klasifikasi | BELUM MULAI (butuh ADR-A003) |
 | T3 Sinyal | BELUM MULAI |
 | T4 Juri/backtest | BELUM MULAI |
@@ -206,26 +210,24 @@ data arsip sungguhan (utang 24).
 
 ## Angka diagnostik (bukan bukti)
 
-`reports/rentang_kc6.json`, run 30339979270, `kode_keluar: 0`, 84 simbol-bulan,
-`galat` kosong, `sidik_kode`
-`42ca87a0eae3d3bd4c33c970dbf4e85b5ae3c3677e234ebb8d552856dc09065b`:
+`reports/rentang_kc6.json` (run 30339979270) dan `reports/penyebut_kc6.json`
+(run 30342486655, `sidik_data` `7f389bed…a994c`), 84 simbol-bulan × 2 interval
+= 168 simpul:
 
-| Besaran | Nilai |
-|---|---|
-| Total bucket `open` beda, bulan awal | 2.530 |
-| Total bucket `open` beda, bulan kendali | 1 (LINKUSDT 2023-04) |
-| `persen_kendali_atas_awal` | 0,04 |
-| `menit_hilang_total` / `duplikat_total` | 0 / 0 |
-| Masih beda di bulan ke-6 | DOGEUSDT 202, BTSUSDT 8 |
-| Simbol bersih sepenuhnya | BTCUSDT |
+| Kelompok | simpul | bucket dibandingkan | open beda | laju |
+|---|---|---|---|---|
+| awal | 144 | 790.983 | 2.530 | 0,3199% |
+| kendali | 24 | 140.544 | 1 | 0,0007% |
+| total | 168 | 931.527 | 2.531 | 0,2717% |
 
-Penyebutnya (cacah bucket yang dibandingkan pada 84 bulan) BELUM dibaca; 2.530
-adalah cacah mutlak, bukan laju. Utang 21.
+Catatan: `bucket_ohlc_beda` awal = 2.532, dua lebih banyak daripada `open` beda.
+Bulan ke-6 masih beda pada DOGEUSDT (202) dan BTSUSDT (8). Simbol bersih
+sepenuhnya: BTCUSDT. `menit_hilang_total` dan `duplikat_total` = 0.
 
 ## Jumlah uji
 
-**87, TERVERIFIKASI** — `reports/ci_terakhir.json`, run 30341471061, commit
-`5e24f6b0`, `kode_keluar: 0`, `"87 tests collected in 0.36s"`.
+**90, TERVERIFIKASI** — `reports/ci_terakhir.json`, run 30342486568, commit
+`ac342940`, `kode_keluar: 0`, `"90 tests collected in 0.37s"`.
 
 ## Utang verifikasi yang belum dibayar
 
@@ -245,18 +247,15 @@ adalah cacah mutlak, bukan laju. Utang 21.
 14. ~~Satuan stempel 2024-06..2026-06~~ DIBAYAR.
 15. ~~Sebab KC-6~~ DIBAYAR: H1 gugur, arsip 1m utuh.
 16. ~~ADR-A004~~ DIBAYAR: diterima 2026-07-28.
-17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 87 terverifikasi.
+17. ~~Jumlah uji berstatus klaim~~ DIBAYAR: kini 90 terverifikasi.
 18. ~~Jurnal 08 dan 09 belum dibaca ulang dari `main`~~ DIBAYAR.
 19. `reports/semesta_bulan_1m.json` (18.884 B) belum pernah dibaca.
-20. ~~Sejauh mana KC-6 bertahan~~ DIBAYAR: 84 simbol-bulan, R-30..R-35
-    teradjudikasi (jurnal 16).
-21. Penyebut `rentang_kc6.json` belum dibaca: cacah bucket yang dibandingkan
-    pada 84 bulan ada di medan `pengukuran` berkas 177 KB itu. Tanpa itu, 2.530
-    tidak bisa dinyatakan sebagai laju.
+20. ~~Sejauh mana KC-6 bertahan~~ DIBAYAR: 84 simbol-bulan (jurnal 16).
+21. ~~Penyebut `rentang_kc6.json`~~ DIBAYAR: 790.983 awal, 140.544 kendali,
+    931.527 total (jurnal 20).
 22. `decisions/ADR-A002.md` belum diberi catatan silang bahwa §3-nya diamandemen
     ADR-A004.
-23. ~~Gerbang integritas 1m belum ada dalam kode~~ DIBAYAR: `gerbang_1m.py`,
-    16 uji lulus (run 30341471061).
-24. **[baru]** `gerbang_1m` belum pernah melihat data arsip sungguhan dan belum
-    dipanggil jalur serapan mana pun. Sampai itu terjadi, kalimat "gerbang
-    integritas berlaku atas 21.789 simbol-bulan" dilarang ditulis.
+23. ~~Gerbang integritas 1m belum ada dalam kode~~ DIBAYAR: `gerbang_1m.py`.
+24. `gerbang_1m` belum pernah melihat data arsip sungguhan dan belum dipanggil
+    jalur serapan mana pun. Sampai itu terjadi, kalimat "gerbang integritas
+    berlaku atas 21.789 simbol-bulan" dilarang ditulis.

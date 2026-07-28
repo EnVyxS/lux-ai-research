@@ -83,6 +83,44 @@ def test_iso_dari_stempel_sama_untuk_kedua_satuan():
     assert mili == mikro == "2024-06-01T00:00:00Z"
 
 
+def test_ringkas_satuan_seragam():
+    peta = {"2020-01": "milidetik", "2026-06": "milidetik"}
+    hasil = survei.ringkas_satuan(peta)
+    assert hasil["seragam"] is True
+    assert hasil["satuan_unik"] == ["milidetik"]
+    assert hasil["bulan_satuan_berubah"] is None
+    assert hasil["bulan_disampel"] == 2
+
+
+def test_ringkas_satuan_menunjuk_bulan_peralihan():
+    """Kasus positif R-18 gagal: satuan berpindah di tengah sejarah."""
+    peta = {
+        "2024-04": "milidetik",
+        "2024-05": "milidetik",
+        "2024-06": "mikrodetik",
+        "2024-07": "mikrodetik",
+    }
+    hasil = survei.ringkas_satuan(peta)
+    assert hasil["seragam"] is False
+    assert hasil["bulan_satuan_berubah"] == "2024-06"
+    assert hasil["satuan_unik"] == ["mikrodetik", "milidetik"]
+
+
+def test_ringkas_satuan_peta_kosong_bukan_bukti_keseragaman():
+    """Aturan 18: tidak mengukur apa pun tidak boleh terbaca sebagai lolos."""
+    hasil = survei.ringkas_satuan({})
+    assert hasil["seragam"] is False
+    assert hasil["bulan_disampel"] == 0
+    assert hasil["satuan_unik"] == []
+
+
+def test_ringkas_satuan_menahan_satuan_tak_dikenali():
+    peta = {"2020-01": "milidetik", "2020-02": "tidak_dikenali"}
+    hasil = survei.ringkas_satuan(peta)
+    assert hasil["seragam"] is False
+    assert "tidak_dikenali" in hasil["satuan_unik"]
+
+
 def test_survei_tidak_memakai_jaringan_langsung():
     """Menguji CARA MENGUKUR: survei hanya boleh lewat modul arsip."""
     import ast

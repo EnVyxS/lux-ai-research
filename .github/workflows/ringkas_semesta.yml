@@ -1,0 +1,43 @@
+name: ringkas-semesta
+
+on:
+  push:
+    paths:
+      - "lux_ai/serapan/ringkas_semesta.py"
+      - ".github/workflows/ringkas_semesta.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ringkas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Jalankan ringkasan
+        run: |
+          set +e
+          python -m lux_ai.serapan.ringkas_semesta > ringkas.log 2>&1
+          echo "KODE=$?" >> $GITHUB_ENV
+          mkdir -p reports
+          tail -c 8000 ringkas.log > reports/ringkas_semesta.log
+          exit 0
+      - name: Tulis status
+        run: |
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "waktu_utc": "%s",\n  "kode_keluar": %s\n}\n' \
+            "$GITHUB_RUN_ID" "$GITHUB_SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "${KODE:-99}" \
+            > reports/ringkas_semesta_status.json
+      - name: Commit laporan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/ringkas_semesta.json reports/ringkas_semesta.log reports/ringkas_semesta_status.json || true
+          git commit -m "Laporan ringkas semesta [skip ci]" || echo "tidak ada perubahan"
+          git pull --rebase --autostash
+          git push
+          exit 0

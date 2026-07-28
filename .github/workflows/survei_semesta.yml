@@ -1,0 +1,45 @@
+name: survei-semesta
+
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/survei.py'
+      - '.github/workflows/survei_semesta.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: survei-semesta
+  cancel-in-progress: false
+
+jobs:
+  survei:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: jalankan survei semesta
+        run: |
+          set +e
+          python -m lux_ai.serapan.survei > survei.log 2>&1
+          kode=$?
+          mkdir -p reports
+          tail -c 40000 survei.log > reports/survei_semesta.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/survei_status.json
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          git add reports
+          git commit -m "laporan survei semesta ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
+          git pull --rebase --autostash
+          git push
+          exit $kode

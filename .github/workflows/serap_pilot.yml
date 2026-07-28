@@ -1,0 +1,65 @@
+name: serap-pilot
+
+# Aturan 33: pemicu menyebut berkas yang benar-benar dipakai, tanpa pemicu-diri.
+# Aturan 34: hanya berkas bernama yang di-commit. Parquet TIDAK di-commit ke
+# repo; ia diunggah sebagai artefak agar repo tidak membengkak.
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/serap.py'
+  workflow_dispatch:
+    inputs:
+      cacah_simbol:
+        description: 'berapa simbol yang diserap pilot'
+        required: false
+        default: '3'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: serap-pilot
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: jalankan pilot serapan
+        env:
+          PILOT_CACAH_SIMBOL: ${{ github.event.inputs.cacah_simbol || '3' }}
+        run: |
+          set +e
+          python -m lux_ai.serapan.serap > serap.log 2>&1
+          kode=$?
+          mkdir -p reports
+          tail -c 20000 serap.log > reports/serap_pilot.log
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/serap_pilot_status.json
+          echo "kode=$kode" >> $GITHUB_ENV
+      - name: unggah parquet sebagai artefak
+        uses: actions/upload-artifact@v4
+        with:
+          name: parquet-pilot
+          path: data/parquet
+          if-no-files-found: warn
+          retention-days: 7
+      - name: commit berkas bernama saja
+        run: |
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          git add reports/manifes_pilot.json 2>/dev/null || true
+          git add reports/serap_pilot.log reports/serap_pilot_status.json
+          git commit -m "manifes pilot serapan ${GITHUB_RUN_ID} [skip ci]" || echo "tidak ada perubahan"
+          git pull --rebase --autostash
+          git push
+          exit ${kode:-0}

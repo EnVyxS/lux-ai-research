@@ -1,5 +1,58 @@
 {
   "bukan_bukti": false,
+  "nama_tak_dikenal": [
+    "BTCBUSD_210129",
+    "BTCBUSD_210226",
+    "BTCUSD1",
+    "BTCUSDT_210326",
+    "BTCUSDT_210625",
+    "BTCUSDT_210924",
+    "BTCUSDT_211231",
+    "BTCUSDT_220325",
+    "BTCUSDT_220624",
+    "BTCUSDT_220930",
+    "BTCUSDT_221230",
+    "BTCUSDT_230331",
+    "BTCUSDT_230630",
+    "BTCUSDT_230929",
+    "BTCUSDT_231229",
+    "BTCUSDT_240329",
+    "BTCUSDT_240628",
+    "BTCUSDT_240927",
+    "BTCUSDT_241227",
+    "BTCUSDT_250328",
+    "BTCUSDT_250627",
+    "BTCUSDT_250926",
+    "BTCUSDT_251226",
+    "BTCUSDT_260327",
+    "BTCUSDT_260626",
+    "BTCUSDT_260925",
+    "BTCUSDT_261225",
+    "ETHUSDT_210326",
+    "ETHUSDT_210625",
+    "ETHUSDT_210924",
+    "ETHUSDT_211231",
+    "ETHUSDT_220325",
+    "ETHUSDT_220624",
+    "ETHUSDT_220930",
+    "ETHUSDT_221230",
+    "ETHUSDT_230331",
+    "ETHUSDT_230630",
+    "ETHUSDT_230929",
+    "ETHUSDT_231229",
+    "ETHUSDT_240329",
+    "ETHUSDT_240628",
+    "ETHUSDT_240927",
+    "ETHUSDT_241227",
+    "ETHUSDT_250328",
+    "ETHUSDT_250627",
+    "ETHUSDT_250926",
+    "ETHUSDT_251226",
+    "ETHUSDT_260327",
+    "ETHUSDT_260626",
+    "ETHUSDT_260925",
+    "ETHUSDT_261225"
+  ],
   "per_kuota": {
     "BTC": {
       "cacah_nama": 1,
@@ -27,9 +80,39 @@
       "jumlah_bulan": 19785
     }
   },
+  "per_kuota_hanya_arsip": {
+    "BTC": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 39
+    },
+    "BUSD": {
+      "cacah_nama": 41,
+      "cacah_settled": 0,
+      "jumlah_bulan": 812
+    },
+    "TAK_DIKENAL": {
+      "cacah_nama": 51,
+      "cacah_settled": 0,
+      "jumlah_bulan": 260
+    },
+    "USDC": {
+      "cacah_nama": 39,
+      "cacah_settled": 0,
+      "jumlah_bulan": 893
+    },
+    "USDT": {
+      "cacah_nama": 18,
+      "cacah_settled": 15,
+      "jumlah_bulan": 187
+    }
+  },
   "ringkasan": {
+    "bulan_lolos_gerbang": 19586,
     "cacah_busd": 41,
     "cacah_busd_usdc": 80,
+    "cacah_hanya_arsip": 150,
+    "cacah_hanya_arsip_busd_usdc": 80,
     "cacah_kuota_terpakai": 5,
     "cacah_nama_akhiran_usdt": 790,
     "cacah_nama_arsip": 937,
@@ -38,6 +121,9 @@
     "cacah_nama_kuota_usdt_bukan_settled": 790,
     "cacah_nama_settled": 15,
     "cacah_nama_tak_dikenal": 51,
+    "cacah_penyebut_bukan_akhiran_usdt": 0,
+    "cacah_penyebut_luar_arsip": 0,
+    "cacah_penyebut_simbol": 787,
     "cacah_usdc": 39,
     "jumlah_bulan_arsip": 21789,
     "jumlah_bulan_settled": 36,
@@ -50,9 +136,11 @@
       "simbol": "BTCUSDT"
     },
     "kendali_sah": true,
+    "penyebut_bagian_arsip": true,
+    "penyebut_bukan_akhiran_usdt": [],
     "r_249_menang": true,
-    "r_257_menang": false,
-    "r_258_menang": false,
+    "r_261_menang": true,
+    "r_263_menang": false,
     "selisih_bulan_terhadap_penyebut": 163,
     "selisih_bulan_terhadap_serapan": 151,
     "terbanyak_bukan_usdt": {
@@ -67,7 +155,7 @@
     }
   },
   "sidik_data": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
-  "sidik_kode": "4fee2824d5490f2f4a2bdce849a46b4dd0460fb16f3e83889a91c36e3f0f9625",
+  "sidik_kode": "d13e881d0f60ced82b9370b18901e6c7688eff4f380441c9fd99962f7acbe582",
   "terbanyak_bukan_usdt": {
     "cacah_pemegang": 1,
     "medan": "cacah_nama",
@@ -78,7 +166,23 @@
     "seri": false,
     "terukur": true
   },
-  "versi_semesta_kuota": 1,
-  "waktu_utc": "2026-07-29T13:08:15Z"
+  "urai_selisih": {
+    "bulan_arsip_milik_hanya_arsip": 151,
+    "bulan_arsip_milik_penyebut": 19598,
+    "bulan_lolos_gerbang": 19586,
+    "bulan_usdt_bukan_settled": 19749,
+    "cacah_nama_usdt_hanya_arsip": 3,
+    "identitas_utuh": true,
+    "nama_usdt_hanya_arsip": [
+      "BLUEBIRDUSDT",
+      "BTCDOMUSDT",
+      "DEFIUSDT"
+    ],
+    "selisih_dalam_penyebut": 12,
+    "selisih_dari_hanya_arsip": 151,
+    "selisih_total": 163
+  },
+  "versi_semesta_kuota": 2,
+  "waktu_utc": "2026-07-29T13:19:52Z"
 }
 

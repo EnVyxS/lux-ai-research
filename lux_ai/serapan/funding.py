@@ -43,14 +43,23 @@ Riwayat versi:
   dan itu bias pilihan. Sekarang pasangan dipilih DARI DATA: sepuluh anggota
   kohort pertama menurut urutan nama, dengan kendali bukan bulan tetangga yang
   ditebak melainkan bulan funding TERAKHIR simbol itu sendiri, yang menurut
-  listing pasti ada. Ditambahkan pula bulan klines terakhir tiap anggota,
-  karena klaim "kohort berhenti serempak" belum pernah diukur langsung; bila
-  tidak seragam, klaim itu harus ditulis ulang.
+  listing pasti ada. Hasilnya: 10 kohort 404, 10 kendali 200 cocok checksum,
+  dan kohort 2025-07 terukur 38 simbol / 456 simbol-bulan, seluruhnya berhenti
+  di bulan klines yang sama (2026-06).
+- VERSI 6 tidak menambah satu pun pengukuran. Ia memecah berkas ini karena
+  VERSI 5 mencapai 818 baris dan menjatuhkan pagar 800 baris di CI (run
+  30410773363): blok CDN pindah ke `funding_cdn.py`. Pemecahan semacam ini
+  punya bahaya yang halus, yaitu kode berpindah KELUAR dari cap `sidik_kode`
+  sehingga dua versi berbeda dapat memberi sidik yang sama; karena itu daftar
+  berkas yang dicap diperluas menjadi tiga dan dikunci oleh uji tersendiri
+  (aturan 48). Nama-nama lama diekspor ulang di sini supaya pemanggil dan uji
+  lama tidak perlu ditulis ulang.
 
 Laporan ini **diagnostik** (`bukan_bukti: true`, aturan 10). Ia tidak mengubah
 satu baris pun manifes serapan.
 
-Aturan yang ditegakkan: 7, 10, 16, 20, 21, 22, 24, 30, 32, 36, 37, 41, 44, 46, 47.
+Aturan yang ditegakkan: 7, 10, 16, 20, 21, 22, 24, 30, 32, 36, 37, 41, 44, 46,
+47, 48.
 """
 
 from __future__ import annotations
@@ -60,30 +69,37 @@ import hashlib
 import io
 import json
 import os
-import urllib.error
-import urllib.request
 import zipfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from . import arsip
+from .funding_cdn import (  # noqa: F401  (diekspor ulang; lihat VERSI 6)
+    BATAS_UJI_CDN,
+    UJI_KENDALI,
+    UJI_KOHORT,
+    jalankan_uji_cdn,
+    periksa_berkas_funding,
+    periksa_url,
+    ringkas_uji_cdn,
+)
 
-VERSI = 5
+VERSI = 6
 SUMBER_RENTANG = "reports/semesta_rentang.json"
 KELUARAN = "reports/funding_semesta.json"
 KELUARAN_SELISIH = "reports/funding_selisih_penuh.json"
 JENIS_DIIZINKAN = "perpetual_usdt"
+
+# Berkas yang ikut menentukan isi laporan ini. Bertambah pada VERSI 6 saat blok
+# CDN dipindahkan; lupa memperluas daftar ini akan membuat sidik kode
+# menyempit diam-diam (aturan 48).
+BERKAS_DICAP = ("arsip.py", "funding.py", "funding_cdn.py")
 
 # Diulang dari serap.py dengan sadar; lihat butir 4 di docstring.
 BATAS_HEADER = "2022-01"
 BATAS_BARU = "2025-01"
 BATAS_HIDUP = "2026-05"
 BATAS_DAFTAR = 500
-
-# Banyaknya pasang kohort-kendali yang diminta langsung ke CDN. Tiap pasang
-# adalah dua permintaan, jadi sepuluh pasang = dua puluh permintaan; masih jauh
-# di bawah biaya listing dan tidak mendekati batas waktu job 300 detik.
-BATAS_UJI_CDN = 10
 
 # Kelas yang dapat ditentukan SEBELUM mengunduh. `pra_header` tidak masuk sini:
 # ia hanya diketahui setelah berkasnya dibaca, dan menebaknya dari bulan akan
@@ -102,20 +118,6 @@ MEDAN_SAMPEL_RINGKAS = (
     "gagal_checksum",
 )
 
-# Daftar cadangan, dipakai HANYA bila kohort terukur kosong (mis. saat modul
-# dijalankan dengan FUNDING_BATAS_SIMBOL kecil). Ketiga pasang inilah yang
-# diuji VERSI 4; dipertahankan supaya hasil lama tetap dapat direproduksi.
-UJI_KOHORT: Tuple[Tuple[str, str], ...] = (
-    ("FTMUSDT", "2025-07"),
-    ("KLAYUSDT", "2025-07"),
-    ("LOOMUSDT", "2025-07"),
-)
-UJI_KENDALI: Tuple[Tuple[str, str], ...] = (
-    ("FTMUSDT", "2025-06"),
-    ("KLAYUSDT", "2025-06"),
-    ("LOOMUSDT", "2025-06"),
-)
-
 
 def nama_keluaran() -> str:
     return KELUARAN
@@ -129,7 +131,7 @@ def sidik_kode() -> str:
     """Aturan 22: seluruh berkas yang ikut menentukan isi laporan ini."""
     h = hashlib.sha256()
     dasar = Path(__file__).parent
-    for nama in sorted(["funding.py", "arsip.py"]):
+    for nama in sorted(BERKAS_DICAP):
         h.update((dasar / nama).read_bytes())
     return h.hexdigest()
 
@@ -307,122 +309,6 @@ def pasangan_uji(
         if len(pasang) >= batas:
             break
     return pasang
-
-
-def periksa_url(url: str, timeout: int = 60) -> Dict[str, Any]:
-    """Minta satu URL dan laporkan kode HTTP apa adanya.
-
-    404 (server menjawab: tidak ada) dan galat jaringan (server tidak menjawab)
-    adalah dua keadaan yang berbeda. Menyamakan keduanya persis kesalahan yang
-    dilarang aturan 46, maka `kode_http` tetap None saat yang terjadi adalah
-    galat, dan `galat` tetap None saat yang terjadi adalah 404.
-    """
-    baris: Dict[str, Any] = {
-        "url": url,
-        "kode_http": None,
-        "byte": None,
-        "checksum_sha256": None,
-        "teks_awal": None,
-        "galat": None,
-    }
-    try:
-        with urllib.request.urlopen(url, timeout=timeout) as jawab:
-            data = jawab.read()
-            baris["kode_http"] = int(getattr(jawab, "status", 200) or 200)
-            baris["byte"] = len(data)
-            baris["checksum_sha256"] = hashlib.sha256(data).hexdigest()
-            baris["teks_awal"] = data[:200].decode("utf-8", "replace")
-    except urllib.error.HTTPError as exc:
-        baris["kode_http"] = int(exc.code)
-    except Exception as exc:  # noqa: BLE001
-        baris["galat"] = str(exc)[:200]
-    return baris
-
-
-def periksa_berkas_funding(simbol: str, bulan: str, peran: str) -> Dict[str, Any]:
-    """Minta satu berkas funding langsung ke CDN, lalu cocokkan checksum resmi.
-
-    `checksum_cocok` bernilai None bila berkas tidak terambil; None berarti
-    "tidak dapat diperiksa", bukan "tidak cocok".
-    """
-    url = arsip.url_funding(simbol, bulan)
-    baris = periksa_url(url)
-    baris["simbol"] = simbol
-    baris["bulan"] = bulan
-    baris["peran"] = peran
-    baris["checksum_cocok"] = None
-    if baris["kode_http"] == 200 and baris["checksum_sha256"]:
-        sidik = periksa_url(url + ".CHECKSUM")
-        baris["kode_http_checksum"] = sidik["kode_http"]
-        teks = sidik.get("teks_awal") or ""
-        if sidik["kode_http"] == 200 and teks:
-            baris["checksum_cocok"] = baris["checksum_sha256"] in teks.split()
-    return baris
-
-
-def ringkas_uji_cdn(
-    kohort: List[Dict[str, Any]], kendali: List[Dict[str, Any]]
-) -> Dict[str, Any]:
-    """Cacah hasil uji CDN, dengan kendali sebagai medan penggugur.
-
-    Bila kendali tidak seluruhnya 200 dan cocok checksum, jalur unduh sendiri
-    yang tidak dapat dipercaya, dan seluruh angka kohort di blok ini batal.
-    """
-    kendali_200 = sum(1 for b in kendali if b.get("kode_http") == 200)
-    kendali_cocok = sum(1 for b in kendali if b.get("checksum_cocok") is True)
-    sah = bool(kendali) and kendali_200 == len(kendali) and kendali_cocok == len(kendali)
-    return {
-        "cacah_kohort_diminta": len(kohort),
-        "cacah_kohort_404": sum(1 for b in kohort if b.get("kode_http") == 404),
-        "cacah_kohort_200": sum(1 for b in kohort if b.get("kode_http") == 200),
-        "cacah_kohort_galat": sum(1 for b in kohort if b.get("galat")),
-        "cacah_kendali_diminta": len(kendali),
-        "cacah_kendali_200": kendali_200,
-        "cacah_kendali_checksum_cocok": kendali_cocok,
-        "kendali_sah": sah,
-        "catatan": (
-            "bila kendali_sah false, jalur unduh tidak terbukti bekerja dan "
-            "seluruh cacah kohort di blok ini BATAL (aturan 24); 404 berarti "
-            "server menjawab tidak ada, galat berarti server tidak menjawab, "
-            "dan keduanya tidak boleh disamakan (aturan 46)"
-        ),
-    }
-
-
-def jalankan_uji_cdn(
-    pasangan: Optional[Sequence[Tuple[str, str, str]]] = None
-) -> Dict[str, Any]:
-    """Uji kohort dan kendali berdampingan; keduanya selalu dijalankan.
-
-    Pasangan yang terpilih dari data lebih disukai daripada daftar tetap,
-    karena daftar tetap dipilih tangan dan itu bias pilihan yang diakui.
-    """
-    if pasangan:
-        kohort = [periksa_berkas_funding(s, bk, "kohort") for s, bk, _ in pasangan]
-        kendali = [periksa_berkas_funding(s, bn, "kendali") for s, _, bn in pasangan]
-        sumber = "kohort terukur"
-    else:
-        kohort = [periksa_berkas_funding(s, b, "kohort") for s, b in UJI_KOHORT]
-        kendali = [periksa_berkas_funding(s, b, "kendali") for s, b in UJI_KENDALI]
-        sumber = "daftar tetap"
-    hasil = ringkas_uji_cdn(kohort, kendali)
-    hasil["sumber_pasangan"] = sumber
-    hasil["baris"] = [
-        {
-            m: b.get(m)
-            for m in (
-                "peran",
-                "simbol",
-                "bulan",
-                "kode_http",
-                "byte",
-                "checksum_cocok",
-                "galat",
-            )
-        }
-        for b in kohort + kendali
-    ]
-    return hasil
 
 
 def kelas_bulan(simbol: str, bulan: str, bulan_terakhir: str = "") -> List[str]:
@@ -784,6 +670,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan "
         "dari kasus lain (aturan 41, 46)"
     )
+    laporan["berkas_dicap"] = list(BERKAS_DICAP)
     laporan["sumber_rentang"] = SUMBER_RENTANG
     laporan["sidik_data"] = hashlib.sha256(mentah).hexdigest()
     laporan["sidik_kode"] = sidik_kode()

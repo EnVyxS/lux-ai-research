@@ -1,10 +1,12 @@
 """Uji modul kohort_ekor tanpa jaringan sama sekali.
 
-Dua belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
+Lima belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
 cacah butir pytest (aturan 47). Cacahnya dihitung dengan menyebut satu per satu,
-bukan ditaksir dengan menatap: sidik_kode, header, indeks_kolom, baris_cacat,
-ringkas_lilin, bagian, mundur_bulan, penggugur_kendali, parser_terbukti,
-kendali_hidup, riwayat, jendela_dan_peran.
+bukan ditaksir dengan menatap: (1) sidik_kode, (2) header, (3) indeks_kolom,
+(4) baris_cacat, (5) ringkas_lilin, (6) bagian, (7) mundur_bulan,
+(8) penggugur_kendali, (9) parser_terbukti, (10) kendali_hidup, (11) riwayat,
+(12) jendela_dan_peran, (13) muat_kohort, (14) pindai_adaptif_berhenti,
+(15) pindai_adaptif_pagu_lawan_arsip.
 """
 
 from __future__ import annotations
@@ -196,10 +198,11 @@ def test_nilai_riwayat_membedakan_mati_kebangkitan_dan_tak_terukur():
         "BBB", [_baris("2025-05", 1.0, 0), _baris("2025-09", 0.01, 900)]
     )
     assert bangkit["bangkit_kembali"] is True
+    assert bangkit["bangkit_dapat_diuji"] is True
     assert bangkit["bulan_hidup_terakhir"] == "2025-09"
     assert bangkit["hidup_terakhir_sebelum_tebing"] is False
 
-    # seluruh jendela sepi: TAK TERUKUR, bukan "tidak pernah hidup" (aturan 41)
+    # seluruh rentang sepi: TAK TERUKUR, bukan "tidak pernah hidup" (aturan 41)
     buta = kohort_ekor.nilai_riwayat("CCC", [_baris("2026-05", 1.0, 0), _baris("2026-06", 1.0, 0)])
     assert buta["batas_tercapai"] is True
     assert buta["bulan_hidup_terakhir"] is None
@@ -241,3 +244,82 @@ def test_muat_kohort_melaporkan_galat_alih_alih_melempar(tmp_path):
     assert ada["simbol"] == ["AAA", "BBB"]
     assert ada["bulan_mulai"] == "2025-07"
     assert ada["galat"] is None
+
+
+def test_pindai_adaptif_berhenti_pada_bulan_ramai_pertama():
+    """Aturan 51: jendela adaptif berhenti pada peristiwanya, bukan pada angka tetap."""
+    dipanggil = []
+
+    def palsu(simbol, bulan, peran):
+        dipanggil.append(bulan)
+        hidup = bulan == "2024-03"
+        return {
+            "simbol": simbol,
+            "bulan": bulan,
+            "peran": peran,
+            "bagian_volume_nol": 0.01 if hidup else 1.0,
+            "transaksi_total": 900 if hidup else 0,
+        }
+
+    tersedia = ["2024-01", "2024-02", "2024-03", "2024-04", "2024-05"]
+    hasil = kohort_ekor.pindai_adaptif("AAA", tersedia, None, ukur=palsu)
+    # mundur dari yang terbaru, lalu BERHENTI; dua bulan tertua tak pernah diunduh
+    assert dipanggil == ["2024-05", "2024-04", "2024-03"]
+    assert hasil["cacah_bulan_diunduh"] == 3
+    assert hasil["cacah_bulan_tersedia"] == 5
+    # keluaran tetap urut menaik walau pindaiannya mundur
+    assert [b["bulan"] for b in hasil["baris"]] == ["2024-03", "2024-04", "2024-05"]
+    assert hasil["bulan_terakhir"] == "2024-05"
+    assert hasil["pagu_habis"] is False
+    assert hasil["arsip_habis"] is False
+
+    riwayat = kohort_ekor.nilai_riwayat("AAA", hasil["baris"], hasil)
+    assert riwayat["bulan_hidup_terakhir"] == "2024-03"
+    assert riwayat["batas_tercapai"] is False
+    assert riwayat["hidup_terakhir_sebelum_tebing"] is True
+    # kejujuran rancangan: kebangkitan TIDAK dapat digugurkan oleh mode ini
+    assert riwayat["bangkit_dapat_diuji"] is False
+    assert kohort_ekor.ringkas(hasil["baris"], [riwayat])[
+        "cacah_simbol_bangkit_dapat_diuji"
+    ] == 0
+
+
+def test_pindai_adaptif_membedakan_pagu_habis_dari_arsip_habis():
+    """Dua sebab berbeda di balik satu batas_tercapai (aturan 46)."""
+
+    def sepi_selalu(simbol, bulan, peran):
+        return {
+            "simbol": simbol,
+            "bulan": bulan,
+            "peran": peran,
+            "bagian_volume_nol": 1.0,
+            "transaksi_total": 0,
+        }
+
+    tersedia = ["2024-01", "2024-02", "2024-03", "2024-04"]
+    kena_pagu = kohort_ekor.pindai_adaptif("BBB", tersedia, None, ukur=sepi_selalu, pagu=2)
+    assert [b["bulan"] for b in kena_pagu["baris"]] == ["2024-03", "2024-04"]
+    assert kena_pagu["pagu_habis"] is True
+    assert kena_pagu["arsip_habis"] is False
+
+    habis = kohort_ekor.pindai_adaptif("CCC", tersedia, None, ukur=sepi_selalu, pagu=60)
+    assert habis["cacah_bulan_diunduh"] == 4
+    assert habis["pagu_habis"] is False
+    assert habis["arsip_habis"] is True
+
+    kosong = kohort_ekor.pindai_adaptif("DDD", [], None, ukur=sepi_selalu, pagu=60)
+    assert kosong["baris"] == []
+    assert kosong["bulan_terakhir"] is None
+    assert kosong["arsip_habis"] is True
+
+    riwayat = [
+        kohort_ekor.nilai_riwayat("BBB", kena_pagu["baris"], kena_pagu),
+        kohort_ekor.nilai_riwayat("CCC", habis["baris"], habis),
+    ]
+    assert all(r["batas_tercapai"] for r in riwayat)
+    assert all(r["bulan_hidup_terakhir"] is None for r in riwayat)
+    r = kohort_ekor.ringkas(kena_pagu["baris"] + habis["baris"], riwayat)
+    assert r["cacah_simbol_batas_tercapai"] == 2
+    assert r["cacah_simbol_pagu_habis"] == 1
+    assert r["cacah_simbol_arsip_habis"] == 1
+    assert r["cacah_bulan_diunduh"] == 6

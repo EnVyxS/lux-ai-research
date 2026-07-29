@@ -10,27 +10,33 @@ ramai, dan medan `kepala` menunjukkan indeks 5 memang `volume` serta indeks 8
 memang `count`. Karena itu kekosongan kohort adalah sifat arsip, bukan cacat kode
 (KC-18).
 
-VERSI 2 juga menemukan bulan kendali 2025-06 IKUT kosong, padahal berkas funding
-bulan itu terbukti ada dan berisi baris sungguhan. Funding terus terbit untuk
-pasar yang sudah mati, sehingga tebing 2025-07 tidak dapat dijelaskan oleh
-perdagangan yang berhenti pada tanggal itu.
+VERSI 3 (run 30415567007) memindai jendela TETAP 15 bulan dan gagal: sembilan
+dari sepuluh simbol sudah sepi pada bulan paling awal jendela, sehingga
+`bulan_hidup_terakhir` mereka tak terukur. Jendela tetap yang seluruh isinya sepi
+menghasilkan null, bukan jawaban (aturan 51).
 
-VERSI 3 mengukur yang masih hilang: KAPAN perdagangan berhenti. Modul memindai
-mundur `BATAS_MUNDUR` bulan bagi tiap simbol, mengukur seluruh jendela tanpa
-berhenti lebih awal, lalu melaporkan `bulan_hidup_terakhir`. Jendela dipindai
-utuh dengan sengaja: berhenti pada bulan ramai pertama akan MENGANDAIKAN
-keruntuhan itu satu arah, padahal justru keandaian itu yang hendak diuji lewat
-`bangkit_kembali`.
+VERSI 4 memindai ADAPTIF: mundur bulan demi bulan dari bulan arsip terbaru dan
+BERHENTI pada bulan ramai pertama yang ditemukan, dengan pagu keras
+`PAGU_MUNDUR` bulan. Konsekuensi yang diakui: karena pindaian berhenti di bulan
+ramai pertama dari ujung baru, seluruh bulan yang terpindai SESUDAH bulan itu
+pasti sepi, sehingga `bangkit_kembali` tidak lagi dapat digugurkan oleh
+rancangan ini. Medan `bangkit_dapat_diuji` menyatakan hal itu terang-terangan,
+alih-alih membiarkan angka nol terbaca sebagai bukti (aturan 46).
 
-Penggugur baru: `batas_tercapai` menyala bila tak ada satu pun bulan ramai di
-dalam jendela, artinya perdagangan berhenti SEBELUM jendela dan
-`bulan_hidup_terakhir` tidak diketahui — bukan nol, melainkan tak terukur
-(aturan 41).
+Penggugur `batas_tercapai` tetap ada dan kini terbelah menjadi dua sebab yang
+berbeda akibatnya:
+
+- `pagu_habis` — pagu keras tercapai padahal arsip masih punya bulan lebih tua.
+  Yang kurang adalah PAGU, dan pagu boleh dinaikkan.
+- `arsip_habis` — seluruh bulan yang pernah diterbitkan arsip sudah dipindai dan
+  tak satu pun ramai. Yang kurang bukan pagu; simbol itu tidak pernah terlihat
+  ramai di arsip bulanan sama sekali.
 
 DIAGNOSTIK, bukan gerbang: modul ini tidak menjatuhkan satu simbol-bulan pun dan
 tidak menulis `funding_ada` di manifes mana pun.
 
-Aturan yang mengikat modul ini: 10, 16, 20, 21, 22, 24, 37, 41, 46, 47, 48, 49, 50.
+Aturan yang mengikat modul ini: 10, 16, 20, 21, 22, 24, 37, 41, 46, 47, 48, 49,
+50, 51.
 """
 from __future__ import annotations
 
@@ -44,12 +50,16 @@ from pathlib import Path
 
 from . import arsip, gerbang_1m
 
-VERSI = 3
+VERSI = 4
 SUMBER = "reports/funding_semesta.json"
 KELUARAN = "reports/kohort_ekor.json"
 INTERVAL = "1m"
 BATAS_SIMBOL = 10
-BATAS_MUNDUR = 15
+
+# Pagu KERAS pindaian mundur, bersatuan BULAN per simbol. Ia bukan jendela
+# pengukuran melainkan batas biaya: pindaian berhenti lebih awal begitu bulan
+# ramai ditemukan, dan berhenti paksa di sini bila tidak.
+PAGU_MUNDUR = 60
 BULAN_DIHARAPKAN = "2026-06"
 
 # Bulan tebing funding: seluruh kohort berhenti menerbitkan funding mulai bulan
@@ -258,6 +268,47 @@ def ukur_satu(simbol: str, bulan: str, peran: str) -> dict:
     return baris
 
 
+def pindai_adaptif(simbol, tersedia, bulan_kendali, ukur=None, pagu: int = PAGU_MUNDUR) -> dict:
+    """Mundur dari bulan arsip terbaru sampai bulan RAMAI pertama (aturan 51).
+
+    Berhenti lebih awal begitu satu bulan ramai ditemukan; itulah
+    `bulan_hidup_terakhir` simbol tersebut, sebab seluruh bulan sesudahnya sudah
+    diukur sepi. Bila tak satu pun ramai, dua sebab yang berbeda akibatnya
+    dipisahkan: `pagu_habis` (pagu keras tercapai padahal arsip masih menyimpan
+    bulan lebih tua) dan `arsip_habis` (seluruh bulan arsip sudah dipindai).
+    """
+    jalan = ukur or ukur_satu
+    bersih = sorted(b for b in (tersedia or []) if b)
+    hasil = {
+        "simbol": simbol,
+        "baris": [],
+        "bulan_terakhir": bersih[-1] if bersih else None,
+        "bulan_paling_tua_di_arsip": bersih[0] if bersih else None,
+        "cacah_bulan_tersedia": len(bersih),
+        "cacah_bulan_diunduh": 0,
+        "pagu": pagu,
+        "pagu_habis": False,
+        "arsip_habis": not bersih,
+    }
+    if not bersih:
+        return hasil
+    bulan_terakhir = bersih[-1]
+    urut_mundur = list(reversed(jendela_bulan(bersih, pagu)))
+    baris = []
+    ketemu = False
+    for bulan in urut_mundur:
+        b = jalan(simbol, bulan, peran_bulan(bulan, bulan_terakhir, bulan_kendali))
+        baris.append(b)
+        if ramai(b):
+            ketemu = True
+            break
+    hasil["baris"] = list(reversed(baris))
+    hasil["cacah_bulan_diunduh"] = len(baris)
+    hasil["pagu_habis"] = (not ketemu) and len(bersih) > len(urut_mundur)
+    hasil["arsip_habis"] = (not ketemu) and len(bersih) <= len(urut_mundur)
+    return hasil
+
+
 def baris_kendali_hidup(bulan_uji, bulan_kendali, ukur=None) -> list:
     """Ukur simbol yang pasti hidup pada bulan yang sama dengan kohort."""
     jalan = ukur or ukur_satu
@@ -269,13 +320,19 @@ def baris_kendali_hidup(bulan_uji, bulan_kendali, ukur=None) -> list:
     return hasil
 
 
-def nilai_riwayat(simbol: str, baris_simbol) -> dict:
-    """Kapan simbol ini terakhir diperdagangkan, di dalam jendela yang dipindai.
+def nilai_riwayat(simbol: str, baris_simbol, konteks=None) -> dict:
+    """Kapan simbol ini terakhir diperdagangkan, di dalam rentang yang dipindai.
 
-    `batas_tercapai` menyala bila tak satu pun bulan di jendela ramai. Dalam hal
+    `batas_tercapai` menyala bila tak satu pun bulan terpindai ramai. Dalam hal
     itu `bulan_hidup_terakhir` bernilai None dan TIDAK boleh dibaca sebagai
-    "tidak pernah hidup": ia berarti tak terukur di jendela ini (aturan 41).
+    "tidak pernah hidup": ia berarti tak terukur (aturan 41). `pagu_habis` dan
+    `arsip_habis` memisahkan kedua sebabnya.
+
+    `bangkit_dapat_diuji` jujur menyatakan apakah rancangan pindaian ini mampu
+    menggugurkan `bangkit_kembali`. Pada pindaian adaptif ia selalu false, sebab
+    pindaian berhenti pada bulan ramai paling awal yang ditemuinya.
     """
+    info = dict(konteks or {})
     urut = sorted(
         (b for b in baris_simbol if b.get("bulan") and not b.get("galat")),
         key=lambda b: b["bulan"],
@@ -284,16 +341,23 @@ def nilai_riwayat(simbol: str, baris_simbol) -> dict:
     bulan_sepi = [b["bulan"] for b in urut if sepi(b)]
     hidup_terakhir = bulan_ramai[-1] if bulan_ramai else None
     bangkit = bool(bulan_sepi) and any(m > bulan_sepi[0] for m in bulan_ramai)
+    dapat_diuji = bool(urut) and bool(bulan_ramai) and bulan_ramai[0] != urut[0]["bulan"]
     return {
         "simbol": simbol,
         "cacah_bulan_dipindai": len(urut),
         "cacah_bulan_ramai": len(bulan_ramai),
         "cacah_bulan_sepi": len(bulan_sepi),
+        "cacah_bulan_tersedia": info.get("cacah_bulan_tersedia"),
+        "cacah_bulan_diunduh": info.get("cacah_bulan_diunduh"),
         "bulan_paling_awal_dipindai": urut[0]["bulan"] if urut else None,
+        "bulan_paling_tua_di_arsip": info.get("bulan_paling_tua_di_arsip"),
         "bulan_hidup_terakhir": hidup_terakhir,
         "bulan_sepi_paling_awal": bulan_sepi[0] if bulan_sepi else None,
         "bangkit_kembali": bangkit,
+        "bangkit_dapat_diuji": dapat_diuji,
         "batas_tercapai": not bulan_ramai,
+        "pagu_habis": bool(info.get("pagu_habis")),
+        "arsip_habis": bool(info.get("arsip_habis")),
         "hidup_terakhir_sebelum_tebing": (
             None if hidup_terakhir is None else hidup_terakhir < TEBING
         ),
@@ -326,6 +390,7 @@ def ringkas(baris_semua, riwayat=None) -> dict:
         "cacah_uji_sepi": sum(1 for b in uji if sepi(b)),
         "cacah_kendali_sepi": sum(1 for b in kendali if sepi(b)),
         "cacah_simbol_bulan_sepi": sum(1 for b in daftar if sepi(b)),
+        "cacah_simbol_bulan_ramai": sum(1 for b in daftar if ramai(b)),
         "cacah_kendali_hidup_ramai": sum(1 for b in hidup if ramai(b)),
         "cacah_uji_lolos_gerbang": sum(1 for b in uji if b.get("lolos_gerbang")),
         "cacah_kendali_lolos_gerbang": sum(1 for b in kendali if b.get("lolos_gerbang")),
@@ -337,11 +402,19 @@ def ringkas(baris_semua, riwayat=None) -> dict:
         "cacah_simbol_batas_tercapai": sum(
             1 for r in daftar_riwayat if r.get("batas_tercapai")
         ),
+        "cacah_simbol_pagu_habis": sum(1 for r in daftar_riwayat if r.get("pagu_habis")),
+        "cacah_simbol_arsip_habis": sum(1 for r in daftar_riwayat if r.get("arsip_habis")),
         "cacah_simbol_bangkit_kembali": sum(
             1 for r in daftar_riwayat if r.get("bangkit_kembali")
         ),
+        "cacah_simbol_bangkit_dapat_diuji": sum(
+            1 for r in daftar_riwayat if r.get("bangkit_dapat_diuji")
+        ),
         "cacah_simbol_hidup_terakhir_sebelum_tebing": sum(
             1 for r in terukur if r.get("hidup_terakhir_sebelum_tebing")
+        ),
+        "cacah_bulan_diunduh": sum(
+            int(r.get("cacah_bulan_diunduh") or 0) for r in daftar_riwayat
         ),
         "kendali_sah": bool(kendali_terambil) and len(kendali_terambil) == len(kendali),
         "parser_terbukti": bool(hidup) and all(ramai(b) for b in hidup),
@@ -351,7 +424,7 @@ def ringkas(baris_semua, riwayat=None) -> dict:
 def jalankan(akar: str = ".") -> dict:
     kohort = muat_kohort(akar)
     batas = int(os.environ.get("KOHORT_BATAS_SIMBOL", BATAS_SIMBOL) or BATAS_SIMBOL)
-    mundur = int(os.environ.get("KOHORT_BATAS_MUNDUR", BATAS_MUNDUR) or BATAS_MUNDUR)
+    pagu = int(os.environ.get("KOHORT_PAGU_MUNDUR", PAGU_MUNDUR) or PAGU_MUNDUR)
     dipilih = kohort["simbol"][:batas]
     bulan_kendali = mundur_bulan(kohort.get("bulan_mulai") or "", 1)
 
@@ -374,17 +447,20 @@ def jalankan(akar: str = ".") -> dict:
                 }
             )
             continue
-        jendela = jendela_bulan(tersedia, mundur)
-        bulan_terakhir = jendela[-1] if jendela else None
-        catatan_bulan.append({"simbol": simbol, "bulan_klines_terakhir": bulan_terakhir})
-        if bulan_terakhir:
-            bulan_uji_terakhir = bulan_terakhir
-        baris_simbol = [
-            ukur_satu(simbol, bulan, peran_bulan(bulan, bulan_terakhir, bulan_kendali))
-            for bulan in jendela
-        ]
-        baris_semua += baris_simbol
-        riwayat.append(nilai_riwayat(simbol, baris_simbol))
+        pindaian = pindai_adaptif(simbol, tersedia, bulan_kendali, pagu=pagu)
+        catatan_bulan.append(
+            {
+                "simbol": simbol,
+                "bulan_klines_terakhir": pindaian["bulan_terakhir"],
+                "bulan_paling_tua_di_arsip": pindaian["bulan_paling_tua_di_arsip"],
+                "cacah_bulan_tersedia": pindaian["cacah_bulan_tersedia"],
+                "cacah_bulan_diunduh": pindaian["cacah_bulan_diunduh"],
+            }
+        )
+        if pindaian["bulan_terakhir"]:
+            bulan_uji_terakhir = pindaian["bulan_terakhir"]
+        baris_semua += pindaian["baris"]
+        riwayat.append(nilai_riwayat(simbol, pindaian["baris"], pindaian))
 
     baris_semua += baris_kendali_hidup(
         bulan_uji_terakhir or BULAN_DIHARAPKAN, bulan_kendali
@@ -400,7 +476,8 @@ def jalankan(akar: str = ".") -> dict:
         "bulan_kendali": bulan_kendali,
         "bulan_tebing": TEBING,
         "batas_simbol": batas,
-        "batas_mundur": mundur,
+        "pagu_mundur": pagu,
+        "mode_pindai": "adaptif",
         "ambang_sepi": AMBANG_SEPI,
         "simbol_disampel": dipilih,
         "simbol_kendali_hidup": list(KENDALI_HIDUP),
@@ -416,11 +493,13 @@ def jalankan(akar: str = ".") -> dict:
             "parser_terbukti == false berarti pembaca CSV modul ini tidak terbukti "
             "membaca kolom volume dan transaksi dengan benar, sehingga SELURUH klaim "
             "kekosongan di laporan ini batal (aturan 50); batas_tercapai == true pada "
-            "sebuah simbol berarti tak ada bulan ramai di dalam jendela, sehingga "
+            "sebuah simbol berarti tak ada bulan ramai yang ditemukan, sehingga "
             "bulan_hidup_terakhir simbol itu TAK TERUKUR dan bukan bernilai nol; "
-            "galat_kohort != null berarti daftar anggota tidak terbaca; kendali_sah "
-            "== false berarti pembanding tidak lengkap; cacah_gagal_checksum != 0 "
-            "berarti berkas yang diukur tidak terbukti asli (aturan 24)"
+            "pagu_habis membedakan pagu yang terlalu pendek dari arsip_habis yang "
+            "berarti seluruh bulan arsip sudah dipindai; galat_kohort != null berarti "
+            "daftar anggota tidak terbaca; kendali_sah == false berarti pembanding "
+            "tidak lengkap; cacah_gagal_checksum != 0 berarti berkas yang diukur tidak "
+            "terbukti asli (aturan 24)"
         ),
         "catatan_kendali_hidup": (
             "KENDALI_HIDUP bukan pembanding pasar melainkan penguji pembaca CSV modul "
@@ -429,14 +508,21 @@ def jalankan(akar: str = ".") -> dict:
         ),
         "catatan_satuan": (
             "cacah_simbol_* bersatuan SIMBOL; cacah_uji_*, cacah_kendali_*, "
-            "cacah_pindai_*, dan cacah_simbol_bulan_sepi bersatuan SIMBOL-BULAN; "
-            "cacah_lilin bersatuan LILIN; bagian_* adalah BAGIAN antara 0 dan 1, "
-            "bukan persen (aturan 47)"
+            "cacah_pindai_*, cacah_simbol_bulan_sepi, dan cacah_bulan_diunduh "
+            "bersatuan SIMBOL-BULAN; cacah_lilin bersatuan LILIN; bagian_* adalah "
+            "BAGIAN antara 0 dan 1, bukan persen (aturan 47)"
         ),
         "catatan_rentang": (
-            "hasil berlaku untuk simbol dan bulan yang benar-benar disampel saja; "
-            "jendela dibatasi batas_mundur bulan terakhir, jadi tidak ada pernyataan "
-            "apa pun tentang bulan di luar jendela (aturan 20)"
+            "pindaian ADAPTIF: mundur dari bulan arsip terbaru dan berhenti pada bulan "
+            "ramai pertama, dengan pagu keras pagu_mundur bulan. Bulan yang lebih tua "
+            "daripada bulan_paling_awal_dipindai TIDAK diukur, jadi tidak ada "
+            "pernyataan apa pun tentangnya (aturan 20)"
+        ),
+        "catatan_bangkit": (
+            "karena pindaian berhenti pada bulan ramai pertama dari ujung terbaru, "
+            "seluruh bulan yang terpindai sesudahnya pasti sepi; maka "
+            "bangkit_kembali == false pada mode ini BUKAN bukti bahwa kebangkitan "
+            "tidak terjadi. Medan bangkit_dapat_diuji menyatakan hal itu (aturan 46)"
         ),
         "catatan_tafsir": (
             "bulan_hidup_terakhir yang lebih awal daripada bulan_tebing menunjukkan "
@@ -455,7 +541,7 @@ def main() -> int:
     with open(KELUARAN, "w", encoding="utf-8") as f:
         json.dump(laporan, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
-    print(json.dumps(laporan, ensure_ascii=False, indent=2, sort_keys=True))
+    print(json.dumps(laporan["ringkasan"], ensure_ascii=False, indent=2, sort_keys=True))
     ringkasan = laporan["ringkasan"]
     # Kode keluar bukan hiasan: penggugur yang menyala harus terlihat dari luar.
     if laporan["galat_kohort"] or not ringkasan["parser_terbukti"]:

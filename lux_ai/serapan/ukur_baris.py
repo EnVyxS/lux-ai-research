@@ -31,6 +31,40 @@ keduanya diadjudikasi apa adanya oleh angka yang terbit.
 Penggugur (aturan 24): `cacah_berkas_hilang` != 0 berarti daftar yang diukur
 tidak lengkap, sehingga seluruh cacah di laporan ini batal dipakai untuk menutup
 ramalan.
+
+---
+
+## V2 (29 Juli 2026) — amandemen, bukan penghapusan (aturan 29)
+
+Teks V1 di atas dibiarkan utuh, termasuk praregistrasi R-197 yang sudah
+diadjudikasi TEPAT. Yang berubah pada V2 hanya SATU hal: daftar `BERKAS_DIUKUR`
+bertambah dua nama, `lux_ai/serapan/kehidupan.py` dan `lux_ai/serapan/ukur_baris.py`
+sendiri. Mekanika pengukuran, definisi `cacah_baris`, pagar 800, dan medan
+penggugur TIDAK disentuh.
+
+Alasan V2 dijalankan sekarang: `pulihkan.py` sudah naik ke V2 dan cacah barisnya
+BELUM PERNAH diukur. Angka 318 yang tercatat di STATE adalah angka `pulihkan.py`
+V1, dan STATE v28 sudah menandainya kedaluwarsa parsial. Menaksirnya dari 14.839
+byte adalah persis kesalahan yang menjatuhkan R-175 dan R-179; karena itu ia
+dihitung ulang, bukan ditaksir.
+
+PRAREGISTRASI V2 (ditulis SEBELUM run ini):
+
+- **R-202** — `cacah_baris` `lux_ai/serapan/pulihkan.py` berada dalam pita
+  **340..420**. Satuan: BARIS menurut `len(splitlines())`. Penyebut tidak berlaku
+  (ini pengukuran tunggal, bukan bagian). Pita dipakai karena satu-satunya
+  petunjuk yang saya punya adalah ukuran byte, dan byte BUKAN baris; pita ini
+  sengaja lebar supaya kegagalannya bermakna. Penggugur: `cacah_berkas_hilang`
+  != 0 → TIDAK TERADJUDIKASI.
+- **R-203** — `cacah_baris` `lux_ai/serapan/kehidupan.py` berada dalam pita
+  **300..400** BARIS, dan `cacah_berkas_melebihi_pagar` = **0** atas kesepuluh
+  berkas. Saya menulis berkas itu sendiri dan tetap tidak tahu cacah barisnya;
+  ini ramalan, bukan pengetahuan.
+- **R-204** — CI melaporkan **269 butir** dan **kode 0**. Satuan: BUTIR. Basis
+  269 terverifikasi pada run 30418471386 (commit d4a2f60a); V2 tidak menambah
+  satu pun fungsi uji, jadi angkanya harus DIAM. Penggugur: bila cacahnya
+  bergerak tanpa uji baru, ada uji yang hilang atau gagal terkumpul dan itu
+  MELESET, bukan kebetulan.
 """
 from __future__ import annotations
 
@@ -38,7 +72,7 @@ import hashlib
 import json
 from pathlib import Path
 
-VERSI = 1
+VERSI = 2
 KELUARAN = "reports/ukur_baris.json"
 PAGAR_BARIS = 800
 
@@ -47,10 +81,12 @@ BERKAS_DIUKUR = [
     "lux_ai/serapan/funding_cdn.py",
     "lux_ai/serapan/arsip.py",
     "lux_ai/serapan/gerbang_1m.py",
+    "lux_ai/serapan/kehidupan.py",
     "lux_ai/serapan/kohort_ekor.py",
     "lux_ai/serapan/kohort_ringkas.py",
     "lux_ai/serapan/pulihkan.py",
     "lux_ai/serapan/resample.py",
+    "lux_ai/serapan/ukur_baris.py",
 ]
 
 
@@ -124,6 +160,12 @@ def jalankan(akar: str = ".") -> dict:
             "seluruh cacah di laporan ini batal dipakai menutup ramalan (aturan 24)"
         ),
         "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
+        "catatan_versi": (
+            "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; mekanika, "
+            "definisi, dan pagar tidak berubah dari V1 (aturan 29). Angka 318 baris "
+            "pulihkan.py yang tercatat di STATE adalah angka V1 dan digantikan oleh "
+            "laporan ini"
+        ),
     }
 
 

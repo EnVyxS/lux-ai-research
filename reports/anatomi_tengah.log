@@ -1,0 +1,1260 @@
+{
+  "bentangan": {
+    "BTCSTUSDT": [
+      {
+        "bulan": "2021-03",
+        "byte_parquet": 751669,
+        "cacah_lilin": 39900,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "SEPI"
+      },
+      {
+        "bulan": "2021-04",
+        "byte_parquet": 409479,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 415490,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-06",
+        "byte_parquet": 415699,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-07",
+        "byte_parquet": 400938,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 433566,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-09",
+        "byte_parquet": 415616,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-10",
+        "byte_parquet": 400668,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-11",
+        "byte_parquet": 420034,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2021-12",
+        "byte_parquet": 417657,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-01",
+        "byte_parquet": 399757,
+        "cacah_lilin": 44640,
+        "funding_ada": false,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-02",
+        "byte_parquet": 394453,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-03",
+        "byte_parquet": 425525,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-04",
+        "byte_parquet": 421968,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-05",
+        "byte_parquet": 416542,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-06",
+        "byte_parquet": 389263,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-07",
+        "byte_parquet": 430523,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-08",
+        "byte_parquet": 411730,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-09",
+        "byte_parquet": 413902,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-10",
+        "byte_parquet": 427783,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-11",
+        "byte_parquet": 392405,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-12",
+        "byte_parquet": 441518,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-01",
+        "byte_parquet": 409518,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-02",
+        "byte_parquet": 369967,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-03",
+        "byte_parquet": 433930,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-04",
+        "byte_parquet": 392323,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-05",
+        "byte_parquet": 430033,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-06",
+        "byte_parquet": 400099,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-07",
+        "byte_parquet": 430348,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-08",
+        "byte_parquet": 451805,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-09",
+        "byte_parquet": 390907,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-10",
+        "byte_parquet": 430397,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-11",
+        "byte_parquet": 412949,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-12",
+        "byte_parquet": 402716,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-01",
+        "byte_parquet": 424974,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-02",
+        "byte_parquet": 381210,
+        "cacah_lilin": 41760,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-03",
+        "byte_parquet": 436028,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-04",
+        "byte_parquet": 415072,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-05",
+        "byte_parquet": 403669,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-06",
+        "byte_parquet": 418012,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-07",
+        "byte_parquet": 422471,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-08",
+        "byte_parquet": 402417,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-09",
+        "byte_parquet": 418590,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-10",
+        "byte_parquet": 408852,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-11",
+        "byte_parquet": 416312,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-12",
+        "byte_parquet": 416259,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-01",
+        "byte_parquet": 405222,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-02",
+        "byte_parquet": 394203,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-03",
+        "byte_parquet": 405809,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-04",
+        "byte_parquet": 417050,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-05",
+        "byte_parquet": 419335,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-06",
+        "byte_parquet": 424145,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-07",
+        "byte_parquet": 427978,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-08",
+        "byte_parquet": 427561,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-09",
+        "byte_parquet": 392289,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-10",
+        "byte_parquet": 434257,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-11",
+        "byte_parquet": 389535,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-12",
+        "byte_parquet": 430524,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-01",
+        "byte_parquet": 440581,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-02",
+        "byte_parquet": 378661,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-03",
+        "byte_parquet": 432206,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-04",
+        "byte_parquet": 388935,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-05",
+        "byte_parquet": 433041,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-06",
+        "byte_parquet": 405209,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      }
+    ],
+    "LITUSDT": [
+      {
+        "bulan": "2021-02",
+        "byte_parquet": 626341,
+        "cacah_lilin": 15420,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-03",
+        "byte_parquet": 1807058,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-04",
+        "byte_parquet": 1786707,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 1816949,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-06",
+        "byte_parquet": 1705908,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-07",
+        "byte_parquet": 1805139,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 1860986,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-09",
+        "byte_parquet": 1793578,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-10",
+        "byte_parquet": 1785583,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-11",
+        "byte_parquet": 1786145,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-12",
+        "byte_parquet": 1789677,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-01",
+        "byte_parquet": 1739493,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-02",
+        "byte_parquet": 1464658,
+        "cacah_lilin": 36000,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-03",
+        "byte_parquet": 1749991,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-04",
+        "byte_parquet": 1602008,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-05",
+        "byte_parquet": 1812018,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-06",
+        "byte_parquet": 1817331,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-07",
+        "byte_parquet": 1843210,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-08",
+        "byte_parquet": 1783320,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-09",
+        "byte_parquet": 1640432,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-10",
+        "byte_parquet": 1855991,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-11",
+        "byte_parquet": 1774985,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2022-12",
+        "byte_parquet": 1799821,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-01",
+        "byte_parquet": 1785201,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-02",
+        "byte_parquet": 1674389,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-03",
+        "byte_parquet": 1809017,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-04",
+        "byte_parquet": 1670238,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-05",
+        "byte_parquet": 1644645,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-06",
+        "byte_parquet": 1650843,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-07",
+        "byte_parquet": 1609167,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-08",
+        "byte_parquet": 1642771,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-09",
+        "byte_parquet": 1577094,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-10",
+        "byte_parquet": 1585870,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-11",
+        "byte_parquet": 1646594,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2023-12",
+        "byte_parquet": 1719203,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-01",
+        "byte_parquet": 1676001,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-02",
+        "byte_parquet": 1570967,
+        "cacah_lilin": 41760,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-03",
+        "byte_parquet": 1793375,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-04",
+        "byte_parquet": 1673915,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-05",
+        "byte_parquet": 1547845,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-06",
+        "byte_parquet": 1563761,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-07",
+        "byte_parquet": 1532688,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-08",
+        "byte_parquet": 1615016,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-09",
+        "byte_parquet": 1496879,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-10",
+        "byte_parquet": 1484353,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-11",
+        "byte_parquet": 1661282,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-12",
+        "byte_parquet": 1779897,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2025-01",
+        "byte_parquet": 1631684,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2025-02",
+        "byte_parquet": 394147,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-03",
+        "byte_parquet": 405753,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-04",
+        "byte_parquet": 416994,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-05",
+        "byte_parquet": 419279,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-06",
+        "byte_parquet": 424089,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-07",
+        "byte_parquet": 427922,
+        "cacah_lilin": 44640,
+        "funding_ada": false,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-08",
+        "byte_parquet": 427505,
+        "cacah_lilin": 44640,
+        "funding_ada": false,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-09",
+        "byte_parquet": 392233,
+        "cacah_lilin": 43200,
+        "funding_ada": false,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-10",
+        "byte_parquet": 434201,
+        "cacah_lilin": 44640,
+        "funding_ada": false,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-11",
+        "byte_parquet": 389479,
+        "cacah_lilin": 43200,
+        "funding_ada": false,
+        "simbol": "LITUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-01",
+        "byte_parquet": 1939126,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-02",
+        "byte_parquet": 1636316,
+        "cacah_lilin": 40320,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-03",
+        "byte_parquet": 1793921,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-04",
+        "byte_parquet": 1839551,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-05",
+        "byte_parquet": 2001823,
+        "cacah_lilin": 44640,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-06",
+        "byte_parquet": 1944948,
+        "cacah_lilin": 43200,
+        "funding_ada": true,
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      }
+    ]
+  },
+  "bukan_bukti": false,
+  "catatan_batas": "dua simbol bukan sampel; tidak satu pun angka di sini boleh digeneralkan ke 19.586 simbol-bulan maupun ke 38 anggota kohort (aturan 20). Bentangan kehidupan kohort adalah prasyarat KEDUA Keputusan 7 dan BELUM diukur.",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, atau kendali_sah false membatalkan seluruh angka (aturan 24); ketiga butir R-300 yang kalah BUKAN penggugur",
+  "catatan_tafsir": "bentangan status TIDAK membuktikan sebab apa pun; ia hanya menunjukkan bulan mana yang tidak diperdagangkan menurut arsip. Bulan MATI yang tersisip di antara dua bulan HIDUP tetap dapat lahir dari kegagalan penerbitan arsip, bukan dari berhentinya perdagangan (aturan 10, KC-18)",
+  "definisi": {
+    "funding_ada": "kebalikan keanggotaan himpunan lubang terbitan silang_funding.lubang_funding; definisinya SATU (aturan 36)",
+    "mati_tersisip": "bulan berstatus MATI yang tetangga langsungnya DI DALAM penyebut kehidupan — bulan sebelum dan bulan sesudah — keduanya HIDUP; bulan di ujung riwayat tidak pernah tersisip sebab satu tetangganya tidak ada (aturan 46)",
+    "status": "dipakai apa adanya dari kehidupan.py lewat kehidupan_arsip: MATI berarti transaksi_total nol, SEPI berarti bagian_volume_nol di atas ambang; keduanya per SIMBOL-BULAN, tidak pernah per simbol (ADR-A008 Keputusan 2 dan 6)"
+  },
+  "r300": {
+    "butir_1": {
+      "baris": [
+        {
+          "ada_di_penyebut": true,
+          "cocok": true,
+          "diramalkan": 64,
+          "simbol": "BTCSTUSDT",
+          "terukur": 64
+        },
+        {
+          "ada_di_penyebut": true,
+          "cocok": true,
+          "diramalkan": 64,
+          "simbol": "LITUSDT",
+          "terukur": 64
+        }
+      ],
+      "menang": true,
+      "mudah": true,
+      "nama": "cacah_bulan 64 bagi kedua simbol"
+    },
+    "butir_2": {
+      "menang": false,
+      "mudah": false,
+      "nama": "kedua tetangga bulan lubang BTCSTUSDT berstatus HIDUP",
+      "terukur": true,
+      "tetangga": {
+        "bulan": "2022-01",
+        "bulan_sebelum": "2021-12",
+        "bulan_sesudah": "2022-02",
+        "simbol": "BTCSTUSDT",
+        "status_bulan": "MATI",
+        "status_sebelum": "MATI",
+        "status_sesudah": "MATI",
+        "terukur": true
+      },
+      "tetangga_diramalkan": [
+        "2021-12",
+        "2022-02"
+      ]
+    },
+    "butir_3": {
+      "cacah_hidup": 0,
+      "cacah_mati": 63,
+      "dalam_pita": false,
+      "mati_melampaui_hidup": true,
+      "menang": false,
+      "mudah": false,
+      "nama": "cacah_hidup BTCSTUSDT di dalam pita dan MATI melampaui HIDUP",
+      "pita": [
+        8,
+        30
+      ],
+      "terukur": true
+    },
+    "cacah_butir_menang": 1,
+    "catatan_pembatal": "pembatal_a008_menyala mengikuti butir 2 saja: bulan MATI yang tersisip di antara dua bulan HIDUP adalah kematian di TENGAH sejarah pasar aktif, yakni keadaan yang ADR-A008 §6 sebut sebagai pembatal pertama; satu kasus TIDAK boleh digeneralkan ke 19.586 (aturan 20)",
+    "menang_seluruhnya": false,
+    "pembatal_a008_menyala": false
+  },
+  "ringkas_per_simbol": {
+    "BTCSTUSDT": {
+      "bulan_hidup_pertama": null,
+      "bulan_hidup_terakhir": null,
+      "bulan_mati_pertama": "2021-04",
+      "bulan_mati_terakhir": "2026-06",
+      "bulan_pertama": "2021-03",
+      "bulan_terakhir": "2026-06",
+      "byte_parquet_total": 26811584,
+      "cacah_bulan": 64,
+      "cacah_hidup": 0,
+      "cacah_lubang_funding": 1,
+      "cacah_mati": 63,
+      "cacah_mati_tersisip": 0,
+      "cacah_sepi": 1,
+      "cacah_tak_terukur": 0,
+      "mati_tersisip": {
+        "bulan": [],
+        "cacah": 0
+      },
+      "rentetan_hidup_terpanjang": 0,
+      "rentetan_mati_terpanjang": 63,
+      "sebaran_status": {
+        "HIDUP": 0,
+        "MATI": 63,
+        "SEPI": 1,
+        "TAK_TERUKUR": 0
+      }
+    },
+    "LITUSDT": {
+      "bulan_hidup_pertama": "2021-02",
+      "bulan_hidup_terakhir": "2026-06",
+      "bulan_mati_pertama": "2025-02",
+      "bulan_mati_terakhir": "2025-11",
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "byte_parquet_total": 95777311,
+      "cacah_bulan": 64,
+      "cacah_hidup": 54,
+      "cacah_lubang_funding": 5,
+      "cacah_mati": 10,
+      "cacah_mati_tersisip": 0,
+      "cacah_sepi": 0,
+      "cacah_tak_terukur": 0,
+      "mati_tersisip": {
+        "bulan": [],
+        "cacah": 0
+      },
+      "rentetan_hidup_terpanjang": 48,
+      "rentetan_mati_terpanjang": 10,
+      "sebaran_status": {
+        "HIDUP": 54,
+        "MATI": 10,
+        "SEPI": 0,
+        "TAK_TERUKUR": 0
+      }
+    }
+  },
+  "ringkasan": {
+    "cacah_baris_dengan_medan": 19586,
+    "cacah_bulan_per_simbol": {
+      "BTCSTUSDT": 64,
+      "LITUSDT": 64
+    },
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_mati_tersisip_per_simbol": {
+      "BTCSTUSDT": 0,
+      "LITUSDT": 0
+    },
+    "cacah_simbol_diperiksa": 2,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "medan_baris_terlihat": [
+      "ada_di_arsip",
+      "bagian_volume_nol",
+      "bulan",
+      "byte_parquet",
+      "cacah_baris_cacat",
+      "cacah_lilin",
+      "cacah_lilin_terbaca",
+      "cacah_volume_nol",
+      "galat",
+      "gerbang_lolos",
+      "jalur",
+      "simbol",
+      "status",
+      "transaksi_total"
+    ],
+    "medan_diminta": "cacah_lilin",
+    "pembatal_a008_menyala": false,
+    "penyebut_kehidupan": 19586,
+    "r300_cacah_butir_menang": 1,
+    "r300_menang_seluruhnya": false,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "simbol_diperiksa": [
+      "BTCSTUSDT",
+      "LITUSDT"
+    ],
+    "total_pecahan": 8
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "f99869c01de9524b191832111adf31151c90281c263129ab933ffc5b86b8ed97",
+  "sidik_kode_lubang_tengah": "c9372bd763b86cfeb2adcf0a0c0c43dae8d9aa9a6508e9c32f7671d5ec7b3f4e",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "tetangga_lubang": {
+    "bulan": "2022-01",
+    "bulan_sebelum": "2021-12",
+    "bulan_sesudah": "2022-02",
+    "simbol": "BTCSTUSDT",
+    "status_bulan": "MATI",
+    "status_sebelum": "MATI",
+    "status_sesudah": "MATI",
+    "terukur": true
+  },
+  "versi_anatomi_tengah": 1,
+  "versi_funding": 6,
+  "waktu_utc": "2026-07-29T19:35:08Z"
+}
+

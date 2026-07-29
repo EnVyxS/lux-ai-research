@@ -106,6 +106,57 @@ PRAREGISTRASI V3 (ditulis SEBELUM run ini):
 - Cacah baris `ukur_baris.py` sendiri SENGAJA tidak diramalkan pada V3, sebab
   berkas inilah yang sedang saya sunting dan angkanya berubah oleh suntingan ini;
   meramalkannya hanya akan menambah ramalan murah.
+
+---
+
+## V4 (29 Juli 2026) — satu berkas baru, dan satu angka kedaluwarsa ditebus
+
+Seluruh teks V1..V3 dibiarkan utuh, termasuk R-213 dan R-214 yang keduanya
+diadjudikasi TEPAT (kehidupan_arsip.py 496 baris dalam pita 250..500;
+silang_funding.py V1 396 baris dalam pita 330..430). Yang berubah pada V4 tetap
+hanya SATU hal: `BERKAS_DIUKUR` bertambah `lux_ai/serapan/lubang_tengah.py`.
+Mekanika, definisi `cacah_baris`, pagar 800, dan medan penggugur TIDAK disentuh.
+
+Dua alasan, dan keduanya utang yang sudah tercatat di STATE:
+
+1. `lubang_tengah.py` lahir pada commit `680d04b4` dan sama sekali belum masuk
+   daftar ukur, sehingga pagar 800 belum pernah diuji atasnya.
+2. Angka **396 baris** untuk `silang_funding.py` adalah angka **V1**. Modul itu
+   sudah naik ke V2 (tujuh fungsi baru dan satu bagian docstring baru), jadi 396
+   resmi KEDALUWARSA dan dilarang ditaksir dari byte — itu pola yang sudah
+   menjatuhkan R-175, R-179, dan R-203. Nama `silang_funding.py` sudah ada di
+   daftar sejak V3, jadi run ini menebusnya tanpa perubahan daftar.
+
+Sebelum berkas ini disunting, `tests/test_ukur_baris.py` dibaca utuh SEKALI LAGI
+(blob `7975bf88`): ketiga fungsi ujinya tidak mengunci panjang `BERKAS_DIUKUR`
+maupun nama-namanya; yang dikunci hanya `cacah_berkas_hilang == 0` atas repo
+nyata. `lubang_tengah.py` sudah ada di `main`. Karena itu cacah butir uji TIDAK
+berubah oleh V4.
+
+PRAREGISTRASI V4 (ditulis SEBELUM run ini):
+
+- **R-224** — `cacah_baris` `lux_ai/serapan/lubang_tengah.py` berada dalam pita
+  **350..470** BARIS. Dasar: saya menulis dan membaca ulang berkas itu beberapa
+  menit lalu; docstring praregistrasinya panjang (kira-kira seratus baris) dan
+  badan kodenya sebelas fungsi. Tetap ramalan, bukan pengetahuan — saya tidak
+  pernah mencacahnya, dan mencacah dari ingatan adalah KC-19.
+- **R-225** — `cacah_baris` `lux_ai/serapan/silang_funding.py` **V2** berada
+  dalam pita **470..620** BARIS, dan `cacah_berkas_melebihi_pagar` = **0** atas
+  ketiga belas berkas. Dasar: V1 terukur 396 baris; V2 menambah tujuh fungsi
+  (`nama_daftar`, `baca_medan_baris`, `bulan_per_simbol`, `bentuk_lubang_lokal`,
+  `daftar_hidup_tanpa_funding`, `daftar_lubang_tak_dikenal`, `sebaran_bentuk`,
+  `sebaran_bentuk_semua`, `berkas_daftar` — sembilan, dicacah dari berkas yang
+  sudah dibaca ulang utuh) serta satu bagian docstring. Bila hasilnya melampaui
+  620, aturan 48 langsung berlaku atas berkas itu dan ia wajib dipecah sebelum
+  fungsi berikutnya ditambahkan.
+- **R-226** — CI melaporkan **382 butir** dan **kode 0**. Satuan: BUTIR yang
+  dikumpulkan pytest. Basis: 382 terverifikasi pada run 30436334383 (commit
+  680d04b4); V4 tidak menambah maupun menghapus satu pun fungsi uji, jadi
+  angkanya harus DIAM. Bila ia bergerak tanpa uji baru, ada uji yang hilang atau
+  gagal terkumpul, dan itu MELESET.
+
+Catatan jujur: cacah baris `ukur_baris.py` sendiri kembali TIDAK diramalkan,
+sebab berkas inilah yang sedang disunting.
 """
 from __future__ import annotations
 
@@ -113,7 +164,7 @@ import hashlib
 import json
 from pathlib import Path
 
-VERSI = 3
+VERSI = 4
 KELUARAN = "reports/ukur_baris.json"
 PAGAR_BARIS = 800
 
@@ -126,6 +177,7 @@ BERKAS_DIUKUR = [
     "lux_ai/serapan/kehidupan_arsip.py",
     "lux_ai/serapan/kohort_ekor.py",
     "lux_ai/serapan/kohort_ringkas.py",
+    "lux_ai/serapan/lubang_tengah.py",
     "lux_ai/serapan/pulihkan.py",
     "lux_ai/serapan/resample.py",
     "lux_ai/serapan/silang_funding.py",
@@ -205,9 +257,11 @@ def jalankan(akar: str = ".") -> dict:
         "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
         "catatan_versi": (
             "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; V3 menambah "
-            "kehidupan_arsip.py dan silang_funding.py. Mekanika, definisi, dan pagar "
-            "tidak berubah sejak V1 (aturan 29). Angka 318 baris pulihkan.py yang "
-            "tercatat di STATE adalah angka V1 dan digantikan oleh laporan ini"
+            "kehidupan_arsip.py dan silang_funding.py; V4 menambah lubang_tengah.py. "
+            "Mekanika, definisi, dan pagar tidak berubah sejak V1 (aturan 29). Angka "
+            "318 baris pulihkan.py yang tercatat di STATE adalah angka V1 dan "
+            "digantikan oleh laporan ini; angka 396 baris silang_funding.py adalah "
+            "angka V1 dan digantikan oleh laporan V4 ini"
         ),
     }
 

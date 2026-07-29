@@ -1,111 +1,137 @@
-# PROMPT KELANJUTAN — v28
+# PROMPT KELANJUTAN v29 — LUX-AI
 
-Disusun 2026-07-29 dari STATE v26 (blob `c07d5e58`) yang dibaca langsung dari
-`main`. Berkas di repo adalah kebenaran; prompt ini hanya PETA. Bila peta dan
-berkas berselisih, berkas yang menang.
+Disusun 2026-07-29 08:15 WIB, sesudah jurnal 75 (`3ef5bfa6`).
+Berkas di repo adalah kebenaran. Prompt ini hanya peta.
 
-Operator: Diva Juan Nur Taqarrub · GitHub `EnVyxS` · Asia/Jakarta · bahasa kerja
-Indonesia. Tenggat: riset dipercepat sebelum **3 Agustus 2026**.
-
-## LANGKAH 0 — wajib, berurutan, sebelum pekerjaan teknis apa pun
+## LANGKAH 0 — wajib, berurutan
 
 1. Baca dokumentasi modul sandbox sebelum memanggil fungsi apa pun. Dilarang
    menebak bentuk masukan alat.
 2. Semua operasi GitHub lewat
-   `connections.mcpServer_github.runTool({toolName, toolArguments})`. `owner` dan
-   `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
+   `connections.mcpServer_github.runTool({toolName, toolArguments})`.
+   `owner` dan `repo` HANYA di dalam `toolArguments`, tidak di tingkat atas.
+   (Kesalahan ini terjadi lagi pada 2026-07-29; jangan ulangi.)
 3. Baca dari `main` repo `EnVyxS/lux-ai-research`, berurutan:
-   - `PROMPT_KELANJUTAN.md` (v28, berkas ini)
-   - **`STATE.md` (v26) — aturan 1–46, kelas cacat KC-1..KC-17, papan skor,
-     daftar utang. INI YANG PALING PENTING.**
-   - `journal/2026-07-29-62.md`, `-63.md`, `-64.md`
-   - `decisions/ADR-A006.md` dan `ADR-A007.md`
+   - `PROMPT_KELANJUTAN.md` (v29, berkas ini)
+   - `STATE.md` (v26 — aturan, kelas cacat, papan skor, daftar utang; PALING PENTING;
+     PERINGATAN: STATE masih v26 dan tertinggal, aturan 51 dan 52 serta KC-18 baru
+     ada di jurnal, belum di STATE)
+   - `journal/2026-07-29-73.md`, `-74.md`, `-75.md`
+   - `decisions/ADR-A006.md`, `ADR-A007.md` (DIUSULKAN, belum diterima)
    - `ADR-A004.md` dan `ADR-A002.md` bila menyentuh serapan
    - `PETA_MODUL.md` bila menyentuh modul warisan
 4. Baru setelah itu jalankan pekerjaan teknis.
 
-## Batasan yang mahal dipelajari ulang
+## BATASAN YANG MAHAL DIPELAJARI ULANG
 
-- Sandbox agen **tidak punya jaringan**. Semua unduhan dan pengukuran arsip
-  dijalankan GitHub Actions; agen hanya boleh percaya artefak yang di-commit.
-- **Tidak ada alat membaca status Actions** dan **tidak ada alat memicu
-  `workflow_dispatch`**. Status hanya diketahui dari berkas laporan yang
-  di-commit workflow itu sendiri. Satu-satunya cara menyalakan run adalah push
-  ke berkas yang tersebut di `paths` workflow.
-- **Aturan 45:** push pemicu wajib ATOMIK — modul, workflow, dan uji dalam satu
-  commit. Actions memakai workflow pada commit pemicu.
-- **Tidak ada API patch.** `push_files` menulis ulang seluruh isi berkas.
-  Rancang berkas kecil; setelah mendorong berkas panjang, BACA ULANG dari `main`
-  dan pastikan ekornya hadir.
-- Saat memeriksa hasil run, cocokkan `run_id` / `sidik_kode` / blob sha. Jangan
-  percaya keberadaan berkas — laporan run lama sering masih terbaca.
-- Manifes pecahan sangat besar: baca `reports/pecahan_<i>.log`, bukan
-  `reports/manifes_pecahan_<i>.json`. Laporan pemulihan
-  (`reports/pulihkan_pecahan_<i>.json`) kecil dan aman dibaca utuh.
-- `search_code` mengembalikan 0 hasil (tidak berindeks) — pakai
-  `get_file_contents`.
-- Runner: numpy, pandas, pyarrow, pyyaml, pytest tersedia; TIDAK ada scipy dan
+- Sandbox agen TIDAK punya jaringan. Semua unduhan dan pengukuran arsip dijalankan
+  GitHub Actions; agen hanya boleh percaya artefak yang di-commit.
+- Tidak ada alat membaca status GitHub Actions dan tidak ada alat memicu
+  `workflow_dispatch`. Status hanya diketahui dari berkas laporan yang di-commit
+  workflow itu sendiri. Satu-satunya cara menyalakan run adalah push ke berkas yang
+  tersebut di `paths` workflow.
+- Tidak ada API patch. `push_files` menulis ulang seluruh isi berkas. Rancang berkas
+  kecil. Sesudah mendorong berkas panjang, BACA ULANG dari `main` dan pastikan
+  ekornya hadir.
+- Saat memeriksa hasil run, cocokkan `commit` / `run_id` / `sidik_kode`. JANGAN
+  percaya keberadaan berkas: laporan run lama sering masih terbaca. Pola ini muncul
+  berkali-kali, termasuk hari ini.
+- `search_code` mengembalikan 0 hasil (tidak berindeks). Pakai `get_file_contents`.
+  Path berakhiran garis miring akan melisting direktori.
+- Runner: numpy, pandas, pyarrow, pyyaml, pytest tersedia. TIDAK ada scipy dan
   requests. `data.binance.vision` bisa diakses; `fapi.binance.com` memberi 451.
-- Dilarang menulis apa pun di luar repo `lux-ai-research`. `lux-research` boleh
+- Dilarang menulis apa pun di luar repo `lux-ai-research`. Repo `lux-research` boleh
   DIBACA saja; hasil dan angkanya tidak pernah boleh masuk.
 
-## Posisi (2026-07-29)
+## POSISI (2026-07-29 08:15 WIB)
 
-HEAD `fb56f7d8` (STATE v26). **TIDAK ADA RUN YANG SEDANG BERJALAN.**
+HEAD `3ef5bfa677fe99b86d60c8b00c334c5fa563acff` (jurnal 75).
+Rantai commit terakhir: `099bcece` (kohort V2) → `1d1cc2c6` (jurnal 73) →
+`805a0fdb` (jurnal 74) → `04d37031` (kohort V3) → `11383298` (kohort_ringkas V1) →
+`3ef5bfa6` (jurnal 75).
 
-- Uji **201 TERVERIFIKASI** — run `30404071399`, commit `ab4e0774`, kode 0.
-- Serapan semesta: run **`30396803601`**, `versi_pecahan` 6. 787 simbol,
-  19.598 simbol-bulan, **839.842.134 baris**, 13.575 menit hilang, 12 karantina,
-  parquet 32.706.262.375 B, nisbah 1,2327.
-- **Pemulihan di luar runner: LUNAS** — run **`30404071324`**, commit
-  `ab4e0774`, `versi_pulihkan` 1. 29/29 aset, 29/29 sha cocok, 0 anggota tak
-  aman, 19.598 anggota, 839.842.134 baris terbaca ulang oleh pyarrow.
-- **Temuan definisi:** `jumlah_baris` = baris lolos (839.325.999) + baris
-  karantina (516.135). ADR-A007 wajib memperhitungkan ini atau semesta
-  tercacah ganda.
-- Papan skor: TEPAT 100 / MELESET 34 / SEPARUH 5 / TIDAK TERADJUDIKASI 4 /
-  MENUNGGU 6 = **149**. Berikutnya **R-150**.
+CI terakhir terverifikasi: **239 butir, kode 0, run `30415870832`**, commit
+`11383298`. Jurnal 75 belum dikonfirmasi CI — hanya berkas markdown, tetapi tetap
+cocokkan commit sebelum percaya.
 
-## Pekerjaan berikutnya, menurut urutan utang
+Papan skor sampai R-193: **TEPAT 134 / MELESET 37 / SEPARUH 9 /
+TIDAK TERADJUDIKASI 5 / MENUNGGU 8 = 193**. MENUNGGU = R-7, R-19, R-20, R-28,
+R-36, R-37, R-175, R-179. Ramalan berikutnya yang belum terpakai: **R-197**.
+Aturan terakhir: **52**. Kelas cacat terakhir: **KC-18**. Jurnal berikutnya: **76**.
+STATE berikutnya: **v27**. PROMPT berikutnya: **v30**. ADR berikutnya: **A008**.
 
-1. **Jalur funding** — kini utang tunggal terbesar. `funding_ada` null di
-   seluruh manifes; nol kali diuji (ADR-A002 §9).
-2. **ADR-A007**: terima atau tolak, lalu implementasikan `sumber_baris`,
-   `cacah_baris_dipulihkan`, `cacah_hari_dipulihkan`,
-   `cacah_simbol_bulan_dipulihkan`, tripwire `cacah_pemulihan_gagal_checksum`
-   = 0. Memulihkan 7.200 menit BNXUSDT. Bahan bakunya sudah tersedia dan
-   terbukti dapat diunduh.
-3. **Aturan 46 di `pulihkan.py`**: `definisi_jumlah_baris` wajib berbunyi "tidak
-   dapat dibedakan" saat tak ada karantina. Gabungkan dengan perubahan lain yang
-   memang perlu dijalankan — menaikkan `VERSI` menyalakan delapan runner.
-4. `dugaan_pengganti` (ADR-A005); karantina artefak 7 hari.
-5. Adjudikasi R-7, R-19, R-20, R-28, R-36, R-37.
-6. Belum diukur: sebab KC-15; 15 SETTLED lain; INDEKS 3 nama manual; saham dan
-   komoditas token; 16 simbol non-ASCII sisa; `.decode("utf-8","replace")`;
-   BUSD/USDC; selisih 38 lawan 41 di diagnosa KC-15; skew `waktu_utc`.
-7. Paralel (aturan 3): ADR-A003; juri T4 dengan biaya; lapisan validasi (Šidák,
-   ≥300 permutasi per TANGGAL UTC, PBO dan DSR numpy murni). **Adjudikasi riset
-   TETAP TERKUNCI** sampai lapisan validasi berdiri.
+## TEMUAN MUTAKHIR YANG MENENTUKAN ARAH
 
-## Kebiasaan yang tidak boleh luntur
+- **KC-18**: arsip menerbitkan klines 1m yang sempurna secara bentuk — 43.200 lilin,
+  cap waktu rapat, checksum cocok — untuk pasar yang tidak diperdagangkan, dengan
+  `volume` dan `count` nol pada setiap lilin. Gerbang 1m meloloskannya karena menilai
+  BENTUK, bukan KEHIDUPAN. Bentangan terukur: 864.000 lilin pada 20 simbol-bulan.
+  JANGAN diekstrapolasi ke 456 simbol-bulan kohort.
+- **Jendela buta (jurnal 75)**: pemindaian mundur 15 bulan gagal mengukur
+  `bulan_hidup_terakhir` pada 9 dari 10 simbol karena mereka sudah sepi sejak bulan
+  paling awal jendela. Hanya **ALPACAUSDT** terukur: **2025-04**.
+- **Tafsir tebing funding terbalik**: AGIXUSDT 2025-06 nol transaksi sebulan penuh
+  padahal berkas funding-nya ada dan berisi 531 byte baris sungguhan. Funding terus
+  terbit untuk pasar mati. Ini TIDAK membuktikan arsip funding cacat; penghentian
+  penerbitan yang tertunda sama-sama muat. ADR-A002 §10 TIDAK boleh diubah atas
+  bukti kohort semata.
 
-- Tulis ramalan SEBELUM run, lalu adjudikasi jujur. Sebut sendiri mana yang
-  berisiko rendah.
+## PEKERJAAN BERIKUTNYA (urutan disarankan)
+
+1. **kohort_ekor VERSI 4 — pindaian adaptif.** Baca dulu
+   `lux_ai/serapan/kohort_ekor.py` V3 utuh; jangan tulis ulang dari ingatan.
+   Ubah pemindaian agar mundur simbol demi simbol sampai bulan ramai pertama
+   ditemukan, pagu keras 60 bulan, `batas_tercapai` tetap ada sebagai penggugur.
+   Push atomik bersama `tests/test_kohort_ekor.py` (aturan 45), cacah fungsi uji
+   dengan MENGHITUNG, bukan menaksir (kegagalan "Tujuh vs Delapan").
+   Ramalan sudah terdaftar: **R-194** (`cacah_simbol_batas_tercapai` jadi 0),
+   **R-195** (kesepuluh bulan hidup terakhir sebelum 2025-07), **R-196** (CI 241, kode 0).
+2. **Jurnal 76** dengan adjudikasi R-194..R-196.
+3. **STATE v27 + PROMPT v30**: harus memuat aturan sampai 52, KC-18, papan skor 193+,
+   modul `kohort_ekor` (V1→V4) dan `kohort_ringkas`, temuan CDN dan funding V6.
+4. **Ukur cacah baris nyata** `funding.py` dan `funding_cdn.py` untuk menutup **R-175**
+   dan **R-179**. Jangan menebak, jangan menyetel ulang pita.
+5. **Perbaiki aturan 46 di `pulihkan.py`**: label harus "tidak dapat dibedakan" saat
+   kedua `selisih` bernilai 0.
+6. **Terima atau tolak ADR-A007**; bila diterima, terapkan `sumber_baris`,
+   `cacah_baris_dipulihkan`, `cacah_hari_dipulihkan`, `cacah_simbol_bulan_dipulihkan`,
+   dan tripwire `cacah_pemulihan_gagal_checksum` = 0. Kendala **R-146**: kurangi baris
+   karantina yang digantikan sebelum menambah baris pulihan ke 839.842.134.
+7. **Putuskan akibat KC-18 pada riset**: bolehkah lilin nol-volume masuk penyebut.
+   Tulis ADR-A008. Jangan diputuskan dari bukti kohort saja.
+8. **Terapkan ADR-A006**: medan karantina, persistensi parquet sebagai rilis tar
+   terbelah ≤1,8 GB dengan SHA256SUMS. Sampai selesai, TIDAK ADA data serapan yang
+   bertahan.
+9. `dugaan_pengganti` (ADR-A005); karantina artefak 7 hari; adjudikasi R-7, R-19,
+   R-20, R-28, R-36, R-37.
+10. Belum diukur: sebab KC-15; apakah lubang funding BNXUSDT (2022-04…2023-01)
+    berimpit dengan lubang klines-nya; 15 SETTLED lain; INDEKS 3 nama manual;
+    token saham/komoditas; simbol non-ASCII tersisa; `.decode("utf-8","replace")`;
+    BUSD/USDC; jurang 38 lawan 41; skew `waktu_utc`; baca
+    `reports/funding_selisih_penuh.json` (daftar sebelumnya terpotong, 500 dari 880);
+    selisih byte AGIX 531 lawan 529; bentangan penuh KC-18 pada 456 simbol-bulan.
+11. Paralel diizinkan (aturan 3): ADR-A003; juri T4 dengan biaya; lapisan validasi
+    (Šidák, ≥300 permutasi per TANGGAL UTC, PBO dan DSR numpy murni).
+    **Adjudikasi riset TETAP TERKUNCI** sampai manifes semesta penuh terverifikasi.
+
+## KEBIASAAN YANG WAJIB DIPERTAHANKAN
+
+- Tulis ramalan SEBELUM run, lalu adjudikasi jujur. Ramalan yang hanya dapat diuji
+  pada sebagian kecil unitnya dicatat TIDAK TERADJUDIKASI, bukan TEPAT.
 - Hitung ulang setiap angka ringkasan baris demi baris (aturan 21).
-- Tiap pengukuran sebab wajib memuat medan penggugur (aturan 24); aturan 37
-  sampel wajib memuat ≥1 kasus tiap kelas cacat relevan.
-- Aturan 20: dilarang menyimpulkan di luar rentang yang disampel. Aturan 30, 41,
-  dan **46**: dilarang menyimpulkan dari penyebut nol — termasuk oleh KODE.
-- **BACA berkas sebelum menuduhnya salah.** Pola salah-tuduh sudah ENAM kali;
-  yang ketujuh nyaris terjadi pada run `30404071324` dan dibatalkan oleh angka.
-- Pisahkan fakta dari asumsi; tanpa bukti tulis "Ini memerlukan verifikasi."
+- Setiap pengukuran sebab wajib memuat medan penggugur (aturan 24).
+- Aturan 37: sampel wajib memuat ≥1 kasus tiap kelas cacat relevan.
+- Aturan 20: dilarang menyimpulkan di luar rentang yang disampel.
+- Aturan 50: setiap kesimpulan dari KETIADAAN wajib punya kendali positif yang
+  membuktikan alatnya mampu melihat KEHADIRAN.
+- Aturan 51: jendela mundur wajib adaptif atau terbukti mencakup peristiwanya.
+- Aturan 52: laporan yang tak terbaca utuh setara dengan tak ada; sediakan keluaran
+  ringkas bersidik sumber.
+- BACA berkas sebelum menuduhnya salah. Pola salah-tuduh sudah tercegah TUJUH kali,
+  yang terakhir terhadap berkas milik sendiri (`timeout-minutes: 300` adalah menit,
+  bukan detik).
+- Pisahkan fakta dari asumsi. Tanpa bukti, tulis "Ini memerlukan verifikasi."
 - "lanjut" berarti teruskan tanpa konfirmasi.
-- Perbarui `STATE.md`, jurnal, dan berkas ini secara berkala. Jangan berhenti
-  dengan alasan konteks Notion; patokannya konteks model.
-
-## Penomoran
-
-Jurnal berikutnya **65**. STATE **v26** kini; berikutnya v27. PROMPT **v28**
-kini; berikutnya v29. ADR berikutnya **A008** (A003 dicadangkan, A007
-DIUSULKAN). Aturan terakhir **46**. Kelas cacat terakhir **KC-17 (DITUTUP)**;
-KC-16 kosong selamanya. Ramalan berikutnya **R-150**. Uji **201**.
+- Perbarui STATE.md, jurnal, dan PROMPT_KELANJUTAN.md secara berkala.
+- Jangan berhenti dengan alasan konteks Notion; patokannya konteks model.
+- Tenggat: riset dipercepat sebelum **3 Agustus 2026**.

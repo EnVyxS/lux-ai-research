@@ -1,16 +1,16 @@
-# STATE — versi 29
+# STATE — versi 30
 
 Diperbarui: 2026-07-29 (sesi 54, lanjutan). Aturan hanya BERTAMBAH; jangan
-menulis ulang dari ingatan. v29 disusun di atas teks v28 yang dibaca langsung
-dari `main` (blob `543f9062`), ditambah jurnal 79 (`f954c0e4`), 80 (`5f291268`),
-81 (`d13b7bfe`), serta tiga laporan run yang dicocokkan commit-nya: `kehidupan`
-**30418471430** (`d4a2f60a`), `ukur_baris` V2 **30418761259** (`12dde093`), dan
-CI **30418761270** (`12dde093`, 269 butir).
+menulis ulang dari ingatan. v30 disusun di atas teks v29 yang dibaca langsung
+dari `main` (blob `f066b6ea`), ditambah jurnal 82 (`e94ed337`), delapan laporan
+ringkas `kehidupan_arsip` (run pecahan 0 = **30419770259**, commit `0929643c`),
+serta dua run CI yang dicocokkan commit-nya: **30419770312** (`0929643c`, 291
+butir, kode **1**) dan **30420236800** (`dceb1009`, 291 butir, kode **0**).
 
-Peristiwa terbesar sejak v28: **bentangan KC-18 tidak lagi ditaksir.** Seluruh
-456 simbol-bulan kohort puncak 2025-07 terukur MATI — 19.972.800 lilin tanpa
-satu transaksi pun, dan 456 dari 456 lolos gerbang 1m. Kendali positif hidup
-4 dari 4, jadi ini bukan alat yang buta.
+Peristiwa terbesar sejak v29: **kehidupan SELURUH semesta terserap kini
+terukur.** 19.586 simbol-bulan lolos gerbang diurai kolom demi kolom: **1.401
+MATI, 98 SEPI, 18.087 HIDUP, 0 tak terukur.** Kematian ternyata jauh melampaui
+kohort puncak, tetapi semesta tetap 92,35% hidup.
 
 ## Aturan bernomor
 
@@ -36,18 +36,20 @@ definisi berdampingan.
     uji. Lahir dari selisih 135 lawan **141**; dilanggar lagi pada R-148
     (198 lawan **201**) karena saya mencacah FUNGSI uji, bukan butir yang
     dikumpulkan pytest — satu fungsi berparameter empat kasus bernilai 4 butir.
-    **Ditaati pada R-198, R-200, dan R-204.**
+    **Ditaati pada R-198, R-200, R-204, R-205, dan R-208.**
 39. **[v22]** Keseragaman yang terukur pada sampel DILARANG dipakai sebagai
     angka ramalan untuk anggota di luar sampel; wajib pita atau kemungkinan
-    campuran. Lahir dari R-114.
+    campuran. Lahir dari R-114. **Dibenarkan keras [v30]:** kohort puncak 100%
+    mati, semesta 7,15% mati.
 40. **[v22]** Tiap laporan yang mencacah baris sebuah simbol-bulan wajib memuat
     uji silang `baris + hilang_di_tengah + tepi = menit_kalender` dan melaporkan
     selisihnya walau nol. Lahir dari 210 menit BNXUSDT 2022-04.
 41. **[v23]** Ramalan bersyarat yang penyebutnya nol dicatat TIDAK
     TERADJUDIKASI, bukan TEPAT, dan status itu wajib dipra-registrasikan bersama
-    ramalannya. Lahir dari R-120. **Aktif lagi [v29]:** `penyebut_tanpa_mati` = 0
-    pada laporan kehidupan, sehingga setiap rasio yang bersandar padanya tidak
-    dapat diadjudikasi.
+    ramalannya. Lahir dari R-120. Aktif pada laporan kehidupan kohort
+    (`penyebut_tanpa_mati` = 0). **TIDAK aktif lagi untuk semesta [v30]:**
+    `penyebut_tanpa_mati` semesta = **18.185**, jadi rasio di atasnya kini dapat
+    diadjudikasi.
 42. **[v23]** Kelas cacat baru DILARANG dinamai atas dasar satu angka yang
     belum diukur langsung. Tuduhan ditulis sebagai hipotesis + run, bukan
     sebagai kelas. Lahir dari KC-16 yang ditarik. **Ditaati pada KC-18**, yang
@@ -67,8 +69,8 @@ definisi berdampingan.
     wajib dihitung ulang tepat sebelum dikirim. GitHub Actions memakai berkas
     workflow pada commit PEMICU, sehingga perbaikan workflow yang menyusul di
     commit berikutnya TIDAK berlaku untuk run yang sedang berjalan. Lahir dari
-    `57a04f1e`. Ditaati pada `ab4e0774`, `387037a9`, `796c2fc4`, `5c65adf9`, dan
-    **`d4a2f60a`** (kehidupan: modul + uji + workflow dalam satu push).
+    `57a04f1e`. Ditaati pada `ab4e0774`, `387037a9`, `796c2fc4`, `5c65adf9`,
+    `d4a2f60a`, dan **`0929643c`** (kehidupan_arsip: modul + uji + workflow).
 46. **[v26, LUNAS DI KODE v28] Kode dilarang menyimpulkan dari penyebut nol.**
     Medan yang MENYIMPULKAN sebuah definisi atau sebab wajib memeriksa lebih
     dulu apakah kasusnya mampu membedakan. Bila penyebutnya nol, atau bila kedua
@@ -80,8 +82,8 @@ definisi berdampingan.
     kedua definisi menghasilkan angka identik di sana. **Diperbaiki di
     `pulihkan.py` VERSI 2** (commit `5c65adf9`) lewat fungsi murni
     `putuskan_definisi` dan medan penggugur `definisi_dapat_dibedakan`. Sudah
-    lebih dulu DITAATI oleh `kohort_ekor` V4 (`bangkit_dapat_diuji`), dan kini
-    juga oleh `kehidupan` V1 (`penyebut_tanpa_mati_kosong`).
+    lebih dulu DITAATI oleh `kohort_ekor` V4 (`bangkit_dapat_diuji`), lalu oleh
+    `kehidupan` V1 dan `kehidupan_arsip` V1 (`penyebut_tanpa_mati_kosong`).
 47. **[v27, lahir di jurnal 69]** Sebelum menulis ramalan berupa cacah,
     sebutkan satuannya secara eksplisit — simbol, bulan, simbol-bulan, baris,
     atau butir uji — dan periksa bahwa angka rujukan yang dipakai memang
@@ -96,20 +98,27 @@ definisi berdampingan.
 50. **[v27, lahir di jurnal 73]** Setiap pengukuran yang menyimpulkan dari
     KETIADAAN — volume nol, berkas hilang, baris kosong, jawaban 404 — wajib
     memuat kendali positif yang membuktikan alat ukurnya mampu mendeteksi
-    KEHADIRAN pada kondisi yang sama. **Dipakai sebagai klausa gugur ADR-A008
-    §6; pada run kehidupan klausa itu TIDAK aktif** (`parser_terbukti` true,
-    kendali hidup 4/4).
+    KEHADIRAN pada kondisi yang sama. Dipakai sebagai klausa gugur ADR-A008 §6;
+    pada run kehidupan kohort klausa itu tidak aktif (kendali 4/4), dan pada run
+    semesta juga tidak aktif (**kendali 24/24 hidup**).
 51. **[v27, lahir di jurnal 75]** Jendela pemindaian mundur wajib adaptif, atau
     dibuktikan mencakup peristiwa yang dicari. Jendela tetap yang seluruh isinya
     sepi menghasilkan null, bukan jawaban. **Ditaati pada kohort_ekor V4.**
 52. **[v27, lahir di jurnal 75]** Laporan yang tidak dapat dibaca utuh setara
     dengan laporan yang tidak ada. Setiap pelapor besar wajib berpasangan dengan
     keluaran ringkas yang memuat sidik berkas sumbernya. Ditaati oleh
-    `kohort_ringkas`, `ukur_baris`, dan `kehidupan` (`kehidupan_ringkas.json`,
-    1.406 B, memuat `sidik_sumber` dan `byte_sumber` untuk laporan penuh yang
-    berukuran 280.587 B).
-
-Tidak ada aturan baru pada v29.
+    `kohort_ringkas`, `ukur_baris`, `kehidupan`, dan **`kehidupan_arsip`**
+    (delapan laporan penuh 991.422–1.261.637 B, masing-masing berpasangan
+    dengan `_ringkas.json` yang terbaca utuh).
+53. **[v30, lahir dari R-205] Ramalan kode keluar sebuah run yang gerbangnya
+    adalah berkas uji wajib didahului pembacaan PERILAKU setiap fungsi yang
+    diuji, bukan hanya namanya.** Membaca modul tidak sama dengan mengetahui
+    pembulatan, pemotongan, atau normalisasi yang dilakukannya. Lahir dari
+    R-205: uji menuntut `bagian_volume_nol` sama dengan 2/3 penuh, sedangkan
+    `kohort_ekor.bagian` MEMBULATKAN ke empat desimal dan mengembalikan 0,6667 —
+    CI keluar dengan kode 1 karena harapan uji, bukan karena modulnya. Ramalan
+    berkepala dua (cacah butir DAN kode keluar) yang separuhnya salah
+    diadjudikasi SEPARUH, bukan MELESET.
 
 ## Kelas cacat
 
@@ -123,7 +132,9 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
   datanya utuh di berkas HARIAN.** **3** simbol-bulan, semuanya BNXUSDT 2022,
   **7.200 menit = 5×1440**. Kebijakan: ADR-A007. Sebab masih tidak diketahui.
 - 9 + 3 = **12** karantina; 6.375 + 7.200 = **13.575** menit ✅ Keduabelasnya
-  memuat **516.135 baris**, terbaca ulang dari luar runner.
+  memuat **516.135 baris**, terbaca ulang dari luar runner. **Kehidupan
+  keduabelasnya BELUM diukur** — tar karantina terpisah dan tidak disentuh run
+  `kehidupan_arsip`.
 - **KC-16 DITARIK [v23] — nomornya TETAP kosong selamanya.**
 - **KC-17 [v24] — parquet karantina tidak dipersistenkan. DITUTUP [v25],
   diperkuat [v26].**
@@ -134,47 +145,93 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
   meloloskannya karena menilai BENTUK deret, bukan KEHIDUPAN pasar.
   - Bentangan jurnal 74: 864.000 lilin pada 20 simbol-bulan.
   - Bentangan jurnal 77: 169 dari 179 simbol-bulan sepi pada 10 simbol.
-  - **BENTANGAN PENUH KOHORT TERUKUR [v29]** — run `30418471430`: **456 dari
-    456** simbol-bulan kohort puncak 2025-07 berstatus MATI, **19.972.800**
-    lilin, dan **456 dari 456 lolos gerbang 1m**. Tidak ada satu pun berstatus
-    SEPI atau HIDUP. Ini pengukuran langsung, bukan ekstrapolasi.
-  - Aturan 20 tetap berlaku ke ATAS: 456 adalah 2,33% dari 19.598. Dilarang
-    menyimpulkan bahwa semesta juga mati.
+  - Bentangan kohort [v29] — run `30418471430`: **456 dari 456** simbol-bulan
+    kohort puncak 2025-07 MATI, 19.972.800 lilin, 456/456 lolos gerbang.
+  - **BENTANGAN SEMESTA TERUKUR [v30]** — delapan run pecahan pada commit
+    `0929643c`: dari **19.586** simbol-bulan lolos gerbang, **1.401 MATI**
+    (7,153%), **98 SEPI** (0,500%), **18.087 HIDUP** (92,35%).
+  - **Kematian TIDAK terkurung di kohort puncak.** 456 MATI kohort termuat di
+    dalam 1.401, sehingga **945 simbol-bulan MATI berada di luar kohort puncak**
+    (angka turunan, bukan medan run). Dua pertiga kematian tak terlihat dari
+    kohort funding.
+  - Ekstrapolasi dari kohort ke semesta TERBUKTI keliru arah: kohort 100% mati,
+    semesta 7,15% mati. Aturan 39 dibenarkan.
   - **Kebijakan DIPUTUSKAN [v28] oleh ADR-A008** (Keputusan 1–6 DITERIMA):
     KC-18 bukan gerbang serapan; kehidupan diukur per simbol-bulan; **SEPI**
     bila `bagian_volume_nol` ≥ 0,5 dan **MATI** bila `transaksi_total` = 0;
     setiap penyebut diterbitkan berpasangan; backtest hanya pada simbol-bulan
     HIDUP; angka 839.842.134 tidak ditulis ulang (aturan 29). Keputusan 7
-    DITANGGUHKAN. **Klausa gugur §6 tidak aktif** — `parser_terbukti` true.
+    DITANGGUHKAN. **Klausa gugur §6 tidak aktif** pada kedua run.
+
+## Kehidupan semesta terserap — TERUKUR [v30]
+
+Modul `lux_ai/serapan/kehidupan_arsip.py` V1 (blob `318a5cb1…`, `sidik_kode`
+**`24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595`**), didorong
+atomik bersama uji dan workflow pada commit `0929643c` (aturan 45). Delapan
+runner mengunduh tar rilis `serapan-pecahan-<i>-30396803601`, membongkarnya, dan
+mengukur kolom `volume` serta `trades` tiap parquet lolos gerbang. Run pecahan
+0 = **30419770259**. Sidik kode SAMA di kedelapan laporan, sehingga penjumlahan
+lintas pecahan sah (aturan 20, 22).
+
+| pecahan | penyebut penuh | MATI | SEPI | HIDUP | tanpa MATI | bagian_mati | lilin penuh | lilin mati |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0 | 2.408 | 122 | 13 | 2.273 | 2.286 | 0,0507 | 103.134.312 | 5.339.520 |
+| 1 | 2.465 | 103 | 11 | 2.351 | 2.362 | 0,0418 | 105.634.220 | 4.468.906 |
+| 2 | 2.337 | 204 | 7 | 2.126 | 2.133 | 0,0873 | 100.058.416 | 8.922.240 |
+| 3 | 2.153 | 283 | 17 | 1.853 | 1.870 | 0,1314 | 91.841.734 | 12.379.101 |
+| 4 | 2.496 | 182 | 15 | 2.299 | 2.314 | 0,0729 | 106.821.807 | 7.924.835 |
+| 5 | 2.741 | 165 | 12 | 2.564 | 2.576 | 0,0602 | 117.671.896 | 7.204.748 |
+| 6 | 2.649 | 182 | 8 | 2.459 | 2.467 | 0,0687 | 113.890.221 | 7.941.027 |
+| 7 | 2.337 | 160 | 15 | 2.162 | 2.177 | 0,0685 | 100.273.393 | 6.987.746 |
+| **jumlah** | **19.586** | **1.401** | **98** | **18.087** | **18.185** | — | **839.325.999** | **61.168.123** |
+
+Uji silang (aturan 21):
+
+- 1.401 + 98 + 18.087 = **19.586** ✅ dan jumlah penyebut = 19.586, penyebut yang
+  dipraregistrasi — BUKAN 19.598 (dua belas karantina tak ada di tar ini).
+- 19.586 − 1.401 = **18.185** = jumlah `penyebut_tanpa_mati` ✅
+- Jumlah `lilin_penuh` **839.325.999** cocok PERSIS dengan baris lolos gerbang
+  yang diukur serapan (run `30396803601`) lewat jalur kode yang sepenuhnya
+  berbeda — dari zip, bukan dari parquet. Dua pengukuran independen bertemu di
+  satu angka; bukti kuat bahwa seluruh isi arsip terbaca.
+- Lilin mati 61.168.123 = **7,29%** dari seluruh baris; MATI + SEPI = 1.499 =
+  **7,654%** dari 19.586.
+
+Medan penggugur (aturan 24) bersih di kedelapan pecahan: `cacah_tak_terukur` 0,
+`cacah_baris_cacat` **0** dari 839 juta baris teks yang diurai,
+`cacah_parquet_hilang` 0, `cacah_parquet_tak_dikenal` 0, `cacah_bagian_hilang`
+0, `cacah_sha_tak_cocok` 0, `cacah_anggota_tak_aman` 0, `kode_keluar` 0.
+Kendali positif (aturan 50): **24 dari 24 HIDUP**, `parser_terbukti` **true**
+pada kedelapan pecahan.
+
+Yang BOLEH disimpulkan: 7,654% simbol-bulan lolos gerbang tidak layak
+di-backtest tanpa penyaringan tambahan; semesta yang layak = **18.087**
+simbol-bulan.
+Yang TIDAK BOLEH: memakai 7,153% sebagai laju kematian simbol mana pun —
+sebarannya 4,18% (pecahan 1) sampai 13,14% (pecahan 3), jarak lebih dari tiga
+kali, dan pecahan dibagi menurut simbol sehingga ketidakseragaman ini sifat
+pasar, bukan derau.
 
 ## Kehidupan kohort puncak 2025-07 — TERUKUR [v29]
 
 Modul `lux_ai/serapan/kehidupan.py` V1 (blob `f49abb2b…`, 417 baris,
-`sidik_kode` `c1aaf852d605bc7c5ea57e341aa6295c2009b2bd5c2e380a20300f9c4b65b4cc`).
-Run **30418471430**, commit `d4a2f60a`, kode 0.
-Ringkasan `reports/kehidupan_ringkas.json` (1.406 B, `sidik_sumber`
-`fa85812b…c55b`, `byte_sumber` 280.587) terbaca UTUH.
+`sidik_kode` `c1aaf852…b4cc`). Run **30418471430**, commit `d4a2f60a`, kode 0.
+Ringkasan `reports/kehidupan_ringkas.json` (1.406 B) terbaca UTUH.
 
 | medan | nilai |
 | --- | ---: |
 | simbol diukur | 38 |
 | simbol-bulan diminta / terukur / tak terukur | 456 / 456 / 0 |
 | MATI / SEPI / HIDUP | **456** / 0 / **0** |
-| lolos gerbang | 456 |
-| **MATI yang lolos gerbang** | **456** |
+| MATI yang lolos gerbang | **456** |
 | lilin penuh = lilin mati | **19.972.800** |
 | penyebut penuh / tanpa MATI | 456 / **0** (kosong) |
-| gagal unduh / checksum / bulan tak ada / baris cacat | 0 / 0 / 0 / 0 |
 | kendali diminta / terambil / hidup | 4 / 4 / **4** |
-| `parser_terbukti` | **true** |
 
-Uji silang (aturan 21): jendela 2025-07..2026-06 = 365 hari = 525.600 menit;
-38 × 525.600 = 19.972.800 ✅ dan 38 × 12 = 456 ✅ Cakupannya menit-penuh.
-
-Konsekuensi: kohort puncak menyumbang **nol** simbol-bulan yang layak
-di-backtest (ADR-A008 Keputusan 5). Semesta yang dapat dipakai harus dicari di
-luar kohort ini. Yang TIDAK terbukti: bahwa 38 simbol ini tak pernah
-diperdagangkan — kohort V4 menunjukkan sebagian hidup pada 2024–2025.
+Uji silang: 38 × 525.600 = 19.972.800 ✅ dan 38 × 12 = 456 ✅
+Konsekuensi: kohort puncak menyumbang **nol** simbol-bulan layak backtest.
+Yang TIDAK terbukti: bahwa 38 simbol ini tak pernah diperdagangkan — kohort V4
+menunjukkan sebagian hidup pada 2024–2025.
 
 ## Hipotesis
 
@@ -185,13 +242,17 @@ diperdagangkan — kohort V4 menunjukkan sebagian hidup pada 2024–2025.
 - **H-A005: GUGUR pada rentang yang disampel [v23]** (37 bulan tengah).
 - **H-A006 — serapan bersifat deterministik. MENANG pada ENAM run.**
 - **H-A008 [v26] — aset rilis GitHub mengembalikan byte yang sama persis.
-  MENANG pada satu kali pengambilan**, 29 aset, 32.754.749.440 byte tar.
+  MENANG pada DUA kali pengambilan penuh** — 29 aset / 32.754.749.440 byte pada
+  run pemulihan, lalu kedelapan tar diunduh ulang oleh `kehidupan_arsip` dengan
+  `cacah_sha_tak_cocok` 0 dan cacah baris yang kembali persis 839.325.999.
 
 ## Papan skor prediksi
 
 R-1..R-120 dirinci v23. R-121..R-149 di v26 dan jurnal 56–63. R-150..R-193 di
 jurnal 64–75. R-194..R-197 di jurnal 76 dan 77. R-198..R-199 di jurnal 78.
 R-200 di jurnal 79. R-201 di jurnal 81. R-202..R-204 di jurnal 80.
+R-205..R-207 dipraregistrasi di docstring commit `0929643c`; R-208 di docstring
+commit `dceb1009`; R-209 di jurnal 82.
 
 | # | Prediksi | Status |
 |---|---|---|
@@ -204,17 +265,23 @@ R-200 di jurnal 79. R-201 di jurnal 81. R-202..R-204 di jurnal 80.
 | R-202 | `pulihkan.py` V2 pita 340..420 BARIS | **TEPAT** (383) |
 | R-203 | `kehidupan.py` pita 300..400 BARIS DAN 0 berkas lewat pagar | **MELESET** (417) |
 | R-204 | CI tetap 269 butir, kode 0, pada `12dde093` | **TEPAT** |
+| R-205 | CI **291 butir** (269+22) DAN kode 0 | **SEPARUH** (291 tepat, kode 1) |
+| R-206 | MATI semesta pita 456..2.000 atas penyebut 19.586 | **TEPAT** (1.401) |
+| R-207 | `parser_terbukti` true pada kedelapan pecahan | **TEPAT** (8/8) |
+| R-208 | CI 291 butir, kode 0, pada commit perbaikan uji | **TEPAT** (`30420236800`) |
+| R-209 | CI 291 butir, kode 0, pada commit jurnal 82 | **MENUNGGU** |
 
-**Total R-1..R-204** (aturan 21): TEPAT **143**; MELESET **38**; SEPARUH **11**;
-TIDAK TERADJUDIKASI **5**; MENUNGGU **7** (R-7, R-19, R-20, R-28, R-36, R-37,
-R-199). 143+38+11+5+7 = **204** ✅ Ramalan berikutnya **R-205**. N_percobaan = 0.
+**Total R-1..R-209** (aturan 21): TEPAT **146**; MELESET **38**; SEPARUH **12**;
+TIDAK TERADJUDIKASI **5**; MENUNGGU **8** (R-7, R-19, R-20, R-28, R-36, R-37,
+R-199, R-209). 146+38+12+5+8 = **209** ✅ Ramalan berikutnya **R-210**.
+N_percobaan = 0.
 
-Catatan kejujuran: R-175, R-179, dan R-203 adalah satu pola yang sama —
-menaksir panjang berkas dari byte ketika ia dapat dihitung. Pada R-203 saya
-bahkan menulis berkasnya sendiri beberapa menit sebelum meramal, dan 16.638 /
-39,9 sudah menunjuk 417 sementara pita saya berhenti di 400. Tidak ada pita yang
-disetel ulang sesudah angkanya terlihat. Bila pola ini terulang sekali lagi, ia
-layak menjadi aturan 53.
+Catatan kejujuran: R-175, R-179, dan R-203 adalah satu pola — menaksir panjang
+berkas ketika ia dapat dihitung; pola itu TIDAK terulang giliran ini sebab saya
+sengaja tidak meramalkan cacah baris `kehidupan_arsip.py`. R-205 adalah pola
+BARU dan lebih dalam: meramalkan kode keluar tanpa membaca perilaku pembulatan
+fungsi yang saya panggil sendiri. Pola itu kini menjadi **aturan 53**. R-206
+TEPAT atas pita 456..2.000 yang lebar; ketepatannya tidak layak dibanggakan.
 
 ## Cacah baris terukur [v29]
 
@@ -238,8 +305,11 @@ definisi pagar 800 di `tests/test_kontinuitas.py`.
 
 Total **2.950** baris; terbesar `funding.py` 705 — 95 baris di bawah pagar 800.
 Aturan 48 berlaku padanya: fungsi baru DILARANG ditambahkan sebelum dipecah.
-**Penanda kedaluwarsa v28 dicabut:** angka 318 adalah `pulihkan.py` V1 dan sudah
-digantikan 383 hasil pengukuran.
+
+**UTANG [v30]:** `kehidupan_arsip.py` BELUM masuk `BERKAS_DIUKUR` di
+`ukur_baris.py`, jadi cacah barisnya belum terukur dan DILARANG ditaksir dari
+byte (aturan 21). Berkas ke-11 ini harus ditambahkan pada push berikutnya yang
+menyentuh `ukur_baris.py`.
 
 ## Definisi `jumlah_baris` — TERSELESAIKAN [v26], DITEGAKKAN DI KODE [v28]
 
@@ -248,7 +318,8 @@ pada keenam pecahan yang punya karantina: `selisih_baris_total` = 0 dan
 `selisih_baris_utama` = −(baris karantina). Pecahan 2 dan 5 tidak dapat
 membedakan (aturan 46).
 
-- Baris lolos gerbang saja: **839.325.999**
+- Baris lolos gerbang saja: **839.325.999** — kini DIKUATKAN oleh pengukuran
+  kedua yang berdiri sendiri (jumlah `lilin_penuh` kedelapan pecahan).
 - Baris karantina: **516.135**
 - Jumlah: **839.842.134** = angka semesta.
 
@@ -291,9 +362,9 @@ Sumber pemulihan: run **`30404071324`**, commit `ab4e0774`, `versi_pulihkan` 1,
 - **Pemulihan (run `30404071324`):** 29/29 aset hadir, 29/29 sha cocok,
   839.842.134 baris terbaca ulang oleh pyarrow.
 - Tag rilis: `serapan-pecahan-<i>-30396803601`.
-- **Berlaku sejak ADR-A008:** 19.598 dan 839.842.134 adalah penyebut PENUH.
-  Penyebut kedua (tanpa simbol-bulan MATI) baru terukur untuk 456 unit kohort,
-  di mana nilainya **nol** — belum terukur untuk semesta.
+- **Penyebut ganda kini LENGKAP [v30]:** penyebut PENUH 19.586 simbol-bulan
+  lolos gerbang (19.598 termasuk karantina); penyebut TANPA MATI **18.185**;
+  penyebut LAYAK BACKTEST (HIDUP saja) **18.087**.
 
 ## Funding semesta — TERUKUR (`funding.py` V6)
 
@@ -305,15 +376,21 @@ Run FUNDING 6 `30412188715`, commit `ba37c5d5`, kode 0.
   ekor (14,74% dari 787).
 - **Kohort puncak 2025-07: 38 simbol, 456 simbol-bulan**, `seri` false; 456 =
   51,8% dari seluruh 880 lubang. Ke-38 anggota punya bulan klines terakhir
-  2026-06 — dan kini terbukti ke-456 simbol-bulan itu MATI.
+  2026-06 — dan terbukti ke-456 simbol-bulan itu MATI.
 - `uji_cdn`: 10 kohort menjawab **404**, 10 kendali menjawab **200** dengan
   checksum cocok, byte kendali 529–1.939.
+- **Pertanyaan yang kini terbuka [v30]:** 945 simbol-bulan MATI di luar kohort
+  puncak — apakah funding-nya juga hilang? Bila mati tanpa lubang funding, maka
+  tebing funding dan kematian pasar adalah dua peristiwa berbeda, dan tafsir
+  ADR-A002 §10 harus disusun ulang atas dasar itu, bukan atas kohort.
 
 ## Kohort ekor — kematian bertahap lawan tebing serempak [v27]
 
 Modul `kohort_ekor.py` V1→4 dan pelapor ringkas `kohort_ringkas.py` V1.
 **V4** (`73ca4eb2…0fcda`, run `30416845475`, commit `387037a9`, kode 0):
 pindaian ADAPTIF, pagu keras 60 bulan, pagu tak pernah tersentuh.
+**Catatan [v30]:** `kohort_ekor.bagian` MEMBULATKAN ke empat desimal — sifat
+yang melahirkan aturan 53. Pembulatan itu TIDAK diubah (aturan 29).
 
 | simbol | bulan hidup terakhir | simbol | bulan hidup terakhir |
 | --- | --- | --- | --- |
@@ -330,12 +407,21 @@ Yang TIDAK dibuktikan: (a) 28 anggota sisanya (aturan 20); (b)
 (c) arsip funding TIDAK terbukti cacat — **ADR-A002 §10 tidak boleh diubah atas
 bukti kohort semata.**
 
+**Jalan pintas yang kini tersedia [v30]:** `reports/kehidupan_arsip_<i>.json`
+memuat status per simbol-bulan bagi SELURUH semesta, sehingga
+`bulan_hidup_terakhir` bagi 28 anggota sisanya mungkin dijawab tanpa unduhan
+baru — dengan syarat definisi "hidup terakhir" dicocokkan lebih dulu dengan
+definisi `kohort_ekor` (aturan 36).
+
 ## Jumlah uji
 
-**269 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30418761270`, commit
-`12dde093`, `kode_keluar` 0, "269 tests collected". Riwayat: 231 → 234 → 236 →
-239 → 241 → 244 → 253 → **269** (`test_kehidupan.py` menambah 13 fungsi / 16
-butir).
+**291 TERVERIFIKASI** — `reports/ci_terakhir.json` run **30420236800**, commit
+`dceb1009`, `kode_keluar` **0**, "291 tests collected in 0.43s";
+`reports/ci_terakhir.txt` terbaca utuh "291 passed in 0.95s" (aturan 52).
+Riwayat: 231 → 234 → 236 → 239 → 241 → 244 → 253 → 269 → **291**
+(`test_kehidupan_arsip.py` menambah 22 butir). Run CI `30419770312` pada
+`0929643c` mengumpulkan 291 butir yang sama tetapi keluar dengan kode 1 — satu
+harapan uji yang salah, bukan modul yang salah.
 
 ## Utang verifikasi
 
@@ -346,19 +432,21 @@ butir).
     - pemulihan aset di luar runner: **LUNAS** (run `30404071324`);
     - perbaikan aturan 46 di `pulihkan.py`: **LUNAS DI KODE** (V2) — laporan
       pecahan di git masih hasil V1;
-    - cacah baris `pulihkan.py` V2: **LUNAS** (383, run `30418761259`);
-    - bentangan penuh KC-18 atas 456 simbol-bulan kohort: **LUNAS** (456/456
-      MATI, run `30418471430`);
-    - pengukur kehidupan atas **SEMESTA 19.598**: BELUM — butuh sumber daftar
-      selain `kohort_puncak` dan pemecahan (sharding);
+    - cacah baris `pulihkan.py` V2: **LUNAS** (383);
+    - bentangan penuh KC-18 atas 456 simbol-bulan kohort: **LUNAS**;
+    - **pengukur kehidupan atas SEMESTA: LUNAS [v30]** — 19.586 simbol-bulan
+      terukur, 0 tak terukur, kendali 24/24 (run pecahan `30419770259` dst.);
+    - **penyebut kedua atas semesta: LUNAS [v30]** — 18.185 tanpa MATI, 18.087
+      HIDUP;
+    - cacah baris `kehidupan_arsip.py` (masuk `BERKAS_DIUKUR`): BELUM;
+    - kehidupan 12 simbol-bulan karantina: BELUM (tar terpisah);
     - jalur **funding**: `funding_ada` masih null di seluruh manifes — BELUM;
     - medan `dugaan_pengganti` (ADR-A005) — BELUM;
     - pemulihan harian ADR-A007 — BELUM, bahan baku sudah ada;
     - karantina artefak 7 hari — BELUM;
-    - 28 anggota kohort yang belum disampel oleh `kohort_ekor` — BELUM (catatan:
-      `kehidupan` sudah mengukur ke-38 simbol untuk jendela 2025-07..2026-06;
-      yang belum adalah pindaian mundur `bulan_hidup_terakhir` bagi 28 sisanya);
-    - penyebut kedua atas semesta — BELUM.
+    - 28 anggota kohort yang belum disampel `kohort_ekor` — BELUM (kini mungkin
+      dijawab dari laporan kehidupan semesta);
+    - funding bagi 945 MATI di luar kohort puncak — BELUM.
     Mengadjudikasi R-7, R-19, R-20, R-28, R-36, R-37.
 
 ## Daftar ADR
@@ -375,14 +463,19 @@ butir).
 - **ADR-A007 serapan hibrida. DIUSULKAN**, belum diterima. Wajib memperhitungkan
   temuan `jumlah_baris` dan kendala R-146.
 - **ADR-A008 akibat KC-18. DITERIMA [v28] untuk Keputusan 1–6**; Keputusan 2–4
-  kini TERTERAP dalam kode dan TERJALANKAN. Keputusan 7 DITANGGUHKAN sampai
-  sifat 48 lubang awal dan 6 lubang tengah terukur. Klausa gugur §6 diperiksa
-  dan **tidak aktif**.
+  TERTERAP dan TERJALANKAN atas SELURUH semesta [v30]. Keputusan 5 (backtest
+  hanya pada HIDUP) kini punya semesta bernama: **18.087** simbol-bulan.
+  Keputusan 7 DITANGGUHKAN sampai sifat 48 lubang awal dan 6 lubang tengah
+  terukur. Klausa gugur §6 diperiksa dan **tidak aktif** pada kedua run.
 - ADR berikutnya **A009**.
 
 ## Temuan sampingan yang belum diukur
 
-- Kehidupan di luar kohort puncak: 19.598 − 456 = 19.142 simbol-bulan.
+- **Funding bagi 945 simbol-bulan MATI di luar kohort puncak** — penentu apakah
+  tebing funding dan kematian pasar peristiwa yang sama atau bukan.
+- Sebaran 1.401 MATI menurut TAHUN dan menurut SIMBOL (laporan penuh memuatnya;
+  belum dibaca).
+- Kehidupan 12 simbol-bulan karantina.
 - Pindaian `bulan_hidup_terakhir` bagi 28 anggota kohort di luar sampel abjad.
 - Sifat 48 lubang funding AWAL dan 6 lubang TENGAH — penentu Keputusan 7
   ADR-A008.
@@ -400,3 +493,4 @@ butir).
   masih true (500 dari 880).
 - Selisih byte funding AGIXUSDT 531 lawan 529.
 - `waktu_utc` runner berjalan lebih dulu daripada jam sesi.
+- `tests/test_pulihkan.py` belum pernah dibaca ulang sesudah push.

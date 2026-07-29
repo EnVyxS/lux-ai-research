@@ -1,0 +1,233 @@
+{
+  "ambang_sepi": 0.5,
+  "batas_mundur": 15,
+  "batas_simbol": 10,
+  "bulan_kendali": "2025-06",
+  "bulan_klines_terakhir": [
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan_klines_terakhir": "2026-06",
+      "simbol": "DARUSDT"
+    }
+  ],
+  "bulan_mulai_kohort": "2025-07",
+  "bulan_tebing": "2025-07",
+  "cacah_baris_penuh": 154,
+  "cacah_simbol_kohort": 38,
+  "catatan_bukan_bukti": "laporan ini diagnostik: ia TIDAK menjatuhkan simbol-bulan mana pun dan TIDAK menulis funding_ada di manifes mana pun",
+  "catatan_kendali_hidup": "KENDALI_HIDUP bukan pembanding pasar melainkan penguji pembaca CSV modul ini sendiri: bila simbol yang pasti diperdagangkan pun terbaca kosong, yang cacat adalah kode, bukan arsip",
+  "catatan_penggugur": "parser_terbukti == false berarti pembaca CSV modul ini tidak terbukti membaca kolom volume dan transaksi dengan benar, sehingga SELURUH klaim kekosongan di laporan ini batal (aturan 50); batas_tercapai == true pada sebuah simbol berarti tak ada bulan ramai di dalam jendela, sehingga bulan_hidup_terakhir simbol itu TAK TERUKUR dan bukan bernilai nol; galat_kohort != null berarti daftar anggota tidak terbaca; kendali_sah == false berarti pembanding tidak lengkap; cacah_gagal_checksum != 0 berarti berkas yang diukur tidak terbukti asli (aturan 24)",
+  "catatan_rentang": "hasil berlaku untuk simbol dan bulan yang benar-benar disampel saja; jendela dibatasi batas_mundur bulan terakhir, jadi tidak ada pernyataan apa pun tentang bulan di luar jendela (aturan 20)",
+  "catatan_satuan": "cacah_simbol_* bersatuan SIMBOL; cacah_uji_*, cacah_kendali_*, cacah_pindai_*, dan cacah_simbol_bulan_sepi bersatuan SIMBOL-BULAN; cacah_lilin bersatuan LILIN; bagian_* adalah BAGIAN antara 0 dan 1, bukan persen (aturan 47)",
+  "catatan_tafsir": "bulan_hidup_terakhir yang lebih awal daripada bulan_tebing menunjukkan perdagangan berhenti SEBELUM funding berhenti terbit, sehingga tebing funding bukan cerminan peristiwa pasar pada bulan itu. Ia TIDAK membuktikan arsip funding cacat: penghentian penerbitan yang tertunda sama-sama muat dengan data ini",
+  "galat_kohort": null,
+  "galat_ringkas": null,
+  "medan_dibuang": [
+    "baris"
+  ],
+  "ringkasan": {
+    "cacah_baris_cacat": 0,
+    "cacah_gagal_checksum": 0,
+    "cacah_gagal_unduh": 0,
+    "cacah_kendali_diminta": 10,
+    "cacah_kendali_hidup_diminta": 4,
+    "cacah_kendali_hidup_ramai": 4,
+    "cacah_kendali_hidup_terambil": 4,
+    "cacah_kendali_lolos_gerbang": 10,
+    "cacah_kendali_sepi": 10,
+    "cacah_kendali_terambil": 10,
+    "cacah_pindai_diminta": 130,
+    "cacah_simbol_bangkit_kembali": 0,
+    "cacah_simbol_batas_tercapai": 9,
+    "cacah_simbol_bulan_sepi": 149,
+    "cacah_simbol_hidup_terakhir_sebelum_tebing": 1,
+    "cacah_simbol_hidup_terakhir_terukur": 1,
+    "cacah_simbol_riwayat": 10,
+    "cacah_uji_bulan_bukan_diharapkan": 0,
+    "cacah_uji_diminta": 10,
+    "cacah_uji_lolos_gerbang": 10,
+    "cacah_uji_sepi": 10,
+    "cacah_uji_terambil": 10,
+    "kendali_sah": true,
+    "parser_terbukti": true
+  },
+  "riwayat": [
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": false,
+      "bulan_hidup_terakhir": "2025-04",
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-05",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 1,
+      "cacah_bulan_sepi": 14,
+      "hidup_terakhir_sebelum_tebing": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bangkit_kembali": false,
+      "batas_tercapai": true,
+      "bulan_hidup_terakhir": null,
+      "bulan_paling_awal_dipindai": "2025-04",
+      "bulan_sepi_paling_awal": "2025-04",
+      "cacah_bulan_dipindai": 15,
+      "cacah_bulan_ramai": 0,
+      "cacah_bulan_sepi": 15,
+      "hidup_terakhir_sebelum_tebing": null,
+      "simbol": "DARUSDT"
+    }
+  ],
+  "sidik_kode": "9ca1464f75b6ecb01099bca9f25348ac726c50cccf399ce87a0939ef03734e13",
+  "sidik_sumber": "3604b82edb4e548ea41e1a104ba4657753f1ea913e7eccee15ac6f74a52ae823",
+  "simbol_disampel": [
+    "AGIXUSDT",
+    "ALPACAUSDT",
+    "AMBUSDT",
+    "BADGERUSDT",
+    "BALUSDT",
+    "BLZUSDT",
+    "BNXUSDT",
+    "BONDUSDT",
+    "COMBOUSDT",
+    "DARUSDT"
+  ],
+  "simbol_kendali_hidup": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "sumber_kohort": "reports/funding_semesta.json",
+  "sumber_ringkas": "reports/kohort_ekor.json",
+  "versi_kohort_ekor": 3,
+  "versi_kohort_ringkas": 1
+}

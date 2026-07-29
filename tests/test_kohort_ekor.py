@@ -1,7 +1,8 @@
 """Uji modul kohort_ekor tanpa jaringan sama sekali.
 
-Tujuh fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan cacah
-butir pytest (aturan 47).
+Sepuluh fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan cacah
+butir pytest (aturan 47). VERSI 1 berkas ini menulis "Tujuh" padahal fungsinya
+delapan; kekeliruan itu ditemukan dengan mencacah ulang, bukan dengan menatap.
 """
 
 from __future__ import annotations
@@ -48,6 +49,7 @@ def test_baca_zip_klines_mengenali_header_dari_isi():
     )
     hasil = kohort_ekor.baca_zip_klines(tanpa)
     assert hasil["berheader"] is False
+    assert hasil["kepala"] is None
     assert hasil["cacah_baris"] == 2
     assert hasil["cap_waktu"] == [1750000000000, 1750000060000]
 
@@ -61,6 +63,16 @@ def test_baca_zip_klines_mengenali_header_dari_isi():
     hasil2 = kohort_ekor.baca_zip_klines(dengan)
     assert hasil2["berheader"] is True
     assert hasil2["cacah_baris"] == 1
+    assert hasil2["kepala"][kohort_ekor.IDX_VOLUME] == "volume"
+    assert hasil2["kepala"][kohort_ekor.IDX_TRANSAKSI] == "count"
+
+
+def test_kolom_volume_dan_transaksi_terbaca_dari_posisi_yang_benar():
+    """Penjaga langsung atas kekeliruan yang paling mungkin: salah indeks kolom."""
+    data = _zip_klines("X-1m-2026-06.csv", [_lilin(1750000000000, "12.5", "9")])
+    hasil = kohort_ekor.baca_zip_klines(data)
+    assert hasil["volume"] == [12.5]
+    assert hasil["transaksi"] == [9]
 
 
 def test_baca_zip_klines_mencacah_baris_cacat_bukan_membuangnya_diam_diam():
@@ -102,22 +114,58 @@ def test_mundur_bulan_melintasi_pergantian_tahun():
 
 def test_ringkas_menyalakan_penggugur_saat_kendali_gagal_atau_bulan_meleset():
     baris = [
-        {"peran": "uji", "bulan": "2026-06", "bagian_volume_nol": 0.1, "lolos_gerbang": True},
-        {"peran": "uji", "bulan": "2026-05", "bagian_volume_nol": 0.9, "lolos_gerbang": True},
+        {"peran": "uji", "bulan": "2026-06", "bagian_volume_nol": 1.0, "lolos_gerbang": True},
+        {"peran": "uji", "bulan": "2026-05", "bagian_volume_nol": 0.1, "lolos_gerbang": True},
         {"peran": "kendali", "bulan": "2025-06", "galat": "putus", "gagal_unduh": True},
     ]
     r = kohort_ekor.ringkas(baris)
     assert r["cacah_uji_diminta"] == 2
-    assert r["cacah_uji_bagian_volume_nol_di_bawah_setengah"] == 1
+    assert r["cacah_uji_sepi"] == 1
     assert r["cacah_uji_bulan_bukan_diharapkan"] == 1
     assert r["cacah_gagal_unduh"] == 1
     assert r["kendali_sah"] is False
     # kendali yang utuh mensahkan pembandingnya
     baik = kohort_ekor.ringkas(
-        baris[:1] + [{"peran": "kendali", "bulan": "2025-06", "bagian_volume_nol": 0.2}]
+        baris[:1] + [{"peran": "kendali", "bulan": "2025-06", "bagian_volume_nol": 1.0}]
     )
     assert baik["kendali_sah"] is True
-    assert baik["cacah_kendali_bagian_volume_nol_di_bawah_setengah"] == 1
+    assert baik["cacah_kendali_sepi"] == 1
+
+
+def test_parser_terbukti_gugur_saat_kendali_hidup_ikut_kosong():
+    """Bila simbol yang pasti hidup terbaca kosong, yang cacat adalah kode."""
+    kosong = [
+        {"peran": "kendali_hidup", "bagian_volume_nol": 1.0, "transaksi_total": 0},
+        {"peran": "kendali_hidup", "bagian_volume_nol": 0.02, "transaksi_total": 900},
+    ]
+    assert kohort_ekor.ringkas(kosong)["parser_terbukti"] is False
+
+    ramai = [
+        {"peran": "kendali_hidup", "bagian_volume_nol": 0.01, "transaksi_total": 1000},
+        {"peran": "kendali_hidup", "bagian_volume_nol": 0.02, "transaksi_total": 900},
+    ]
+    hasil = kohort_ekor.ringkas(ramai)
+    assert hasil["parser_terbukti"] is True
+    assert hasil["cacah_kendali_hidup_ramai"] == 2
+    # tanpa kendali hidup sama sekali, pembaca TIDAK boleh dianggap terbukti
+    assert kohort_ekor.ringkas([])["parser_terbukti"] is False
+
+
+def test_baris_kendali_hidup_memasangkan_simbol_dengan_kedua_bulan():
+    dipanggil = []
+
+    def palsu(simbol, bulan, peran):
+        dipanggil.append((simbol, bulan, peran))
+        return {"simbol": simbol, "bulan": bulan, "peran": peran}
+
+    hasil = kohort_ekor.baris_kendali_hidup("2026-06", "2025-06", ukur=palsu)
+    assert len(hasil) == 2 * len(kohort_ekor.KENDALI_HIDUP)
+    assert all(b["peran"] == "kendali_hidup" for b in hasil)
+    assert ("BTCUSDT", "2026-06", "kendali_hidup") in dipanggil
+    assert ("BTCUSDT", "2025-06", "kendali_hidup") in dipanggil
+    # bulan kendali yang tidak diketahui tidak menghasilkan permintaan hantu
+    hanya_satu = kohort_ekor.baris_kendali_hidup("2026-06", None, ukur=palsu)
+    assert len(hanya_satu) == len(kohort_ekor.KENDALI_HIDUP)
 
 
 def test_muat_kohort_melaporkan_galat_alih_alih_melempar(tmp_path):

@@ -2,33 +2,29 @@
 
 Latar: 38 simbol berhenti menerbitkan funding serempak pada 2025-07 (456
 simbol-bulan), sementara klines mereka terus terbit sampai 2026-06. Uji CDN pada
-VERSI 5 membuktikan servernya menjawab 404 untuk berkas funding kohort sedangkan
-kendali bulan sebelumnya terambil utuh. Yang TIDAK dapat dibedakan oleh 404 itu
-adalah dua penjelasan yang sama-sama muat: (a) simbolnya berhenti diperdagangkan
-sehingga funding memang tidak pernah ada, atau (b) arsip funding cacat sementara
-pasarnya tetap hidup.
+VERSI 5 `funding.py` membuktikan server menjawab 404 untuk berkas funding kohort
+sedangkan kendali bulan sebelumnya terambil utuh. Yang TIDAK dapat dibedakan oleh
+404 itu adalah dua penjelasan yang sama-sama muat: (a) simbolnya berhenti
+diperdagangkan sehingga funding memang tidak pernah ada, atau (b) arsip funding
+cacat sementara pasarnya tetap hidup.
 
-Modul ini mengukur pembeda itu. Bila lilin 1m pada bulan ekor berisi volume dan
-transaksi sungguhan, penjelasan (a) melemah tajam. Bila lilin ekor kosong,
-penjelasan (a) menguat.
+VERSI 1 (run 30414969064) mengukur sepuluh anggota kohort dan menemukan seluruh
+43.200 lilin bulan uji 2026-06 bervolume nol dan tanpa transaksi. Bulan kendali
+2025-06 TERNYATA IKUT KOSONG, padahal berkas funding bulan itu terbukti ada dan
+checksum-nya cocok. Akibatnya pasangan uji-kendali kehilangan daya pembeda:
+kekosongan klines tidak berimpit dengan lubang funding, jadi ia tidak dapat
+memisahkan delisting dari cacat arsip.
+
+VERSI 2 menambal lubang metodologis yang sebenarnya: VERSI 1 memasang penggugur
+untuk UNDUHAN tetapi tidak untuk PENGURAIAN. Bila pembaca CSV salah kolom,
+seluruh angka "volume nol" akan tampak sempurna dan tetap salah. Karena itu
+`KENDALI_HIDUP` mengukur simbol yang pasti diperdagangkan pada bulan yang sama.
+Bila kendali hidup pun terbaca kosong, `parser_terbukti` bernilai false dan
+SELURUH klaim kekosongan di laporan ini batal (aturan 24).
 
 DIAGNOSTIK, bukan gerbang: modul ini tidak menjatuhkan satu simbol-bulan pun dan
 tidak menulis `funding_ada` di manifes mana pun. Ia mengimpor `gerbang_1m` hanya
 untuk MEMBACA putusan gerbang atas deret yang sama, bukan untuk mengubahnya.
-
-Rancangan pengukuran:
-
-- Setiap simbol diukur BERPASANGAN. Bulan uji adalah bulan klines terakhir yang
-  benar-benar tersedia di arsip; bulan kendali adalah bulan tepat sebelum lubang
-  funding kohort dimulai. Simbolnya sama, jadi hanya satu variabel yang berubah.
-  Tanpa kendali, bagian lilin kosong pada bulan ekor tidak punya pembanding dan
-  tidak berarti apa-apa (aturan 24).
-- Daftar anggota kohort DIBACA dari laporan funding, tidak disalin tangan. Salinan
-  tangan di jurnal 70 meleset 16 nama karena daftarnya terpotong.
-- Dua ukuran kekosongan dilaporkan terpisah: volume nol dan cacah transaksi nol.
-  Keduanya tidak identik dan tidak boleh saling menggantikan (aturan 46).
-- Kesimpulan hanya berlaku untuk simbol yang benar-benar disampel, bukan untuk
-  seluruh kohort (aturan 20).
 
 Aturan yang mengikat modul ini: 10, 16, 20, 21, 22, 24, 37, 41, 46, 47, 48, 49.
 """
@@ -44,12 +40,16 @@ from pathlib import Path
 
 from . import arsip, gerbang_1m
 
-VERSI = 1
+VERSI = 2
 SUMBER = "reports/funding_semesta.json"
 KELUARAN = "reports/kohort_ekor.json"
 INTERVAL = "1m"
 BATAS_SIMBOL = 10
 BULAN_DIHARAPKAN = "2026-06"
+
+# Kendali positif: simbol yang tidak mungkin sepi sebulan penuh. Perannya bukan
+# membandingkan pasar, melainkan MENGUJI PEMBACA CSV modul ini sendiri.
+KENDALI_HIDUP = ("BTCUSDT", "ETHUSDT")
 
 # Tata letak CSV klines arsip Binance USDS-M.
 IDX_WAKTU = 0
@@ -141,6 +141,7 @@ def baca_zip_klines(data: bytes) -> dict:
         mentah = z.read(nama).decode("utf-8", "replace")
     baris = [b for b in csv.reader(io.StringIO(mentah)) if b and any(k.strip() for k in b)]
     berheader = bool(baris) and _angka(baris[0][IDX_WAKTU]) is None
+    kepala = list(baris[0]) if berheader else None
     if berheader:
         baris = baris[1:]
     cap = []
@@ -162,6 +163,7 @@ def baca_zip_klines(data: bytes) -> dict:
         transaksi.append(int(t))
     return {
         "berheader": berheader,
+        "kepala": kepala,
         "cap_waktu": cap,
         "volume": volume,
         "transaksi": transaksi,
@@ -198,6 +200,7 @@ def ukur_satu(simbol: str, bulan: str, peran: str) -> dict:
         "gagal_checksum": False,
         "galat": None,
         "berheader": None,
+        "kepala": None,
         "byte_zip": None,
         "lolos_gerbang": None,
         "pelanggaran": None,
@@ -214,6 +217,7 @@ def ukur_satu(simbol: str, bulan: str, peran: str) -> dict:
     putusan = gerbang_1m.nilai_deret(terurai["cap_waktu"], simbol, bulan)
     baris.update(ringkas_lilin(terurai))
     baris["berheader"] = terurai["berheader"]
+    baris["kepala"] = terurai["kepala"]
     baris["byte_zip"] = len(data)
     baris["cacah_baris_cacat"] = terurai["cacah_baris_cacat"]
     baris["lolos_gerbang"] = putusan["lolos"]
@@ -222,34 +226,62 @@ def ukur_satu(simbol: str, bulan: str, peran: str) -> dict:
     return baris
 
 
+def baris_kendali_hidup(bulan_uji, bulan_kendali, ukur=None) -> list:
+    """Ukur simbol yang pasti hidup pada bulan yang sama dengan kohort.
+
+    `ukur` dapat disuntik agar uji dapat berjalan tanpa jaringan (aturan 13).
+    """
+    jalan = ukur or ukur_satu
+    bulan_dipakai = [b for b in (bulan_uji, bulan_kendali) if b]
+    hasil = []
+    for simbol in KENDALI_HIDUP:
+        for bulan in bulan_dipakai:
+            hasil.append(jalan(simbol, bulan, "kendali_hidup"))
+    return hasil
+
+
 def ringkas(baris_semua) -> dict:
     """Cacah lintas simbol beserta medan penggugurnya (aturan 24)."""
     daftar = list(baris_semua)
     uji = [b for b in daftar if b.get("peran") == "uji"]
     kendali = [b for b in daftar if b.get("peran") == "kendali"]
+    hidup = [b for b in daftar if b.get("peran") == "kendali_hidup"]
 
-    def hidup(b):
-        return bool(b.get("bagian_volume_nol") is not None and b["bagian_volume_nol"] <= 0.5)
+    def sepi(b):
+        """Benar bila bagian lilin bervolume nol MELEBIHI setengah."""
+        nilai = b.get("bagian_volume_nol")
+        return nilai is not None and nilai > 0.5
+
+    def ramai(b):
+        nilai = b.get("bagian_volume_nol")
+        return (
+            nilai is not None
+            and nilai < 0.5
+            and int(b.get("transaksi_total") or 0) > 0
+        )
 
     kendali_terambil = [b for b in kendali if not b.get("galat")]
+    hidup_terambil = [b for b in hidup if not b.get("galat")]
     return {
         "cacah_uji_diminta": len(uji),
         "cacah_kendali_diminta": len(kendali),
+        "cacah_kendali_hidup_diminta": len(hidup),
         "cacah_uji_terambil": len([b for b in uji if not b.get("galat")]),
         "cacah_kendali_terambil": len(kendali_terambil),
+        "cacah_kendali_hidup_terambil": len(hidup_terambil),
         "cacah_gagal_unduh": sum(1 for b in daftar if b.get("gagal_unduh")),
         "cacah_gagal_checksum": sum(1 for b in daftar if b.get("gagal_checksum")),
         "cacah_baris_cacat": sum(int(b.get("cacah_baris_cacat") or 0) for b in daftar),
-        "cacah_uji_bagian_volume_nol_di_bawah_setengah": sum(1 for b in uji if hidup(b)),
-        "cacah_kendali_bagian_volume_nol_di_bawah_setengah": sum(
-            1 for b in kendali if hidup(b)
-        ),
+        "cacah_uji_sepi": sum(1 for b in uji if sepi(b)),
+        "cacah_kendali_sepi": sum(1 for b in kendali if sepi(b)),
+        "cacah_kendali_hidup_ramai": sum(1 for b in hidup if ramai(b)),
         "cacah_uji_lolos_gerbang": sum(1 for b in uji if b.get("lolos_gerbang")),
         "cacah_kendali_lolos_gerbang": sum(1 for b in kendali if b.get("lolos_gerbang")),
         "cacah_uji_bulan_bukan_diharapkan": sum(
             1 for b in uji if b.get("bulan") != BULAN_DIHARAPKAN
         ),
         "kendali_sah": bool(kendali_terambil) and len(kendali_terambil) == len(kendali),
+        "parser_terbukti": bool(hidup) and all(ramai(b) for b in hidup),
     }
 
 
@@ -261,6 +293,7 @@ def jalankan(akar: str = ".") -> dict:
 
     baris_semua = []
     catatan_bulan = []
+    bulan_uji_terakhir = None
     for simbol in dipilih:
         try:
             tersedia = arsip.bulan_tersedia(simbol, INTERVAL, "klines")
@@ -279,9 +312,14 @@ def jalankan(akar: str = ".") -> dict:
         bulan_uji = tersedia[-1] if tersedia else None
         catatan_bulan.append({"simbol": simbol, "bulan_klines_terakhir": bulan_uji})
         if bulan_uji:
+            bulan_uji_terakhir = bulan_uji
             baris_semua.append(ukur_satu(simbol, bulan_uji, "uji"))
         if bulan_kendali and bulan_kendali in set(tersedia):
             baris_semua.append(ukur_satu(simbol, bulan_kendali, "kendali"))
+
+    baris_semua += baris_kendali_hidup(
+        bulan_uji_terakhir or BULAN_DIHARAPKAN, bulan_kendali
+    )
 
     laporan = {
         "versi_kohort_ekor": VERSI,
@@ -293,6 +331,7 @@ def jalankan(akar: str = ".") -> dict:
         "bulan_kendali": bulan_kendali,
         "batas_simbol": batas,
         "simbol_disampel": dipilih,
+        "simbol_kendali_hidup": list(KENDALI_HIDUP),
         "bulan_klines_terakhir": catatan_bulan,
         "baris": baris_semua,
         "ringkasan": ringkas(baris_semua),
@@ -301,13 +340,19 @@ def jalankan(akar: str = ".") -> dict:
             "TIDAK menulis funding_ada di manifes mana pun"
         ),
         "catatan_penggugur": (
-            "galat_kohort != null berarti daftar anggota tidak terbaca dan seluruh "
-            "laporan batal; kendali_sah == false berarti pembanding tidak lengkap "
-            "sehingga angka bulan uji tidak boleh ditafsirkan; cacah_gagal_checksum "
-            "!= 0 berarti berkas yang diukur tidak terbukti asli; "
-            "cacah_uji_bulan_bukan_diharapkan != 0 berarti bulan ekor bukan "
-            f"{BULAN_DIHARAPKAN} dan perbandingannya dengan jurnal terdahulu tidak sah "
-            "(aturan 24)"
+            "parser_terbukti == false berarti pembaca CSV modul ini tidak terbukti "
+            "membaca kolom volume dan transaksi dengan benar, sehingga SELURUH klaim "
+            "kekosongan di laporan ini batal; galat_kohort != null berarti daftar "
+            "anggota tidak terbaca dan seluruh laporan batal; kendali_sah == false "
+            "berarti pembanding tidak lengkap; cacah_gagal_checksum != 0 berarti "
+            "berkas yang diukur tidak terbukti asli; cacah_uji_bulan_bukan_diharapkan "
+            f"!= 0 berarti bulan ekor bukan {BULAN_DIHARAPKAN} dan perbandingannya "
+            "dengan jurnal terdahulu tidak sah (aturan 24)"
+        ),
+        "catatan_kendali_hidup": (
+            "KENDALI_HIDUP bukan pembanding pasar melainkan penguji pembaca CSV modul "
+            "ini sendiri: bila simbol yang pasti diperdagangkan pun terbaca kosong, "
+            "yang cacat adalah kode, bukan arsip"
         ),
         "catatan_satuan": (
             "cacah_* bersatuan SIMBOL-BULAN kecuali cacah_lilin yang bersatuan LILIN; "
@@ -318,10 +363,11 @@ def jalankan(akar: str = ".") -> dict:
             "digeneralkan ke seluruh kohort tanpa pengukuran lanjutan (aturan 20)"
         ),
         "catatan_tafsir": (
-            "bagian volume nol yang rendah pada bulan ekor menunjukkan pasar masih "
-            "diperdagangkan sesudah funding berhenti terbit, sehingga penjelasan "
-            "delisting melemah; ia TIDAK membuktikan arsip funding cacat, karena "
-            "pasar yang hidup di klines masih mungkin berpindah rezim funding"
+            "VERSI 1 menemukan bulan uji DAN bulan kendali sama-sama kosong, padahal "
+            "berkas funding bulan kendali terbukti ada; karena itu kekosongan klines "
+            "tidak berimpit dengan lubang funding dan TIDAK dapat memisahkan delisting "
+            "dari cacat arsip. Angka di laporan ini menggambarkan isi arsip, bukan "
+            "sebab lubang funding"
         ),
     }
     return laporan
@@ -333,11 +379,11 @@ def main() -> int:
     with open(KELUARAN, "w", encoding="utf-8") as f:
         json.dump(laporan, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
-    ringkasan = dict(laporan["ringkasan"])
-    ringkasan["sidik_kode"] = laporan["sidik_kode"]
-    ringkasan["bulan_kendali"] = laporan["bulan_kendali"]
-    ringkasan["galat_kohort"] = laporan["galat_kohort"]
     print(json.dumps(laporan, ensure_ascii=False, indent=2, sort_keys=True))
+    ringkasan = laporan["ringkasan"]
+    # Kode keluar bukan hiasan: penggugur yang menyala harus terlihat dari luar.
+    if laporan["galat_kohort"] or not ringkasan["parser_terbukti"]:
+        return 2
     return 0
 
 

@@ -4,17 +4,19 @@
   "baris_total": 100058416,
   "baris_utama": 100058416,
   "bukan_bukti": false,
+  "catatan_definisi": "definisi_jumlah_baris hanya menyebut salah satu definisi ketika definisi_dapat_dibedakan true; pecahan tanpa karantina tidak mampu membedakan keduanya dan dilaporkan apa adanya (aturan 46)",
   "catatan_penggugur": "pulih_sah HANYA mencakup keutuhan pengangkutan: bagian hilang, sha tak cocok, anggota kurang, anggota tak aman. Kecocokan baris dilaporkan terpisah karena ia pertanyaan definisi, bukan keutuhan (aturan 16, 36)",
   "catatan_rentang": "berlaku untuk pecahan 2 dari 8 saja, dan untuk satu kali unduhan pada satu waktu; ia tidak mengatakan apa pun tentang ketahanan aset dalam jangka panjang (aturan 20)",
   "catatan_sumber_sidik": "sidik pembanding diambil dari manifes di git, BUKAN dari berkas SHA256SUMS di rilis; berkas itu diunggah proses yang sama dari cakram yang sama, jadi memakainya hanya membuktikan rilis konsisten dengan dirinya sendiri",
-  "definisi_jumlah_baris": "jumlah_baris = baris parquet lolos gerbang saja",
+  "definisi_dapat_dibedakan": false,
+  "definisi_jumlah_baris": "tidak dapat dibedakan: tanpa baris karantina kedua definisi menghasilkan angka yang sama",
   "indeks": 2,
   "jumlah_baris_manifes": 100058416,
   "pulih_sah": true,
   "run_id_sumber": "30396803601",
   "selisih_baris_total": 0,
   "selisih_baris_utama": 0,
-  "sidik_kode": "c76ff896f39c9d979ac875fe2e7b54b050911f49bd361150f3826a99ea272b38",
+  "sidik_kode": "76c27e3ce5d6edb13bb998b6ec65b538fb3d25205d4469bd4d186a95fa62d700",
   "sidik_kode_manifes": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
   "sidik_manifes": "6bbc999074eedfc4ded149d5c172b640864c894adb01888373b1ecfa29e5f1a2",
   "utama": {
@@ -33,6 +35,6 @@
     "nama_dasar": "pecahan_2",
     "nama_sha_tak_cocok": []
   },
-  "versi_pulihkan": 1,
-  "waktu_utc": "2026-07-28T22:19:32Z"
+  "versi_pulihkan": 2,
+  "waktu_utc": "2026-07-29T02:48:32Z"
 }

@@ -1,10 +1,10 @@
-"""Uji `lubang_tengah` V1.
+"""Uji `lubang_tengah` V2.
 
 Aturan 57 (penangkal KC-19): nama setiap fungsi uji ditulis BERNOMOR di sini
 SEBELUM cacahnya diramalkan. Tidak ada `parametrize` di berkas ini, sehingga
 cacah fungsi sama dengan cacah butir pytest.
 
-1. test_versi_satu
+1. test_versi_dua
 2. test_nama_keluaran_tetap
 3. test_sidik_kode_hex_dan_stabil
 4. test_sidik_kode_beda_dari_silang_funding
@@ -46,8 +46,24 @@ cacah fungsi sama dengan cacah butir pytest.
 40. test_jalankan_menyertakan_sumber_lengkap
 41. test_jalankan_bukan_bukti_false
 42. test_main_menulis_berkas_dan_kode_bulat
+43. test_simbol_h_a011_dan_rentang
+44. test_simbol_tengah_tercatat_dua
+45. test_medan_funding_tanpa_klines_bernama
+46. test_funding_tanpa_klines_kosong_seluruhnya
+47. test_funding_tanpa_klines_berisi_dilaporkan
+48. test_funding_tanpa_klines_simbol_tak_ada_bukan_kosong
+49. test_funding_tanpa_klines_medan_hilang_tak_terukur
+50. test_funding_tanpa_klines_bulan_urut
+51. test_status_rentang_menyaring_bulan
+52. test_status_rentang_simbol_lain_diabaikan
+53. test_uji_h_a011_menang_bila_ada_hidup
+54. test_uji_h_a011_gugur_bila_semua_mati
+55. test_uji_h_a011_rentang_kosong_tak_terukur
+56. test_jalankan_memuat_h_a011_dan_funding_tanpa_klines
 
-Cacah: 42 fungsi, 0 parametrize tambahan, maka **42 butir**.
+Cacah: 56 fungsi, 0 parametrize tambahan, maka **56 butir**. Berkas ini
+sebelumnya menyumbang 42 butir; selisihnya +14, dan itulah dasar R-228
+(382 − 42 + 56 = 396).
 """
 
 from __future__ import annotations
@@ -89,9 +105,24 @@ def _funding():
         "penyebut": {"bulan_klines": 8},
         "kohort_puncak": {"simbol": []},
         "per_simbol": [
-            {"simbol": "AAA", "klines_tanpa_funding": ["2021-03"], "mulai_lubang_ekor": None},
-            {"simbol": "BBB", "klines_tanpa_funding": ["2021-01"], "mulai_lubang_ekor": None},
-            {"simbol": "ZZZ", "klines_tanpa_funding": ["2020-01"], "mulai_lubang_ekor": None},
+            {
+                "simbol": "AAA",
+                "klines_tanpa_funding": ["2021-03"],
+                "mulai_lubang_ekor": None,
+                "funding_tanpa_klines": [],
+            },
+            {
+                "simbol": "BBB",
+                "klines_tanpa_funding": ["2021-01"],
+                "mulai_lubang_ekor": None,
+                "funding_tanpa_klines": [],
+            },
+            {
+                "simbol": "ZZZ",
+                "klines_tanpa_funding": ["2020-01"],
+                "mulai_lubang_ekor": None,
+                "funding_tanpa_klines": ["2019-12", "2019-11"],
+            },
         ],
     }
 
@@ -130,8 +161,8 @@ def _ringkasan_sehat():
     }
 
 
-def test_versi_satu():
-    assert lubang_tengah.VERSI == 1
+def test_versi_dua():
+    assert lubang_tengah.VERSI == 2
 
 
 def test_nama_keluaran_tetap():
@@ -171,7 +202,12 @@ def test_simbol_h_a010_lima_nama():
 def test_medan_per_simbol_melaporkan_nama_medan():
     medan, cacah = lubang_tengah.medan_per_simbol(_funding())
     assert cacah == 3
-    assert medan == ["klines_tanpa_funding", "mulai_lubang_ekor", "simbol"]
+    assert medan == [
+        "funding_tanpa_klines",
+        "klines_tanpa_funding",
+        "mulai_lubang_ekor",
+        "simbol",
+    ]
 
 
 def test_medan_per_simbol_kosong_aman():
@@ -378,6 +414,7 @@ def test_jalankan_menyertakan_definisi_dan_catatan(tmp_path):
     laporan = lubang_tengah.jalankan(akar=str(tmp_path), total=1)
     assert "tengah" in laporan["definisi"]["bentuk_lubang_lokal"]
     assert laporan["catatan_batas_h_a010"]
+    assert laporan["catatan_batas_h_a011"]
     assert laporan["catatan_penggugur"]
 
 
@@ -394,7 +431,7 @@ def test_jalankan_bukan_bukti_false(tmp_path):
     _tulis_repo(tmp_path, total=1)
     laporan = lubang_tengah.jalankan(akar=str(tmp_path), total=1)
     assert laporan["bukan_bukti"] is False
-    assert laporan["versi_lubang_tengah"] == 1
+    assert laporan["versi_lubang_tengah"] == 2
 
 
 def test_main_menulis_berkas_dan_kode_bulat(tmp_path, monkeypatch):
@@ -404,3 +441,104 @@ def test_main_menulis_berkas_dan_kode_bulat(tmp_path, monkeypatch):
     assert isinstance(kode, int)
     isi = json.loads(Path(lubang_tengah.KELUARAN).read_text(encoding="utf-8"))
     assert isi["ringkasan"]["cacah_lubang_tengah"] == 1
+
+
+def test_simbol_h_a011_dan_rentang():
+    assert lubang_tengah.SIMBOL_H_A011 == "LITUSDT"
+    assert lubang_tengah.RENTANG_H_A011 == ("2026-01", "2026-06")
+
+
+def test_simbol_tengah_tercatat_dua():
+    assert lubang_tengah.SIMBOL_TENGAH_TERCATAT == ["BTCSTUSDT", "LITUSDT"]
+
+
+def test_medan_funding_tanpa_klines_bernama():
+    assert lubang_tengah.MEDAN_FUNDING_TANPA_KLINES == "funding_tanpa_klines"
+
+
+def test_funding_tanpa_klines_kosong_seluruhnya():
+    hasil = lubang_tengah.funding_tanpa_klines(_funding(), ["AAA", "BBB"])
+    assert hasil["cacah_simbol"] == 2
+    assert hasil["cacah_berisi"] == 0
+    assert hasil["cacah_tak_terukur"] == 0
+    assert hasil["kosong_seluruhnya"] is True
+
+
+def test_funding_tanpa_klines_berisi_dilaporkan():
+    hasil = lubang_tengah.funding_tanpa_klines(_funding(), ["ZZZ"])
+    assert hasil["cacah_berisi"] == 1
+    assert hasil["kosong_seluruhnya"] is False
+    assert hasil["baris"][0]["cacah_bulan"] == 2
+
+
+def test_funding_tanpa_klines_simbol_tak_ada_bukan_kosong():
+    hasil = lubang_tengah.funding_tanpa_klines(_funding(), ["TIDAKADA"])
+    assert hasil["baris"][0]["ada_di_per_simbol"] is False
+    assert hasil["cacah_tak_terukur"] == 1
+    assert hasil["kosong_seluruhnya"] is False
+
+
+def test_funding_tanpa_klines_medan_hilang_tak_terukur():
+    hasil = lubang_tengah.funding_tanpa_klines(
+        {"per_simbol": [{"simbol": "CCC"}]}, ["CCC"]
+    )
+    assert hasil["baris"][0]["ada_di_per_simbol"] is True
+    assert hasil["baris"][0]["ada_medan"] is False
+    assert hasil["cacah_tak_terukur"] == 1
+    assert hasil["kosong_seluruhnya"] is False
+
+
+def test_funding_tanpa_klines_bulan_urut():
+    hasil = lubang_tengah.funding_tanpa_klines(_funding(), ["ZZZ"])
+    assert hasil["baris"][0]["bulan"] == ["2019-11", "2019-12"]
+
+
+def test_status_rentang_menyaring_bulan():
+    baris = lubang_tengah.status_rentang(_status(), "AAA", "2021-02", "2021-04")
+    assert [r["bulan"] for r in baris] == ["2021-02", "2021-03", "2021-04"]
+    assert baris[1]["status"] == MATI
+
+
+def test_status_rentang_simbol_lain_diabaikan():
+    baris = lubang_tengah.status_rentang(_status(), "BBB", "2021-01", "2021-05")
+    assert len(baris) == 3
+    assert all(r["simbol"] == "BBB" for r in baris)
+    assert lubang_tengah.status_rentang(_status(), "LITUSDT", "2026-01", "2026-06") == []
+
+
+def test_uji_h_a011_menang_bila_ada_hidup():
+    status = {("LITUSDT", "2026-01"): MATI, ("LITUSDT", "2026-02"): HIDUP}
+    hasil = lubang_tengah.uji_h_a011(status)
+    assert hasil["terukur"] is True
+    assert hasil["cacah_bulan"] == 2
+    assert hasil["cacah_hidup"] == 1
+    assert hasil["menang"] is True
+
+
+def test_uji_h_a011_gugur_bila_semua_mati():
+    status = {("LITUSDT", b): MATI for b in ("2026-01", "2026-02", "2026-03")}
+    hasil = lubang_tengah.uji_h_a011(status)
+    assert hasil["terukur"] is True
+    assert hasil["cacah_hidup"] == 0
+    assert hasil["menang"] is False
+    assert hasil["sebaran_status"][MATI] == 3
+
+
+def test_uji_h_a011_rentang_kosong_tak_terukur():
+    hasil = lubang_tengah.uji_h_a011(_status())
+    assert hasil["cacah_bulan"] == 0
+    assert hasil["terukur"] is False
+    assert hasil["menang"] is False
+
+
+def test_jalankan_memuat_h_a011_dan_funding_tanpa_klines(tmp_path):
+    _tulis_repo(tmp_path, total=1)
+    laporan = lubang_tengah.jalankan(akar=str(tmp_path), total=1)
+    assert "simbal" not in json.dumps(laporan["definisi"], ensure_ascii=False)
+    assert "simbol" in laporan["definisi"]["h_a010_menang"]
+    assert laporan["funding_tanpa_klines"]["cacah_simbol"] == 5
+    assert laporan["h_a011"]["simbol"] == "LITUSDT"
+    ringkasan = laporan["ringkasan"]
+    assert ringkasan["h_a011_terukur"] is False
+    assert ringkasan["h_a010_cacah_simbol_tak_terukur"] == 5
+    assert ringkasan["h_a010_funding_tanpa_klines_kosong"] is False

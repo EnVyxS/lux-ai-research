@@ -1,4 +1,4 @@
-# STATE lampiran EKOR — bagian 2 dari STATE v43
+# STATE lampiran EKOR — bagian 2 dari STATE (v3, menuju STATE v44)
 
 **Mengapa berkas ini ada, dan mengapa ia MENGIKAT.** Dua push `STATE.md` berturut
 terpotong: v41 berhenti di "Utang verifikasi" butir 24, v42 berhenti di tengah
@@ -7,54 +7,55 @@ panjang satu push** — `STATE.md` sudah melampaui apa yang dapat ditulis utuh d
 satu kali kirim, dan tidak ada API tambal. Maka STATE dipecah, sebagaimana repo ini
 sudah punya presedennya (`STATE_LAMPIRAN.md`, `STATE_LAMPIRAN_ANGKA.md`).
 
-**Pembagian yang berlaku sejak v43 — dan v43 sudah MENAATINYA:**
+**Pembagian yang berlaku:**
 
-1. **`STATE.md` v43** (blob **`a91a49346a6ebcf1a288b936904a8fe1facc3d7a`**, dibaca
-   UTUH sesudah push) — bagian 1: kepala, aturan bernomor 1–76, kelas cacat
-   KC-1..KC-42. Ia **berhenti sesudah kelas cacat** dan menunjuk ke sini; dengan
-   begitu baris R-287 yang terpotong hilang bersama tabel yang tak lagi ia muat.
+1. **`STATE.md` v43** (blob **`a91a49346a6ebcf1a288b936904a8fe1facc3d7a`**) —
+   bagian 1: kepala, aturan bernomor 1–76, kelas cacat KC-1..KC-42. Ia **berhenti
+   sesudah kelas cacat** dan menunjuk ke sini.
 2. **`STATE_LAMPIRAN_EKOR.md`** (berkas ini) — bagian 2: papan skor, catatan
    kejujuran, jumlah uji, utang verifikasi, daftar ADR, temuan sampingan,
    penomoran berikutnya.
 3. **`STATE_LAMPIRAN_UKUR.md`** (blob **`0e9ec3783d95be522dd4e56221fc7197f89c13c0`**)
    — bagian 3: seluruh tabel pengukuran, modul/workflow/uji, API terverifikasi,
-   hipotesis H-A001..H-A016.
-4. **`STATE_LAMPIRAN_ADR.md`** (blob `a02ef271`) — arsip ekor v41; isinya sudah
-   diserap ke sini dan **bukan sumber lagi**.
+   hipotesis. **Belum memuat H-A017 dan bentangan `anatomi_tengah`; ia wajib
+   diperbarui pada giliran berikutnya sesudah dibaca UTUH lebih dulu (KC-42d).**
+4. **`STATE_LAMPIRAN_ADR.md`** (blob `a02ef271`) — arsip ekor v41; **bukan sumber
+   lagi**.
 
-Dasar bacaan giliran ini: `STATE.md` v42 blob
-**`e29aeb9c32b7fb8499f82e63000096f92d2582d9`** (UTUH — dari sanalah naskah aturan
-1–76 dan KC-1..KC-41 dipulihkan), `ci.yml` blob **`c79497b2`** (UTUH),
-`reports/ci_terakhir.txt` blob **`0f8626bc`** (UTUH), `decisions/ADR-A008.md` blob
-**`4c3632d6a65eb6ee089d824e2884da46c65d14e4`** (UTUH — pembacaan pertama sesi ini).
+**Tentang push berkas ini:** ia menyalakan `ci.yml` (akar repo, di luar
+`paths-ignore` — KC-41) dan **sengaja TIDAK dipraregistrasi**. Sejak jurnal 118 dan
+calon aturan 79, cacah butir uji yang deterministik tidak lagi dijadikan ramalan;
+ia tetap diukur dan dicatat, tetapi tidak lagi menambah papan skor. Delapan
+kemenangan MUDAH berturut sudah cukup membuktikan bahwa `pytest --collect-only`
+berperilaku sama setiap kali.
 
-### Praregistrasi R-299 (ditulis SEBELUM push berkas ini menyalakan `ci.yml`)
-
-Push `STATE_LAMPIRAN_EKOR.md` menyalakan CI (akar repo, di luar `paths-ignore` —
-KC-41). Tidak satu pun berkas `tests/**` berubah, jadi `cacah_uji` tetap **722** dan
-`kode_keluar` **0**. Ramalan ini **MUDAH** (aturan 57).
-
-## KC-42 — kelas cacat baru [v42, disempurnakan v43]
+## KC-42 — kelas cacat [v42, disempurnakan v43]
 
 **KC-42 — menulis ulang berkas yang sudah melampaui batas satu push, lalu
 menganggap push itu berhasil karena alat mengembalikan commit.** `push_files`
-mengembalikan ref baru dengan gembira meski muatan yang dikirim berhenti di tengah
-kalimat; tidak ada galat, tidak ada peringatan. Dua kali berturut `STATE.md`
-didorong cacat (v41, v42), dan keduanya hanya tertangkap oleh aturan 52.
-**Penangkal, mengikat:** (a) berkas yang tidak dapat ditulis utuh dalam satu kirim
-WAJIB dipecah lebih dulu, bukan diulang; (b) commit yang dikembalikan alat BUKAN
-bukti keutuhan — hanya pembacaan ulang yang membuktikannya; (c) sesudah push
-berkas panjang, DILARANG menyusun berkas lain di atasnya sebelum pembacaan ulang;
-**(d) sebelum menulis ulang berkas panjang, badan lamanya WAJIB dibaca UTUH supaya
-naskah yang hanya hidup di sana tidak musnah** — ini yang menyelamatkan aturan
-1–76 saat v43 disusun. Kerabat KC-19 (percaya ingatan) dan aturan 38 (percaya
-keberadaan berkas). **Obatnya sudah dijalankan dan TERBUKTI:** STATE dipecah tiga,
-dan ketiga berkasnya terbaca utuh sesudah push.
+mengembalikan ref baru dengan gembira meski muatan berhenti di tengah kalimat;
+tidak ada galat. Dua kali berturut `STATE.md` didorong cacat (v41, v42), keduanya
+hanya tertangkap oleh aturan 52. **Penangkal, mengikat:** (a) berkas yang tidak
+dapat ditulis utuh dalam satu kirim WAJIB dipecah lebih dulu; (b) commit yang
+dikembalikan alat BUKAN bukti keutuhan; (c) sesudah push berkas panjang, DILARANG
+menyusun berkas lain di atasnya sebelum pembacaan ulang; **(d) sebelum menulis
+ulang berkas panjang, badan lamanya WAJIB dibaca UTUH** — penangkal (d) dijalankan
+lagi sebelum berkas ini ditulis (blob lama `62d4b24f…` dibaca UTUH). Kerabat KC-19
+dan aturan 38. **Obatnya TERBUKTI:** sejak STATE dipecah, sembilan push panjang
+berturut lolos utuh (v43, kedua lampiran, PROMPT v44, jurnal 117–120, trio
+`anatomi_tengah`).
 
-**Calon aturan 78 (DIUSULKAN):** batas panjang alat adalah bagian dari desain
-repo, bukan kecelakaan; struktur berkas wajib disesuaikan dengan batas alat yang
-terukur — ±2,4 MB untuk membaca (manifes pecahan 2 DITOLAK), dan sekitar satu
-berkas STATE penuh untuk menulis (±25–45 KB terbukti aman).
+**Calon aturan 78 (DIUSULKAN):** batas panjang alat adalah bagian dari desain repo
+— ±2,4 MB untuk membaca (manifes pecahan 2 DITOLAK), ±25–45 KB terbukti aman untuk
+menulis.
+
+**Calon aturan 79 (DIUJI SEKALI, BERHASIL):** praregistrasi ramalan ditulis lebih
+dulu di `journal/**` yang ada di `paths-ignore`, sehingga urutan "ramalan dulu,
+pengukuran kemudian" dapat ditegakkan tanpa menyalakan run. Ujian pertamanya
+adalah **R-300**: jurnal 119 (commit `3b43ee8b`, blob `f7ec9f62`) didorong
+**sebelum** modul `anatomi_tengah.py` ada, sehingga pita 8..30 dan ramalan tetangga
+HIDUP tidak mungkin disunting sesudah angkanya terlihat. Dan angkanya memang
+mengalahkan ramalannya.
 
 ## Papan skor prediksi — lengkap
 
@@ -70,8 +71,8 @@ berkas STATE penuh untuk menulis (±25–45 KB terbukti aman).
 | R-281 | bulan SETTLED 36 **dan** 11 nama bersatu-bulan | **MELESET** (12 — aritmetika sendiri) |
 | R-282 | `diagnosa_kc15.json` menyebut tiga bulan BNXUSDT | **MELESET** (hanya 2022-04) |
 | R-283 | modul `diagnosa_kc15` mengukur tepi | **TEPAT** (lewat disjungsi — mendekati MUDAH) |
-| R-284 | `lubang_tengah.py` memuat tetapan tiga bulan BNXUSDT | **MELESET** (aturan 73) |
-| R-285 | 6 lubang tengah, LIT 5 / BTCST 1, `h_a011_menang` false | **SEPARUH** |
+| R-284 | `lubang_tengah.py` memuat tetapan tiga bulan BNXUSDT | **MELESET** (aturan 73; yang ada `SIMBOL_TENGAH_TERCATAT` = dua NAMA SIMBOL) |
+| R-285 | 6 lubang tengah, LIT 5 / BTCST 1, `h_a011_menang` false | **SEPARUH** (dua butir pertama tepat; `h_a011_menang` ternyata **true**) |
 | R-286 | H-A015: cocok 3..4; ≥10 dari 12 lebih awal; lubang >10 lawan <10 | **TEPAT** (4, 11 dari 12) |
 | R-287 | CI **662**, kode 0, commit `3d113d49` | **TEPAT** (MUDAH, run 30469781181) |
 | R-289 | `ci.yml` menyala pada commit STATE **dan** commit PROMPT, 662, kode 0 | **TEPAT** pada KEDUA cabang (MUDAH) |
@@ -81,167 +82,163 @@ berkas STATE penuh untuk menulis (±25–45 KB terbukti aman).
 | R-292 | CI **694**, kode 0, commit `c07cb65f` | **TEPAT** (MUDAH, run 30478069419) |
 | R-293 | CI **694**, kode 0, commit `91ce4660` | **TEPAT** (MUDAH, run 30479093362) |
 | R-294 | CI **722**, kode 0, commit `edea61f7` | **TEPAT** (MUDAH, run 30479681620) |
-| R-295 | commit BERIKUTNYA penyala `ci.yml` memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30482205512**, commit `35b3d6d8` (push STATE v42), ref `117d8c67`, blob `a605c94a`, 18:57:06Z |
-| R-296 | push `STATE_LAMPIRAN_UKUR.md` memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30482864644**, commit `58a2f09c`, ref `ecdaacdb`, blob `a467ab62`, 19:05:42Z |
-| R-297 | push `STATE.md` v43 memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30483341732**, commit `eea324fd`, ref `4613a559`, blob `4b5a9c4b`, 19:12:22Z |
-| R-298 | push `PROMPT_KELANJUTAN.md` v44 memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30483636460**, commit `022d208a`, ref `c620c51a`, blob `9b0f3a09`, 19:16:22Z |
-| R-299 | push berkas ini memberi **722** dan kode **0** | **DIPRAREGISTRASI — MUDAH** |
+| R-295 | commit BERIKUTNYA penyala `ci.yml` memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30482205512**, ref `117d8c67`, blob `a605c94a` |
+| R-296 | push `STATE_LAMPIRAN_UKUR.md` memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30482864644**, ref `ecdaacdb`, blob `a467ab62` |
+| R-297 | push `STATE.md` v43 memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30483341732**, ref `4613a559`, blob `4b5a9c4b` |
+| R-298 | push `PROMPT_KELANJUTAN.md` v44 memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30483636460**, ref `c620c51a`, blob `9b0f3a09` |
+| R-299 | push lampiran EKOR v2 memberi **722** dan kode **0** | **TEPAT** (MUDAH) — run **30483924857**, commit `a2c44177`, ref `ab654c78`, blob `c1d12d53`, 19:20:28Z, "722 tests collected in 0.52s" |
+| R-300 | (1) `cacah_bulan` **64** bagi BTCSTUSDT dan LITUSDT; (2) tetangga BTCST 2021-12 dan 2022-02 **keduanya HIDUP**; (3) `cacah_hidup` BTCST di pita **8..30** DAN MATI > HIDUP | **SEPARUH** — butir 1 (satu-satunya yang disebut MUDAH) **TEPAT** 64/64; butir 2 **MELESET** (kedua tetangga **MATI**); butir 3 **MELESET** (`cacah_hidup` **0**, di luar pita; klausa MATI>HIDUP benar tetapi ramalan menuntut keduanya). Run **30485048909**, ref `6366f20b`, blob `403ebdf9` |
 
-**Total R-1..R-298** (dihitung tangan, aturan 21). Dasar v40: TEPAT 204 · MELESET
-54 · SEPARUH 18 · TIDAK TERADJUDIKASI 7 · MENUNGGU 7 = **290**. Sesudah v40:
-**delapan TEPAT** (R-291, R-292, R-293, R-294, R-295, R-296, R-297, R-298), tanpa
-MELESET maupun SEPARUH baru.
+**Total R-1..R-300** (dihitung tangan, aturan 21). Dasar v43: TEPAT 212 · MELESET
+54 · SEPARUH 18 · TIDAK TERADJUDIKASI 7 · MENUNGGU 7 = **298**. Sesudahnya: R-299
+**TEPAT**, R-300 **SEPARUH**.
 
-- TEPAT 204 + 8 = **212**
-- MELESET **54** · SEPARUH **18** · TIDAK TERADJUDIKASI **7**
+- TEPAT 212 + 1 = **213**
+- MELESET **54** · SEPARUH 18 + 1 = **19** · TIDAK TERADJUDIKASI **7**
 - MENUNGGU **7** (R-7, R-19, R-20, **R-28**, R-36, R-37, R-199)
 
-212+54 = 266; +18 = 284; +7 = 291; +7 = **298** ✅ Nomor terpakai R-1..R-298,
-seluruhnya teradjudikasi atau menunggu. **R-299 dipraregistrasi tetapi belum
-teradjudikasi, jadi ia BELUM masuk total.** N_percobaan = 0; adjudikasi riset
-TETAP TERKUNCI. Ramalan berikutnya sesudah R-299 adalah **R-300**.
+213+54 = 267; +19 = 286; +7 = 293; +7 = **300** ✅ Nomor terpakai R-1..R-300,
+seluruhnya teradjudikasi atau menunggu; tidak ada praregistrasi yang menggantung.
+N_percobaan = 0; adjudikasi riset TETAP TERKUNCI. Ramalan berikutnya **R-301**.
 
 **Erratum yang dibawa:** v40 menulis total **290** dengan kalimat "tiga TEPAT"
-padahal yang baru hanya dua (R-289, R-290); aritmetikanya sendiri benar
-(202 + 2 = 204). PROMPT v43 menulis **291**; PROMPT v44 menulis **297** (benar pada
-saat ditulis, sebelum R-298 diadjudikasi). Angka yang berlaku sekarang **298**.
+padahal yang baru hanya dua; aritmetikanya sendiri benar (202+2=204). PROMPT v43
+menulis **291**, PROMPT v44 menulis **297**, lampiran EKOR v2 menulis **298** —
+semuanya benar pada saatnya. Angka yang berlaku sekarang **300**.
 
-**Utang papan skor:** rincian baris R-236..R-247 masih hanya di jurnal 92–94; dan
-ramalan yang dipraregistrasi di dalam **docstring modul** (mis. R-229 TEPAT, R-230
-MELESET di `lubang_tengah.py` V2) belum masuk papan — pemeriksaan R-224..R-235
-wajib dijalankan lebih dulu agar tidak mengulang KC-32.
+**Utang papan skor:** rincian R-236..R-247 masih hanya di jurnal 92–94. Ramalan
+yang dipraregistrasi di dalam **docstring modul** juga belum masuk papan — dan dua
+di antaranya kini punya bukti laporannya: **R-229 dikukuhkan TEPAT**
+(`funding_tanpa_klines` kosong pada 5 dari 5) dan **R-230 MELESET**
+(`h_a011_menang` ternyata **true**, 6 dari 6 HIDUP). Keduanya menunggu pemeriksaan
+R-224..R-235 agar tidak mengulang KC-32.
 
-## Catatan kejujuran [v43]
+## Catatan kejujuran [v3]
 
-Sejak v40 ada delapan adjudikasi dan **semuanya TEPAT** — tetapi **tujuh di
-antaranya MUDAH** (R-292..R-298), yakni cacah butir uji dari daftar bernomor yang
-deterministik. Satu-satunya yang benar-benar berisiko adalah **R-291**, dan ia
-menang bersih. Deretan tujuh kemenangan MUDAH berturut bukan bukti kecakapan
-meramal; ia bukti bahwa `pytest --collect-only` berperilaku sama setiap kali.
-Pola lama tetap berlaku: **cabang yang saya sebut BERISIKO menang, cabang yang saya
-sebut MUDAH-lah yang dulu kalah** (R-281, R-282, R-284, R-288 butir 1 dan 3).
+**Pola lama TERBALIK pada R-300, dan itu satu-satunya kabar baik tentang mutu
+ramalan pada rangkaian giliran ini.** Sepanjang R-292..R-299 ada delapan kemenangan
+berturut, **tujuh di antaranya MUDAH** — cacah butir uji dari daftar bernomor yang
+deterministik. Pada R-300 saya memasang dua butir berpita yang benar-benar bisa
+kalah, dan **keduanya kalah**; yang menang justru butir yang saya sendiri labeli
+MUDAH. Itu bukan kemunduran: itu bukti bahwa pitanya bukan hiasan.
 
-**Riset sendiri tidak bergerak sejak R-291.** Yang bergerak adalah disiplin
-pencatatan. Ramalan berikutnya yang layak disebut riset harus punya pita yang bisa
-KALAH: anatomi BTCSTUSDT 2022-01 dan uji H-A016.
+**Riset bergerak lagi.** Sejak R-291 tidak ada pengukuran riset baru; R-300
+memecah kebekuan itu dan langsung menghasilkan tiga temuan yang mengubah ADR (lihat
+Daftar ADR dan Temuan sampingan).
 
-**Empat kesalahan proses pada rangkaian giliran ini, semuanya milik penulis:**
+**Kesalahan dan keterbatasan proses yang tetap dicatat:**
 
-1. **Batasan CI dirumuskan dari ingatan dan terbalik bentuknya** (KC-41):
+1. **KC-41** — batasan CI pernah dirumuskan dari ingatan dan terbalik bentuknya:
    `ci.yml` memakai `paths-ignore`, bukan `paths`.
-2. **`STATE.md` didorong terpotong dua kali** (KC-42), dan hanya aturan 52 yang
-   menangkapnya.
-3. **Tiga run CI menyala tanpa praregistrasi** — run **30481231522** (commit
-   `ea2a07e7`, push lampiran ADR), run **30482387663** (commit `117d8c67`, push
-   lampiran EKOR), dan laporan run push STATE v41 yang **tertimpa sebelum terbaca**.
-   Pengukurannya sah; kemenangannya TIDAK ADA.
-4. **Papan skor sempat tertinggal dua nomor** di berkas ini (296 sementara yang
-   berlaku 298) karena setiap perbaikannya sendiri menyalakan CI — kopling yang
-   sekarang ditangani dengan cara menulis praregistrasi berikutnya di dalam berkas
-   yang sama.
+2. **KC-42** — `STATE.md` didorong terpotong dua kali; hanya aturan 52 menangkapnya.
+3. **Empat run CI menyala tanpa praregistrasi** — 30481231522, 30482387663, run
+   push STATE v41 yang laporannya tertimpa sebelum terbaca, dan **30485048845**
+   (769, commit `583fcb79`). Yang terakhir **sengaja** demikian dan dicatat sebagai
+   pengukuran tanpa kemenangan.
+4. **Rantai tulis-CI** (jurnal 118 §4): setiap perbaikan papan skor menyalakan CI
+   yang melahirkan peluang ramalan MUDAH baru. Ditutup dengan berhenti meramalkan
+   cacah uji.
+5. **Selisih listing `lux_ai/serapan/` 38 lawan 39** belum terjelaskan; dicatat
+   sebagai selisih terbuka, bukan dikoreksi (aturan 29). Sesudah trio
+   `anatomi_tengah` masuk, cacah terukurnya menjadi **39**.
 
 Yang layak dicatat sebagai kemajuan bukan papan skornya, melainkan bahwa setiap
-kekalahan melahirkan aturan atau kelas cacat yang menutup lubangnya: 70, 71, 72,
-73, 76, KC-40, **KC-41**, **KC-42**, dan calon 77 serta 78.
+kekalahan melahirkan aturan atau kelas cacat yang menutup lubangnya: 70–74, 76,
+KC-40, KC-41, KC-42, dan calon 77, 78, **79**.
 
 ## Jumlah uji
 
-**722 TERVERIFIKASI DUA ARAH [v42].** Arah pertama, cacah kumpul:
-`reports/ci_terakhir.json` blob **`1b10bd19d03dab9ebdeeff9d50dd17fdd0890d27`**,
-run **30481231522**, commit **`ea2a07e7a43942b9d9413a1d7f537d4149af90b3`**,
-2026-07-29T18:44:01Z, `kode_keluar` **0**, "**722 tests collected in 0.51s**", ref
-runner **`b7c030a8`**. Arah kedua, hasil eksekusi: `reports/ci_terakhir.txt` blob
-**`0f8626bc64b5904fe83b012433219939828359d1`** — sepuluh baris 72 titik + satu baris
-2 titik, lalu "**722 passed in 1.33s**"; 10×72 + 2 = **722** ✅ (aturan 21, 69).
-Kedua angka berasal dari perintah pytest yang BERBEDA di dalam satu run —
-`--collect-only` lawan eksekusi penuh — jadi ini dua pengukuran, bukan satu
+**769 TERUKUR [v3].** `reports/ci_terakhir.json` blob
+**`d7f2be03fb43f72a4f2d594c3deecacb694b6e97`** pada ref
+**`a9bb57e19544f3c1cacf5c07ab97a8817174a7f0`**: run **30485048845**, commit
+**`583fcb7974e35161dda28d624cbac735de2e6c11`**, 2026-07-29T19:35:21Z, `kode_keluar`
+**0**, "**769 tests collected in 0.52s**". Turunan: 722 + **47** butir
+`tests/test_anatomi_tengah.py` = **769** ✅ (aturan 21). Tanpa praregistrasi, dengan
+sengaja.
+
+**722 terukur DELAPAN kali berturut** sebelum itu (aturan 38, masing-masing pada ref
+runnernya): run 30479681620 (`7db59237`) · 30481231522 (`1b10bd19`) · 30482205512
+(`a605c94a`) · 30482387663 (`12083485`) · 30482864644 (`a467ab62`) · 30483341732
+(`4b5a9c4b`) · 30483636460 (`9b0f3a09`) · 30483924857 (`c1d12d53`). Sebelumnya
+**694** tiga kali (`2d853021`, `4bac352c`, `8027606f`), **662** tiga kali
+(`8504322b`, `15d14123`, `18cae8e5`), **638** (`ca47d961`), **630** (`2d0dfa27`).
+Riwayat: 231 → … → 610 → 623 → 630 → 630 → 638 → 662 ×3 → 694 ×3 → 722 ×8 →
+**769**.
+
+**722 pernah TERVERIFIKASI DUA ARAH [v42]:** arah kumpul lewat
+`ci_terakhir.json` blob `1b10bd19` ("722 tests collected"), arah eksekusi lewat
+`reports/ci_terakhir.txt` blob **`0f8626bc64b5904fe83b012433219939828359d1`** —
+sepuluh baris 72 titik + satu baris 2 titik, lalu "722 passed in 1.33s"; 10×72+2 =
+**722** ✅ Dua perintah pytest berbeda dalam satu run, jadi dua pengukuran
 (bandingkan calon aturan 77).
 
-**722 kini terukur TUJUH kali berturut** (aturan 38, masing-masing pada ref
-runnernya): run **30479681620** commit `edea61f7` (blob `7db59237`) · run
-**30481231522** commit `ea2a07e7` (blob `1b10bd19`) · run **30482205512** commit
-`35b3d6d8` (blob `a605c94a`) · run **30482387663** commit `117d8c67` (blob
-`12083485`) · run **30482864644** commit `58a2f09c` (blob `a467ab62`) · run
-**30483341732** commit `eea324fd` (blob `4b5a9c4b`) · run **30483636460** commit
-`022d208a` (blob `9b0f3a09`). Sebelumnya **694** tiga kali (blob `2d853021`,
-`4bac352c`, `8027606f`), **662** tiga kali (`8504322b`, `15d14123`, `18cae8e5`),
-**638** (`ca47d961`), **630** (`2d0dfa27`). Riwayat: 231 → … → 610 → 623 → 630 →
-630 → 638 → 662 ×3 → 694 ×3 → **722 ×7**.
-
-`tests/test_terhenti.py`: V1 **5** → V2 **18** → V3 **25** → **V4 33**.
-`tests/test_silang_settled.py` **24** (638 + 24 = 662).
-`tests/test_bulan_absen.py` **32** (662 + 32 = 694).
-**`tests/test_karantina_semesta.py` 28** butir tanpa satu pun `parametrize`
-(694 + 28 = **722**), daftar bernomor ada di docstringnya. Lainnya:
-`test_semesta_kuota` 58 · `test_lubang_tengah` 56 · `test_kebangkitan` 54 ·
-`test_silang_funding` 49 · `test_penyebut_tahun` 44 · `test_semesta_silang` 32 ·
-`test_bulan_settled` 26. Aturan 57 kini **sembilan belas dari sembilan belas**.
+Cacah per berkas uji: `test_terhenti` V1 5 → V2 18 → V3 25 → **V4 33** ·
+`test_silang_settled` **24** (638+24=662) · `test_bulan_absen` **32** (662+32=694) ·
+`test_karantina_semesta` **28** (694+28=722) · **`test_anatomi_tengah` 47**
+(722+47=**769**) · `test_semesta_kuota` 58 · `test_lubang_tengah` 56 (V1 42) ·
+`test_kebangkitan` 54 · `test_silang_funding` 49 · `test_penyebut_tahun` 44 ·
+`test_semesta_silang` 32 · `test_bulan_settled` 26. Aturan 57 kini **dua puluh dari
+dua puluh**.
 
 **Kendali negatif yang tercatat:** run 30462286751 atas commit `7b819787` berjalan
 ketika `tests/test_terhenti.py` masih memuat kurung kurawal liar; run 30462427226
 atas commit perbaikan `e6b74855` memberi 630 dan kode 0.
 
-**Perilaku `ci.yml` yang kini terbaca dari kode** (blob `c79497b2`): `paths-ignore`
-atas `journal/**`, `decisions/**`, `hipotesis/**`, `reports/**` — jadi setiap push
-di luar keempatnya menyalakan CI, sedangkan laporan CI sendiri ditulis ke
-`reports/**` sehingga **run tidak melahirkan run**; `workflow_dispatch`
-dideklarasikan; `concurrency` per ref dengan `cancel-in-progress: false` sehingga
-run mengantre; cacah dicetak SEBELUM pytest; laporan ditulis dan di-commit dengan
-pesan ber-`[skip ci]` SEBELUM `exit ${kode}`, sehingga suite yang gagal pun tetap
-meninggalkan pengukuran.
+**Perilaku `ci.yml` dari kode** (blob `c79497b2`): `paths-ignore` atas `journal/**`,
+`decisions/**`, `hipotesis/**`, `reports/**`; laporan CI ditulis ke `reports/**`
+sehingga **run tidak melahirkan run**; `workflow_dispatch` dideklarasikan;
+`concurrency` per ref dengan `cancel-in-progress: false` sehingga run mengantre;
+cacah dicetak SEBELUM pytest; laporan di-commit dengan `[skip ci]` SEBELUM
+`exit ${kode}`, sehingga suite yang gagal pun meninggalkan pengukuran.
 
 ## Utang verifikasi
 
 1-5 dan 11 menunggu tahap juri/klasifikasi. 6-23, 25-28 LUNAS. **Nomor utang ini
 BUKAN nomor ramalan — lihat KC-32.**
 
-24. **AKTIF.** LUNAS seperti tercatat v40, ditambah **LUNAS [v41]:** daftar
-    `parquet_karantina` DIBACA (R-291) beserta byte 13.247.705 dan
-    `pecahan_tanpa_karantina` [2, 5] · pembagian 5 hari KC-15 ke tiga bulan BNXUSDT
-    (1.650 / 1.440 / 4.320) · ukuran lilin kedua belas bulan karantina
-    (`nisbah_lilin` 0,903–0,990) · `gerbang_1m.py` UTUH (KC-40) · `pulihkan.py`,
-    `rilis.py`, `serap.py`, `pecahan.py` UTUH · `.github/workflows/bulan_absen.yml`
-    UTUH · `bulan_absen_status.json` dan `bulan_absen.log` · listing `tests/`
-    (41 → 42) · `karantina_semesta.py` dan ujinya sesudah push.
-    **LUNAS [v42]:** **`.github/workflows/ci.yml` DIBACA UTUH** (utang tertua yang
-    tak pernah disadari — KC-41) · **`reports/ci_terakhir.txt` DIBACA UTUH**
-    ("722 passed") · **`STATE.md` v41 dibaca UTUH** · listing akar repo dan
-    `journal/`.
-    **LUNAS BARU [v43]:** **`STATE.md` v42 dibaca UTUH** (blob `e29aeb9c`) sehingga
-    naskah aturan 1–76 dan KC-1..KC-41 pulih · ketiga berkas STATE dibaca ulang UTUH
-    sesudah push (v43 `a91a4934`, EKOR, UKUR) · **`decisions/ADR-A008.md` DIBACA
-    UTUH** (blob `4c3632d6`) — dan pembacaannya mengubah rencana: Keputusan 7
-    menuntut **DUA** pengukuran, bukan satu (lihat Daftar ADR) · jurnal 117 dibaca
-    ulang UTUH (blob `06598cc1`) · PROMPT v44 dibaca ulang UTUH (blob `c03a6413`).
-    **BELUM:** anatomi **BTCSTUSDT 2022-01** · **bentangan kehidupan atas seluruh 38
-    anggota kohort** (prasyarat KEDUA Keputusan 7, baru terbaca dari ADR-A008 §5) ·
-    irisan 880 lawan 877 · **TANGGAL** hari-hari yang hilang pada ketiga bulan
-    BNXUSDT (cacahnya diketahui, tanggal UTC-nya belum) · selisih 40 − 38 sampel
-    `diagnosa_kc15` · `ukur_baris` **V6** (KC-26 + enam belas berkas belum terukur) ·
-    peninjauan `funding.py` / `silang_funding.py` (705 baris, SERI) · daftar **147**
-    nama hanya-arsip · identitas **18** simbol tanpa bulan HIDUP · kehidupan kedua
-    belas simbol-bulan karantina (status MATI/SEPI/HIDUP tidak dapat ada bagi mereka,
-    sebab di luar penyebut 19.586) · `funding_ada` masih null di seluruh manifes ·
-    `dugaan_pengganti` (ADR-A005) · pemulihan harian ADR-A007 · karantina artefak
-    7 hari · 28 anggota kohort di luar sampel abjad · **bunyi R-28 dari STATE v23
-    (KC-32)** · tiga nama ekor 2026-04 · keberadaan `POLUSDT` di dalam 787 ·
-    asal-usul hantu "16 non-ASCII" ·
-    **`.github/workflows/karantina_semesta.yml` belum dibaca ulang sesudah push** ·
-    `lux_ai/semesta/taksonomi.py` (blob `b418c7ba`) — premis "taksonomi beroperasi
-    atas 937 nama arsip" tetap **ASUMSI** · `decisions/ADR-A002.md`, `ADR-A004.md`,
+24. **AKTIF.** LUNAS seperti tercatat v40–v43, ditambah **LUNAS BARU [v3]:**
+    **anatomi BTCSTUSDT 2022-01 — LUNAS** lewat `reports/anatomi_tengah.json` (blob
+    `403ebdf9`, run 30485048909): bentangan 64 bulan kedua pemilik lubang tengah,
+    tetangga lubang, `mati_tersisip`, dan sebaran status · **`lubang_tengah.py` V2
+    DIBACA UTUH** (blob `4d3beaf1`) — utang LANGKAH 0 tertua · **`reports/lubang_tengah.json`
+    DIBACA UTUH** (blob `39cd1caa`) · **`lux_ai/semesta/taksonomi.py` DIBACA UTUH**
+    (blob `b418c7ba`) sehingga premis "taksonomi beroperasi atas 937 nama arsip"
+    berhenti menjadi asumsi — dan **bunyinya keliru**: modul menggolongkan setiap
+    entri sah `semesta_rentang.json`; 937 adalah HASIL, bukan tetapan (kerabat
+    KC-30) · `.github/workflows/lubang_tengah.yml` DIBACA UTUH (blob `557030de`) ·
+    modul dan uji `anatomi_tengah` dibaca ulang UTUH sesudah push (blob `04279335`,
+    `beca7eea`) · jurnal 118, 119, 120 dibaca ulang UTUH (`4ff5c4bc`, `f7ec9f62`,
+    `2472772b`) · listing `lux_ai/serapan/` dan `.github/workflows/` dihitung tangan.
+    **BELUM:** **bentangan kehidupan atas seluruh 38 anggota kohort** — kini
+    **satu-satunya prasyarat Keputusan 7 yang tersisa** · **`mati_tersisip` atas
+    19.586** (penguji langsung pembatal §6 ADR-A008) · **uji H-A017** (byte parquet
+    sebagai gejala kehidupan) · **uji H-A016** (celah kelipatan 15 menit) · irisan
+    880 lawan 877 · **TANGGAL** hari hilang BNXUSDT 2022-04/06/08 · selisih 40 − 38
+    sampel `diagnosa_kc15` · `ukur_baris` **V6** (KC-26 + enam belas berkas belum
+    terukur, kini tujuh belas bersama `anatomi_tengah.py`) · peninjauan `funding.py`
+    / `silang_funding.py` (705 baris, SERI) · daftar **147** nama hanya-arsip ·
+    identitas **18** simbol tanpa bulan HIDUP · kehidupan kedua belas simbol-bulan
+    karantina (mustahil berlabel: di luar penyebut) · `funding_ada` masih null di
+    seluruh manifes · `dugaan_pengganti` (ADR-A005) · pemulihan harian ADR-A007 ·
+    karantina artefak 7 hari · 28 anggota kohort di luar sampel abjad · **bunyi R-28
+    dari STATE v23 (KC-32)** · tiga nama ekor 2026-04 · `POLUSDT` di dalam 787 ·
+    asal-usul hantu "16 non-ASCII" (terbukti **bukan** dari medan taksonomi, sebab
+    `BATAS_CONTOH` 10 membuat daftarnya tak pernah lengkap) · selisih listing 38
+    lawan 39 · `.github/workflows/karantina_semesta.yml` belum dibaca ulang sesudah
+    push (blob kini `de40fa4e`) · `decisions/ADR-A002.md`, `ADR-A004.md`,
     `ADR-A006.md`, `ADR-A007.md`, `PETA_MODUL.md`, `PETA_MODUL_BERKAS.md`,
     `STATE_LAMPIRAN.md`, `STATE_LAMPIRAN_ANGKA.md` belum dibaca pada sesi ini ·
-    **H-A016 belum diuji** atas simbol-bulan yang LOLOS gerbang · laporan yang belum
-    pernah dibaca utuh: `karantina_semesta.json` penuh, `bulan_absen.json`
-    (249.992 B), `semesta_rentang.json` (110.662 B, `sumber_bersidik` false),
-    `ringkas_semesta.json`, `survei_semesta.json`, `survei_progres.json`,
-    `rentang_kc6.json`, `semesta_kuota.json`, `semesta_silang.json`,
-    `penyebut_tahun.json`, `kohort_ekor.json`, `funding_semesta.json`,
-    `funding_selisih_penuh.json` (500 dari 880), `hidup_tanpa_funding.json`,
-    `tests/test_pulihkan.py`, `tests/test_rilis_karantina.py`,
-    `tests/test_karantina_a006.py` · **MUSTAHIL dibaca agen:**
-    `reports/manifes_pecahan_*.json` (pecahan 2 = 2.446.093 B, blob `c0be6ecf…`,
-    DITOLAK alat baca).
+    laporan yang belum pernah dibaca utuh: `karantina_semesta.json` penuh,
+    `bulan_absen.json` (249.992 B), `semesta_rentang.json` (110.662 B,
+    `sumber_bersidik` false), `ringkas_semesta.json`, `survei_semesta.json`,
+    `survei_progres.json`, `rentang_kc6.json`, `semesta_kuota.json`,
+    `semesta_silang.json`, `penyebut_tahun.json`, `kohort_ekor.json`,
+    `funding_semesta.json`, `funding_selisih_penuh.json` (500 dari 880),
+    `hidup_tanpa_funding.json`, `silang_funding.json` (183.963 B),
+    `taksonomi_semesta.json`, `tests/test_pulihkan.py`,
+    `tests/test_rilis_karantina.py`, `tests/test_karantina_a006.py` · **MUSTAHIL
+    dibaca agen:** `reports/manifes_pecahan_*.json` (pecahan 2 = 2.446.093 B, blob
+    `c0be6ecf`, DITOLAK alat baca).
 
 Cacat penulisan yang dicatat dan TIDAK disunting (aturan 29): docstring R-225
 ("tujuh fungsi" lalu sembilan nama) dan docstring `penyebut_tahun.py`
@@ -254,95 +251,101 @@ Cacat penulisan yang dicatat dan TIDAK disunting (aturan 29): docstring R-225
   oleh A006 Keputusan 3. **§10 belum disentuh dan tetap tidak boleh disentuh atas
   bukti kohort semata;** bila kelak disunting, WAJIB menyebut batas
   `perpetual_usdt`. Dua gejala bebas yang menyokong H-A015 TIDAK cukup — keduanya
-  soal penamaan dan penerbitan, bukan perdagangan (KC-18). **Bukti bulan karantina
-  berlilin SEBAGIAN (0,903–0,990) juga TIDAK cukup:** ia menunjukkan berkas tidak
-  utuh, bukan bahwa perdagangan berhenti. **[v43, dari ADR-A008 §5 yang kini
-  terbaca] §10 menyentuh 880 lubang — termasuk 48 lubang AWAL dan 6 lubang TENGAH
-  yang sebabnya belum diukur — jadi ia bukan soal kohort saja.**
+  soal penamaan dan penerbitan, bukan perdagangan (KC-18). Bukti bulan karantina
+  berlilin SEBAGIAN (0,903–0,990) juga TIDAK cukup. §10 menyentuh 880 lubang —
+  termasuk 48 lubang AWAL dan 6 lubang TENGAH — jadi ia bukan soal kohort saja.
+  **[v3] Sebab kedua lubang TENGAH kini terukur letaknya:** keduanya jatuh di
+  wilayah yang sudah MATI, jadi §10 tidak dapat bersandar pada tafsir "funding
+  berhenti mendahului perdagangan" pada kedua kasus itu.
 - **ADR-A003** taksonomi rezim. BELUM ADA (nomor dicadangkan). Wajib memisahkan
   "kontrak berganti nama" dari "pasar hidup kembali", memakai taksonomi INSTRUMEN
   kanonik (KC-29), memuat aturan 68, kebangkitan LITUSDT beserta aturan 74, bulan
-  ABSEN sebagai kelas gejala tersendiri beserta aturan 76, dan **KC-40** — sebab
-  kelas gejala itu dikenali dari medan `pelanggaran` yang bermakna terbalik.
+  ABSEN sebagai kelas gejala tersendiri beserta aturan 76, dan **KC-40**.
+  **[v3] Wajib memuat bentangan LITUSDT yang kini terukur:** HIDUP 2021-02..2025-01
+  (rentetan hidup **48**), MATI 2025-02..2025-11 (**10** bulan), bulan 2025-12
+  DIKARANTINA sehingga di luar penyebut, lalu HIDUP kembali 2026-01..2026-06 —
+  yakni kebangkitan yang terukur pada tingkat simbol-bulan, bukan disimpulkan.
 - **ADR-A004** kebijakan KC-6. DITERIMA. Penggugurnya tetap tidak menyala:
   `cacah_gerbang_lolos_padahal_tepi_terpotong` = 0 atas 37 bulan tengah. Gerbang
-  §2 kini terbaca dari kode (`gerbang_1m.py` blob `c8cc54c8`): enam klausa, dan
-  `menit_hilang_dalam_rentang` dihitung atas rentang yang ADA di berkas, sengaja
-  bukan atas bulan kalender.
+  §2 terbaca dari kode (`gerbang_1m.py` blob `c8cc54c8`): enam klausa, dan
+  `menit_hilang_dalam_rentang` dihitung atas rentang yang ADA di berkas.
 - **ADR-A005** jenis instrumen tahap pertama. DITERIMA.
 - **ADR-A006** karantina + persistensi. DITERIMA, DITERAPKAN, TERVERIFIKASI DARI
-  LUAR. Verifikasi terkuat: kedua belas berkas karantina ADA,
-  `cacah_tanpa_parquet_karantina` **0**, `cacah_dibuang` **0**, `cacah_ditambal`
-  **0**, `jumlah_karantina_tak_terkemas` **0**, byte total **13.247.705** = angka
-  KC-17.
-- **ADR-A007** serapan hibrida. **DIUSULKAN**, belum diterima; wajib
-  memperhitungkan temuan `jumlah_baris` dan kendala R-146. Bahan yang
-  menguatkannya: 7.200 menit KC-15 UTUH di arsip HARIAN; kesebelas bulan absen ADA
-  di arsip (`tak_diterbitkan_arsip` 0); dan bulan karantina rata-rata hanya
-  kehilangan 1–10% menitnya, jadi pemulihan berpeluang besar mengembalikannya ke
-  penyebut — yang akan **MENGUBAH 19.586**. Perubahan penyebut DILARANG tanpa ADR
-  (aturan 30, 44).
-- **ADR-A008** akibat KC-18. **DIBACA UTUH [v43]** (blob `4c3632d6`). Keputusan
-  1–6 DITERIMA; Keputusan 5 bersemesta 18.087. **Yang baru diketahui dari
-  pembacaan itu, dan mengubah rencana:** §5 menuntut **DUA** pengukuran sebelum
-  Keputusan 7 boleh diambil — (a) **bentangan kehidupan atas seluruh 38 anggota
-  kohort** (sampel yang ada 10, dipilih menurut ABJAD, sistematis bukan acak), dan
-  (b) **sifat keenam lubang TENGAH**. Selama ini hanya (b) yang dicatat sebagai
-  prasyarat; (a) tertinggal. Alasan §5 yang wajib dibawa: arah sebab masih dua
-  kemungkinan yang **meramalkan data yang sama** — pembersihan administratif lawan
-  penghentian penerbitan yang tertunda — dan **arsip funding TIDAK terbukti cacat**.
-  Keputusan 7 tetap **BERCABANG DUA, kedua cabangnya bernama:** **LITUSDT** (lubang
-  tengah berentetan **5**, MATI seluruhnya, bulan **2025-12 ABSEN** dengan 43.590
-  dari 44.640 menit, lalu **BANGKIT** terukur) lawan **BTCSTUSDT** (lubang tengah
-  **TUNGGAL** 2022-01, `cacah_lilin` 44.640 PENUH, **tanpa bulan absen**, **tidak
-  ada di daftar karantina**, tetap MATI, 53 dari 53). Keputusannya WAJIB memuat
-  kedua cabang, WAJIB per simbol-bulan (Keputusan 6: label MATI tidak pernah per
-  simbol), DILARANG menyebut funding dan perdagangan berhenti "serentak", WAJIB
-  menyebut batas `perpetual_usdt`, WAJIB memakai aturan 66 revisi, 67, 68, 74, 76,
-  dan **DILARANG diambil sebelum BTCSTUSDT 2022-01 dianatomi seperti BNXUSDT
-  2022-04**. Definisi mengikat dari Keputusan 2: **SEPI** = `bagian_volume_nol` ≥
-  0,5; **MATI** = `transaksi_total` 0 — dua istilah, tidak boleh dipertukarkan.
-  Keputusan 3 mengikat semua laporan: penyebut penuh dan penyebut tanpa MATI wajib
-  diterbitkan BERDAMPINGAN. Keputusan 5 melarang perkalian 456 × 43.200. R-276
-  mengikat: tak ada peralihan yang terbukti. R-278 mengikat: 13 / 2 / 0.
-  **Pembatalnya tersurat di §6:** bila simbol-bulan MATI ternyata banyak dan
-  tersebar di TENGAH sejarah simbol aktif, label saja tidak cukup dan kebijakan
-  penyebut wajib naik menjadi gerbang riset; bila ada `transaksi_total` 0 tetapi
-  harga BERGERAK, definisi MATI wajib ditulis ulang, bukan ditambal; bila
-  `parser_terbukti` false pada run kehidupan berikutnya, seluruh angka §1 batal.
+  LUAR: kedua belas berkas karantina ADA, `cacah_tanpa_parquet_karantina` **0**,
+  `cacah_dibuang` **0**, `cacah_ditambal` **0**, byte total **13.247.705**.
+- **ADR-A007** serapan hibrida. **DIUSULKAN**, belum diterima. Penguatnya: 7.200
+  menit KC-15 UTUH di arsip HARIAN; kesebelas bulan absen ADA di arsip; bulan
+  karantina hanya kehilangan 1–10% menitnya sehingga pemulihan berpeluang
+  **MENGUBAH 19.586**. Perubahan penyebut DILARANG tanpa ADR (aturan 30, 44).
+- **ADR-A008** akibat KC-18. Keputusan 1–6 DITERIMA; Keputusan 5 bersemesta 18.087.
+  Definisi mengikat (Keputusan 2): **SEPI** = `bagian_volume_nol` ≥ 0,5; **MATI** =
+  `transaksi_total` 0 — dua istilah, tidak boleh dipertukarkan. Keputusan 3
+  mengikat semua laporan: penyebut penuh dan penyebut tanpa MATI berdampingan.
+  Keputusan 5 melarang perkalian 456 × 43.200 dan mencatat sampel 10 dari 38
+  dipilih menurut ABJAD. Keputusan 6: label MATI tidak pernah per simbol.
+  **Keputusan 7 tetap DITANGGUHKAN**, dengan dua perubahan besar [v3]:
+  1. **Pembatal pertama §6 TIDAK menyala pada kedua lubang tengah.**
+     `cacah_mati_tersisip` **0 pada BTCSTUSDT dan 0 pada LITUSDT**,
+     `pembatal_a008_menyala` **false**. Lubang 2022-01 BTCST diapit dua bulan
+     **MATI**, bukan dua bulan hidup. Ini TIDAK berarti pembatal itu mati di
+     semesta: `mati_tersisip` belum diukur atas 19.586 (aturan 20).
+  2. **KOREKSI rumusan lama (aturan 29, bukan suntingan diam-diam):** STATE v43
+     memasang LITUSDT dan BTCSTUSDT sebagai dua cabang **berlawanan**. Pada sumbu
+     letak lubang, keduanya ternyata **KEMBAR** — sama-sama lubang funding di
+     wilayah mati. Yang membedakan keduanya adalah **apa yang terjadi sesudahnya**:
+     LIT bangkit (6 dari 6 HIDUP 2026-01..2026-06, `h_a011_menang` **true**), BTCST
+     tidak pernah hidup sekali pun.
+  **Prasyarat yang tersisa tinggal SATU:** bentangan kehidupan atas seluruh **38**
+  anggota kohort (§5). Keputusan 7 tetap WAJIB memuat kedua cabang, WAJIB per
+  simbol-bulan, DILARANG menyebut funding dan perdagangan berhenti "serentak" — dan
+  bentangan LITUSDT kini memberi alasan tambahan yang kuat untuk larangan itu:
+  perdagangan berhenti **lima bulan sebelum** funding. Pembatal lain §6 tetap
+  berlaku: `transaksi_total` 0 tetapi harga BERGERAK menuntut definisi MATI ditulis
+  ulang; `parser_terbukti` false membatalkan seluruh angka §1.
 - **ADR berikutnya A009.**
 
-## Temuan sampingan yang belum diukur
+## Temuan sampingan
 
-- **Anatomi BTCSTUSDT 2022-01** — pekerjaan teknis paling berharga yang tersisa,
-  dan prasyarat tersurat Keputusan 7 ADR-A008 **bersama** bentangan kehidupan 38
-  anggota kohort.
-- **Uji H-A016** (celah kelipatan 15 menit) atas simbol-bulan yang LOLOS gerbang;
-  penyebutnya harus dipilih hati-hati sebab gerbang menolak bulan bercelah.
-- **TANGGAL** hari-hari yang hilang pada BNXUSDT 2022-04 / 2022-06 / 2022-08.
-- Irisan **880 lawan 877**; selisih 40 − 38 sampel `diagnosa_kc15`.
-- Tiga nama ekor 2026-04; mengapa `SXPUSDT` berhenti 2026-05; apakah `POLUSDT` ada
-  di 787; asal-usul hantu "16 non-ASCII".
-- Daftar 147 nama hanya-arsip; 18 simbol tanpa bulan HIDUP.
-- Apakah 50 kontrak delivery bertanggal pernah masuk perhitungan mana pun.
-- Mengapa penamaan SETTLED datang berombak pada 2023-02 dan 2025-07, dan mengapa
-  2025-07 juga bulan tebing funding dan kohort puncak.
-- Sebab kebangkitan/peralihan kedelapan simbol (di luar jangkauan arsip).
-- Saham, ETF, dan komoditas token masih terhitung `perpetual_usdt`.
-- `.decode("utf-8","replace")` di `klines` membungkam byte rusak.
-- Apakah BUSD/USDC layak digabung dengan USDT (80 nama, 1.705 bulan).
-- Sebab KC-14 (H-A004) tak dapat diuji; sebab KC-15 tidak diketahui — meski
-  pembagiannya kini terukur, SEBABNYA tetap tidak diketahui.
-- Selisih byte funding AGIXUSDT 531 lawan 529; `waktu_utc` runner berjalan lebih
-  dulu daripada jam sesi; satuan stempel mikro lawan mili.
-- `tests/test_pulihkan.py`, `tests/test_rilis_karantina.py`, dan
-  `tests/test_karantina_a006.py` belum pernah dibaca.
+**BARU [v3], terukur:**
+
+- **BTCSTUSDT tidak pernah HIDUP satu bulan pun.** 64 bulan di penyebut: HIDUP
+  **0**, MATI **63** berentetan 2021-04..2026-06, SEPI **1** (2021-03, bulan
+  pertama, `cacah_lilin` 39.900 — bulan sebagian). Klines terus diterbitkan penuh
+  selama 63 bulan tanpa satu transaksi: **KC-18 dalam bentuk paling ekstrem yang
+  pernah terukur di repo ini.** 0+63+1+0 = 64 ✅
+- **Kematian LITUSDT mendahului lubang funding lima bulan.** MATI mulai 2025-02;
+  lubang funding mulai 2025-07; keduanya pulih bersama 2026-01. Ini pengukuran
+  pertama yang menunjukkan **arah waktu**, bukan hanya keberadaan irisan. Satu
+  simbol bukan bukti (aturan 20, 10).
+- **H-A017 (BARU):** ukuran `byte_parquet` adalah gejala kehidupan yang terbaca
+  tanpa membuka kolom volume. LITUSDT: ~1,63 juta (2025-01 HIDUP) → **394.147**
+  (2025-02 MATI) → ~390–434 ribu selama sepuluh bulan mati → **1.939.126** (2026-01
+  HIDUP). BTCSTUSDT sepanjang riwayat matinya **369.967–451.805** — pita yang sama.
+  Pita dugaan: bulan MATI < ~500 ribu byte, bulan HIDUP simbol yang sama > ~1,4
+  juta. **Belum diuji atas semesta; dilarang digeneralkan.**
+- `byte_parquet_total`: BTCSTUSDT **26.811.584**, LITUSDT **95.777.311**.
+
+**Lama, belum diukur:** irisan 880 lawan 877; selisih 40 − 38 sampel
+`diagnosa_kc15`; TANGGAL hari hilang BNXUSDT 2022-04/06/08; tiga nama ekor 2026-04;
+mengapa `SXPUSDT` berhenti 2026-05; `POLUSDT` di dalam 787; asal hantu "16
+non-ASCII"; daftar 147 nama hanya-arsip; 18 simbol tanpa bulan HIDUP; apakah 50
+kontrak delivery bertanggal pernah masuk perhitungan; mengapa penamaan SETTLED
+datang berombak pada 2023-02 dan 2025-07, dan mengapa 2025-07 juga bulan tebing
+funding dan kohort puncak; sebab kebangkitan/peralihan kedelapan simbol; saham,
+ETF, komoditas token masih terhitung `perpetual_usdt`;
+`.decode("utf-8","replace")` di `klines` membungkam byte rusak; apakah BUSD/USDC
+layak digabung dengan USDT (80 nama, 1.705 bulan); sebab KC-14 (H-A004) tak dapat
+diuji; sebab KC-15 tidak diketahui meski pembagiannya terukur; selisih byte funding
+AGIXUSDT 531 lawan 529; `waktu_utc` runner mendahului jam sesi; satuan stempel
+mikro lawan mili; `AKHIR_SEMESTA` "2026-06" DIASUMSIKAN di `taksonomi.py` dan
+diterbitkan sebagai `akhir_semesta_diasumsikan` (sumber selisih 129 lawan 128).
 
 ## Penomoran berikutnya
 
 Aturan sampai **76** (calon **77** dua berkas berblob sama, calon **78** batas alat
-sebagai bagian desain — keduanya belum berlaku). Kelas cacat sampai **KC-42**.
-Hipotesis baru **H-A016**. Jurnal berikutnya **118**. STATE berikutnya **v44**
+sebagai bagian desain, calon **79** praregistrasi di jurnal — **79 sudah diuji
+sekali dan berhasil**, ketiganya belum berlaku). Kelas cacat sampai **KC-42**.
+Hipotesis baru **H-A017**. Jurnal berikutnya **121**. STATE berikutnya **v44**
 (bagian 1 wajib tetap berhenti sesudah kelas cacat dan menunjuk kedua lampiran).
-PROMPT berikutnya **v45**. ADR berikutnya **A009**. Ramalan: **R-299
-dipraregistrasi di dalam berkas ini**, berikutnya **R-300**. Papan skor **298**.
+PROMPT berikutnya **v45**. ADR berikutnya **A009**. Ramalan berikutnya **R-301**.
+Papan skor **300**.

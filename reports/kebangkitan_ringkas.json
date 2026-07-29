@@ -1,0 +1,304 @@
+{
+  "btcst_sebaran_status": {
+    "HIDUP": 0,
+    "MATI": 53,
+    "SEPI": 0,
+    "TAK_TERUKUR": 0
+  },
+  "bukan_bukti": false,
+  "cocok_kohort_ekor": {
+    "baris": [
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-06",
+        "kohort_ekor_v4": "2024-06",
+        "sama": true,
+        "simbol": "AGIXUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-04",
+        "kohort_ekor_v4": "2025-04",
+        "sama": true,
+        "simbol": "ALPACAUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-02",
+        "kohort_ekor_v4": "2025-02",
+        "sama": true,
+        "simbol": "AMBUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BADGERUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BALUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-12",
+        "kohort_ekor_v4": "2024-12",
+        "sama": true,
+        "simbol": "BLZUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BNXUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-11",
+        "kohort_ekor_v4": "2024-11",
+        "sama": true,
+        "simbol": "BONDUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "COMBOUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-12",
+        "kohort_ekor_v4": "2024-12",
+        "sama": true,
+        "simbol": "DARUSDT"
+      }
+    ],
+    "cacah_beda": 0,
+    "cacah_cocok": 10,
+    "cacah_hilang": 0,
+    "cacah_simbol": 10,
+    "seluruhnya_cocok": true
+  },
+  "h_a012": {
+    "cacah_peristiwa": 8,
+    "cacah_simbol_bangkit": 8,
+    "cacah_simbol_bangkit_penuh": 8,
+    "menang": true,
+    "penyebut_simbol": 787,
+    "simbol_bangkit_penuh": [
+      "CTKUSDT",
+      "CVCUSDT",
+      "CVXUSDT",
+      "ICPUSDT",
+      "LITUSDT",
+      "MAVIAUSDT",
+      "SLPUSDT",
+      "TLMUSDT"
+    ],
+    "terukur": true
+  },
+  "ringkasan": {
+    "btcst_cacah_bulan": 53,
+    "btcst_cacah_bulan_kalender": 53,
+    "btcst_cacah_hidup": 0,
+    "btcst_menang": false,
+    "btcst_terukur": true,
+    "cacah_beda_kohort": 0,
+    "cacah_cocok_kohort": 10,
+    "cacah_hilang_kohort": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_mati_total": 1401,
+    "cacah_peristiwa_bangkit": 8,
+    "cacah_simbol_bangkit": 8,
+    "cacah_simbol_bangkit_penuh": 8,
+    "cacah_simbol_bermati": 133,
+    "cacah_tahun_bermati": 7,
+    "h_a012_menang": true,
+    "h_a012_terukur": true,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "penyebut_simbol": 787,
+    "selisih_mati": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8
+  },
+  "sebaran_mati_simbol": {
+    "cacah_mati_total": 1401,
+    "cacah_simbol_bermati": 133,
+    "cacah_teratas": 20,
+    "teratas": [
+      {
+        "cacah_bulan_mati": 63,
+        "simbol": "BTCSTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 48,
+        "simbol": "SCUSDT"
+      },
+      {
+        "cacah_bulan_mati": 43,
+        "simbol": "FTTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 43,
+        "simbol": "RAYUSDT"
+      },
+      {
+        "cacah_bulan_mati": 29,
+        "simbol": "CVCUSDT"
+      },
+      {
+        "cacah_bulan_mati": 27,
+        "simbol": "STRAXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 26,
+        "simbol": "DGBUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "GLMRUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "IDEXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "MDTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "RADUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "SNTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "STPTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "AGIXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "OCEANUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "WAVESUSDT"
+      },
+      {
+        "cacah_bulan_mati": 21,
+        "simbol": "BTSUSDT"
+      },
+      {
+        "cacah_bulan_mati": 20,
+        "simbol": "KLAYUSDT"
+      },
+      {
+        "cacah_bulan_mati": 20,
+        "simbol": "UNFIUSDT"
+      },
+      {
+        "cacah_bulan_mati": 18,
+        "simbol": "BLZUSDT"
+      }
+    ]
+  },
+  "sebaran_mati_tahun": {
+    "2020": 1,
+    "2021": 9,
+    "2022": 34,
+    "2023": 103,
+    "2024": 192,
+    "2025": 506,
+    "2026": 556
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "9d25670cfb7d7ac60a46a8afd22e1eb91caffff919b277d5d26359f386157b48",
+  "simbol_bangkit": [
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "ICPUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "cacah_peristiwa": 1,
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "versi_kebangkitan": 1,
+  "waktu_utc": "2026-07-29T10:20:47Z"
+}

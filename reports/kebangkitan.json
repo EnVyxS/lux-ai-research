@@ -1,0 +1,709 @@
+{
+  "baris_kebangkitan": [
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 67,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2025-05",
+          "bulan_mati_mulai": "2024-05",
+          "bulan_mati_terakhir": "2025-03",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 11
+        }
+      ],
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 67,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2025-06",
+          "bulan_mati_mulai": "2022-12",
+          "bulan_mati_terakhir": "2025-04",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 29
+        }
+      ],
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 45,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2025-08",
+          "bulan_mati_mulai": "2024-06",
+          "bulan_mati_terakhir": "2025-06",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 13
+        }
+      ],
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2021-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 62,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2022-09",
+          "bulan_mati_mulai": "2022-07",
+          "bulan_mati_terakhir": "2022-08",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 2
+        }
+      ],
+      "simbol": "ICPUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 64,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2026-01",
+          "bulan_mati_mulai": "2025-02",
+          "bulan_mati_terakhir": "2025-11",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 10
+        }
+      ],
+      "simbol": "LITUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 28,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2025-04",
+          "bulan_mati_mulai": "2025-01",
+          "bulan_mati_terakhir": "2025-02",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 2
+        }
+      ],
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 32,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2025-08",
+          "bulan_mati_mulai": "2024-06",
+          "bulan_mati_terakhir": "2025-06",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 13
+        }
+      ],
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bangkit_penuh": true,
+      "bulan_pertama": "2021-07",
+      "bulan_terakhir": "2026-06",
+      "cacah_bulan": 60,
+      "cacah_peristiwa": 1,
+      "peristiwa": [
+        {
+          "ada_hidup_sebelum": true,
+          "bulan_hidup_pertama_sesudah": "2023-03",
+          "bulan_mati_mulai": "2022-07",
+          "bulan_mati_terakhir": "2023-02",
+          "cacah_bulan_antara": 0,
+          "panjang_mati": 8
+        }
+      ],
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "btcst": {
+    "baris": [
+      {
+        "bulan": "2022-02",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-03",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-04",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-05",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-06",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-07",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-08",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-09",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-10",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-11",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2022-12",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-01",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-02",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-03",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-04",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-05",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-06",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-07",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-08",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-09",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-10",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-11",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2023-12",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-01",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-02",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-03",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-04",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-05",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-06",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-07",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-08",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-09",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-10",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-11",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2024-12",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-01",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-02",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-03",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-04",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-05",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-06",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-07",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-08",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-09",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-10",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-11",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2025-12",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-01",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-02",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-03",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-04",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-05",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      },
+      {
+        "bulan": "2026-06",
+        "simbol": "BTCSTUSDT",
+        "status": "MATI"
+      }
+    ],
+    "cacah_bulan": 53,
+    "cacah_hidup": 0,
+    "menang": false,
+    "mulai": "2022-02",
+    "sampai": "2026-06",
+    "sebaran_status": {
+      "HIDUP": 0,
+      "MATI": 53,
+      "SEPI": 0,
+      "TAK_TERUKUR": 0
+    },
+    "simbol": "BTCSTUSDT",
+    "terukur": true
+  },
+  "bukan_bukti": false,
+  "catatan_batas": "cacah kebangkitan ini terbatas pada 19.586 simbol-bulan yang LOLOS gerbang; 12 simbol-bulan karantina tidak ada di dalamnya, dan bulan yang tidak terdaftar di arsip bukan bulan MATI melainkan bulan yang tidak ada (aturan 30, 46)",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, selisih_penyebut bukan nol, atau selisih_mati bukan nol membatalkan seluruh angka (aturan 24); H-A012 yang gugur BUKAN penggugur",
+  "catatan_tafsir": "kebangkitan yang terukur TIDAK membuktikan sebabnya: pendaftaran ulang, perubahan rezim penerbitan arsip, maupun pemulihan minat pasar sama-sama menghasilkan pola MATI lalu HIDUP (aturan 10)",
+  "cocok_kohort_ekor": {
+    "baris": [
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-06",
+        "kohort_ekor_v4": "2024-06",
+        "sama": true,
+        "simbol": "AGIXUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-04",
+        "kohort_ekor_v4": "2025-04",
+        "sama": true,
+        "simbol": "ALPACAUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-02",
+        "kohort_ekor_v4": "2025-02",
+        "sama": true,
+        "simbol": "AMBUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BADGERUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BALUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-12",
+        "kohort_ekor_v4": "2024-12",
+        "sama": true,
+        "simbol": "BLZUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "BNXUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-11",
+        "kohort_ekor_v4": "2024-11",
+        "sama": true,
+        "simbol": "BONDUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2025-03",
+        "kohort_ekor_v4": "2025-03",
+        "sama": true,
+        "simbol": "COMBOUSDT"
+      },
+      {
+        "ada_di_penyebut": true,
+        "kebangkitan_v1": "2024-12",
+        "kohort_ekor_v4": "2024-12",
+        "sama": true,
+        "simbol": "DARUSDT"
+      }
+    ],
+    "cacah_beda": 0,
+    "cacah_cocok": 10,
+    "cacah_hilang": 0,
+    "cacah_simbol": 10,
+    "seluruhnya_cocok": true
+  },
+  "definisi": {
+    "bangkit_penuh": "kebangkitan yang didahului sekurang-kurangnya satu bulan HIDUP sebelum rentetan MATI; tanpa itu yang terjadi adalah permulaan yang lambat, BUKAN kebangkitan",
+    "btcst_menang": "dipakai apa adanya dari lubang_tengah.uji_h_a011 dengan rentang 2022-02..2026-06; definisinya SATU, tidak disalin ulang (aturan 36)",
+    "bulan_hidup_terakhir": "bulan HIDUP terbesar di dalam penyebut 19.586; BUKAN definisi kohort_ekor V4 yang memindai MUNDUR dari 2025-07 dan tidak pernah memeriksa bulan sesudah jendelanya",
+    "h_a012_menang": "benar hanya bila LEBIH DARI SATU simbol punya peristiwa kebangkitan; satu simbol saja berarti LITUSDT tetap tunggal",
+    "kebangkitan": "bulan MATI yang mengakhiri rentetan MATI dan diikuti kapan pun sesudahnya oleh bulan HIDUP; bulan SEPI di antaranya tidak membatalkan dan jaraknya dilaporkan",
+    "rentetan_status": "bulan berstatus sama digabung HANYA bila bersambung menurut kalender; jurang bulan memutus rentetan, tidak dijembatani"
+  },
+  "h_a012": {
+    "cacah_peristiwa": 8,
+    "cacah_simbol_bangkit": 8,
+    "cacah_simbol_bangkit_penuh": 8,
+    "menang": true,
+    "penyebut_simbol": 787,
+    "simbol_bangkit_penuh": [
+      "CTKUSDT",
+      "CVCUSDT",
+      "CVXUSDT",
+      "ICPUSDT",
+      "LITUSDT",
+      "MAVIAUSDT",
+      "SLPUSDT",
+      "TLMUSDT"
+    ],
+    "terukur": true
+  },
+  "ringkasan": {
+    "btcst_cacah_bulan": 53,
+    "btcst_cacah_bulan_kalender": 53,
+    "btcst_cacah_hidup": 0,
+    "btcst_menang": false,
+    "btcst_terukur": true,
+    "cacah_beda_kohort": 0,
+    "cacah_cocok_kohort": 10,
+    "cacah_hilang_kohort": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_mati_total": 1401,
+    "cacah_peristiwa_bangkit": 8,
+    "cacah_simbol_bangkit": 8,
+    "cacah_simbol_bangkit_penuh": 8,
+    "cacah_simbol_bermati": 133,
+    "cacah_tahun_bermati": 7,
+    "h_a012_menang": true,
+    "h_a012_terukur": true,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "penyebut_simbol": 787,
+    "selisih_mati": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8
+  },
+  "sebaran_mati_simbol": {
+    "cacah_mati_total": 1401,
+    "cacah_simbol_bermati": 133,
+    "cacah_teratas": 20,
+    "teratas": [
+      {
+        "cacah_bulan_mati": 63,
+        "simbol": "BTCSTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 48,
+        "simbol": "SCUSDT"
+      },
+      {
+        "cacah_bulan_mati": 43,
+        "simbol": "FTTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 43,
+        "simbol": "RAYUSDT"
+      },
+      {
+        "cacah_bulan_mati": 29,
+        "simbol": "CVCUSDT"
+      },
+      {
+        "cacah_bulan_mati": 27,
+        "simbol": "STRAXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 26,
+        "simbol": "DGBUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "GLMRUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "IDEXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "MDTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "RADUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "SNTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 25,
+        "simbol": "STPTUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "AGIXUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "OCEANUSDT"
+      },
+      {
+        "cacah_bulan_mati": 24,
+        "simbol": "WAVESUSDT"
+      },
+      {
+        "cacah_bulan_mati": 21,
+        "simbol": "BTSUSDT"
+      },
+      {
+        "cacah_bulan_mati": 20,
+        "simbol": "KLAYUSDT"
+      },
+      {
+        "cacah_bulan_mati": 20,
+        "simbol": "UNFIUSDT"
+      },
+      {
+        "cacah_bulan_mati": 18,
+        "simbol": "BLZUSDT"
+      }
+    ]
+  },
+  "sebaran_mati_tahun": {
+    "2020": 1,
+    "2021": 9,
+    "2022": 34,
+    "2023": 103,
+    "2024": 192,
+    "2025": 506,
+    "2026": 556
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "9d25670cfb7d7ac60a46a8afd22e1eb91caffff919b277d5d26359f386157b48",
+  "sidik_kode_lubang_tengah": "c9372bd763b86cfeb2adcf0a0c0c43dae8d9aa9a6508e9c32f7671d5ec7b3f4e",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "versi_funding": 6,
+  "versi_kebangkitan": 1,
+  "waktu_utc": "2026-07-29T10:20:47Z"
+}

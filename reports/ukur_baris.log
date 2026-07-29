@@ -107,6 +107,19 @@
     {
       "ada": true,
       "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/lubang_tengah.py",
+      "byte": 15883,
+      "cacah_baris": 390,
+      "cacah_baris_kode": 328,
+      "cacah_baris_komentar": 8,
+      "cacah_baris_kosong": 54,
+      "cacah_newline": 390,
+      "melebihi_pagar": false,
+      "sha256": "c4f9cf3a7a472391d03cc3a3b53297a17433f9bb6de90dc5803f864882e20f1f"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
       "berkas": "lux_ai/serapan/pulihkan.py",
       "byte": 14839,
       "cacah_baris": 383,
@@ -134,41 +147,41 @@
       "ada": true,
       "berakhir_newline": true,
       "berkas": "lux_ai/serapan/silang_funding.py",
-      "byte": 15908,
-      "cacah_baris": 396,
-      "cacah_baris_kode": 329,
-      "cacah_baris_komentar": 7,
-      "cacah_baris_kosong": 60,
-      "cacah_newline": 396,
+      "byte": 29873,
+      "cacah_baris": 705,
+      "cacah_baris_kode": 592,
+      "cacah_baris_komentar": 14,
+      "cacah_baris_kosong": 99,
+      "cacah_newline": 705,
       "melebihi_pagar": false,
-      "sha256": "f27a4cffa1cc7b1ed2045517b9446a6bf96672ef600d04e1d58497f779b9351d"
+      "sha256": "97cc217a59279b4b3f06a7ff749f5d023ff5bb72f67f1d39b059e96497c172a3"
     },
     {
       "ada": true,
       "berakhir_newline": true,
       "berkas": "lux_ai/serapan/ukur_baris.py",
-      "byte": 10212,
-      "cacah_baris": 226,
-      "cacah_baris_kode": 191,
-      "cacah_baris_komentar": 2,
-      "cacah_baris_kosong": 33,
-      "cacah_newline": 226,
+      "byte": 13354,
+      "cacah_baris": 280,
+      "cacah_baris_kode": 235,
+      "cacah_baris_komentar": 3,
+      "cacah_baris_kosong": 42,
+      "cacah_newline": 280,
       "melebihi_pagar": false,
-      "sha256": "6d210fd93af8c0722a03228966210af0abfde5e69866d2e3d54b0d9de6cc37dc"
+      "sha256": "ab70e95119ca056233b22adc5bc1f2621007c2534afad5f18c8ca2e07c9e6c37"
     }
   ],
   "catatan_penggugur": "cacah_berkas_hilang != 0 berarti daftar yang diukur tidak lengkap dan seluruh cacah di laporan ini batal dipakai menutup ramalan (aturan 24)",
   "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
-  "catatan_versi": "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; V3 menambah kehidupan_arsip.py dan silang_funding.py. Mekanika, definisi, dan pagar tidak berubah sejak V1 (aturan 29). Angka 318 baris pulihkan.py yang tercatat di STATE adalah angka V1 dan digantikan oleh laporan ini",
+  "catatan_versi": "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; V3 menambah kehidupan_arsip.py dan silang_funding.py; V4 menambah lubang_tengah.py. Mekanika, definisi, dan pagar tidak berubah sejak V1 (aturan 29). Angka 318 baris pulihkan.py yang tercatat di STATE adalah angka V1 dan digantikan oleh laporan ini; angka 396 baris silang_funding.py adalah angka V1 dan digantikan oleh laporan V4 ini",
   "definisi_cacah_baris": "len(teks.splitlines()), definisi yang sama dengan pagar 800 baris di tests/test_kontinuitas.py; inilah definisi yang mengadjudikasi R-175 dan R-179",
   "pagar_baris": 800,
   "ringkasan": {
     "cacah_baris_terbesar": 705,
-    "cacah_baris_total": 3885,
-    "cacah_berkas_ada": 12,
-    "cacah_berkas_diminta": 12,
+    "cacah_baris_total": 4638,
+    "cacah_berkas_ada": 13,
+    "cacah_berkas_diminta": 13,
     "cacah_berkas_hilang": 0,
     "cacah_berkas_melebihi_pagar": 0
   },
-  "versi_ukur_baris": 3
+  "versi_ukur_baris": 4
 }

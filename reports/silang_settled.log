@@ -1,0 +1,306 @@
+{
+  "baris": [
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2024-09",
+      "bulan_klines_pertama": "2024-09",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-04",
+      "cacah_bulan_klines": 21,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2025-09",
+      "bulan_klines_pertama": "2025-09",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2026-01",
+      "cacah_bulan_klines": 9,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "AIAUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2025-06",
+      "bulan_klines_pertama": "2025-06",
+      "bulan_klines_terakhir": "2026-03",
+      "bulan_settled_terakhir": "2026-04",
+      "cacah_bulan_klines": 10,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "BDXNUSDT"
+    },
+    {
+      "arah": "sama",
+      "bulan_berfunding_pertama": "2023-02",
+      "bulan_klines_pertama": "2022-05",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2023-02",
+      "cacah_bulan_klines": 48,
+      "cacah_lubang": 19,
+      "kohort_banyak": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2020-11",
+      "bulan_klines_pertama": "2020-11",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-04",
+      "cacah_bulan_klines": 67,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2020-11",
+      "bulan_klines_pertama": "2020-11",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-05",
+      "cacah_bulan_klines": 67,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2022-09",
+      "bulan_klines_pertama": "2022-09",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_bulan_klines": 45,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "arah": "sama",
+      "bulan_berfunding_pertama": "2022-09",
+      "bulan_klines_pertama": "2021-05",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2022-09",
+      "cacah_bulan_klines": 62,
+      "cacah_lubang": 16,
+      "kohort_banyak": true,
+      "simbol": "ICPUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2021-02",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-12",
+      "cacah_bulan_klines": 64,
+      "cacah_lubang": 5,
+      "kohort_banyak": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2024-02",
+      "bulan_klines_pertama": "2024-02",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-03",
+      "cacah_bulan_klines": 28,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "arah": "sama",
+      "bulan_berfunding_pertama": "2023-02",
+      "bulan_klines_pertama": "2023-02",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2023-02",
+      "cacah_bulan_klines": 41,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "MINAUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2025-04",
+      "bulan_klines_pertama": "2025-04",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_bulan_klines": 14,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "PUMPUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2023-10",
+      "bulan_klines_pertama": "2023-10",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_bulan_klines": 32,
+      "cacah_lubang": 0,
+      "kohort_banyak": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "arah": "lebih_awal",
+      "bulan_berfunding_pertama": "2020-07",
+      "bulan_klines_pertama": "2020-07",
+      "bulan_klines_terakhir": "2026-05",
+      "bulan_settled_terakhir": "2026-06",
+      "cacah_bulan_klines": 71,
+      "cacah_lubang": 5,
+      "kohort_banyak": false,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "arah": "sama",
+      "bulan_berfunding_pertama": "2023-03",
+      "bulan_klines_pertama": "2021-07",
+      "bulan_klines_terakhir": "2026-06",
+      "bulan_settled_terakhir": "2023-03",
+      "cacah_bulan_klines": 60,
+      "cacah_lubang": 20,
+      "kohort_banyak": true,
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "bukan_bukti": false,
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, selisih_penyebut bukan nol, selisih_kendali_funding_pertama bukan nol, atau cacah_pasangan bukan 15 membatalkan seluruh angka (aturan 24)",
+  "catatan_tafsir": "kecocokan bulan membuktikan PENAMAAN kontrak, bukan perdagangan (KC-18); sekalipun seluruh pasangan cocok, laporan ini tidak berhak menyimpulkan kontrak lama masih diperdagangkan (aturan 10)",
+  "definisi": {
+    "bulan_berfunding_pertama": "bulan klines pertama simbol yang TIDAK berlubang funding; DEFINISI LOKAL, kesetaraannya dengan terbitan lubang_tengah V2 diuji sebagai kendali, bukan diasumsikan (KC-9)",
+    "bulan_settled_terakhir": "TETAPAN terbitan reports/bulan_settled.json; 15 nama SETTLED tidak satu pun ada di penyebut 19.586, jadi bulan ini tidak dibaca ulang di sini",
+    "kohort_banyak": "pasangan berkohort 6, 9, 9 bulan: BNX, ICP, TLM"
+  },
+  "ringkasan": {
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_pasangan": 15,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_funding_pertama": [
+      {
+        "cocok": true,
+        "lokal": "2023-02",
+        "simbol": "BNXUSDT",
+        "terbitan": "2023-02"
+      },
+      {
+        "cocok": true,
+        "lokal": "2022-09",
+        "simbol": "ICPUSDT",
+        "terbitan": "2022-09"
+      },
+      {
+        "cocok": true,
+        "lokal": "2024-02",
+        "simbol": "JUPUSDT",
+        "terbitan": "2024-02"
+      },
+      {
+        "cocok": true,
+        "lokal": "2020-03",
+        "simbol": "QTUMUSDT",
+        "terbitan": "2020-03"
+      },
+      {
+        "cocok": true,
+        "lokal": "2023-03",
+        "simbol": "TLMUSDT",
+        "terbitan": "2023-03"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "sebaran_arah": {
+      "lebih_awal": 11,
+      "lebih_lambat": 0,
+      "sama": 4,
+      "tak_terukur": 0
+    },
+    "selisih_kendali_funding_pertama": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8,
+    "uji_h_a015": {
+      "butir_1": {
+        "cacah_cocok": 4,
+        "kohort_banyak_seluruhnya_cocok": true,
+        "menang": true,
+        "pita": [
+          3,
+          4
+        ],
+        "simbol_cocok": [
+          "BNXUSDT",
+          "ICPUSDT",
+          "MINAUSDT",
+          "TLMUSDT"
+        ]
+      },
+      "butir_2": {
+        "ambang": 10,
+        "cacah_lebih_awal": 11,
+        "menang": true,
+        "penyebut": 12
+      },
+      "butir_3": {
+        "cacah_kohort_lubang_lebih_dari_10": 3,
+        "cacah_satu_bulan_lubang_kurang_dari_10": 12,
+        "menang": true,
+        "penyebut_kohort": 3,
+        "penyebut_satu_bulan": 12
+      },
+      "h_a015_menang": true,
+      "penggugur_menyala": false
+    }
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "0d814bc60b3f8e62c4eee21deffe00c3c6213be0409be333754b89202281bb3c",
+  "sidik_kode_funding": "d38548236f03314eaa648f64f73be5af2f682207be750a2c2fa413fad581513a",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "versi_funding": 6,
+  "versi_silang_settled": 1,
+  "waktu_utc": "2026-07-29T16:14:29Z"
+}
+

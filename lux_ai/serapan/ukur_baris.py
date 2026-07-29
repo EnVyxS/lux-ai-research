@@ -157,6 +157,62 @@ PRAREGISTRASI V4 (ditulis SEBELUM run ini):
 
 Catatan jujur: cacah baris `ukur_baris.py` sendiri kembali TIDAK diramalkan,
 sebab berkas inilah yang sedang disunting.
+
+---
+
+## V5 (29 Juli 2026, 19:40 WIB) — empat modul baru dan empat berkas uji
+
+Seluruh teks V1..V4 dibiarkan utuh (aturan 29). Yang berubah pada V5 tetap hanya
+SATU hal: `BERKAS_DIUKUR` bertambah delapan nama —
+`lux_ai/serapan/kebangkitan.py`, `lux_ai/serapan/penyebut_tahun.py`,
+`lux_ai/serapan/semesta_silang.py`, `lux_ai/serapan/bulan_settled.py`, serta
+empat berkas uji `tests/test_kebangkitan.py`, `tests/test_penyebut_tahun.py`,
+`tests/test_semesta_silang.py`, `tests/test_bulan_settled.py`. Mekanika,
+definisi `cacah_baris`, pagar 800, dan medan penggugur TIDAK disentuh. Daftar
+naik dari 13 menjadi 21 nama.
+
+Tiga alasan, semuanya utang yang tercatat:
+
+1. Keempat modul serapan terbaru (`kebangkitan`, `penyebut_tahun`,
+   `semesta_silang`, `bulan_settled`) sudah menerbitkan angka yang dipakai STATE,
+   tetapi cacah barisnya belum pernah dihitung sekali pun, sehingga pagar 800
+   belum pernah diuji atas mereka.
+2. `lubang_tengah.py` sudah naik ke V2 sejak diukur pada V4, jadi angka V4-nya
+   berstatus KEDALUWARSA. Namanya sudah ada di daftar sejak V4, jadi run ini
+   menebusnya tanpa perubahan daftar untuk berkas itu.
+3. Berkas uji sama sekali belum pernah masuk daftar ukur. Aturan 48 hanya pernah
+   ditegakkan atas modul, padahal berkas uji juga tumbuh dan `test_kebangkitan.py`
+   serta `test_lubang_tengah.py` sudah melewati 15 KB. Empat berkas uji yang
+   berpasangan dengan keempat modul baru masuk lebih dulu; berkas uji lain
+   menyusul pada versi berikutnya supaya perubahan tiap versi tetap satu langkah.
+
+Sebelum berkas ini disunting, `tests/test_ukur_baris.py` dibaca utuh SEKALI LAGI
+(blob `7975bf88`): ketiga fungsi ujinya tidak mengunci panjang maupun isi
+`BERKAS_DIUKUR`; yang dikunci hanya `cacah_berkas_hilang == 0` atas repo nyata.
+Kedelapan nama baru sudah dipastikan ada di `main` lewat pelistingan direktori
+`lux_ai/serapan/` dan `tests/`. Karena itu cacah butir uji TIDAK berubah oleh V5.
+
+PRAREGISTRASI V5 (ditulis SEBELUM run ini):
+
+- **R-253** — CI melaporkan **552 butir** dan **kode 0**. Satuan: BUTIR yang
+  dikumpulkan pytest. Basis: 552 terverifikasi pada run 30448334675 (commit
+  9bdab113); V5 tidak menambah maupun menghapus satu pun fungsi uji, jadi
+  angkanya harus DIAM. Ini ramalan MUDAH — ia hanya menyalin angka yang sudah
+  terverifikasi, dan disebut mudah supaya papan skor tidak dibanggakan secara
+  palsu. Bila ia bergerak tanpa uji baru, ada uji yang hilang atau gagal
+  terkumpul, dan itu MELESET.
+- **R-254** — `cacah_berkas_hilang` = **0** dan `cacah_berkas_melebihi_pagar` =
+  **0** atas kedua puluh satu berkas yang didaftar. Penggugur (aturan 24):
+  `cacah_berkas_hilang` != 0 membatalkan seluruh cacah laporan ini.
+- **R-255** — berkas dengan `cacah_baris` TERBESAR pada laporan V5 adalah
+  `lux_ai/serapan/silang_funding.py`. Dasar: laporan V4 mencatatnya sebagai
+  berkas terpanjang, dan ia satu-satunya yang sudah menembus pagar aturan 48.
+  Ini ramalan tentang IDENTITAS, bukan taksiran angka, sehingga ia bisa benar-
+  benar gagal bila `lubang_tengah.py` V2 atau `kebangkitan.py` ternyata lebih
+  panjang — dan itulah gunanya.
+- Cacah baris tiap berkas SENGAJA tidak diramalkan satu-satu (aturan 58 pilihan
+  c): taksiran dari byte bias ke bawah dan sudah tiga kali menjatuhkan ramalan
+  (R-175, R-179, R-203, ditambah R-225). Lebih baik diukur daripada ditaksir.
 """
 from __future__ import annotations
 
@@ -164,7 +220,7 @@ import hashlib
 import json
 from pathlib import Path
 
-VERSI = 4
+VERSI = 5
 KELUARAN = "reports/ukur_baris.json"
 PAGAR_BARIS = 800
 
@@ -173,15 +229,23 @@ BERKAS_DIUKUR = [
     "lux_ai/serapan/funding_cdn.py",
     "lux_ai/serapan/arsip.py",
     "lux_ai/serapan/gerbang_1m.py",
+    "lux_ai/serapan/kebangkitan.py",
     "lux_ai/serapan/kehidupan.py",
     "lux_ai/serapan/kehidupan_arsip.py",
     "lux_ai/serapan/kohort_ekor.py",
     "lux_ai/serapan/kohort_ringkas.py",
     "lux_ai/serapan/lubang_tengah.py",
+    "lux_ai/serapan/penyebut_tahun.py",
     "lux_ai/serapan/pulihkan.py",
     "lux_ai/serapan/resample.py",
+    "lux_ai/serapan/semesta_silang.py",
+    "lux_ai/serapan/bulan_settled.py",
     "lux_ai/serapan/silang_funding.py",
     "lux_ai/serapan/ukur_baris.py",
+    "tests/test_kebangkitan.py",
+    "tests/test_penyebut_tahun.py",
+    "tests/test_semesta_silang.py",
+    "tests/test_bulan_settled.py",
 ]
 
 
@@ -233,6 +297,11 @@ def ringkas(hasil) -> dict:
         "cacah_berkas_melebihi_pagar": sum(1 for h in ada if h.get("melebihi_pagar")),
         "cacah_baris_total": sum(int(h.get("cacah_baris") or 0) for h in ada),
         "cacah_baris_terbesar": max((int(h.get("cacah_baris") or 0) for h in ada), default=0),
+        "berkas_terpanjang": max(
+            ada,
+            key=lambda h: int(h.get("cacah_baris") or 0),
+            default={"berkas": None},
+        ).get("berkas"),
     }
 
 
@@ -257,11 +326,14 @@ def jalankan(akar: str = ".") -> dict:
         "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
         "catatan_versi": (
             "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; V3 menambah "
-            "kehidupan_arsip.py dan silang_funding.py; V4 menambah lubang_tengah.py. "
-            "Mekanika, definisi, dan pagar tidak berubah sejak V1 (aturan 29). Angka "
-            "318 baris pulihkan.py yang tercatat di STATE adalah angka V1 dan "
-            "digantikan oleh laporan ini; angka 396 baris silang_funding.py adalah "
-            "angka V1 dan digantikan oleh laporan V4 ini"
+            "kehidupan_arsip.py dan silang_funding.py; V4 menambah lubang_tengah.py; "
+            "V5 menambah kebangkitan.py, penyebut_tahun.py, semesta_silang.py, "
+            "bulan_settled.py, dan empat berkas uji pasangannya, serta menambah medan "
+            "ringkasan berkas_terpanjang. Mekanika, definisi, dan pagar tidak berubah "
+            "sejak V1 (aturan 29). Angka 318 baris pulihkan.py yang tercatat di STATE "
+            "adalah angka V1; angka 396 baris silang_funding.py adalah angka V1 dan "
+            "digantikan laporan V4; angka lubang_tengah.py pada laporan V4 adalah "
+            "angka V1 modul itu dan digantikan laporan V5 ini"
         ),
     }
 

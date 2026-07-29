@@ -1,8 +1,10 @@
 """Uji modul kohort_ekor tanpa jaringan sama sekali.
 
-Sepuluh fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan cacah
-butir pytest (aturan 47). VERSI 1 berkas ini menulis "Tujuh" padahal fungsinya
-delapan; kekeliruan itu ditemukan dengan mencacah ulang, bukan dengan menatap.
+Dua belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
+cacah butir pytest (aturan 47). Cacahnya dihitung dengan menyebut satu per satu,
+bukan ditaksir dengan menatap: sidik_kode, header, indeks_kolom, baris_cacat,
+ringkas_lilin, bagian, mundur_bulan, penggugur_kendali, parser_terbukti,
+kendali_hidup, riwayat, jendela_dan_peran.
 """
 
 from __future__ import annotations
@@ -27,6 +29,14 @@ def _lilin(waktu: int, volume: str, transaksi: str) -> str:
     return f"{waktu},1,1,1,1,{volume},{waktu + 59999},10,{transaksi},0,0,0"
 
 
+def _baris(bulan: str, bagian_nol: float, transaksi: int) -> dict:
+    return {
+        "bulan": bulan,
+        "bagian_volume_nol": bagian_nol,
+        "transaksi_total": transaksi,
+    }
+
+
 def test_sidik_kode_mencakup_gerbang_dan_arsip():
     """Aturan 48: sidik menyempit diam-diam bila daftar berkasnya kurang."""
     akar = Path(kohort_ekor.__file__).parent
@@ -39,7 +49,6 @@ def test_sidik_kode_mencakup_gerbang_dan_arsip():
 
     penuh = ["arsip.py", "gerbang_1m.py", "kohort_ekor.py", "resample.py"]
     assert kohort_ekor.sidik_kode() == sidik(penuh)
-    # menghapus satu nama HARUS mengubah sidik, kalau tidak cakupannya semu
     assert kohort_ekor.sidik_kode() != sidik(["kohort_ekor.py", "arsip.py"])
 
 
@@ -124,7 +133,6 @@ def test_ringkas_menyalakan_penggugur_saat_kendali_gagal_atau_bulan_meleset():
     assert r["cacah_uji_bulan_bukan_diharapkan"] == 1
     assert r["cacah_gagal_unduh"] == 1
     assert r["kendali_sah"] is False
-    # kendali yang utuh mensahkan pembandingnya
     baik = kohort_ekor.ringkas(
         baris[:1] + [{"peran": "kendali", "bulan": "2025-06", "bagian_volume_nol": 1.0}]
     )
@@ -147,7 +155,6 @@ def test_parser_terbukti_gugur_saat_kendali_hidup_ikut_kosong():
     hasil = kohort_ekor.ringkas(ramai)
     assert hasil["parser_terbukti"] is True
     assert hasil["cacah_kendali_hidup_ramai"] == 2
-    # tanpa kendali hidup sama sekali, pembaca TIDAK boleh dianggap terbukti
     assert kohort_ekor.ringkas([])["parser_terbukti"] is False
 
 
@@ -163,9 +170,61 @@ def test_baris_kendali_hidup_memasangkan_simbol_dengan_kedua_bulan():
     assert all(b["peran"] == "kendali_hidup" for b in hasil)
     assert ("BTCUSDT", "2026-06", "kendali_hidup") in dipanggil
     assert ("BTCUSDT", "2025-06", "kendali_hidup") in dipanggil
-    # bulan kendali yang tidak diketahui tidak menghasilkan permintaan hantu
     hanya_satu = kohort_ekor.baris_kendali_hidup("2026-06", None, ukur=palsu)
     assert len(hanya_satu) == len(kohort_ekor.KENDALI_HIDUP)
+
+
+def test_nilai_riwayat_membedakan_mati_kebangkitan_dan_tak_terukur():
+    """Tiga keadaan yang mudah tertukar bila hanya dilihat sekilas."""
+    mati = kohort_ekor.nilai_riwayat(
+        "AAA",
+        [
+            _baris("2025-04", 0.02, 500),
+            _baris("2025-05", 1.0, 0),
+            _baris("2026-06", 1.0, 0),
+        ],
+    )
+    assert mati["bulan_hidup_terakhir"] == "2025-04"
+    assert mati["bulan_sepi_paling_awal"] == "2025-05"
+    assert mati["cacah_bulan_ramai"] == 1
+    assert mati["cacah_bulan_sepi"] == 2
+    assert mati["bangkit_kembali"] is False
+    assert mati["batas_tercapai"] is False
+    assert mati["hidup_terakhir_sebelum_tebing"] is True
+
+    bangkit = kohort_ekor.nilai_riwayat(
+        "BBB", [_baris("2025-05", 1.0, 0), _baris("2025-09", 0.01, 900)]
+    )
+    assert bangkit["bangkit_kembali"] is True
+    assert bangkit["bulan_hidup_terakhir"] == "2025-09"
+    assert bangkit["hidup_terakhir_sebelum_tebing"] is False
+
+    # seluruh jendela sepi: TAK TERUKUR, bukan "tidak pernah hidup" (aturan 41)
+    buta = kohort_ekor.nilai_riwayat("CCC", [_baris("2026-05", 1.0, 0), _baris("2026-06", 1.0, 0)])
+    assert buta["batas_tercapai"] is True
+    assert buta["bulan_hidup_terakhir"] is None
+    assert buta["hidup_terakhir_sebelum_tebing"] is None
+
+    # baris bergalat tidak boleh ikut dihitung sebagai bulan sepi
+    bergalat = kohort_ekor.nilai_riwayat(
+        "DDD", [{"bulan": "2026-06", "galat": "putus"}, _baris("2026-05", 0.01, 10)]
+    )
+    assert bergalat["cacah_bulan_dipindai"] == 1
+    assert bergalat["bulan_hidup_terakhir"] == "2026-05"
+
+
+def test_jendela_bulan_dan_peran_bulan():
+    tersedia = ["2025-03", "2025-04", "2025-05", "2025-06", "2025-07"]
+    assert kohort_ekor.jendela_bulan(tersedia, 3) == ["2025-05", "2025-06", "2025-07"]
+    assert kohort_ekor.jendela_bulan(tersedia, 99) == tersedia
+    assert kohort_ekor.jendela_bulan([], 3) == []
+    # urutan masukan tidak boleh menentukan isi jendela
+    assert kohort_ekor.jendela_bulan(list(reversed(tersedia)), 2) == ["2025-06", "2025-07"]
+
+    assert kohort_ekor.peran_bulan("2026-06", "2026-06", "2025-06") == "uji"
+    assert kohort_ekor.peran_bulan("2025-06", "2026-06", "2025-06") == "kendali"
+    assert kohort_ekor.peran_bulan("2025-11", "2026-06", "2025-06") == "pindai"
+    assert kohort_ekor.peran_bulan("2025-06", "2026-06", None) == "pindai"
 
 
 def test_muat_kohort_melaporkan_galat_alih_alih_melempar(tmp_path):

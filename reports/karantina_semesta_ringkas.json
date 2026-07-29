@@ -1,0 +1,326 @@
+{
+  "baris": [
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 42540,
+      "bulan": "2025-04",
+      "indeks_pecahan": 0,
+      "menit_kalender": 43200,
+      "nisbah_lilin": 0.984722,
+      "parquet_karantina": "data/parquet_karantina/AERGOUSDT/AERGOUSDT-1m-2025-04.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 660,
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 43965,
+      "bulan": "2026-01",
+      "indeks_pecahan": 7,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.984879,
+      "parquet_karantina": "data/parquet_karantina/AIAUSDT/AIAUSDT-1m-2026-01.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 675,
+      "simbol": "AIAUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 41550,
+      "bulan": "2022-04",
+      "indeks_pecahan": 6,
+      "menit_kalender": 43200,
+      "nisbah_lilin": 0.961806,
+      "parquet_karantina": "data/parquet_karantina/BNXUSDT/BNXUSDT-1m-2022-04.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 1650,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 41760,
+      "bulan": "2022-06",
+      "indeks_pecahan": 6,
+      "menit_kalender": 43200,
+      "nisbah_lilin": 0.966667,
+      "parquet_karantina": "data/parquet_karantina/BNXUSDT/BNXUSDT-1m-2022-06.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 1440,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 40320,
+      "bulan": "2022-08",
+      "indeks_pecahan": 6,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.903226,
+      "parquet_karantina": "data/parquet_karantina/BNXUSDT/BNXUSDT-1m-2022-08.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 4320,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 42585,
+      "bulan": "2025-04",
+      "indeks_pecahan": 3,
+      "menit_kalender": 43200,
+      "nisbah_lilin": 0.985764,
+      "parquet_karantina": "data/parquet_karantina/CTKUSDT/CTKUSDT-1m-2025-04.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 615,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 44130,
+      "bulan": "2025-05",
+      "indeks_pecahan": 0,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.988575,
+      "parquet_karantina": "data/parquet_karantina/CVCUSDT/CVCUSDT-1m-2025-05.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 510,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 43950,
+      "bulan": "2025-07",
+      "indeks_pecahan": 1,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.984543,
+      "parquet_karantina": "data/parquet_karantina/CVXUSDT/CVXUSDT-1m-2025-07.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 690,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 43590,
+      "bulan": "2025-12",
+      "indeks_pecahan": 4,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.976478,
+      "parquet_karantina": "data/parquet_karantina/LITUSDT/LITUSDT-1m-2025-12.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 1050,
+      "simbol": "LITUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 43620,
+      "bulan": "2025-03",
+      "indeks_pecahan": 1,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.977151,
+      "parquet_karantina": "data/parquet_karantina/MAVIAUSDT/MAVIAUSDT-1m-2025-03.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 1020,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 44190,
+      "bulan": "2025-07",
+      "indeks_pecahan": 1,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.989919,
+      "parquet_karantina": "data/parquet_karantina/PUMPUSDT/PUMPUSDT-1m-2025-07.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 450,
+      "simbol": "PUMPUSDT"
+    },
+    {
+      "ada_checksum_zip": true,
+      "ada_parquet_karantina": true,
+      "baris": 43935,
+      "bulan": "2025-07",
+      "indeks_pecahan": 0,
+      "menit_kalender": 44640,
+      "nisbah_lilin": 0.984207,
+      "parquet_karantina": "data/parquet_karantina/SLPUSDT/SLPUSDT-1m-2025-07.parquet",
+      "pelanggaran": [
+        "jarak_60_detik",
+        "tanpa_menit_hilang"
+      ],
+      "selisih_menit": 705,
+      "simbol": "SLPUSDT"
+    }
+  ],
+  "berkas_sumber": "reports/karantina_semesta.json",
+  "bukan_bukti": false,
+  "per_pecahan": [
+    {
+      "cacah_daftar_terbaca": 3,
+      "cacah_karantina": 3,
+      "cacah_parquet_karantina_ditulis": 3,
+      "indeks": 0,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 3,
+      "cacah_karantina": 3,
+      "cacah_parquet_karantina_ditulis": 3,
+      "indeks": 1,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 0,
+      "cacah_karantina": 0,
+      "cacah_parquet_karantina_ditulis": 0,
+      "indeks": 2,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 1,
+      "cacah_karantina": 1,
+      "cacah_parquet_karantina_ditulis": 1,
+      "indeks": 3,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 1,
+      "cacah_karantina": 1,
+      "cacah_parquet_karantina_ditulis": 1,
+      "indeks": 4,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 0,
+      "cacah_karantina": 0,
+      "cacah_parquet_karantina_ditulis": 0,
+      "indeks": 5,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 3,
+      "cacah_karantina": 3,
+      "cacah_parquet_karantina_ditulis": 3,
+      "indeks": 6,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    },
+    {
+      "cacah_daftar_terbaca": 1,
+      "cacah_karantina": 1,
+      "cacah_parquet_karantina_ditulis": 1,
+      "indeks": 7,
+      "karantina_dipersistenkan": true,
+      "versi_pecahan": 6
+    }
+  ],
+  "ringkasan": {
+    "byte_parquet_karantina_semesta": 13247705,
+    "cacah_daftar_terpotong": 0,
+    "cacah_karantina_semesta": 12,
+    "cacah_kunci_ganda": 0,
+    "cacah_kunci_unik": 12,
+    "cacah_manifes_dibaca": 8,
+    "cacah_manifes_diminta": 8,
+    "cacah_pecahan_berkarantina": 6,
+    "cacah_tanpa_parquet_karantina": 0,
+    "catatan_lilin": "nisbah_lilin = baris / menit kalender bulan itu; ia mengukur apakah bulan karantina berlilin SEBAGIAN, dan tidak ada bilangan yang dipraregistrasi untuknya",
+    "catatan_penggugur": "yang menggugurkan hanyalah cacat bahan baku: manifes hilang, kunci ganda, selisih cacah daftar, daftar terpotong, cacah_dibuang atau cacah_ditambal bukan nol, sidik kode tak seragam, kendali tidak sah, selisih ditulis lawan terdaftar bukan nol, atau karantina tak terkemas. uji_r291, selisih_penyebut, dan selisih_byte_tercatat TIDAK menggugurkan apa pun (aturan 24, 72)",
+    "catatan_rentang": "daftar ini adalah simbol-bulan yang DIKARANTINA gerbang 1m, bukan bulan ABSEN dari rentang lolos; keduanya penyebut berbeda dan angkanya dilarang dipertukarkan (aturan 76, KC-39)",
+    "jumlah_cacah_dibuang": 0,
+    "jumlah_cacah_ditambal": 0,
+    "jumlah_karantina_tak_terkemas": 0,
+    "jumlah_parquet_karantina_ditulis": 12,
+    "jumlah_selisih_cacah_daftar": 0,
+    "kendali": [
+      {
+        "cacah": 0,
+        "sah": true,
+        "simbol": "BTCUSDT"
+      },
+      {
+        "cacah": 0,
+        "sah": true,
+        "simbol": "ETHUSDT"
+      }
+    ],
+    "kendali_sah": true,
+    "manifes_hilang": [],
+    "pecahan_tanpa_karantina": [
+      2,
+      5
+    ],
+    "penyebut_lolos": 19586,
+    "penyebut_semesta": 19598,
+    "sebaran_pelanggaran": {
+      "jarak_60_detik": 12,
+      "tanpa_menit_hilang": 12
+    },
+    "selisih_byte_tercatat": 0,
+    "selisih_ditulis_terdaftar": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_manifes": [
+      "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601"
+    ],
+    "sidik_seragam": true,
+    "uji_r291": {
+      "cacah_terukur": 12,
+      "catatan": "R-291 BERISIKO: daftar karantina belum pernah dibaca ketika ia dipraregistrasi; ia bersandar pada aritmetika penyebut dan bulan ABSEN, bukan pada isi daftar ini",
+      "diramalkan_cacah": 12,
+      "diramalkan_hilang": [],
+      "menang": true,
+      "mudah": false,
+      "terukur_tak_diramalkan": []
+    }
+  },
+  "sidik_kode": "ad30150ebb51fa21bb2af663b8b539dad0e993eb28757845a4f6df64d913e44c",
+  "versi_karantina_semesta": 1,
+  "waktu_utc": "2026-07-29T18:23:28Z"
+}

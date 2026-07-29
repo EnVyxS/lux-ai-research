@@ -1,7 +1,7 @@
-"""Uji semesta_kuota V1.
+"""Uji semesta_kuota V2.
 
-DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-260:
-1 versi_satu · 2 sumber_sama_dengan_semesta_silang · 3 dua_berkas_keluaran ·
+DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-264:
+1 versi_dua · 2 sumber_sama_dengan_semesta_silang · 3 dua_berkas_keluaran ·
 4 sidik_kode_heksadesimal · 5 pisah_settled_tanpa_garis_bawah ·
 6 pisah_settled_dengan_garis_bawah · 7 pisah_settled_nama_biasa ·
 8 kuota_usdt · 9 kuota_busd · 10 kuota_usdc · 11 kuota_btc ·
@@ -15,7 +15,16 @@ DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-260:
 29 kendali_kurang · 30 kendali_hilang · 31 kode_keluar_bersih ·
 32 kode_keluar_penggugur.
 
-Cacah: 32 fungsi, tanpa parametrize.
+Tambahan V2, bernomor 33..46 (14 fungsi baru, dasar 584 + 14 = 598):
+33 berkas_dicap_memuat_sumber_penyebut · 34 total_pecahan_dari_semesta_silang ·
+35 cacah_lolos_per_simbol · 36 himpunan_hanya_arsip ·
+37 himpunan_hanya_arsip_kosong · 38 per_kuota_himpunan_menyaring ·
+39 per_kuota_himpunan_kosong · 40 urai_selisih_identitas ·
+41 urai_selisih_nama_hanya_arsip · 42 urai_selisih_abai_settled ·
+43 nama_berkuota · 44 kode_keluar_penggugur_penyebut ·
+45 kode_keluar_penggugur_lolos · 46 ringkas_memuat_daftar_baru.
+
+Cacah: 46 fungsi, tanpa parametrize.
 """
 
 from __future__ import annotations
@@ -45,11 +54,14 @@ def ringkasan_bersih():
         "cacah_nama_arsip": sk.CACAH_NAMA_TERCATAT,
         "jumlah_bulan_arsip": sk.JUMLAH_BULAN_TERCATAT,
         "cacah_nama_settled": sk.CACAH_SETTLED_TERCATAT,
+        "cacah_penyebut_simbol": sk.PENYEBUT_SIMBOL_TERCATAT,
+        "bulan_lolos_gerbang": sk.PENYEBUT_BULAN_TERCATAT,
+        "penyebut_bagian_arsip": True,
     }
 
 
-def test_versi_satu():
-    assert sk.VERSI == 1
+def test_versi_dua():
+    assert sk.VERSI == 2
 
 
 def test_sumber_sama_dengan_semesta_silang():
@@ -251,3 +263,138 @@ def test_kode_keluar_penggugur():
     r = ringkasan_bersih()
     r["cacah_nama_settled"] = 14
     assert sk.kode_keluar(r) == 2
+
+
+# --- V2, fungsi 33..46 ----------------------------------------------------
+
+
+def test_berkas_dicap_memuat_sumber_penyebut():
+    """Aturan 22: berkas yang menentukan penyebut WAJIB ikut dicap."""
+    assert "silang_funding.py" in sk.BERKAS_DICAP
+    assert "kehidupan_arsip.py" in sk.BERKAS_DICAP
+    assert "semesta_silang.py" in sk.BERKAS_DICAP
+    assert "semesta_kuota.py" in sk.BERKAS_DICAP
+
+
+def test_total_pecahan_dari_semesta_silang():
+    assert sk.TOTAL_PECAHAN == semesta_silang.TOTAL_PECAHAN
+
+
+def test_cacah_lolos_per_simbol():
+    status = {
+        ("BTCUSDT", "2020-01"): "HIDUP",
+        ("BTCUSDT", "2020-02"): "HIDUP",
+        ("ETHUSDT", "2020-01"): "MATI",
+    }
+    hasil = sk.cacah_lolos_per_simbol(status)
+    assert hasil == {"BTCUSDT": 2, "ETHUSDT": 1}
+
+
+def test_himpunan_hanya_arsip():
+    baris = sk.klasifikasi(peta_contoh())
+    hanya = sk.himpunan_hanya_arsip(baris, ["BTCUSDT", "ETHUSDT", "BTCDOMUSDT"])
+    assert hanya == [
+        "1000SHIBBUSD",
+        "ADABUSD",
+        "ADAUSDC",
+        "CTKUSDTSETTLED",
+        "ETHBTC",
+        "ICPUSDT_SETTLED",
+    ]
+
+
+def test_himpunan_hanya_arsip_kosong():
+    baris = sk.klasifikasi({"BTCUSDT": 78})
+    assert sk.himpunan_hanya_arsip(baris, ["BTCUSDT"]) == []
+
+
+def test_per_kuota_himpunan_menyaring():
+    baris = sk.klasifikasi(peta_contoh())
+    per = sk.per_kuota_himpunan(baris, ["ADABUSD", "ADAUSDC", "ETHBTC"])
+    assert per["BUSD"]["cacah_nama"] == 1
+    assert per["USDC"]["cacah_nama"] == 1
+    assert per["BTC"]["cacah_nama"] == 1
+    assert "USDT" not in per
+
+
+def test_per_kuota_himpunan_kosong():
+    baris = sk.klasifikasi(peta_contoh())
+    assert sk.per_kuota_himpunan(baris, []) == {}
+
+
+def test_urai_selisih_identitas():
+    baris = sk.klasifikasi(peta_contoh())
+    urai = sk.urai_selisih(
+        baris,
+        ["BTCUSDT", "ETHUSDT"],
+        {"BTCUSDT": 70, "ETHUSDT": 60},
+    )
+    assert urai["bulan_usdt_bukan_settled"] == 178
+    assert urai["bulan_arsip_milik_penyebut"] == 148
+    assert urai["bulan_arsip_milik_hanya_arsip"] == 30
+    assert urai["bulan_lolos_gerbang"] == 130
+    assert urai["selisih_total"] == 48
+    assert urai["selisih_dalam_penyebut"] == 18
+    assert urai["selisih_dari_hanya_arsip"] == 30
+    assert urai["identitas_utuh"] is True
+
+
+def test_urai_selisih_nama_hanya_arsip():
+    baris = sk.klasifikasi(peta_contoh())
+    urai = sk.urai_selisih(baris, ["BTCUSDT", "ETHUSDT"], {"BTCUSDT": 78})
+    assert urai["nama_usdt_hanya_arsip"] == ["BTCDOMUSDT"]
+    assert urai["cacah_nama_usdt_hanya_arsip"] == 1
+
+
+def test_urai_selisih_abai_settled():
+    """Nama SETTLED tidak boleh masuk penguraian penyebut USDT."""
+    baris = sk.klasifikasi(peta_contoh())
+    urai = sk.urai_selisih(baris, [], {})
+    assert urai["bulan_usdt_bukan_settled"] == 178
+    assert "CTKUSDTSETTLED" not in urai["nama_usdt_hanya_arsip"]
+    assert "ICPUSDT_SETTLED" not in urai["nama_usdt_hanya_arsip"]
+
+
+def test_nama_berkuota():
+    baris = sk.klasifikasi(peta_contoh())
+    assert sk.nama_berkuota(baris, "BTC") == ["ETHBTC"]
+    assert sk.nama_berkuota(baris, sk.KUOTA_TAK_DIKENAL) == []
+
+
+def test_kode_keluar_penggugur_penyebut():
+    r = ringkasan_bersih()
+    r["cacah_penyebut_simbol"] = 786
+    assert sk.kode_keluar(r) == 2
+    r = ringkasan_bersih()
+    r["penyebut_bagian_arsip"] = False
+    assert sk.kode_keluar(r) == 2
+
+
+def test_kode_keluar_penggugur_lolos():
+    r = ringkasan_bersih()
+    r["bulan_lolos_gerbang"] = 19585
+    assert sk.kode_keluar(r) == 2
+
+
+def test_ringkas_memuat_daftar_baru():
+    """Aturan 52: daftar yang wajib dibaca utuh harus ada di berkas ringkas."""
+    laporan = {
+        "versi_semesta_kuota": 2,
+        "sidik_kode": "a" * 64,
+        "sidik_data": "b" * 64,
+        "per_kuota": {"USDT": {"cacah_nama": 1}},
+        "per_kuota_hanya_arsip": {"BUSD": {"cacah_nama": 1}},
+        "terbanyak_bukan_usdt": {"pemegang": ["BUSD"]},
+        "urai_selisih": {"selisih_total": 163},
+        "nama_tak_dikenal": ["ABCXYZ"],
+        "nama_hanya_arsip": ["ABCXYZ"],
+        "baris": [{"nama": "ABCXYZ"}],
+        "ringkasan": {"cacah_nama_arsip": 937},
+        "waktu_utc": "2026-07-29T00:00:00Z",
+    }
+    kecil = sk.ringkas(laporan)
+    assert kecil["nama_tak_dikenal"] == ["ABCXYZ"]
+    assert kecil["per_kuota_hanya_arsip"] == {"BUSD": {"cacah_nama": 1}}
+    assert kecil["urai_selisih"] == {"selisih_total": 163}
+    assert "baris" not in kecil
+    assert "nama_hanya_arsip" not in kecil

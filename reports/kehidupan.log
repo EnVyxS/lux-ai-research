@@ -1,0 +1,42 @@
+{
+  "berkas_sumber": "reports/kehidupan.json",
+  "bulan_akhir": "2026-06",
+  "bulan_mulai": "2025-07",
+  "byte_sumber": 280587,
+  "cacah_simbol_diukur": 38,
+  "definisi": {
+    "HIDUP": "selain keduanya",
+    "MATI": "transaksi_total == 0",
+    "SEPI": "bukan MATI dan bagian_volume_nol >= ambang_sepi",
+    "TAK_TERUKUR": "gagal unduh, gagal checksum, tidak diterbitkan arsip, atau tanpa satu lilin pun; BUKAN nol dan tidak masuk penyebut mana pun"
+  },
+  "galat_kohort": null,
+  "ringkasan": {
+    "bagian_mati": 1.0,
+    "cacah_baris_cacat": 0,
+    "cacah_bulan_tidak_ada_di_arsip": 0,
+    "cacah_gagal_checksum": 0,
+    "cacah_gagal_unduh": 0,
+    "cacah_hidup": 0,
+    "cacah_kendali_diminta": 4,
+    "cacah_kendali_hidup": 4,
+    "cacah_kendali_terambil": 4,
+    "cacah_lolos_gerbang": 456,
+    "cacah_mati": 456,
+    "cacah_mati_lolos_gerbang": 456,
+    "cacah_sepi": 0,
+    "cacah_simbol_bulan_diminta": 456,
+    "cacah_simbol_bulan_tak_terukur": 0,
+    "cacah_simbol_bulan_terukur": 456,
+    "lilin_mati": 19972800,
+    "lilin_penuh": 19972800,
+    "lilin_tanpa_mati": 0,
+    "parser_terbukti": true,
+    "penyebut_penuh": 456,
+    "penyebut_tanpa_mati": 0,
+    "penyebut_tanpa_mati_kosong": true
+  },
+  "sidik_kode": "c1aaf852d605bc7c5ea57e341aa6295c2009b2bd5c2e380a20300f9c4b65b4cc",
+  "sidik_sumber": "fa85812be22990212e9d220ef1972887e4673dac04f3925f40566af135b9c55b",
+  "versi_kehidupan": 1
+}

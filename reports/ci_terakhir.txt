@@ -1,5 +1,19 @@
 ........................................................................ [ 32%]
-........................................................................ [ 65%]
-........................................................................ [ 98%]
-...                                                                      [100%]
-219 passed in 0.74s
+...........................F............................................ [ 64%]
+........................................................................ [ 97%]
+......                                                                   [100%]
+=================================== FAILURES ===================================
+______________ test_tidak_ada_berkas_kode_baru_melebihi_800_baris ______________
+
+    def test_tidak_ada_berkas_kode_baru_melebihi_800_baris():
+        for p in (AKAR / PAKET).rglob("*.py"):
+            n = len(p.read_text(encoding="utf-8").splitlines())
+>           assert n <= 800, f"{p.relative_to(AKAR)} = {n} baris"
+E           AssertionError: lux_ai/serapan/funding.py = 818 baris
+E           assert 818 <= 800
+
+tests/test_kontinuitas.py:101: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_kontinuitas.py::test_tidak_ada_berkas_kode_baru_melebihi_800_baris - AssertionError: lux_ai/serapan/funding.py = 818 baris
+assert 818 <= 800
+1 failed, 221 passed in 0.83s

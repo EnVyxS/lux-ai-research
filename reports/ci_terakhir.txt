@@ -1,22 +1,5 @@
-...................................................................F.... [ 32%]
+........................................................................ [ 32%]
 ........................................................................ [ 64%]
 ........................................................................ [ 96%]
 .......                                                                  [100%]
-=================================== FAILURES ===================================
-_____________ test_periksa_url_membedakan_404_dari_galat_jaringan ______________
-
-monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f5859c99350>
-
-    def test_periksa_url_membedakan_404_dari_galat_jaringan(monkeypatch):
-        """Server menjawab 'tidak ada' bukan hal yang sama dengan server bisu."""
-    
-        def tolak(*_args, **_kwargs):
-            raise urllib.error.HTTPError("http://x", 404, "Not Found", None, None)
-    
->       monkeypatch.setattr(funding.urllib.request, "urlopen", tolak)
-E       AttributeError: module 'lux_ai.serapan.funding' has no attribute 'urllib'
-
-tests/test_funding.py:175: AttributeError
-=========================== short test summary info ============================
-FAILED tests/test_funding.py::test_periksa_url_membedakan_404_dari_galat_jaringan - AttributeError: module 'lux_ai.serapan.funding' has no attribute 'urllib'
-1 failed, 222 passed in 0.85s
+223 passed in 0.77s

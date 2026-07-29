@@ -19,6 +19,34 @@ tar hasil unduhan terhadap sidik di riwayat repo adalah perbandingan
 lintas-jalur yang sesungguhnya. Tag pun tidak diketik dari ingatan; ia disusun
 dari `run_id` di `reports/pecahan_<i>_status.json`.
 
+## VERSI 2 — aturan 46 ditegakkan di dalam kode
+
+VERSI 1 mencetak `definisi_jumlah_baris` = "baris lolos gerbang saja" pada
+pecahan 2 dan 5, dua pecahan yang TIDAK punya karantina sama sekali. Di sana
+kedua definisi — "lolos saja" dan "lolos + karantina" — menghasilkan angka yang
+IDENTIK, sehingga datanya tidak mampu membedakan keduanya. Kode menyimpulkan
+dari penyebut nol; itulah yang melahirkan aturan 46.
+
+VERSI 2 memisahkan dua pertanyaan yang berbeda:
+
+- `definisi_dapat_dibedakan` — apakah kasusnya MAMPU membedakan. Bernilai true
+  hanya bila ada baris karantina (`baris_karantina` > 0), sebab hanya karantina
+  yang membuat kedua definisi berbeda angka.
+- `definisi_jumlah_baris` — kesimpulannya, dan ia hanya boleh menyebut salah
+  satu definisi ketika medan di atas true.
+
+Urutan penilaian sengaja menaruh "tidak ada definisi yang cocok" LEBIH DULU
+daripada uji dapat-dibedakan: bila kedua selisih bukan nol, pernyataan bahwa
+tidak satu pun definisi cocok tetap sah walau keduanya tak terbedakan.
+
+Praregistrasi (aturan: ramalan ditulis sebelum run):
+
+- **R-198** — CI pada commit ini mengumpulkan **253 butir** uji, kode keluar 0.
+  Dasar hitung: 244 butir terverifikasi pada run `30416988936`, ditambah 9 butir
+  baru dari `tests/test_pulihkan.py` (empat fungsi berbutir tunggal dan satu
+  fungsi berparameter lima kasus). Satuan: BUTIR yang dikumpulkan pytest, bukan
+  fungsi uji (aturan 38, aturan 47).
+
 ## Medan penggugur (aturan 24)
 
 - `cacah_bagian_hilang` — aset yang tidak terunduh.
@@ -30,6 +58,7 @@ dari `run_id` di `reports/pecahan_<i>_status.json`.
   sedang diuji.
 - `selisih_baris_utama` / `selisih_baris_total` — baris yang dibaca pyarrow dari
   parquet hasil BONGKAR, lawan `jumlah_baris` di manifes.
+- `definisi_dapat_dibedakan` — penggugur bagi `definisi_jumlah_baris` sendiri.
 
 `pulih_sah` sengaja HANYA mencakup keutuhan pengangkutan (empat medan pertama).
 Kecocokan baris dilaporkan terpisah sebagai `baris_terverifikasi`, karena
@@ -43,7 +72,7 @@ Runner ±14 GB; pecahan terbesar 4,57 GB tar. Karena itu tiap bagian dibongkar,
 dihitung, lalu bagian DAN hasil bongkarnya dihapus sebelum bagian berikutnya
 dibuka. Puncak ≈ satu unduhan pecahan + satu bagian terbongkar.
 
-Aturan yang ditegakkan: 7, 8, 9, 16, 21, 22, 24, 30, 33, 34, 36, 44, 45.
+Aturan yang ditegakkan: 7, 8, 9, 16, 21, 22, 24, 30, 33, 34, 36, 44, 45, 46.
 """
 
 from __future__ import annotations
@@ -54,14 +83,23 @@ import json
 import os
 import tarfile
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from . import rilis
 
-VERSI = 1
+VERSI = 2
 TOTAL_PECAHAN = 8
 AKAR_UNDUH = "data/unduh"
 AKAR_PULIH = "data/pulih"
+
+DEF_TAK_ADA_MANIFES = "tidak dapat dibedakan: jumlah_baris tidak ada di manifes"
+DEF_TAK_TERBEDAKAN = (
+    "tidak dapat dibedakan: tanpa baris karantina kedua definisi menghasilkan "
+    "angka yang sama"
+)
+DEF_LOLOS_SAJA = "jumlah_baris = baris parquet lolos gerbang saja"
+DEF_LOLOS_PLUS_KARANTINA = "jumlah_baris = baris lolos + baris karantina"
+DEF_TAK_COCOK = "tidak ada definisi yang cocok"
 
 
 def nama_manifes(indeks: int) -> str:
@@ -94,6 +132,30 @@ def run_id_sumber(indeks: int, akar: str = ".") -> str:
     jalur = Path(akar) / nama_status_serapan(indeks)
     isi = json.loads(jalur.read_text(encoding="utf-8"))
     return str(isi.get("run_id") or "")
+
+
+def putuskan_definisi(
+    selisih_utama: Optional[int],
+    selisih_total: Optional[int],
+    baris_karantina: int,
+) -> Tuple[str, bool]:
+    """Aturan 46: periksa lebih dulu apakah kasusnya MAMPU membedakan.
+
+    Mengembalikan (kesimpulan, dapat_dibedakan). Kedua definisi hanya berbeda
+    angka bila ada baris karantina; bila `baris_karantina` nol, menyebut salah
+    satu di antaranya adalah menyimpulkan dari penyebut nol.
+    """
+    if selisih_utama is None or selisih_total is None:
+        return DEF_TAK_ADA_MANIFES, False
+    dapat_dibedakan = bool(int(baris_karantina) > 0)
+    if selisih_utama != 0 and selisih_total != 0:
+        # Sah tanpa perlu membedakan: tidak satu pun definisi cocok.
+        return DEF_TAK_COCOK, dapat_dibedakan
+    if not dapat_dibedakan:
+        return DEF_TAK_TERBEDAKAN, False
+    if selisih_utama == 0:
+        return DEF_LOLOS_SAJA, True
+    return DEF_LOLOS_PLUS_KARANTINA, True
 
 
 def anggota_aman(nama: str) -> bool:
@@ -240,12 +302,9 @@ def jalankan(
 
     selisih_utama = None if baris_manifes is None else baris_utama - baris_manifes
     selisih_total = None if baris_manifes is None else baris_total - baris_manifes
-    if selisih_utama == 0:
-        definisi = "jumlah_baris = baris parquet lolos gerbang saja"
-    elif selisih_total == 0:
-        definisi = "jumlah_baris = baris lolos + baris karantina"
-    else:
-        definisi = "tidak ada definisi yang cocok"
+    definisi, dapat_dibedakan = putuskan_definisi(
+        selisih_utama, selisih_total, baris_karantina
+    )
 
     pulih_sah = bool(utama is not None and _utuh(utama) and _utuh(karantina))
 
@@ -263,6 +322,7 @@ def jalankan(
         "selisih_baris_utama": selisih_utama,
         "selisih_baris_total": selisih_total,
         "definisi_jumlah_baris": definisi,
+        "definisi_dapat_dibedakan": dapat_dibedakan,
         "baris_terverifikasi": bool(selisih_utama == 0 or selisih_total == 0),
         "pulih_sah": pulih_sah,
         "catatan_penggugur": (
@@ -270,6 +330,11 @@ def jalankan(
             "tak cocok, anggota kurang, anggota tak aman. Kecocokan baris "
             "dilaporkan terpisah karena ia pertanyaan definisi, bukan keutuhan "
             "(aturan 16, 36)"
+        ),
+        "catatan_definisi": (
+            "definisi_jumlah_baris hanya menyebut salah satu definisi ketika "
+            "definisi_dapat_dibedakan true; pecahan tanpa karantina tidak mampu "
+            "membedakan keduanya dan dilaporkan apa adanya (aturan 46)"
         ),
         "catatan_sumber_sidik": (
             "sidik pembanding diambil dari manifes di git, BUKAN dari berkas "

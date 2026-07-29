@@ -1,12 +1,25 @@
 """Uji regresi `lux_ai.serapan.pulihkan`.
 
-Delapan uji, semuanya memakai parquet nyata (pyarrow) dan tar nyata yang dikemas
-oleh `rilis.PengemasBerbelah` — bukan tar sintetis buatan uji — supaya jalur yang
+Tiga belas fungsi uji, dihitung satu per satu: `sidik_kode_heksadesimal`,
+`nama_tag_dan_keluaran`, `anggota_aman` (berparameter empat kasus),
+`alur_penuh_sah`, `satu_byte_berubah`, `bagian_hilang`,
+`selisih_baris_tidak_membatalkan_keutuhan`, `karantina_dihitung_terpisah`,
+`definisi_tidak_dapat_dibedakan_tanpa_karantina`,
+`definisi_lolos_saja_saat_karantina_ada`, `definisi_lolos_plus_karantina`,
+`definisi_null_saat_jumlah_baris_manifes_hilang`, dan `putuskan_definisi_tabel`
+(berparameter lima kasus). Butir yang dikumpulkan pytest: 20, bukan 13
+(aturan 38).
+
+Semuanya memakai parquet nyata (pyarrow) dan tar nyata yang dikemas oleh
+`rilis.PengemasBerbelah` — bukan tar sintetis buatan uji — supaya jalur yang
 diuji adalah jalur produksi.
 
 Dua uji sengaja MERUSAK aset: satu byte diubah, satu bagian dihapus. Uji yang
 hanya menunjukkan jalur bahagia tidak membuktikan medan penggugurnya menyala
 (aturan 24).
+
+Empat uji terakhir menegakkan aturan 46: kode dilarang menyebut salah satu
+definisi `jumlah_baris` ketika kasusnya tidak mampu membedakan keduanya.
 """
 
 from __future__ import annotations
@@ -92,6 +105,17 @@ def _siapkan(
     }
 
 
+def _tulis_jumlah_baris(akar: Path, nilai) -> None:
+    """Ganti `jumlah_baris` di manifes uji; `None` berarti medannya dihapus."""
+    jalur = akar / pulihkan.nama_manifes(INDEKS_UJI)
+    manifes = json.loads(jalur.read_text(encoding="utf-8"))
+    if nilai is None:
+        manifes.pop("jumlah_baris", None)
+    else:
+        manifes["jumlah_baris"] = int(nilai)
+    jalur.write_text(json.dumps(manifes), encoding="utf-8")
+
+
 def test_sidik_kode_heksadesimal_dan_stabil():
     a = pulihkan.sidik_kode()
     assert a == pulihkan.sidik_kode()
@@ -158,15 +182,12 @@ def test_bagian_hilang_menggugurkan(tmp_path):
 def test_selisih_baris_tidak_membatalkan_keutuhan(tmp_path):
     """Pertanyaan definisi dan pertanyaan keutuhan wajib terpisah."""
     s = _siapkan(tmp_path, cacah=10, baris=6)
-    jalur = s["akar"] / pulihkan.nama_manifes(INDEKS_UJI)
-    manifes = json.loads(jalur.read_text(encoding="utf-8"))
-    manifes["jumlah_baris"] = int(manifes["jumlah_baris"]) + 13
-    jalur.write_text(json.dumps(manifes), encoding="utf-8")
+    _tulis_jumlah_baris(s["akar"], s["baris_utama"] + 13)
     hasil = pulihkan.jalankan(INDEKS_UJI, akar=str(s["akar"]))
     assert hasil["pulih_sah"] is True
     assert hasil["selisih_baris_utama"] == -13
     assert hasil["baris_terverifikasi"] is False
-    assert hasil["definisi_jumlah_baris"] == "tidak ada definisi yang cocok"
+    assert hasil["definisi_jumlah_baris"] == pulihkan.DEF_TAK_COCOK
 
 
 def test_karantina_dihitung_terpisah(tmp_path):
@@ -178,3 +199,66 @@ def test_karantina_dihitung_terpisah(tmp_path):
     assert hasil["baris_karantina"] == s["baris_karantina"]
     assert hasil["baris_total"] == s["baris_utama"] + s["baris_karantina"]
     assert hasil["selisih_baris_utama"] == 0
+
+
+def test_definisi_tidak_dapat_dibedakan_tanpa_karantina(tmp_path):
+    """Aturan 46: inilah cacat VERSI 1 pada pecahan 2 dan 5."""
+    s = _siapkan(tmp_path, cacah=6, baris=5, cacah_karantina=0)
+    hasil = pulihkan.jalankan(INDEKS_UJI, akar=str(s["akar"]))
+    assert hasil["baris_karantina"] == 0
+    assert hasil["selisih_baris_utama"] == 0
+    assert hasil["selisih_baris_total"] == 0
+    assert hasil["definisi_dapat_dibedakan"] is False
+    assert hasil["definisi_jumlah_baris"] == pulihkan.DEF_TAK_TERBEDAKAN
+    assert hasil["baris_terverifikasi"] is True
+
+
+def test_definisi_lolos_saja_saat_karantina_ada(tmp_path):
+    s = _siapkan(tmp_path, cacah=6, baris=5, cacah_karantina=2)
+    hasil = pulihkan.jalankan(INDEKS_UJI, akar=str(s["akar"]))
+    assert hasil["baris_karantina"] > 0
+    assert hasil["definisi_dapat_dibedakan"] is True
+    assert hasil["definisi_jumlah_baris"] == pulihkan.DEF_LOLOS_SAJA
+
+
+def test_definisi_lolos_plus_karantina(tmp_path):
+    s = _siapkan(tmp_path, cacah=6, baris=5, cacah_karantina=2)
+    _tulis_jumlah_baris(s["akar"], s["baris_utama"] + s["baris_karantina"])
+    hasil = pulihkan.jalankan(INDEKS_UJI, akar=str(s["akar"]))
+    assert hasil["selisih_baris_total"] == 0
+    assert hasil["selisih_baris_utama"] != 0
+    assert hasil["definisi_dapat_dibedakan"] is True
+    assert hasil["definisi_jumlah_baris"] == pulihkan.DEF_LOLOS_PLUS_KARANTINA
+
+
+def test_definisi_null_saat_jumlah_baris_manifes_hilang(tmp_path):
+    s = _siapkan(tmp_path, cacah=5, baris=4, cacah_karantina=2)
+    _tulis_jumlah_baris(s["akar"], None)
+    hasil = pulihkan.jalankan(INDEKS_UJI, akar=str(s["akar"]))
+    assert hasil["jumlah_baris_manifes"] is None
+    assert hasil["selisih_baris_utama"] is None
+    assert hasil["selisih_baris_total"] is None
+    assert hasil["definisi_dapat_dibedakan"] is False
+    assert hasil["definisi_jumlah_baris"] == pulihkan.DEF_TAK_ADA_MANIFES
+    assert hasil["baris_terverifikasi"] is False
+    assert hasil["pulih_sah"] is True
+
+
+@pytest.mark.parametrize(
+    "selisih_utama, selisih_total, baris_karantina, harap, dapat",
+    [
+        (None, None, 0, pulihkan.DEF_TAK_ADA_MANIFES, False),
+        (0, 0, 0, pulihkan.DEF_TAK_TERBEDAKAN, False),
+        (0, 9, 9, pulihkan.DEF_LOLOS_SAJA, True),
+        (-9, 0, 9, pulihkan.DEF_LOLOS_PLUS_KARANTINA, True),
+        (5, 14, 9, pulihkan.DEF_TAK_COCOK, True),
+    ],
+)
+def test_putuskan_definisi_tabel(
+    selisih_utama, selisih_total, baris_karantina, harap, dapat
+):
+    kesimpulan, dapat_dibedakan = pulihkan.putuskan_definisi(
+        selisih_utama, selisih_total, baris_karantina
+    )
+    assert kesimpulan == harap
+    assert dapat_dibedakan is dapat

@@ -1,0 +1,72 @@
+{
+  "berkas_sumber": "reports/kehidupan_arsip_3.json",
+  "byte_sumber": 991422,
+  "definisi": {
+    "HIDUP": "selain keduanya",
+    "MATI": "transaksi_total == 0",
+    "SEPI": "bukan MATI dan bagian_volume_nol >= ambang_sepi",
+    "TAK_TERUKUR": "parquet tak terbaca, kolom hilang, atau tak satu baris pun terurai; BUKAN nol dan tidak masuk penyebut mana pun"
+  },
+  "indeks": 3,
+  "kendali_dipilih": [
+    {
+      "bulan": "2025-10",
+      "simbol": "XPINUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "simbol": "RIVERUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "simbol": "HEMIUSDT"
+    }
+  ],
+  "ringkasan": {
+    "bagian_mati": 0.1314,
+    "cacah_anggota_tak_aman": 0,
+    "cacah_bagian_hilang": 0,
+    "cacah_baris_cacat": 0,
+    "cacah_hidup": 1853,
+    "cacah_kendali": 3,
+    "cacah_kendali_hidup": 3,
+    "cacah_mati": 283,
+    "cacah_mati_lolos_gerbang": 283,
+    "cacah_parquet_diminta": 2153,
+    "cacah_parquet_hilang": 0,
+    "cacah_parquet_tak_dikenal": 0,
+    "cacah_parquet_terbaca": 2153,
+    "cacah_sepi": 17,
+    "cacah_sha_tak_cocok": 0,
+    "cacah_tak_terukur": 0,
+    "kendali": [
+      {
+        "bulan": "2025-10",
+        "simbol": "XPINUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-01",
+        "simbol": "RIVERUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2025-09",
+        "simbol": "HEMIUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "lilin_mati": 12379101,
+    "lilin_penuh": 91841734,
+    "lilin_tanpa_mati": 79462633,
+    "parser_terbukti": true,
+    "penyebut_penuh": 2153,
+    "penyebut_tanpa_mati": 1870,
+    "penyebut_tanpa_mati_kosong": false
+  },
+  "run_id_sumber": "30396803601",
+  "sidik_kode": "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595",
+  "sidik_manifes": "b6f5f27ed620982a8d52c071844aeb13fb99f2e37f016eb9d788bd333a2700c4",
+  "sidik_sumber": "c3de09d7f358a34e16a4bb0604f7fb1829b3abaf712905ce92b136b34b618f65",
+  "versi_kehidupan_arsip": 1
+}

@@ -1,0 +1,250 @@
+{
+  "baris_lubang_tengah": [
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2022-01",
+      "bulan_berfunding_sebelum": "2021-12",
+      "bulan_berfunding_sesudah": "2022-02",
+      "bulan_klines_pertama": "2021-03",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 399757,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 1,
+      "panjang_rentetan_lubang": 1,
+      "simbol": "BTCSTUSDT",
+      "status": "MATI"
+    },
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2025-07",
+      "bulan_berfunding_sebelum": "2025-06",
+      "bulan_berfunding_sesudah": "2026-01",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 427922,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 5,
+      "panjang_rentetan_lubang": 5,
+      "simbol": "LITUSDT",
+      "status": "MATI"
+    },
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2025-08",
+      "bulan_berfunding_sebelum": "2025-06",
+      "bulan_berfunding_sesudah": "2026-01",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 427505,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 5,
+      "panjang_rentetan_lubang": 5,
+      "simbol": "LITUSDT",
+      "status": "MATI"
+    },
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2025-09",
+      "bulan_berfunding_sebelum": "2025-06",
+      "bulan_berfunding_sesudah": "2026-01",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 392233,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 5,
+      "panjang_rentetan_lubang": 5,
+      "simbol": "LITUSDT",
+      "status": "MATI"
+    },
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2025-10",
+      "bulan_berfunding_sebelum": "2025-06",
+      "bulan_berfunding_sesudah": "2026-01",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 434201,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 5,
+      "panjang_rentetan_lubang": 5,
+      "simbol": "LITUSDT",
+      "status": "MATI"
+    },
+    {
+      "bentuk_lubang_lokal": "tengah",
+      "bulan": "2025-11",
+      "bulan_berfunding_sebelum": "2025-06",
+      "bulan_berfunding_sesudah": "2026-01",
+      "bulan_klines_pertama": "2021-02",
+      "bulan_klines_terakhir": "2026-06",
+      "byte_parquet": 389479,
+      "cacah_bulan_klines_simbol": 64,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 5,
+      "panjang_rentetan_lubang": 5,
+      "simbol": "LITUSDT",
+      "status": "MATI"
+    }
+  ],
+  "bukan_bukti": false,
+  "catatan_batas_h_a010": "penyebut uji ini adalah bulan KLINES, sehingga bulan funding yang ada sebelum klines pertama tidak terlihat; bila kelak terbukti ada medan yang memuat bulan funding pertama sesungguhnya, uji ini wajib diulang dengan medan itu (aturan 20)",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, atau selisih_lubang_tengah bukan nol membatalkan seluruh angka (aturan 24)",
+  "catatan_tafsir": "lubang tengah yang berdampingan dengan bulan berfunding TIDAK membuktikan sebab apa pun; ia hanya menunjukkan bahwa ketiadaan funding di bulan itu tidak dapat dijelaskan oleh awal maupun akhir riwayat simbol (aturan 10)",
+  "definisi": {
+    "bentuk_lubang_lokal": "dipakai apa adanya dari silang_funding.bentuk_lubang_lokal: tengah berarti ada bulan klines berfunding sebelum DAN sesudah lubang itu; definisinya SATU, tidak disalin ulang (aturan 36)",
+    "bulan_berfunding_pertama": "bulan klines paling awal simbol itu yang TIDAK berlubang; ini BUKAN tanggal penerbitan arsip funding Binance",
+    "h_a010_menang": "benar hanya bila SELURUH simbal yang diuji punya bulan_berfunding_pertama lebih besar daripada bulan_klines_pertama"
+  },
+  "h_a010": {
+    "baris": [
+      {
+        "bulan_berfunding_pertama": "2023-02",
+        "bulan_klines_pertama": "2022-05",
+        "cacah_bulan_klines_simbol": 48,
+        "cacah_lubang_simbol": 19,
+        "funding_menyusul": true,
+        "simbol": "BNXUSDT"
+      },
+      {
+        "bulan_berfunding_pertama": "2022-09",
+        "bulan_klines_pertama": "2021-05",
+        "cacah_bulan_klines_simbol": 62,
+        "cacah_lubang_simbol": 16,
+        "funding_menyusul": true,
+        "simbol": "ICPUSDT"
+      },
+      {
+        "bulan_berfunding_pertama": "2024-02",
+        "bulan_klines_pertama": "2024-01",
+        "cacah_bulan_klines_simbol": 30,
+        "cacah_lubang_simbol": 1,
+        "funding_menyusul": true,
+        "simbol": "JUPUSDT"
+      },
+      {
+        "bulan_berfunding_pertama": "2020-03",
+        "bulan_klines_pertama": "2020-02",
+        "cacah_bulan_klines_simbol": 77,
+        "cacah_lubang_simbol": 1,
+        "funding_menyusul": true,
+        "simbol": "QTUMUSDT"
+      },
+      {
+        "bulan_berfunding_pertama": "2023-03",
+        "bulan_klines_pertama": "2021-07",
+        "cacah_bulan_klines_simbol": 60,
+        "cacah_lubang_simbol": 20,
+        "funding_menyusul": true,
+        "simbol": "TLMUSDT"
+      }
+    ],
+    "cacah_gugur": 0,
+    "cacah_menang": 5,
+    "cacah_simbol": 5,
+    "cacah_tak_terukur": 0,
+    "menang": true
+  },
+  "ringkasan": {
+    "cacah_baris_dengan_medan": 19586,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_lubang_tengah": 6,
+    "cacah_per_simbol_funding": 787,
+    "h_a010_cacah_gugur": 0,
+    "h_a010_cacah_menang": 5,
+    "h_a010_cacah_tak_terukur": 0,
+    "h_a010_menang": true,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "medan_baris_terlihat": [
+      "ada_di_arsip",
+      "bagian_volume_nol",
+      "bulan",
+      "byte_parquet",
+      "cacah_baris_cacat",
+      "cacah_lilin",
+      "cacah_lilin_terbaca",
+      "cacah_volume_nol",
+      "galat",
+      "gerbang_lolos",
+      "jalur",
+      "simbol",
+      "status",
+      "transaksi_total"
+    ],
+    "medan_diminta": "cacah_lilin",
+    "medan_per_simbol_funding_terlihat": [
+      "bentuk_lubang",
+      "bulan_funding_terakhir",
+      "bulan_klines_terakhir",
+      "cacah_bulan_funding",
+      "cacah_bulan_klines",
+      "funding_tanpa_klines",
+      "jarak_bulan_terakhir",
+      "klines_tanpa_funding",
+      "mulai_lubang_ekor",
+      "simbol"
+    ],
+    "penyebut_kehidupan": 19586,
+    "sebaran_status_lubang_tengah": {
+      "HIDUP": 0,
+      "MATI": 6,
+      "SEPI": 0,
+      "TAK_TERUKUR": 0
+    },
+    "selisih_lubang_tengah": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "ebdf0b1c68420662d349d9e03daa750574e327f971bc81551889776c575925e4",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "versi_funding": 6,
+  "versi_lubang_tengah": 1,
+  "waktu_utc": "2026-07-29T08:38:49Z"
+}
+

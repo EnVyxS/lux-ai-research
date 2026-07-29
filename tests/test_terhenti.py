@@ -307,4 +307,3 @@ def test_daftar_nama_terpotong_menyala_dan_cacah_tetap_penuh():
     assert laporan["cacah_hidup_luar_penyebut"] == besar
     assert len(laporan["nama_hidup_luar_penyebut"]) == H.BATAS_NAMA
     assert laporan["daftar_nama_terpotong"] is True
-}

@@ -1,27 +1,91 @@
 {
   "ambang_survei": "2026-04",
   "ambang_taksonomi": "2026-05",
+  "berkas_dicap": [
+    "taksonomi.py",
+    "terhenti.py"
+  ],
   "bukan_bukti": true,
   "bulan_tutup_terakhir": "2026-06",
   "cacah_hanya_survei": 0,
   "cacah_hanya_taksonomi": 1,
+  "cacah_hidup": 808,
+  "cacah_hidup_luar_penyebut": 49,
   "cacah_per_bulan_terakhir_ekor": {
     "2026-03": 1,
     "2026-04": 3,
     "2026-05": 1,
     "2026-06": 808
   },
+  "cacah_per_jenis": {
+    "basis_non_fiat": 1,
+    "futures_kedaluwarsa": 50,
+    "indeks": 3,
+    "perpetual_busd": 41,
+    "perpetual_usd1": 1,
+    "perpetual_usdc": 39,
+    "perpetual_usdt": 787,
+    "sisa_settled": 15,
+    "tak_tergolong": 0
+  },
   "cacah_terhenti_survei": 128,
   "cacah_terhenti_taksonomi": 129,
+  "contoh_hidup_luar_penyebut": [
+    "1000BONKUSDC",
+    "1000PEPEUSDC",
+    "1000SHIBUSDC",
+    "AAVEUSDC",
+    "ADAUSDC",
+    "ARBUSDC",
+    "AVAXUSDC",
+    "BCHUSDC",
+    "BIOUSDC",
+    "BNBUSDC",
+    "BOMEUSDC",
+    "BTCDOMUSDT",
+    "BTCUSD1",
+    "BTCUSDC",
+    "BTCUSDT_260626",
+    "BTCUSDT_260925",
+    "BTCUSDT_261225",
+    "CRVUSDC",
+    "DEFIUSDT",
+    "DOGEUSDC"
+  ],
+  "definisi_dapat_dibedakan": true,
   "hanya_survei": [],
   "hanya_taksonomi": [
     "SXPUSDT"
   ],
+  "hidup_per_jenis": {
+    "basis_non_fiat": 1,
+    "futures_kedaluwarsa": 6,
+    "indeks": 2,
+    "perpetual_busd": 0,
+    "perpetual_usd1": 1,
+    "perpetual_usdc": 38,
+    "perpetual_usdt": 759,
+    "sisa_settled": 1,
+    "tak_tergolong": 0
+  },
+  "identitas_per_jenis_utuh": true,
   "jeda_mati_bulan": 2,
+  "jenis_tanpa_anggota": [
+    "tak_tergolong"
+  ],
+  "kendali": {
+    "ada": true,
+    "hidup": true,
+    "jenis": "perpetual_usdt",
+    "simbol": "BTCUSDT"
+  },
+  "kendali_sah": true,
   "penyebut": {
     "cacah_simbol": 937,
     "entri_dibaca": 937
   },
+  "r_272_menang": false,
+  "r_273_menang": false,
   "rincian_selisih": [
     {
       "bulan_terakhir": "2026-05",
@@ -29,8 +93,21 @@
     }
   ],
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "f4fe76754a9c7cba0f5993dac38f5b63dc28d27f451df5a90536ee405c5e54cd",
+  "sidik_kode": "e6b2ad9f7dcdd4b03e6655f96c3be6c74b32fc8e27b1899400fac856c80834b1",
   "status": "TERUKUR",
   "sumber": "reports/semesta_rentang.json",
-  "sumber_byte": 110662
+  "sumber_bersidik": false,
+  "sumber_byte": 110662,
+  "terhenti_per_jenis": {
+    "basis_non_fiat": 0,
+    "futures_kedaluwarsa": 44,
+    "indeks": 1,
+    "perpetual_busd": 41,
+    "perpetual_usd1": 0,
+    "perpetual_usdc": 1,
+    "perpetual_usdt": 28,
+    "sisa_settled": 14,
+    "tak_tergolong": 0
+  },
+  "versi_terhenti": 2
 }

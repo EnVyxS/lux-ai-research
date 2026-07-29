@@ -1,14 +1,15 @@
-"""Uji selisih definisi terhenti (utang 28) dan penguraian per jenis (V2).
+"""Uji selisih definisi terhenti (utang 28), penguraian per jenis (V2), dan
+penyebutan nama (V3).
 
 Daftar bernomor agar cacah butirnya dapat diramalkan, bukan ditaksir
-(aturan 54, 56, 57). Delapan belas butir:
+(aturan 54, 56, 57). Dua puluh lima butir:
 
 1. test_salinan_selisih_bulan_sepakat_dengan_survei
 2. test_definisi_survei_sama_dengan_fungsi_asli
 3. test_mundur_bulan_melewati_pergantian_tahun
 4. test_selisih_himpunan_menyebut_nama_dan_arah
 5. test_penyebut_nol_berstatus_tidak_mengukur
-6. test_versi_dua
+6. test_versi_tiga
 7. test_sidik_kode_mencakup_taksonomi
 8. test_berkas_dicap_terurut_dan_memuat_dua_berkas
 9. test_terhenti_per_jenis_menjumlah_penyebut
@@ -21,6 +22,13 @@ Daftar bernomor agar cacah butirnya dapat diramalkan, bukan ditaksir
 16. test_definisi_dapat_dibedakan_terlaporkan
 17. test_medan_hipotesis_ada_walau_penyebut_nol
 18. test_semua_jenis_kanonik_hadir_sebagai_kunci
+19. test_nama_terhenti_per_jenis_menyebut_nama
+20. test_nama_terhenti_per_jenis_konsisten_dengan_cacahnya
+21. test_nama_hidup_luar_penyebut_lengkap_dan_terurut
+22. test_settled_hidup_menyebut_cacah_bulan
+23. test_peralihan_h_a013_dilaporkan_walau_tak_hadir
+24. test_peralihan_h_a013_menang_hanya_bila_keenam_terhenti
+25. test_daftar_nama_terpotong_menyala_dan_cacah_tetap_penuh
 """
 
 import hashlib
@@ -107,10 +115,10 @@ def test_penyebut_nol_berstatus_tidak_mengukur():
     assert laporan["bulan_tutup_terakhir"] is None
 
 
-def test_versi_dua():
-    assert H.VERSI == 2
-    assert H.bandingkan(_rentang_contoh())["versi_terhenti"] == 2
-    assert H.bandingkan({})["versi_terhenti"] == 2
+def test_versi_tiga():
+    assert H.VERSI == 3
+    assert H.bandingkan(_rentang_contoh())["versi_terhenti"] == 3
+    assert H.bandingkan({})["versi_terhenti"] == 3
 
 
 def test_sidik_kode_mencakup_taksonomi():
@@ -145,7 +153,6 @@ def test_identitas_per_jenis_utuh():
     assert laporan["identitas_per_jenis_utuh"] is True
     for jenis, cacah in laporan["cacah_per_jenis"].items():
         assert cacah == laporan["terhenti_per_jenis"][jenis] + laporan["hidup_per_jenis"][jenis]
-    # ADABUSD dan ICPUSDT_SETTLED terhenti; SXPUSDT terhenti menurut taksonomi.
     assert laporan["terhenti_per_jenis"]["perpetual_busd"] == 1
     assert laporan["terhenti_per_jenis"]["sisa_settled"] == 1
     assert laporan["terhenti_per_jenis"]["perpetual_usdt"] == 1
@@ -204,12 +211,10 @@ def test_definisi_dapat_dibedakan_terlaporkan():
 def test_medan_hipotesis_ada_walau_penyebut_nol():
     """Hipotesis dilaporkan, tetapi TIDAK dipakai sebagai penggugur."""
     kosong = H.bandingkan({})
-    assert kosong["r_272_menang"] is False
-    assert kosong["r_273_menang"] is False
+    for medan in ("r_272_menang", "r_273_menang", "r_275_menang", "r_276_menang"):
+        assert kosong[medan] is False
     assert kosong["status"] == "TIDAK MENGUKUR"
     contoh = H.bandingkan(_rentang_contoh())
-    # Pada contoh kecil, R-272 menang sedangkan R-273 kalah; keduanya tetap
-    # dilaporkan dan laporan tetap TERUKUR.
     assert contoh["r_272_menang"] is True
     assert contoh["r_273_menang"] is False
     assert contoh["status"] == "TERUKUR"
@@ -220,3 +225,86 @@ def test_semua_jenis_kanonik_hadir_sebagai_kunci():
     for medan in ("cacah_per_jenis", "terhenti_per_jenis", "hidup_per_jenis"):
         assert sorted(laporan[medan]) == sorted(taksonomi.JENIS)
         assert len(laporan[medan]) == 9
+    assert sorted(laporan["nama_terhenti_per_jenis"]) == sorted(taksonomi.JENIS)
+
+
+def test_nama_terhenti_per_jenis_menyebut_nama():
+    laporan = H.bandingkan(_rentang_contoh())
+    nama = laporan["nama_terhenti_per_jenis"]
+    assert nama["perpetual_busd"] == ["ADABUSD"]
+    assert nama["sisa_settled"] == ["ICPUSDT_SETTLED"]
+    assert nama["perpetual_usdt"] == ["SXPUSDT"]
+    assert nama["perpetual_usdc"] == []
+    assert nama["futures_kedaluwarsa"] == []
+
+
+def test_nama_terhenti_per_jenis_konsisten_dengan_cacahnya():
+    laporan = H.bandingkan(_rentang_contoh())
+    for jenis, daftar in laporan["nama_terhenti_per_jenis"].items():
+        assert len(daftar) == laporan["terhenti_per_jenis"][jenis]
+        assert daftar == sorted(daftar)
+    assert laporan["daftar_nama_terpotong"] is False
+
+
+def test_nama_hidup_luar_penyebut_lengkap_dan_terurut():
+    laporan = H.bandingkan(_rentang_contoh())
+    daftar = laporan["nama_hidup_luar_penyebut"]
+    assert daftar == ["AAVEUSDC", "BTCUSDT_261225", "DEFIUSDT"]
+    assert daftar == sorted(daftar)
+    assert len(daftar) == laporan["cacah_hidup_luar_penyebut"]
+
+
+def test_settled_hidup_menyebut_cacah_bulan():
+    """R-275 hanya bisa diadjudikasi bila cacah_bulan-nya ikut disebut."""
+    rentang = _rentang_contoh()
+    assert H.bandingkan(rentang)["settled_hidup"] == []
+    rentang["PUMPUSDTSETTLED"] = _isi("2026-06", bulan_pertama="2026-05", cacah=2)
+    laporan = H.bandingkan(rentang)
+    assert laporan["settled_hidup"] == [
+        {"simbol": "PUMPUSDTSETTLED", "bulan_terakhir": "2026-06", "cacah_bulan": 2}
+    ]
+    assert laporan["hidup_per_jenis"]["sisa_settled"] == 1
+    assert laporan["r_275_menang"] is True
+    # Kontrak SETTLED berumur panjang yang masih terbit menggugurkan R-275.
+    rentang["PUMPUSDTSETTLED"] = _isi("2026-06", cacah=12)
+    assert H.bandingkan(rentang)["r_275_menang"] is False
+
+
+def test_peralihan_h_a013_dilaporkan_walau_tak_hadir():
+    """Aturan 59: nama yang hilang bukan nama yang terhenti."""
+    laporan = H.bandingkan(_rentang_contoh())
+    peralihan = laporan["peralihan_h_a013"]
+    assert sorted(peralihan) == sorted(H.PERALIHAN_H_A013)
+    for simbol, isi in peralihan.items():
+        assert isi["ada"] is False
+        assert isi["terhenti"] is False
+        assert isi["bulan_terakhir"] is None
+    assert laporan["cacah_peralihan_terhenti"] == 0
+    assert laporan["r_276_menang"] is False
+
+
+def test_peralihan_h_a013_menang_hanya_bila_keenam_terhenti():
+    rentang = {"BTCUSDT": _isi("2026-06")}
+    for simbol in H.PERALIHAN_H_A013:
+        rentang[simbol] = _isi("2025-06")
+    laporan = H.bandingkan(rentang)
+    assert laporan["cacah_peralihan_terhenti"] == 6
+    assert laporan["r_276_menang"] is True
+    # Satu nama masih terbit sudah cukup menggugurkan.
+    rentang["LITUSDT"] = _isi("2026-06")
+    gugur = H.bandingkan(rentang)
+    assert gugur["cacah_peralihan_terhenti"] == 5
+    assert gugur["peralihan_h_a013"]["LITUSDT"]["terhenti"] is False
+    assert gugur["r_276_menang"] is False
+
+
+def test_daftar_nama_terpotong_menyala_dan_cacah_tetap_penuh():
+    """KC-13: daftar terpotong wajib mengaku, dan cacah penuh tetap terbaca."""
+    besar = H.BATAS_NAMA + 7
+    rentang = {f"N{i:03d}USDC": _isi("2026-06") for i in range(besar)}
+    rentang["BTCUSDT"] = _isi("2026-06")
+    laporan = H.bandingkan(rentang)
+    assert laporan["cacah_hidup_luar_penyebut"] == besar
+    assert len(laporan["nama_hidup_luar_penyebut"]) == H.BATAS_NAMA
+    assert laporan["daftar_nama_terpotong"] is True
+}

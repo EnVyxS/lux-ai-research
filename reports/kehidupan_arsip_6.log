@@ -1,0 +1,72 @@
+{
+  "berkas_sumber": "reports/kehidupan_arsip_6.json",
+  "byte_sumber": 1221113,
+  "definisi": {
+    "HIDUP": "selain keduanya",
+    "MATI": "transaksi_total == 0",
+    "SEPI": "bukan MATI dan bagian_volume_nol >= ambang_sepi",
+    "TAK_TERUKUR": "parquet tak terbaca, kolom hilang, atau tak satu baris pun terurai; BUKAN nol dan tidak masuk penyebut mana pun"
+  },
+  "indeks": 6,
+  "kendali_dipilih": [
+    {
+      "bulan": "2024-12",
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "simbol": "OMUSDT"
+    }
+  ],
+  "ringkasan": {
+    "bagian_mati": 0.0687,
+    "cacah_anggota_tak_aman": 0,
+    "cacah_bagian_hilang": 0,
+    "cacah_baris_cacat": 0,
+    "cacah_hidup": 2459,
+    "cacah_kendali": 3,
+    "cacah_kendali_hidup": 3,
+    "cacah_mati": 182,
+    "cacah_mati_lolos_gerbang": 182,
+    "cacah_parquet_diminta": 2649,
+    "cacah_parquet_hilang": 0,
+    "cacah_parquet_tak_dikenal": 0,
+    "cacah_parquet_terbaca": 2649,
+    "cacah_sepi": 8,
+    "cacah_sha_tak_cocok": 0,
+    "cacah_tak_terukur": 0,
+    "kendali": [
+      {
+        "bulan": "2024-12",
+        "simbol": "OMUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2024-11",
+        "simbol": "OMUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2025-01",
+        "simbol": "OMUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "lilin_mati": 7941027,
+    "lilin_penuh": 113890221,
+    "lilin_tanpa_mati": 105949194,
+    "parser_terbukti": true,
+    "penyebut_penuh": 2649,
+    "penyebut_tanpa_mati": 2467,
+    "penyebut_tanpa_mati_kosong": false
+  },
+  "run_id_sumber": "30396803601",
+  "sidik_kode": "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595",
+  "sidik_manifes": "356ae3d698f890f2bffb07f9ded3675a96e146105b041e717f40e206a6b02b82",
+  "sidik_sumber": "75248eec25bb0a888044d14b6720723bc94c6b26b36224d1f3ae423379e42a4f",
+  "versi_kehidupan_arsip": 1
+}

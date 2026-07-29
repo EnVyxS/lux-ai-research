@@ -1,5 +1,17 @@
 {
+  "berkas_dicap": [
+    "semesta/taksonomi.py",
+    "serapan/kehidupan_arsip.py",
+    "serapan/semesta_kuota.py",
+    "serapan/semesta_silang.py",
+    "serapan/silang_funding.py"
+  ],
   "bukan_bukti": false,
+  "nama_indeks": [
+    "BLUEBIRDUSDT",
+    "BTCDOMUSDT",
+    "DEFIUSDT"
+  ],
   "nama_tak_dikenal": [
     "BTCBUSD_210129",
     "BTCBUSD_210226",
@@ -53,6 +65,101 @@
     "ETHUSDT_260925",
     "ETHUSDT_261225"
   ],
+  "nama_tak_tergolong": [],
+  "per_jenis": {
+    "basis_non_fiat": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 39
+    },
+    "futures_kedaluwarsa": {
+      "cacah_nama": 50,
+      "cacah_settled": 0,
+      "jumlah_bulan": 258
+    },
+    "indeks": {
+      "cacah_nama": 3,
+      "cacah_settled": 0,
+      "jumlah_bulan": 151
+    },
+    "perpetual_busd": {
+      "cacah_nama": 41,
+      "cacah_settled": 0,
+      "jumlah_bulan": 812
+    },
+    "perpetual_usd1": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 2
+    },
+    "perpetual_usdc": {
+      "cacah_nama": 39,
+      "cacah_settled": 0,
+      "jumlah_bulan": 893
+    },
+    "perpetual_usdt": {
+      "cacah_nama": 787,
+      "cacah_settled": 0,
+      "jumlah_bulan": 19598
+    },
+    "sisa_settled": {
+      "cacah_nama": 15,
+      "cacah_settled": 15,
+      "jumlah_bulan": 36
+    },
+    "tak_tergolong": {
+      "cacah_nama": 0,
+      "cacah_settled": 0,
+      "jumlah_bulan": 0
+    }
+  },
+  "per_jenis_hanya_arsip": {
+    "basis_non_fiat": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 39
+    },
+    "futures_kedaluwarsa": {
+      "cacah_nama": 50,
+      "cacah_settled": 0,
+      "jumlah_bulan": 258
+    },
+    "indeks": {
+      "cacah_nama": 3,
+      "cacah_settled": 0,
+      "jumlah_bulan": 151
+    },
+    "perpetual_busd": {
+      "cacah_nama": 41,
+      "cacah_settled": 0,
+      "jumlah_bulan": 812
+    },
+    "perpetual_usd1": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 2
+    },
+    "perpetual_usdc": {
+      "cacah_nama": 39,
+      "cacah_settled": 0,
+      "jumlah_bulan": 893
+    },
+    "perpetual_usdt": {
+      "cacah_nama": 0,
+      "cacah_settled": 0,
+      "jumlah_bulan": 0
+    },
+    "sisa_settled": {
+      "cacah_nama": 15,
+      "cacah_settled": 15,
+      "jumlah_bulan": 36
+    },
+    "tak_tergolong": {
+      "cacah_nama": 0,
+      "cacah_settled": 0,
+      "jumlah_bulan": 0
+    }
+  },
   "per_kuota": {
     "BTC": {
       "cacah_nama": 1,
@@ -111,8 +218,11 @@
     "bulan_lolos_gerbang": 19586,
     "cacah_busd": 41,
     "cacah_busd_usdc": 80,
+    "cacah_futures_kedaluwarsa": 50,
     "cacah_hanya_arsip": 150,
     "cacah_hanya_arsip_busd_usdc": 80,
+    "cacah_indeks": 3,
+    "cacah_jenis_terpakai": 8,
     "cacah_kuota_terpakai": 5,
     "cacah_nama_akhiran_usdt": 790,
     "cacah_nama_arsip": 937,
@@ -122,8 +232,12 @@
     "cacah_nama_settled": 15,
     "cacah_nama_tak_dikenal": 51,
     "cacah_penyebut_bukan_akhiran_usdt": 0,
+    "cacah_penyebut_bukan_perpetual_usdt": 0,
     "cacah_penyebut_luar_arsip": 0,
     "cacah_penyebut_simbol": 787,
+    "cacah_perpetual_usdt": 787,
+    "cacah_perpetual_usdt_luar_penyebut": 0,
+    "cacah_tak_tergolong": 0,
     "cacah_usdc": 39,
     "jumlah_bulan_arsip": 21789,
     "jumlah_bulan_settled": 36,
@@ -138,9 +252,13 @@
     "kendali_sah": true,
     "penyebut_bagian_arsip": true,
     "penyebut_bukan_akhiran_usdt": [],
+    "penyebut_bukan_perpetual_usdt": [],
+    "perpetual_usdt_luar_penyebut": [],
     "r_249_menang": true,
     "r_261_menang": true,
     "r_263_menang": false,
+    "r_265_menang": true,
+    "r_266_menang": true,
     "selisih_bulan_terhadap_penyebut": 163,
     "selisih_bulan_terhadap_serapan": 151,
     "terbanyak_bukan_usdt": {
@@ -155,7 +273,7 @@
     }
   },
   "sidik_data": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
-  "sidik_kode": "d13e881d0f60ced82b9370b18901e6c7688eff4f380441c9fd99962f7acbe582",
+  "sidik_kode": "ef0c4a2429a713f2fd8769bfd8488fc6b4925816875d4e1aaf82623f6dfa7eaa",
   "terbanyak_bukan_usdt": {
     "cacah_pemegang": 1,
     "medan": "cacah_nama",
@@ -182,6 +300,6 @@
     "selisih_dari_hanya_arsip": 151,
     "selisih_total": 163
   },
-  "versi_semesta_kuota": 2,
-  "waktu_utc": "2026-07-29T13:19:52Z"
+  "versi_semesta_kuota": 3,
+  "waktu_utc": "2026-07-29T13:31:55Z"
 }

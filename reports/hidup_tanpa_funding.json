@@ -1,0 +1,404 @@
+{
+  "baris_hidup_tanpa_funding": [
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-05",
+      "byte_parquet": 1655299,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-07",
+      "byte_parquet": 1520983,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-09",
+      "byte_parquet": 1525792,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-10",
+      "byte_parquet": 1515279,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-11",
+      "byte_parquet": 1480316,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-12",
+      "byte_parquet": 1738464,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2023-01",
+      "byte_parquet": 1549840,
+      "cacah_bulan_klines_simbol": 48,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 19,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-05",
+      "byte_parquet": 1375518,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 30060,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-06",
+      "byte_parquet": 1962138,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-07",
+      "byte_parquet": 1922820,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-08",
+      "byte_parquet": 2000858,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-09",
+      "byte_parquet": 1937725,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-10",
+      "byte_parquet": 1893703,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-11",
+      "byte_parquet": 1868737,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-12",
+      "byte_parquet": 1910709,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-01",
+      "byte_parquet": 1932446,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-02",
+      "byte_parquet": 1721757,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 40320,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-03",
+      "byte_parquet": 1875819,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-04",
+      "byte_parquet": 1840361,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-05",
+      "byte_parquet": 1867340,
+      "cacah_bulan_klines_simbol": 62,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 16,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2024-01",
+      "byte_parquet": 22440,
+      "cacah_bulan_klines_simbol": 30,
+      "cacah_lilin": 330,
+      "cacah_lubang_simbol": 1,
+      "simbol": "JUPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2020-02",
+      "byte_parquet": 414544,
+      "cacah_bulan_klines_simbol": 77,
+      "cacah_lilin": 13914,
+      "cacah_lubang_simbol": 1,
+      "simbol": "QTUMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-07",
+      "byte_parquet": 963914,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 22830,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-08",
+      "byte_parquet": 1938777,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-09",
+      "byte_parquet": 1851535,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-10",
+      "byte_parquet": 1872845,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-11",
+      "byte_parquet": 1918841,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2021-12",
+      "byte_parquet": 1914287,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-01",
+      "byte_parquet": 1864845,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-02",
+      "byte_parquet": 1705170,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 40320,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-03",
+      "byte_parquet": 1840138,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-04",
+      "byte_parquet": 1802928,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 43200,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bentuk_lubang_lokal": "awal",
+      "bulan": "2022-05",
+      "byte_parquet": 1830222,
+      "cacah_bulan_klines_simbol": 60,
+      "cacah_lilin": 44640,
+      "cacah_lubang_simbol": 20,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    }
+  ],
+  "bentuk_terbitan_funding": {
+    "awal": 48,
+    "ekor": 826,
+    "tengah": 6
+  },
+  "cacah_baris_dengan_medan": 19586,
+  "cacah_hidup_tanpa_funding": 33,
+  "cacah_lubang_tak_dikenal": 3,
+  "catatan_bentuk": "sebaran_bentuk_semua_lubang TIDAK wajib sama dengan bentuk_terbitan_funding: penyebutnya 877 lubang di dalam 19.586 lawan 880 lubang semesta, dan definisinya berbeda; perbedaan itu bukan penggugur, hanya wajib dibaca dengan sadar (aturan 36)",
+  "definisi_bentuk_lubang_lokal": "awal bila semua bulan klines simbol yang tidak lebih besar juga berlubang; ekor bila semua yang tidak lebih kecil juga berlubang; seluruh bila keduanya; tengah bila tidak satu pun. DEFINISI LOKAL atas penyebut 19.586, BUKAN bentuk_lubang terbitan funding.py atas 880 lubang (aturan 36)",
+  "lubang_tak_dikenal": [
+    {
+      "bulan": "2022-04",
+      "bulan_klines_pertama": "2022-05",
+      "bulan_klines_terakhir": "2026-06",
+      "cacah_bulan_klines_simbol": 48,
+      "simbol": "BNXUSDT",
+      "simbol_dikenal": true
+    },
+    {
+      "bulan": "2022-06",
+      "bulan_klines_pertama": "2022-05",
+      "bulan_klines_terakhir": "2026-06",
+      "cacah_bulan_klines_simbol": 48,
+      "simbol": "BNXUSDT",
+      "simbol_dikenal": true
+    },
+    {
+      "bulan": "2022-08",
+      "bulan_klines_pertama": "2022-05",
+      "bulan_klines_terakhir": "2026-06",
+      "cacah_bulan_klines_simbol": 48,
+      "simbol": "BNXUSDT",
+      "simbol_dikenal": true
+    }
+  ],
+  "medan_baris_terlihat": [
+    "ada_di_arsip",
+    "bagian_volume_nol",
+    "bulan",
+    "byte_parquet",
+    "cacah_baris_cacat",
+    "cacah_lilin",
+    "cacah_lilin_terbaca",
+    "cacah_volume_nol",
+    "galat",
+    "gerbang_lolos",
+    "jalur",
+    "simbol",
+    "status",
+    "transaksi_total"
+  ],
+  "sebaran_bentuk_hidup_tanpa_funding": {
+    "awal": 33,
+    "ekor": 0,
+    "seluruh": 0,
+    "tengah": 0
+  },
+  "sebaran_bentuk_semua_lubang": {
+    "awal": 45,
+    "ekor": 826,
+    "seluruh": 0,
+    "tengah": 6
+  },
+  "selisih_hidup_tanpa_funding": 0,
+  "selisih_lubang_tak_dikenal": 0,
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "versi_silang_funding": 2,
+  "waktu_utc": "2026-07-29T08:17:55Z"
+}

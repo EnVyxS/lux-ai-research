@@ -3,6 +3,15 @@
 Delapan belas fungsi uji, TANPA `parametrize`, sehingga cacah fungsi sama dengan
 cacah butir yang dikumpulkan pytest. Ini disengaja: kekeliruan R-148 lahir dari
 mencacah fungsi padahal pytest mencacah butir (aturan 47).
+
+Sejak VERSI 6 blok CDN pindah ke `funding_cdn.py` dan `funding.py` hanya
+mengekspor ulang namanya. Re-export memindahkan FUNGSI, bukan MODUL: setelah
+pemecahan, `funding.urllib` tidak ada lagi dan uji yang menambalnya gugur dengan
+AttributeError (run 30412188737). Karena itu tambalan di bawah menunjuk
+`funding_cdn.urllib.request`, yaitu modul yang benar-benar memiliki kodenya,
+sementara pemanggilannya tetap lewat `funding.periksa_url`. Susunan itu disengaja:
+ia sekaligus membuktikan re-export menyalurkan panggilan ke kode yang ditambal,
+bukan ke salinan lain.
 """
 
 from __future__ import annotations
@@ -11,7 +20,7 @@ import io
 import urllib.error
 import zipfile
 
-from lux_ai.serapan import funding
+from lux_ai.serapan import funding, funding_cdn
 
 
 def _zip(nama: str, isi: str) -> bytes:
@@ -167,12 +176,18 @@ def test_histogram_menyaring_none_dan_melaporkan_seri():
 
 
 def test_periksa_url_membedakan_404_dari_galat_jaringan(monkeypatch):
-    """Server menjawab 'tidak ada' bukan hal yang sama dengan server bisu."""
+    """Server menjawab 'tidak ada' bukan hal yang sama dengan server bisu.
+
+    Tambalan dipasang pada `funding_cdn` (pemilik kode sejak VERSI 6) sedangkan
+    panggilan dilakukan lewat `funding` (yang mengekspor ulang). Bila suatu saat
+    re-export putus atau menunjuk salinan lain, tambalan tidak akan terpakai dan
+    uji ini gagal, bukan lulus diam-diam.
+    """
 
     def tolak(*_args, **_kwargs):
         raise urllib.error.HTTPError("http://x", 404, "Not Found", None, None)
 
-    monkeypatch.setattr(funding.urllib.request, "urlopen", tolak)
+    monkeypatch.setattr(funding_cdn.urllib.request, "urlopen", tolak)
     empat_nol_empat = funding.periksa_url("http://x")
     assert empat_nol_empat["kode_http"] == 404
     assert empat_nol_empat["galat"] is None
@@ -180,7 +195,7 @@ def test_periksa_url_membedakan_404_dari_galat_jaringan(monkeypatch):
     def bisu(*_args, **_kwargs):
         raise urllib.error.URLError("nama tidak dapat diselesaikan")
 
-    monkeypatch.setattr(funding.urllib.request, "urlopen", bisu)
+    monkeypatch.setattr(funding_cdn.urllib.request, "urlopen", bisu)
     galat = funding.periksa_url("http://x")
     assert galat["kode_http"] is None
     assert galat["galat"]

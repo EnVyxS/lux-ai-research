@@ -1,17 +1,15 @@
-# STATE — versi 27
+# STATE — versi 28
 
-Diperbarui: 2026-07-29 (sesi 54). Aturan hanya BERTAMBAH; jangan menulis ulang
-dari ingatan. v27 disusun di atas teks v26 yang dibaca langsung dari `main`
-(blob `c07d5e58`), ditambah teks aturan 47–52 yang dibaca verbatim dari jurnal
-69, 71, 72, 73, dan 75, ditambah laporan run `30416845475` (kohort ekor V4),
-`30416988938` (ukur_baris V1), dan `30416988936` (CI 244).
+Diperbarui: 2026-07-29 (sesi 54, lanjutan). Aturan hanya BERTAMBAH; jangan
+menulis ulang dari ingatan. v28 disusun di atas teks v27 yang dibaca langsung
+dari `main` (blob `81281fc8`), ditambah `decisions/ADR-A008.md` (commit
+`9d19140b`, dibaca ulang utuh), jurnal 78 (commit `805b2461`), dan laporan run
+`30417800419` (CI 253).
 
-Peristiwa terbesar sejak v26: **kohort funding terbukti mati lebih dulu daripada
-fundingnya.** Kesepuluh anggota yang disampel berhenti diperdagangkan antara
-2024-06 dan 2025-04 — sembilan bulan berbeda, tersebar — sementara penerbitan
-funding berhenti serempak pada 2025-07. Bersamaan dengan itu lahir KC-18: arsip
-menerbitkan klines yang sempurna secara BENTUK untuk pasar yang tidak
-diperdagangkan.
+Peristiwa terbesar sejak v27: **dua utang terlama dibayar.** KC-18 kini punya
+kebijakan tertulis (ADR-A008, DITERIMA untuk Keputusan 1–6), dan aturan 46
+akhirnya ditegakkan DI DALAM kode oleh `pulihkan.py` VERSI 2 — kode yang
+melahirkan aturan itu sendiri melanggarnya selama enam jurnal.
 
 ## Aturan bernomor
 
@@ -37,6 +35,8 @@ definisi berdampingan.
     uji. Lahir dari selisih 135 lawan **141**; dilanggar lagi pada R-148
     (198 lawan **201**) karena saya mencacah FUNGSI uji, bukan butir yang
     dikumpulkan pytest — satu fungsi berparameter empat kasus bernilai 4 butir.
+    **Ditaati pada R-198**, yang menyebut satuan BUTIR secara eksplisit dan
+    menghitung fungsi berparameter lima kasus sebagai 5.
 39. **[v22]** Keseragaman yang terukur pada sampel DILARANG dipakai sebagai
     angka ramalan untuk anggota di luar sampel; wajib pita atau kemungkinan
     campuran. Lahir dari R-114.
@@ -65,19 +65,20 @@ definisi berdampingan.
     wajib dihitung ulang tepat sebelum dikirim. GitHub Actions memakai berkas
     workflow pada commit PEMICU, sehingga perbaikan workflow yang menyusul di
     commit berikutnya TIDAK berlaku untuk run yang sedang berjalan. Lahir dari
-    `57a04f1e`. Ditaati pada `ab4e0774`, `387037a9`, dan `796c2fc4`.
-46. **[v26] Kode dilarang menyimpulkan dari penyebut nol.** Medan yang
-    MENYIMPULKAN sebuah definisi atau sebab wajib memeriksa lebih dulu apakah
-    kasusnya mampu membedakan. Bila penyebutnya nol, atau bila kedua kemungkinan
-    menghasilkan angka yang sama, medan itu wajib berbunyi "tidak dapat
-    dibedakan", bukan menyebut salah satu. Aturan 30 dan 41 melarang AGEN
+    `57a04f1e`. Ditaati pada `ab4e0774`, `387037a9`, `796c2fc4`, dan
+    `5c65adf9`.
+46. **[v26, LUNAS DI KODE v28] Kode dilarang menyimpulkan dari penyebut nol.**
+    Medan yang MENYIMPULKAN sebuah definisi atau sebab wajib memeriksa lebih
+    dulu apakah kasusnya mampu membedakan. Bila penyebutnya nol, atau bila kedua
+    kemungkinan menghasilkan angka yang sama, medan itu wajib berbunyi "tidak
+    dapat dibedakan", bukan menyebut salah satu. Aturan 30 dan 41 melarang AGEN
     menyimpulkan dari penyebut nol; aturan ini melarang KODE melakukannya.
     Lahir dari `pulihkan.py` VERSI 1, yang pada pecahan 2 dan 5 (tanpa
     karantina) mencetak `definisi_jumlah_baris` = "baris lolos saja" padahal
-    kedua definisi menghasilkan angka identik di sana. **Belum diperbaiki di
-    kode**; namun sudah DITAATI di modul baru — `kohort_ekor` V4 menerbitkan
-    `bangkit_dapat_diuji` alih-alih membiarkan `bangkit_kembali` false terbaca
-    sebagai bukti.
+    kedua definisi menghasilkan angka identik di sana. **Diperbaiki di
+    `pulihkan.py` VERSI 2** (commit `5c65adf9`) lewat fungsi murni
+    `putuskan_definisi` dan medan penggugur `definisi_dapat_dibedakan`. Sudah
+    lebih dulu DITAATI oleh `kohort_ekor` V4 (`bangkit_dapat_diuji`).
 47. **[v27, lahir di jurnal 69]** Sebelum menulis ramalan berupa cacah,
     sebutkan satuannya secara eksplisit — simbol, bulan, simbol-bulan, baris,
     atau butir uji — dan periksa bahwa angka rujukan yang dipakai memang
@@ -104,7 +105,7 @@ definisi berdampingan.
     memuat kendali positif yang membuktikan alat ukurnya mampu mendeteksi
     KEHADIRAN pada kondisi yang sama. Tanpa kendali positif, angka nol tidak
     dapat dibedakan dari alat yang buta, dan laporannya harus dianggap batal,
-    bukan sekadar lemah.
+    bukan sekadar lemah. **Dipakai sebagai klausa gugur ADR-A008 §6.**
 51. **[v27, lahir di jurnal 75]** Jendela pemindaian mundur wajib adaptif, atau
     dibuktikan mencakup peristiwa yang dicari. Jendela tetap yang seluruh isinya
     sepi menghasilkan null, bukan jawaban; dan null yang tidak diberi medan
@@ -115,6 +116,9 @@ definisi berdampingan.
     keluaran ringkas yang memuat sidik berkas sumbernya, supaya ringkasan
     terbukti berasal dari run yang itu juga dan bukan sisa run lama. Ditaati
     oleh `kohort_ringkas` (`sidik_sumber`) dan `ukur_baris`.
+
+Tidak ada aturan baru pada v28. Yang terjadi sebaliknya: aturan 46 yang sudah
+ada akhirnya ditaati oleh kode yang melahirkannya.
 
 ## Kelas cacat
 
@@ -144,9 +148,12 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
     diunduh pada 10 simbol, seluruhnya lolos gerbang.
   - Aturan 20: JANGAN diekstrapolasi ke 456 simbol-bulan kohort. Bentangan
     penuh belum diukur.
-  - Kebijakannya belum diputuskan; ADR-A008 akan menanganinya. Lilin datar bukan
-    data palsu, ia keterangan sah bahwa tidak ada perdagangan. Bahayanya adalah
-    bila ia diam-diam ikut menjadi PENYEBUT dalam ukuran apa pun.
+  - **Kebijakan DIPUTUSKAN [v28] oleh ADR-A008** (Keputusan 1–6 DITERIMA):
+    KC-18 bukan gerbang serapan; kehidupan diukur per simbol-bulan; **SEPI**
+    bila `bagian_volume_nol` ≥ 0,5 dan **MATI** bila `transaksi_total` = 0;
+    setiap penyebut diterbitkan berpasangan (penuh dan tanpa MATI); backtest
+    hanya pada simbol-bulan HIDUP; angka 839.842.134 tidak ditulis ulang
+    (aturan 29). Keputusan 7 (nasib ADR-A002 §10) DITANGGUHKAN.
 
 ## Hipotesis
 
@@ -166,7 +173,7 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
 ## Papan skor prediksi
 
 R-1..R-120 dirinci v23. R-121..R-149 di v26 dan jurnal 56–63. R-150..R-193 di
-jurnal 64–75. R-194..R-197 di jurnal 76 dan 77.
+jurnal 64–75. R-194..R-197 di jurnal 76 dan 77. R-198..R-199 di jurnal 78.
 
 | # | Prediksi | Status |
 |---|---|---|
@@ -176,10 +183,12 @@ jurnal 64–75. R-194..R-197 di jurnal 76 dan 77.
 | R-195 | kesepuluh `bulan_hidup_terakhir` sebelum 2025-07 | TEPAT |
 | R-196 | CI 241 butir, kode 0 | TEPAT |
 | R-197 | CI 244 butir, kode 0 | TEPAT |
+| R-198 | CI **253 butir**, kode 0 (244 + 9 butir baru) | **TEPAT** |
+| R-199 | `definisi_dapat_dibedakan` false pada TEPAT 2 pecahan (2 dan 5), true pada 6 | **MENUNGGU** |
 
-**Total R-1..R-197** (aturan 21): TEPAT **138**; MELESET **37**; SEPARUH **11**;
-TIDAK TERADJUDIKASI **5**; MENUNGGU **6** (R-7, R-19, R-20, R-28, R-36, R-37).
-138+37+11+5+6 = **197** ✅ Ramalan berikutnya **R-198**. N_percobaan = 0.
+**Total R-1..R-199** (aturan 21): TEPAT **139**; MELESET **37**; SEPARUH **11**;
+TIDAK TERADJUDIKASI **5**; MENUNGGU **7** (R-7, R-19, R-20, R-28, R-36, R-37,
+R-199). 139+37+11+5+7 = **199** ✅ Ramalan berikutnya **R-200**. N_percobaan = 0.
 
 Catatan kejujuran: R-175 dan R-179 sama-sama SEPARUH karena saya dua kali
 menaksir panjang `funding.py` terlalu pendek dari ukuran byte (28.121 B / 705
@@ -187,7 +196,11 @@ baris = 39,9 B per baris, sedangkan taksiran saya memakai sekitar 43). Pita
 kedua justru dinaikkan untuk memperbaiki yang pertama, dan MASIH terlalu rendah.
 Tidak ada pita yang disetel ulang sesudah angkanya terlihat.
 
-## Cacah baris terukur — TERSELESAIKAN [v27]
+R-199 punya penggugur yang jelas: bila ada pecahan KETIGA yang ternyata tanpa
+karantina, ramalan itu MELESET. Ia baru dapat diadjudikasi bila jalur pemulihan
+dijalankan ulang dengan `pulihkan` V2.
+
+## Cacah baris terukur [v27]
 
 Sumber: `reports/ukur_baris.json`, run **30416988938**, commit `796c2fc4`,
 kode 0. Penggugur bersih: `cacah_berkas_hilang` 0,
@@ -210,7 +223,12 @@ Total 2.285 baris; terbesar `funding.py` 705 — 95 baris di bawah pagar 800.
 Aturan 48 berlaku: ia sudah dekat, dan fungsi baru DILARANG ditambahkan ke sana
 sebelum dipecah.
 
-## Definisi `jumlah_baris` — TERSELESAIKAN [v26]
+**Kedaluwarsa parsial [v28]:** `pulihkan.py` kini VERSI 2 dan berukuran 14.839
+byte (blob `a9e6eab7`), jadi angka 318 baris di tabel itu adalah angka V1.
+Cacah baris V2 belum diukur oleh `ukur_baris`; jangan menaksirnya dari byte
+(pelajaran R-175 dan R-179). **Ini memerlukan verifikasi.**
+
+## Definisi `jumlah_baris` — TERSELESAIKAN [v26], DITEGAKKAN DI KODE [v28]
 
 **`jumlah_baris` di manifes = baris lolos gerbang + baris karantina.** Terbukti
 pada keenam pecahan yang punya karantina: `selisih_baris_total` = 0 dan
@@ -224,6 +242,24 @@ membedakan (aturan 46).
 Konsekuensi untuk ADR-A007: 839.842.134 SUDAH memuat 516.135 baris cacat. Baris
 hasil pemulihan harian tidak boleh dijumlahkan ke angka itu tanpa lebih dulu
 mengurangi baris karantina yang digantikannya, atau semesta akan tercacah ganda.
+
+**`pulihkan.py` VERSI 2** (commit `5c65adf9`) menegakkan ini di dalam kode:
+
+- fungsi murni `putuskan_definisi(selisih_utama, selisih_total,
+  baris_karantina)` → (kesimpulan, `dapat_dibedakan`);
+- medan penggugur **`definisi_dapat_dibedakan`**, true hanya bila
+  `baris_karantina` > 0; medan `catatan_definisi` menyebut SEBAB ketakterbedaan
+  (manifes tanpa `jumlah_baris`, atau pecahan tanpa karantina);
+- "tidak ada definisi yang cocok" dinilai LEBIH DULU daripada uji
+  dapat-dibedakan: bila kedua selisih bukan nol, pernyataan bahwa tak satu pun
+  definisi cocok tetap sah walau keduanya tak terbedakan;
+- `VERSI` 1 → 2, sehingga `sidik_kode` pulihkan berubah dengan sendirinya.
+
+**Peringatan membaca laporan:** `reports/pulihkan_pecahan_<i>.json` yang ada di
+git masih HASIL V1, jadi label keliru pada pecahan 2 dan 5 masih terbaca di
+sana. Cocokkan `versi_pulihkan` dan `sidik_kode` sebelum mempercayainya. Label
+yang benar baru muncul bila jalur pemulihan dijalankan ulang — dan run itu
+mengunduh puluhan gigabyte aset rilis.
 
 ## Serapan semesta `perpetual_usdt` — TERUKUR, TERPERSISTENSI, TERPULIHKAN
 
@@ -255,6 +291,9 @@ Sumber pemulihan: run **`30404071324`**, commit `ab4e0774`, `versi_pulihkan` 1,
 - Sidik pembanding diambil dari `reports/manifes_pecahan_<i>.json` **di git**,
   BUKAN dari `SHA256SUMS` di rilis.
 - Tag rilis: `serapan-pecahan-<i>-30396803601`.
+- **Berlaku sejak ADR-A008:** angka 19.598 dan 839.842.134 adalah penyebut
+  PENUH. Penyebut kedua (tanpa simbol-bulan MATI) belum terukur, dan wajib
+  diterbitkan berdampingan begitu pengukur kehidupan berjalan atas semesta.
 
 ## Funding semesta — TERUKUR (`funding.py` V6)
 
@@ -309,10 +348,11 @@ kohort semata**.
 
 ## Jumlah uji
 
-**244 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30416988936`, commit
-`796c2fc4`, `kode_keluar` 0, "244 tests collected in 0.39s". Riwayat mutakhir:
-231 (V1) → 234 (V2) → 236 (V3) → 239 (ringkas) → 241 (V4) → **244**
-(`tests/test_ukur_baris.py`, 3 fungsi).
+**253 TERVERIFIKASI** — `reports/ci_terakhir.json` run `30417800419`, commit
+`5c65adf9`, `kode_keluar` 0, "253 tests collected in 0.44s". Riwayat mutakhir:
+231 (V1) → 234 (V2) → 236 (V3) → 239 (ringkas) → 241 (kohort V4) → 244
+(`ukur_baris`) → **253** (`test_pulihkan.py` bertambah lima fungsi, sembilan
+butir).
 
 ## Utang verifikasi
 
@@ -321,14 +361,18 @@ kohort semata**.
 24. **AKTIF.**
     - persistensi data lolos dan karantina: **LUNAS**;
     - pemulihan aset di luar runner: **LUNAS** (run `30404071324`);
+    - perbaikan aturan 46 di `pulihkan.py`: **LUNAS DI KODE** (V2, commit
+      `5c65adf9`, CI 253) — tetapi laporan pecahan di git masih hasil V1;
     - jalur **funding**: TERUKUR di tingkat listing dan CDN, tetapi
       `funding_ada` masih null di seluruh manifes — BELUM;
     - medan `dugaan_pengganti` (ADR-A005) — BELUM;
     - pemulihan harian ADR-A007 — BELUM, bahan baku sudah ada;
     - karantina artefak 7 hari — BELUM;
-    - perbaikan aturan 46 di `pulihkan.py` — BELUM;
+    - pengukur kehidupan per simbol-bulan atas SEMESTA (ADR-A008 Keputusan 2–4)
+      — BELUM;
     - bentangan penuh KC-18 atas 456 simbol-bulan — BELUM;
-    - 28 anggota kohort yang belum disampel — BELUM.
+    - 28 anggota kohort yang belum disampel — BELUM;
+    - penyebut kedua (tanpa simbol-bulan MATI) — BELUM.
     Mengadjudikasi R-7, R-19, R-20, R-28, R-36, R-37.
 
 ## Daftar ADR
@@ -344,14 +388,19 @@ kohort semata**.
   LUAR.
 - **ADR-A007 serapan hibrida. DIUSULKAN**, belum diterima. Wajib memperhitungkan
   temuan `jumlah_baris` dan kendala R-146.
-- **ADR-A008 akibat KC-18. BELUM DITULIS**, tetapi bahannya kini ada: kematian
-  bertahap (2024-06..2025-04) lawan tebing penerbitan serempak (2025-07).
-- ADR berikutnya **A009** setelah A008 ditulis.
+- **ADR-A008 akibat KC-18. DITERIMA [v28] untuk Keputusan 1–6** (commit
+  `9d19140b`). Keputusan 7 — nasib ADR-A002 §10 — DITANGGUHKAN sampai sifat 48
+  lubang awal dan 6 lubang tengah terukur. Klausa gugur §6: bila
+  `parser_terbukti` false, ADR ini gugur (aturan 50).
+- ADR berikutnya **A009**.
 
 ## Temuan sampingan yang belum diukur
 
 - Bentangan penuh KC-18 atas 456 simbol-bulan kohort.
 - 28 anggota kohort di luar sampel abjad.
+- Cacah baris `pulihkan.py` V2 (angka 318 di tabel adalah V1).
+- Sifat 48 lubang funding AWAL dan 6 lubang TENGAH — penentu Keputusan 7
+  ADR-A008.
 - 15 `SETTLED` lain: apakah punya pendahulu seperti SXPUSDT?
 - Daftar `INDEKS` hanya tiga nama, disusun manual.
 - Saham dan komoditas token masih terhitung `perpetual_usdt`.

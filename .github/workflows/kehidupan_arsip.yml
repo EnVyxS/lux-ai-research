@@ -1,0 +1,127 @@
+name: kehidupan-arsip
+
+# Aturan 33: pemicu menyebut satu berkas modul saja, tanpa pemicu-diri.
+# Aturan 34: hanya berkas bernama milik workflow ini yang di-commit.
+# Aturan 45: workflow ini didorong dalam commit YANG SAMA dengan modul dan
+# ujinya, sebab Actions memakai berkas workflow pada commit PEMICU.
+#
+# Yang diukur: kehidupan seluruh simbol-bulan yang lolos gerbang, dibaca dari
+# parquet di aset rilis serapan. Tidak ada satu byte pun diunduh dari arsip
+# Binance di sini.
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/kehidupan_arsip.py'
+  workflow_dispatch:
+    inputs:
+      indeks:
+        description: 'indeks pecahan 0..7'
+        required: false
+        default: '0'
+
+permissions:
+  contents: write
+
+jobs:
+  matriks:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        indeks: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: ukur kehidupan pecahan ${{ matrix.indeks }}
+        env:
+          KEHIDUPAN_ARSIP_INDEKS: ${{ matrix.indeks }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          df -h / | tail -1
+
+          # Tag disusun dari run_id di berkas status yang di-commit runner
+          # serapan, bukan diketik dari ingatan.
+          run_sumber=$(python -c "import json;print(json.load(open('reports/pecahan_${KEHIDUPAN_ARSIP_INDEKS}_status.json'))['run_id'])")
+          tag="serapan-pecahan-${KEHIDUPAN_ARSIP_INDEKS}-${run_sumber}"
+          mkdir -p data/unduh reports
+
+          gh release download "$tag" --dir data/unduh --pattern 'pecahan_*.tar'
+          kode_unduh=$?
+          cacah_unduh=0
+          if ls data/unduh/*.tar >/dev/null 2>&1; then
+            cacah_unduh=$(ls data/unduh/*.tar | wc -l)
+          fi
+
+          python -m lux_ai.serapan.kehidupan_arsip > kehidupan_arsip.log 2>&1
+          kode=$?
+          tail -c 40000 kehidupan_arsip.log > reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.log
+          rm -rf data/unduh data/kehidupan_arsip
+
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "tag_sumber": "%s",\n  "kode_unduh": %s,\n  "cacah_tar_terunduh": %s,\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$KEHIDUPAN_ARSIP_INDEKS" "$tag" "$kode_unduh" "$cacah_unduh" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_status.json
+
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          for percobaan in 1 2 3 4 5 6 7 8; do
+            git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.json 2>/dev/null || true
+            git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_ringkas.json 2>/dev/null || true
+            git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.log reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_status.json
+            git commit -m "kehidupan arsip pecahan ${KEHIDUPAN_ARSIP_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
+            git pull --rebase --autostash && git push && break
+            sleep $((percobaan * 15))
+          done
+          exit $kode
+
+  tunggal:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: pasang kebutuhan
+        run: pip install -r requirements.txt
+      - name: ukur kehidupan satu pecahan
+        env:
+          KEHIDUPAN_ARSIP_INDEKS: ${{ github.event.inputs.indeks || '0' }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          run_sumber=$(python -c "import json;print(json.load(open('reports/pecahan_${KEHIDUPAN_ARSIP_INDEKS}_status.json'))['run_id'])")
+          tag="serapan-pecahan-${KEHIDUPAN_ARSIP_INDEKS}-${run_sumber}"
+          mkdir -p data/unduh reports
+          gh release download "$tag" --dir data/unduh --pattern 'pecahan_*.tar'
+          kode_unduh=$?
+          cacah_unduh=0
+          if ls data/unduh/*.tar >/dev/null 2>&1; then
+            cacah_unduh=$(ls data/unduh/*.tar | wc -l)
+          fi
+          python -m lux_ai.serapan.kehidupan_arsip > kehidupan_arsip.log 2>&1
+          kode=$?
+          tail -c 40000 kehidupan_arsip.log > reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.log
+          rm -rf data/unduh data/kehidupan_arsip
+          printf '{\n  "run_id": "%s",\n  "commit": "%s",\n  "indeks": "%s",\n  "tag_sumber": "%s",\n  "kode_unduh": %s,\n  "cacah_tar_terunduh": %s,\n  "kode_keluar": %s,\n  "waktu_utc": "%s"\n}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$KEHIDUPAN_ARSIP_INDEKS" "$tag" "$kode_unduh" "$cacah_unduh" "$kode" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_status.json
+          git config user.name lux-ci
+          git config user.email lux-ci@users.noreply.github.com
+          git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.json 2>/dev/null || true
+          git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_ringkas.json 2>/dev/null || true
+          git add reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}.log reports/kehidupan_arsip_${KEHIDUPAN_ARSIP_INDEKS}_status.json
+          git commit -m "kehidupan arsip pecahan ${KEHIDUPAN_ARSIP_INDEKS} run ${GITHUB_RUN_ID} [skip ci]" || true
+          git pull --rebase --autostash
+          git push
+          exit $kode

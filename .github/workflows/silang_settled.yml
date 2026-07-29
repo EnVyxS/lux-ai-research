@@ -1,0 +1,64 @@
+name: silang settled
+
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/silang_settled.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tunggal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: uji h a015
+        id: jalan
+        run: |
+          set +e
+          mkdir -p reports
+          python -m lux_ai.serapan.silang_settled 2>&1 | tee reports/silang_settled.log
+          kode=${PIPESTATUS[0]}
+          echo "kode=$kode" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: tulis status
+        env:
+          KODE: ${{ steps.jalan.outputs.kode }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os
+
+          status = {
+              "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+              "commit": os.environ.get("GITHUB_SHA", ""),
+              "kode_keluar": int(os.environ.get("KODE", "1") or 1),
+              "waktu_utc": datetime.datetime.now(datetime.timezone.utc).strftime(
+                  "%Y-%m-%dT%H:%M:%SZ"
+              ),
+          }
+          with open("reports/silang_settled_status.json", "w", encoding="utf-8") as f:
+              json.dump(status, f, ensure_ascii=False, indent=2, sort_keys=True)
+              f.write("\n")
+          PY
+
+      - name: commit laporan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f reports/silang_settled.json reports/silang_settled.log reports/silang_settled_status.json || true
+          git commit -m "laporan silang settled run ${GITHUB_RUN_ID} [skip ci]" || exit 0
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            sleep $((i * 5))
+          done
+
+      - name: kode keluar
+        run: exit ${{ steps.jalan.outputs.kode }}

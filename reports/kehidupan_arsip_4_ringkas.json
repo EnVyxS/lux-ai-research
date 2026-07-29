@@ -1,0 +1,72 @@
+{
+  "berkas_sumber": "reports/kehidupan_arsip_4.json",
+  "byte_sumber": 1149519,
+  "definisi": {
+    "HIDUP": "selain keduanya",
+    "MATI": "transaksi_total == 0",
+    "SEPI": "bukan MATI dan bagian_volume_nol >= ambang_sepi",
+    "TAK_TERUKUR": "parquet tak terbaca, kolom hilang, atau tak satu baris pun terurai; BUKAN nol dan tidak masuk penyebut mana pun"
+  },
+  "indeks": 4,
+  "kendali_dipilih": [
+    {
+      "bulan": "2021-05",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "bulan": "2021-08",
+      "simbol": "BTCUSDT"
+    },
+    {
+      "bulan": "2021-01",
+      "simbol": "BTCUSDT"
+    }
+  ],
+  "ringkasan": {
+    "bagian_mati": 0.0729,
+    "cacah_anggota_tak_aman": 0,
+    "cacah_bagian_hilang": 0,
+    "cacah_baris_cacat": 0,
+    "cacah_hidup": 2299,
+    "cacah_kendali": 3,
+    "cacah_kendali_hidup": 3,
+    "cacah_mati": 182,
+    "cacah_mati_lolos_gerbang": 182,
+    "cacah_parquet_diminta": 2496,
+    "cacah_parquet_hilang": 0,
+    "cacah_parquet_tak_dikenal": 0,
+    "cacah_parquet_terbaca": 2496,
+    "cacah_sepi": 15,
+    "cacah_sha_tak_cocok": 0,
+    "cacah_tak_terukur": 0,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "lilin_mati": 7924835,
+    "lilin_penuh": 106821807,
+    "lilin_tanpa_mati": 98896972,
+    "parser_terbukti": true,
+    "penyebut_penuh": 2496,
+    "penyebut_tanpa_mati": 2314,
+    "penyebut_tanpa_mati_kosong": false
+  },
+  "run_id_sumber": "30396803601",
+  "sidik_kode": "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595",
+  "sidik_manifes": "d204f3538f855aa2c638e5991378cbb7509b748cbe7b7efa38027cd4551ba2bb",
+  "sidik_sumber": "1e971169c430a97a65dc0f0197c725a853b06e6c257e72e6312dcfbfabe4079a",
+  "versi_kehidupan_arsip": 1
+}

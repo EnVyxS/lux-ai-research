@@ -1,0 +1,264 @@
+{
+  "bersambung": [
+    {
+      "cacah_bulan_saudara": 9,
+      "cacah_bulan_simbol": 62,
+      "saudara": [
+        {
+          "cacah_bulan": 9,
+          "nama": "ICPUSDT_SETTLED"
+        }
+      ],
+      "simbol": "ICPUSDT"
+    },
+    {
+      "cacah_bulan_saudara": 9,
+      "cacah_bulan_simbol": 60,
+      "saudara": [
+        {
+          "cacah_bulan": 9,
+          "nama": "TLMUSDTSETTLED"
+        }
+      ],
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "bukan_bukti": false,
+  "catatan_batas": "semesta arsip adalah bulan 1m yang DITERBITKAN, bukan yang LOLOS gerbang; simbol hanya-arsip karena itu bukan bukti pasar mati, dan nama SETTLED yang absen dari penyebut bukan bukti ia tak diperdagangkan (aturan 30, 59)",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, selisih_penyebut bukan nol, cacah_penyebut_simbol bukan 787, atau cacah_arsip nol membatalkan seluruh angka (aturan 24)",
+  "catatan_tafsir": "KC-24 lahir dari menyilangkan kedua semesta ini seolah satu; run ini hanya MENGUKUR jaraknya dan tidak menghidupkan kembali satu pun klaim yang gugur bersama R-239 dan R-240",
+  "definisi": {
+    "h_a013_berlaku": "selalu false pada run ini; kecocokan bulan peralihan TIDAK dapat diuji dari cacah bulan, jadi hipotesisnya TAK BERLAKU, bukan kalah",
+    "saudara_settled": "nama simbol yang sama ditambah akhiran SETTLED atau _SETTLED, dipakai apa adanya dari penyebut_tahun.nama_settled",
+    "semesta_arsip": "simbol yang terdaftar pada medan bulan_per_simbol di reports/semesta_bulan_1m.json; nilainya CACAH bulan, bukan daftar",
+    "semesta_penyebut": "simbol yang punya sekurang-kurangnya satu bulan LOLOS gerbang kehidupan; inilah semesta 19.586 simbol-bulan"
+  },
+  "h_a013_arsip": {
+    "baris": [
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-04",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 68,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CTKUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CTKUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-05",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 68,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CVCUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CVCUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-07",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 46,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CVXUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CVXUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-12",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 65,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "LITUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "LITUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-03",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 29,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "MAVIAUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "MAVIAUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-07",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 33,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "SLPUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "SLPUSDT",
+        "simbol_di_arsip": true
+      }
+    ],
+    "berlaku": false,
+    "bulan_cocok_terukur": false,
+    "cacah_peralihan": 6,
+    "cacah_saudara_arsip": 6,
+    "cacah_saudara_satu_bulan": 6,
+    "menang": null,
+    "sebab_tak_berlaku": "laporan arsip memuat CACAH bulan, bukan DAFTAR bulan, jadi kecocokan bulan peralihan tidak dapat diuji dari artefak yang ada (aturan 62)"
+  },
+  "ringkasan": {
+    "arsip_lebih_banyak": true,
+    "cacah_arsip": 937,
+    "cacah_hanya_arsip": 150,
+    "cacah_hanya_penyebut": 0,
+    "cacah_irisan": 787,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_penyebut_simbol": 787,
+    "cacah_saudara_arsip": 6,
+    "cacah_saudara_satu_bulan": 6,
+    "cacah_settled_arsip": 15,
+    "cacah_settled_di_penyebut": 0,
+    "h_a013_berlaku": false,
+    "jumlah_bulan_arsip": 21789,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_bagian_arsip": true,
+    "penyebut_kehidupan": 19586,
+    "selisih_penyebut": 0,
+    "semesta_sama": false,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8
+  },
+  "settled": {
+    "cacah_settled_arsip": 15,
+    "cacah_settled_di_penyebut": 0,
+    "daftar_settled_arsip": [
+      "AERGOUSDTSETTLED",
+      "AIAUSDTSETTLED",
+      "BDXNUSDTSETTLED",
+      "BNXUSDTSETTLED",
+      "CTKUSDTSETTLED",
+      "CVCUSDTSETTLED",
+      "CVXUSDTSETTLED",
+      "ICPUSDT_SETTLED",
+      "LITUSDTSETTLED",
+      "MAVIAUSDTSETTLED",
+      "MINAUSDTSETTLED",
+      "PUMPUSDTSETTLED",
+      "SLPUSDTSETTLED",
+      "SXPUSDTSETTLED",
+      "TLMUSDTSETTLED"
+    ],
+    "daftar_settled_di_penyebut": [],
+    "terukur": true
+  },
+  "sidik_data_arsip": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "8ddea8f1c8de65772c5f856b6337717f732e76f3ac00cd45b293a5b1b5f2e095",
+  "sidik_kode_penyebut_tahun": "75bf18054819eeca4ab4275f3af4c2dcb28a1664ac1da2b38e0f2c6fa10f4fc4",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "silang": {
+    "arsip_lebih_banyak": true,
+    "cacah_arsip": 937,
+    "cacah_hanya_arsip": 150,
+    "cacah_hanya_penyebut": 0,
+    "cacah_irisan": 787,
+    "cacah_penyebut": 787,
+    "contoh_hanya_arsip": [
+      "1000BONKUSDC",
+      "1000LUNCBUSD",
+      "1000PEPEUSDC",
+      "1000SHIBBUSD",
+      "1000SHIBUSDC",
+      "AAVEUSDC",
+      "ADABUSD",
+      "ADAUSDC",
+      "AERGOUSDTSETTLED",
+      "AGIXBUSD",
+      "AIAUSDTSETTLED",
+      "AMBBUSD",
+      "ANCBUSD",
+      "APEBUSD",
+      "APTBUSD",
+      "ARBUSDC",
+      "AUCTIONBUSD",
+      "AVAXBUSD",
+      "AVAXUSDC",
+      "BCHUSDC"
+    ],
+    "contoh_hanya_penyebut": [],
+    "penyebut_bagian_arsip": true,
+    "semesta_sama": false
+  },
+  "sumber": [
+    "reports/semesta_bulan_1m.json",
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "versi_semesta_silang": 1,
+  "waktu_utc": "2026-07-29T11:32:06Z"
+}

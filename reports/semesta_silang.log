@@ -1,0 +1,224 @@
+{
+  "bersambung": [
+    {
+      "cacah_bulan_saudara": 9,
+      "cacah_bulan_simbol": 62,
+      "saudara": [
+        {
+          "cacah_bulan": 9,
+          "nama": "ICPUSDT_SETTLED"
+        }
+      ],
+      "simbol": "ICPUSDT"
+    },
+    {
+      "cacah_bulan_saudara": 9,
+      "cacah_bulan_simbol": 60,
+      "saudara": [
+        {
+          "cacah_bulan": 9,
+          "nama": "TLMUSDTSETTLED"
+        }
+      ],
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "bukan_bukti": false,
+  "h_a013_arsip": {
+    "baris": [
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-04",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 68,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CTKUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CTKUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-05",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 68,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CVCUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CVCUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-07",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 46,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "CVXUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "CVXUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-12",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 65,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "LITUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "LITUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-03",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 29,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "MAVIAUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "MAVIAUSDT",
+        "simbol_di_arsip": true
+      },
+      {
+        "bulan_cocok_terukur": false,
+        "bulan_peralihan": "2025-07",
+        "cacah_bulan_saudara": 1,
+        "cacah_bulan_simbol": 33,
+        "saudara": [
+          {
+            "cacah_bulan": 1,
+            "nama": "SLPUSDTSETTLED"
+          }
+        ],
+        "saudara_satu_bulan": true,
+        "simbol": "SLPUSDT",
+        "simbol_di_arsip": true
+      }
+    ],
+    "berlaku": false,
+    "bulan_cocok_terukur": false,
+    "cacah_peralihan": 6,
+    "cacah_saudara_arsip": 6,
+    "cacah_saudara_satu_bulan": 6,
+    "menang": null,
+    "sebab_tak_berlaku": "laporan arsip memuat CACAH bulan, bukan DAFTAR bulan, jadi kecocokan bulan peralihan tidak dapat diuji dari artefak yang ada (aturan 62)"
+  },
+  "ringkasan": {
+    "arsip_lebih_banyak": true,
+    "cacah_arsip": 937,
+    "cacah_hanya_arsip": 150,
+    "cacah_hanya_penyebut": 0,
+    "cacah_irisan": 787,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_penyebut_simbol": 787,
+    "cacah_saudara_arsip": 6,
+    "cacah_saudara_satu_bulan": 6,
+    "cacah_settled_arsip": 15,
+    "cacah_settled_di_penyebut": 0,
+    "h_a013_berlaku": false,
+    "jumlah_bulan_arsip": 21789,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_bagian_arsip": true,
+    "penyebut_kehidupan": 19586,
+    "selisih_penyebut": 0,
+    "semesta_sama": false,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8
+  },
+  "settled": {
+    "cacah_settled_arsip": 15,
+    "cacah_settled_di_penyebut": 0,
+    "daftar_settled_di_penyebut": [],
+    "terukur": true
+  },
+  "sidik_data_arsip": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
+  "sidik_kode": "8ddea8f1c8de65772c5f856b6337717f732e76f3ac00cd45b293a5b1b5f2e095",
+  "silang": {
+    "arsip_lebih_banyak": true,
+    "cacah_arsip": 937,
+    "cacah_hanya_arsip": 150,
+    "cacah_hanya_penyebut": 0,
+    "cacah_irisan": 787,
+    "cacah_penyebut": 787,
+    "contoh_hanya_arsip": [
+      "1000BONKUSDC",
+      "1000LUNCBUSD",
+      "1000PEPEUSDC",
+      "1000SHIBBUSD",
+      "1000SHIBUSDC",
+      "AAVEUSDC",
+      "ADABUSD",
+      "ADAUSDC",
+      "AERGOUSDTSETTLED",
+      "AGIXBUSD",
+      "AIAUSDTSETTLED",
+      "AMBBUSD",
+      "ANCBUSD",
+      "APEBUSD",
+      "APTBUSD",
+      "ARBUSDC",
+      "AUCTIONBUSD",
+      "AVAXBUSD",
+      "AVAXUSDC",
+      "BCHUSDC"
+    ],
+    "contoh_hanya_penyebut": [],
+    "penyebut_bagian_arsip": true,
+    "semesta_sama": false
+  },
+  "versi_semesta_silang": 1,
+  "waktu_utc": "2026-07-29T11:32:06Z"
+}
+

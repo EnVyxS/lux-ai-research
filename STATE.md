@@ -1,19 +1,20 @@
-# STATE — versi 31
+# STATE — versi 32
 
 Diperbarui: 2026-07-29 (sesi 54, lanjutan). Aturan hanya BERTAMBAH; jangan
-menulis ulang dari ingatan. v31 disusun di atas teks v30 yang dibaca langsung
-dari `main` (blob `ae688dad`), ditambah jurnal 83 (`5f2b7046`) dan jurnal 84
-(`d4451a60`), laporan `reports/silang_funding_ringkas.json` (sidik kode
-`259c069b…`), `reports/ukur_baris.json` V3, serta dua run CI yang dicocokkan
-commit-nya: **30431610324** (`1b0e8d8e`, 316 butir, kode 0) dan **30433635955**
-(`67ec2be4`, 316 butir, kode 0).
+menulis ulang dari ingatan. v32 disusun di atas teks v31 yang dibaca langsung
+dari `main` (blob `2b4c4045`), ditambah jurnal 85 (`667d8d21`, blob `2b9370b6`)
+dan jurnal 86 (`ad0d8c4e`, blob `c901fe50`), laporan
+`reports/hidup_tanpa_funding.json` (blob **`a7b20503`**, dibaca UTUH), serta tiga
+run yang dicocokkan commit-nya: **30434140732** (`9819d76b`, CI 316, kode 0),
+**30434948267** (`b1816ddf`, silang_funding V2, kode 0), dan **30434951202**
+(`b1816ddf`, CI **340**, kode 0).
 
-Peristiwa terbesar sejak v30: **pertanyaan 945 sudah terjawab.** Lubang funding
-dan kematian pasar BERIRISAN TETAPI BUKAN SATU GEJALA — dari 1.401 simbol-bulan
-MATI, 842 kehilangan funding dan **559 tetap punya funding**; sebaliknya dari 877
-lubang funding di dalam penyebut, 842 (96,0%) jatuh di bulan MATI. Sisa yang
-benar-benar mencurigakan menyusut menjadi **33 simbol-bulan HIDUP tanpa
-funding**.
+Peristiwa terbesar sejak v31: **ke-33 simbol-bulan HIDUP tanpa funding sudah
+disebut namanya, dan bentuknya seragam.** Ketiga puluh tiga itu SEMUANYA lubang
+berbentuk AWAL — nol berbentuk ekor, nol berbentuk tengah. Kelompok yang selama
+tiga versi dicurigai sebagai cacat arsip funding ternyata berperilaku seperti
+funding yang MENYUSUL penerbitan klines. Yang tersisa tak terjelaskan hanyalah
+**6 lubang TENGAH**.
 
 ## Aturan bernomor
 
@@ -40,7 +41,7 @@ definisi berdampingan.
     (198 lawan **201**) karena saya mencacah FUNGSI uji, bukan butir yang
     dikumpulkan pytest — satu fungsi berparameter empat kasus bernilai 4 butir.
     **Ditaati pada R-198, R-200, R-204, R-205, R-208, dan R-215.** **Dilanggar
-    lagi pada R-211 [v31]** — lihat aturan 54.
+    lagi pada R-211 [v31] dan R-217 [v32]** — lihat aturan 54, 57, dan KC-19.
 39. **[v22]** Keseragaman yang terukur pada sampel DILARANG dipakai sebagai
     angka ramalan untuk anggota di luar sampel; wajib pita atau kemungkinan
     campuran. Lahir dari R-114. **Dibenarkan keras [v30]:** kohort puncak 100%
@@ -59,7 +60,8 @@ definisi berdampingan.
     belum diukur langsung. Tuduhan ditulis sebagai hipotesis + run, bukan
     sebagai kelas. Lahir dari KC-16 yang ditarik. **Ditaati pada KC-18**, yang
     baru dinamai di jurnal 74 sesudah kendali positif membuktikan alat ukurnya
-    melihat.
+    melihat. **Ditaati lagi [v32]:** ke-33 HIDUP tanpa funding TIDAK dinamai
+    kelas cacat, sebab bentuk lubangnya justru menjelaskannya.
 43. **[v24]** Medan penggugur yang membandingkan taksiran dengan kenyataan wajib
     memakai toleransi yang BERSKALA terhadap cacah item, bukan margin datar.
     Margin datar 20.480 byte membuat 16 uji lolos sementara produksi gagal pada
@@ -75,8 +77,8 @@ definisi berdampingan.
     workflow pada commit PEMICU, sehingga perbaikan workflow yang menyusul di
     commit berikutnya TIDAK berlaku untuk run yang sedang berjalan. Lahir dari
     `57a04f1e`. Ditaati pada `ab4e0774`, `387037a9`, `796c2fc4`, `5c65adf9`,
-    `d4a2f60a`, `0929643c`, dan **`1b0e8d8e`** (silang_funding: modul + uji +
-    workflow).
+    `d4a2f60a`, `0929643c`, `1b0e8d8e`, dan **`b1816ddf`** (silang_funding V2:
+    modul + uji + workflow dalam satu commit).
 46. **[v26, LUNAS DI KODE v28] Kode dilarang menyimpulkan dari penyebut nol.**
     Medan yang MENYIMPULKAN sebuah definisi atau sebab wajib memeriksa lebih
     dulu apakah kasusnya mampu membedakan. Bila penyebutnya nol, atau bila kedua
@@ -90,7 +92,7 @@ definisi berdampingan.
     `putuskan_definisi` dan medan penggugur `definisi_dapat_dibedakan`. Sudah
     lebih dulu DITAATI oleh `kohort_ekor` V4 (`bangkit_dapat_diuji`), lalu oleh
     `kehidupan` V1, `kehidupan_arsip` V1 (`penyebut_tanpa_mati_kosong`), dan
-    **`silang_funding` V1** (`_bagian` mengembalikan null bila penyebut nol).
+    `silang_funding` V1–V2 (`_bagian` mengembalikan null bila penyebut nol).
 47. **[v27, lahir di jurnal 69]** Sebelum menulis ramalan berupa cacah,
     sebutkan satuannya secara eksplisit — simbol, bulan, simbol-bulan, baris,
     atau butir uji — dan periksa bahwa angka rujukan yang dipakai memang
@@ -116,8 +118,10 @@ definisi berdampingan.
     dengan laporan yang tidak ada. Setiap pelapor besar wajib berpasangan dengan
     keluaran ringkas yang memuat sidik berkas sumbernya. Ditaati oleh
     `kohort_ringkas`, `ukur_baris`, `kehidupan`, `kehidupan_arsip`, dan
-    **`silang_funding`** (laporan penuh 183.963 B berpasangan dengan
-    `_ringkas.json` yang terbaca utuh, sidik sumber `0e43f8bd…`).
+    `silang_funding`. **Diperkuat [v32]:** V2 menerbitkan berkas ketiga
+    `reports/hidup_tanpa_funding.json` yang memuat kedua daftar bernama dan
+    memang terbaca utuh, sedangkan laporan penuh 183.963 B tetap tak terbaca
+    utuh selamanya.
 53. **[v30, lahir dari R-205] Ramalan kode keluar sebuah run yang gerbangnya
     adalah berkas uji wajib didahului pembacaan PERILAKU setiap fungsi yang
     diuji, bukan hanya namanya.** Membaca modul tidak sama dengan mengetahui
@@ -126,8 +130,8 @@ definisi berdampingan.
     `kohort_ekor.bagian` MEMBULATKAN ke empat desimal dan mengembalikan 0,6667 —
     CI keluar dengan kode 1 karena harapan uji, bukan karena modulnya. Ramalan
     berkepala dua (cacah butir DAN kode keluar) yang separuhnya salah
-    diadjudikasi SEPARUH, bukan MELESET. **Ditaati pada R-211 dan R-215:** uji
-    pembulatan 0,6667 ditulis tersurat di `tests/test_silang_funding.py`.
+    diadjudikasi SEPARUH, bukan MELESET. **Ditaati pada R-211, R-215, dan
+    R-217** (kode keluar 0 benar pada ketiganya; yang salah cacah butirnya).
 54. **[v31, lahir dari R-211] Cacah butir uji dalam sebuah ramalan wajib
     dihitung dengan mencacah definisi `def test_` satu per satu pada berkas uji
     yang SUDAH selesai ditulis, mengalikan setiap fungsi berparameter dengan
@@ -136,7 +140,8 @@ definisi berdampingan.
     yang saya dorong memuat **22** fungsi berbutir tunggal + 1 fungsi
     berparameter tiga kasus = **25** butir, sehingga CI mengumpulkan 316, bukan
     312. Aturan 38 mengatur SUMBER angka akhir; aturan 54 mengatur cara
-    menyusun angka RAMALANNYA. Pendahulu: R-148.
+    menyusun angka RAMALANNYA. Pendahulu: R-148. **TIDAK CUKUP [v32]:** R-217
+    gugur walau aturan 54 saya kira sudah ditaati — lihat aturan 57 dan KC-19.
 55. **[v31, lahir dari R-209 dan R-212] Sebelum meramalkan hasil sebuah
     workflow, baca `paths`/`paths-ignore` workflow itu dan sebutkan di dalam
     ramalan workflow MANA yang akan menyala pada commit yang dimaksud. Ramalan
@@ -145,7 +150,26 @@ definisi berdampingan.
     dan `reports/**`; karena itu commit yang hanya menyentuh jurnal TIDAK
     menyalakan CI, dan R-209 serta R-212 mustahil menang maupun kalah. Aturan 52
     menjaga dari laporan yang tak terbaca utuh; aturan 55 menjaga dari laporan
-    yang tidak akan pernah ada.
+    yang tidak akan pernah ada. **Ditaati pada R-217** (disebut tersurat bahwa
+    pemicunya `tests/test_silang_funding.py`).
+56. **[v32, lahir dari R-216] Ramalan yang menyebut sebuah commit sebagai
+    sasaran wajib menyebut sasaran yang keberadaannya dijamin oleh cara kerja
+    saya sendiri.** Bentuk yang sah: "commit BERIKUTNYA yang menyentuh
+    `<berkas>`". Bentuk yang dilarang: menyebut satu commit yang memuat DUA
+    berkas atau lebih, kecuali push-nya memang atomik dan dirancang atomik sejak
+    ramalan ditulis (aturan 45). Lahir dari R-216, yang menyebut "commit yang
+    memuat STATE v31 DAN PROMPT v34" padahal keduanya saya dorong terpisah
+    (`9819d76b`, `dce890eb`), sehingga commit itu tidak pernah ada. Aturan 55
+    melarang meramalkan run yang tak akan menyala; aturan 56 melarang
+    meramalkan run atas commit yang tak akan ada.
+57. **[v32, lahir dari R-217] Sebelum meramalkan cacah butir uji, nama setiap
+    fungsi `def test_` WAJIB ditulis BERNOMOR di jurnal atau docstring, dan
+    nomor terakhirnya dipakai sebagai cacahan.** Ramalan cacah butir tanpa
+    daftar bernomor yang tersurat DILARANG. Aturan 54 menyuruh mencacah dari
+    berkas yang sudah jadi; ternyata itu masih memberi ruang untuk "mencacah di
+    kepala sambil menulis", dan itulah yang menjatuhkan R-217 (ditulis 42 fungsi
+    / 44 butir, nyatanya **47** fungsi / **49** butir). Daftar yang panjang
+    justru pertanda cacahan kepala paling mudah salah. Lihat KC-19.
 
 ## Kelas cacat
 
@@ -193,16 +217,73 @@ KC-1 s.d. KC-12 seperti pada v19. KC-10 dan KC-11 DITUTUP (v20). KC-13
     setiap penyebut diterbitkan berpasangan; backtest hanya pada simbol-bulan
     HIDUP; angka 839.842.134 tidak ditulis ulang (aturan 29). Keputusan 7
     DITANGGUHKAN. **Klausa gugur §6 tidak aktif** pada ketiga run.
+- **KC-19 [v32, lahir dari R-217] — mencacah dari INGATAN atas berkas yang baru
+  saya tulis sendiri.** R-148, R-211, dan R-217 gugur dengan sebab yang persis
+  sama: angka cacah butir uji ditulis sebagai fakta padahal ia hasil cacahan di
+  kepala sambil menulis berkasnya. Penangkalnya aturan 57 (daftar bernomor
+  tersurat). Kelas ini BUKAN tentang pytest dan bukan tentang kode; ia tentang
+  kebiasaan saya memercayai ingatan atas berkas yang panjang.
+
+## Daftar 33 HIDUP tanpa funding dan 3 lubang tak dikenal — TERBIT [v32]
+
+Sumber: `silang_funding` **V2**, run **30434948267**, commit **`b1816ddf`**,
+kode 0; `sidik_kode`
+**`8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1`**;
+`sidik_data_funding` `2c9fbd1b…8c24` (SAMA dengan V1 → bahan baku identik).
+Berkas `reports/hidup_tanpa_funding.json` (blob `a7b20503`) dibaca **UTUH**.
+Penggugur: `selisih_hidup_tanpa_funding` **0**, `selisih_lubang_tak_dikenal` **0**.
+
+**Sebaran bentuk ke-33: awal 33 · ekor 0 · tengah 0 · seluruh 0.**
+
+| simbol | cacah | bulan | lubang simbol | bulan klines simbol |
+|---|---:|---|---:|---:|
+| ICPUSDT | 13 | 2021-05..2022-05 | 16 | 62 |
+| TLMUSDT | 11 | 2021-07..2022-05 | 20 | 60 |
+| BNXUSDT | 7 | 2022-05, -07, -09, -10, -11, -12, 2023-01 | 19 | 48 |
+| JUPUSDT | 1 | 2024-01 | 1 | 30 |
+| QTUMUSDT | 1 | 2020-02 | 1 | 77 |
+
+13 + 11 + 7 + 1 + 1 = **33** ✅ (dihitung tangan, aturan 21). Lima simbol saja.
+
+**Tiga lubang tak dikenal: BNXUSDT 2022-04, 2022-06, 2022-08** — ketiganya
+`simbol_dikenal` true (BNXUSDT punya 48 bulan di penyebut, 2022-05..2026-06).
+
+**Definisi `bentuk_lubang_lokal` (aturan 36).** Dihitung V2 atas penyebut 19.586,
+BUKAN definisi `funding.py`: awal bila semua bulan klines simbol yang tidak lebih
+besar juga berlubang; ekor bila semua yang tidak lebih kecil juga berlubang;
+seluruh bila keduanya; tengah bila tidak satu pun. Kedua definisi itu BERTEMU
+setelah penyebutnya disamakan:
+
+- lokal atas 877 lubang di dalam penyebut = awal **45** + ekor **826** + tengah
+  **6** + seluruh 0 = **877** ✅
+- terbitan `funding.py` atas 880 = awal **48** + ekor 826 + tengah 6
+- selisih 48 − 45 = **3** = ketiga lubang BNXUSDT di luar penyebut ✅
+
+**Yang BOLEH disimpulkan.** Setiap pasar HIDUP tanpa funding kehilangan
+funding-nya di AWAL riwayat klines-nya; tak satu pun di tengah, tak satu pun
+sampai bulan terakhir. Bentuk itu yang diharapkan bila penerbitan funding
+MENYUSUL penerbitan klines bagi simbol tersebut. Karena itu kelompok 33 ini
+bukan kelas cacat (aturan 42) dan bukan bantahan bagi KC-18 maupun ADR-A002 §10.
+
+**Yang TIDAK BOLEH disimpulkan (aturan 20).** "Funding menyusul" masih DUGAAN:
+laporan ini tidak mengukur tanggal mulai penerbitan funding per simbol. Dan
+ketiga lubang BNXUSDT DIDUGA anggota 12 simbol-bulan karantina — belum
+dicocokkan dengan daftar karantina, jadi belum fakta.
+
+**Medan baris laporan kehidupan, akhirnya diketahui** (`medan_baris_terlihat`, 14
+medan): `ada_di_arsip`, `bagian_volume_nol`, `bulan`, `byte_parquet`,
+`cacah_baris_cacat`, `cacah_lilin`, `cacah_lilin_terbaca`, `cacah_volume_nol`,
+`galat`, `gerbang_lolos`, `jalur`, `simbol`, `status`, `transaksi_total`.
+`cacah_baris_dengan_medan` = **19.586**, jadi `cacah_lilin` ada pada SETIAP baris.
 
 ## Silang funding × kehidupan — TERUKUR [v31]
 
-Modul `lux_ai/serapan/silang_funding.py` V1 (396 baris, `sidik_kode`
-**`259c069b4a69a725aec25d0d27c6d3f0a847d43363b3b38adc571887861e8c60`**), didorong
-atomik bersama uji dan workflow pada commit **`1b0e8d8e`** (aturan 45). Tidak
-menyentuh jaringan: bahannya kedelapan `reports/kehidupan_arsip_<i>.json`
-(`sidik_kode` seragam `24b6bb26…c595`) dan `reports/funding_semesta.json`
-(`sidik_data_funding` `2c9fbd1b…`). Laporan penuh 183.963 B; ringkasnya terbaca
-utuh dan identik dengan `reports/silang_funding.log`.
+Modul `lux_ai/serapan/silang_funding.py`: V1 (396 baris, `sidik_kode`
+`259c069b…8c60`) didorong atomik pada commit **`1b0e8d8e`**; **V2** didorong
+atomik pada **`b1816ddf`** (aturan 45). Tidak menyentuh jaringan: bahannya
+kedelapan `reports/kehidupan_arsip_<i>.json` (`sidik_kode` seragam
+`24b6bb26…c595`) dan `reports/funding_semesta.json`. Laporan penuh 183.963 B;
+ringkasnya terbaca utuh dan identik dengan `reports/silang_funding.log`.
 
 Penyebut: **19.586** simbol-bulan lolos gerbang (aturan 30, 44).
 
@@ -218,16 +299,16 @@ Uji silang (aturan 21):
 
 - 559 + 96 + 18.054 = **18.709** ✅ 842 + 2 + 33 = **877** ✅ jumlah **19.586** ✅
 - 877 + **3** `cacah_lubang_tak_dikenal` = **880**, persis cacah lubang funding
-  semesta `funding.py` V6 ✅ Ketiga lubang tak dikenal jatuh di luar 19.586;
-  kandidat paling wajar karantina, BELUM diperiksa satu per satu.
+  semesta `funding.py` V6 ✅ Ketiganya kini BERNAMA: BNXUSDT 2022-04, -06, -08.
 - Kohort puncak: **456/456** MATI dan **456/456** berlubang ✅
 - Di luar kohort: 945 MATI = **386** berlubang + **559** berfunding ✅
   456 + 386 = 842 ✅ `bagian` 386/945 = **0,4085** (dibulatkan 4 desimal).
 
-Medan penggugur bersih: `sidik_seragam` true (satu sidik di kedelapan laporan),
+Medan penggugur bersih pada kedua versi: `sidik_seragam` true,
 `cacah_laporan_dibaca` 8, `laporan_hilang` [], `cacah_kunci_ganda` 0,
 `cacah_lubang_ganda` 0, `selisih_penyebut` 0, `selisih_mati` 0,
-`selisih_kohort` 0, `kode_keluar` 0. Kendali positif (aturan 50): tiga
+`selisih_kohort` 0, `kode_keluar` 0; V2 menambah `selisih_hidup_tanpa_funding` 0
+dan `selisih_lubang_tak_dikenal` 0. Kendali positif (aturan 50): tiga
 simbol-bulan berparquet terbesar — BTCUSDT 2021-05, 2021-08, 2021-01 — ketiganya
 HIDUP dan berfunding, `kendali_sah` true.
 
@@ -244,13 +325,10 @@ dipakai sebagai penyaring kematian — memakainya melewatkan 559 bulan mati.
 **Yang TIDAK BOLEH disimpulkan.** Irisan bukan sebab (aturan 10); keduanya masih
 dapat lahir dari satu delisting. Yang terukur hanya BENTUK irisannya.
 
-**Sisa yang benar-benar mencurigakan: 33 simbol-bulan HIDUP tanpa funding.**
-Inilah satu-satunya kelompok yang tidak dapat dijelaskan kematian, dan kandidat
-terkuat bagi cacat arsip funding. Dugaan BELUM diukur: sebagiannya mungkin bulan
-AWAL sebelum arsip funding diterbitkan (48 lubang `awal` sudah terukur).
-**Daftar ke-33 itu BELUM ADA di laporan mana pun** — `silang_funding` V1 hanya
-menerbitkan `baris_mati`; perlu V2 yang menerbitkan `baris_hidup_tanpa_funding`
-dan daftar 3 lubang tak dikenal.
+**Sisa yang benar-benar mencurigakan kini tinggal 6 lubang TENGAH [v32].**
+Kelompok 33 sudah terjelaskan bentuknya (semua AWAL); ketiga lubang tak dikenal
+sudah bernama. Keenam lubang tengah BELUM disebut namanya dan itulah prasyarat
+Keputusan 7 ADR-A008.
 
 ## Kehidupan semesta terserap — TERUKUR [v30]
 
@@ -336,6 +414,13 @@ menunjukkan sebagian hidup pada 2024–2025.
   `cacah_sha_tak_cocok` 0 dan cacah baris yang kembali persis 839.325.999.
 - **H-A009 [v31, LAHIR DAN LANGSUNG DIUJI] — lubang funding dan kematian pasar
   adalah satu gejala. GUGUR:** 559 simbol-bulan MATI tetap berfunding.
+- **H-A010 [v32, LAHIR, BELUM DIUJI] — penerbitan funding MENYUSUL penerbitan
+  klines bagi sebagian simbol.** Dasar: ke-33 simbol-bulan HIDUP tanpa funding
+  semuanya berbentuk AWAL, nol berbentuk ekor maupun tengah. Uji yang
+  diperlukan: bandingkan bulan funding PERTAMA tiap simbol dengan bulan klines
+  pertamanya; hipotesis MENANG bila bagi kelima simbol (ICP, TLM, BNX, JUP,
+  QTUM) funding pertama datang SESUDAH klines pertama, dan GUGUR bila ada satu
+  saja yang funding-nya mulai lebih dulu lalu bolong.
 
 ## Papan skor prediksi
 
@@ -345,7 +430,7 @@ R-200 di jurnal 79. R-201 di jurnal 81. R-202..R-204 di jurnal 80.
 R-205..R-207 dipraregistrasi di docstring commit `0929643c`; R-208 di docstring
 commit `dceb1009`; R-209 di jurnal 82; R-210..R-211 di docstring commit
 `1b0e8d8e`; R-212 di jurnal 83; R-213..R-215 di docstring commit `67ec2be4`;
-R-216 di jurnal 84.
+R-216 di jurnal 84; **R-217..R-219 di docstring commit `b1816ddf`**.
 
 | # | Prediksi | Status |
 |---|---|---|
@@ -369,23 +454,28 @@ R-216 di jurnal 84.
 | R-213 | `kehidupan_arsip.py` pita 250..500 BARIS | **TEPAT** (496) |
 | R-214 | `silang_funding.py` pita 330..430 BARIS | **TEPAT** (396) |
 | R-215 | CI 316 butir, kode 0, pada `67ec2be4` | **TEPAT** (`30433635955`) |
-| R-216 | CI 316 butir, kode 0, pada commit STATE v31 + PROMPT v34 | **MENUNGGU** |
+| R-216 | CI 316 butir, kode 0, pada commit STATE v31 + PROMPT v34 | **SEPARUH** (316/kode 0 tepat pada `9819d76b`, tetapi commit yang disebut tak pernah ada; aturan 56) |
+| R-217 | CI **335 butir**, kode 0, pada commit pemicu `tests/test_silang_funding.py` | **MELESET** (340; aturan 57, KC-19) |
+| R-218 | `cacah_hidup_tanpa_funding` 33 DAN bentuk awal 20..33 DAN ekor 0..3 | **TEPAT** (33; awal 33, ekor 0) |
+| R-219 | ketiga lubang tak dikenal bersimbol dikenal, 3 dari 3 | **TEPAT** (BNXUSDT ×3) |
 
-**Total R-1..R-216** (aturan 21): TEPAT **150**; MELESET **39**; SEPARUH **12**;
-TIDAK TERADJUDIKASI **7**; MENUNGGU **8** (R-7, R-19, R-20, R-28, R-36, R-37,
-R-199, R-216). 150+39+12+7+8 = **216** ✅ Ramalan berikutnya **R-217**.
-N_percobaan = 0.
+**Total R-1..R-219** (aturan 21): TEPAT **152**; MELESET **40**; SEPARUH **13**;
+TIDAK TERADJUDIKASI **7**; MENUNGGU **7** (R-7, R-19, R-20, R-28, R-36, R-37,
+R-199). 152+40 = 192; +13 = 205; +7 = 212; +7 = **219** ✅ Ramalan berikutnya
+**R-220**. N_percobaan = 0.
 
 Catatan kejujuran: R-175, R-179, dan R-203 adalah satu pola — menaksir panjang
 berkas ketika ia dapat dihitung; pola itu berhenti pada R-213 dan R-214 karena
 keduanya diukur, bukan ditaksir, dan pitanya diakui lebar (496 hanya 4 baris di
 bawah batas atas — kemenangan yang tidak layak dibanggakan). R-205 melahirkan
-aturan 53. R-211 melahirkan aturan 54 dan mengulang kelas kesalahan R-148.
-R-209 dan R-212 melahirkan aturan 55: keduanya ramalan atas run yang mustahil
-ada. R-206 dan R-210 keduanya TEPAT atas pita LEBAR; ketepatan semacam itu tidak
-boleh dibaca sebagai kecakapan meramal.
+aturan 53. R-211 melahirkan aturan 54 dan mengulang kelas kesalahan R-148;
+**R-217 mengulangnya untuk KETIGA kali dan melahirkan aturan 57 serta KC-19** —
+kesalahannya saya temukan sendiri sesudah push dan sebelum laporan CI terbaca,
+dan angka ramalannya TIDAK disunting. R-209 dan R-212 melahirkan aturan 55;
+R-216 melahirkan aturan 56. R-206, R-210, dan R-218 TEPAT atas pita LEBAR;
+ketepatan semacam itu tidak boleh dibaca sebagai kecakapan meramal.
 
-## Cacah baris terukur [v31]
+## Cacah baris terukur [v31] — SEBAGIAN KEDALUWARSA [v32]
 
 Sumber: `reports/ukur_baris.json` **V3**, commit `67ec2be4`. Penggugur bersih:
 `cacah_berkas_hilang` 0, `cacah_berkas_melebihi_pagar` 0, `cacah_berkas_ada`
@@ -398,7 +488,7 @@ Sumber: `reports/ukur_baris.json` **V3**, commit `67ec2be4`. Penggugur bersih:
 | `kohort_ekor.py` | 553 | 22.590 |
 | `kehidupan_arsip.py` | **496** | 19.281 |
 | `kehidupan.py` | **417** | 16.638 |
-| `silang_funding.py` | **396** | 15.908 |
+| `silang_funding.py` V1 | **396** (KEDALUWARSA) | 15.908 |
 | `pulihkan.py` V2 | **383** | 14.839 |
 | `ukur_baris.py` V3 | **226** | 10.212 |
 | `gerbang_1m.py` | 184 | 6.775 |
@@ -411,9 +501,10 @@ Total **3.885** baris (dihitung ulang tangan ✅); terbesar `funding.py` 705 —
 baris di bawah pagar 800. Aturan 48 berlaku padanya: fungsi baru DILARANG
 ditambahkan sebelum dipecah.
 
-**Angka kedaluwarsa:** `ukur_baris.py` 183 baris (v29) BATAL — kini 226. Utang
-v30 (`kehidupan_arsip.py` belum masuk `BERKAS_DIUKUR`) **LUNAS**, dan
-`silang_funding.py` ikut masuk pada V3.
+**Angka kedaluwarsa:** `ukur_baris.py` 183 baris (v29) BATAL — kini 226.
+**`silang_funding.py` 396 BATAL [v32]** — V2 menambah docstring dan tujuh fungsi
+baru; panjangnya BELUM diukur, dan dilarang ditaksir (pola R-175/R-179/R-203).
+Jalankan `ukur_baris` lagi; bila V2 melewati 800, aturan 48 berlaku padanya.
 
 ## Definisi `jumlah_baris` — TERSELESAIKAN [v26], DITEGAKKAN DI KODE [v28]
 
@@ -486,10 +577,15 @@ Run FUNDING 6 `30412188715`, commit `ba37c5d5`, kode 0.
 - **Pertanyaan v30 TERJAWAB [v31]:** dari 945 simbol-bulan MATI di luar kohort
   puncak, **386** juga kehilangan funding dan **559** tetap berfunding. Tebing
   funding dan kematian pasar karena itu DUA peristiwa yang beririsan, bukan
-  satu. Tafsir ADR-A002 §10 tetap TIDAK diubah; pertanyaannya kini menyempit
-  pada **33 simbol-bulan HIDUP tanpa funding** dan **48 lubang AWAL**.
+  satu. Tafsir ADR-A002 §10 tetap TIDAK diubah.
 - Pembagian 880 lubang menurut status [v31]: 842 MATI + 2 SEPI + 33 HIDUP + 3 di
   luar penyebut = 880 ✅
+- **Pembagian 880 menurut BENTUK, dua definisi berdampingan [v32]:** terbitan
+  `funding.py` {awal 48, ekor 826, tengah 6}; `bentuk_lubang_lokal` atas 877 di
+  dalam penyebut {awal 45, ekor 826, tengah 6}; selisih 3 = BNXUSDT 2022-04,
+  -06, -08 ✅ Ke-33 HIDUP tanpa funding SEMUANYA berbentuk awal, sehingga 33
+  dari 48 lubang awal kini terjelaskan; sisa 15 lubang awal jatuh pada bulan
+  MATI atau SEPI.
 
 ## Kohort ekor — kematian bertahap lawan tebing serempak [v27]
 
@@ -498,7 +594,7 @@ Modul `kohort_ekor.py` V1→4 dan pelapor ringkas `kohort_ringkas.py` V1.
 pindaian ADAPTIF, pagu keras 60 bulan, pagu tak pernah tersentuh.
 **Catatan [v30]:** `kohort_ekor.bagian` MEMBULATKAN ke empat desimal — sifat
 yang melahirkan aturan 53. Pembulatan itu TIDAK diubah (aturan 29), dan
-`silang_funding` V1 memakainya apa adanya dengan uji tersurat 0,6667.
+`silang_funding` V1–V2 memakainya apa adanya dengan uji tersurat 0,6667.
 
 | simbol | bulan hidup terakhir | simbol | bulan hidup terakhir |
 | --- | --- | --- | --- |
@@ -519,16 +615,19 @@ bukti kohort semata.**
 memuat status per simbol-bulan bagi SELURUH semesta, sehingga
 `bulan_hidup_terakhir` bagi 28 anggota sisanya mungkin dijawab tanpa unduhan
 baru — dengan syarat definisi "hidup terakhir" dicocokkan lebih dulu dengan
-definisi `kohort_ekor` (aturan 36).
+definisi `kohort_ekor` (aturan 36). **Catatan [v32]:** BNXUSDT ada di kedua
+daftar — "bulan hidup terakhir 2025-03" menurut kohort_ekor, dan 7 bulan HIDUP
+tanpa funding pada 2022–2023 menurut V2. Keduanya tidak bertentangan, tetapi
+itulah contoh pertama mengapa definisi wajib dicocokkan sebelum dijumlahkan.
 
 ## Jumlah uji
 
-**316 TERVERIFIKASI** — `reports/ci_terakhir.json` run **30433635955**, commit
-`67ec2be4`, `kode_keluar` **0**, "316 tests collected in 0.43s"; run sebelumnya
-**30431610324** (`1b0e8d8e`) juga 316 butir kode 0.
-Riwayat: 231 → 234 → 236 → 239 → 241 → 244 → 253 → 269 → 291 → **316**
-(`test_silang_funding.py` menambah **25** butir: 22 fungsi berbutir tunggal + 1
-fungsi berparameter tiga kasus — aturan 54).
+**340 TERVERIFIKASI [v32]** — `reports/ci_terakhir.json` run **30434951202**,
+commit `b1816ddf`, `kode_keluar` **0**, "340 tests collected in 0.35s".
+Riwayat: 231 → 234 → 236 → 239 → 241 → 244 → 253 → 269 → 291 → 316 → **340**.
+`tests/test_silang_funding.py` kini menyumbang **49** butir (**47** fungsi
+`def test_`, satu di antaranya `parametrize` tiga kasus): 316 − 25 + 49 = 340 ✅
+Angka 25 butir (v31) berlaku untuk berkas uji V1 dan tidak dihapus (aturan 29).
 
 ## Utang verifikasi
 
@@ -545,13 +644,21 @@ fungsi berparameter tiga kasus — aturan 54).
       terukur, 0 tak terukur, kendali 24/24;
     - penyebut kedua atas semesta: **LUNAS [v30]** — 18.185 tanpa MATI, 18.087
       HIDUP;
-    - cacah baris `kehidupan_arsip.py` dan `silang_funding.py`: **LUNAS [v31]**
-      (496 dan 396, `ukur_baris` V3);
-    - **funding bagi 945 MATI di luar kohort puncak: LUNAS [v31]** — 386
+    - cacah baris `kehidupan_arsip.py` dan `silang_funding.py` V1: **LUNAS
+      [v31]** (496 dan 396);
+    - funding bagi 945 MATI di luar kohort puncak: **LUNAS [v31]** — 386
       berlubang, 559 berfunding;
-    - **daftar 33 simbol-bulan HIDUP tanpa funding: BELUM [v31]** — perlu
-      `silang_funding` V2;
-    - **daftar 3 lubang funding di luar penyebut 19.586: BELUM [v31]**;
+    - **daftar 33 simbol-bulan HIDUP tanpa funding: LUNAS [v32]** — 5 simbol,
+      semuanya bentuk AWAL;
+    - **daftar 3 lubang funding di luar penyebut: LUNAS [v32]** — BNXUSDT
+      2022-04, -06, -08;
+    - **medan baris laporan kehidupan: LUNAS [v32]** — 14 medan, `cacah_lilin`
+      ada pada 19.586 baris;
+    - **cacah baris `silang_funding.py` V2: BELUM [v32]** — jalankan ulang
+      `ukur_baris`;
+    - **nama keenam lubang TENGAH: BELUM [v32]** — prasyarat Keputusan 7;
+    - **pencocokan 3 lubang BNXUSDT dengan 12 simbol-bulan karantina: BELUM
+      [v32]**;
     - kehidupan 12 simbol-bulan karantina: BELUM (tar terpisah);
     - jalur **funding**: `funding_ada` masih null di seluruh manifes — BELUM;
     - medan `dugaan_pengganti` (ADR-A005) — BELUM;
@@ -565,9 +672,10 @@ fungsi berparameter tiga kasus — aturan 54).
 
 - ADR-A001 aturan dasar. DITERIMA.
 - ADR-A002 serapan. DITERIMA; §3 DIAMANDEMEN oleh ADR-A004 lalu ADR-A007;
-  §9 DIGANTI oleh ADR-A006 Keputusan 3. **§10 belum disentuh.** Bukti [v31]
-  menyempitkan pertanyaannya dari 880 lubang menjadi 33 simbol-bulan HIDUP tanpa
-  funding — tetapi itu pengukuran berikutnya, bukan dasar mengubah §10 sekarang.
+  §9 DIGANTI oleh ADR-A006 Keputusan 3. **§10 belum disentuh.** Bukti [v32]
+  menyempitkan pertanyaannya dari 880 lubang menjadi **6 lubang TENGAH** — ke-33
+  HIDUP tanpa funding sudah terjelaskan bentuknya, dan itu MENGURANGI alasan
+  mengubah §10, bukan menambahnya.
 - ADR-A003 taksonomi rezim. BELUM ADA (nomor dicadangkan).
 - ADR-A004 kebijakan KC-6. DITERIMA.
 - ADR-A005 jenis instrumen tahap pertama. DITERIMA.
@@ -578,22 +686,25 @@ fungsi berparameter tiga kasus — aturan 54).
 - **ADR-A008 akibat KC-18. DITERIMA [v28] untuk Keputusan 1–6**; Keputusan 2–4
   TERTERAP dan TERJALANKAN atas SELURUH semesta [v30]. Keputusan 5 (backtest
   hanya pada HIDUP) kini punya semesta bernama: **18.087** simbol-bulan.
-  Keputusan 7 DITANGGUHKAN sampai sifat 48 lubang awal dan 6 lubang tengah
-  terukur. Klausa gugur §6 diperiksa dan **tidak aktif** pada ketiga run.
+  Keputusan 7 DITANGGUHKAN; syaratnya kini SETENGAH terpenuhi [v32] — sifat 48
+  lubang AWAL sudah terang (33 di antaranya bulan HIDUP berbentuk awal), tinggal
+  **6 lubang TENGAH** yang belum disebut namanya. Klausa gugur §6 diperiksa dan
+  **tidak aktif** pada seluruh run.
 - ADR berikutnya **A009**.
 
 ## Temuan sampingan yang belum diukur
 
-- **Daftar 33 simbol-bulan HIDUP tanpa funding** — kandidat terkuat cacat arsip
-  funding; belum ada di laporan mana pun (perlu `silang_funding` V2).
-- **Daftar 3 lubang funding di luar penyebut 19.586** — dugaan karantina, belum
-  diperiksa.
+- **Nama keenam lubang funding TENGAH** — satu-satunya bentuk lubang yang belum
+  terjelaskan; penentu Keputusan 7 ADR-A008.
+- **Uji H-A010** — bulan funding pertama lawan bulan klines pertama bagi ICP,
+  TLM, BNX, JUP, QTUM.
+- **Apakah 3 lubang BNXUSDT (2022-04, -06, -08) sama dengan 3 simbol-bulan
+  KC-15** — keduanya BNXUSDT 2022 dan keduanya bercacah 3; kebetulan yang
+  mencurigakan dan wajib dicocokkan, bukan diasumsikan.
 - Sebaran 1.401 MATI menurut TAHUN dan menurut SIMBOL (laporan penuh memuat
   `baris_mati` lengkap; belum dibaca).
 - Kehidupan 12 simbol-bulan karantina.
 - Pindaian `bulan_hidup_terakhir` bagi 28 anggota kohort di luar sampel abjad.
-- Sifat 48 lubang funding AWAL dan 6 lubang TENGAH — penentu Keputusan 7
-  ADR-A008.
 - 15 `SETTLED` lain: apakah punya pendahulu seperti SXPUSDT?
 - Daftar `INDEKS` hanya tiga nama, disusun manual.
 - Saham dan komoditas token masih terhitung `perpetual_usdt`.
@@ -601,8 +712,6 @@ fungsi berparameter tiga kasus — aturan 54).
 - Apakah BUSD/USDC layak digabung dengan USDT.
 - Sisa 16 simbol non-ASCII belum diuji langsung (3 sudah).
 - Sebab KC-14 (H-A004) tidak dapat diuji. Sebab KC-15 tidak diketahui.
-- Apakah lubang funding BNXUSDT 2022-04..2023-01 berimpit dengan lubang
-  klines-nya.
 - Selisih penyebut diagnosa KC-15: 38 diperiksa, 41 dirancang.
 - `reports/funding_selisih_penuh.json` belum pernah dibaca; `daftar_terpotong`
   masih true (500 dari 880).

@@ -53,7 +53,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f reports/silang_funding.json reports/silang_funding_ringkas.json reports/silang_funding.log reports/silang_funding_status.json || true
+          git add -f reports/silang_funding.json reports/silang_funding_ringkas.json reports/silang_funding.log reports/silang_funding_status.json reports/hidup_tanpa_funding.json || true
           git commit -m "laporan silang funding run ${GITHUB_RUN_ID} [skip ci]" || exit 0
           for i in 1 2 3 4 5 6 7 8; do
             git pull --rebase origin main && git push origin HEAD:main && break

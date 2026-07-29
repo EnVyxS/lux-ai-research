@@ -22,10 +22,10 @@
   "catatan_jarak": "jarak_bulan_terakhir = bulan klines terakhir dikurangi bulan funding terakhir, dihitung hanya untuk simbol yang punya lubang ekor; simbol tanpa lubang ekor tidak menyumbang nol, ia tidak menyumbang apa pun",
   "catatan_kelas_kosong": "kelas risiko tanpa kandidat tidak menghasilkan wakil sampel; klaim apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan dari kasus lain (aturan 41, 46)",
   "catatan_kohort": "histogram_mulai_lubang_ekor mencacah SIMBOL, bukan bulan; satu simbol menyumbang tepat satu bulan-mulai. Puncak yang tinggi menunjukkan banyak simbol berhenti serempak, tetapi TIDAK dengan sendirinya membuktikan sebabnya ada di sisi arsip: bulan yang sama juga bisa lahir dari satu gelombang delisting. Membedakan keduanya memerlukan sumber di luar arsip dan BELUM dilakukan",
-  "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda; blok uji_cdn memeriksa perbedaan itu pada enam berkas saja, bukan pada 880",
-  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram bulan-mulai bocor dan seluruh angka kohort batal; uji_cdn.kendali_sah == false berarti jalur unduh tidak terbukti dan seluruh cacah uji_cdn batal (aturan 24)",
+  "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda; blok uji_cdn memeriksa perbedaan itu pada sejumlah kecil pasang berkas saja, bukan pada 880",
+  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram bulan-mulai bocor dan seluruh angka kohort batal; selisih_kohort != 0 berarti daftar anggota kohort tidak sepadan dengan puncak histogram dan cacah_simbol di kohort_puncak tidak boleh dipakai; uji_cdn.kendali_sah == false berarti jalur unduh tidak terbukti dan seluruh cacah uji_cdn batal (aturan 24)",
   "catatan_rentang": "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json saja, bukan untuk 937 simbol arsip (aturan 20)",
-  "catatan_uji_cdn": "uji_cdn menyentuh tiga berkas kohort dan tiga kendali; hasilnya berlaku untuk enam berkas itu saja dan tidak boleh digeneralkan ke 456 simbol-bulan kohort tanpa pengukuran lanjutan (aturan 20)",
+  "catatan_uji_cdn": "pasangan uji dipilih dari kohort terukur, sepuluh anggota pertama menurut urutan nama; urutan nama bukan pengacakan, jadi ini sampel sistematis dan bukan sampel acak. Hasilnya berlaku untuk berkas yang benar-benar diminta saja dan tidak boleh digeneralkan ke seluruh simbol-bulan kohort tanpa pengukuran lanjutan (aturan 20)",
   "contoh_gagal_daftar": [],
   "daftar_funding_tanpa_klines": [
     "ANTUSDT:2024-06",
@@ -658,6 +658,63 @@
     "pra_header": 0,
     "terhenti": 1
   },
+  "kohort_puncak": {
+    "bulan_mulai": "2025-07",
+    "cacah_simbol": 38,
+    "cacah_simbol_bulan": 456,
+    "cacah_tanpa_bulan_terakhir": 0,
+    "catatan_satuan": "cacah_simbol bersatuan SIMBOL dan cacah_simbol_bulan bersatuan SIMBOL-BULAN; keduanya tidak boleh saling menggantikan (aturan 47)",
+    "catatan_seragam": "seragam_bulan_klines_terakhir hanya benar bila SELURUH anggota punya bulan terakhir yang sama DAN tidak ada anggota tanpa bulan terakhir; bila cacah_tanpa_bulan_terakhir != 0 keseragaman tidak dapat disimpulkan (aturan 46)",
+    "histogram_bulan_klines_terakhir": {
+      "2026-06": 38
+    },
+    "puncak_bulan_klines_terakhir": {
+      "cacah": 38,
+      "kunci": "2026-06",
+      "seri": false
+    },
+    "seragam_bulan_klines_terakhir": true,
+    "simbol": [
+      "AGIXUSDT",
+      "ALPACAUSDT",
+      "AMBUSDT",
+      "BADGERUSDT",
+      "BALUSDT",
+      "BLZUSDT",
+      "BNXUSDT",
+      "BONDUSDT",
+      "COMBOUSDT",
+      "DARUSDT",
+      "DGBUSDT",
+      "FTMUSDT",
+      "FTTUSDT",
+      "GLMRUSDT",
+      "IDEXUSDT",
+      "KEYUSDT",
+      "KLAYUSDT",
+      "LINAUSDT",
+      "LOOMUSDT",
+      "MDTUSDT",
+      "NULSUSDT",
+      "OCEANUSDT",
+      "OMGUSDT",
+      "ORBSUSDT",
+      "RADUSDT",
+      "RAYUSDT",
+      "REEFUSDT",
+      "RENUSDT",
+      "SCUSDT",
+      "SNTUSDT",
+      "STMXUSDT",
+      "STPTUSDT",
+      "STRAXUSDT",
+      "TROYUSDT",
+      "UNFIUSDT",
+      "VIDTUSDT",
+      "WAVESUSDT",
+      "XEMUSDT"
+    ]
+  },
   "penyebut": {
     "bulan_funding": 18805,
     "bulan_klines": 19598,
@@ -714,8 +771,9 @@
   ],
   "selisih_histogram": 0,
   "selisih_klasifikasi": 0,
+  "selisih_kohort": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "794e3978d69d90dd65f7dfb21a2c0b995bea58d0fdc8aab42c7c089eb4d338ac",
+  "sidik_kode": "9851130033192f018946816906c8ab461b0e23aec2b7dfcf01ed2b98faba31b6",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "uji_cdn": {
@@ -727,7 +785,7 @@
         "galat": null,
         "kode_http": 404,
         "peran": "kohort",
-        "simbol": "FTMUSDT"
+        "simbol": "AGIXUSDT"
       },
       {
         "bulan": "2025-07",
@@ -736,7 +794,7 @@
         "galat": null,
         "kode_http": 404,
         "peran": "kohort",
-        "simbol": "KLAYUSDT"
+        "simbol": "ALPACAUSDT"
       },
       {
         "bulan": "2025-07",
@@ -745,16 +803,70 @@
         "galat": null,
         "kode_http": 404,
         "peran": "kohort",
-        "simbol": "LOOMUSDT"
+        "simbol": "AMBUSDT"
       },
       {
-        "bulan": "2025-06",
-        "byte": 529,
-        "checksum_cocok": true,
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
         "galat": null,
-        "kode_http": 200,
-        "peran": "kendali",
-        "simbol": "FTMUSDT"
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "BADGERUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "BALUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "BLZUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "BNXUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "BONDUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "COMBOUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "DARUSDT"
       },
       {
         "bulan": "2025-06",
@@ -763,7 +875,61 @@
         "galat": null,
         "kode_http": 200,
         "peran": "kendali",
-        "simbol": "KLAYUSDT"
+        "simbol": "AGIXUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 1939,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "ALPACAUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 747,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "AMBUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 753,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "BADGERUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 529,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "BALUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 747,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "BLZUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 747,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "BNXUSDT"
       },
       {
         "bulan": "2025-06",
@@ -772,19 +938,38 @@
         "galat": null,
         "kode_http": 200,
         "peran": "kendali",
-        "simbol": "LOOMUSDT"
+        "simbol": "BONDUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 533,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "COMBOUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 529,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "DARUSDT"
       }
     ],
-    "cacah_kendali_200": 3,
-    "cacah_kendali_checksum_cocok": 3,
-    "cacah_kendali_diminta": 3,
+    "cacah_kendali_200": 10,
+    "cacah_kendali_checksum_cocok": 10,
+    "cacah_kendali_diminta": 10,
     "cacah_kohort_200": 0,
-    "cacah_kohort_404": 3,
-    "cacah_kohort_diminta": 3,
+    "cacah_kohort_404": 10,
+    "cacah_kohort_diminta": 10,
     "cacah_kohort_galat": 0,
     "catatan": "bila kendali_sah false, jalur unduh tidak terbukti bekerja dan seluruh cacah kohort di blok ini BATAL (aturan 24); 404 berarti server menjawab tidak ada, galat berarti server tidak menjawab, dan keduanya tidak boleh disamakan (aturan 46)",
-    "kendali_sah": true
+    "kendali_sah": true,
+    "sumber_pasangan": "kohort terukur"
   },
-  "versi_funding": 4,
-  "waktu_utc": "2026-07-29T00:06:46Z"
+  "versi_funding": 5,
+  "waktu_utc": "2026-07-29T00:34:05Z"
 }

@@ -3,6 +3,26 @@
 Tidak ada uji yang menyentuh jaringan atau aset rilis. Yang diuji di sini adalah
 pengurai, pemilih kendali, penyebut ganda, dan kode keluar — bagian yang bila
 salah akan membuat laporan run terbaca meyakinkan namun keliru.
+
+## Perbaikan sesudah run `30419770312` (291 butir, 1 gagal)
+
+`test_ukur_kolom_menghitung_transaksi_dan_nol` menuntut `bagian_volume_nol`
+sama dengan 2/3 penuh, padahal `kohort_ekor.bagian` MEMBULATKAN ke empat
+desimal dan mengembalikan 0,6667. Yang salah adalah harapan uji, bukan modul:
+pembulatan itu sudah dipakai seluruh papan kehidupan sejak kohort puncak, dan
+mengubahnya sekarang akan mengubah angka yang sudah diterbitkan (aturan 29).
+Harapan uji karena itu diberi toleransi yang sesuai, dan pembulatannya diuji
+secara tersurat di dalam fungsi yang sama agar tidak diam-diam hilang.
+
+Saya seharusnya membaca `kohort_ekor.bagian` sebelum meramalkan kode keluar 0;
+ini kegagalan membaca, bukan kegagalan rancangan.
+
+## Praregistrasi ramalan — ditulis SEBELUM run
+
+- **R-208** — CI pada commit ini mengumpulkan **291 butir** dengan kode keluar
+  **0**. Cacahnya tidak berubah sebab tidak ada fungsi uji baru yang
+  ditambahkan; hanya harapan di dalam satu fungsi yang diperbaiki. Satuan:
+  BUTIR yang dikumpulkan pytest.
 """
 
 from __future__ import annotations
@@ -61,7 +81,9 @@ def test_ukur_kolom_menghitung_transaksi_dan_nol():
     assert hasil["cacah_lilin"] == 3
     assert hasil["transaksi_total"] == 7
     assert hasil["cacah_volume_nol"] == 2
-    assert hasil["bagian_volume_nol"] == pytest.approx(2 / 3)
+    # kohort_ekor.bagian membulatkan ke empat desimal: 2/3 menjadi 0,6667.
+    assert hasil["bagian_volume_nol"] == 0.6667
+    assert hasil["bagian_volume_nol"] == pytest.approx(2 / 3, abs=1e-4)
 
 
 def test_ukur_kolom_menandai_baris_cacat():

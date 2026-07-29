@@ -1,0 +1,121 @@
+{
+  "berkas": [
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/funding.py",
+      "byte": 28121,
+      "cacah_baris": 705,
+      "cacah_baris_kode": 614,
+      "cacah_baris_komentar": 7,
+      "cacah_baris_kosong": 84,
+      "cacah_newline": 705,
+      "melebihi_pagar": false,
+      "sha256": "a87de3eb275d7af5e7d3a70a265ff3913379626cd07ae5cacc505dba17c11b3c"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/funding_cdn.py",
+      "byte": 6335,
+      "cacah_baris": 162,
+      "cacah_baris_kode": 135,
+      "cacah_baris_komentar": 6,
+      "cacah_baris_kosong": 21,
+      "cacah_newline": 162,
+      "melebihi_pagar": false,
+      "sha256": "d63c870f351e396c6db42f1fece17ed8453ebeb09a12c72bce91511189003465"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/arsip.py",
+      "byte": 5231,
+      "cacah_baris": 154,
+      "cacah_baris_kode": 120,
+      "cacah_baris_komentar": 0,
+      "cacah_baris_kosong": 34,
+      "cacah_newline": 154,
+      "melebihi_pagar": false,
+      "sha256": "8d777765098fa729f4d6e94481e1d08495c501ede1a1e2b5bf4c6a737f181df6"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/gerbang_1m.py",
+      "byte": 6775,
+      "cacah_baris": 184,
+      "cacah_baris_kode": 155,
+      "cacah_baris_komentar": 3,
+      "cacah_baris_kosong": 26,
+      "cacah_newline": 184,
+      "melebihi_pagar": false,
+      "sha256": "045739b0561ebd117e2b25a1bb04a9ea90cd383638abebabcd7438d50004aab2"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/kohort_ekor.py",
+      "byte": 22590,
+      "cacah_baris": 553,
+      "cacah_baris_kode": 479,
+      "cacah_baris_komentar": 12,
+      "cacah_baris_kosong": 62,
+      "cacah_newline": 553,
+      "melebihi_pagar": false,
+      "sha256": "073e2b2f14e43b83bb7b84654701f553637b034dff761d07e2dae1ceb4c20d6d"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/kohort_ringkas.py",
+      "byte": 2882,
+      "cacah_baris": 82,
+      "cacah_baris_kode": 64,
+      "cacah_baris_komentar": 1,
+      "cacah_baris_kosong": 17,
+      "cacah_newline": 82,
+      "melebihi_pagar": false,
+      "sha256": "d0c4a45efa99f43e5d37830ff139e5916b60dd44fb359beeff31a3ff8602c4de"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/pulihkan.py",
+      "byte": 11801,
+      "cacah_baris": 318,
+      "cacah_baris_kode": 262,
+      "cacah_baris_komentar": 3,
+      "cacah_baris_kosong": 53,
+      "cacah_newline": 318,
+      "melebihi_pagar": false,
+      "sha256": "26e9f44cb7bbf7dadd7938f630262cc44e89be92786fbf4a9880f4d2ee7c219b"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/resample.py",
+      "byte": 4356,
+      "cacah_baris": 127,
+      "cacah_baris_kode": 110,
+      "cacah_baris_komentar": 0,
+      "cacah_baris_kosong": 17,
+      "cacah_newline": 127,
+      "melebihi_pagar": false,
+      "sha256": "4d62a124ab40739b78318b8a51df9f8aab9946a5b30b69bfea10a77f6cec6168"
+    }
+  ],
+  "catatan_penggugur": "cacah_berkas_hilang != 0 berarti daftar yang diukur tidak lengkap dan seluruh cacah di laporan ini batal dipakai menutup ramalan (aturan 24)",
+  "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
+  "definisi_cacah_baris": "len(teks.splitlines()), definisi yang sama dengan pagar 800 baris di tests/test_kontinuitas.py; inilah definisi yang mengadjudikasi R-175 dan R-179",
+  "pagar_baris": 800,
+  "ringkasan": {
+    "cacah_baris_terbesar": 705,
+    "cacah_baris_total": 2285,
+    "cacah_berkas_ada": 8,
+    "cacah_berkas_diminta": 8,
+    "cacah_berkas_hilang": 0,
+    "cacah_berkas_melebihi_pagar": 0
+  },
+  "versi_ukur_baris": 1
+}

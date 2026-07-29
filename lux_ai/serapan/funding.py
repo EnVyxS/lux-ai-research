@@ -34,8 +34,18 @@ Riwayat versi:
   bukan ketiadaan berkas di CDN. Di sini berkas kohort diminta LANGSUNG.
   Permintaan itu tidak berarti apa-apa tanpa KENDALI: tanpa berkas pembanding
   yang terdaftar dan berhasil diambil, kode 404 tidak dapat dibedakan dari
-  jalur unduh yang rusak (aturan 24). Kendalinya dipilih dari simbol yang sama
-  pada bulan bertetangga, sehingga hanya satu hal yang berbeda: bulannya.
+  jalur unduh yang rusak (aturan 24). Hasilnya: 3 kohort menjawab 404, 3
+  kendali menjawab 200 dengan checksum cocok.
+- VERSI 5 memperbaiki dua kelemahan VERSI 4. Pertama, angka 38 dan 456 sampai
+  kini hanya hidup di jurnal sebagai aritmetika tangan; di sini keduanya
+  diterbitkan modul sendiri, dengan satuan yang DIPISAH (aturan 47) dan daftar
+  anggotanya. Kedua, tiga pasang uji CDN dipilih dengan tangan karena mudah,
+  dan itu bias pilihan. Sekarang pasangan dipilih DARI DATA: sepuluh anggota
+  kohort pertama menurut urutan nama, dengan kendali bukan bulan tetangga yang
+  ditebak melainkan bulan funding TERAKHIR simbol itu sendiri, yang menurut
+  listing pasti ada. Ditambahkan pula bulan klines terakhir tiap anggota,
+  karena klaim "kohort berhenti serempak" belum pernah diukur langsung; bila
+  tidak seragam, klaim itu harus ditulis ulang.
 
 Laporan ini **diagnostik** (`bukan_bukti: true`, aturan 10). Ia tidak mengubah
 satu baris pun manifes serapan.
@@ -58,7 +68,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from . import arsip
 
-VERSI = 4
+VERSI = 5
 SUMBER_RENTANG = "reports/semesta_rentang.json"
 KELUARAN = "reports/funding_semesta.json"
 KELUARAN_SELISIH = "reports/funding_selisih_penuh.json"
@@ -69,6 +79,11 @@ BATAS_HEADER = "2022-01"
 BATAS_BARU = "2025-01"
 BATAS_HIDUP = "2026-05"
 BATAS_DAFTAR = 500
+
+# Banyaknya pasang kohort-kendali yang diminta langsung ke CDN. Tiap pasang
+# adalah dua permintaan, jadi sepuluh pasang = dua puluh permintaan; masih jauh
+# di bawah biaya listing dan tidak mendekati batas waktu job 300 detik.
+BATAS_UJI_CDN = 10
 
 # Kelas yang dapat ditentukan SEBELUM mengunduh. `pra_header` tidak masuk sini:
 # ia hanya diketahui setelah berkasnya dibaca, dan menebaknya dari bulan akan
@@ -87,9 +102,9 @@ MEDAN_SAMPEL_RINGKAS = (
     "gagal_checksum",
 )
 
-# Uji CDN. Kohort: bulan pertama lubang ekor bagi tiga anggota kohort 2025-07
-# yang terukur di VERSI 3. Kendali: simbol yang SAMA pada bulan bertetangga yang
-# terdaftar, sehingga satu-satunya yang berbeda adalah bulannya.
+# Daftar cadangan, dipakai HANYA bila kohort terukur kosong (mis. saat modul
+# dijalankan dengan FUNDING_BATAS_SIMBOL kecil). Ketiga pasang inilah yang
+# diuji VERSI 4; dipertahankan supaya hasil lama tetap dapat direproduksi.
 UJI_KOHORT: Tuple[Tuple[str, str], ...] = (
     ("FTMUSDT", "2025-07"),
     ("KLAYUSDT", "2025-07"),
@@ -221,6 +236,79 @@ def puncak_histogram(h: Dict[str, int]) -> Dict[str, Any]:
     return {"kunci": kandidat[0], "cacah": tertinggi, "seri": len(kandidat) > 1}
 
 
+def anggota_kohort(per_simbol: List[Dict[str, Any]], kunci: Optional[str]) -> List[Dict[str, Any]]:
+    """Baris per-simbol yang lubang ekornya mulai tepat di `kunci`, terurut nama."""
+    if kunci is None:
+        return []
+    pilih = [b for b in per_simbol if b.get("mulai_lubang_ekor") == kunci]
+    return sorted(pilih, key=lambda x: str(x.get("simbol") or ""))
+
+
+def kumpulkan_kohort(
+    per_simbol: List[Dict[str, Any]], kunci: Optional[str]
+) -> Dict[str, Any]:
+    """Terbitkan kohort puncak sebagai angka modul, bukan aritmetika tangan.
+
+    Dua satuan dipisah dengan sengaja: `cacah_simbol` dalam SIMBOL dan
+    `cacah_simbol_bulan` dalam SIMBOL-BULAN. Menukar keduanya persis kesalahan
+    yang membuat R-163 kalah, dan aturan 47 lahir darinya.
+
+    `cacah_tanpa_bulan_terakhir` adalah medan penggugur bagi keseragaman:
+    histogram menyaring None, jadi tanpa medan ini sebuah kohort yang separuh
+    anggotanya tak punya bulan terakhir bisa tampak seragam sempurna.
+    """
+    anggota = anggota_kohort(per_simbol, kunci)
+    simbol_bulan = sum(
+        int((b.get("bentuk_lubang") or {}).get("ekor") or 0) for b in anggota
+    )
+    terakhir = [b.get("bulan_klines_terakhir") for b in anggota]
+    tanpa = sum(1 for t in terakhir if not t)
+    hist = histogram([t for t in terakhir if t])
+    return {
+        "bulan_mulai": kunci,
+        "cacah_simbol": len(anggota),
+        "cacah_simbol_bulan": simbol_bulan,
+        "cacah_tanpa_bulan_terakhir": tanpa,
+        "simbol": [str(b.get("simbol")) for b in anggota],
+        "histogram_bulan_klines_terakhir": hist,
+        "puncak_bulan_klines_terakhir": puncak_histogram(hist),
+        "seragam_bulan_klines_terakhir": bool(anggota) and len(hist) == 1 and tanpa == 0,
+        "catatan_satuan": (
+            "cacah_simbol bersatuan SIMBOL dan cacah_simbol_bulan bersatuan "
+            "SIMBOL-BULAN; keduanya tidak boleh saling menggantikan (aturan 47)"
+        ),
+        "catatan_seragam": (
+            "seragam_bulan_klines_terakhir hanya benar bila SELURUH anggota "
+            "punya bulan terakhir yang sama DAN tidak ada anggota tanpa bulan "
+            "terakhir; bila cacah_tanpa_bulan_terakhir != 0 keseragaman tidak "
+            "dapat disimpulkan (aturan 46)"
+        ),
+    }
+
+
+def pasangan_uji(
+    per_simbol: List[Dict[str, Any]],
+    kunci: Optional[str],
+    batas: int = BATAS_UJI_CDN,
+) -> List[Tuple[str, str, str]]:
+    """Pasangan (simbol, bulan kohort, bulan kendali) yang dipilih DARI DATA.
+
+    Kendali bukan bulan tetangga yang ditebak, melainkan bulan funding TERAKHIR
+    simbol itu sendiri: menurut listing ia pasti ada, sehingga kegagalannya
+    menunjuk jalur unduh dan bukan arsip. Anggota tanpa bulan funding sama
+    sekali dilewati, karena baginya tidak ada kendali yang sah.
+    """
+    pasang: List[Tuple[str, str, str]] = []
+    for b in anggota_kohort(per_simbol, kunci):
+        kendali = b.get("bulan_funding_terakhir")
+        if not kendali:
+            continue
+        pasang.append((str(b.get("simbol")), str(kunci), str(kendali)))
+        if len(pasang) >= batas:
+            break
+    return pasang
+
+
 def periksa_url(url: str, timeout: int = 60) -> Dict[str, Any]:
     """Minta satu URL dan laporkan kode HTTP apa adanya.
 
@@ -301,11 +389,24 @@ def ringkas_uji_cdn(
     }
 
 
-def jalankan_uji_cdn() -> Dict[str, Any]:
-    """Uji kohort dan kendali berdampingan; keduanya selalu dijalankan."""
-    kohort = [periksa_berkas_funding(s, b, "kohort") for s, b in UJI_KOHORT]
-    kendali = [periksa_berkas_funding(s, b, "kendali") for s, b in UJI_KENDALI]
+def jalankan_uji_cdn(
+    pasangan: Optional[Sequence[Tuple[str, str, str]]] = None
+) -> Dict[str, Any]:
+    """Uji kohort dan kendali berdampingan; keduanya selalu dijalankan.
+
+    Pasangan yang terpilih dari data lebih disukai daripada daftar tetap,
+    karena daftar tetap dipilih tangan dan itu bias pilihan yang diakui.
+    """
+    if pasangan:
+        kohort = [periksa_berkas_funding(s, bk, "kohort") for s, bk, _ in pasangan]
+        kendali = [periksa_berkas_funding(s, bn, "kendali") for s, _, bn in pasangan]
+        sumber = "kohort terukur"
+    else:
+        kohort = [periksa_berkas_funding(s, b, "kohort") for s, b in UJI_KOHORT]
+        kendali = [periksa_berkas_funding(s, b, "kendali") for s, b in UJI_KENDALI]
+        sumber = "daftar tetap"
     hasil = ringkas_uji_cdn(kohort, kendali)
+    hasil["sumber_pasangan"] = sumber
     hasil["baris"] = [
         {
             m: b.get(m)
@@ -553,6 +654,8 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
                 "simbol": nama,
                 "cacah_bulan_klines": len(bulan_k),
                 "cacah_bulan_funding": len(bulan_f),
+                "bulan_klines_terakhir": bulan_k[-1] if bulan_k else None,
+                "bulan_funding_terakhir": bulan_f[-1] if bulan_f else None,
                 "bentuk_lubang": bentuk,
                 "mulai_lubang_ekor": mulai,
                 "jarak_bulan_terakhir": jarak,
@@ -577,6 +680,9 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     byte_sampel = [int(s.get("byte_zip") or 0) for s in sampel if not s.get("gagal_unduh")]
     hist_mulai = histogram(mulai_ekor)
     hist_jarak = histogram(jarak_terakhir)
+    puncak = puncak_histogram(hist_mulai)
+    kohort = kumpulkan_kohort(per_simbol, puncak.get("kunci"))
+    pasangan = pasangan_uji(per_simbol, puncak.get("kunci"))
 
     laporan: Dict[str, Any] = {
         "status": "TERUKUR" if simbol else "TIDAK MENGUKUR",
@@ -599,9 +705,10 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
             "hilang": lubang["hilang"],
         },
         "histogram_mulai_lubang_ekor": hist_mulai,
-        "puncak_mulai_lubang_ekor": puncak_histogram(hist_mulai),
+        "puncak_mulai_lubang_ekor": puncak,
+        "kohort_puncak": kohort,
         "histogram_jarak_bulan_terakhir": hist_jarak,
-        "uji_cdn": jalankan_uji_cdn(),
+        "uji_cdn": jalankan_uji_cdn(pasangan),
         "cacah_sampel": len(sampel),
         "cacah_sampel_gagal_unduh": sum(1 for s in sampel if s.get("gagal_unduh")),
         "cacah_sampel_gagal_checksum": sum(1 for s in sampel if s.get("gagal_checksum")),
@@ -619,6 +726,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         - (lubang["awal"] + lubang["ekor"] + lubang["tengah"])
     )
     laporan["selisih_histogram"] = cacah_simbol_ekor - sum(hist_mulai.values())
+    laporan["selisih_kohort"] = int(puncak.get("cacah") or 0) - int(kohort["cacah_simbol"])
     laporan["catatan_bukan_bukti"] = (
         "laporan ini diagnostik: ia mengukur ketersediaan funding dan TIDAK "
         "menulis funding_ada di manifes mana pun"
@@ -629,15 +737,18 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "berarti semesta yang dilihat modul ini bukan semesta manifes serapan, "
         "sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti "
         "cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram "
-        "bulan-mulai bocor dan seluruh angka kohort batal; uji_cdn.kendali_sah "
-        "== false berarti jalur unduh tidak terbukti dan seluruh cacah uji_cdn "
-        "batal (aturan 24)"
+        "bulan-mulai bocor dan seluruh angka kohort batal; selisih_kohort != 0 "
+        "berarti daftar anggota kohort tidak sepadan dengan puncak histogram "
+        "dan cacah_simbol di kohort_puncak tidak boleh dipakai; "
+        "uji_cdn.kendali_sah == false berarti jalur unduh tidak terbukti dan "
+        "seluruh cacah uji_cdn batal (aturan 24)"
     )
     laporan["catatan_metode"] = (
         "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan "
         "sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di "
         "listing dan ketiadaan berkas di CDN adalah dua hal berbeda; blok "
-        "uji_cdn memeriksa perbedaan itu pada enam berkas saja, bukan pada 880"
+        "uji_cdn memeriksa perbedaan itu pada sejumlah kecil pasang berkas "
+        "saja, bukan pada 880"
     )
     laporan["catatan_bentuk_lubang"] = (
         "awal dihitung lebih dulu, ekor dari sisa setelah awal; simbol yang "
@@ -653,8 +764,10 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "sumber di luar arsip dan BELUM dilakukan"
     )
     laporan["catatan_uji_cdn"] = (
-        "uji_cdn menyentuh tiga berkas kohort dan tiga kendali; hasilnya berlaku "
-        "untuk enam berkas itu saja dan tidak boleh digeneralkan ke 456 "
+        "pasangan uji dipilih dari kohort terukur, sepuluh anggota pertama "
+        "menurut urutan nama; urutan nama bukan pengacakan, jadi ini sampel "
+        "sistematis dan bukan sampel acak. Hasilnya berlaku untuk berkas yang "
+        "benar-benar diminta saja dan tidak boleh digeneralkan ke seluruh "
         "simbol-bulan kohort tanpa pengukuran lanjutan (aturan 20)"
     )
     laporan["catatan_jarak"] = (
@@ -679,6 +792,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
     penuh = daftar_penuh(per_simbol)
     penuh["cacah_klines_tanpa_funding"] = len(penuh["klines_tanpa_funding"])
     penuh["cacah_funding_tanpa_klines"] = len(penuh["funding_tanpa_klines"])
+    penuh["kohort_puncak"] = kohort
     penuh["versi_funding"] = VERSI
     penuh["sidik_kode"] = laporan["sidik_kode"]
     penuh["sidik_data"] = laporan["sidik_data"]

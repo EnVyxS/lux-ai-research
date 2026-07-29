@@ -7,6 +7,9 @@
   ],
   "bukan_bukti": true,
   "bulan_tutup_terakhir": "2026-06",
+  "cacah_dasar_hidup": 13,
+  "cacah_dasar_tak_ada": 0,
+  "cacah_dasar_terhenti": 2,
   "cacah_hanya_survei": 0,
   "cacah_hanya_taksonomi": 1,
   "cacah_hidup": 808,
@@ -29,6 +32,8 @@
     "tak_tergolong": 0
   },
   "cacah_peralihan_terhenti": 0,
+  "cacah_settled": 15,
+  "cacah_settled_mendahului": 14,
   "cacah_terhenti_survei": 128,
   "cacah_terhenti_taksonomi": 129,
   "contoh_hidup_luar_penyebut": [
@@ -70,6 +75,7 @@
     "sisa_settled": 1,
     "tak_tergolong": 0
   },
+  "identitas_pasangan_utuh": true,
   "identitas_per_jenis_utuh": true,
   "jeda_mati_bulan": 2,
   "jenis_tanpa_anggota": [
@@ -81,6 +87,7 @@
     "jenis": "perpetual_usdt",
     "simbol": "BTCUSDT"
   },
+  "kendali_pasangan_sah": true,
   "kendali_sah": true,
   "nama_hidup_luar_penyebut": [
     "1000BONKUSDC",
@@ -279,6 +286,158 @@
     ],
     "tak_tergolong": []
   },
+  "pasangan_settled": [
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-04",
+      "cacah_bulan_settled": 1,
+      "dasar": "AERGOUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "AERGOUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2026-01",
+      "cacah_bulan_settled": 1,
+      "dasar": "AIAUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "AIAUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-03",
+      "bulan_terakhir_settled": "2026-04",
+      "cacah_bulan_settled": 1,
+      "dasar": "BDXNUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": false,
+      "settled": "BDXNUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2023-02",
+      "cacah_bulan_settled": 6,
+      "dasar": "BNXUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "BNXUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-04",
+      "cacah_bulan_settled": 1,
+      "dasar": "CTKUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "CTKUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-05",
+      "cacah_bulan_settled": 1,
+      "dasar": "CVCUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "CVCUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-07",
+      "cacah_bulan_settled": 1,
+      "dasar": "CVXUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "CVXUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2022-09",
+      "cacah_bulan_settled": 9,
+      "dasar": "ICPUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "ICPUSDT_SETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-12",
+      "cacah_bulan_settled": 1,
+      "dasar": "LITUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "LITUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-03",
+      "cacah_bulan_settled": 1,
+      "dasar": "MAVIAUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "MAVIAUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2023-02",
+      "cacah_bulan_settled": 1,
+      "dasar": "MINAUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "MINAUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-07",
+      "cacah_bulan_settled": 1,
+      "dasar": "PUMPUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "PUMPUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2025-07",
+      "cacah_bulan_settled": 1,
+      "dasar": "SLPUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "SLPUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    },
+    {
+      "bulan_terakhir_dasar": "2026-05",
+      "bulan_terakhir_settled": "2026-06",
+      "cacah_bulan_settled": 1,
+      "dasar": "SXPUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": false,
+      "settled": "SXPUSDTSETTLED",
+      "settled_mendahului_tutup": false
+    },
+    {
+      "bulan_terakhir_dasar": "2026-06",
+      "bulan_terakhir_settled": "2023-03",
+      "cacah_bulan_settled": 9,
+      "dasar": "TLMUSDT",
+      "dasar_ada": true,
+      "dasar_hidup": true,
+      "settled": "TLMUSDTSETTLED",
+      "settled_mendahului_tutup": true
+    }
+  ],
   "penyebut": {
     "cacah_simbol": 937,
     "entri_dibaca": 937
@@ -319,6 +478,7 @@
   "r_273_menang": false,
   "r_275_menang": true,
   "r_276_menang": false,
+  "r_278_menang": true,
   "rincian_selisih": [
     {
       "bulan_terakhir": "2026-05",
@@ -333,7 +493,7 @@
     }
   ],
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "d892391dcb658a89208e62051685dfa2cb71c560c7656e181359fb268fc96c2e",
+  "sidik_kode": "b8d0571d3d13c97b391069299ba21d32abc44c65b141e38af61526e50bc897b8",
   "status": "TERUKUR",
   "sumber": "reports/semesta_rentang.json",
   "sumber_bersidik": false,
@@ -349,5 +509,5 @@
     "sisa_settled": 14,
     "tak_tergolong": 0
   },
-  "versi_terhenti": 3
+  "versi_terhenti": 4
 }

@@ -1,0 +1,535 @@
+{
+  "baris_berabsen": [
+    {
+      "bulan_absen": [
+        "2025-04"
+      ],
+      "bulan_pertama": "2024-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 21,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-04",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 22,
+      "selisih_rentang": 1,
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2026-01"
+      ],
+      "bulan_pertama": "2025-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 9,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2026-01",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 10,
+      "selisih_rentang": 1,
+      "simbol": "AIAUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2022-06",
+        "2022-08"
+      ],
+      "bulan_pertama": "2022-05",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 2,
+      "cacah_bulan_lolos": 48,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2022-06",
+          "pembeda": "gagal_gerbang"
+        },
+        {
+          "bulan": "2022-08",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 50,
+      "selisih_rentang": 2,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-04"
+      ],
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 67,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-04",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 68,
+      "selisih_rentang": 1,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-05"
+      ],
+      "bulan_pertama": "2020-11",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 67,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-05",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 68,
+      "selisih_rentang": 1,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_pertama": "2022-09",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 45,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-07",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 46,
+      "selisih_rentang": 1,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-12"
+      ],
+      "bulan_pertama": "2021-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 64,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-12",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 65,
+      "selisih_rentang": 1,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-03"
+      ],
+      "bulan_pertama": "2024-02",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 28,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-03",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 29,
+      "selisih_rentang": 1,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_pertama": "2025-04",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 14,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-07",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 15,
+      "selisih_rentang": 1,
+      "simbol": "PUMPUSDT"
+    },
+    {
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_pertama": "2023-10",
+      "bulan_terakhir": "2026-06",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 32,
+      "konsisten_rentang": true,
+      "pembeda_absen": [
+        {
+          "bulan": "2025-07",
+          "pembeda": "gagal_gerbang"
+        }
+      ],
+      "rentang": 33,
+      "selisih_rentang": 1,
+      "simbol": "SLPUSDT"
+    }
+  ],
+  "baris_pasangan_settled": [
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-04"
+      ],
+      "bulan_settled_terakhir": "2025-04",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 21,
+      "rentang": 22,
+      "settled_ada_di_absen": true,
+      "simbol": "AERGOUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2026-01"
+      ],
+      "bulan_settled_terakhir": "2026-01",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 9,
+      "rentang": 10,
+      "settled_ada_di_absen": true,
+      "simbol": "AIAUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [],
+      "bulan_settled_terakhir": "2026-04",
+      "cacah_absen": 0,
+      "cacah_bulan_lolos": 10,
+      "rentang": 10,
+      "settled_ada_di_absen": false,
+      "simbol": "BDXNUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2022-06",
+        "2022-08"
+      ],
+      "bulan_settled_terakhir": "2023-02",
+      "cacah_absen": 2,
+      "cacah_bulan_lolos": 48,
+      "rentang": 50,
+      "settled_ada_di_absen": false,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-04"
+      ],
+      "bulan_settled_terakhir": "2025-04",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 67,
+      "rentang": 68,
+      "settled_ada_di_absen": true,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-05"
+      ],
+      "bulan_settled_terakhir": "2025-05",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 67,
+      "rentang": 68,
+      "settled_ada_di_absen": true,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 45,
+      "rentang": 46,
+      "settled_ada_di_absen": true,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [],
+      "bulan_settled_terakhir": "2022-09",
+      "cacah_absen": 0,
+      "cacah_bulan_lolos": 62,
+      "rentang": 62,
+      "settled_ada_di_absen": false,
+      "simbol": "ICPUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-12"
+      ],
+      "bulan_settled_terakhir": "2025-12",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 64,
+      "rentang": 65,
+      "settled_ada_di_absen": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-03"
+      ],
+      "bulan_settled_terakhir": "2025-03",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 28,
+      "rentang": 29,
+      "settled_ada_di_absen": true,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [],
+      "bulan_settled_terakhir": "2023-02",
+      "cacah_absen": 0,
+      "cacah_bulan_lolos": 41,
+      "rentang": 41,
+      "settled_ada_di_absen": false,
+      "simbol": "MINAUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 14,
+      "rentang": 15,
+      "settled_ada_di_absen": true,
+      "simbol": "PUMPUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": true,
+      "absen_tunggal": true,
+      "ada_di_penyebut": true,
+      "bulan_absen": [
+        "2025-07"
+      ],
+      "bulan_settled_terakhir": "2025-07",
+      "cacah_absen": 1,
+      "cacah_bulan_lolos": 32,
+      "rentang": 33,
+      "settled_ada_di_absen": true,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [],
+      "bulan_settled_terakhir": "2026-06",
+      "cacah_absen": 0,
+      "cacah_bulan_lolos": 71,
+      "rentang": 71,
+      "settled_ada_di_absen": false,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "absen_sama_dengan_settled": false,
+      "absen_tunggal": false,
+      "ada_di_penyebut": true,
+      "bulan_absen": [],
+      "bulan_settled_terakhir": "2023-03",
+      "cacah_absen": 0,
+      "cacah_bulan_lolos": 60,
+      "rentang": 60,
+      "settled_ada_di_absen": false,
+      "simbol": "TLMUSDT"
+    }
+  ],
+  "berkas_sumber": "reports/bulan_absen.json",
+  "byte_sumber": 249992,
+  "catatan_penggugur": "yang menggugurkan hanyalah cacat bahan baku: sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, selisih_penyebut bukan nol, atau cacah_pasangan bukan 15. uji_r288 dan selisih_absen_pasangan_jurnal_113 TIDAK menggugurkan apa pun: ramalan yang kalah wajib dicatat MELESET, bukan membatalkan laporannya sendiri (aturan 24, 72)",
+  "definisi": {
+    "bulan_absen": "bulan kalender di antara bulan_pertama dan bulan_terakhir sebuah simbol yang TIDAK ada di penyebut 19.586; BUKAN lubang funding dan BUKAN lubang tengah, yang keduanya ADA di penyebut (aturan 69, KC-36)",
+    "kendali": "BTCUSDT dan ETHUSDT wajib ada, berbulan >= 60, dan berabsen 0",
+    "pembeda_absen": "gagal_gerbang bila bulan itu ada di manifes arsip; tak_diterbitkan_arsip bila tidak ada di manifes; tak_terukur bila manifes tidak lengkap terbaca — dan ketiadaan pengukuran BUKAN ketiadaan gejala (aturan 59)",
+    "rentang": "cacah bulan kalender dari bulan_pertama sampai bulan_terakhir"
+  },
+  "ringkasan": {
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_manifes_dibaca": 8,
+    "cacah_nama_berabsen": 10,
+    "cacah_nama_didaftar": 787,
+    "cacah_nama_penyebut": 787,
+    "cacah_nama_tak_konsisten_rentang": 0,
+    "cacah_pasangan": 15,
+    "jumlah_bulan_absen": 11,
+    "jumlah_bulan_absen_luar_pasangan": 0,
+    "jumlah_bulan_absen_pasangan": 11,
+    "kendali": [
+      {
+        "ada": true,
+        "bulan_min": 60,
+        "cacah_absen": 0,
+        "cacah_bulan_lolos": 78,
+        "sah": true,
+        "simbol": "BTCUSDT"
+      },
+      {
+        "ada": true,
+        "bulan_min": 60,
+        "cacah_absen": 0,
+        "cacah_bulan_lolos": 78,
+        "sah": true,
+        "simbol": "ETHUSDT"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "manifes_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "sebaran_pembeda": {
+      "gagal_gerbang": 11,
+      "tak_diterbitkan_arsip": 0,
+      "tak_terukur": 0
+    },
+    "selisih_absen_pasangan_jurnal_113": -1,
+    "selisih_nama_penyebut": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "sumber_pembeda_ada": true,
+    "total_pecahan": 8,
+    "uji_r288": {
+      "butir_1": {
+        "cacah_absen_bnx": 2,
+        "cacah_absen_tunggal": 9,
+        "diramalkan_bnx": 3,
+        "diramalkan_nol": [
+          "BDXNUSDT",
+          "ICPUSDT",
+          "MINAUSDT",
+          "SXPUSDT",
+          "TLMUSDT"
+        ],
+        "diramalkan_tunggal": [
+          "AERGOUSDT",
+          "AIAUSDT",
+          "CTKUSDT",
+          "CVCUSDT",
+          "CVXUSDT",
+          "LITUSDT",
+          "MAVIAUSDT",
+          "PUMPUSDT",
+          "SLPUSDT"
+        ],
+        "menang": false,
+        "mudah": true,
+        "simbol_absen_nol": [
+          "BDXNUSDT",
+          "ICPUSDT",
+          "MINAUSDT",
+          "SXPUSDT",
+          "TLMUSDT"
+        ],
+        "simbol_absen_tunggal": [
+          "AERGOUSDT",
+          "AIAUSDT",
+          "CTKUSDT",
+          "CVCUSDT",
+          "CVXUSDT",
+          "LITUSDT",
+          "MAVIAUSDT",
+          "PUMPUSDT",
+          "SLPUSDT"
+        ]
+      },
+      "butir_2": {
+        "ambang": 7,
+        "cacah_sama_dengan_settled": 9,
+        "menang": true,
+        "penyebut": 9,
+        "simbol_sama_dengan_settled": [
+          "AERGOUSDT",
+          "AIAUSDT",
+          "CTKUSDT",
+          "CVCUSDT",
+          "CVXUSDT",
+          "LITUSDT",
+          "MAVIAUSDT",
+          "PUMPUSDT",
+          "SLPUSDT"
+        ]
+      },
+      "butir_3": {
+        "diramalkan": 12,
+        "jumlah_bulan_absen_pasangan": 11,
+        "jumlah_bulan_absen_semesta": 11,
+        "menang": false
+      },
+      "catatan": "butir 1 MUDAH: ia menyalin tabel jurnal 113 §6 yang dihitung dari laporan yang sama; kemenangannya bukan bukti mutu ramalan",
+      "penggugur_menyala": false,
+      "r288_menang": false
+    }
+  },
+  "sidik_kode": "0294eb3a2fca6354b495148fc87d564f649d545a81314f21ef432775cf163088",
+  "sidik_sumber": "d2fc3bfb362f834225faab76d6bf87b8f334d1ee26638a8112fb9b546614a3bd",
+  "versi_bulan_absen": 1,
+  "waktu_utc": "2026-07-29T17:50:29Z"
+}

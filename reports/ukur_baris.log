@@ -55,6 +55,19 @@
     {
       "ada": true,
       "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/kehidupan.py",
+      "byte": 16638,
+      "cacah_baris": 417,
+      "cacah_baris_kode": 367,
+      "cacah_baris_komentar": 3,
+      "cacah_baris_kosong": 47,
+      "cacah_newline": 417,
+      "melebihi_pagar": false,
+      "sha256": "338b5b5a9f79f162c06306fdee9c654a7d54b3dcd1b8148ea53ebcb87bf448e6"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
       "berkas": "lux_ai/serapan/kohort_ekor.py",
       "byte": 22590,
       "cacah_baris": 553,
@@ -82,14 +95,14 @@
       "ada": true,
       "berakhir_newline": true,
       "berkas": "lux_ai/serapan/pulihkan.py",
-      "byte": 11801,
-      "cacah_baris": 318,
-      "cacah_baris_kode": 262,
-      "cacah_baris_komentar": 3,
-      "cacah_baris_kosong": 53,
-      "cacah_newline": 318,
+      "byte": 14839,
+      "cacah_baris": 383,
+      "cacah_baris_kode": 314,
+      "cacah_baris_komentar": 5,
+      "cacah_baris_kosong": 64,
+      "cacah_newline": 383,
       "melebihi_pagar": false,
-      "sha256": "26e9f44cb7bbf7dadd7938f630262cc44e89be92786fbf4a9880f4d2ee7c219b"
+      "sha256": "7637049c800a8bbe5b5a54e46a3dc9d6b597bb7f90ea987ef532513901087d5d"
     },
     {
       "ada": true,
@@ -103,19 +116,33 @@
       "cacah_newline": 127,
       "melebihi_pagar": false,
       "sha256": "4d62a124ab40739b78318b8a51df9f8aab9946a5b30b69bfea10a77f6cec6168"
+    },
+    {
+      "ada": true,
+      "berakhir_newline": true,
+      "berkas": "lux_ai/serapan/ukur_baris.py",
+      "byte": 7623,
+      "cacah_baris": 183,
+      "cacah_baris_kode": 156,
+      "cacah_baris_komentar": 1,
+      "cacah_baris_kosong": 26,
+      "cacah_newline": 183,
+      "melebihi_pagar": false,
+      "sha256": "c9c7bc5825d51c087c3b9ac476fec0d6a3c254cc4c861e0646b6219f19301551"
     }
   ],
   "catatan_penggugur": "cacah_berkas_hilang != 0 berarti daftar yang diukur tidak lengkap dan seluruh cacah di laporan ini batal dipakai menutup ramalan (aturan 24)",
   "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
+  "catatan_versi": "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; mekanika, definisi, dan pagar tidak berubah dari V1 (aturan 29). Angka 318 baris pulihkan.py yang tercatat di STATE adalah angka V1 dan digantikan oleh laporan ini",
   "definisi_cacah_baris": "len(teks.splitlines()), definisi yang sama dengan pagar 800 baris di tests/test_kontinuitas.py; inilah definisi yang mengadjudikasi R-175 dan R-179",
   "pagar_baris": 800,
   "ringkasan": {
     "cacah_baris_terbesar": 705,
-    "cacah_baris_total": 2285,
-    "cacah_berkas_ada": 8,
-    "cacah_berkas_diminta": 8,
+    "cacah_baris_total": 2950,
+    "cacah_berkas_ada": 10,
+    "cacah_berkas_diminta": 10,
     "cacah_berkas_hilang": 0,
     "cacah_berkas_melebihi_pagar": 0
   },
-  "versi_ukur_baris": 1
+  "versi_ukur_baris": 2
 }

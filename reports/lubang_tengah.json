@@ -92,13 +92,59 @@
     }
   ],
   "bukan_bukti": false,
-  "catatan_batas_h_a010": "penyebut uji ini adalah bulan KLINES, sehingga bulan funding yang ada sebelum klines pertama tidak terlihat; bila kelak terbukti ada medan yang memuat bulan funding pertama sesungguhnya, uji ini wajib diulang dengan medan itu (aturan 20)",
-  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, atau selisih_lubang_tengah bukan nol membatalkan seluruh angka (aturan 24)",
+  "catatan_batas_h_a010": "penyebut uji ini adalah bulan KLINES, sehingga bulan funding yang ada sebelum klines pertama tidak terlihat; V2 memeriksa batas itu lewat medan funding_tanpa_klines, dan bila medan itu berisi maka uji H-A010 wajib diulang dengan medan itu (aturan 20)",
+  "catatan_batas_h_a011": "status HIDUP pada 2026-01..2026-06 tidak akan membuktikan SEBAB kembalinya funding, hanya bahwa perdagangan dan penerbitan pulih bersama; sebaliknya status MATI seluruhnya menunjukkan penerbitan funding dapat pulih tanpa perdagangan (aturan 10)",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali_sah false, atau selisih_lubang_tengah bukan nol membatalkan seluruh angka (aturan 24); H-A010 dan H-A011 yang gugur BUKAN penggugur — hipotesis yang kalah adalah hasil",
   "catatan_tafsir": "lubang tengah yang berdampingan dengan bulan berfunding TIDAK membuktikan sebab apa pun; ia hanya menunjukkan bahwa ketiadaan funding di bulan itu tidak dapat dijelaskan oleh awal maupun akhir riwayat simbol (aturan 10)",
   "definisi": {
     "bentuk_lubang_lokal": "dipakai apa adanya dari silang_funding.bentuk_lubang_lokal: tengah berarti ada bulan klines berfunding sebelum DAN sesudah lubang itu; definisinya SATU, tidak disalin ulang (aturan 36)",
     "bulan_berfunding_pertama": "bulan klines paling awal simbol itu yang TIDAK berlubang; ini BUKAN tanggal penerbitan arsip funding Binance",
-    "h_a010_menang": "benar hanya bila SELURUH simbal yang diuji punya bulan_berfunding_pertama lebih besar daripada bulan_klines_pertama"
+    "funding_tanpa_klines": "medan terbitan funding.py V6 apa adanya: bulan yang punya funding namun tidak punya klines; kosong pada kelima simbol H-A010 berarti definisi bulan_berfunding_pertama TEPAT, berisi berarti kemenangan R-223 wajib ditinjau ulang",
+    "h_a010_menang": "benar hanya bila SELURUH simbol yang diuji punya bulan_berfunding_pertama lebih besar daripada bulan_klines_pertama",
+    "h_a011_menang": "benar hanya bila sekurang-kurangnya SATU bulan pada rentang yang diuji berstatus HIDUP; rentang kosong berbunyi terukur false, bukan gugur (aturan 41, 46)"
+  },
+  "funding_tanpa_klines": {
+    "baris": [
+      {
+        "ada_di_per_simbol": true,
+        "ada_medan": true,
+        "bulan": [],
+        "cacah_bulan": 0,
+        "simbol": "BNXUSDT"
+      },
+      {
+        "ada_di_per_simbol": true,
+        "ada_medan": true,
+        "bulan": [],
+        "cacah_bulan": 0,
+        "simbol": "ICPUSDT"
+      },
+      {
+        "ada_di_per_simbol": true,
+        "ada_medan": true,
+        "bulan": [],
+        "cacah_bulan": 0,
+        "simbol": "JUPUSDT"
+      },
+      {
+        "ada_di_per_simbol": true,
+        "ada_medan": true,
+        "bulan": [],
+        "cacah_bulan": 0,
+        "simbol": "QTUMUSDT"
+      },
+      {
+        "ada_di_per_simbol": true,
+        "ada_medan": true,
+        "bulan": [],
+        "cacah_bulan": 0,
+        "simbol": "TLMUSDT"
+      }
+    ],
+    "cacah_berisi": 0,
+    "cacah_simbol": 5,
+    "cacah_tak_terukur": 0,
+    "kosong_seluruhnya": true
   },
   "h_a010": {
     "baris": [
@@ -149,6 +195,53 @@
     "cacah_tak_terukur": 0,
     "menang": true
   },
+  "h_a011": {
+    "baris": [
+      {
+        "bulan": "2026-01",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-02",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-03",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-04",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-05",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2026-06",
+        "simbol": "LITUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "cacah_bulan": 6,
+    "cacah_hidup": 6,
+    "menang": true,
+    "mulai": "2026-01",
+    "sampai": "2026-06",
+    "sebaran_status": {
+      "HIDUP": 6,
+      "MATI": 0,
+      "SEPI": 0,
+      "TAK_TERUKUR": 0
+    },
+    "simbol": "LITUSDT",
+    "terukur": true
+  },
   "ringkasan": {
     "cacah_baris_dengan_medan": 19586,
     "cacah_kunci_ganda": 0,
@@ -159,8 +252,15 @@
     "cacah_per_simbol_funding": 787,
     "h_a010_cacah_gugur": 0,
     "h_a010_cacah_menang": 5,
+    "h_a010_cacah_simbol_berisi": 0,
+    "h_a010_cacah_simbol_tak_terukur": 0,
     "h_a010_cacah_tak_terukur": 0,
+    "h_a010_funding_tanpa_klines_kosong": true,
     "h_a010_menang": true,
+    "h_a011_cacah_bulan": 6,
+    "h_a011_cacah_hidup": 6,
+    "h_a011_menang": true,
+    "h_a011_terukur": true,
     "kendali": [
       {
         "bulan": "2021-05",
@@ -230,7 +330,7 @@
     "total_pecahan": 8
   },
   "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
-  "sidik_kode": "ebdf0b1c68420662d349d9e03daa750574e327f971bc81551889776c575925e4",
+  "sidik_kode": "c9372bd763b86cfeb2adcf0a0c0c43dae8d9aa9a6508e9c32f7671d5ec7b3f4e",
   "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
   "sumber": [
     "reports/funding_semesta.json",
@@ -244,6 +344,6 @@
     "reports/kehidupan_arsip_7.json"
   ],
   "versi_funding": 6,
-  "versi_lubang_tengah": 1,
-  "waktu_utc": "2026-07-29T08:38:49Z"
+  "versi_lubang_tengah": 2,
+  "waktu_utc": "2026-07-29T09:38:52Z"
 }

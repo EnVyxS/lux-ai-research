@@ -7,6 +7,11 @@
     "tengah": 6
   },
   "berkas_daftar_penuh": "reports/funding_selisih_penuh.json",
+  "berkas_dicap": [
+    "arsip.py",
+    "funding.py",
+    "funding_cdn.py"
+  ],
   "bukan_bukti": true,
   "byte_zip_sampel_maks": 1942,
   "byte_zip_sampel_min": 433,
@@ -15337,7 +15342,7 @@
   "selisih_klasifikasi": 0,
   "selisih_kohort": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "9851130033192f018946816906c8ab461b0e23aec2b7dfcf01ed2b98faba31b6",
+  "sidik_kode": "d38548236f03314eaa648f64f73be5af2f682207be750a2c2fa413fad581513a",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
   "uji_cdn": {
@@ -15534,6 +15539,6 @@
     "kendali_sah": true,
     "sumber_pasangan": "kohort terukur"
   },
-  "versi_funding": 5,
-  "waktu_utc": "2026-07-29T00:34:05Z"
+  "versi_funding": 6,
+  "waktu_utc": "2026-07-29T01:02:54Z"
 }

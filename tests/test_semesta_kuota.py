@@ -1,7 +1,7 @@
-"""Uji semesta_kuota V2.
+"""Uji semesta_kuota V3.
 
-DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-264:
-1 versi_dua · 2 sumber_sama_dengan_semesta_silang · 3 dua_berkas_keluaran ·
+DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-267:
+1 versi_tiga · 2 sumber_sama_dengan_semesta_silang · 3 dua_berkas_keluaran ·
 4 sidik_kode_heksadesimal · 5 pisah_settled_tanpa_garis_bawah ·
 6 pisah_settled_dengan_garis_bawah · 7 pisah_settled_nama_biasa ·
 8 kuota_usdt · 9 kuota_busd · 10 kuota_usdc · 11 kuota_btc ·
@@ -13,22 +13,29 @@ DAFTAR BERNOMOR fungsi uji (aturan 54, 57) - dasar ramalan R-264:
 23 cacah_nama_saringan · 24 nama_bukan_akhiran_usdt · 25 pemegang_tunggal ·
 26 pemegang_seri · 27 pemegang_tanpa_kandidat · 28 kendali_sah ·
 29 kendali_kurang · 30 kendali_hilang · 31 kode_keluar_bersih ·
-32 kode_keluar_penggugur.
+32 kode_keluar_penggugur · 33 berkas_dicap_memuat_sumber_penyebut ·
+34 total_pecahan_dari_semesta_silang · 35 cacah_lolos_per_simbol ·
+36 himpunan_hanya_arsip · 37 himpunan_hanya_arsip_kosong ·
+38 per_kuota_himpunan_menyaring · 39 per_kuota_himpunan_kosong ·
+40 urai_selisih_identitas · 41 urai_selisih_nama_hanya_arsip ·
+42 urai_selisih_abai_settled · 43 nama_berkuota ·
+44 kode_keluar_penggugur_penyebut · 45 kode_keluar_penggugur_lolos ·
+46 ringkas_memuat_daftar_baru.
 
-Tambahan V2, bernomor 33..46 (14 fungsi baru, dasar 584 + 14 = 598):
-33 berkas_dicap_memuat_sumber_penyebut · 34 total_pecahan_dari_semesta_silang ·
-35 cacah_lolos_per_simbol · 36 himpunan_hanya_arsip ·
-37 himpunan_hanya_arsip_kosong · 38 per_kuota_himpunan_menyaring ·
-39 per_kuota_himpunan_kosong · 40 urai_selisih_identitas ·
-41 urai_selisih_nama_hanya_arsip · 42 urai_selisih_abai_settled ·
-43 nama_berkuota · 44 kode_keluar_penggugur_penyebut ·
-45 kode_keluar_penggugur_lolos · 46 ringkas_memuat_daftar_baru.
+Tambahan V3, bernomor 47..58 (12 fungsi baru, dasar 598 + 12 = 610):
+47 jenis_nama_didelegasikan · 48 jenis_nama_indeks · 49 jenis_nama_settled ·
+50 jenis_nama_usd1 · 51 jenis_nama_basis_non_fiat ·
+52 ringkas_jenis_melaporkan_nol · 53 per_jenis_himpunan_menyaring ·
+54 perpetual_usdt_luar_penyebut_kosong · 55 perpetual_usdt_luar_penyebut_terdaftar ·
+56 penyebut_luar_jenis · 57 hipotesis_bukan_penggugur ·
+58 ringkas_memuat_per_jenis.
 
-Cacah: 46 fungsi, tanpa parametrize.
+Cacah: 58 fungsi, tanpa parametrize.
 """
 
 from __future__ import annotations
 
+from lux_ai.semesta import taksonomi
 from lux_ai.serapan import semesta_kuota as sk
 from lux_ai.serapan import semesta_silang
 
@@ -60,8 +67,8 @@ def ringkasan_bersih():
     }
 
 
-def test_versi_dua():
-    assert sk.VERSI == 2
+def test_versi_tiga():
+    assert sk.VERSI == 3
 
 
 def test_sumber_sama_dengan_semesta_silang():
@@ -113,7 +120,6 @@ def test_kuota_tak_dikenal():
 
 
 def test_kuota_usdt_menang_atas_usd():
-    """Urutan KUOTA_URUT wajib menahan USDT agar tidak terbaca sebagai USD."""
     assert sk.KUOTA_URUT.index("USDT") < sk.KUOTA_URUT.index("USD")
     assert sk.KUOTA_URUT.index("BUSD") < sk.KUOTA_URUT.index("USD")
 
@@ -265,15 +271,16 @@ def test_kode_keluar_penggugur():
     assert sk.kode_keluar(r) == 2
 
 
-# --- V2, fungsi 33..46 ----------------------------------------------------
-
-
 def test_berkas_dicap_memuat_sumber_penyebut():
     """Aturan 22: berkas yang menentukan penyebut WAJIB ikut dicap."""
     assert "silang_funding.py" in sk.BERKAS_DICAP
     assert "kehidupan_arsip.py" in sk.BERKAS_DICAP
     assert "semesta_silang.py" in sk.BERKAS_DICAP
     assert "semesta_kuota.py" in sk.BERKAS_DICAP
+    assert ("semesta", "taksonomi.py") in sk.BERKAS_DICAP_LUAR
+    nama = [f"{p.parent.name}/{p.name}" for p in sk.berkas_dicap_penuh()]
+    assert "semesta/taksonomi.py" in nama
+    assert len(nama) == len(sk.BERKAS_DICAP) + len(sk.BERKAS_DICAP_LUAR)
 
 
 def test_total_pecahan_dari_semesta_silang():
@@ -347,7 +354,6 @@ def test_urai_selisih_nama_hanya_arsip():
 
 
 def test_urai_selisih_abai_settled():
-    """Nama SETTLED tidak boleh masuk penguraian penyebut USDT."""
     baris = sk.klasifikasi(peta_contoh())
     urai = sk.urai_selisih(baris, [], {})
     assert urai["bulan_usdt_bukan_settled"] == 178
@@ -379,7 +385,7 @@ def test_kode_keluar_penggugur_lolos():
 def test_ringkas_memuat_daftar_baru():
     """Aturan 52: daftar yang wajib dibaca utuh harus ada di berkas ringkas."""
     laporan = {
-        "versi_semesta_kuota": 2,
+        "versi_semesta_kuota": 3,
         "sidik_kode": "a" * 64,
         "sidik_data": "b" * 64,
         "per_kuota": {"USDT": {"cacah_nama": 1}},
@@ -398,3 +404,116 @@ def test_ringkas_memuat_daftar_baru():
     assert kecil["urai_selisih"] == {"selisih_total": 163}
     assert "baris" not in kecil
     assert "nama_hanya_arsip" not in kecil
+
+
+# --- V3, fungsi 47..58: taksonomi kanonik (penawar KC-29) -----------------
+
+
+def test_jenis_nama_didelegasikan():
+    """Aturan 36: jenis WAJIB sama dengan taksonomi kanonik, bukan salinan."""
+    for nama in (
+        "BTCUSDT",
+        "BTCUSDT_210326",
+        "BTCBUSD_210129",
+        "ADAUSDC",
+        "ETHBTC",
+        "ABCXYZ",
+    ):
+        assert sk.jenis_nama(nama) == taksonomi.jenis_instrumen(nama)
+    assert sk.jenis_nama("BTCUSDT_210326") == "futures_kedaluwarsa"
+    assert sk.JENIS_PENYEBUT == "perpetual_usdt"
+
+
+def test_jenis_nama_indeks():
+    """Ketiga nama ini identik dengan nama USDT hanya-arsip temuan V2."""
+    for nama in ("DEFIUSDT", "BTCDOMUSDT", "BLUEBIRDUSDT"):
+        assert sk.jenis_nama(nama) == "indeks"
+    assert sorted(taksonomi.INDEKS) == ["BLUEBIRDUSDT", "BTCDOMUSDT", "DEFIUSDT"]
+
+
+def test_jenis_nama_settled():
+    assert sk.jenis_nama("CTKUSDTSETTLED") == "sisa_settled"
+    assert sk.jenis_nama("ICPUSDT_SETTLED") == "sisa_settled"
+
+
+def test_jenis_nama_usd1():
+    """KC-29: BTCUSD1 punya kelas yang sah; ia bukan TAK_DIKENAL."""
+    assert sk.jenis_nama("BTCUSD1") == "perpetual_usd1"
+    assert sk.kuota_dasar("BTCUSD1") == sk.KUOTA_TAK_DIKENAL
+
+
+def test_jenis_nama_basis_non_fiat():
+    assert sk.jenis_nama("ETHBTC") == "basis_non_fiat"
+
+
+def test_ringkas_jenis_melaporkan_nol():
+    """Aturan 18 dan 24: kelas bernilai nol tetap muncul sebagai kunci."""
+    per = sk.ringkas_jenis(sk.klasifikasi(peta_contoh()))
+    assert set(per) == set(taksonomi.JENIS)
+    assert per["perpetual_usdt"]["cacah_nama"] == 2
+    assert per["indeks"]["cacah_nama"] == 1
+    assert per["sisa_settled"]["cacah_nama"] == 2
+    assert per["perpetual_busd"]["cacah_nama"] == 2
+    assert per["perpetual_usdc"]["cacah_nama"] == 1
+    assert per["basis_non_fiat"]["cacah_nama"] == 1
+    assert per["futures_kedaluwarsa"]["cacah_nama"] == 0
+    assert per["tak_tergolong"]["cacah_nama"] == 0
+
+
+def test_per_jenis_himpunan_menyaring():
+    baris = sk.klasifikasi(peta_contoh())
+    per = sk.per_jenis_himpunan(baris, ["BTCDOMUSDT", "ADABUSD"])
+    assert per["indeks"]["cacah_nama"] == 1
+    assert per["perpetual_busd"]["cacah_nama"] == 1
+    assert per["perpetual_usdt"]["cacah_nama"] == 0
+    assert set(per) == set(taksonomi.JENIS)
+
+
+def test_perpetual_usdt_luar_penyebut_kosong():
+    baris = sk.klasifikasi(peta_contoh())
+    assert sk.perpetual_usdt_luar_penyebut(baris, ["BTCUSDT", "ETHUSDT"]) == []
+
+
+def test_perpetual_usdt_luar_penyebut_terdaftar():
+    """Indeks TIDAK boleh masuk daftar ini walau namanya berakhiran USDT."""
+    baris = sk.klasifikasi(peta_contoh())
+    hasil = sk.perpetual_usdt_luar_penyebut(baris, ["BTCUSDT"])
+    assert hasil == ["ETHUSDT"]
+    assert "BTCDOMUSDT" not in hasil
+
+
+def test_penyebut_luar_jenis():
+    """Aturan 62: kesepadanan dua himpunan diuji dari KEDUA arah."""
+    baris = sk.klasifikasi(peta_contoh())
+    assert sk.penyebut_luar_jenis(baris, ["BTCUSDT", "ETHUSDT"]) == []
+    assert sk.penyebut_luar_jenis(baris, ["BTCUSDT", "BTCDOMUSDT"]) == ["BTCDOMUSDT"]
+    assert sk.penyebut_luar_jenis(baris, ["TIDAKADAUSDT"]) == ["TIDAKADAUSDT"]
+
+
+def test_hipotesis_bukan_penggugur():
+    """R-265 dan R-266 kalah TIDAK boleh mengubah kode keluar menjadi 2."""
+    r = ringkasan_bersih()
+    r["r_265_menang"] = False
+    r["r_266_menang"] = False
+    r["cacah_perpetual_usdt"] = 700
+    r["cacah_perpetual_usdt_luar_penyebut"] = 87
+    assert sk.kode_keluar(r) == 0
+
+
+def test_ringkas_memuat_per_jenis():
+    laporan = {
+        "versi_semesta_kuota": 3,
+        "per_jenis": {"perpetual_usdt": {"cacah_nama": 787}},
+        "per_jenis_hanya_arsip": {"indeks": {"cacah_nama": 3}},
+        "nama_indeks": ["BLUEBIRDUSDT", "BTCDOMUSDT", "DEFIUSDT"],
+        "nama_tak_tergolong": [],
+        "berkas_dicap": ["semesta/taksonomi.py"],
+        "baris": [{"nama": "BTCUSDT"}],
+    }
+    kecil = sk.ringkas(laporan)
+    assert kecil["per_jenis"] == {"perpetual_usdt": {"cacah_nama": 787}}
+    assert kecil["per_jenis_hanya_arsip"] == {"indeks": {"cacah_nama": 3}}
+    assert kecil["nama_indeks"] == ["BLUEBIRDUSDT", "BTCDOMUSDT", "DEFIUSDT"]
+    assert kecil["nama_tak_tergolong"] == []
+    assert kecil["berkas_dicap"] == ["semesta/taksonomi.py"]
+    assert "baris" not in kecil

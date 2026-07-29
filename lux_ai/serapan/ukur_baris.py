@@ -65,6 +65,47 @@ PRAREGISTRASI V2 (ditulis SEBELUM run ini):
   satu pun fungsi uji, jadi angkanya harus DIAM. Penggugur: bila cacahnya
   bergerak tanpa uji baru, ada uji yang hilang atau gagal terkumpul dan itu
   MELESET, bukan kebetulan.
+
+---
+
+## V3 (29 Juli 2026) — dua berkas baru masuk daftar (aturan 29)
+
+Seluruh teks V1 dan V2 di atas dibiarkan utuh, termasuk R-203 yang diadjudikasi
+MELESET (kehidupan.py ternyata 417 baris, di luar pita 300..400). Yang berubah
+pada V3 tetap hanya SATU hal: `BERKAS_DIUKUR` bertambah
+`lux_ai/serapan/kehidupan_arsip.py` dan `lux_ai/serapan/silang_funding.py`.
+Mekanika, definisi `cacah_baris`, pagar 800, dan medan penggugur TIDAK disentuh.
+
+Alasan: kedua berkas itu sudah menerbitkan angka yang dipakai STATE (kehidupan
+semesta dan silang funding), namun cacah barisnya belum pernah dihitung, sehingga
+pagar 800 belum pernah benar-benar diuji atas keduanya. Menaksir dari byte adalah
+kesalahan yang sudah tiga kali menjatuhkan ramalan saya (R-175, R-179, R-203).
+
+Sebelum berkas ini diubah, `tests/test_ukur_baris.py` dibaca utuh: tidak ada uji
+yang mengunci PANJANG `BERKAS_DIUKUR`; satu-satunya kewajiban adalah setiap nama
+yang didaftar harus benar-benar ada di repo (`cacah_berkas_hilang` == 0). Kedua
+nama baru sudah ada di `main`. Karena itu cacah butir uji TIDAK berubah.
+
+PRAREGISTRASI V3 (ditulis SEBELUM run ini):
+
+- **R-213** — `cacah_baris` `lux_ai/serapan/kehidupan_arsip.py` berada dalam pita
+  **250..500** BARIS. Pita ini lebar dan saya mengakui sebabnya: saya tidak
+  menyimpan ukuran byte berkas itu sama sekali, jadi dasarnya hanya ingatan
+  struktur modulnya. Pita lebar yang jujur lebih baik daripada pita sempit yang
+  dikarang. Penggugur: `cacah_berkas_hilang` != 0 → TIDAK TERADJUDIKASI.
+- **R-214** — `cacah_baris` `lux_ai/serapan/silang_funding.py` berada dalam pita
+  **330..430** BARIS. Dasar: saya menulisnya beberapa jam lalu dan membacanya
+  ulang utuh; docstring praregistrasinya panjang. Tetap ramalan, bukan
+  pengetahuan.
+- **R-215** — CI melaporkan **316 butir** dan **kode 0**. Satuan: BUTIR yang
+  dikumpulkan pytest. Basis: 316 terverifikasi pada run 30431610324 (commit
+  1b0e8d8e); V3 tidak menambah maupun menghapus satu pun fungsi uji, jadi
+  angkanya harus DIAM (aturan 54: dicacah dari berkas uji yang sudah ada, bukan
+  dari ingatan). Commit ini menyentuh `lux_ai/**`, sehingga CI PASTI menyala —
+  berbeda dari R-209 dan R-212 yang batal karena `ci.yml` mengabaikan `journal/**`.
+- Cacah baris `ukur_baris.py` sendiri SENGAJA tidak diramalkan pada V3, sebab
+  berkas inilah yang sedang saya sunting dan angkanya berubah oleh suntingan ini;
+  meramalkannya hanya akan menambah ramalan murah.
 """
 from __future__ import annotations
 
@@ -72,7 +113,7 @@ import hashlib
 import json
 from pathlib import Path
 
-VERSI = 2
+VERSI = 3
 KELUARAN = "reports/ukur_baris.json"
 PAGAR_BARIS = 800
 
@@ -82,10 +123,12 @@ BERKAS_DIUKUR = [
     "lux_ai/serapan/arsip.py",
     "lux_ai/serapan/gerbang_1m.py",
     "lux_ai/serapan/kehidupan.py",
+    "lux_ai/serapan/kehidupan_arsip.py",
     "lux_ai/serapan/kohort_ekor.py",
     "lux_ai/serapan/kohort_ringkas.py",
     "lux_ai/serapan/pulihkan.py",
     "lux_ai/serapan/resample.py",
+    "lux_ai/serapan/silang_funding.py",
     "lux_ai/serapan/ukur_baris.py",
 ]
 
@@ -161,10 +204,10 @@ def jalankan(akar: str = ".") -> dict:
         ),
         "catatan_satuan": "cacah_baris bersatuan BARIS; byte bersatuan BYTE (aturan 47)",
         "catatan_versi": (
-            "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; mekanika, "
-            "definisi, dan pagar tidak berubah dari V1 (aturan 29). Angka 318 baris "
-            "pulihkan.py yang tercatat di STATE adalah angka V1 dan digantikan oleh "
-            "laporan ini"
+            "V2 hanya menambah kehidupan.py dan ukur_baris.py ke daftar; V3 menambah "
+            "kehidupan_arsip.py dan silang_funding.py. Mekanika, definisi, dan pagar "
+            "tidak berubah sejak V1 (aturan 29). Angka 318 baris pulihkan.py yang "
+            "tercatat di STATE adalah angka V1 dan digantikan oleh laporan ini"
         ),
     }
 

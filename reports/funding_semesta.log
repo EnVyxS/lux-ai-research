@@ -22,9 +22,10 @@
   "catatan_jarak": "jarak_bulan_terakhir = bulan klines terakhir dikurangi bulan funding terakhir, dihitung hanya untuk simbol yang punya lubang ekor; simbol tanpa lubang ekor tidak menyumbang nol, ia tidak menyumbang apa pun",
   "catatan_kelas_kosong": "kelas risiko tanpa kandidat tidak menghasilkan wakil sampel; klaim apa pun tentang kelas itu berpenyebut nol dan TIDAK dapat dibedakan dari kasus lain (aturan 41, 46)",
   "catatan_kohort": "histogram_mulai_lubang_ekor mencacah SIMBOL, bukan bulan; satu simbol menyumbang tepat satu bulan-mulai. Puncak yang tinggi menunjukkan banyak simbol berhenti serempak, tetapi TIDAK dengan sendirinya membuktikan sebabnya ada di sisi arsip: bulan yang sama juga bisa lahir dari satu gelombang delisting. Membedakan keduanya memerlukan sumber di luar arsip dan BELUM dilakukan",
-  "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda, dan hanya yang pertama yang diukur di sini",
-  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram bulan-mulai bocor dan seluruh angka kohort batal (aturan 24)",
+  "catatan_metode": "ketersediaan diukur dari listing S3, bukan dari 404 per berkas; unduhan sungguhan hanya untuk sampel berlapis (aturan 37). Ketiadaan nama di listing dan ketiadaan berkas di CDN adalah dua hal berbeda; blok uji_cdn memeriksa perbedaan itu pada enam berkas saja, bukan pada 880",
+  "catatan_penggugur": "cacah_simbol_gagal_daftar != 0 berarti listing tidak lengkap dan seluruh cacah di laporan ini batal sebagai angka semesta; bulan_klines != 19.598 berarti semesta yang dilihat modul ini bukan semesta manifes serapan, sehingga perbandingannya tidak sah; selisih_klasifikasi != 0 berarti cacah bentuk_lubang bocor; selisih_histogram != 0 berarti histogram bulan-mulai bocor dan seluruh angka kohort batal; uji_cdn.kendali_sah == false berarti jalur unduh tidak terbukti dan seluruh cacah uji_cdn batal (aturan 24)",
   "catatan_rentang": "kesimpulan berlaku untuk semesta perpetual_usdt pada semesta_rentang.json saja, bukan untuk 937 simbol arsip (aturan 20)",
+  "catatan_uji_cdn": "uji_cdn menyentuh tiga berkas kohort dan tiga kendali; hasilnya berlaku untuk enam berkas itu saja dan tidak boleh digeneralkan ke 456 simbol-bulan kohort tanpa pengukuran lanjutan (aturan 20)",
   "contoh_gagal_daftar": [],
   "daftar_funding_tanpa_klines": [
     "ANTUSDT:2024-06",
@@ -714,9 +715,76 @@
   "selisih_histogram": 0,
   "selisih_klasifikasi": 0,
   "sidik_data": "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
-  "sidik_kode": "188fde8e346efb27f18084a0d4f427980c4c741cae36821c25302ba9ea40776f",
+  "sidik_kode": "794e3978d69d90dd65f7dfb21a2c0b995bea58d0fdc8aab42c7c089eb4d338ac",
   "status": "TERUKUR",
   "sumber_rentang": "reports/semesta_rentang.json",
-  "versi_funding": 3,
-  "waktu_utc": "2026-07-28T23:40:56Z"
+  "uji_cdn": {
+    "baris": [
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "FTMUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "KLAYUSDT"
+      },
+      {
+        "bulan": "2025-07",
+        "byte": null,
+        "checksum_cocok": null,
+        "galat": null,
+        "kode_http": 404,
+        "peran": "kohort",
+        "simbol": "LOOMUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 529,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "FTMUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 531,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "KLAYUSDT"
+      },
+      {
+        "bulan": "2025-06",
+        "byte": 749,
+        "checksum_cocok": true,
+        "galat": null,
+        "kode_http": 200,
+        "peran": "kendali",
+        "simbol": "LOOMUSDT"
+      }
+    ],
+    "cacah_kendali_200": 3,
+    "cacah_kendali_checksum_cocok": 3,
+    "cacah_kendali_diminta": 3,
+    "cacah_kohort_200": 0,
+    "cacah_kohort_404": 3,
+    "cacah_kohort_diminta": 3,
+    "cacah_kohort_galat": 0,
+    "catatan": "bila kendali_sah false, jalur unduh tidak terbukti bekerja dan seluruh cacah kohort di blok ini BATAL (aturan 24); 404 berarti server menjawab tidak ada, galat berarti server tidak menjawab, dan keduanya tidak boleh disamakan (aturan 46)",
+    "kendali_sah": true
+  },
+  "versi_funding": 4,
+  "waktu_utc": "2026-07-29T00:06:46Z"
 }

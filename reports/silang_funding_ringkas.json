@@ -1,0 +1,81 @@
+{
+  "berkas_sumber": "reports/silang_funding.json",
+  "byte_sumber": 183963,
+  "definisi": {
+    "di_kohort_puncak": "simbol-bulan EKOR milik anggota kohort_puncak",
+    "lubang_funding": "bulan punya klines tetapi tidak punya fundingRate",
+    "status": "dibaca apa adanya dari laporan kehidupan_arsip"
+  },
+  "ringkasan": {
+    "bagian_mati_luar_kohort_dengan_lubang_funding": 0.4085,
+    "bulan_klines_funding": 19598,
+    "cacah_kohort_puncak": 456,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_lubang_tak_dikenal": 3,
+    "cacah_mati": 1401,
+    "cacah_mati_di_kohort": 456,
+    "cacah_mati_di_kohort_dengan_lubang_funding": 456,
+    "cacah_mati_luar_kohort": 945,
+    "cacah_mati_luar_kohort_dengan_lubang_funding": 386,
+    "cacah_mati_luar_kohort_funding_ada": 559,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "selisih_kohort": 0,
+    "selisih_mati": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "tabel_silang": {
+      "HIDUP": {
+        "funding_ada": 18054,
+        "funding_hilang": 33
+      },
+      "MATI": {
+        "funding_ada": 559,
+        "funding_hilang": 842
+      },
+      "SEPI": {
+        "funding_ada": 96,
+        "funding_hilang": 2
+      },
+      "TAK_TERUKUR": {
+        "funding_ada": 0,
+        "funding_hilang": 0
+      }
+    },
+    "total_pecahan": 8
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "259c069b4a69a725aec25d0d27c6d3f0a847d43363b3b38adc571887861e8c60",
+  "sidik_sumber": "0e43f8bd8f982f8c0ef4c249d3502cb8825255f2111a13b6e8e8a9ef75059cf8",
+  "versi_silang_funding": 1
+}

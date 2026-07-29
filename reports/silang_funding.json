@@ -1,0 +1,8504 @@
+{
+  "baris_mati": [
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000WHYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000WHYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000WHYUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "1000XUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "42USDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "42USDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "42USDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "42USDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "42USDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "A2ZUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "A2ZUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "A2ZUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AGIXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AI16ZUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "AIUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ALPACAUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ALPHAUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ANTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ATAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "B3USDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "B3USDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BADGERUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BAKEUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BALUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BIDUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BIDUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BIDUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BIDUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BIDUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BLZUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BNXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BOBUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BOBUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "BONDUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BSWUSDT"
+    },
+    {
+      "bulan": "2021-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2021-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTCSTUSDT"
+    },
+    {
+      "bulan": "2022-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2022-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2022-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "BTSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CHESSUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CHESSUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CHESSUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CHESSUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COCOSUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "COMBOUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "COMMONUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CTKUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "CUDISUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVCUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "CVXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DAMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DAMUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DARUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DEGENUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DEGENUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DEGOUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DEGOUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DENTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DENTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DFUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DFUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DFUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DFUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "DGBUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DMCUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DMCUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DMCUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DMCUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "DMCUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "EPTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "EPTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "EPTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "EPTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "EPTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FIOUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FIOUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FISUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FLMUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FOOTBALLUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FOOTBALLUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FORTHUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FORTHUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FORTHUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FRONTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTMUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "FTTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FUNUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FUNUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FXSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FXSUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FXSUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FXSUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "FXSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "GHSTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "GHSTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "GHSTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "GHSTUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "GLMRUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIFIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIPPOUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HIPPOUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "HNTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HOOKUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HOOKUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "HOOKUSDT"
+    },
+    {
+      "bulan": "2022-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ICPUSDT"
+    },
+    {
+      "bulan": "2022-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ICPUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "IDEXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "IRUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "IRUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "KDAUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KEYUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "KLAYUSDT"
+    },
+    {
+      "bulan": "2020-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LENDUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LINAUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LITUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LOKAUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "LOOMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LRCUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LRCUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "LRCUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MAVIAUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MEMEFIUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MILKUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MKRUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MLNUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "MYROUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NEIROETHUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NKNUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NKNUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NKNUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NKNUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NTRNUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NTRNUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "NTRNUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "NULSUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OBOLUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OCEANUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OLUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OLUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "OMGUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMNIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OMUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "ORBSUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OXTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "OXTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PERPUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PHBUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PONKEUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PORT3USDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PUFFERUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "PUFFERUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "QUICKUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RADUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RAYUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RDNTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RDNTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RDNTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "REEFUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "REIUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "RENUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RLSUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RLSUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RVVUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RVVUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RVVUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "RVVUSDT"
+    },
+    {
+      "bulan": "2022-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2022-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2022-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2022-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2022-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SCUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SKATEUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SLERFUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "SNTUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "SRMUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STMXUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STPTUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "STRAXUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SWELLUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SXPUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "SYSUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TANSSIUSDT"
+    },
+    {
+      "bulan": "2022-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2022-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2022-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2022-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2022-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2022-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2023-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TOKENUSDT"
+    },
+    {
+      "bulan": "2023-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2024-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2024-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2024-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TOMOUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TRUUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "TRUUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "UNFIUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "UXLINKUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VFYUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VFYUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VFYUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "VIDTUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VINEUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VINEUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "VOXELUSDT"
+    },
+    {
+      "bulan": "2024-07",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2024-08",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2024-11",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2024-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "WAVESUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "XCNUSDT"
+    },
+    {
+      "bulan": "2025-01",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": false,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-08",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-11",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": true,
+      "lubang_funding": true,
+      "simbol": "XEMUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "YALAUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "YALAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "YALAUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "YALAUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZKJUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZKJUSDT"
+    },
+    {
+      "bulan": "2026-02",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZRCUSDT"
+    },
+    {
+      "bulan": "2026-03",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZRCUSDT"
+    },
+    {
+      "bulan": "2026-04",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZRCUSDT"
+    },
+    {
+      "bulan": "2026-05",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZRCUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "di_kohort_puncak": false,
+      "lubang_funding": true,
+      "simbol": "ZRCUSDT"
+    }
+  ],
+  "bukan_bukti": false,
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, atau kendali_sah false membatalkan seluruh angka; selisih_penyebut, selisih_mati, dan selisih_kohort bukan nol berarti yang terbaca bukan laporan yang sudah diterbitkan di STATE v30 (aturan 24)",
+  "catatan_penyebut": "penyebut kehidupan adalah 19.586 simbol-bulan LOLOS gerbang, bukan 19.598; lubang funding yang jatuh di luar penyebut itu dicacah sebagai cacah_lubang_tak_dikenal dan tidak dibuang (aturan 30, 44)",
+  "catatan_tafsir": "irisan BUKAN sebab: simbol-bulan yang MATI sekaligus kehilangan funding tidak membuktikan salah satu menyebabkan yang lain; keduanya dapat lahir dari satu delisting (aturan 10)",
+  "definisi": {
+    "di_kohort_puncak": "simbol-bulan EKOR milik anggota kohort_puncak",
+    "lubang_funding": "bulan punya klines tetapi tidak punya fundingRate",
+    "status": "dibaca apa adanya dari laporan kehidupan_arsip"
+  },
+  "ringkasan": {
+    "bagian_mati_luar_kohort_dengan_lubang_funding": 0.4085,
+    "bulan_klines_funding": 19598,
+    "cacah_kohort_puncak": 456,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_lubang_tak_dikenal": 3,
+    "cacah_mati": 1401,
+    "cacah_mati_di_kohort": 456,
+    "cacah_mati_di_kohort_dengan_lubang_funding": 456,
+    "cacah_mati_luar_kohort": 945,
+    "cacah_mati_luar_kohort_dengan_lubang_funding": 386,
+    "cacah_mati_luar_kohort_funding_ada": 559,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "selisih_kohort": 0,
+    "selisih_mati": 0,
+    "selisih_penyebut": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "tabel_silang": {
+      "HIDUP": {
+        "funding_ada": 18054,
+        "funding_hilang": 33
+      },
+      "MATI": {
+        "funding_ada": 559,
+        "funding_hilang": 842
+      },
+      "SEPI": {
+        "funding_ada": 96,
+        "funding_hilang": 2
+      },
+      "TAK_TERUKUR": {
+        "funding_ada": 0,
+        "funding_hilang": 0
+      }
+    },
+    "total_pecahan": 8
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "259c069b4a69a725aec25d0d27c6d3f0a847d43363b3b38adc571887861e8c60",
+  "sidik_kode_funding": "d38548236f03314eaa648f64f73be5af2f682207be750a2c2fa413fad581513a",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "versi_funding": 6,
+  "versi_silang_funding": 1,
+  "waktu_utc": "2026-07-29T07:25:46Z"
+}

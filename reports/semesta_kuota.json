@@ -1,0 +1,7740 @@
+{
+  "baris": [
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "0GUSDT",
+      "kuota": "USDT",
+      "nama": "0GUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "1000000BOBUSDT",
+      "kuota": "USDT",
+      "nama": "1000000BOBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "1000000MOGUSDT",
+      "kuota": "USDT",
+      "nama": "1000000MOGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 26,
+      "dasar": "1000BONKUSDC",
+      "kuota": "USDC",
+      "nama": "1000BONKUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "1000BONKUSDT",
+      "kuota": "USDT",
+      "nama": "1000BONKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "1000BTTCUSDT",
+      "kuota": "USDT",
+      "nama": "1000BTTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "1000CATUSDT",
+      "kuota": "USDT",
+      "nama": "1000CATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "1000CHEEMSUSDT",
+      "kuota": "USDT",
+      "nama": "1000CHEEMSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "1000FLOKIUSDT",
+      "kuota": "USDT",
+      "nama": "1000FLOKIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "1000LUNCBUSD",
+      "kuota": "BUSD",
+      "nama": "1000LUNCBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 46,
+      "dasar": "1000LUNCUSDT",
+      "kuota": "USDT",
+      "nama": "1000LUNCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "1000PEPEUSDC",
+      "kuota": "USDC",
+      "nama": "1000PEPEUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "1000PEPEUSDT",
+      "kuota": "USDT",
+      "nama": "1000PEPEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "1000RATSUSDT",
+      "kuota": "USDT",
+      "nama": "1000RATSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "1000SATSUSDT",
+      "kuota": "USDT",
+      "nama": "1000SATSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "1000SHIBBUSD",
+      "kuota": "BUSD",
+      "nama": "1000SHIBBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "1000SHIBUSDC",
+      "kuota": "USDC",
+      "nama": "1000SHIBUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 62,
+      "dasar": "1000SHIBUSDT",
+      "kuota": "USDT",
+      "nama": "1000SHIBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "1000WHYUSDT",
+      "kuota": "USDT",
+      "nama": "1000WHYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 58,
+      "dasar": "1000XECUSDT",
+      "kuota": "USDT",
+      "nama": "1000XECUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "1000XUSDT",
+      "kuota": "USDT",
+      "nama": "1000XUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 67,
+      "dasar": "1INCHUSDT",
+      "kuota": "USDT",
+      "nama": "1INCHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "1MBABYDOGEUSDT",
+      "kuota": "USDT",
+      "nama": "1MBABYDOGEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "2ZUSDT",
+      "kuota": "USDT",
+      "nama": "2ZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "42USDT",
+      "kuota": "USDT",
+      "nama": "42USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "4USDT",
+      "kuota": "USDT",
+      "nama": "4USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "A2ZUSDT",
+      "kuota": "USDT",
+      "nama": "A2ZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "AAOIUSDT",
+      "kuota": "USDT",
+      "nama": "AAOIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "AAPLUSDT",
+      "kuota": "USDT",
+      "nama": "AAPLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 13,
+      "dasar": "AAVEUSDC",
+      "kuota": "USDC",
+      "nama": "AAVEUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "AAVEUSDT",
+      "kuota": "USDT",
+      "nama": "AAVEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "ACEUSDT",
+      "kuota": "USDT",
+      "nama": "ACEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "ACHUSDT",
+      "kuota": "USDT",
+      "nama": "ACHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "ACTUSDT",
+      "kuota": "USDT",
+      "nama": "ACTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "ACUUSDT",
+      "kuota": "USDT",
+      "nama": "ACUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "ACXUSDT",
+      "kuota": "USDT",
+      "nama": "ACXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "ADABUSD",
+      "kuota": "BUSD",
+      "nama": "ADABUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "ADAUSDC",
+      "kuota": "USDC",
+      "nama": "ADAUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "ADAUSDT",
+      "kuota": "USDT",
+      "nama": "ADAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ADBEUSDT",
+      "kuota": "USDT",
+      "nama": "ADBEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "AERGOUSDT",
+      "kuota": "USDT",
+      "nama": "AERGOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "AERGOUSDT",
+      "kuota": "USDT",
+      "nama": "AERGOUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "AEROUSDT",
+      "kuota": "USDT",
+      "nama": "AEROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "AEVOUSDT",
+      "kuota": "USDT",
+      "nama": "AEVOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 12,
+      "dasar": "AGIXBUSD",
+      "kuota": "BUSD",
+      "nama": "AGIXBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "AGIXUSDT",
+      "kuota": "USDT",
+      "nama": "AGIXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 36,
+      "dasar": "AGLDUSDT",
+      "kuota": "USDT",
+      "nama": "AGLDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "AGTUSDT",
+      "kuota": "USDT",
+      "nama": "AGTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "AI16ZUSDT",
+      "kuota": "USDT",
+      "nama": "AI16ZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "AIAUSDT",
+      "kuota": "USDT",
+      "nama": "AIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "AIAUSDT",
+      "kuota": "USDT",
+      "nama": "AIAUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "AIGENSYNUSDT",
+      "kuota": "USDT",
+      "nama": "AIGENSYNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "AINUSDT",
+      "kuota": "USDT",
+      "nama": "AINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "AIOTUSDT",
+      "kuota": "USDT",
+      "nama": "AIOTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "AIOUSDT",
+      "kuota": "USDT",
+      "nama": "AIOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "AIUSDT",
+      "kuota": "USDT",
+      "nama": "AIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "AIXBTUSDT",
+      "kuota": "USDT",
+      "nama": "AIXBTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "AKEUSDT",
+      "kuota": "USDT",
+      "nama": "AKEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "AKROUSDT",
+      "kuota": "USDT",
+      "nama": "AKROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "AKTUSDT",
+      "kuota": "USDT",
+      "nama": "AKTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ALABUSDT",
+      "kuota": "USDT",
+      "nama": "ALABUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "ALCHUSDT",
+      "kuota": "USDT",
+      "nama": "ALCHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 73,
+      "dasar": "ALGOUSDT",
+      "kuota": "USDT",
+      "nama": "ALGOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "ALICEUSDT",
+      "kuota": "USDT",
+      "nama": "ALICEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "ALLOUSDT",
+      "kuota": "USDT",
+      "nama": "ALLOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "ALLUSDT",
+      "kuota": "USDT",
+      "nama": "ALLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "ALPACAUSDT",
+      "kuota": "USDT",
+      "nama": "ALPACAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "ALPHAUSDT",
+      "kuota": "USDT",
+      "nama": "ALPHAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "ALPINEUSDT",
+      "kuota": "USDT",
+      "nama": "ALPINEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "ALTUSDT",
+      "kuota": "USDT",
+      "nama": "ALTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "AMATUSDT",
+      "kuota": "USDT",
+      "nama": "AMATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "AMBBUSD",
+      "kuota": "BUSD",
+      "nama": "AMBBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "AMBUSDT",
+      "kuota": "USDT",
+      "nama": "AMBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "AMDUSDT",
+      "kuota": "USDT",
+      "nama": "AMDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "AMZNUSDT",
+      "kuota": "USDT",
+      "nama": "AMZNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "ANCBUSD",
+      "kuota": "BUSD",
+      "nama": "ANCBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "ANCUSDT",
+      "kuota": "USDT",
+      "nama": "ANCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "ANIMEUSDT",
+      "kuota": "USDT",
+      "nama": "ANIMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 66,
+      "dasar": "ANKRUSDT",
+      "kuota": "USDT",
+      "nama": "ANKRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ANTHROPICUSDT",
+      "kuota": "USDT",
+      "nama": "ANTHROPICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "ANTUSDT",
+      "kuota": "USDT",
+      "nama": "ANTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "APEBUSD",
+      "kuota": "BUSD",
+      "nama": "APEBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 52,
+      "dasar": "APEUSDT",
+      "kuota": "USDT",
+      "nama": "APEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 53,
+      "dasar": "API3USDT",
+      "kuota": "USDT",
+      "nama": "API3USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "APRUSDT",
+      "kuota": "USDT",
+      "nama": "APRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 15,
+      "dasar": "APTBUSD",
+      "kuota": "BUSD",
+      "nama": "APTBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 45,
+      "dasar": "APTUSDT",
+      "kuota": "USDT",
+      "nama": "APTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "ARBUSDC",
+      "kuota": "USDC",
+      "nama": "ARBUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "ARBUSDT",
+      "kuota": "USDT",
+      "nama": "ARBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "ARCUSDT",
+      "kuota": "USDT",
+      "nama": "ARCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "ARIAUSDT",
+      "kuota": "USDT",
+      "nama": "ARIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 36,
+      "dasar": "ARKMUSDT",
+      "kuota": "USDT",
+      "nama": "ARKMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 34,
+      "dasar": "ARKUSDT",
+      "kuota": "USDT",
+      "nama": "ARKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "ARMUSDT",
+      "kuota": "USDT",
+      "nama": "ARMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 57,
+      "dasar": "ARPAUSDT",
+      "kuota": "USDT",
+      "nama": "ARPAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 58,
+      "dasar": "ARUSDT",
+      "kuota": "USDT",
+      "nama": "ARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ARXUSDT",
+      "kuota": "USDT",
+      "nama": "ARXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ASMLUSDT",
+      "kuota": "USDT",
+      "nama": "ASMLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "ASRUSDT",
+      "kuota": "USDT",
+      "nama": "ASRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "ASTERUSDT",
+      "kuota": "USDT",
+      "nama": "ASTERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "ASTRUSDT",
+      "kuota": "USDT",
+      "nama": "ASTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ASTSUSDT",
+      "kuota": "USDT",
+      "nama": "ASTSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 59,
+      "dasar": "ATAUSDT",
+      "kuota": "USDT",
+      "nama": "ATAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "ATHUSDT",
+      "kuota": "USDT",
+      "nama": "ATHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "ATOMUSDT",
+      "kuota": "USDT",
+      "nama": "ATOMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "ATUSDT",
+      "kuota": "USDT",
+      "nama": "ATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 17,
+      "dasar": "AUCTIONBUSD",
+      "kuota": "BUSD",
+      "nama": "AUCTIONBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "AUCTIONUSDT",
+      "kuota": "USDT",
+      "nama": "AUCTIONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 34,
+      "dasar": "AUDIOUSDT",
+      "kuota": "USDT",
+      "nama": "AUDIOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "AUSDT",
+      "kuota": "USDT",
+      "nama": "AUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "AVAAIUSDT",
+      "kuota": "USDT",
+      "nama": "AVAAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "AVAUSDT",
+      "kuota": "USDT",
+      "nama": "AVAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "AVAXBUSD",
+      "kuota": "BUSD",
+      "nama": "AVAXBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "AVAXUSDC",
+      "kuota": "USDC",
+      "nama": "AVAXUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "AVAXUSDT",
+      "kuota": "USDT",
+      "nama": "AVAXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "AVGOUSDT",
+      "kuota": "USDT",
+      "nama": "AVGOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "AVNTUSDT",
+      "kuota": "USDT",
+      "nama": "AVNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "AWEUSDT",
+      "kuota": "USDT",
+      "nama": "AWEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "AXLUSDT",
+      "kuota": "USDT",
+      "nama": "AXLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "AXSUSDT",
+      "kuota": "USDT",
+      "nama": "AXSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "AXTIUSDT",
+      "kuota": "USDT",
+      "nama": "AXTIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "AZTECUSDT",
+      "kuota": "USDT",
+      "nama": "AZTECUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "B2USDT",
+      "kuota": "USDT",
+      "nama": "B2USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "B3USDT",
+      "kuota": "USDT",
+      "nama": "B3USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "BABAUSDT",
+      "kuota": "USDT",
+      "nama": "BABAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "BABYUSDT",
+      "kuota": "USDT",
+      "nama": "BABYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "BADGERUSDT",
+      "kuota": "USDT",
+      "nama": "BADGERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 62,
+      "dasar": "BAKEUSDT",
+      "kuota": "USDT",
+      "nama": "BAKEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "BALUSDT",
+      "kuota": "USDT",
+      "nama": "BALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BANANAS31USDT",
+      "kuota": "USDT",
+      "nama": "BANANAS31USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "BANANAUSDT",
+      "kuota": "USDT",
+      "nama": "BANANAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 72,
+      "dasar": "BANDUSDT",
+      "kuota": "USDT",
+      "nama": "BANDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "BANKUSDT",
+      "kuota": "USDT",
+      "nama": "BANKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "BANUSDT",
+      "kuota": "USDT",
+      "nama": "BANUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "BARDUSDT",
+      "kuota": "USDT",
+      "nama": "BARDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "BASEDUSDT",
+      "kuota": "USDT",
+      "nama": "BASEDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "BASUSDT",
+      "kuota": "USDT",
+      "nama": "BASUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "BATUSDT",
+      "kuota": "USDT",
+      "nama": "BATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 26,
+      "dasar": "BBUSDT",
+      "kuota": "USDT",
+      "nama": "BBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "BBXUSDT",
+      "kuota": "USDT",
+      "nama": "BBXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "BCHUSDC",
+      "kuota": "USDC",
+      "nama": "BCHUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "BCHUSDT",
+      "kuota": "USDT",
+      "nama": "BCHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "BDXNUSDT",
+      "kuota": "USDT",
+      "nama": "BDXNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "BDXNUSDT",
+      "kuota": "USDT",
+      "nama": "BDXNUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "BEAMXUSDT",
+      "kuota": "USDT",
+      "nama": "BEAMXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "BEATUSDT",
+      "kuota": "USDT",
+      "nama": "BEATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "BELUSDT",
+      "kuota": "USDT",
+      "nama": "BELUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "BERAUSDT",
+      "kuota": "USDT",
+      "nama": "BERAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "BEUSDT",
+      "kuota": "USDT",
+      "nama": "BEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 34,
+      "dasar": "BICOUSDT",
+      "kuota": "USDT",
+      "nama": "BICOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BIDUSDT",
+      "kuota": "USDT",
+      "nama": "BIDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "BIGTIMEUSDT",
+      "kuota": "USDT",
+      "nama": "BIGTIMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "BILLUSDT",
+      "kuota": "USDT",
+      "nama": "BILLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 11,
+      "dasar": "BIOUSDC",
+      "kuota": "USDC",
+      "nama": "BIOUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "BIOUSDT",
+      "kuota": "USDT",
+      "nama": "BIOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "BIRBUSDT",
+      "kuota": "USDT",
+      "nama": "BIRBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "BLESSUSDT",
+      "kuota": "USDT",
+      "nama": "BLESSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "BLUAIUSDT",
+      "kuota": "USDT",
+      "nama": "BLUAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "BLUEBIRDUSDT",
+      "kuota": "USDT",
+      "nama": "BLUEBIRDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 39,
+      "dasar": "BLURUSDT",
+      "kuota": "USDT",
+      "nama": "BLURUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "BLZUSDT",
+      "kuota": "USDT",
+      "nama": "BLZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "BMNRUSDT",
+      "kuota": "USDT",
+      "nama": "BMNRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BMTUSDT",
+      "kuota": "USDT",
+      "nama": "BMTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "BNBBUSD",
+      "kuota": "BUSD",
+      "nama": "BNBBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "BNBUSDC",
+      "kuota": "USDC",
+      "nama": "BNBUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "BNBUSDT",
+      "kuota": "USDT",
+      "nama": "BNBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "BNTUSDT",
+      "kuota": "USDT",
+      "nama": "BNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 51,
+      "dasar": "BNXUSDT",
+      "kuota": "USDT",
+      "nama": "BNXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "BNXUSDT",
+      "kuota": "USDT",
+      "nama": "BNXUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "BOBUSDT",
+      "kuota": "USDT",
+      "nama": "BOBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "BOMEUSDC",
+      "kuota": "USDC",
+      "nama": "BOMEUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "BOMEUSDT",
+      "kuota": "USDT",
+      "nama": "BOMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "BONDUSDT",
+      "kuota": "USDT",
+      "nama": "BONDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "BRETTUSDT",
+      "kuota": "USDT",
+      "nama": "BRETTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "BREVUSDT",
+      "kuota": "USDT",
+      "nama": "BREVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "BRKBUSDT",
+      "kuota": "USDT",
+      "nama": "BRKBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BROCCOLI714USDT",
+      "kuota": "USDT",
+      "nama": "BROCCOLI714USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BROCCOLIF3BUSDT",
+      "kuota": "USDT",
+      "nama": "BROCCOLIF3BUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BRUSDT",
+      "kuota": "USDT",
+      "nama": "BRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "BSBUSDT",
+      "kuota": "USDT",
+      "nama": "BSBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "BSVUSDT",
+      "kuota": "USDT",
+      "nama": "BSVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "BSWUSDT",
+      "kuota": "USDT",
+      "nama": "BSWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 36,
+      "dasar": "BTCBUSD",
+      "kuota": "BUSD",
+      "nama": "BTCBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "BTCBUSD_210129",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCBUSD_210129",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "BTCBUSD_210226",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCBUSD_210226",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 61,
+      "dasar": "BTCDOMUSDT",
+      "kuota": "USDT",
+      "nama": "BTCDOMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "BTCSTUSDT",
+      "kuota": "USDT",
+      "nama": "BTCSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 2,
+      "dasar": "BTCUSD1",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSD1",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "BTCUSDC",
+      "kuota": "USDC",
+      "nama": "BTCUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "BTCUSDT",
+      "kuota": "USDT",
+      "nama": "BTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 2,
+      "dasar": "BTCUSDT_210326",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_210326",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_210625",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_210625",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_210924",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_210924",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_211231",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_211231",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_220325",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_220325",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_220624",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_220624",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_220930",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_220930",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_221230",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_221230",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_230331",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_230331",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_230630",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_230630",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "BTCUSDT_230929",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_230929",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "BTCUSDT_231229",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_231229",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_240329",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_240329",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "BTCUSDT_240628",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_240628",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_240927",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_240927",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_241227",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_241227",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_250328",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_250328",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_250627",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_250627",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_250926",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_250926",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "BTCUSDT_251226",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_251226",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "BTCUSDT_260327",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_260327",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "BTCUSDT_260626",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_260626",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "BTCUSDT_260925",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_260925",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "BTCUSDT_261225",
+      "kuota": "TAK_DIKENAL",
+      "nama": "BTCUSDT_261225",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "BTRUSDT",
+      "kuota": "USDT",
+      "nama": "BTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "BTSUSDT",
+      "kuota": "USDT",
+      "nama": "BTSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "BTTUSDT",
+      "kuota": "USDT",
+      "nama": "BTTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "BTWUSDT",
+      "kuota": "USDT",
+      "nama": "BTWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "BULLAUSDT",
+      "kuota": "USDT",
+      "nama": "BULLAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "BUSDT",
+      "kuota": "USDT",
+      "nama": "BUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "BXUSDT",
+      "kuota": "USDT",
+      "nama": "BXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "BZRXUSDT",
+      "kuota": "USDT",
+      "nama": "BZRXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "BZUSDT",
+      "kuota": "USDT",
+      "nama": "BZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 59,
+      "dasar": "C98USDT",
+      "kuota": "USDT",
+      "nama": "C98USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "CAKEUSDT",
+      "kuota": "USDT",
+      "nama": "CAKEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "CAPUSDT",
+      "kuota": "USDT",
+      "nama": "CAPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "CARVUSDT",
+      "kuota": "USDT",
+      "nama": "CARVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "CATIUSDT",
+      "kuota": "USDT",
+      "nama": "CATIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "CBRSUSDT",
+      "kuota": "USDT",
+      "nama": "CBRSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "CCUSDT",
+      "kuota": "USDT",
+      "nama": "CCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 58,
+      "dasar": "CELOUSDT",
+      "kuota": "USDT",
+      "nama": "CELOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "CELRUSDT",
+      "kuota": "USDT",
+      "nama": "CELRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "CETUSUSDT",
+      "kuota": "USDT",
+      "nama": "CETUSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "CFGUSDT",
+      "kuota": "USDT",
+      "nama": "CFGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "CFXUSDT",
+      "kuota": "USDT",
+      "nama": "CFXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "CGPTUSDT",
+      "kuota": "USDT",
+      "nama": "CGPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "CHESSUSDT",
+      "kuota": "USDT",
+      "nama": "CHESSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "CHILLGUYUSDT",
+      "kuota": "USDT",
+      "nama": "CHILLGUYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "CHIPUSDT",
+      "kuota": "USDT",
+      "nama": "CHIPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "CHRUSDT",
+      "kuota": "USDT",
+      "nama": "CHRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 66,
+      "dasar": "CHZUSDT",
+      "kuota": "USDT",
+      "nama": "CHZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "CIENUSDT",
+      "kuota": "USDT",
+      "nama": "CIENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "CKBUSDT",
+      "kuota": "USDT",
+      "nama": "CKBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "CLANKERUSDT",
+      "kuota": "USDT",
+      "nama": "CLANKERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "CLOUSDT",
+      "kuota": "USDT",
+      "nama": "CLOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "CLUSDT",
+      "kuota": "USDT",
+      "nama": "CLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "COAIUSDT",
+      "kuota": "USDT",
+      "nama": "COAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "COCOSUSDT",
+      "kuota": "USDT",
+      "nama": "COCOSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "COHRUSDT",
+      "kuota": "USDT",
+      "nama": "COHRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "COINUSDT",
+      "kuota": "USDT",
+      "nama": "COINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "COLLECTUSDT",
+      "kuota": "USDT",
+      "nama": "COLLECTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 37,
+      "dasar": "COMBOUSDT",
+      "kuota": "USDT",
+      "nama": "COMBOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "COMMONUSDT",
+      "kuota": "USDT",
+      "nama": "COMMONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 73,
+      "dasar": "COMPUSDT",
+      "kuota": "USDT",
+      "nama": "COMPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "COOKIEUSDT",
+      "kuota": "USDT",
+      "nama": "COOKIEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "COPPERUSDT",
+      "kuota": "USDT",
+      "nama": "COPPERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "COSTUSDT",
+      "kuota": "USDT",
+      "nama": "COSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "COSUSDT",
+      "kuota": "USDT",
+      "nama": "COSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "COTIUSDT",
+      "kuota": "USDT",
+      "nama": "COTIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "COWUSDT",
+      "kuota": "USDT",
+      "nama": "COWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "CRCLUSDT",
+      "kuota": "USDT",
+      "nama": "CRCLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "CRDOUSDT",
+      "kuota": "USDT",
+      "nama": "CRDOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "CRMUSDT",
+      "kuota": "USDT",
+      "nama": "CRMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "CROSSUSDT",
+      "kuota": "USDT",
+      "nama": "CROSSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 24,
+      "dasar": "CRVUSDC",
+      "kuota": "USDC",
+      "nama": "CRVUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "CRVUSDT",
+      "kuota": "USDT",
+      "nama": "CRVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "CRWDUSDT",
+      "kuota": "USDT",
+      "nama": "CRWDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "CRWVUSDT",
+      "kuota": "USDT",
+      "nama": "CRWVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "CSCOUSDT",
+      "kuota": "USDT",
+      "nama": "CSCOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "CTKUSDT",
+      "kuota": "USDT",
+      "nama": "CTKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "CTKUSDT",
+      "kuota": "USDT",
+      "nama": "CTKUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "CTRUSDT",
+      "kuota": "USDT",
+      "nama": "CTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 57,
+      "dasar": "CTSIUSDT",
+      "kuota": "USDT",
+      "nama": "CTSIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "CUDISUSDT",
+      "kuota": "USDT",
+      "nama": "CUDISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "CUSDT",
+      "kuota": "USDT",
+      "nama": "CUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "CVCUSDT",
+      "kuota": "USDT",
+      "nama": "CVCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "CVCUSDT",
+      "kuota": "USDT",
+      "nama": "CVCUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "CVXBUSD",
+      "kuota": "BUSD",
+      "nama": "CVXBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 46,
+      "dasar": "CVXUSDT",
+      "kuota": "USDT",
+      "nama": "CVXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "CVXUSDT",
+      "kuota": "USDT",
+      "nama": "CVXUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "CYBERUSDT",
+      "kuota": "USDT",
+      "nama": "CYBERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "CYSUSDT",
+      "kuota": "USDT",
+      "nama": "CYSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "DAMUSDT",
+      "kuota": "USDT",
+      "nama": "DAMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 51,
+      "dasar": "DARUSDT",
+      "kuota": "USDT",
+      "nama": "DARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "DASHUSDT",
+      "kuota": "USDT",
+      "nama": "DASHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "DEEPUSDT",
+      "kuota": "USDT",
+      "nama": "DEEPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "DEFIUSDT",
+      "kuota": "USDT",
+      "nama": "DEFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "DEGENUSDT",
+      "kuota": "USDT",
+      "nama": "DEGENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "DEGOUSDT",
+      "kuota": "USDT",
+      "nama": "DEGOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "DELLUSDT",
+      "kuota": "USDT",
+      "nama": "DELLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "DENTUSDT",
+      "kuota": "USDT",
+      "nama": "DENTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "DEXEUSDT",
+      "kuota": "USDT",
+      "nama": "DEXEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "DFUSDT",
+      "kuota": "USDT",
+      "nama": "DFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 63,
+      "dasar": "DGBUSDT",
+      "kuota": "USDT",
+      "nama": "DGBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "DIAUSDT",
+      "kuota": "USDT",
+      "nama": "DIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "DISUSDT",
+      "kuota": "USDT",
+      "nama": "DISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "DKNGUSDT",
+      "kuota": "USDT",
+      "nama": "DKNGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "DMCUSDT",
+      "kuota": "USDT",
+      "nama": "DMCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "DODOBUSD",
+      "kuota": "BUSD",
+      "nama": "DODOBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "DODOUSDT",
+      "kuota": "USDT",
+      "nama": "DODOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "DODOXUSDT",
+      "kuota": "USDT",
+      "nama": "DODOXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "DOGEBUSD",
+      "kuota": "BUSD",
+      "nama": "DOGEBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "DOGEUSDC",
+      "kuota": "USDC",
+      "nama": "DOGEUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 72,
+      "dasar": "DOGEUSDT",
+      "kuota": "USDT",
+      "nama": "DOGEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "DOGSUSDT",
+      "kuota": "USDT",
+      "nama": "DOGSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "DOLOUSDT",
+      "kuota": "USDT",
+      "nama": "DOLOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "DOODUSDT",
+      "kuota": "USDT",
+      "nama": "DOODUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 19,
+      "dasar": "DOTBUSD",
+      "kuota": "BUSD",
+      "nama": "DOTBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "DOTECOUSDT",
+      "kuota": "USDT",
+      "nama": "DOTECOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "DOTUSDT",
+      "kuota": "USDT",
+      "nama": "DOTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "DRAMUSDT",
+      "kuota": "USDT",
+      "nama": "DRAMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "DRIFTUSDT",
+      "kuota": "USDT",
+      "nama": "DRIFTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "DUSDT",
+      "kuota": "USDT",
+      "nama": "DUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 54,
+      "dasar": "DUSKUSDT",
+      "kuota": "USDT",
+      "nama": "DUSKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 58,
+      "dasar": "DYDXUSDT",
+      "kuota": "USDT",
+      "nama": "DYDXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "DYMUSDT",
+      "kuota": "USDT",
+      "nama": "DYMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "EBAYUSDT",
+      "kuota": "USDT",
+      "nama": "EBAYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "EDENUSDT",
+      "kuota": "USDT",
+      "nama": "EDENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "EDGEUSDT",
+      "kuota": "USDT",
+      "nama": "EDGEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 39,
+      "dasar": "EDUUSDT",
+      "kuota": "USDT",
+      "nama": "EDUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "EGLDUSDT",
+      "kuota": "USDT",
+      "nama": "EGLDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "EIGENUSDT",
+      "kuota": "USDT",
+      "nama": "EIGENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "ELSAUSDT",
+      "kuota": "USDT",
+      "nama": "ELSAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 26,
+      "dasar": "ENAUSDC",
+      "kuota": "USDC",
+      "nama": "ENAUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "ENAUSDT",
+      "kuota": "USDT",
+      "nama": "ENAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "ENJUSDT",
+      "kuota": "USDT",
+      "nama": "ENJUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "ENSOUSDT",
+      "kuota": "USDT",
+      "nama": "ENSOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 56,
+      "dasar": "ENSUSDT",
+      "kuota": "USDT",
+      "nama": "ENSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "EOSUSDT",
+      "kuota": "USDT",
+      "nama": "EOSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "EPICUSDT",
+      "kuota": "USDT",
+      "nama": "EPICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "EPTUSDT",
+      "kuota": "USDT",
+      "nama": "EPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "ERAUSDT",
+      "kuota": "USDT",
+      "nama": "ERAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "ESPORTSUSDT",
+      "kuota": "USDT",
+      "nama": "ESPORTSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "ESPUSDT",
+      "kuota": "USDT",
+      "nama": "ESPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "ETCBUSD",
+      "kuota": "BUSD",
+      "nama": "ETCBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "ETCUSDT",
+      "kuota": "USDT",
+      "nama": "ETCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 39,
+      "dasar": "ETHBTC",
+      "kuota": "BTC",
+      "nama": "ETHBTC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 31,
+      "dasar": "ETHBUSD",
+      "kuota": "BUSD",
+      "nama": "ETHBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 26,
+      "dasar": "ETHFIUSDC",
+      "kuota": "USDC",
+      "nama": "ETHFIUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "ETHFIUSDT",
+      "kuota": "USDT",
+      "nama": "ETHFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "ETHUSDC",
+      "kuota": "USDC",
+      "nama": "ETHUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "ETHUSDT",
+      "kuota": "USDT",
+      "nama": "ETHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 2,
+      "dasar": "ETHUSDT_210326",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_210326",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_210625",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_210625",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_210924",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_210924",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_211231",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_211231",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_220325",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_220325",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_220624",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_220624",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_220930",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_220930",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_221230",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_221230",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_230331",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_230331",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_230630",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_230630",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "ETHUSDT_230929",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_230929",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "ETHUSDT_231229",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_231229",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_240329",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_240329",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "ETHUSDT_240628",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_240628",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_240927",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_240927",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_241227",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_241227",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_250328",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_250328",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_250627",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_250627",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_250926",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_250926",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "ETHUSDT_251226",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_251226",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "ETHUSDT_260327",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_260327",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 7,
+      "dasar": "ETHUSDT_260626",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_260626",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 4,
+      "dasar": "ETHUSDT_260925",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_260925",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "ETHUSDT_261225",
+      "kuota": "TAK_DIKENAL",
+      "nama": "ETHUSDT_261225",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "ETHWUSDT",
+      "kuota": "USDT",
+      "nama": "ETHWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "EULUSDT",
+      "kuota": "USDT",
+      "nama": "EULUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "EVAAUSDT",
+      "kuota": "USDT",
+      "nama": "EVAAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "EWJUSDT",
+      "kuota": "USDT",
+      "nama": "EWJUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "EWTUSDT",
+      "kuota": "USDT",
+      "nama": "EWTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "EWYUSDT",
+      "kuota": "USDT",
+      "nama": "EWYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "EWZUSDT",
+      "kuota": "USDT",
+      "nama": "EWZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "FARTCOINUSDT",
+      "kuota": "USDT",
+      "nama": "FARTCOINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 42,
+      "dasar": "FETUSDT",
+      "kuota": "USDT",
+      "nama": "FETUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "FFUSDT",
+      "kuota": "USDT",
+      "nama": "FFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "FHEUSDT",
+      "kuota": "USDT",
+      "nama": "FHEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "FIDAUSDT",
+      "kuota": "USDT",
+      "nama": "FIDAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "FIGHTUSDT",
+      "kuota": "USDT",
+      "nama": "FIGHTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "FILBUSD",
+      "kuota": "BUSD",
+      "nama": "FILBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "FILUSDC",
+      "kuota": "USDC",
+      "nama": "FILUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "FILUSDT",
+      "kuota": "USDT",
+      "nama": "FILUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "FIOUSDT",
+      "kuota": "USDT",
+      "nama": "FIOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "FISUSDT",
+      "kuota": "USDT",
+      "nama": "FISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "FLMUSDT",
+      "kuota": "USDT",
+      "nama": "FLMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "FLNCUSDT",
+      "kuota": "USDT",
+      "nama": "FLNCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "FLOCKUSDT",
+      "kuota": "USDT",
+      "nama": "FLOCKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 53,
+      "dasar": "FLOWUSDT",
+      "kuota": "USDT",
+      "nama": "FLOWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "FLUIDUSDT",
+      "kuota": "USDT",
+      "nama": "FLUIDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "FLUXUSDT",
+      "kuota": "USDT",
+      "nama": "FLUXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "FOGOUSDT",
+      "kuota": "USDT",
+      "nama": "FOGOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "FOLKSUSDT",
+      "kuota": "USDT",
+      "nama": "FOLKSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "FOOTBALLUSDT",
+      "kuota": "USDT",
+      "nama": "FOOTBALLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "FORMUSDT",
+      "kuota": "USDT",
+      "nama": "FORMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "FORTHUSDT",
+      "kuota": "USDT",
+      "nama": "FORTHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "FRAXUSDT",
+      "kuota": "USDT",
+      "nama": "FRAXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "FRONTUSDT",
+      "kuota": "USDT",
+      "nama": "FRONTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "FTMBUSD",
+      "kuota": "BUSD",
+      "nama": "FTMBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "FTMUSDT",
+      "kuota": "USDT",
+      "nama": "FTMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "FTTBUSD",
+      "kuota": "BUSD",
+      "nama": "FTTBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 51,
+      "dasar": "FTTUSDT",
+      "kuota": "USDT",
+      "nama": "FTTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "FUNUSDT",
+      "kuota": "USDT",
+      "nama": "FUNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "FUSDT",
+      "kuota": "USDT",
+      "nama": "FUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 42,
+      "dasar": "FXSUSDT",
+      "kuota": "USDT",
+      "nama": "FXSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "GALABUSD",
+      "kuota": "BUSD",
+      "nama": "GALABUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 58,
+      "dasar": "GALAUSDT",
+      "kuota": "USDT",
+      "nama": "GALAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "GALBUSD",
+      "kuota": "BUSD",
+      "nama": "GALBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "GALUSDT",
+      "kuota": "USDT",
+      "nama": "GALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "GASUSDT",
+      "kuota": "USDT",
+      "nama": "GASUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "GENIUSUSDT",
+      "kuota": "USDT",
+      "nama": "GENIUSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "GHSTUSDT",
+      "kuota": "USDT",
+      "nama": "GHSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "GIGGLEUSDT",
+      "kuota": "USDT",
+      "nama": "GIGGLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 34,
+      "dasar": "GLMRUSDT",
+      "kuota": "USDT",
+      "nama": "GLMRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "GLMUSDT",
+      "kuota": "USDT",
+      "nama": "GLMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "GLWUSDT",
+      "kuota": "USDT",
+      "nama": "GLWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "GMEUSDT",
+      "kuota": "USDT",
+      "nama": "GMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "GMTBUSD",
+      "kuota": "BUSD",
+      "nama": "GMTBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 52,
+      "dasar": "GMTUSDT",
+      "kuota": "USDT",
+      "nama": "GMTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "GMXUSDT",
+      "kuota": "USDT",
+      "nama": "GMXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "GOATUSDT",
+      "kuota": "USDT",
+      "nama": "GOATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "GOOGLUSDT",
+      "kuota": "USDT",
+      "nama": "GOOGLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "GPSUSDT",
+      "kuota": "USDT",
+      "nama": "GPSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "GRASSUSDT",
+      "kuota": "USDT",
+      "nama": "GRASSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "GRIFFAINUSDT",
+      "kuota": "USDT",
+      "nama": "GRIFFAINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 67,
+      "dasar": "GRTUSDT",
+      "kuota": "USDT",
+      "nama": "GRTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 61,
+      "dasar": "GTCUSDT",
+      "kuota": "USDT",
+      "nama": "GTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "GUAUSDT",
+      "kuota": "USDT",
+      "nama": "GUAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "GUNUSDT",
+      "kuota": "USDT",
+      "nama": "GUNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "GUSDT",
+      "kuota": "USDT",
+      "nama": "GUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "GWEIUSDT",
+      "kuota": "USDT",
+      "nama": "GWEIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "HAEDALUSDT",
+      "kuota": "USDT",
+      "nama": "HAEDALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "HANAUSDT",
+      "kuota": "USDT",
+      "nama": "HANAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "HBARUSDC",
+      "kuota": "USDC",
+      "nama": "HBARUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "HBARUSDT",
+      "kuota": "USDT",
+      "nama": "HBARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "HDUSDT",
+      "kuota": "USDT",
+      "nama": "HDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "HEIUSDT",
+      "kuota": "USDT",
+      "nama": "HEIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "HEMIUSDT",
+      "kuota": "USDT",
+      "nama": "HEMIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 39,
+      "dasar": "HFTUSDT",
+      "kuota": "USDT",
+      "nama": "HFTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 34,
+      "dasar": "HIFIUSDT",
+      "kuota": "USDT",
+      "nama": "HIFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "HIGHUSDT",
+      "kuota": "USDT",
+      "nama": "HIGHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "HIMSUSDT",
+      "kuota": "USDT",
+      "nama": "HIMSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "HIPPOUSDT",
+      "kuota": "USDT",
+      "nama": "HIPPOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "HIVEUSDT",
+      "kuota": "USDT",
+      "nama": "HIVEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "HMSTRUSDT",
+      "kuota": "USDT",
+      "nama": "HMSTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 45,
+      "dasar": "HNTUSDT",
+      "kuota": "USDT",
+      "nama": "HNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "HOLOUSDT",
+      "kuota": "USDT",
+      "nama": "HOLOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "HOMEUSDT",
+      "kuota": "USDT",
+      "nama": "HOMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "HOODUSDT",
+      "kuota": "USDT",
+      "nama": "HOODUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 42,
+      "dasar": "HOOKUSDT",
+      "kuota": "USDT",
+      "nama": "HOOKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "HOTUSDT",
+      "kuota": "USDT",
+      "nama": "HOTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "HPEUSDT",
+      "kuota": "USDT",
+      "nama": "HPEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "HUMAUSDT",
+      "kuota": "USDT",
+      "nama": "HUMAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "HUSDT",
+      "kuota": "USDT",
+      "nama": "HUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "HYPERUSDT",
+      "kuota": "USDT",
+      "nama": "HYPERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "HYPEUSDT",
+      "kuota": "USDT",
+      "nama": "HYPEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "HYUNDAIUSDT",
+      "kuota": "USDT",
+      "nama": "HYUNDAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "IBMUSDT",
+      "kuota": "USDT",
+      "nama": "IBMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "ICNTUSDT",
+      "kuota": "USDT",
+      "nama": "ICNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 10,
+      "dasar": "ICPBUSD",
+      "kuota": "BUSD",
+      "nama": "ICPBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 62,
+      "dasar": "ICPUSDT",
+      "kuota": "USDT",
+      "nama": "ICPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 9,
+      "dasar": "ICPUSDT",
+      "kuota": "USDT",
+      "nama": "ICPUSDT_SETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "ICXUSDT",
+      "kuota": "USDT",
+      "nama": "ICXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "IDEXUSDT",
+      "kuota": "USDT",
+      "nama": "IDEXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "IDOLUSDT",
+      "kuota": "USDT",
+      "nama": "IDOLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "IDUSDT",
+      "kuota": "USDT",
+      "nama": "IDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "ILVUSDT",
+      "kuota": "USDT",
+      "nama": "ILVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 53,
+      "dasar": "IMXUSDT",
+      "kuota": "USDT",
+      "nama": "IMXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "INITUSDT",
+      "kuota": "USDT",
+      "nama": "INITUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 47,
+      "dasar": "INJUSDT",
+      "kuota": "USDT",
+      "nama": "INJUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "INTCUSDT",
+      "kuota": "USDT",
+      "nama": "INTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "INUSDT",
+      "kuota": "USDT",
+      "nama": "INUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "INXUSDT",
+      "kuota": "USDT",
+      "nama": "INXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "IOSTUSDT",
+      "kuota": "USDT",
+      "nama": "IOSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "IOTAUSDT",
+      "kuota": "USDT",
+      "nama": "IOTAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 59,
+      "dasar": "IOTXUSDT",
+      "kuota": "USDT",
+      "nama": "IOTXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 25,
+      "dasar": "IOUSDT",
+      "kuota": "USDT",
+      "nama": "IOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "IPUSDC",
+      "kuota": "USDC",
+      "nama": "IPUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "IPUSDT",
+      "kuota": "USDT",
+      "nama": "IPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "IRENUSDT",
+      "kuota": "USDT",
+      "nama": "IRENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "IRUSDT",
+      "kuota": "USDT",
+      "nama": "IRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "IRYSUSDT",
+      "kuota": "USDT",
+      "nama": "IRYSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "IWMUSDT",
+      "kuota": "USDT",
+      "nama": "IWMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 51,
+      "dasar": "JASMYUSDT",
+      "kuota": "USDT",
+      "nama": "JASMYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "JCTUSDT",
+      "kuota": "USDT",
+      "nama": "JCTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "JELLYJELLYUSDT",
+      "kuota": "USDT",
+      "nama": "JELLYJELLYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "JOEUSDT",
+      "kuota": "USDT",
+      "nama": "JOEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "JPMUSDT",
+      "kuota": "USDT",
+      "nama": "JPMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "JSTUSDT",
+      "kuota": "USDT",
+      "nama": "JSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "JTOUSDT",
+      "kuota": "USDT",
+      "nama": "JTOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "JUPUSDT",
+      "kuota": "USDT",
+      "nama": "JUPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "KAIAUSDT",
+      "kuota": "USDT",
+      "nama": "KAIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "KAITOUSDC",
+      "kuota": "USDC",
+      "nama": "KAITOUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "KAITOUSDT",
+      "kuota": "USDT",
+      "nama": "KAITOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "KASUSDT",
+      "kuota": "USDT",
+      "nama": "KASUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "KATUSDT",
+      "kuota": "USDT",
+      "nama": "KATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 72,
+      "dasar": "KAVAUSDT",
+      "kuota": "USDT",
+      "nama": "KAVAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "KDAUSDT",
+      "kuota": "USDT",
+      "nama": "KDAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "KEEPUSDT",
+      "kuota": "USDT",
+      "nama": "KEEPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "KERNELUSDT",
+      "kuota": "USDT",
+      "nama": "KERNELUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "KEYUSDT",
+      "kuota": "USDT",
+      "nama": "KEYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "KGENUSDT",
+      "kuota": "USDT",
+      "nama": "KGENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "KITEUSDT",
+      "kuota": "USDT",
+      "nama": "KITEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "KLACUSDT",
+      "kuota": "USDT",
+      "nama": "KLACUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 57,
+      "dasar": "KLAYUSDT",
+      "kuota": "USDT",
+      "nama": "KLAYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "KMNOUSDT",
+      "kuota": "USDT",
+      "nama": "KMNOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 73,
+      "dasar": "KNCUSDT",
+      "kuota": "USDT",
+      "nama": "KNCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "KOMAUSDT",
+      "kuota": "USDT",
+      "nama": "KOMAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "KORUUSDT",
+      "kuota": "USDT",
+      "nama": "KORUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "KSMUSDT",
+      "kuota": "USDT",
+      "nama": "KSMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "LABUSDT",
+      "kuota": "USDT",
+      "nama": "LABUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "LAUSDT",
+      "kuota": "USDT",
+      "nama": "LAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "LAYERUSDT",
+      "kuota": "USDT",
+      "nama": "LAYERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "LDOBUSD",
+      "kuota": "BUSD",
+      "nama": "LDOBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 46,
+      "dasar": "LDOUSDT",
+      "kuota": "USDT",
+      "nama": "LDOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "LENDUSDT",
+      "kuota": "USDT",
+      "nama": "LENDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "LEVERBUSD",
+      "kuota": "BUSD",
+      "nama": "LEVERBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "LEVERUSDT",
+      "kuota": "USDT",
+      "nama": "LEVERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "LIGHTUSDT",
+      "kuota": "USDT",
+      "nama": "LIGHTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "LINAUSDT",
+      "kuota": "USDT",
+      "nama": "LINAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "LINEAUSDT",
+      "kuota": "USDT",
+      "nama": "LINEAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 19,
+      "dasar": "LINKBUSD",
+      "kuota": "BUSD",
+      "nama": "LINKBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "LINKUSDC",
+      "kuota": "USDC",
+      "nama": "LINKUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "LINKUSDT",
+      "kuota": "USDT",
+      "nama": "LINKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 25,
+      "dasar": "LISTAUSDT",
+      "kuota": "USDT",
+      "nama": "LISTAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "LITEUSDT",
+      "kuota": "USDT",
+      "nama": "LITEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "LITUSDT",
+      "kuota": "USDT",
+      "nama": "LITUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "LITUSDT",
+      "kuota": "USDT",
+      "nama": "LITUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "LLYUSDT",
+      "kuota": "USDT",
+      "nama": "LLYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "LOKAUSDT",
+      "kuota": "USDT",
+      "nama": "LOKAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "LOOMUSDT",
+      "kuota": "USDT",
+      "nama": "LOOMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 56,
+      "dasar": "LPTUSDT",
+      "kuota": "USDT",
+      "nama": "LPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "LQTYUSDT",
+      "kuota": "USDT",
+      "nama": "LQTYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "LRCUSDT",
+      "kuota": "USDT",
+      "nama": "LRCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "LRCXUSDT",
+      "kuota": "USDT",
+      "nama": "LRCXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "LSKUSDT",
+      "kuota": "USDT",
+      "nama": "LSKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "LTCBUSD",
+      "kuota": "BUSD",
+      "nama": "LTCBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "LTCUSDC",
+      "kuota": "USDC",
+      "nama": "LTCUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "LTCUSDT",
+      "kuota": "USDT",
+      "nama": "LTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "LUMIAUSDT",
+      "kuota": "USDT",
+      "nama": "LUMIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 10,
+      "dasar": "LUNA2BUSD",
+      "kuota": "BUSD",
+      "nama": "LUNA2BUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 46,
+      "dasar": "LUNA2USDT",
+      "kuota": "USDT",
+      "nama": "LUNA2USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "LUNABUSD",
+      "kuota": "BUSD",
+      "nama": "LUNABUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "LUNAUSDT",
+      "kuota": "USDT",
+      "nama": "LUNAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "LYNUSDT",
+      "kuota": "USDT",
+      "nama": "LYNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 42,
+      "dasar": "MAGICUSDT",
+      "kuota": "USDT",
+      "nama": "MAGICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "MAGMAUSDT",
+      "kuota": "USDT",
+      "nama": "MAGMAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "MANAUSDT",
+      "kuota": "USDT",
+      "nama": "MANAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "MANTAUSDT",
+      "kuota": "USDT",
+      "nama": "MANTAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "MANTRAUSDT",
+      "kuota": "USDT",
+      "nama": "MANTRAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 59,
+      "dasar": "MASKUSDT",
+      "kuota": "USDT",
+      "nama": "MASKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "MATICBUSD",
+      "kuota": "BUSD",
+      "nama": "MATICBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 6,
+      "dasar": "MATICUSDC",
+      "kuota": "USDC",
+      "nama": "MATICUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 48,
+      "dasar": "MATICUSDT",
+      "kuota": "USDT",
+      "nama": "MATICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "MAVIAUSDT",
+      "kuota": "USDT",
+      "nama": "MAVIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "MAVIAUSDT",
+      "kuota": "USDT",
+      "nama": "MAVIAUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 37,
+      "dasar": "MAVUSDT",
+      "kuota": "USDT",
+      "nama": "MAVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "MBLUSDT",
+      "kuota": "USDT",
+      "nama": "MBLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "MBOXUSDT",
+      "kuota": "USDT",
+      "nama": "MBOXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 37,
+      "dasar": "MDTUSDT",
+      "kuota": "USDT",
+      "nama": "MDTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "MEGAUSDT",
+      "kuota": "USDT",
+      "nama": "MEGAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "MELANIAUSDT",
+      "kuota": "USDT",
+      "nama": "MELANIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "MEMEFIUSDT",
+      "kuota": "USDT",
+      "nama": "MEMEFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "MEMEUSDT",
+      "kuota": "USDT",
+      "nama": "MEMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "MERLUSDT",
+      "kuota": "USDT",
+      "nama": "MERLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "METAUSDT",
+      "kuota": "USDT",
+      "nama": "METAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "METISUSDT",
+      "kuota": "USDT",
+      "nama": "METISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "METUSDT",
+      "kuota": "USDT",
+      "nama": "METUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "MEUSDT",
+      "kuota": "USDT",
+      "nama": "MEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 25,
+      "dasar": "MEWUSDT",
+      "kuota": "USDT",
+      "nama": "MEWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "MILKUSDT",
+      "kuota": "USDT",
+      "nama": "MILKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "MINAUSDT",
+      "kuota": "USDT",
+      "nama": "MINAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "MINAUSDT",
+      "kuota": "USDT",
+      "nama": "MINAUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "MIRAUSDT",
+      "kuota": "USDT",
+      "nama": "MIRAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "MITOUSDT",
+      "kuota": "USDT",
+      "nama": "MITOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "MKRUSDT",
+      "kuota": "USDT",
+      "nama": "MKRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "MLNUSDT",
+      "kuota": "USDT",
+      "nama": "MLNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "MMTUSDT",
+      "kuota": "USDT",
+      "nama": "MMTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "MOCAUSDT",
+      "kuota": "USDT",
+      "nama": "MOCAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "MONUSDT",
+      "kuota": "USDT",
+      "nama": "MONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "MOODENGUSDT",
+      "kuota": "USDT",
+      "nama": "MOODENGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "MORPHOUSDT",
+      "kuota": "USDT",
+      "nama": "MORPHOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "MOVEUSDT",
+      "kuota": "USDT",
+      "nama": "MOVEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "MOVRUSDT",
+      "kuota": "USDT",
+      "nama": "MOVRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "MRVLUSDT",
+      "kuota": "USDT",
+      "nama": "MRVLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "MSFTUSDT",
+      "kuota": "USDT",
+      "nama": "MSFTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "MSTRUSDT",
+      "kuota": "USDT",
+      "nama": "MSTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "MTLUSDT",
+      "kuota": "USDT",
+      "nama": "MTLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "MUBARAKUSDT",
+      "kuota": "USDT",
+      "nama": "MUBARAKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "MUSDT",
+      "kuota": "USDT",
+      "nama": "MUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "MUUSDT",
+      "kuota": "USDT",
+      "nama": "MUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "MVLLUSDT",
+      "kuota": "USDT",
+      "nama": "MVLLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "MYROUSDT",
+      "kuota": "USDT",
+      "nama": "MYROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "MYXUSDT",
+      "kuota": "USDT",
+      "nama": "MYXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "NAORISUSDT",
+      "kuota": "USDT",
+      "nama": "NAORISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "NATGASUSDT",
+      "kuota": "USDT",
+      "nama": "NATGASUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "NBISUSDT",
+      "kuota": "USDT",
+      "nama": "NBISUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "NEARBUSD",
+      "kuota": "BUSD",
+      "nama": "NEARBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "NEARUSDC",
+      "kuota": "USDC",
+      "nama": "NEARUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "NEARUSDT",
+      "kuota": "USDT",
+      "nama": "NEARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "NEIROETHUSDT",
+      "kuota": "USDT",
+      "nama": "NEIROETHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "NEIROUSDT",
+      "kuota": "USDT",
+      "nama": "NEIROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "NEOUSDC",
+      "kuota": "USDC",
+      "nama": "NEOUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "NEOUSDT",
+      "kuota": "USDT",
+      "nama": "NEOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "NEWTUSDT",
+      "kuota": "USDT",
+      "nama": "NEWTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "NFLXUSDT",
+      "kuota": "USDT",
+      "nama": "NFLXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 31,
+      "dasar": "NFPUSDT",
+      "kuota": "USDT",
+      "nama": "NFPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "NIGHTUSDT",
+      "kuota": "USDT",
+      "nama": "NIGHTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "NILUSDT",
+      "kuota": "USDT",
+      "nama": "NILUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 63,
+      "dasar": "NKNUSDT",
+      "kuota": "USDT",
+      "nama": "NKNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 37,
+      "dasar": "NMRUSDT",
+      "kuota": "USDT",
+      "nama": "NMRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "NOKUSDT",
+      "kuota": "USDT",
+      "nama": "NOKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "NOMUSDT",
+      "kuota": "USDT",
+      "nama": "NOMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 26,
+      "dasar": "NOTUSDT",
+      "kuota": "USDT",
+      "nama": "NOTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "NOWUSDT",
+      "kuota": "USDT",
+      "nama": "NOWUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "NTRNUSDT",
+      "kuota": "USDT",
+      "nama": "NTRNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "NULSUSDT",
+      "kuota": "USDT",
+      "nama": "NULSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "NUUSDT",
+      "kuota": "USDT",
+      "nama": "NUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "NVDAUSDT",
+      "kuota": "USDT",
+      "nama": "NVDAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "NVOUSDT",
+      "kuota": "USDT",
+      "nama": "NVOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "NXPCUSDT",
+      "kuota": "USDT",
+      "nama": "NXPCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "OBOLUSDT",
+      "kuota": "USDT",
+      "nama": "OBOLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "OCEANUSDT",
+      "kuota": "USDT",
+      "nama": "OCEANUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 63,
+      "dasar": "OGNUSDT",
+      "kuota": "USDT",
+      "nama": "OGNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "OGUSDT",
+      "kuota": "USDT",
+      "nama": "OGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "OLUSDT",
+      "kuota": "USDT",
+      "nama": "OLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 72,
+      "dasar": "OMGUSDT",
+      "kuota": "USDT",
+      "nama": "OMGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "OMNIUSDT",
+      "kuota": "USDT",
+      "nama": "OMNIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "OMUSDT",
+      "kuota": "USDT",
+      "nama": "OMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "ONDOUSDT",
+      "kuota": "USDT",
+      "nama": "ONDOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ONDSUSDT",
+      "kuota": "USDT",
+      "nama": "ONDSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "ONEUSDT",
+      "kuota": "USDT",
+      "nama": "ONEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "ONGUSDT",
+      "kuota": "USDT",
+      "nama": "ONGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "ONTUSDT",
+      "kuota": "USDT",
+      "nama": "ONTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "ONUSDT",
+      "kuota": "USDT",
+      "nama": "ONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "OPENAIUSDT",
+      "kuota": "USDT",
+      "nama": "OPENAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "OPENUSDT",
+      "kuota": "USDT",
+      "nama": "OPENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "OPGUSDT",
+      "kuota": "USDT",
+      "nama": "OPGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "OPNUSDT",
+      "kuota": "USDT",
+      "nama": "OPNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 49,
+      "dasar": "OPUSDT",
+      "kuota": "USDT",
+      "nama": "OPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "ORBSUSDT",
+      "kuota": "USDT",
+      "nama": "ORBSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "ORCAUSDT",
+      "kuota": "USDT",
+      "nama": "ORCAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "ORCLUSDT",
+      "kuota": "USDT",
+      "nama": "ORCLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "ORDERUSDT",
+      "kuota": "USDT",
+      "nama": "ORDERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "ORDIUSDC",
+      "kuota": "USDC",
+      "nama": "ORDIUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "ORDIUSDT",
+      "kuota": "USDT",
+      "nama": "ORDIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "OUSDT",
+      "kuota": "USDT",
+      "nama": "OUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "OXTUSDT",
+      "kuota": "USDT",
+      "nama": "OXTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "PARTIUSDT",
+      "kuota": "USDT",
+      "nama": "PARTIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "PAXGUSDT",
+      "kuota": "USDT",
+      "nama": "PAXGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "PAYPUSDT",
+      "kuota": "USDT",
+      "nama": "PAYPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 36,
+      "dasar": "PENDLEUSDT",
+      "kuota": "USDT",
+      "nama": "PENDLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 12,
+      "dasar": "PENGUUSDC",
+      "kuota": "USDC",
+      "nama": "PENGUUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "PENGUUSDT",
+      "kuota": "USDT",
+      "nama": "PENGUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 55,
+      "dasar": "PEOPLEUSDT",
+      "kuota": "USDT",
+      "nama": "PEOPLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "PERPUSDT",
+      "kuota": "USDT",
+      "nama": "PERPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "PHAROSUSDT",
+      "kuota": "USDT",
+      "nama": "PHAROSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "PHAUSDT",
+      "kuota": "USDT",
+      "nama": "PHAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "PHBBUSD",
+      "kuota": "BUSD",
+      "nama": "PHBBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "PHBUSDT",
+      "kuota": "USDT",
+      "nama": "PHBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "PIEVERSEUSDT",
+      "kuota": "USDT",
+      "nama": "PIEVERSEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "PIPPINUSDT",
+      "kuota": "USDT",
+      "nama": "PIPPINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "PIXELUSDT",
+      "kuota": "USDT",
+      "nama": "PIXELUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "PLAYUSDT",
+      "kuota": "USDT",
+      "nama": "PLAYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "PLTRUSDT",
+      "kuota": "USDT",
+      "nama": "PLTRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "PLUMEUSDT",
+      "kuota": "USDT",
+      "nama": "PLUMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "PNUTUSDC",
+      "kuota": "USDC",
+      "nama": "PNUTUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "PNUTUSDT",
+      "kuota": "USDT",
+      "nama": "PNUTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "POLUSDT",
+      "kuota": "USDT",
+      "nama": "POLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "POLYXUSDT",
+      "kuota": "USDT",
+      "nama": "POLYXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "PONKEUSDT",
+      "kuota": "USDT",
+      "nama": "PONKEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "POPCATUSDT",
+      "kuota": "USDT",
+      "nama": "POPCATUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "PORT3USDT",
+      "kuota": "USDT",
+      "nama": "PORT3USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "PORTALUSDT",
+      "kuota": "USDT",
+      "nama": "PORTALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "POWERUSDT",
+      "kuota": "USDT",
+      "nama": "POWERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "POWRUSDT",
+      "kuota": "USDT",
+      "nama": "POWRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "PRLUSDT",
+      "kuota": "USDT",
+      "nama": "PRLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "PROMPTUSDT",
+      "kuota": "USDT",
+      "nama": "PROMPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "PROMUSDT",
+      "kuota": "USDT",
+      "nama": "PROMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "PROVEUSDT",
+      "kuota": "USDT",
+      "nama": "PROVEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "PTBUSDT",
+      "kuota": "USDT",
+      "nama": "PTBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "PUFFERUSDT",
+      "kuota": "USDT",
+      "nama": "PUFFERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "PUMPBTCUSDT",
+      "kuota": "USDT",
+      "nama": "PUMPBTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "PUMPUSDT",
+      "kuota": "USDT",
+      "nama": "PUMPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "PUMPUSDT",
+      "kuota": "USDT",
+      "nama": "PUMPUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "PUNDIXUSDT",
+      "kuota": "USDT",
+      "nama": "PUNDIXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "PYTHUSDT",
+      "kuota": "USDT",
+      "nama": "PYTHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "QCOMUSDT",
+      "kuota": "USDT",
+      "nama": "QCOMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 45,
+      "dasar": "QNTUSDT",
+      "kuota": "USDT",
+      "nama": "QNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "QNTXUSDT",
+      "kuota": "USDT",
+      "nama": "QNTXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "QQQUSDT",
+      "kuota": "USDT",
+      "nama": "QQQUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "QTUMUSDT",
+      "kuota": "USDT",
+      "nama": "QTUMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "QUICKUSDT",
+      "kuota": "USDT",
+      "nama": "QUICKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "QUSDT",
+      "kuota": "USDT",
+      "nama": "QUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "RADUSDT",
+      "kuota": "USDT",
+      "nama": "RADUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "RAREUSDT",
+      "kuota": "USDT",
+      "nama": "RAREUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "RAVEUSDT",
+      "kuota": "USDT",
+      "nama": "RAVEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "RAYSOLUSDT",
+      "kuota": "USDT",
+      "nama": "RAYSOLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 59,
+      "dasar": "RAYUSDT",
+      "kuota": "USDT",
+      "nama": "RAYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 39,
+      "dasar": "RDNTUSDT",
+      "kuota": "USDT",
+      "nama": "RDNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "RECALLUSDT",
+      "kuota": "USDT",
+      "nama": "RECALLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "REDUSDT",
+      "kuota": "USDT",
+      "nama": "REDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "REEFUSDT",
+      "kuota": "USDT",
+      "nama": "REEFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "REIUSDT",
+      "kuota": "USDT",
+      "nama": "REIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 24,
+      "dasar": "RENDERUSDT",
+      "kuota": "USDT",
+      "nama": "RENDERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "RENUSDT",
+      "kuota": "USDT",
+      "nama": "RENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "RESOLVUSDT",
+      "kuota": "USDT",
+      "nama": "RESOLVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "REUSDT",
+      "kuota": "USDT",
+      "nama": "REUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "REZUSDT",
+      "kuota": "USDT",
+      "nama": "REZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "RIFUSDT",
+      "kuota": "USDT",
+      "nama": "RIFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "RIVERUSDT",
+      "kuota": "USDT",
+      "nama": "RIVERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "RIVNUSDT",
+      "kuota": "USDT",
+      "nama": "RIVNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "RKLBUSDT",
+      "kuota": "USDT",
+      "nama": "RKLBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 72,
+      "dasar": "RLCUSDT",
+      "kuota": "USDT",
+      "nama": "RLCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "RLSUSDT",
+      "kuota": "USDT",
+      "nama": "RLSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "RNDRUSDT",
+      "kuota": "USDT",
+      "nama": "RNDRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "ROBOUSDT",
+      "kuota": "USDT",
+      "nama": "ROBOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "RONINUSDT",
+      "kuota": "USDT",
+      "nama": "RONINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 55,
+      "dasar": "ROSEUSDT",
+      "kuota": "USDT",
+      "nama": "ROSEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "RPLUSDT",
+      "kuota": "USDT",
+      "nama": "RPLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 69,
+      "dasar": "RSRUSDT",
+      "kuota": "USDT",
+      "nama": "RSRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "RUNEUSDT",
+      "kuota": "USDT",
+      "nama": "RUNEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "RVNUSDT",
+      "kuota": "USDT",
+      "nama": "RVNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "RVVUSDT",
+      "kuota": "USDT",
+      "nama": "RVVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "SAFEUSDT",
+      "kuota": "USDT",
+      "nama": "SAFEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "SAGAUSDT",
+      "kuota": "USDT",
+      "nama": "SAGAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "SAHARAUSDT",
+      "kuota": "USDT",
+      "nama": "SAHARAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SAMSUNGUSDT",
+      "kuota": "USDT",
+      "nama": "SAMSUNGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 18,
+      "dasar": "SANDBUSD",
+      "kuota": "BUSD",
+      "nama": "SANDBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 66,
+      "dasar": "SANDUSDT",
+      "kuota": "USDT",
+      "nama": "SANDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "SANTOSUSDT",
+      "kuota": "USDT",
+      "nama": "SANTOSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "SAPIENUSDT",
+      "kuota": "USDT",
+      "nama": "SAPIENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "SCRTUSDT",
+      "kuota": "USDT",
+      "nama": "SCRTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "SCRUSDT",
+      "kuota": "USDT",
+      "nama": "SCRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 63,
+      "dasar": "SCUSDT",
+      "kuota": "USDT",
+      "nama": "SCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "SEIUSDT",
+      "kuota": "USDT",
+      "nama": "SEIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "SENTUSDT",
+      "kuota": "USDT",
+      "nama": "SENTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "SFPUSDT",
+      "kuota": "USDT",
+      "nama": "SFPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "SHELLUSDT",
+      "kuota": "USDT",
+      "nama": "SHELLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "SIGNUSDT",
+      "kuota": "USDT",
+      "nama": "SIGNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "SIRENUSDT",
+      "kuota": "USDT",
+      "nama": "SIRENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "SKATEUSDT",
+      "kuota": "USDT",
+      "nama": "SKATEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SKHYNIXUSDT",
+      "kuota": "USDT",
+      "nama": "SKHYNIXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 67,
+      "dasar": "SKLUSDT",
+      "kuota": "USDT",
+      "nama": "SKLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "SKRUSDT",
+      "kuota": "USDT",
+      "nama": "SKRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "SKYAIUSDT",
+      "kuota": "USDT",
+      "nama": "SKYAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "SKYUSDT",
+      "kuota": "USDT",
+      "nama": "SKYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "SLERFUSDT",
+      "kuota": "USDT",
+      "nama": "SLERFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "SLPUSDT",
+      "kuota": "USDT",
+      "nama": "SLPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "SLPUSDT",
+      "kuota": "USDT",
+      "nama": "SLPUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SLXUSDT",
+      "kuota": "USDT",
+      "nama": "SLXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SMCIUSDT",
+      "kuota": "USDT",
+      "nama": "SMCIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "SNDKUSDT",
+      "kuota": "USDT",
+      "nama": "SNDKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "SNTUSDT",
+      "kuota": "USDT",
+      "nama": "SNTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "SNXUSDT",
+      "kuota": "USDT",
+      "nama": "SNXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "SOLBUSD",
+      "kuota": "BUSD",
+      "nama": "SOLBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "SOLUSDC",
+      "kuota": "USDC",
+      "nama": "SOLUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "SOLUSDT",
+      "kuota": "USDT",
+      "nama": "SOLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "SOLVUSDT",
+      "kuota": "USDT",
+      "nama": "SOLVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "SOMIUSDT",
+      "kuota": "USDT",
+      "nama": "SOMIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "SONICUSDT",
+      "kuota": "USDT",
+      "nama": "SONICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SONYUSDT",
+      "kuota": "USDT",
+      "nama": "SONYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "SOONUSDT",
+      "kuota": "USDT",
+      "nama": "SOONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "SOPHUSDT",
+      "kuota": "USDT",
+      "nama": "SOPHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "SOXLUSDT",
+      "kuota": "USDT",
+      "nama": "SOXLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "SPACEUSDT",
+      "kuota": "USDT",
+      "nama": "SPACEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "SPCXUSDT",
+      "kuota": "USDT",
+      "nama": "SPCXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 46,
+      "dasar": "SPELLUSDT",
+      "kuota": "USDT",
+      "nama": "SPELLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "SPKUSDT",
+      "kuota": "USDT",
+      "nama": "SPKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "SPORTFUNUSDT",
+      "kuota": "USDT",
+      "nama": "SPORTFUNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "SPXUSDT",
+      "kuota": "USDT",
+      "nama": "SPXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "SPYUSDT",
+      "kuota": "USDT",
+      "nama": "SPYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "SQDUSDT",
+      "kuota": "USDT",
+      "nama": "SQDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "SQQQUSDT",
+      "kuota": "USDT",
+      "nama": "SQQQUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 45,
+      "dasar": "SRMUSDT",
+      "kuota": "USDT",
+      "nama": "SRMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "SSVUSDT",
+      "kuota": "USDT",
+      "nama": "SSVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "STABLEUSDT",
+      "kuota": "USDT",
+      "nama": "STABLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "STARUSDT",
+      "kuota": "USDT",
+      "nama": "STARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "STBLUSDT",
+      "kuota": "USDT",
+      "nama": "STBLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "STEEMUSDT",
+      "kuota": "USDT",
+      "nama": "STEEMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 47,
+      "dasar": "STGUSDT",
+      "kuota": "USDT",
+      "nama": "STGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "STMXUSDT",
+      "kuota": "USDT",
+      "nama": "STMXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "STORJUSDT",
+      "kuota": "USDT",
+      "nama": "STORJUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "STOUSDT",
+      "kuota": "USDT",
+      "nama": "STOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "STPTUSDT",
+      "kuota": "USDT",
+      "nama": "STPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "STRAXUSDT",
+      "kuota": "USDT",
+      "nama": "STRAXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "STRKUSDT",
+      "kuota": "USDT",
+      "nama": "STRKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "STXUSDT",
+      "kuota": "USDT",
+      "nama": "STXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "STXXUSDT",
+      "kuota": "USDT",
+      "nama": "STXXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "SUIUSDC",
+      "kuota": "USDC",
+      "nama": "SUIUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "SUIUSDT",
+      "kuota": "USDT",
+      "nama": "SUIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "SUNUSDT",
+      "kuota": "USDT",
+      "nama": "SUNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "SUPERUSDT",
+      "kuota": "USDT",
+      "nama": "SUPERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "SUSDT",
+      "kuota": "USDT",
+      "nama": "SUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "SUSHIUSDT",
+      "kuota": "USDT",
+      "nama": "SUSHIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "SWARMSUSDT",
+      "kuota": "USDT",
+      "nama": "SWARMSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "SWELLUSDT",
+      "kuota": "USDT",
+      "nama": "SWELLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "SXPUSDT",
+      "kuota": "USDT",
+      "nama": "SXPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 1,
+      "dasar": "SXPUSDT",
+      "kuota": "USDT",
+      "nama": "SXPUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "SXTUSDT",
+      "kuota": "USDT",
+      "nama": "SXTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "SYNUSDT",
+      "kuota": "USDT",
+      "nama": "SYNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "SYRUPUSDT",
+      "kuota": "USDT",
+      "nama": "SYRUPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "SYSUSDT",
+      "kuota": "USDT",
+      "nama": "SYSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "TACUSDT",
+      "kuota": "USDT",
+      "nama": "TACUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "TAGUSDT",
+      "kuota": "USDT",
+      "nama": "TAGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 13,
+      "dasar": "TAIKOUSDT",
+      "kuota": "USDT",
+      "nama": "TAIKOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "TAKEUSDT",
+      "kuota": "USDT",
+      "nama": "TAKEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "TANSSIUSDT",
+      "kuota": "USDT",
+      "nama": "TANSSIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "TAOUSDT",
+      "kuota": "USDT",
+      "nama": "TAOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "TAUSDT",
+      "kuota": "USDT",
+      "nama": "TAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 74,
+      "dasar": "THETAUSDT",
+      "kuota": "USDT",
+      "nama": "THETAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "THEUSDT",
+      "kuota": "USDT",
+      "nama": "THEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "TIAUSDC",
+      "kuota": "USDC",
+      "nama": "TIAUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "TIAUSDT",
+      "kuota": "USDT",
+      "nama": "TIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 19,
+      "dasar": "TLMBUSD",
+      "kuota": "BUSD",
+      "nama": "TLMBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 60,
+      "dasar": "TLMUSDT",
+      "kuota": "USDT",
+      "nama": "TLMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 9,
+      "dasar": "TLMUSDT",
+      "kuota": "USDT",
+      "nama": "TLMUSDTSETTLED",
+      "settled": true
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "TNSRUSDT",
+      "kuota": "USDT",
+      "nama": "TNSRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "TOKENUSDT",
+      "kuota": "USDT",
+      "nama": "TOKENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 44,
+      "dasar": "TOMOUSDT",
+      "kuota": "USDT",
+      "nama": "TOMOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "TONUSDT",
+      "kuota": "USDT",
+      "nama": "TONUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "TOSHIUSDT",
+      "kuota": "USDT",
+      "nama": "TOSHIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "TOWNSUSDT",
+      "kuota": "USDT",
+      "nama": "TOWNSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "TQQQUSDT",
+      "kuota": "USDT",
+      "nama": "TQQQUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "TRADOORUSDT",
+      "kuota": "USDT",
+      "nama": "TRADOORUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "TRBUSDT",
+      "kuota": "USDT",
+      "nama": "TRBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "TREEUSDT",
+      "kuota": "USDT",
+      "nama": "TREEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 5,
+      "dasar": "TRIAUSDT",
+      "kuota": "USDT",
+      "nama": "TRIAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 21,
+      "dasar": "TROYUSDT",
+      "kuota": "USDT",
+      "nama": "TROYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 16,
+      "dasar": "TRUMPUSDC",
+      "kuota": "USDC",
+      "nama": "TRUMPUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "TRUMPUSDT",
+      "kuota": "USDT",
+      "nama": "TRUMPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "TRUSTUSDT",
+      "kuota": "USDT",
+      "nama": "TRUSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "TRUTHUSDT",
+      "kuota": "USDT",
+      "nama": "TRUTHUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "TRUUSDT",
+      "kuota": "USDT",
+      "nama": "TRUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 20,
+      "dasar": "TRXBUSD",
+      "kuota": "BUSD",
+      "nama": "TRXBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "TRXUSDT",
+      "kuota": "USDT",
+      "nama": "TRXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "TSLAUSDT",
+      "kuota": "USDT",
+      "nama": "TSLAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 3,
+      "dasar": "TSMUSDT",
+      "kuota": "USDT",
+      "nama": "TSMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 17,
+      "dasar": "TSTUSDT",
+      "kuota": "USDT",
+      "nama": "TSTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 26,
+      "dasar": "TURBOUSDT",
+      "kuota": "USDT",
+      "nama": "TURBOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "TURTLEUSDT",
+      "kuota": "USDT",
+      "nama": "TURTLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 41,
+      "dasar": "TUSDT",
+      "kuota": "USDT",
+      "nama": "TUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "TUTUSDT",
+      "kuota": "USDT",
+      "nama": "TUTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "TWTUSDT",
+      "kuota": "USDT",
+      "nama": "TWTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 8,
+      "dasar": "UAIUSDT",
+      "kuota": "USDT",
+      "nama": "UAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "UBERUSDT",
+      "kuota": "USDT",
+      "nama": "UBERUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "UBUSDT",
+      "kuota": "USDT",
+      "nama": "UBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 38,
+      "dasar": "UMAUSDT",
+      "kuota": "USDT",
+      "nama": "UMAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 65,
+      "dasar": "UNFIUSDT",
+      "kuota": "USDT",
+      "nama": "UNFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 17,
+      "dasar": "UNIBUSD",
+      "kuota": "BUSD",
+      "nama": "UNIBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 13,
+      "dasar": "UNIUSDC",
+      "kuota": "USDC",
+      "nama": "UNIUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 70,
+      "dasar": "UNIUSDT",
+      "kuota": "USDT",
+      "nama": "UNIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "URNMUSDT",
+      "kuota": "USDT",
+      "nama": "URNMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "USARUSDT",
+      "kuota": "USDT",
+      "nama": "USARUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 40,
+      "dasar": "USDCUSDT",
+      "kuota": "USDT",
+      "nama": "USDCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "USELESSUSDT",
+      "kuota": "USDT",
+      "nama": "USELESSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 32,
+      "dasar": "USTCUSDT",
+      "kuota": "USDT",
+      "nama": "USTCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "USUALUSDT",
+      "kuota": "USDT",
+      "nama": "USUALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "USUSDT",
+      "kuota": "USDT",
+      "nama": "USUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "UVXYUSDT",
+      "kuota": "USDT",
+      "nama": "UVXYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 22,
+      "dasar": "UXLINKUSDT",
+      "kuota": "USDT",
+      "nama": "UXLINKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "VANAUSDT",
+      "kuota": "USDT",
+      "nama": "VANAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 28,
+      "dasar": "VANRYUSDT",
+      "kuota": "USDT",
+      "nama": "VANRYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "VELODROMEUSDT",
+      "kuota": "USDT",
+      "nama": "VELODROMEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "VELVETUSDT",
+      "kuota": "USDT",
+      "nama": "VELVETUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "VETUSDT",
+      "kuota": "USDT",
+      "nama": "VETUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "VFYUSDT",
+      "kuota": "USDT",
+      "nama": "VFYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "VICUSDT",
+      "kuota": "USDT",
+      "nama": "VICUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "VIDTUSDT",
+      "kuota": "USDT",
+      "nama": "VIDTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "VINEUSDT",
+      "kuota": "USDT",
+      "nama": "VINEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 19,
+      "dasar": "VIRTUALUSDT",
+      "kuota": "USDT",
+      "nama": "VIRTUALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 23,
+      "dasar": "VOXELUSDT",
+      "kuota": "USDT",
+      "nama": "VOXELUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "VTHOUSDT",
+      "kuota": "USDT",
+      "nama": "VTHOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "VUSDT",
+      "kuota": "USDT",
+      "nama": "VUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "VVVUSDT",
+      "kuota": "USDT",
+      "nama": "VVVUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 16,
+      "dasar": "WALUSDT",
+      "kuota": "USDT",
+      "nama": "WALUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 19,
+      "dasar": "WAVESBUSD",
+      "kuota": "BUSD",
+      "nama": "WAVESBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "WAVESUSDT",
+      "kuota": "USDT",
+      "nama": "WAVESUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 33,
+      "dasar": "WAXPUSDT",
+      "kuota": "USDT",
+      "nama": "WAXPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "WCTUSDT",
+      "kuota": "USDT",
+      "nama": "WCTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "WDCUSDT",
+      "kuota": "USDT",
+      "nama": "WDCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "WETUSDT",
+      "kuota": "USDT",
+      "nama": "WETUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 27,
+      "dasar": "WIFUSDC",
+      "kuota": "USDC",
+      "nama": "WIFUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "WIFUSDT",
+      "kuota": "USDT",
+      "nama": "WIFUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 28,
+      "dasar": "WLDUSDC",
+      "kuota": "USDC",
+      "nama": "WLDUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 36,
+      "dasar": "WLDUSDT",
+      "kuota": "USDT",
+      "nama": "WLDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 10,
+      "dasar": "WLFIUSDC",
+      "kuota": "USDC",
+      "nama": "WLFIUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "WLFIUSDT",
+      "kuota": "USDT",
+      "nama": "WLFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 2,
+      "dasar": "WMTUSDT",
+      "kuota": "USDT",
+      "nama": "WMTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 51,
+      "dasar": "WOOUSDT",
+      "kuota": "USDT",
+      "nama": "WOOUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 27,
+      "dasar": "WUSDT",
+      "kuota": "USDT",
+      "nama": "WUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "XAGUSDT",
+      "kuota": "USDT",
+      "nama": "XAGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 30,
+      "dasar": "XAIUSDT",
+      "kuota": "USDT",
+      "nama": "XAIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "XANUSDT",
+      "kuota": "USDT",
+      "nama": "XANUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "XAUTUSDT",
+      "kuota": "USDT",
+      "nama": "XAUTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "XAUUSDT",
+      "kuota": "USDT",
+      "nama": "XAUUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 15,
+      "dasar": "XCNUSDT",
+      "kuota": "USDT",
+      "nama": "XCNUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 64,
+      "dasar": "XEMUSDT",
+      "kuota": "USDT",
+      "nama": "XEMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "XLEUSDT",
+      "kuota": "USDT",
+      "nama": "XLEUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "XLMUSDT",
+      "kuota": "USDT",
+      "nama": "XLMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "XMRUSDT",
+      "kuota": "USDT",
+      "nama": "XMRUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "XNYUSDT",
+      "kuota": "USDT",
+      "nama": "XNYUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "XPDUSDT",
+      "kuota": "USDT",
+      "nama": "XPDUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "XPINUSDT",
+      "kuota": "USDT",
+      "nama": "XPINUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "XPLUSDT",
+      "kuota": "USDT",
+      "nama": "XPLUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "XPTUSDT",
+      "kuota": "USDT",
+      "nama": "XPTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 29,
+      "dasar": "XRPBUSD",
+      "kuota": "BUSD",
+      "nama": "XRPBUSD",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 30,
+      "dasar": "XRPUSDC",
+      "kuota": "USDC",
+      "nama": "XRPUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 78,
+      "dasar": "XRPUSDT",
+      "kuota": "USDT",
+      "nama": "XRPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "XTZUSDT",
+      "kuota": "USDT",
+      "nama": "XTZUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 36,
+      "dasar": "XVGUSDT",
+      "kuota": "USDT",
+      "nama": "XVGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 39,
+      "dasar": "XVSUSDT",
+      "kuota": "USDT",
+      "nama": "XVSUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 11,
+      "dasar": "YALAUSDT",
+      "kuota": "USDT",
+      "nama": "YALAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "YBUSDT",
+      "kuota": "USDT",
+      "nama": "YBUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 20,
+      "dasar": "YFIIUSDT",
+      "kuota": "USDT",
+      "nama": "YFIIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 71,
+      "dasar": "YFIUSDT",
+      "kuota": "USDT",
+      "nama": "YFIUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 35,
+      "dasar": "YGGUSDT",
+      "kuota": "USDT",
+      "nama": "YGGUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "ZAMAUSDT",
+      "kuota": "USDT",
+      "nama": "ZAMAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "ZBTUSDT",
+      "kuota": "USDT",
+      "nama": "ZBTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": false,
+      "cacah_bulan": 8,
+      "dasar": "ZECUSDC",
+      "kuota": "USDC",
+      "nama": "ZECUSDC",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 77,
+      "dasar": "ZECUSDT",
+      "kuota": "USDT",
+      "nama": "ZECUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 68,
+      "dasar": "ZENUSDT",
+      "kuota": "USDT",
+      "nama": "ZENUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 18,
+      "dasar": "ZEREBROUSDT",
+      "kuota": "USDT",
+      "nama": "ZEREBROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ZESTUSDT",
+      "kuota": "USDT",
+      "nama": "ZESTUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 29,
+      "dasar": "ZETAUSDT",
+      "kuota": "USDT",
+      "nama": "ZETAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 73,
+      "dasar": "ZILUSDT",
+      "kuota": "USDT",
+      "nama": "ZILUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 10,
+      "dasar": "ZKCUSDT",
+      "kuota": "USDT",
+      "nama": "ZKCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 14,
+      "dasar": "ZKJUSDT",
+      "kuota": "USDT",
+      "nama": "ZKJUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 7,
+      "dasar": "ZKPUSDT",
+      "kuota": "USDT",
+      "nama": "ZKPUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 25,
+      "dasar": "ZKUSDT",
+      "kuota": "USDT",
+      "nama": "ZKUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 1,
+      "dasar": "ZMUSDT",
+      "kuota": "USDT",
+      "nama": "ZMUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "ZORAUSDT",
+      "kuota": "USDT",
+      "nama": "ZORAUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 12,
+      "dasar": "ZRCUSDT",
+      "kuota": "USDT",
+      "nama": "ZRCUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 25,
+      "dasar": "ZROUSDT",
+      "kuota": "USDT",
+      "nama": "ZROUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 73,
+      "dasar": "ZRXUSDT",
+      "kuota": "USDT",
+      "nama": "ZRXUSDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 9,
+      "dasar": "币安人生USDT",
+      "kuota": "USDT",
+      "nama": "币安人生USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 6,
+      "dasar": "我踏马来了USDT",
+      "kuota": "USDT",
+      "nama": "我踏马来了USDT",
+      "settled": false
+    },
+    {
+      "akhiran_usdt": true,
+      "cacah_bulan": 4,
+      "dasar": "龙虾USDT",
+      "kuota": "USDT",
+      "nama": "龙虾USDT",
+      "settled": false
+    }
+  ],
+  "bukan_bukti": false,
+  "catatan_batas": "kuota disimpulkan dari NAMA; nama adalah petunjuk kuat tetapi tetap petunjuk. Himpunan 'tidak berakhiran USDT' dan himpunan 'hanya-arsip' tidak boleh dianggap identik tanpa R-257 menang (aturan 62)",
+  "catatan_penggugur": "kendali BTCUSDT di bawah ambang, cacah nama bukan 937, jumlah bulan bukan 21.789, atau cacah nama SETTLED bukan 15 membatalkan seluruh angka (aturan 24, 50)",
+  "definisi": {
+    "kuota": "DUGAAN kuota dari akhiran nama sesudah tanda SETTLED dipisahkan; bukan kuota yang dibaca dari metadata bursa",
+    "pemegang_terbanyak": "DAFTAR seluruh kuota pemegang nilai ekstrem beserta medan seri (aturan 64, KC-26)",
+    "simbol_bulan": "bulan yang arsip TERBITKAN pada interval 1m, bukan bulan yang lolos gerbang kehidupan; dilarang dipakai sebagai penyebut kematian (aturan 30, 63)"
+  },
+  "nama_bukan_akhiran_usdt": [
+    "1000BONKUSDC",
+    "1000LUNCBUSD",
+    "1000PEPEUSDC",
+    "1000SHIBBUSD",
+    "1000SHIBUSDC",
+    "AAVEUSDC",
+    "ADABUSD",
+    "ADAUSDC",
+    "AERGOUSDTSETTLED",
+    "AGIXBUSD",
+    "AIAUSDTSETTLED",
+    "AMBBUSD",
+    "ANCBUSD",
+    "APEBUSD",
+    "APTBUSD",
+    "ARBUSDC",
+    "AUCTIONBUSD",
+    "AVAXBUSD",
+    "AVAXUSDC",
+    "BCHUSDC",
+    "BDXNUSDTSETTLED",
+    "BIOUSDC",
+    "BNBBUSD",
+    "BNBUSDC",
+    "BNXUSDTSETTLED",
+    "BOMEUSDC",
+    "BTCBUSD",
+    "BTCBUSD_210129",
+    "BTCBUSD_210226",
+    "BTCUSD1",
+    "BTCUSDC",
+    "BTCUSDT_210326",
+    "BTCUSDT_210625",
+    "BTCUSDT_210924",
+    "BTCUSDT_211231",
+    "BTCUSDT_220325",
+    "BTCUSDT_220624",
+    "BTCUSDT_220930",
+    "BTCUSDT_221230",
+    "BTCUSDT_230331",
+    "BTCUSDT_230630",
+    "BTCUSDT_230929",
+    "BTCUSDT_231229",
+    "BTCUSDT_240329",
+    "BTCUSDT_240628",
+    "BTCUSDT_240927",
+    "BTCUSDT_241227",
+    "BTCUSDT_250328",
+    "BTCUSDT_250627",
+    "BTCUSDT_250926",
+    "BTCUSDT_251226",
+    "BTCUSDT_260327",
+    "BTCUSDT_260626",
+    "BTCUSDT_260925",
+    "BTCUSDT_261225",
+    "CRVUSDC",
+    "CTKUSDTSETTLED",
+    "CVCUSDTSETTLED",
+    "CVXBUSD",
+    "CVXUSDTSETTLED",
+    "DODOBUSD",
+    "DOGEBUSD",
+    "DOGEUSDC",
+    "DOTBUSD",
+    "ENAUSDC",
+    "ETCBUSD",
+    "ETHBTC",
+    "ETHBUSD",
+    "ETHFIUSDC",
+    "ETHUSDC",
+    "ETHUSDT_210326",
+    "ETHUSDT_210625",
+    "ETHUSDT_210924",
+    "ETHUSDT_211231",
+    "ETHUSDT_220325",
+    "ETHUSDT_220624",
+    "ETHUSDT_220930",
+    "ETHUSDT_221230",
+    "ETHUSDT_230331",
+    "ETHUSDT_230630",
+    "ETHUSDT_230929",
+    "ETHUSDT_231229",
+    "ETHUSDT_240329",
+    "ETHUSDT_240628",
+    "ETHUSDT_240927",
+    "ETHUSDT_241227",
+    "ETHUSDT_250328",
+    "ETHUSDT_250627",
+    "ETHUSDT_250926",
+    "ETHUSDT_251226",
+    "ETHUSDT_260327",
+    "ETHUSDT_260626",
+    "ETHUSDT_260925",
+    "ETHUSDT_261225",
+    "FILBUSD",
+    "FILUSDC",
+    "FTMBUSD",
+    "FTTBUSD",
+    "GALABUSD",
+    "GALBUSD",
+    "GMTBUSD",
+    "HBARUSDC",
+    "ICPBUSD",
+    "ICPUSDT_SETTLED",
+    "IPUSDC",
+    "KAITOUSDC",
+    "LDOBUSD",
+    "LEVERBUSD",
+    "LINKBUSD",
+    "LINKUSDC",
+    "LITUSDTSETTLED",
+    "LTCBUSD",
+    "LTCUSDC",
+    "LUNA2BUSD",
+    "LUNABUSD",
+    "MATICBUSD",
+    "MATICUSDC",
+    "MAVIAUSDTSETTLED",
+    "MINAUSDTSETTLED",
+    "NEARBUSD",
+    "NEARUSDC",
+    "NEOUSDC",
+    "ORDIUSDC",
+    "PENGUUSDC",
+    "PHBBUSD",
+    "PNUTUSDC",
+    "PUMPUSDTSETTLED",
+    "SANDBUSD",
+    "SLPUSDTSETTLED",
+    "SOLBUSD",
+    "SOLUSDC",
+    "SUIUSDC",
+    "SXPUSDTSETTLED",
+    "TIAUSDC",
+    "TLMBUSD",
+    "TLMUSDTSETTLED",
+    "TRUMPUSDC",
+    "TRXBUSD",
+    "UNIBUSD",
+    "UNIUSDC",
+    "WAVESBUSD",
+    "WIFUSDC",
+    "WLDUSDC",
+    "WLFIUSDC",
+    "XRPBUSD",
+    "XRPUSDC",
+    "ZECUSDC"
+  ],
+  "per_kuota": {
+    "BTC": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 39
+    },
+    "BUSD": {
+      "cacah_nama": 41,
+      "cacah_settled": 0,
+      "jumlah_bulan": 812
+    },
+    "TAK_DIKENAL": {
+      "cacah_nama": 51,
+      "cacah_settled": 0,
+      "jumlah_bulan": 260
+    },
+    "USDC": {
+      "cacah_nama": 39,
+      "cacah_settled": 0,
+      "jumlah_bulan": 893
+    },
+    "USDT": {
+      "cacah_nama": 805,
+      "cacah_settled": 15,
+      "jumlah_bulan": 19785
+    }
+  },
+  "ringkasan": {
+    "cacah_busd": 41,
+    "cacah_busd_usdc": 80,
+    "cacah_kuota_terpakai": 5,
+    "cacah_nama_akhiran_usdt": 790,
+    "cacah_nama_arsip": 937,
+    "cacah_nama_bukan_akhiran_usdt": 147,
+    "cacah_nama_kuota_usdt": 805,
+    "cacah_nama_kuota_usdt_bukan_settled": 790,
+    "cacah_nama_settled": 15,
+    "cacah_nama_tak_dikenal": 51,
+    "cacah_usdc": 39,
+    "jumlah_bulan_arsip": 21789,
+    "jumlah_bulan_settled": 36,
+    "jumlah_bulan_usdt_bukan_settled": 19749,
+    "kendali": {
+      "ada": true,
+      "ambang": 60,
+      "cacah_bulan": 78,
+      "sah": true,
+      "simbol": "BTCUSDT"
+    },
+    "kendali_sah": true,
+    "r_249_menang": true,
+    "r_257_menang": false,
+    "r_258_menang": false,
+    "selisih_bulan_terhadap_penyebut": 163,
+    "selisih_bulan_terhadap_serapan": 151,
+    "terbanyak_bukan_usdt": {
+      "cacah_pemegang": 1,
+      "medan": "cacah_nama",
+      "nilai": 51,
+      "pemegang": [
+        "TAK_DIKENAL"
+      ],
+      "seri": false,
+      "terukur": true
+    }
+  },
+  "sidik_data": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
+  "sidik_kode": "4fee2824d5490f2f4a2bdce849a46b4dd0460fb16f3e83889a91c36e3f0f9625",
+  "sumber": [
+    "reports/semesta_bulan_1m.json"
+  ],
+  "terbanyak_bukan_usdt": {
+    "cacah_pemegang": 1,
+    "medan": "cacah_nama",
+    "nilai": 51,
+    "pemegang": [
+      "TAK_DIKENAL"
+    ],
+    "seri": false,
+    "terukur": true
+  },
+  "versi_semesta_kuota": 1,
+  "waktu_utc": "2026-07-29T13:08:15Z"
+}

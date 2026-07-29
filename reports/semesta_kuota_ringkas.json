@@ -1,0 +1,83 @@
+{
+  "bukan_bukti": false,
+  "per_kuota": {
+    "BTC": {
+      "cacah_nama": 1,
+      "cacah_settled": 0,
+      "jumlah_bulan": 39
+    },
+    "BUSD": {
+      "cacah_nama": 41,
+      "cacah_settled": 0,
+      "jumlah_bulan": 812
+    },
+    "TAK_DIKENAL": {
+      "cacah_nama": 51,
+      "cacah_settled": 0,
+      "jumlah_bulan": 260
+    },
+    "USDC": {
+      "cacah_nama": 39,
+      "cacah_settled": 0,
+      "jumlah_bulan": 893
+    },
+    "USDT": {
+      "cacah_nama": 805,
+      "cacah_settled": 15,
+      "jumlah_bulan": 19785
+    }
+  },
+  "ringkasan": {
+    "cacah_busd": 41,
+    "cacah_busd_usdc": 80,
+    "cacah_kuota_terpakai": 5,
+    "cacah_nama_akhiran_usdt": 790,
+    "cacah_nama_arsip": 937,
+    "cacah_nama_bukan_akhiran_usdt": 147,
+    "cacah_nama_kuota_usdt": 805,
+    "cacah_nama_kuota_usdt_bukan_settled": 790,
+    "cacah_nama_settled": 15,
+    "cacah_nama_tak_dikenal": 51,
+    "cacah_usdc": 39,
+    "jumlah_bulan_arsip": 21789,
+    "jumlah_bulan_settled": 36,
+    "jumlah_bulan_usdt_bukan_settled": 19749,
+    "kendali": {
+      "ada": true,
+      "ambang": 60,
+      "cacah_bulan": 78,
+      "sah": true,
+      "simbol": "BTCUSDT"
+    },
+    "kendali_sah": true,
+    "r_249_menang": true,
+    "r_257_menang": false,
+    "r_258_menang": false,
+    "selisih_bulan_terhadap_penyebut": 163,
+    "selisih_bulan_terhadap_serapan": 151,
+    "terbanyak_bukan_usdt": {
+      "cacah_pemegang": 1,
+      "medan": "cacah_nama",
+      "nilai": 51,
+      "pemegang": [
+        "TAK_DIKENAL"
+      ],
+      "seri": false,
+      "terukur": true
+    }
+  },
+  "sidik_data": "6bb4ec0d879c0744c039bd71e7b74170d54ae9aee4091d1fa2210de4d8eec10e",
+  "sidik_kode": "4fee2824d5490f2f4a2bdce849a46b4dd0460fb16f3e83889a91c36e3f0f9625",
+  "terbanyak_bukan_usdt": {
+    "cacah_pemegang": 1,
+    "medan": "cacah_nama",
+    "nilai": 51,
+    "pemegang": [
+      "TAK_DIKENAL"
+    ],
+    "seri": false,
+    "terukur": true
+  },
+  "versi_semesta_kuota": 1,
+  "waktu_utc": "2026-07-29T13:08:15Z"
+}

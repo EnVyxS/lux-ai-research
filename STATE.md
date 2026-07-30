@@ -1,51 +1,55 @@
-# STATE — versi 54 (bagian 1 dari tiga)
+# STATE — versi 55 (bagian 1 dari tiga)
 
 Diperbarui: 2026-07-31 (sesi 61, giliran lanjutan). Aturan hanya BERTAMBAH; jangan
-menulis ulang dari ingatan. v54 disusun di atas `STATE.md` v53 (blob
-**`a0ea143e1b34b7be512df75853a4a4f2ca79351c`**), yang **DIBACA UTUH pada giliran ini
+menulis ulang dari ingatan. v55 disusun di atas `STATE.md` v54 (blob
+**`af10274dc4b75292d56ff15c369f1e08ccfc5dd3`**), yang **DIBACA UTUH pada giliran ini
 sebelum berkas ini ditulis** (aturan 52, KC-42d, KC-43).
 
-**Apa yang v54 kerjakan, tersurat:** ia memuat **penutupan KC-52**, temuan terbesar
-sejak papan skor menembus 300 — dua angka besar yang selama berpuluh giliran
-diperlakukan sebagai satu ternyata **keduanya benar**, dan selisihnya terukur persis.
-Ia juga mengadjudikasi **R-312 (TIDAK TERADJUDIKASI)** dan **R-313 (TEPAT)**,
-menaikkan papan skor ke **313**, memajukan ordinal aturan 38 ke **ke-45**, mencatat
-tiga kesalahan dokumen baru sehingga daftarnya menjadi **sepuluh**, dan mengusulkan
-**aturan 86**.
+**Apa yang v55 kerjakan, tersurat:** ia menyerap **ADR-A019** — yang meresmikan
+**aturan 86**, menutup **KC-52**, mengadjudikasi **R-312** dan **R-313** secara resmi,
+dan **merumuskan ulang aturan 79 alih-alih melemahkannya**. Ia mencatat bahwa **utang
+aturan 52 atas trio `c1dc0009` LUNAS PENUH** dengan tiga blob yang sebelumnya tidak
+pernah tercatat. Ia memuat **satu temuan baru yang memperberat vonis atas R-312**, dan
+**satu koreksi diri atas jurnal 141** yang menuduh terlalu jauh. Papan skor tetap
+**313**; ordinal aturan 38 maju ke **ke-48**.
 
-## KESERASIAN VERSI — TIDAK SERASI; v54 / v12 / v12
+## KESERASIAN VERSI — TIDAK SERASI; v55 / v13 / v13
 
-1. `STATE.md` **v54** — berkas ini. Aturan 1–81, 83, 84, 85; KC-1..**KC-52**.
-2. `STATE_LAMPIRAN_EKOR.md` **v12** — blob
-   **`568dc877f69d6508b1db50a35877d34da76fc21e`**. **TERTINGGAL DUA VERSI.** Ia masih
-   memuat papan skor **311** dan ADR sampai A018.
-3. `STATE_LAMPIRAN_UKUR.md` **v12** — blob
-   **`b8dab926ac3bbf4441339f5856775ef521efdec1`**. **TERTINGGAL DUA VERSI.** Ia belum
-   memuat API `selisih_lilin`, `pulihkan`, maupun H-A022.
+1. `STATE.md` **v55** — berkas ini. Aturan 1–81, 83, 84, 85, **86**; KC-1..KC-52.
+2. `STATE_LAMPIRAN_EKOR.md` **v13** — blob
+   **`26ba6dc06fcaa358df3d0ac511996a9bb40a864f`** (commit `6642ed68`). **TERTINGGAL
+   SATU VERSI.** Kepalanya berbunyi "milik STATE v54". Ia belum memuat aturan 86 resmi,
+   ADR-A019, jurnal 141, maupun ketiga blob trio.
+3. `STATE_LAMPIRAN_UKUR.md` **v13** — blob
+   **`9e71c1ee9667c4b06389c87e0c77d4cefaca5b96`** (commit `2bdd8233`). **TERTINGGAL
+   SATU VERSI.** Kepalanya berbunyi "milik STATE v54". Ia belum memuat temuan arah
+   selisih (bagian di bawah) maupun blob trio.
 4. `STATE_LAMPIRAN_ADR.md` (`a02ef271`) dan **`PROMPT_KELANJUTAN.md`** (`35beed44`) —
    **arsip; BUKAN sumber** (ADR-A018 kep. 9).
 
-**PERINGATAN KESERASIAN, tersurat dan tidak dihaluskan:** untuk pertama kalinya sejak
-v51, ketiga bagian **tidak serasi**. Bila EKOR v12 atau UKUR v12 bertentangan dengan
-berkas ini pada papan skor, KC, atau angka karantina, **berkas ini yang menang** —
-pengecualian tersurat atas KC-41 yang berlaku HANYA untuk butir-butir yang v54 nyatakan
-baru. Untuk segala hal lain, KC-41 tetap penuh: berkas SUMBER menang.
+**PERINGATAN KESERASIAN.** Keserasian v54/v13/v13 yang baru pulih pada giliran lalu
+**pecah lagi** begitu berkas ini didorong. Itu **harga yang disengaja**: menunda v55
+berarti menahan aturan 86 resmi dan tiga blob trio di luar STATE. Bila EKOR v13 atau
+UKUR v13 bertentangan dengan berkas ini pada aturan 86, adjudikasi R-312/R-313, blob
+trio, atau daftar kesalahan dokumen, **berkas ini yang menang** — pengecualian tersurat
+atas KC-41 yang berlaku HANYA untuk butir yang v55 nyatakan baru. Untuk segala hal
+lain, KC-41 tetap penuh: berkas SUMBER menang.
 
 **Satu berkas per push tetap MENGIKAT** (KC-42, KC-43).
 
 **Tentang push berkas ini:** ia di akar repo sehingga menyalakan `ci.yml`. Tidak satu
 pun `tests/**` berubah, jadi cacah uji tetap **1377** — ramalan **deterministik**
 (aturan 57), **MUDAH**, TIDAK diskor, TIDAK menambah beruntun. **Laporannya WAJIB
-dibaca sebelum push akar berikutnya** (lihat aturan 38).
+dibaca sebelum push akar berikutnya** (aturan 38).
 
 ## STATE DIPECAH TIGA — BACA INI LEBIH DULU
 
-1. **`STATE.md`** (berkas ini) — **bagian 1**: kepala, aturan bernomor 1–**85** (plus
-   usulan 77, 78, 82, **86**), kelas cacat KC-1..**KC-52**.
-2. **`STATE_LAMPIRAN_EKOR.md`** v12 — **bagian 2**: papan skor per ramalan, catatan
+1. **`STATE.md`** (berkas ini) — **bagian 1**: kepala, aturan bernomor 1–**86** (plus
+   usulan 77, 78, 82), kelas cacat KC-1..KC-52.
+2. **`STATE_LAMPIRAN_EKOR.md`** v13 — **bagian 2**: papan skor per ramalan, catatan
    kejujuran, jumlah uji, utang verifikasi, daftar ADR, temuan sampingan, penomoran.
-3. **`STATE_LAMPIRAN_UKUR.md`** v12 — **bagian 3**: penyebut 787, taksonomi,
-   karantina, bulan ABSEN, hipotesis H-A001..**H-A022**, lubang funding, byte parquet
+3. **`STATE_LAMPIRAN_UKUR.md`** v13 — **bagian 3**: penyebut 787, taksonomi,
+   karantina, bulan ABSEN, hipotesis H-A001..H-A022, lubang funding, byte parquet
    semesta, modul/workflow/uji, API terverifikasi.
 
 **Ketiga berkas wajib dibaca bersama.** LANGKAH 0 PROMPT wajib menyebut ketiganya.
@@ -59,10 +63,10 @@ dibaca sebelum push akar berikutnya** (lihat aturan 38).
 | `.github/workflows/` | **44** | idem |
 | akar repo | **18** entri (**6** direktori + **12** berkas) | idem |
 
-**[v54] UTANG ATURAN 66 HIDUP.** Trio `selisih_lilin` sudah didorong (commit
-`c1dc0009`), sehingga angka harapan **50 / 54 / 45** kini **TURUNAN** dan **DILARANG
-dikutip sebagai terukur** sampai dicacah dengan tangan, bernomor, pada ref yang
-disebutkan.
+**[v55] UTANG ATURAN 66 TETAP HIDUP, dan ADR-A019 kep. 8 MENOLAK menutupnya.** Angka
+harapan **50 / 54 / 45** tetap **TURUNAN** dan **DILARANG dikutip sebagai terukur**.
+Alasan penolakan dikutip apa adanya: menuliskannya sebagai "cacah baru" berarti
+mengarang pengukuran di dalam dokumen yang justru meresmikan larangan mengarang.
 
 **LARANGAN (ADR-A018 kep. 10) — DUA CACAH `tests/` DILARANG DICAMPUR.**
 `PETA_MODUL_BERKAS.md` (`3abe95f6`) mencatat **34** berkas uji milik repo **WARISAN
@@ -77,7 +81,7 @@ menyebut repo-nya DILARANG.**
 **14.839**. **Bila `sisa_defisit` V2 atau `silang_funding` V3 diperlukan, pecah lebih
 dulu.**
 
-## KESALAHAN DOKUMEN SENDIRI — kini SEPULUH, dan yang kesepuluh berbeda jenis
+## KESALAHAN DOKUMEN SENDIRI — kini SEBELAS
 
 | # | berkas | tertulis | seharusnya | status |
 | --- | --- | --- | --- | --- |
@@ -88,55 +92,67 @@ dulu.**
 | 5 | UKUR v11 kepala | "KESERAIAN VERSI" | "KESERASIAN VERSI" | LUNAS di UKUR v12 |
 | 6 | UKUR v11 daftar uji | penanda `**` tak berpasangan | berpasangan | LUNAS di UKUR v12 |
 | 7 | STATE v52 | "Empat salah ketik" | "Enam" | LUNAS di STATE v53 |
-| 8 | STATE v53 aturan 45 | "empat push terakhir adalah dokumen tunggal" lalu mendaftar **ENAM** butir | "enam push terakhir" | **LUNAS di berkas ini** |
-| 9 | STATE v53 aturan 52 | pembacaan ulang "tidak menangkap satu pun" salah ketik | **kadang** menangkap — **satu dari delapan** | **LUNAS di berkas ini** |
-| 10 | jurnal 138 §5 butir 2 | "maka **839.842.134 yang keliru**" | kesimpulan **tidak sah dari premisnya**; kedua angka benar | **LUNAS di jurnal 140** |
+| 8 | STATE v53 aturan 45 | "empat push terakhir" lalu mendaftar **ENAM** | "enam push terakhir" | LUNAS di STATE v54 |
+| 9 | STATE v53 aturan 52 | pembacaan ulang "tidak menangkap satu pun" | **satu dari delapan** | LUNAS di STATE v54 |
+| 10 | jurnal 138 §5 butir 2 | "maka **839.842.134 yang keliru**" | kesimpulan **tidak sah dari premis benar** | LUNAS di jurnal 140 |
+| 11 | **jurnal 141 §6** | larangan R-312 nomor 5 "disajikan di EKOR v13 **dan ADR-A019** seolah diresmikan sesudah adjudikasi" | tuduhan itu **terlalu luas**; lihat di bawah | **LUNAS di berkas ini** |
 
-**Butir 10 adalah jenis yang berbeda dan lebih berbahaya.** Butir 1–9 adalah salah
-ketik atau salah cacah. Butir 10 adalah **kesimpulan yang tidak sah dari premis yang
-benar**: dari "839.325.999 adalah cacah baris parquet" saya melompat ke "maka
-839.842.134 keliru", padahal dua angka dapat sama-sama benar bila mencacah **himpunan
-berkas yang berbeda** — dan itulah yang terjadi. Ia lolos dari semua pemeriksaan
-formal karena tampak beralasan.
+### Butir 11 — koreksi diri, dan ia berpihak melawan tuduhan saya sendiri
 
-**Bila berkas sumber dan koreksi ini bertentangan pada titik-titik itu, koreksi ini
-menang** — pengecualian tersurat atas KC-41 yang HANYA berlaku untuk kesalahan yang
-sudah diakui, tidak pernah untuk angka terukur.
+Jurnal 141 §6 menuduh EKOR v13 dan ADR-A019 menyajikan larangan permanen R-312 nomor 5
+seolah diresmikan **sesudah** adjudikasi, padahal ia sudah dikunci di muka sebagai
+syarat gugur 3. Pembacaan utuh STATE v54 pada giliran ini menunjukkan tuduhan itu
+**tidak seluruhnya benar**:
 
-**Pembacaan jujur atas pola ini, DIKOREKSI dari v53:** v53 menulis bahwa pembacaan
-ulang aturan 52 "tidak menangkap satu pun" kesalahan. Itu terlalu keras terhadap
-aturan 52 sendiri. Rumusan yang benar: pembacaan ulang **kadang** menangkap — **satu
-dari delapan** kasus yang terlacak. Yang tetap benar: pembacaan ulang **kuat** untuk
-memastikan berkas tidak terpotong atau tertimpa, dan **lemah** sebagai pemeriksa ejaan
-dan penalaran. **Tidak ada berkas yang didorong ulang hanya demi satu karakter** —
-`push_files` menulis ulang SELURUH berkas (KC-42). Setiap koreksi menumpang pada versi
-berikutnya.
+- **STATE v54 TIDAK bersalah.** Larangan nomor 5 di v54 ditutup dengan kalimat kurung
+  **"(syarat gugur nomor 3, jurnal 136)"** — atribusinya sudah tepat sejak semula.
+- **ADR-A019 memang bersalah**, tetapi ringan: ia mendaftar kelima larangan di bawah
+  kepala "DIRESMIKAN" tanpa menyebut bahwa nomor 5 berasal dari praregistrasi.
+  Kalimatnya tidak keliru; **konteksnya** yang menyesatkan.
+- **Tuduhan terhadap EKOR v13 BELUM TERVERIFIKASI.** EKOR v13 **tidak dibaca ulang**
+  pada giliran jurnal 141 ditulis maupun pada giliran ini. Menuduh sebuah berkas dari
+  ingatan adalah **KC-41 dan KC-19 sekaligus**, dilakukan di dalam jurnal yang sedang
+  merayakan pembacaan utuh. Tuduhan itu **DICABUT** sampai EKOR v13 dibaca ulang.
 
-## KC-52 — DITUTUP. Dua angka itu keduanya benar.
+**Yang tetap berdiri dari jurnal 141 §6:** kredit atas larangan nomor 5 memang milik
+**praregistrasi**, bukan adjudikasi. Itu benar dan penting.
 
-**Ini menggantikan seluruh bagian "KOREKSI BESAR yang MASIH HIDUP" di v53.**
+### Batas kekuatan aturan 52 — DIKOREKSI KE ATAS, dengan pembatasan
 
-Dijumlahkan atas kedelapan laporan `reports/pulihkan_pecahan_<i>.json`:
+ADR-A019 kep. 2 menulis bahwa pembacaan ulang aturan 52 "tidak berdaya terhadap
+penalaran cacat" dan **DILARANG** disebut menjaga mutu penalaran. Giliran ini memberi
+kejadian tandingan yang harus dicatat jujur: **pembacaan ulang trio `c1dc0009`
+menangkap cacat penalaran** — arah selisih yang mustahil (lihat bagian di bawah) —
+yang lolos dari seluruh pemeriksaan lain.
+
+**Rumusan yang berlaku sekarang, lebih tepat daripada keduanya:**
+
+> Pembacaan ulang **dokumen sendiri** lemah terhadap penalaran cacat: ia membaca
+> kalimat yang sudah diyakini benar. Pembacaan **kode** kuat terhadapnya: kode
+> menyatakan identitas yang tidak dapat ditawar, dan ketidakcocokan antara docstring
+> dan badan fungsi tampak begitu keduanya dibaca berdampingan.
+
+Larangan ADR-A019 **dipersempit, bukan dicabut**: DILARANG menulis bahwa aturan 52
+menjaga mutu penalaran **atas dokumen**; DIIZINKAN mencatat bahwa ia melakukannya
+**atas kode**, dengan satu kejadian terukur.
+
+## KC-52 — DIRESMIKAN DAN DITUTUP (ADR-A019 kep. 1)
 
 ```
-Σ baris_utama     = 839.325.999
-Σ baris_karantina =     516.135
-Σ baris_total     = 839.842.134
+Σ baris_utama     = 839.325.999   (19.586 simbol-bulan LOLOS gerbang)
+Σ baris_karantina =     516.135   (12 simbol-bulan KARANTINA)
+Σ baris_total     = 839.842.134   (19.598 simbol-bulan SELURUH rilis)
 ```
 
-> **839.325.999 + 516.135 = 839.842.134**
+> **839.325.999 + 516.135 = 839.842.134** dan **19.586 + 12 = 19.598**
 
-Dan `Σ baris_total` sama persis dengan angka run rilis `30404071324`.
+`Σ baris_total` sama persis dengan angka run rilis `30404071324`. **Ketiganya bersatuan
+BARIS PARQUET.** Tidak satu pun keliru.
 
-| angka | apa yang ia cacah | keliru? |
-| --- | --- | --- |
-| **839.325.999** | baris parquet yang LOLOS gerbang, **19.586** simbol-bulan | **tidak** |
-| **839.842.134** | seluruh baris parquet rilis, lolos **dan** karantina, **19.598** | **tidak** |
-| **516.135** | **12** parquet karantina, di tar keluarga terpisah | — |
-
-**Tidak pernah ada data yang hilang, tidak pernah ada pembaca yang cacat, tidak pernah
-ada angka yang keliru.** Yang ada hanya **dua penyebut berbeda yang diperlakukan
-sebagai satu**.
+**Sebab strukturalnya terukur:** `kehidupan_arsip.peta_parquet` (blob `318a5cb1`,
+dibaca UTUH) **melewatkan baris `parquet_karantina`**. Kedua belas parquet itu karena
+itu tidak pernah masuk penyebut mana pun — benar secara kode, dan tidak pernah disebut
+di dokumen mana pun sebelum jurnal 140. **Kesunyian itulah isi KC-52.**
 
 **Cacah karantina per pecahan (terukur, bukan turunan):**
 
@@ -158,217 +174,258 @@ sebagai satu**.
 `76c27e3ce5d6edb13bb998b6ec65b538fb3d25205d4469bd4d186a95fa62d700`; sidik kode manifes
 seragam `237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601`; seluruhnya
 dari `run_id_sumber` **30396803601**, ditulis 2026-07-29T02:48Z. Penjumlahan lintas
-pecahan karena itu sah (aturan 22).
+pecahan sah (aturan 22). **KC-47 diperiksa dan TIDAK terpicu:** 12 parquet tersebar di
+**enam** pecahan (3/3/1/1/3/1).
 
-**Bonus terukur:** `19.598 = 19.586 + 12` kini bukan aritmetika yang dicocokkan dari
-catatan, melainkan terukur dari dua belas parquet yang dibongkar, dicacah kakinya, dan
-sidik tarnya dicocokkan terhadap manifes di git. **Dugaan lama "516.135 / 12 = 43.011
-≈ sebulan penuh" kini boleh dikutip — tetapi sebagai rata-rata turunan, bukan sebagai
-bukti**, sebab sebarannya nyata sangat tidak rata (42.585 sampai 131.760 per tar).
+**Rata-rata 516.135 / 12 = 43.011** boleh dikutip sebagai **turunan**, bukan bukti;
+sebarannya 42.585 sampai 131.760 per tar. Tafsir "tiap karantina kira-kira sebulan
+penuh" **TIDAK ditegakkan**.
 
-**Asal-usul `cacah_lilin` dan `cacah_lilin_terbaca` (terbaca dari kode, jurnal 139).**
-`kehidupan_arsip.ukur_kolom` menulis keduanya dari **dua ekspresi yang berbeda**:
-`cacah_lilin` = `n` = cacah baris parquet; `cacah_lilin_terbaca` = baris yang KEDUA
-kolomnya berhasil diurai menjadi angka. Identitas yang dipaksakan badan fungsi:
+## TEMUAN v55 — arah selisih R-312 mustahil positif secara struktural
 
-> **`cacah_lilin` = `cacah_lilin_terbaca` + `cacah_baris_cacat`**
+**Ini temuan jurnal 141 §5, dan ia MEMPERBERAT vonis atas R-312.**
 
-Karena `selisih_lilin` mengukur kedua medan identik pada **19.586 dari 19.586** baris,
-identitas itu memaksa satu kesimpulan tanpa run tambahan: **`cacah_baris_cacat` = 0
-pada seluruh semesta.** Tidak satu pun dari 839.325.999 baris gagal diurai.
+Docstring `selisih_lilin.py` (blob **`d19bdb5fe67e0bd9c1b141d7fb7cc6dcd089c5f2`**,
+dibaca UTUH) menetapkan sebelum pengukuran:
 
-`silang_funding.baca_medan_baris` **TIDAK cacat** (jurnal 138): ia memakai parameter
-`medan` dua kali di badannya dan tidak memaku satu pun nama medan.
+> `selisih(baris) = cacah_lilin_terbaca - cacah_lilin`, dengan arah dipilih "supaya
+> selisih semesta bertanda POSITIF bila jumlah terbaca memang lebih besar".
+
+Tetapi `kehidupan_arsip.ukur_kolom` memaksa:
+
+> **`cacah_lilin` = `cacah_lilin_terbaca` + `cacah_baris_cacat`**, dengan
+> `cacah_baris_cacat` ≥ 0
+
+Maka **`cacah_lilin_terbaca` ≤ `cacah_lilin` pada setiap baris, tanpa kecuali**, dan
+selisih yang didefinisikan modul **tidak akan pernah positif**.
+
+**Konsekuensi yang wajib dikutip bersama vonis R-312:**
+
+1. Butir 2 menimbang "sepuluh baris berselisih **positif** terbesar". Himpunan itu
+   **mustahil tidak kosong**. Butir 2 bukan sekadar tidak teradjudikasi karena
+   penyebutnya kebetulan nol — ia **tidak dapat dimenangkan secara struktural**, dan itu
+   benar **sejak sebelum pita dikunci**.
+2. Butir 1 mencacah selisih bukan nol arah mana pun, jadi secara teknis masih bisa tidak
+   nol. Yang membuatnya nol adalah kenyataan terpisah: `cacah_baris_cacat` = 0 di
+   seluruh 19.586.
+3. Kalimat docstring "sesuai dua angka di atas" adalah **KC-52 yang ditulis ulang ke
+   dalam kode**: ia menyamakan 839.842.134 dengan jumlah sebuah medan per baris,
+   padahal angka itu mencacah seluruh rilis **termasuk karantina**, yang tidak pernah
+   masuk laporan kehidupan.
+
+**KOREKSI atas rumusan v54, UKUR v13, dan ADR-A019.** Ketiganya menulis bahwa R-312
+runtuh karena kedua medan "bukan dua pengukuran bebas". Itu benar tetapi **kurang
+keras**. Rumusan yang berlaku: **arah ramalannya berlawanan dengan arah yang mungkin
+secara matematis**, dan itu dapat diketahui dari **satu pembacaan** `ukur_kolom`
+sebelum satu baris modul pun ditulis.
 
 ## Aturan bernomor
 
 Aturan **1–36** berlaku tanpa perubahan; teks di STATE v19 (`e06c486e`), ringkas di v37
 (`f520d5e2`).
 
-**Aturan 10 (irisan/urutan bulan BUKAN sebab). [v54] Ditaati.**
+**Aturan 10. [v55] Ditaati.**
 
-**Aturan 21 (total papan skor dihitung tangan). [v54] Ditaati, dan lajur BERGERAK:**
+**Aturan 21 (total papan skor dihitung tangan). [v55] Ditaati; lajur TIDAK bergerak:**
 218 + 57 = 275; 275 + 22 = 297; 297 + 9 = 306; 306 + 7 = **313**. Rincian: TEPAT
 **218** · MELESET **57** · SEPARUH **22** · TIDAK TERADJUDIKASI **9** · MENUNGGU **7**.
 N_percobaan = 0. **ADJUDIKASI RISET TETAP TERKUNCI.** MENUNGGU: R-7, R-19, R-20,
-R-28, R-36, R-37, R-199. Dua ramalan diadjudikasi sejak v53: **R-312 → TIDAK
-TERADJUDIKASI** (8→9), **R-313 → TEPAT** (217→218).
+R-28, R-36, R-37, R-199. Tidak ada ramalan baru diadjudikasi sejak v54.
 
-**Aturan 29 (pita praregistrasi TIDAK boleh diubah sesudah pengukuran). [v54] Ditaati
-dua kali:** R-312 tidak diselamatkan meski penjelasannya kelak ditemukan; R-313
-diregistrasikan lengkap di chat **sebelum** `pulihkan_pecahan_0.json` disentuh.
+**Aturan 29. [v55] Ditaati:** pita R-312 tidak disentuh meskipun kini terbukti mustahil
+dimenangkan. Pita yang mustahil tetap dicatat apa adanya, bukan dihapus.
 
-**Aturan 36 (dua modul berbeda atas semesta sama wajib cocok). [v54] Kasus terkuat
-sampai kini:** `selisih_lilin` (839.325.999 dari medan `cacah_lilin`) dan `pulihkan`
-(839.325.999 dari kaki parquet, lewat jalur unduhan-bongkar yang sama sekali berbeda)
-bertemu **sampai satuan terakhir**. Dua jalur, dua modul, dua run, satu angka.
+**Aturan 36. [v55] Kasus terkuat sampai kini tetap berdiri:** `selisih_lilin`
+(839.325.999 dari medan `cacah_lilin`) dan `pulihkan` (839.325.999 dari kaki parquet,
+jalur unduh–bongkar yang sama sekali berbeda, run berbeda, tiga hari lebih awal)
+bertemu **sampai satuan terakhir**.
 
-Aturan **37, 39–45, 47, 49, 51, 53, 54, 56, 59–62** berlaku tanpa perubahan; ringkas
+Aturan **37, 39–44, 47, 49, 51, 53, 54, 56, 59–62** berlaku tanpa perubahan; ringkas
 satu baris: 37 kelas cacat pada sampel · 39 keseragaman sampel bukan ramalan · 40 uji
 silang baris · 41 penyebut nol → TIDAK TERADJUDIKASI · 42 kelas cacat butuh angka
-terukur · 43 toleransi berskala · 44 ramalan menyebut penyebut · 45 keatomikan push
-pemicu · 47 satuan cacah tersurat · 49 re-export mematahkan uji · 51 jendela mundur
-adaptif · 53 ramalan kode keluar butuh pembacaan perilaku · 54 cacah `def test_` satu
-per satu · 56 commit BERIKUTNYA yang menyentuh X · 59 ketiadaan gejala butuh penyebut
-· 60 mekanisme tak dipindah antarkasus · 61 medan tak dipindah antarjalur · 62 daftar
-tak diminta dari laporan bercacah.
+terukur · 43 toleransi berskala · 44 ramalan menyebut penyebut · 47 satuan cacah
+tersurat · 49 re-export mematahkan uji · 51 jendela mundur adaptif · 53 ramalan kode
+keluar butuh pembacaan perilaku · 54 cacah `def test_` satu per satu · 56 commit
+BERIKUTNYA yang menyentuh X · 59 ketiadaan gejala butuh penyebut · 60 mekanisme tak
+dipindah antarkasus · 61 medan tak dipindah antarjalur · 62 daftar tak diminta dari
+laporan bercacah.
 
 Yang berikut memuat angka atau daftar kepatuhan:
 
-38. Cacah uji hanya sah dari `reports/ci_terakhir.json`. **[v54] Ditaati; ordinal maju
-    ke ke-45.**
+38. Cacah uji hanya sah dari `reports/ci_terakhir.json`. **[v55] Ditaati; ordinal maju
+    ke ke-48.**
 
-    | ke- | CI | run | commit | blob | jejak |
-    | --- | --- | --- | --- | --- | --- |
-    | 41 | 1341 | 30548418622 | `28afc9ae` | `2c3290cb` | EKOR v12, UKUR v12 |
-    | 42 | 1341 | 30549286062 | `e68deab7` | `ed743bdf` | UKUR v12 |
-    | 43 | 1341 | 30550547017 | `1247a5a3` | `fdb7c668` | STATE v53 |
-    | 44 | 1341 | 30551789395 | `33a4ab37` | `5b16417b` | jurnal 136 |
-    | **45** | **1377** | **30559145901** | **`c1dc0009`** | **`cdfdee25`** | **jurnal 137, berkas ini** |
+    | ke- | CI | run | commit | blob |
+    | --- | --- | --- | --- | --- |
+    | 44 | 1341 | 30551789395 | `33a4ab37` | `5b16417b` |
+    | 45 | 1377 | 30559145901 | `c1dc0009` | `cdfdee25` |
+    | 46 | 1377 | 30575123865 | `8368ca1f` | `effb3a46` |
+    | 47 | 1377 | 30576963781 | `6642ed68` | `8cbbd4ce7b85d9e1f217a9cefbdacfb9318dec78` |
+    | **48** | **1377** | **30577779309** | **`2bdd8233`** | **`8ec97de5af8b528276174f635e3bda9e6cc2d7ef`** |
 
-    Pemakaian ke-45 dibaca **2026-07-30T15:57:01Z**, kode keluar **0**,
-    `1377 tests collected in 0.58s`, atas push trio `selisih_lilin`.
-    **Dua cacat tetap disebut:** **(a)** baris ke-**38** (run `30541051907`, CI 1297,
-    commit `5d7d8b96`) **tanpa blob**, tidak dapat dipulihkan; **(b)** run
-    **30547842823** (bot `de2fc03d`) **tidak pernah dibaca**, tertimpa, dan **DILARANG
-    dihitung**. **Aturan kerja calon** — dua push akar berturut tanpa membaca laporan
-    di antaranya pasti menghanguskan yang pertama — tetap **belum diangkat**; masih
-    satu kejadian.
-45. Keatomikan push pemicu. **[v54] Ditaati penuh pada trio R-312:**
-    `selisih_lilin.py` + `test_selisih_lilin.py` + `selisih_lilin.yml` didorong sebagai
-    **satu commit** `c1dc0009`. **KOREKSI atas v53:** v53 menulis "empat push terakhir
-    adalah dokumen tunggal" lalu mendaftar **enam**; bacaan yang benar adalah **enam**.
-46. Kode dilarang menyimpulkan dari penyebut nol. **[v54] Kasus positif terukur:**
-    `pulihkan` VERSI 2 melaporkan `definisi_dapat_dibedakan` **false** pada pecahan 2
-    dan 5 (tanpa karantina) dan menolak menyebut salah satu definisi. Perilaku itu
-    terbaca apa adanya di laporan; aturan 46 **terbukti bekerja sebagaimana
-    dirancang**.
-47. Satuan cacah tersurat. **[v54] Ditaati:** "114", "17.398", "18.799", "1.401", "9",
-    "53", "49", "44", "34", **"12"** bersatuan **baris atau berkas** — dan **34 lawan
-    53 milik REPO BERBEDA**, sedangkan **12 bersatuan BERKAS PARQUET karantina**;
-    "712.925", "291.379", "42.510", "808.162", "95.237", "18.143.601" bersatuan **lilin
-    menit**; **"839.325.999", "516.135", "839.842.134" seluruhnya bersatuan BARIS
-    PARQUET** — **[v54] ini koreksi penting atas v53**, yang menyatukan 839.325.999 dan
-    516.135 sebagai "lilin menit" dan 839.842.134 sebagai "baris parquet" seolah
-    berbeda satuan; sesudah KC-52 ditutup, ketiganya terbukti satu satuan yang sama
-    atas himpunan berkas yang berbeda; "0,4087" **bagian tanpa satuan**; "29.873",
-    "19.281", "14.839" bersatuan **byte berkas sumber**; **"1377"** bersatuan **butir
-    uji terkumpul pytest**; "45" pada aturan 38 bersatuan **pemakaian berjejak**.
-48. Berkas modul mendekati 800 baris dipecah. **[v54] PERINGATAN DINI berlanjut.**
-50. Pengukuran yang menyimpulkan dari KETIADAAN wajib memuat kendali positif.
-    **[v54]** `kehidupan_arsip.kendali_pecahan` terbaca: tiga simbol-bulan ber-byte
-    parquet terbesar, dipilih dari manifes **sebelum** data dibaca, deterministik, dan
-    tidak melihat volume maupun transaksi. Kepatuhan **terverifikasi dari kode**, bukan
-    dari klaim docstring.
+    Pemakaian ke-48 dibaca **2026-07-30T20:07:50Z**, kode keluar **0**,
+    `1377 tests collected in 0.62s`, atas push UKUR v13.
+    **[v55] Tujuh pembacaan berturut (ke-42..ke-48) tanpa satu pun laporan hangus.**
+    **Dua cacat lama tetap disebut:** **(a)** ke-**38** (run `30541051907`, CI 1297,
+    commit `5d7d8b96`) **tanpa blob**; **(b)** run **30547842823** (bot `de2fc03d`)
+    **tidak pernah dibaca**, tertimpa, **DILARANG dihitung**.
+    **Calon aturan** — dua push akar berturut tanpa membaca laporan di antaranya pasti
+    menghanguskan yang pertama — **tetap DITOLAK diresmikan** (ADR-A019 kep. 3): masih
+    **satu** kejadian.
+45. Keatomikan push pemicu. **[v55]** Tidak ada push pemicu baru; trio `c1dc0009` tetap
+    contoh kepatuhan penuh.
+46. Kode dilarang menyimpulkan dari penyebut nol. **[v55] Kasus positif tetap berdiri:**
+    `pulihkan` V2 melaporkan `definisi_dapat_dibedakan` **false** pada pecahan 2 dan 5
+    dan menolak memilih definisi. **[v55] Kasus kedua terbaca dari kode:**
+    `selisih_lilin.bagian_teratas` mengembalikan **null** bila penyebut nol atau baris
+    positif kurang dari sepuluh — dan itulah yang terjadi pada alur nyata.
+47. Satuan cacah tersurat. **[v55] Ditaati:** "114", "17.398", "18.799", "1.401", "9",
+    "53", "49", "44", "34", **"12"** bersatuan **baris atau berkas** — **34 lawan 53
+    milik REPO BERBEDA**, dan **12 bersatuan BERKAS PARQUET karantina**; "712.925",
+    "291.379", "42.510", "808.162", "95.237", "18.143.601" bersatuan **lilin menit**;
+    **"839.325.999", "516.135", "839.842.134" seluruhnya bersatuan BARIS PARQUET**;
+    "0,4087" **bagian tanpa satuan**; "29.873", "19.281", "14.839" bersatuan **byte
+    berkas sumber**; **"1377"** bersatuan **butir uji terkumpul pytest**; **"48"** pada
+    aturan 38 bersatuan **pemakaian berjejak**; **"36"** bersatuan **butir uji**.
+48. Berkas modul mendekati 800 baris dipecah. **[v55] PERINGATAN DINI berlanjut.**
+50. Pengukuran dari KETIADAAN wajib memuat kendali positif. **[v55] Terverifikasi dari
+    kode pada `selisih_lilin`:** empat kendali dibaca utuh — `kendali_deteksi` (jawaban
+    dihitung TANGAN, 11 medan), `kendali_nol`, `kendali_negatif` (menuntut bersih
+    **−250** agar arah negatif tidak dibulatkan jadi nol), `kendali_teratas` (bagian
+    **0,9615** = 7.500/7.800, dihitung TANGAN). Keempatnya lolos pada alur nyata.
 52. Laporan yang tidak dapat dibaca utuh setara dengan laporan yang tidak ada.
-    **[v54] Ditaati empat kali berturut:** jurnal 137 (`432d568e`), 138 (`596a3148`),
-    139 (`9684bed3`), 140 (`a659206c`) — masing-masing dibaca UTUH dengan blob dicatat.
-    **Batas kekuatannya, DIKOREKSI:** ia menangkap **satu dari delapan** kesalahan yang
-    terlacak; ia kuat terhadap pemotongan dan penimpaan, lemah terhadap ejaan dan
-    penalaran.
-    **UTANG BACA yang TETAP hidup:** ketiga berkas trio `c1dc0009` belum dibaca ulang
-    utuh; `decisions/ADR-A002`, **A004**, **A006**, **A007**, **A008**;
-    `karantina_semesta.yml` (`de40fa4e`); `tests/test_pulihkan.py` (`11c43533`);
-    `test_rilis_karantina.py` (`739c8da9`); `test_karantina_a006.py` (`a5a3d82f`).
-    **Bukti tak langsung (CI 1377, laporan lengkap) TIDAK diklaim sebagai lunas.**
-55. Rumusan pemicu workflow wajib dikutip dari berkas beserta blobnya. **[v54]**
-    `selisih_lilin.yml` mengikuti pola trio; blobnya belum dibaca ulang (lihat 52).
+    **[v55] UTANG TERBESAR LUNAS.** Ketiga berkas trio `c1dc0009` dibaca UTUH pada ref
+    `e6007ba5`, **blob dicatat untuk pertama kalinya**:
+
+    | berkas | blob |
+    | --- | --- |
+    | `.github/workflows/selisih_lilin.yml` | **`de2fd4fd346c9e13213fcc9a410d4aea8460d67a`** |
+    | `tests/test_selisih_lilin.py` | **`2d903a4a6f544eacd26b82bdb177680fa78bdffd`** |
+    | `lux_ai/serapan/selisih_lilin.py` | **`d19bdb5fe67e0bd9c1b141d7fb7cc6dcd089c5f2`** |
+
+    **Tidak ada pemotongan.** Cacah **36** butir `test_01`..`test_36` **terverifikasi
+    dari sumber**; dua helper berawalan garis bawah tidak dikumpulkan pytest. Turunan
+    **1341 + 36 = 1377** kini berdiri di atas pembacaan, bukan ingatan.
+    **[v55] Ditaati tujuh kali berturut:** jurnal 137, 138, 139, 140, **ADR-A019**
+    (`9cd7d25e7a61207343e60233887d06b441aa3cbf`), **jurnal 141**
+    (`bde76db952f587f4df4529e49f0015c13a29919b`), dan berkas ini.
+    **UTANG BACA yang TETAP hidup:** `decisions/ADR-A002`, **A004**, **A006**, **A007**,
+    **A008**; `karantina_semesta.yml` (`de40fa4e`); `tests/test_pulihkan.py`
+    (`11c43533`); `test_rilis_karantina.py` (`739c8da9`); `test_karantina_a006.py`
+    (`a5a3d82f`). **[v55] BARU:** EKOR v13 dan UKUR v13 belum dibaca ulang sesudah
+    ADR-A019, sehingga tuduhan jurnal 141 terhadap EKOR v13 dicabut (butir 11).
+55. Rumusan pemicu workflow wajib dikutip dari berkas beserta blobnya. **[v55] LUNAS
+    untuk `selisih_lilin.yml`:** blob `de2fd4fd…`, `on.push.paths` **satu entri**
+    `'lux_ai/serapan/selisih_lilin.py'`, `permissions: contents: write`, job `ukur`,
+    checkout@v4 + setup-python@v5 (3.11), `set +e` → `KODE=$?` → `exit 0`, langkah
+    `catat status`, `dorong laporan` `[skip ci]` dengan `pull --rebase`, penutup
+    `exit ${{ steps.jalan.outputs.kode }}`. **Cocok persis dengan pola trio.**
 57. Sebelum meramalkan cacah butir uji, nama tiap `def test_` WAJIB ditulis bernomor.
-    **[v54] BERUNTUN 4 DARI 4.** Kesempatan keempat: 36 butir `test_01`..`test_36`
-    ditulis bernomor, ramalan **1341 + 36 = 1377** dinyatakan **sebelum** laporan CI
-    dibaca, terukur **1377**. Push dokumen — termasuk berkas ini — meramalkan CI tetap
-    **1377**; ramalan itu MUDAH, deterministik, TIDAK diskor, TIDAK menambah beruntun.
+    **[v55] BERUNTUN 4 DARI 4, tidak bertambah.** Tidak ada berkas uji baru pada
+    giliran-giliran ini. Push dokumen — termasuk berkas ini — meramalkan CI tetap
+    **1377**; MUDAH, deterministik, TIDAK diskor, TIDAK menambah beruntun.
 58. Cacah baris berkas yang versi terkininya belum dibaca ulang UTUH DILARANG
     diramalkan dengan pita sempit.
 63–76. Berlaku tanpa perubahan dari v43 (`a91a4934`).
 
-**Aturan 66 (cacah direktori dengan TANGAN, bernomor). [v54] UTANG HIDUP** — lihat
-bagian cacah tangan di atas. Harapan 50/54/45 adalah TURUNAN.
+**Aturan 66. [v55] UTANG HIDUP**, ditolak ditutup oleh ADR-A019 kep. 8.
 
-**Aturan 77, 78 (TETAP DIUSULKAN). [v54] Tidak mendapat kasus baru.**
+**Aturan 77, 78 (TETAP DIUSULKAN). [v55] Tidak mendapat kasus baru.**
 
-**Aturan 79 (BERLAKU sejak v44). [v54] Ditaati:** praregistrasi R-312 ditulis di jurnal
-136, adjudikasinya pada giliran berbeda. **R-313 adalah pengecualian yang wajib
-disebut terbuka:** ia diregistrasikan **di chat**, bukan di `journal/**`, karena
-pengukurnya bukan modul baru melainkan pembacaan laporan yang sudah ada, dan
-menuliskannya ke jurnal lebih dulu berarti satu push tambahan sebelum data dibuka.
-Bunyinya dikutip lengkap dan kata demi kata di jurnal 140 §2. **Ini melemahkan aturan
-79 dan harus dicatat, bukan dibenarkan** — satu-satunya saksi bahwa ramalan itu
-ditulis lebih dulu adalah riwayat percakapan, bukan git.
+### ATURAN 79 — DIRUMUSKAN ULANG, BUKAN DILEMAHKAN (ADR-A019 kep. 7)
 
-**Aturan 80, 82, 83, 84 [v54]** berlaku tanpa perubahan.
+**v54 menulis bahwa R-313 "melemahkan aturan 79". Rumusan itu DICABUT.** Aturan yang
+dilanggar lalu disebut "lemah" adalah aturan yang sedang dihapus diam-diam.
 
-**Aturan 81 (BERLAKU sejak v46). [v54]** Tidak terpicu oleh R-313: dua belas parquet
-karantina tersebar di enam pecahan berbeda dan bukan satu peristiwa tunggal. Untuk
-R-310 aturan 81 TETAP terpicu.
+> **Aturan 79 tetap PENUH.** Praregistrasi yang tidak ditulis di `journal/**` sebelum
+> pengukuran **tidak sah sebagai praregistrasi**. Bila ia terlanjur diadjudikasi,
+> hasilnya **tetap dicatat** demi kejujuran riwayat, tetapi **cacatnya melekat
+> permanen**, dan **penolakan pihak ketiga atas hasil itu sah**. Aturan 79 **tidak
+> boleh** disebut lemah, longgar, atau opsional.
 
-**ATURAN 85 (RESMI sejak v52), BERLAKU MULAI R-312. [v54] Dipakai pertama kali di
-praregistrasi R-312** (jurnal 136). Hasilnya tidak dapat dinilai: R-312 TIDAK
-TERADJUDIKASI, sehingga **aturan 85 masih belum punya satu pun adjudikasi**.
+Yang lemah bukan aturannya, melainkan **kepatuhan kami** pada satu kejadian tertentu.
+Perbedaan itu wajib dipertahankan dalam bahasa.
 
-### ATURAN 86 — DIUSULKAN (dua kejadian terukur, layak dinaikkan)
+**Aturan 80, 82, 83, 84 [v55]** berlaku tanpa perubahan. **[v55]** Aturan 83 tercatat
+**ditaati di dalam kode** R-312: lantai aritmetis 12 diturunkan tertulis dari
+516.135 / 44.640 = 11,56… dibulatkan ke atas.
 
-> Sebelum menulis modul pengukur baru, dua hal WAJIB dikerjakan lebih dulu: **(i)**
-> badan fungsi atau berkas yang hendak diukur dibaca UTUH; **(ii)** `reports/` diperiksa
-> untuk mengetahui apakah jawabannya sudah tersimpan. Menulis pengukur atas sesuatu
-> yang sudah tertulis adalah mengukur yang sudah diketahui.
+**Aturan 81. [v55]** Tidak terpicu oleh perkembangan baru.
 
-**Kejadian 1 (jurnal 138).** Uji pemisah cabang (a)/(b) ditaksir butuh satu modul,
-satu push, satu run CI, dan satu pembacaan laporan. Biaya sebenarnya: **satu
-pembacaan** `silang_funding.py`.
+**Aturan 85. [v55] MASIH BELUM PUNYA SATU PUN ADJUDIKASI.** Pemakaian pertamanya
+(R-312) tidak menghasilkan adjudikasi. Ia **DILARANG** disebut sebagai penangkal yang
+sudah teruji.
 
-**Kejadian 2 (jurnal 140).** Modul `selisih_lilin` ditulis lengkap dengan **36** butir
-uji dan satu workflow untuk mencari asal 516.135. Jawabannya sudah tersimpan di
-`reports/pulihkan_pecahan_<i>.json` sejak **29 Juli**, **dua hari sebelum**
-pertanyaannya dirumuskan.
+### ATURAN 86 — RESMI (ADR-A019 kep. 3)
 
-**Status: DIUSULKAN**, belum resmi. Dua kejadian sudah cukup menurut ambang yang
-dipakai untuk aturan sebelumnya, tetapi peresmiannya diserahkan ke ADR-A019 agar tidak
-mengulang KC-48 (mengangkat aturan dari kesan, bukan dari cacah).
+> **Aturan 86.** Sebelum menulis modul baru untuk menjawab sebuah pertanyaan
+> kuantitatif, isi direktori `reports/` **WAJIB** diperiksa lebih dulu untuk memastikan
+> jawabannya belum tersimpan di sana. Bila sudah tersimpan, modul baru **DILARANG**
+> ditulis; angkanya dibaca. Taksiran biaya "menulis modul" **WAJIB** disertai taksiran
+> biaya "membaca laporan yang mungkin sudah ada", dan keduanya dibandingkan tertulis.
 
-**Penomoran aturan [v54].** Aturan resmi: **1–81, 83, 84, 85**. Nomor **82**
-dicadangkan; **77**, **78**, **86** usulan. **Aturan berikutnya yang bebas: 87.** Satu
-calon tanpa nomor tetap menunggu kejadian kedua: larangan dua push akar berturut tanpa
-membaca laporan CI di antaranya.
+**Dua kejadian terukur, keduanya kerugian kami sendiri:**
 
-## R-312 — ADJUDIKASI RESMI: TIDAK TERADJUDIKASI
+1. **Jurnal 138 §4.** Biaya uji pemisah ditaksir **empat langkah** (tulis → dorong →
+   tunggu CI → baca). Nyatanya **satu pembacaan**. Meleset empat kali ke arah yang
+   membuat jalan murah tampak mahal.
+2. **Jurnal 140 §7.** Modul `selisih_lilin` ditulis lengkap dengan **36** butir uji dan
+   satu workflow untuk mencari angka yang **sudah tersimpan** sebagai `baris_karantina`
+   di `reports/pulihkan_pecahan_<i>.json` sejak **29 Juli** — dua hari **sebelum**
+   pertanyaannya dirumuskan.
+
+**Penomoran aturan [v55].** Aturan resmi: **1–81, 83, 84, 85, 86**. Nomor **82**
+dicadangkan; **77**, **78** usulan. **Aturan berikutnya yang bebas: 87.**
+
+## R-312 — ADJUDIKASI RESMI: TIDAK TERADJUDIKASI, selamanya
 
 Laporan `reports/selisih_lilin_ringkas.json` (blob `e5cc6401`, sidik kode
-`e6c77965…`): `cacah_berselisih` **0** dari 19.586 baris; `jumlah_klaim_langsung` =
+`e6c77965…`): `cacah_berselisih` **0** dari 19.586; `jumlah_klaim_langsung` =
 `jumlah_terbaca_langsung` = **839.325.999**; `bagian_teratas` null; `sebaran_kelas`
-`{}`; keempat kendali lolos; `dua_jalur_bertemu` true; `selisih_invarian`
-delapan-delapannya 0; kode keluar alur modul **2** (dirancang).
+`{}`; keempat kendali lolos; `dua_jalur_bertemu` true; `selisih_invarian` delapan-
+delapannya 0; kode keluar alur modul **2** — **dirancang**, sebab `kode_keluar`
+mengembalikan 2 bila `cacah_berselisih <= 0`.
 
-**Poros ramalannya runtuh sebelum diadjudikasi:** ia mengandaikan `cacah_lilin_terbaca`
-adalah pengukuran kedua yang **bebas** dari `cacah_lilin`. Nama berbeda diperlakukan
-sebagai isi berbeda. Sesudah jurnal 139 membaca `ukur_kolom`, terbukti keduanya
-berbeda ekspresi tetapi selalu bertemu karena tak satu baris pun cacat.
+**Lima larangan permanen, seluruhnya tetap berlaku:**
 
-**Larangan yang menempel pada R-312, seluruhnya tetap berlaku selamanya:**
+1. **DILARANG** menyebut pita butir 1 (12..120) "tidak terbantah". Ia tidak diuji.
+2. **DILARANG** mengatakan kalibrasi membaik **atau** memburuk karena R-312.
+3. **DILARANG** dihitung di pembilang maupun penyebut nisbah kemenangan mana pun.
+4. **DILARANG** dihidupkan kembali dengan pita yang sama atau yang diubah.
+5. Angka **12** di R-312 butir 1 dan **12** parquet karantina di R-313 berarti berbeda;
+   **kesamaan itu DILARANG dibaca sebagai konfirmasi apa pun**. **[v55] Kredit atribusi
+   dikoreksi:** larangan ini **berasal dari praregistrasi** — syarat gugur nomor 3 di
+   docstring modul dan jurnal 136 — **bukan** dari adjudikasi.
 
-1. **DILARANG** mengatakan pita R-312 butir 1 (12..120) "tidak terbantah".
-2. **DILARANG** mengatakan kalibrasi membaik atau memburuk karena R-312.
-3. **DILARANG** menghitung R-312 di pembilang maupun penyebut nisbah kemenangan.
-4. **DILARANG** menghidupkannya kembali dengan alasan penjelasannya kini ditemukan.
-5. Angka **12** yang muncul di R-313 adalah cacah **parquet karantina** — arti yang
-   berbeda dari 12 di R-312 butir 1. **Kesamaan itu DILARANG dibaca sebagai konfirmasi
-   apa pun** (syarat gugur nomor 3, jurnal 136).
+**[v55] Yang harus diakui sebagai kredit, terbaca dari kode:** docstring memuat **empat
+syarat gugur yang dikunci di muka**, dan syarat 1 berbunyi bahwa medan identik di
+seluruh baris menghasilkan **TIDAK TERADJUDIKASI (aturan 41), bukan MELESET**. Vonis
+atas R-312 karena itu **bukan rasionalisasi pasca-hoc**: ia syarat gugur yang terpicu
+persis sebagaimana dirumuskan. Disiplin prosedural R-312 hampir seluruhnya benar —
+pita terkunci, lantai dihitung, tiga tautologi dibuang tertulis, butir MUDAH ditandai
+di muka. **Yang gagal satu hal: tidak ada yang memeriksa apakah besaran yang
+diramalkan bisa ada.** Prosedur yang rapi tidak menyelamatkan poros yang mustahil.
 
-## R-313 — ADJUDIKASI RESMI: TEPAT (kedua butir)
+**Syarat praregistrasi baru yang lahir darinya (berlaku mulai R-314):** kebebasan
+setiap medan yang dipakai dalam sebuah poros **WAJIB diperiksa terhadap kode sumbernya
+lebih dulu, tertulis, sebelum pita dikunci.**
+
+## R-313 — ADJUDIKASI RESMI: TEPAT (2/2), dengan cacat yang tidak diputihkan
 
 | butir | berisiko | ramalan | terukur | hasil |
 | --- | --- | --- | --- | --- |
-| 1 — Σ `baris_karantina` | ya, titik tunggal | **516.135** | **516.135** | **TEPAT** (selisih 0) |
-| 2 — Σ parquet karantina | ya, titik tunggal | **12** | **12** | **TEPAT** (selisih 0) |
+| 1 — Σ `baris_karantina` | ya, titik tunggal | **516.135** | **516.135** | **TEPAT** |
+| 2 — Σ parquet karantina | ya, titik tunggal | **12** | **12** | **TEPAT** |
 
-Diregistrasikan lengkap sesudah `pulihkan.py` dibaca tetapi **sebelum** laporan pertama
-dibuka. Penggugur dipasang di muka: satu laporan hilang → TIDAK TERADJUDIKASI.
-Kedelapan ada.
+**PELANGGARAN ATURAN 79, DIAKUI DAN TIDAK DIPUTIHKAN.** Praregistrasi ditulis **di
+chat**, bukan `journal/**`. Dikutip kata demi kata di jurnal 140 §2, tetapi saksinya
+**riwayat percakapan, bukan git**. **Bila kelak seseorang menolak mengakui R-313,
+penolakan itu sah** — kalimat ini wajib ikut setiap kali R-313 dikutip sebagai
+kemenangan.
 
-**Yang DILARANG diklaim darinya:** bahwa kalibrasi membaik. Satu kemenangan bukan
-tren, dan larangan KC-51 berlaku sama ke arah sebaliknya. R-313 juga tidak menyentuh
-satu pun besaran yang sebarannya belum diukur — ia menjumlahkan angka yang sudah
-tercatat — sehingga **ia bukan bukti bahwa KC-51 melemah**.
+**DILARANG** membaca R-313 sebagai bukti kalibrasi membaik. Ia menjumlahkan angka yang
+sudah tercatat di repo, bukan menaksir sebaran yang belum diukur. Nilai ilmiahnya ada
+pada identitas yang ditutupnya, **bukan** pada ketepatan ramalannya.
 
 ## R-311 — ADJUDIKASI RESMI: SEPARUH (tidak berubah)
 
@@ -378,15 +435,11 @@ tercatat — sehingga **ia bukan bukti bahwa KC-51 melemah**.
 | 2 — bagian sepuluh teratas | ya | 0,02 .. 0,45 | **0,4087** | **MENANG** |
 | 3 — penggugur bersih + invarian nol | tidak | — | bersih | menang, tidak diskor |
 
-**Rumusan resmi (ADR-A018 kep. 3) — satu-satunya yang boleh dikutip:** dari **17.398**
-baris bukan-pertama dan bukan-MATI, hanya **114** (**0,66%**) berdefisit; keseratus
-empat belas menanggung **712.925** lilin, rata-rata **6.254**; sepuluh teratas
-menanggung **291.379**, yaitu **0,4087**; terbesar **TLMUSDT 2023-03**, HIDUP,
-**2.130 dari 44.640** lilin (**95,2% kosong**).
-
-Larangan penyertanya tetap berlaku seluruhnya: 712.925 bukan pengukuran bebas (KC-50,
-KC-37); "114 seluruhnya HIDUP/SEPI, nol MATI" bukan temuan; tidak satu kalimat pun
-boleh menyimpulkan tentang harga; butir 2 menang **TIPIS ke tepi ATAS**.
+**Rumusan resmi (ADR-A018 kep. 3):** dari **17.398** baris bukan-pertama dan
+bukan-MATI, hanya **114** (**0,66%**) berdefisit; keseratus empat belas menanggung
+**712.925** lilin, rata-rata **6.254**; sepuluh teratas menanggung **291.379**, yaitu
+**0,4087**; terbesar **TLMUSDT 2023-03**, HIDUP, **2.130 dari 44.640** lilin. Larangan
+penyertanya berlaku seluruhnya; butir 2 menang **TIPIS ke tepi ATAS**.
 
 ## Kelas cacat
 
@@ -394,7 +447,7 @@ KC-1 s.d. KC-12 seperti v19; KC-10, KC-11 DITUTUP. KC-13 keterwakilan sampel. **
 DITARIK — nomornya TETAP kosong selamanya.** KC-17 DITUTUP. Teks penuh KC-14, KC-15,
 KC-19..KC-29 di v37 (`f520d5e2`). KC-30..KC-42 di v43 (`a91a4934`). KC-43, KC-44 di
 v44. KC-45, KC-46 di v45. KC-47 di v46. KC-48 di v47. KC-49 di v48. KC-50 di v50.
-KC-51 teks penuh di v52/v53. **KC-52 teks penuh di bawah.**
+KC-51 teks penuh di v52/v53. **KC-52 teks penuh di v54 dan diringkas di berkas ini.**
 
 Ringkas KC-19..KC-51 satu baris: KC-19 mencacah dari ingatan · KC-20 bias ke bawah ·
 KC-21 ketiadaan gejala dari ketiadaan pengukuran · KC-22 mekanisme dipindah · KC-23
@@ -415,37 +468,26 @@ belum diukur · KC-49 pita dikunci tanpa aritmetika implikasi · KC-50 agregat l
 jalan memutar · KC-51 bias taksiran pemusatan.
 
 **KC-41 — tetap berlaku.** Berkas SUMBER menang, dengan pengecualian tersurat untuk
-**kesepuluh** butir di tabel atas.
+kesebelas butir di tabel kesalahan dokumen. **[v55] KC-41 dilanggar oleh jurnal 141
+sendiri** ketika ia menuduh EKOR v13 tanpa membacanya — dicatat, dicabut, tidak
+diputihkan.
 
-**KC-51 — [v54] tidak mendapat kejadian kelima.** Keempat kejadiannya tetap berdiri
-tanpa pembalikan arah. R-312 tidak menambah kejadian (tidak teradjudikasi); R-313 tidak
-menambah pembalikan (ia bukan taksiran atas sebaran yang belum diukur).
+**KC-51 — [v55] tidak mendapat kejadian kelima.**
 
-### KC-52 (RESMI sejak berkas ini) — dan langsung DITUTUP
-
-**Dua penyebut berbeda diperlakukan sebagai satu. Rumusan resmi:**
+**KC-52 (RESMI sejak v54, DITUTUP).** Rumusan resmi:
 
 > Ketika dua angka besar atas "semesta yang sama" tidak cocok, kemungkinan pertama yang
 > wajib diperiksa bukanlah bahwa salah satunya keliru, melainkan bahwa keduanya
 > **mencacah himpunan yang berbeda**. Selisih yang tak terjelaskan adalah dugaan tentang
 > **batas himpunan**, bukan tentang mutu pengukuran.
 
-**Kejadiannya:** 839.325.999 lawan 839.842.134, selisih 516.135, hidup sejak jurnal
-131 dan bertahan berpuluh giliran. Sepanjang itu ia diperlakukan berturut-turut sebagai
-salah aritmetika, lalu sebagai kemungkinan cacat pembaca, lalu sebagai kemungkinan
-salah satu angka keliru. **Ketiganya salah.** Batas himpunannya berbeda: satu
-mengecualikan 12 simbol-bulan karantina, satu tidak.
-
-**Ia DITUTUP pada giliran yang sama ia diresmikan**, sebab jawabannya terukur penuh
-(lihat bagian KC-52 di atas). Ia tetap dicatat sebagai kelas cacat karena bentuk
-kesalahannya akan berulang: repo ini punya **beberapa** penyebut yang mirip — 19.586
-lawan 19.598, 880 lawan 877 lubang funding, 18.799 lawan 17.398 — dan tiap pasang itu
+**[v55] Kemunculan kedua KC-52 tercatat:** ia hidup **di dalam kode**, pada docstring
+`selisih_lilin.py`, bukan hanya di dokumen. Kelas cacat ini karena itu **DITUTUP
+sebagai teka-teki, tetapi TETAP HIDUP sebagai pola**: repo ini punya beberapa penyebut
+mirip — 19.586 lawan 19.598, **880 lawan 877**, 18.799 lawan 17.398 — dan tiap pasang
 adalah undangan bagi kesalahan yang sama.
 
-**Kerabat:** KC-25 (batas semesta tak tersurat), KC-36 (homonim), KC-39 (dua penyebut
-bulan absen dicampur), aturan 44 (ramalan wajib menyebut penyebut).
-
-**Kelas cacat berikutnya yang bebas: KC-53.**
+**Kerabat:** KC-25, KC-36, KC-39, aturan 44. **Kelas cacat berikutnya: KC-53.**
 
 ## Hipotesis
 
@@ -455,12 +497,19 @@ adalah SATU peristiwa; jendelanya sembilan lilin (39.308..39.317). **DILARANG** 
 
 **H-A021 (DIUSULKAN, BELUM DIUJI)** — **ANCUSDT 2022-05** (defisit 26.959) dan
 **LUNAUSDT 2022-05** (26.950) adalah SATU peristiwa. Dasarnya HANYA selisih sembilan
-lilin — **kebetulan angka, bukan bukti**. Bila kelak DITERIMA: cacah pengamatan bebas
-sepuluh teratas turun 10→9, dan `bagian_teratas` **TIDAK berubah**.
+lilin — **kebetulan angka, bukan bukti**. Bila DITERIMA: cacah pengamatan bebas sepuluh
+teratas turun 10→9, dan `bagian_teratas` **TIDAK berubah**.
 
-**H-A022 — TERBUKTI (berkas ini).** Selisih 516.135 adalah cacah baris parquet dari 12
-simbol-bulan karantina yang berada di luar penyebut 19.586. Terbukti pada rumusannya
-yang tepat, lewat R-313, dengan selisih nol pada dua butir.
+**H-A022 — TERBUKTI (ADR-A019 kep. 6), dengan batas tafsir MENGIKAT:**
+
+- Yang terbukti adalah **identitas himpunan**, **bukan** sebab kedua belas simbol-bulan
+  itu dikarantina.
+- **Identitas kedua belas simbol-bulan BELUM DIDAFTAR.** Nama simbol dan bulannya tidak
+  diketahui.
+- **DILARANG** menulis kalimat apa pun tentang **jenis** instrumen yang dikarantina.
+
+**Turunan cuma-cuma yang ikut resmi:** `cacah_baris_cacat` = **0 di seluruh semesta** —
+tidak satu pun dari 839.325.999 baris gagal diurai. Didapat **tanpa run tambahan**.
 
 **Peringatan yang menempel pada H-A020 dan H-A021:** bentuk buktinya IDENTIK, dan
 pengulangan bentuk itu patut dicurigai. Uji yang menegakkan atau meruntuhkan keduanya:
@@ -474,8 +523,8 @@ Hipotesis berikutnya **H-A023**.
 - **`STATE_LAMPIRAN.md`** (`f2b90764`, 2.350 B) — HIDUP sebagai arsip naratif
   (L-1..L-5). Tidak memuat angka semesta.
 - **`STATE_LAMPIRAN_ANGKA.md`** (`f3ebdb02`, 1.841 B) — HIDUP tetapi hampir kosong.
-  `N_percobaan` = 0. Memuat klaim TERLARANG (Signals 10.032 / +189,41R / PF 1,61 dan
-  seluruh tabel tuning `AUDIT.md`). **Jangan dicampur dengan penyebut 19.586** (KC-36).
+  `N_percobaan` = 0. Memuat klaim TERLARANG (Signals 10.032 / +189,41R / PF 1,61).
+  **Jangan dicampur dengan penyebut 19.586** (KC-36).
 - **`PETA_MODUL.md`** (`9ee33a99`, 8.691 B) — HIDUP, seluruhnya tentang repo WARISAN
   `bot_v8`. **(i) `backtest.py` TIDAK memodelkan funding sama sekali**; **(ii) temuan F
   = kebocoran seleksi harfiah**. **Tiga butir "memerlukan verifikasi" TETAP UTANG
@@ -487,7 +536,7 @@ Hipotesis berikutnya **H-A023**.
   PROMPT v48 dan **setiap angka posisinya salah**. Perintahnya *"Jangan berhenti dengan
   alasan konteks Notion"* **bertabrakan langsung dengan perintah operator**; **perintah
   operator menang**. Pekerjaan tersisa: beri kepala "ARSIP — BUKAN SUMBER" atau hapus.
-  **[v54] Masih belum dikerjakan.**
+  **[v55] Masih belum dikerjakan.**
 - `STATE_LAMPIRAN_ADR.md` (`a02ef271`) tetap **arsip, bukan sumber**.
 
 ## Larangan aktif — jangan dilanggar
@@ -503,60 +552,67 @@ Hipotesis berikutnya **H-A023**.
 - **Menyebut "cacah uji" tanpa menyebut repo-nya DILARANG.**
 - **`PROMPT_KELANJUTAN.md` DILARANG dipakai sebagai sumber.**
 - **Kemenangan pita yang menempel tepi DILARANG dibaca sebagai kalibrasi membaik**
-  (KC-51) — **dan [v54] R-313 pun DILARANG dibaca demikian**.
+  (KC-51) — **dan R-313 pun DILARANG dibaca demikian**.
 - Ramalan CI yang laporannya sudah tertimpa **DILARANG diklaim menang**.
-- **[v54] Kelima larangan R-312** di bagian adjudikasinya berlaku penuh.
-- **[v54] DICABUT:** larangan memperlakukan 839.842.134 dan 839.325.999 sebagai
-  berbeda keterpercayaan. Keduanya kini terbukti benar atas himpunan masing-masing;
-  yang DILARANG sekarang adalah **memakai salah satunya tanpa menyebut penyebutnya**.
+- **Kelima larangan R-312** berlaku penuh.
+- **DILARANG memakai 839.325.999 / 516.135 / 839.842.134 tanpa menyebut penyebutnya.**
+- **DILARANG menyebut *jenis* instrumen yang dikarantina** sampai 12 simbol-bulan
+  didaftar; tafsir "tiap karantina kira-kira sebulan penuh" **TIDAK ditegakkan**.
+- **[v55] DILARANG menulis bahwa aturan 52 menjaga mutu penalaran ATAS DOKUMEN.**
+  Diizinkan mencatat bahwa ia melakukannya **atas kode**, dengan satu kejadian terukur.
+- **[v55] DILARANG menyebut aturan 79 lemah, longgar, atau opsional.**
+- **[v55] DILARANG menuduh isi sebuah berkas tanpa membacanya ulang** — pelajaran dari
+  butir 11.
 
 ## Angka semesta yang mengikat
 
 Penyebut **19.586** (LOLOS gerbang) · semesta rilis penuh **19.598** = 19.586 + **12**
-karantina (**terukur**, bukan turunan) · `cacah_simbol` **787** · bukan-pertama
-**18.799** · HIDUP **18.087** · SEPI **98** · MATI **1.401** (penuh 1.392 / tak penuh
-9) · `cacah_lain` **0** · `defisit_total` **18.143.601** · `defisit_pertama`
-**17.335.439** (95,5%; rata 22.027; keterisian ≈49,7%) · `defisit_bukan_pertama`
-**808.162** (0,0445) · `defisit_sembilan` **95.237** (0,1178) · sisa **712.925** · calon
-**17.398** · calon penuh **17.284** · calon berdefisit **114** (0,66%) ·
-`defisit_teratas` **291.379** · `bagian_teratas` **0,4087** · `defisit_terbesar`
-**42.510** · rata **6.254** · **baris parquet lolos gerbang 839.325.999** · **baris
-parquet karantina 516.135** · **baris parquet rilis penuh 839.842.134** ·
-`cacah_baris_cacat` **0** di seluruh semesta · total byte parquet **32.706.262.375** ·
-`byte_mati` **579.041.399** · `cacah_hidup_byte_kecil` **38** · `cacah_mati_byte_kecil`
-**2** · bulan pertama HIDUP **769** + SEPI **18** = 787 ✅ · lubang funding **880**
-semesta / **877** dalam penyebut / 3 tak dikenal · `cacah_simbol_ada_lubang` **122** ·
-jumlah uji **1377** (repo riset ini).
+karantina (**terukur**) · `cacah_simbol` **787** · bukan-pertama **18.799** · HIDUP
+**18.087** · SEPI **98** · MATI **1.401** (penuh 1.392 / tak penuh 9) · `cacah_lain`
+**0** · `defisit_total` **18.143.601** · `defisit_pertama` **17.335.439** (95,5%; rata
+22.027; keterisian ≈49,7%) · `defisit_bukan_pertama` **808.162** (0,0445) ·
+`defisit_sembilan` **95.237** (0,1178) · sisa **712.925** · calon **17.398** · calon
+penuh **17.284** · calon berdefisit **114** (0,66%) · `defisit_teratas` **291.379** ·
+`bagian_teratas` **0,4087** · `defisit_terbesar` **42.510** · rata **6.254** · **baris
+parquet lolos gerbang 839.325.999** · **baris parquet karantina 516.135** · **baris
+parquet rilis penuh 839.842.134** · `cacah_baris_cacat` **0** di seluruh semesta ·
+total byte parquet **32.706.262.375** · `byte_mati` **579.041.399** ·
+`cacah_hidup_byte_kecil` **38** · `cacah_mati_byte_kecil` **2** · bulan pertama HIDUP
+**769** + SEPI **18** = 787 ✅ · lubang funding **880** semesta / **877** dalam penyebut
+/ 3 tak dikenal · `cacah_simbol_ada_lubang` **122** · jumlah uji **1377** (repo riset
+ini).
 
 ## Ke bagian 2 dan 3
 
-**Utang lampiran yang lahir dari berkas ini — besar:** EKOR **v13** dan UKUR **v13**
-wajib menaikkan kepala ke "milik STATE v54" dan memasukkan: papan skor **313**, R-312
-TIDAK TERADJUDIKASI, R-313 TEPAT, pemakaian aturan 38 **ke-43/44/45**, jumlah uji
-**1377**, aturan 57 beruntun **4/4**, jurnal 136–140, trio `selisih_lilin`, **KC-52**,
-**H-A022 TERBUKTI**, usulan **aturan 86**, API `pulihkan` V2 dan `kehidupan_arsip`, dan
-daftar kesalahan dokumen yang kini **sepuluh**.
+**Utang lampiran yang lahir dari berkas ini:** EKOR **v14** dan UKUR **v14** wajib
+menaikkan kepala ke "milik STATE v55" dan memasukkan: **aturan 86 RESMI**, ADR-A019
+(sepuluh keputusan), **aturan 79 dirumuskan ulang bukan dilemahkan**, **tiga blob
+trio** dan lunasnya utang aturan 52, **temuan arah selisih R-312**, **butir 11 daftar
+kesalahan dokumen** berikut pencabutan tuduhan terhadap EKOR v13, aturan 38 **ke-46,
+ke-47, ke-48**, jurnal **141**, dan penyempitan larangan tentang aturan 52.
 
 ## Penomoran berikutnya
 
-Jurnal **141** · STATE **v55** · EKOR **v13** · UKUR **v13** · PROMPT **v55** · ADR
-**A019** · KC **KC-53** · aturan **87** (86 diusulkan) · hipotesis **H-A023** · ramalan
-**R-314** · papan skor **313**.
+Jurnal **142** · STATE **v56** · EKOR **v14** · UKUR **v14** · PROMPT **v55** · ADR
+**A020** · KC **KC-53** · aturan **87** · hipotesis **H-A023** · ramalan **R-314** ·
+papan skor **313**.
 
-**Poros yang tersisa, urut prioritas:**
+**Poros yang tersisa, urut prioritas (ADR-A019 kep. 9):**
 
-- **(a) Lubang tengah gugus `2022-05` dan `2024-05`** — menguji H-A021 dan H-A020
-  sekaligus. **Kini poros tunggal dengan prioritas tertinggi**, sebab poros (b) selesai.
-- **(b) Irisan 880 lawan 877 lubang funding** — kandidat KC-52 berikutnya: dua penyebut
-  mirip yang belum pernah dijajarkan.
-- **(c) Sebab kekosongan TLMUSDT 2023-03** — baris paling kosong di semesta, berstatus
-  HIDUP.
+1. **Lubang tengah gugus `2022-05` dan `2024-05`** — poros tunggal berprioritas
+   tertinggi; menguji **H-A020 dan H-A021 sekaligus**.
+2. **Identitas dua belas simbol-bulan karantina** — kandidat **termurah**; manifesnya
+   sudah ada di `reports/manifes_pecahan_<i>.json`. **Aturan 86 berlaku penuh di sini.**
+3. **Irisan 880 lawan 877 lubang funding** — kandidat KC-52 berikutnya.
+4. Sebab kekosongan TLMUSDT `2023-03`.
+5. "Bulan pertama di penyebut" lawan "bulan pertama di bursa" (ADR-A016 kep. 6).
+6. Tebing `2025-07` dan BTCSTUSDT.
 
-Sebelum pita dikunci, seluruhnya WAJIB: aturan **79** (praregistrasi di `journal/**`),
-**83** (aritmetika implikasi lebih dulu), **85** (tepi "terpusat" di lantai aritmetis
-atau paling banyak satu orde di atasnya, dengan alasan tertulis), **84** (klausa
-tunggal), **KC-50** (agregat lewat jalur LANGSUNG), **KC-52** (batas himpunan tiap
-angka disebut tersurat), aturan **66** (cacah tangan sebelum menamai modul), dan
-`BATAS_BARIS_LAPORAN` ringkas. **Usulan aturan 86 berlaku sebagai kebiasaan kerja
-sejak sekarang meski belum resmi:** baca berkasnya, periksa `reports/`, baru tulis
-pengukur.
+**Syarat praregistrasi R-314 — kumulatif, seluruhnya WAJIB:** aturan **79** (di
+`journal/**`, giliran berbeda dari adjudikasi) · **83** (lantai aritmetis dihitung
+tertulis) · **84** (satu klausa per butir) · **85** (tepi "terpusat" di lantai
+aritmetis atau paling banyak satu orde di atasnya, dengan alasan tertulis) · **86**
+(`reports/` diperiksa lebih dulu) · **pemeriksaan kebebasan medan terhadap kode
+sumbernya, tertulis, sebelum pita dikunci** · **KC-50** (agregat lewat jalur LANGSUNG)
+· **KC-52** (batas himpunan tiap angka disebut tersurat) · aturan **66** (cacah tangan
+sebelum menamai modul).

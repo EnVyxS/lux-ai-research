@@ -1,0 +1,327 @@
+{
+  "ambang_hidup_kecil": 97634,
+  "ambang_mati_kecil": 150000,
+  "bagian_hidup_byte_kecil": 0.0021009564880853653,
+  "bagian_mati_byte_kecil": 0.0014275517487508922,
+  "byte_hidup": 32049492952,
+  "byte_lain": 0,
+  "byte_mati": 579041399,
+  "byte_sepi": 77728024,
+  "cacah_hidup": 18087,
+  "cacah_hidup_byte_kecil": 38,
+  "cacah_lain": 0,
+  "cacah_laporan_hilang": 0,
+  "cacah_mati": 1401,
+  "cacah_mati_byte_kecil": 2,
+  "cacah_sepi": 98,
+  "daftar_hidup_kecil": [
+    {
+      "bulan": "2024-01",
+      "byte": 22440,
+      "simbol": "JUPUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "byte": 24551,
+      "simbol": "TIAUSDT"
+    },
+    {
+      "bulan": "2024-04",
+      "byte": 32164,
+      "simbol": "REZUSDT"
+    },
+    {
+      "bulan": "2023-10",
+      "byte": 33257,
+      "simbol": "SLPUSDT"
+    },
+    {
+      "bulan": "2024-02",
+      "byte": 34175,
+      "simbol": "PORTALUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "byte": 34673,
+      "simbol": "NAORISUSDT"
+    },
+    {
+      "bulan": "2024-10",
+      "byte": 35511,
+      "simbol": "TROYUSDT"
+    },
+    {
+      "bulan": "2023-06",
+      "byte": 36580,
+      "simbol": "MDTUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "byte": 36742,
+      "simbol": "COSUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 36768,
+      "simbol": "GUNUSDT"
+    },
+    {
+      "bulan": "2025-10",
+      "byte": 37116,
+      "simbol": "CCUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "byte": 37327,
+      "simbol": "MAGMAUSDT"
+    },
+    {
+      "bulan": "2025-12",
+      "byte": 38486,
+      "simbol": "COLLECTUSDT"
+    },
+    {
+      "bulan": "2023-02",
+      "byte": 39079,
+      "simbol": "CKBUSDT"
+    },
+    {
+      "bulan": "2023-04",
+      "byte": 39749,
+      "simbol": "EDUUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "byte": 41514,
+      "simbol": "AIOTUSDT"
+    },
+    {
+      "bulan": "2025-04",
+      "byte": 42561,
+      "simbol": "PUNDIXUSDT"
+    },
+    {
+      "bulan": "2020-01",
+      "byte": 42678,
+      "simbol": "ADAUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "byte": 44460,
+      "simbol": "VFYUSDT"
+    },
+    {
+      "bulan": "2025-07",
+      "byte": 44508,
+      "simbol": "PLAYUSDT"
+    },
+    {
+      "bulan": "2020-06",
+      "byte": 44898,
+      "simbol": "COMPUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 45246,
+      "simbol": "MLNUSDT"
+    },
+    {
+      "bulan": "2025-09",
+      "byte": 45883,
+      "simbol": "EDENUSDT"
+    },
+    {
+      "bulan": "2020-07",
+      "byte": 46447,
+      "simbol": "RLCUSDT"
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 47831,
+      "simbol": "FUNUSDT"
+    },
+    {
+      "bulan": "2021-03",
+      "byte": 51322,
+      "simbol": "MTLUSDT"
+    },
+    {
+      "bulan": "2020-08",
+      "byte": 54929,
+      "simbol": "YFIUSDT"
+    },
+    {
+      "bulan": "2021-08",
+      "byte": 58161,
+      "simbol": "ATAUSDT"
+    },
+    {
+      "bulan": "2021-11",
+      "byte": 62845,
+      "simbol": "ENSUSDT"
+    },
+    {
+      "bulan": "2021-12",
+      "byte": 63592,
+      "simbol": "ROSEUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 72819,
+      "simbol": "SQQQUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 80394,
+      "simbol": "TLMUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 81419,
+      "simbol": "AMBUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 82330,
+      "simbol": "TQQQUSDT"
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 86126,
+      "simbol": "MVLLUSDT"
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 89724,
+      "simbol": "LEVERUSDT"
+    },
+    {
+      "bulan": "2026-01",
+      "byte": 94575,
+      "simbol": "INXUSDT"
+    },
+    {
+      "bulan": "2020-09",
+      "byte": 94658,
+      "simbol": "ENJUSDT"
+    }
+  ],
+  "daftar_mati_kecil": [
+    {
+      "bulan": "2020-11",
+      "byte": 97634,
+      "simbol": "LENDUSDT"
+    },
+    {
+      "bulan": "2024-09",
+      "byte": 109120,
+      "simbol": "FRONTUSDT"
+    }
+  ],
+  "hasil": {
+    "butir1": {
+      "menang": true,
+      "nilai": 38,
+      "penyebut": 18087,
+      "pita": [
+        20,
+        600
+      ],
+      "teradjudikasi": true
+    },
+    "butir2": {
+      "menang": false,
+      "nilai": 2,
+      "penyebut": 1401,
+      "pita": [
+        10,
+        300
+      ],
+      "teradjudikasi": true
+    },
+    "butir3": {
+      "kendali_data_sah": true,
+      "kendali_deteksi_sah": true,
+      "menang": true,
+      "selisih_semua_nol": true,
+      "teradjudikasi": true
+    },
+    "butir3_menang": true,
+    "menang_semua": false
+  },
+  "kendali_data": [
+    {
+      "bulan": "2021-01",
+      "cocok": true,
+      "harap": 2722266,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2722266
+    },
+    {
+      "bulan": "2021-05",
+      "cocok": true,
+      "harap": 2770666,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2770666
+    },
+    {
+      "bulan": "2021-08",
+      "cocok": true,
+      "harap": 2730341,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2730341
+    }
+  ],
+  "kendali_data_sah": true,
+  "kendali_deteksi": {
+    "ambang": 50,
+    "harap_hidup": 2,
+    "harap_mati": 1,
+    "harap_total_byte": 1922,
+    "hidup_kecil": 2,
+    "mati_kecil": 1,
+    "total_byte": 1922
+  },
+  "kendali_deteksi_sah": true,
+  "laporan_hilang": [],
+  "penyebut": 19586,
+  "sebaran": {
+    "HIDUP": {
+      "cacah": 18087,
+      "jumlah": 32049492952,
+      "maks": 2770666,
+      "min": 22440,
+      "rata": 1771962.899
+    },
+    "MATI": {
+      "cacah": 1401,
+      "jumlah": 579041399,
+      "maks": 451875,
+      "min": 97634,
+      "rata": 413305.781
+    },
+    "SEPI": {
+      "cacah": 98,
+      "jumlah": 77728024,
+      "maks": 1231408,
+      "min": 259327,
+      "rata": 793143.102
+    }
+  },
+  "selisih_byte_hidup": 0,
+  "selisih_byte_mati": 0,
+  "selisih_byte_sepi": 0,
+  "selisih_cacah_hidup": 0,
+  "selisih_cacah_mati": 0,
+  "selisih_cacah_sepi": 0,
+  "selisih_penyebut": 0,
+  "selisih_simbol": 0,
+  "selisih_total_byte": 0,
+  "sidik_kode": "0e7103ef46a37d1e442d8e7fc5b9771b1ef7cdc3956ea57d584d84f6f73ea2c6",
+  "simbol": 787,
+  "total_byte": 32706262375,
+  "versi": 1
+}

@@ -1,0 +1,196 @@
+{
+  "baris_terukur_byte_kecil": [],
+  "bukan_bukti": false,
+  "cacah_baris_terukur_byte_kecil_dilapor": 0,
+  "cacah_baris_terukur_byte_kecil_seluruhnya": 0,
+  "catatan_daftar": "baris_terukur_byte_kecil dibatasi BATAS_BARIS_LAPORAN dan BUKAN daftar lengkap; pakai cacah_baris_terukur_byte_kecil_seluruhnya untuk cacah (aturan 62, KC-24)",
+  "catatan_penggugur": "sidik_seragam false, laporan pecahan kurang, kunci ganda, kendali data atau kendali detektor tidak sah, atau salah satu dari sembilan selisih bukan nol membatalkan seluruh angka (aturan 24)",
+  "catatan_tafsir": "irisan BUKAN sebab (aturan 10): byte kecil yang berbarengan dengan status MATI tidak membuktikan salah satu menyebabkan yang lain; besar berkas juga dipengaruhi pemadatan parquet, bukan hanya cacah lilin",
+  "definisi": {
+    "byte_kecil": "byte_parquet < 10000, perbandingan STRIKT",
+    "kelas_LAIN": "sisanya, dilarang ikut butir 2",
+    "kelas_MATI": "status MATI",
+    "kelas_TERUKUR": "status HIDUP atau SEPI",
+    "total_byte": "jumlah byte_parquet seluruh simbol-bulan di dalam penyebut"
+  },
+  "hipotesis": "H-A018",
+  "kendali_deteksi": {
+    "agregat_kendali": {
+      "ambang_byte_kecil": 50,
+      "bagian_byte_mati": 0.09363295880149813,
+      "bagian_byte_terukur": 0.903558052434457,
+      "byte_lain": 3,
+      "byte_mati": 100,
+      "byte_terukur": 965,
+      "cacah_baris": 6,
+      "cacah_byte_nol": 0,
+      "cacah_lain": 1,
+      "cacah_lain_byte_kecil": 1,
+      "cacah_mati": 1,
+      "cacah_mati_byte_kecil": 0,
+      "cacah_terukur": 4,
+      "cacah_terukur_byte_kecil": 2,
+      "total_byte": 1068
+    },
+    "ambang_kendali": 50,
+    "baris_kendali_kecil": [
+      {
+        "bulan": "2024-01",
+        "byte_parquet": 5,
+        "simbol": "KENDALI_SEPI",
+        "status": "SEPI"
+      },
+      {
+        "bulan": "2024-01",
+        "byte_parquet": 10,
+        "simbol": "KENDALI_KECIL",
+        "status": "HIDUP"
+      }
+    ],
+    "catatan": "baris tepat di ambang wajib tidak terhitung kecil (perbandingan strikt) dan baris kelas LAIN berbyte kecil wajib tidak masuk butir 2",
+    "kendali_deteksi_sah": true
+  },
+  "praregistrasi_r307": {
+    "ambang_byte_kecil": 10000,
+    "butir_3": "MUDAH",
+    "hipotesis": "H-A018",
+    "jurnal": "journal/2026-07-30-127.md",
+    "pita_butir_1": [
+      0.02,
+      0.15
+    ],
+    "pita_butir_2_cacah": [
+      20,
+      400
+    ]
+  },
+  "ringkasan": {
+    "ambang_byte_kecil": 10000,
+    "bagian_byte_mati": 0.017704297493883234,
+    "bagian_byte_terukur": 0.9822957025061168,
+    "byte_lain": 0,
+    "byte_mati": 579041399,
+    "byte_terukur": 32127220976,
+    "cacah_bangkit": 8,
+    "cacah_baris": 19586,
+    "cacah_byte_nol": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_lain": 0,
+    "cacah_lain_byte_kecil": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_lubang_dalam_penyebut": 877,
+    "cacah_lubang_funding": 880,
+    "cacah_lubang_ganda": 0,
+    "cacah_lubang_semesta": 880,
+    "cacah_mati": 1401,
+    "cacah_mati_byte_kecil": 0,
+    "cacah_simbol": 787,
+    "cacah_simbol_ada_lubang": 122,
+    "cacah_simbol_lubang_awal": 5,
+    "cacah_simbol_lubang_bukan_awal": 118,
+    "cacah_terukur": 18185,
+    "cacah_terukur_byte_kecil": 0,
+    "kendali": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "funding_ada": true,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_deteksi_sah": true,
+    "kendali_sah": true,
+    "laporan_hilang": [],
+    "penyebut_kehidupan": 19586,
+    "sebaran_byte_per_status": {
+      "HIDUP": {
+        "byte": 32049492952,
+        "byte_maks": 2770666,
+        "byte_min": 22440,
+        "byte_rata": 1771962.898877647,
+        "cacah": 18087
+      },
+      "MATI": {
+        "byte": 579041399,
+        "byte_maks": 451875,
+        "byte_min": 97634,
+        "byte_rata": 413305.78087080654,
+        "cacah": 1401
+      },
+      "SEPI": {
+        "byte": 77728024,
+        "byte_maks": 1231408,
+        "byte_min": 259327,
+        "byte_rata": 793143.1020408163,
+        "cacah": 98
+      }
+    },
+    "selisih_ada_lubang": 0,
+    "selisih_bangkit": 0,
+    "selisih_lubang_awal": 0,
+    "selisih_lubang_bukan_awal": 0,
+    "selisih_lubang_dalam_penyebut": 0,
+    "selisih_lubang_semesta": 0,
+    "selisih_mati": 0,
+    "selisih_penyebut": 0,
+    "selisih_simbol": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_byte": 32706262375,
+    "total_pecahan": 8
+  },
+  "sidik_data_funding": "2c9fbd1b04f74c9c844bc223a99a103d12220b88d08667b3792720e5b9608d24",
+  "sidik_kode": "e02aca2b3967069b500b01d27a1d2d1553f47b912ea41ddbecd9e4e6c33883c7",
+  "sidik_kode_lubang_awal": "156499ce9d6e822bb7f57786e8e308955441996699c1fd53d0e8814e1f8f2362",
+  "sidik_kode_silang_funding": "8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1",
+  "sumber": [
+    "reports/funding_semesta.json",
+    "reports/kehidupan_arsip_0.json",
+    "reports/kehidupan_arsip_1.json",
+    "reports/kehidupan_arsip_2.json",
+    "reports/kehidupan_arsip_3.json",
+    "reports/kehidupan_arsip_4.json",
+    "reports/kehidupan_arsip_5.json",
+    "reports/kehidupan_arsip_6.json",
+    "reports/kehidupan_arsip_7.json"
+  ],
+  "uji_r307": {
+    "butir_1": "KALAH",
+    "butir_1_bagian": 0.017704297493883234,
+    "butir_1_pita": [
+      0.02,
+      0.15
+    ],
+    "butir_1_total_byte": 32706262375,
+    "butir_2": "KALAH",
+    "butir_2_ambang_byte": 10000,
+    "butir_2_cacah": 0,
+    "butir_2_pita_cacah": [
+      20,
+      400
+    ],
+    "butir_3": true,
+    "catatan_butir_1": "total byte 0 berarti TIDAK TERADJUDIKASI, bukan KALAH (aturan 41)",
+    "catatan_butir_3": "MUDAH: hanya menyalin angka yang sudah terverifikasi"
+  },
+  "versi_byte_semesta": 1,
+  "waktu_utc": "2026-07-30T08:21:25Z"
+}
+

@@ -1,0 +1,80 @@
+{
+  "bulan_diharapkan": "2026-06",
+  "cacah_baris_tersisip_dicatat": 8,
+  "cacah_hidup": 18087,
+  "cacah_kunci_gagal_pisah": 0,
+  "cacah_kunci_ganda": 0,
+  "cacah_laporan_dibaca": 8,
+  "cacah_mati": 1401,
+  "cacah_sepi": 98,
+  "cacah_simbol": 787,
+  "cacah_simbol_bangkit": 8,
+  "cacah_simbol_berlabel": 787,
+  "cacah_simbol_bulan_tersisip": 88,
+  "cacah_simbol_bulan_tersisip_rapat": 0,
+  "cacah_simbol_tersisip": 8,
+  "cacah_simbol_tersisip_rapat": 0,
+  "deteksi": {
+    "cacah_rapat_pada_kendali_sisip": 1,
+    "cacah_sisip_pada_kendali_monoton": 0,
+    "cacah_sisip_pada_kendali_sisip": 1,
+    "diharapkan_monoton": 0,
+    "diharapkan_rapat": 1,
+    "diharapkan_sisip": 1,
+    "sah": true
+  },
+  "deteksi_sah": true,
+  "distribusi_tersisip": {
+    "0": 779,
+    "13+": 3,
+    "2": 2,
+    "6-12": 3
+  },
+  "kendali": [
+    {
+      "bulan": "2026-06",
+      "hidup": true,
+      "simbol": "BTCUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2026-06",
+      "hidup": true,
+      "simbol": "ETHUSDT",
+      "status": "HIDUP"
+    }
+  ],
+  "kendali_sah": true,
+  "laporan_hilang": [],
+  "penyebut_kehidupan": 19586,
+  "penyebut_simbol_bulan": 19586,
+  "r303": {
+    "butir_1": true,
+    "butir_2": true,
+    "butir_3_mudah": true,
+    "cacah_butir_menang": 3,
+    "cacah_simbol_bulan_tersisip": 88,
+    "cacah_simbol_tersisip": 8,
+    "catatan_butir_3": "butir 3 MUDAH: ia hanya menyalin angka terverifikasi",
+    "pembatal_a008_menyala": true,
+    "pita_butir_1_simbol": [
+      1,
+      60
+    ],
+    "pita_butir_2_simbol_bulan": [
+      1,
+      300
+    ]
+  },
+  "selisih_hidup": 0,
+  "selisih_mati": 0,
+  "selisih_penyebut": 0,
+  "selisih_sepi": 0,
+  "selisih_simbol": 0,
+  "sidik_kode_laporan": [
+    "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+  ],
+  "sidik_seragam": true,
+  "total_pecahan": 8,
+  "versi_tersisip_semesta": 1
+}

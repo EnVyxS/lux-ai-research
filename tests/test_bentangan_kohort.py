@@ -1,292 +1,417 @@
-"""Uji bentangan_kohort V1.
+"""Butir uji bentangan_kohort V2.
 
-Butir bernomor, tanpa parametrize (aturan 54/56/57). Seluruh butir bekerja atas
-data sintetis; tidak ada butir yang menuntut laporan nyata.
+Perbedaan pokok dengan V1: data sintetis di sini memakai BENTUK NYATA sumbernya
+— kunci TUPLE `(simbol, bulan)` dan kembalian PASANGAN dari `silang_funding` —
+sebab data sintetis yang bentuknya dikarang sendiri hanya menguji karangan itu
+(penangkal KC-43). Butir 47 memanggil `silang_funding` yang asli untuk memeriksa
+bentuk kembaliannya, bukan mengandaikannya.
 """
+from __future__ import annotations
 
-from lux_ai.serapan import bentangan_kohort as bk
-from lux_ai.serapan import kehidupan
+from pathlib import Path
 
-H = kehidupan.STATUS_HIDUP
-M = kehidupan.STATUS_MATI
-S = kehidupan.STATUS_SEPI
-T = kehidupan.STATUS_TAK_TERUKUR
+from lux_ai.serapan import (
+    bentangan_kohort as bk,
+    kehidupan,
+    kohort_ekor,
+    silang_funding,
+)
 
-
-# --- 1..6 pisah_kunci ---
-
-def test_01_pisah_kunci_pemisah_pipa():
-    assert bk.pisah_kunci("BNXUSDT|2022-04") == ("BNXUSDT", "2022-04")
-
-
-def test_02_pisah_kunci_pemisah_garis_bawah():
-    assert bk.pisah_kunci("BNXUSDT_2022-04") == ("BNXUSDT", "2022-04")
+HIDUP = kehidupan.STATUS_HIDUP
+MATI = kehidupan.STATUS_MATI
+SEPI = kehidupan.STATUS_SEPI
 
 
-def test_03_pisah_kunci_pemisah_hubung():
-    assert bk.pisah_kunci("LITUSDT-2025-12") == ("LITUSDT", "2025-12")
+def peta(**bulan):
+    """Peta {bulan: status} dengan bulan bertanda garis bawah, mis. b2025_07."""
+    return {k[1:].replace("_", "-"): v for k, v in bulan.items()}
 
 
-def test_04_pisah_kunci_tanpa_pemisah():
-    assert bk.pisah_kunci("LITUSDT2025-12") == ("LITUSDT", "2025-12")
+# --- pisah_kunci (bentuk kanon TUPLE) ---------------------------------------
 
 
-def test_05_pisah_kunci_nama_non_ascii():
-    assert bk.pisah_kunci("\u5e01\u5b89\u4eba\u751fUSDT/2023-05") == (
-        "\u5e01\u5b89\u4eba\u751fUSDT",
-        "2023-05",
+def test_01_pisah_kunci_tuple_kanon():
+    assert bk.pisah_kunci(("AAAUSDT", "2026-06")) == ("AAAUSDT", "2026-06")
+
+
+def test_02_pisah_kunci_daftar_dua_unsur_diterima():
+    assert bk.pisah_kunci(["AAAUSDT", "2025-07"]) == ("AAAUSDT", "2025-07")
+
+
+def test_03_pisah_kunci_tuple_panjang_salah_ditolak():
+    assert bk.pisah_kunci(("AAAUSDT", "2026-06", "1m")) is None
+
+
+def test_04_pisah_kunci_tuple_bulan_bukan_bulan_ditolak():
+    assert bk.pisah_kunci(("AAAUSDT", "Juni")) is None
+
+
+def test_05_pisah_kunci_tuple_simbol_kosong_ditolak():
+    assert bk.pisah_kunci(("", "2026-06")) is None
+
+
+def test_06_pisah_kunci_string_gabungan():
+    assert bk.pisah_kunci("AAAUSDT2026-06") == ("AAAUSDT", "2026-06")
+
+
+def test_07_pisah_kunci_string_berpemisah():
+    assert bk.pisah_kunci("AAAUSDT|2026-06") == ("AAAUSDT", "2026-06")
+
+
+def test_08_pisah_kunci_bukan_string_bukan_tuple_ditolak():
+    assert bk.pisah_kunci(2026) is None
+
+
+def test_09_pisah_kunci_string_tuple_dicetak_ditolak():
+    """Inilah cacat V1: str(tuple) berakhir dengan tanda kurung dan wajib ditolak."""
+    assert bk.pisah_kunci(str(("AAAUSDT", "2026-06"))) is None
+
+
+# --- kelompokkan ------------------------------------------------------------
+
+
+def test_10_kelompokkan_kunci_tuple():
+    status = {("A", "2026-05"): HIDUP, ("A", "2026-06"): MATI, ("B", "2026-06"): HIDUP}
+    hasil, gagal = bk.kelompokkan(status)
+    assert gagal == []
+    assert hasil == {"A": {"2026-05": HIDUP, "2026-06": MATI}, "B": {"2026-06": HIDUP}}
+
+
+def test_11_kelompokkan_melaporkan_kunci_gagal():
+    hasil, gagal = bk.kelompokkan({("A", "2026-06"): HIDUP, 7: MATI})
+    assert list(hasil) == ["A"]
+    assert gagal == ["7"]
+
+
+def test_12_kelompokkan_status_dijadikan_string():
+    hasil, _ = bk.kelompokkan({("A", "2026-06"): HIDUP})
+    assert hasil["A"]["2026-06"] == HIDUP
+
+
+# --- bulan_berstatus --------------------------------------------------------
+
+
+def test_13_bulan_berstatus_urut_menaik():
+    p = peta(b2026_06=HIDUP, b2026_04=HIDUP, b2026_05=MATI)
+    assert bk.bulan_berstatus(p, HIDUP) == ["2026-04", "2026-06"]
+
+
+def test_14_bulan_berstatus_kosong_bila_tak_ada():
+    assert bk.bulan_berstatus(peta(b2026_06=HIDUP), MATI) == []
+
+
+def test_15_bulan_berstatus_sepi_terpisah_dari_mati():
+    p = peta(b2026_05=SEPI, b2026_06=MATI)
+    assert bk.bulan_berstatus(p, SEPI) == ["2026-05"]
+
+
+# --- mati_tersisip ----------------------------------------------------------
+
+
+def test_16_mati_tersisip_terapit_dicacah():
+    p = peta(b2025_01=HIDUP, b2025_02=MATI, b2025_03=HIDUP)
+    assert bk.mati_tersisip(p) == 1
+
+
+def test_17_mati_tersisip_dua_bulan_terapit():
+    p = peta(b2025_01=HIDUP, b2025_02=MATI, b2025_03=MATI, b2025_04=HIDUP)
+    assert bk.mati_tersisip(p) == 2
+
+
+def test_18_mati_tersisip_ekor_tidak_dicacah():
+    p = peta(b2025_01=HIDUP, b2025_02=HIDUP, b2025_03=MATI)
+    assert bk.mati_tersisip(p) == 0
+
+
+def test_19_mati_tersisip_awal_tidak_dicacah():
+    p = peta(b2025_01=MATI, b2025_02=HIDUP, b2025_03=HIDUP)
+    assert bk.mati_tersisip(p) == 0
+
+
+def test_20_mati_tersisip_tanpa_hidup_nol():
+    assert bk.mati_tersisip(peta(b2025_01=MATI, b2025_02=MATI)) == 0
+
+
+def test_21_mati_tersisip_satu_hidup_saja_nol():
+    assert bk.mati_tersisip(peta(b2025_01=HIDUP, b2025_02=MATI)) == 0
+
+
+# --- bangkit ----------------------------------------------------------------
+
+
+def test_22_bangkit_benar_bila_hidup_sesudah_mati():
+    p = peta(b2025_02=MATI, b2026_01=HIDUP)
+    assert bk.bangkit(p) is True
+
+
+def test_23_bangkit_salah_bila_mati_di_ekor():
+    p = peta(b2025_02=HIDUP, b2026_01=MATI)
+    assert bk.bangkit(p) is False
+
+
+def test_24_bangkit_salah_tanpa_mati():
+    assert bk.bangkit(peta(b2025_02=HIDUP, b2026_01=HIDUP)) is False
+
+
+def test_25_bangkit_salah_tanpa_hidup():
+    assert bk.bangkit(peta(b2025_02=MATI)) is False
+
+
+# --- rentetan_terpanjang ----------------------------------------------------
+
+
+def test_26_rentetan_berurutan_kalender():
+    assert bk.rentetan_terpanjang(["2025-11", "2025-12", "2026-01"]) == 3
+
+
+def test_27_rentetan_diputus_celah():
+    assert bk.rentetan_terpanjang(["2025-01", "2025-02", "2025-05"]) == 2
+
+
+def test_28_rentetan_kosong_nol():
+    assert bk.rentetan_terpanjang([]) == 0
+
+
+def test_29_rentetan_bulan_cacat_diabaikan():
+    assert bk.rentetan_terpanjang(["2025-01", "bukan-bulan"]) == 1
+
+
+# --- ringkas_simbol ---------------------------------------------------------
+
+
+def test_30_ringkas_simbol_cacah_dasar():
+    p = peta(b2025_01=HIDUP, b2025_02=MATI, b2025_03=SEPI)
+    r = bk.ringkas_simbol("A", p)
+    assert (r["cacah_bulan"], r["cacah_hidup"], r["cacah_mati"], r["cacah_sepi"]) == (
+        3,
+        1,
+        1,
+        1,
     )
 
 
-def test_06_pisah_kunci_tolak_tanpa_bulan():
-    assert bk.pisah_kunci("BTCUSDT") is None
-    assert bk.pisah_kunci("2026-06") is None
+def test_31_ringkas_simbol_bulan_tepi():
+    p = peta(b2025_01=HIDUP, b2025_03=MATI)
+    r = bk.ringkas_simbol("A", p)
+    assert r["bulan_pertama"] == "2025-01" and r["bulan_terakhir"] == "2025-03"
 
 
-# --- 7..9 kelompokkan ---
-
-def test_07_kelompokkan_membentuk_peta_dua_tingkat():
-    per, gagal = bk.kelompokkan({"AUSDT|2025-01": H, "AUSDT|2025-02": M, "BUSDT|2025-01": S})
-    assert gagal == 0
-    assert per == {"AUSDT": {"2025-01": H, "2025-02": M}, "BUSDT": {"2025-01": S}}
-
-
-def test_08_kelompokkan_mencacah_kunci_gagal():
-    per, gagal = bk.kelompokkan({"AUSDT|2025-01": H, "rusak": M})
-    assert gagal == 1
-    assert list(per) == ["AUSDT"]
-
-
-def test_09_kelompokkan_peta_kosong():
-    assert bk.kelompokkan({}) == ({}, 0)
-
-
-# --- 10..12 bulan_berstatus ---
-
-def test_10_bulan_berstatus_terurut():
-    peta = {"2025-03": H, "2025-01": H, "2025-02": M}
-    assert bk.bulan_berstatus(peta, H) == ["2025-01", "2025-03"]
-
-
-def test_11_bulan_berstatus_kosong_bukan_galat():
-    assert bk.bulan_berstatus({"2025-01": M}, H) == []
-
-
-def test_12_bulan_berstatus_tak_terukur_terpisah():
-    peta = {"2025-01": T, "2025-02": M}
-    assert bk.bulan_berstatus(peta, T) == ["2025-01"]
-
-
-# --- 13..17 mati_tersisip ---
-
-def test_13_mati_tersisip_satu_sisipan():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": H}
-    assert bk.mati_tersisip(peta) == 1
-
-
-def test_14_mati_tersisip_ekor_bukan_sisipan():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": M}
-    assert bk.mati_tersisip(peta) == 0
-
-
-def test_15_mati_tersisip_sepi_tidak_mengapit():
-    peta = {"2025-01": S, "2025-02": M, "2025-03": H}
-    assert bk.mati_tersisip(peta) == 0
-
-
-def test_16_mati_tersisip_dua_sisipan():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": H, "2025-04": M, "2025-05": H}
-    assert bk.mati_tersisip(peta) == 2
-
-
-def test_17_mati_tersisip_rentetan_dua_bulan_bukan_sisipan_tunggal():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": M, "2025-04": H}
-    assert bk.mati_tersisip(peta) == 0
-
-
-# --- 18..21 bangkit ---
-
-def test_18_bangkit_hidup_sesudah_mati():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": M, "2025-04": H}
-    assert bk.bangkit(peta) is True
-
-
-def test_19_bangkit_tanpa_hidup_awal_bukan_kebangkitan():
-    peta = {"2025-01": M, "2025-02": M, "2025-03": H}
-    assert bk.bangkit(peta) is False
-
-
-def test_20_bangkit_peralihan_bersih_false():
-    peta = {"2025-01": H, "2025-02": H, "2025-03": M, "2025-04": M}
-    assert bk.bangkit(peta) is False
-
-
-def test_21_bangkit_peta_kosong_false():
-    assert bk.bangkit({}) is False
-
-
-# --- 22..24 rentetan_terpanjang ---
-
-def test_22_rentetan_hidup_terpanjang():
-    peta = {"2025-01": H, "2025-02": H, "2025-03": M, "2025-04": H}
-    assert bk.rentetan_terpanjang(peta, H) == 2
-
-
-def test_23_rentetan_mati_terpanjang():
-    peta = {"2025-01": M, "2025-02": M, "2025-03": M, "2025-04": H}
-    assert bk.rentetan_terpanjang(peta, M) == 3
-
-
-def test_24_rentetan_nol_bila_status_absen():
-    assert bk.rentetan_terpanjang({"2025-01": M}, H) == 0
-
-
-# --- 25..29 ringkas_simbol ---
-
-def test_25_ringkas_simbol_medan_dasar():
-    peta = {"2025-01": H, "2025-02": M, "2025-03": H}
-    r = bk.ringkas_simbol("AUSDT", peta, {}, {}, {})
-    assert r["cacah_bulan_berlabel"] == 3
-    assert r["bulan_hidup_pertama"] == "2025-01"
-    assert r["bulan_hidup_terakhir"] == "2025-03"
-    assert r["cacah_mati"] == 1
-
-
-def test_26_ringkas_simbol_tanpa_label_bukan_nol_palsu():
-    r = bk.ringkas_simbol("AUSDT", {}, {}, {}, {})
-    assert r["cacah_bulan_berlabel"] == 0
-    assert r["bulan_hidup_terakhir"] is None
-    assert r["cacah_hidup_sesudah_tebing"] == 0
-
-
-def test_27_ringkas_simbol_hidup_sesudah_tebing_terdeteksi():
-    peta = {"2025-06": H, bk.TEBING: H}
-    r = bk.ringkas_simbol("AUSDT", peta, {}, {}, {})
+def test_32_ringkas_simbol_hidup_sesudah_tebing_termasuk_tebing():
+    p = {bk.TEBING: HIDUP, "2020-01": HIDUP}
+    r = bk.ringkas_simbol("A", p)
     assert r["cacah_hidup_sesudah_tebing"] == 1
     assert r["bulan_hidup_sesudah_tebing"] == [bk.TEBING]
 
 
-def test_28_ringkas_simbol_byte_parquet_dijumlah():
-    peta = {"2025-01": H, "2025-02": M}
-    byte = {"AUSDT2025-01": 1000, "AUSDT2025-02": 500, "BUSDT2025-01": 99}
-    r = bk.ringkas_simbol("AUSDT", peta, byte, {}, {})
-    assert r["byte_parquet_total"] == 1500
+def test_33_ringkas_simbol_hidup_sebelum_tebing_tidak_dicacah():
+    r = bk.ringkas_simbol("A", {"2020-01": HIDUP})
+    assert r["cacah_hidup_sesudah_tebing"] == 0
 
 
-def test_29_ringkas_simbol_lubang_funding_terurut():
-    r = bk.ringkas_simbol("AUSDT", {"2025-01": H}, {}, {}, {"AUSDT": ["2025-09", "2025-08"]})
-    assert r["lubang_funding"] == ["2025-08", "2025-09"]
+def test_34_ringkas_simbol_byte_dan_lilin_berkunci_tuple():
+    p = peta(b2025_01=HIDUP, b2025_02=HIDUP)
+    r = bk.ringkas_simbol(
+        "A",
+        p,
+        byte_parquet={("A", "2025-01"): 100, ("A", "2025-02"): 5, ("B", "2025-01"): 999},
+        lilin={("A", "2025-01"): 7, ("A", "2025-02"): 3},
+    )
+    assert r["byte_parquet_total"] == 105
+    assert r["cacah_lilin_total"] == 10
 
 
-# --- 30..35 uji_r301 ---
+def test_35_ringkas_simbol_lubang_funding_dicacah():
+    p = peta(b2025_01=HIDUP, b2025_02=MATI)
+    r = bk.ringkas_simbol("A", p, bulan_berlubang={"2025-02", "2099-01"})
+    assert r["cacah_bulan_berlubang_funding"] == 1
 
-def _bentangan(simbol, hidup_sesudah=0, tersisip=0, bangkit=False):
+
+def test_36_ringkas_simbol_bulan_terakhir_diharapkan():
+    r = bk.ringkas_simbol("A", {bk.BULAN_DIHARAPKAN: HIDUP})
+    assert r["bulan_terakhir_sama_diharapkan"] is True
+
+
+def test_37_ringkas_simbol_tanpa_bulan_bukan_nol_melainkan_null():
+    r = bk.ringkas_simbol("A", {})
+    assert r["cacah_bulan"] == 0
+    assert r["bulan_terakhir"] is None
+    assert r["bulan_terakhir_sama_diharapkan"] is None
+
+
+# --- uji_r301 ---------------------------------------------------------------
+
+
+def baris_uji(hidup_sesudah=0, tersisip=0, bangkit=False):
     return {
-        "simbol": simbol,
         "cacah_hidup_sesudah_tebing": hidup_sesudah,
         "cacah_mati_tersisip": tersisip,
         "bangkit": bangkit,
     }
 
 
-def test_30_r301_butir_1_menang_bila_nol_hidup_sesudah_tebing():
-    hasil = bk.uji_r301([_bentangan("A"), _bentangan("B")])
-    assert hasil["butir_1"] is True
+def test_38_uji_r301_ketiga_butir_menang():
+    hasil = bk.uji_r301([baris_uji(tersisip=1), baris_uji()])
+    assert (hasil["butir_1"], hasil["butir_2"], hasil["butir_3"]) == (True, True, True)
+    assert hasil["cacah_butir_menang"] == 3
 
 
-def test_31_r301_butir_1_kalah_bila_satu_masih_hidup():
-    hasil = bk.uji_r301([_bentangan("A", hidup_sesudah=1), _bentangan("B")])
+def test_39_uji_r301_butir_1_kalah():
+    hasil = bk.uji_r301([baris_uji(hidup_sesudah=2, tersisip=1)])
     assert hasil["butir_1"] is False
-    assert hasil["simbol_hidup_sesudah_tebing"] == ["A"]
+    assert hasil["cacah_simbol_hidup_sesudah_tebing"] == 1
 
 
-def test_32_r301_butir_2_menang_bila_ada_sisipan():
-    hasil = bk.uji_r301([_bentangan("A", tersisip=2)])
-    assert hasil["butir_2"] is True
-    assert hasil["pembatal_a008_menyala"] is True
-
-
-def test_33_r301_butir_2_kalah_bila_tanpa_sisipan():
-    hasil = bk.uji_r301([_bentangan("A"), _bentangan("B")])
+def test_40_uji_r301_butir_2_kalah():
+    hasil = bk.uji_r301([baris_uji(), baris_uji()])
     assert hasil["butir_2"] is False
     assert hasil["pembatal_a008_menyala"] is False
 
 
-def test_34_r301_butir_3_kalah_bila_ada_kebangkitan():
-    hasil = bk.uji_r301([_bentangan("A", bangkit=True)])
+def test_41_uji_r301_butir_3_kalah():
+    hasil = bk.uji_r301([baris_uji(tersisip=1, bangkit=True)])
     assert hasil["butir_3"] is False
-    assert hasil["simbol_bangkit"] == ["A"]
+    assert hasil["cacah_simbol_bangkit"] == 1
 
 
-def test_35_r301_cacah_butir_menang_dijumlah_benar():
-    hasil = bk.uji_r301([_bentangan("A", tersisip=1)])
-    assert hasil["cacah_butir_menang"] == 3
-    hasil2 = bk.uji_r301([_bentangan("A")])
-    assert hasil2["cacah_butir_menang"] == 2
+def test_42_uji_r301_penyebut_dilapor():
+    assert bk.uji_r301([baris_uji(), baris_uji(), baris_uji()])["penyebut_simbol"] == 3
 
 
-# --- 36..38 kendali_positif ---
-
-def test_36_kendali_positif_sah():
-    per = {s: {bk.BULAN_DIHARAPKAN: H} for s in bk.KENDALI_HIDUP}
-    assert bk.kendali_positif(per)["kendali_sah"] is True
+# --- kendali positif --------------------------------------------------------
 
 
-def test_37_kendali_positif_gagal_bila_mati():
-    per = {s: {bk.BULAN_DIHARAPKAN: M} for s in bk.KENDALI_HIDUP}
-    assert bk.kendali_positif(per)["kendali_sah"] is False
+def test_43_kendali_sah_bila_semua_hidup():
+    status = {(s, bk.BULAN_DIHARAPKAN): HIDUP for s in bk.KENDALI_HIDUP}
+    kendali = bk.kendali_positif(status)
+    assert len(kendali) == len(bk.KENDALI_HIDUP)
+    assert bk.kendali_sah(kendali) is True
 
 
-def test_38_kendali_positif_gagal_bila_absen():
-    assert bk.kendali_positif({})["kendali_sah"] is False
+def test_44_kendali_tidak_sah_bila_satu_hilang():
+    status = {(bk.KENDALI_HIDUP[0], bk.BULAN_DIHARAPKAN): HIDUP}
+    kendali = bk.kendali_positif(status)
+    assert bk.kendali_sah(kendali) is False
+    assert kendali[1]["status"] is None
 
 
-# --- 39..44 kode_keluar dan tetapan ---
+def test_45_kendali_tidak_sah_bila_mati():
+    status = {(s, bk.BULAN_DIHARAPKAN): MATI for s in bk.KENDALI_HIDUP}
+    assert bk.kendali_sah(bk.kendali_positif(status)) is False
 
-def _ringkasan(**ganti):
-    dasar = {
-        "galat_kohort": None,
+
+# --- kode_keluar ------------------------------------------------------------
+
+
+def laporan_bersih(**ubah):
+    ringkasan = {
+        "sidik_seragam": True,
         "kendali_sah": True,
         "penyebut_kehidupan": 19586,
         "cacah_kunci_gagal_pisah": 0,
         "cacah_simbol_kohort": 38,
     }
-    dasar.update(ganti)
-    return dasar
+    ringkasan.update(ubah.pop("ringkasan", {}))
+    laporan = {"galat_kohort": None, "ringkasan": ringkasan}
+    laporan.update(ubah)
+    return laporan
 
 
-def test_39_kode_keluar_nol_bila_sah():
-    assert bk.kode_keluar(_ringkasan()) == 0
+def test_46_kode_keluar_nol_bila_bersih():
+    assert bk.kode_keluar(laporan_bersih()) == 0
 
 
-def test_40_kode_keluar_dua_bila_galat_kohort():
-    assert bk.kode_keluar(_ringkasan(galat_kohort="laporan hilang")) == 2
+def test_47_kode_keluar_dua_bila_galat_kohort():
+    assert bk.kode_keluar(laporan_bersih(galat_kohort="sumber tidak ada")) == 2
 
 
-def test_41_kode_keluar_dua_bila_kendali_gagal():
-    assert bk.kode_keluar(_ringkasan(kendali_sah=False)) == 2
+def test_48_kode_keluar_dua_bila_sidik_tidak_seragam():
+    assert bk.kode_keluar(laporan_bersih(ringkasan={"sidik_seragam": False})) == 2
 
 
-def test_42_kode_keluar_dua_bila_kunci_gagal_pisah():
-    assert bk.kode_keluar(_ringkasan(cacah_kunci_gagal_pisah=3)) == 2
+def test_49_kode_keluar_dua_bila_kendali_tidak_sah():
+    assert bk.kode_keluar(laporan_bersih(ringkasan={"kendali_sah": False})) == 2
 
 
-def test_43_kode_keluar_dua_bila_kohort_kosong():
-    assert bk.kode_keluar(_ringkasan(cacah_simbol_kohort=0)) == 2
+def test_50_kode_keluar_dua_bila_penyebut_nol():
+    assert bk.kode_keluar(laporan_bersih(ringkasan={"penyebut_kehidupan": 0})) == 2
 
 
-def test_44_tetapan_praregistrasi_tidak_bergeser():
-    assert bk.VERSI == 1
-    assert bk.TEBING == "2025-07"
+def test_51_kode_keluar_dua_bila_ada_kunci_gagal_pisah():
+    assert bk.kode_keluar(laporan_bersih(ringkasan={"cacah_kunci_gagal_pisah": 3})) == 2
+
+
+def test_52_kode_keluar_dua_bila_kohort_kosong():
+    assert bk.kode_keluar(laporan_bersih(ringkasan={"cacah_simbol_kohort": 0})) == 2
+
+
+# --- tetapan dan warisan ----------------------------------------------------
+
+
+def test_53_versi_dua():
+    assert bk.VERSI == 2
+
+
+def test_54_tetapan_diwarisi_kohort_ekor():
+    assert bk.TEBING == kohort_ekor.TEBING == "2025-07"
+    assert bk.BULAN_DIHARAPKAN == kohort_ekor.BULAN_DIHARAPKAN == "2026-06"
+    assert bk.KENDALI_HIDUP == kohort_ekor.KENDALI_HIDUP
+
+
+def test_55_medan_lilin_diwarisi_silang_funding():
+    assert bk.MEDAN_LILIN == silang_funding.MEDAN_LILIN
+    assert bk.SUMBER_FUNDING == silang_funding.SUMBER_FUNDING
+
+
+def test_56_tetapan_praregistrasi_tidak_bergeser():
     assert bk.R301_BUTIR_1_HIDUP_SESUDAH_TEBING == 0
     assert bk.R301_BUTIR_2_MINIMAL_SATU_TERSISIP == 1
     assert bk.R301_BUTIR_3_BANGKIT == 0
 
 
-def test_45_modul_tidak_memuat_daftar_nama_kohort():
-    """Aturan 73: daftar 38 nama wajib dibaca saat jalan, bukan tetapan."""
-    import inspect
+def test_57_berkas_dicap_empat_nama_dan_ada():
+    assert len(bk.BERKAS_DICAP) == 4
+    dasar = Path(bk.__file__).parent
+    for nama in bk.BERKAS_DICAP:
+        assert (dasar / nama).exists()
 
-    sumber = inspect.getsource(bk)
-    for nama in ("AGIXUSDT", "ALPACAUSDT", "WAVESUSDT", "XEMUSDT"):
+
+def test_58_sidik_kode_stabil_dan_heksa():
+    sidik = bk.sidik_kode()
+    assert sidik == bk.sidik_kode()
+    assert len(sidik) == 64
+
+
+# --- penangkal KC-43: bentuk kembalian sumber diperiksa, bukan diandaikan ---
+
+
+def test_59_lubang_funding_mengembalikan_pasangan_himpunan_dan_meta():
+    hasil = silang_funding.lubang_funding({"per_simbol": []})
+    assert isinstance(hasil, tuple) and len(hasil) == 2
+    assert isinstance(hasil[0], set) and isinstance(hasil[1], dict)
+
+
+def test_60_baca_medan_baris_mengembalikan_pasangan(tmp_path):
+    hasil = silang_funding.baca_medan_baris(str(tmp_path), 1, silang_funding.MEDAN_LILIN)
+    assert isinstance(hasil, tuple) and len(hasil) == 2
+    assert isinstance(hasil[0], dict) and isinstance(hasil[1], dict)
+
+
+def test_61_baca_laporan_kehidupan_mengembalikan_tiga_unsur(tmp_path):
+    hasil = silang_funding.baca_laporan_kehidupan(str(tmp_path), 1)
+    assert isinstance(hasil, tuple) and len(hasil) == 3
+    assert hasil[2]["sidik_seragam"] is False
+
+
+def test_62_jalankan_tanpa_bahan_menggugurkan_dirinya(tmp_path):
+    laporan = bk.jalankan(str(tmp_path), total=1)
+    assert laporan["galat_kohort"]
+    assert laporan["ringkasan"]["penyebut_kehidupan"] == 0
+    assert laporan["ringkasan"]["cacah_kunci_gagal_pisah"] == 0
+    assert bk.kode_keluar(laporan) == 2
+
+
+def test_63_modul_tidak_memuat_daftar_nama_kohort():
+    """Aturan 73: nama anggota kohort dibaca di runner, tidak pernah ditetapkan."""
+    sumber = Path(bk.__file__).read_text(encoding="utf-8")
+    for nama in ("BTCSTUSDT", "LITUSDT", "BNXUSDT", "TLMUSDT", "ICPUSDT"):
         assert nama not in sumber

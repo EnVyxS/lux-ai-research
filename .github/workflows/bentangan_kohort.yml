@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: bentangan kehidupan seluruh anggota kohort ekor
+      - name: bentangan kehidupan anggota kohort ekor
         id: jalan
         run: |
           set +e
@@ -30,9 +30,11 @@ jobs:
           exit 0
 
       - name: tulis status
+        if: always()
         env:
           KODE: ${{ steps.jalan.outputs.kode }}
         run: |
+          mkdir -p reports
           python - <<'PY'
           import datetime, json, os
 
@@ -49,11 +51,22 @@ jobs:
               f.write("\n")
           PY
 
+      # KC-44: `git add -f a b c` bersifat semua-atau-tidak-ada. Satu berkas yang
+      # hilang membuat SELURUH staging gugur, sehingga run yang gagal tidak
+      # meninggalkan jejak apa pun — bahkan lognya. Karena itu setiap berkas
+      # ditambahkan SENDIRI-SENDIRI.
       - name: commit laporan
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f reports/bentangan_kohort.json reports/bentangan_kohort.log reports/bentangan_kohort_status.json || true
+          for berkas in reports/bentangan_kohort.json reports/bentangan_kohort.log reports/bentangan_kohort_status.json; do
+            if [ -f "$berkas" ]; then
+              git add -f "$berkas" || true
+            else
+              echo "tidak ada: $berkas"
+            fi
+          done
           git commit -m "laporan bentangan kohort run ${GITHUB_RUN_ID} [skip ci]" || exit 0
           for i in 1 2 3 4 5 6 7 8; do
             git pull --rebase origin main && git push origin HEAD:main && break

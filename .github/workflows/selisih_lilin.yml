@@ -1,0 +1,42 @@
+name: selisih lilin
+
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/selisih_lilin.py'
+
+permissions:
+  contents: write
+
+jobs:
+  ukur:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: pasang
+        run: pip install numpy pandas pyarrow pyyaml
+      - name: jalan
+        id: jalan
+        run: |
+          set +e
+          python -m lux_ai.serapan.selisih_lilin
+          KODE=$?
+          echo "kode=$KODE" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: catat status
+        run: |
+          mkdir -p reports
+          printf '{"kode":%s}\n' "${{ steps.jalan.outputs.kode }}" > reports/selisih_lilin_status.json
+      - name: dorong laporan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/selisih_lilin.json reports/selisih_lilin_ringkas.json reports/selisih_lilin_status.json || true
+          git commit -m "laporan selisih_lilin [skip ci]" || exit 0
+          git pull --rebase
+          git push
+      - name: kode akhir
+        run: exit ${{ steps.jalan.outputs.kode }}

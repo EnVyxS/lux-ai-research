@@ -1,0 +1,260 @@
+{
+  "baris_teratas": [
+    {
+      "bulan": "2023-03",
+      "cacah_lilin": 2130,
+      "defisit": 42510,
+      "lilin_penuh": 44640,
+      "pertama": false,
+      "simbol": "TLMUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-09",
+      "cacah_lilin": 5610,
+      "defisit": 37590,
+      "lilin_penuh": 43200,
+      "pertama": false,
+      "simbol": "ICPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2023-02",
+      "cacah_lilin": 9195,
+      "defisit": 31125,
+      "lilin_penuh": 40320,
+      "pertama": false,
+      "simbol": "BNXUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-04",
+      "cacah_lilin": 13503,
+      "defisit": 29697,
+      "lilin_penuh": 43200,
+      "pertama": false,
+      "simbol": "YFIIUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-04",
+      "cacah_lilin": 14941,
+      "defisit": 28259,
+      "lilin_penuh": 43200,
+      "pertama": false,
+      "simbol": "1000BTTCUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2024-09",
+      "cacah_lilin": 14983,
+      "defisit": 28217,
+      "lilin_penuh": 43200,
+      "pertama": false,
+      "simbol": "MATICUSDT",
+      "status": "SEPI"
+    },
+    {
+      "bulan": "2022-05",
+      "cacah_lilin": 17681,
+      "defisit": 26959,
+      "lilin_penuh": 44640,
+      "pertama": false,
+      "simbol": "ANCUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-05",
+      "cacah_lilin": 17690,
+      "defisit": 26950,
+      "lilin_penuh": 44640,
+      "pertama": false,
+      "simbol": "LUNAUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-02",
+      "cacah_lilin": 20284,
+      "defisit": 20036,
+      "lilin_penuh": 40320,
+      "pertama": false,
+      "simbol": "KEEPUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2022-02",
+      "cacah_lilin": 20284,
+      "defisit": 20036,
+      "lilin_penuh": 40320,
+      "pertama": false,
+      "simbol": "NUUSDT",
+      "status": "HIDUP"
+    }
+  ],
+  "berkas_sumber": "reports/sisa_defisit.json",
+  "byte_sumber": 11069,
+  "catatan_kebebasan": "pembangun baris keterisian_lilin.kumpulkan dipakai bersama dengan R-310, sehingga hitung ulang ini BUKAN jalur yang sepenuhnya bebas; ia menangkap salah kutip dan laporan basi, bukan cacat pada pembangun barisnya sendiri",
+  "catatan_turunan": "712.925 adalah angka TURUNAN dari pengurangan dan DILARANG jadi penyebut pemeriksaan (KC-50); ia hanya dilapor sebagai keterangan lewat sisa_terukur dan selisih_sisa",
+  "definisi": {
+    "bagian_teratas": "jumlah defisit sepuluh baris terbesar dibagi jumlah defisit SELURUH baris berdefisit di penyebut kerja; penyebutnya dihitung LANGSUNG, bukan angka turunan 712.925 (KC-50)",
+    "berdefisit": "defisit positif; null tidak ditebak sebagai nol",
+    "defisit_sembilan": "jumlah defisit seluruh baris MATI yang lilinnya tidak penuh",
+    "penyebut_kerja": "baris bukan-pertama yang berstatus BUKAN MATI",
+    "pertama": "bulan terkecil simbol itu DI DALAM penyebut 19.586"
+  },
+  "ringkasan": {
+    "bagian_teratas": 0.4087,
+    "cacah_baris_dengan_medan": 19586,
+    "cacah_baris_tanpa_lilin": 0,
+    "cacah_berdefisit": 114,
+    "cacah_calon": 17398,
+    "cacah_calon_penuh": 17284,
+    "cacah_defisit_negatif": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_teratas": 10,
+    "defisit_bukan_pertama": 808162,
+    "defisit_calon": 712925,
+    "defisit_teratas": 291379,
+    "defisit_terbesar": 42510,
+    "invarian_tercatat": {
+      "cacah_bukan_pertama": 18799,
+      "cacah_hidup": 18087,
+      "cacah_mati": 1401,
+      "cacah_mati_penuh": 1392,
+      "cacah_mati_tak_penuh": 9,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "defisit_bukan_pertama": 808162,
+      "defisit_sembilan": 95237,
+      "penyebut": 19586
+    },
+    "invarian_terukur": {
+      "cacah_bukan_pertama": 18799,
+      "cacah_hidup": 18087,
+      "cacah_mati": 1401,
+      "cacah_mati_penuh": 1392,
+      "cacah_mati_tak_penuh": 9,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "defisit_bukan_pertama": 808162,
+      "defisit_sembilan": 95237,
+      "penyebut": 19586
+    },
+    "kendali_data": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_data_sah": true,
+    "kendali_negatif_lolos": true,
+    "kendali_nol_lolos": true,
+    "laporan_hilang": [],
+    "medan_baris_terlihat": [
+      "ada_di_arsip",
+      "bagian_volume_nol",
+      "bulan",
+      "byte_parquet",
+      "cacah_baris_cacat",
+      "cacah_lilin",
+      "cacah_lilin_terbaca",
+      "cacah_volume_nol",
+      "galat",
+      "gerbang_lolos",
+      "jalur",
+      "simbol",
+      "status",
+      "transaksi_total"
+    ],
+    "medan_diminta": "cacah_lilin",
+    "sebaran_status_berdefisit": {
+      "HIDUP": 111,
+      "MATI": 0,
+      "SEPI": 3,
+      "TAK_TERUKUR": 0
+    },
+    "sebaran_status_calon": {
+      "HIDUP": 17318,
+      "MATI": 0,
+      "SEPI": 80,
+      "TAK_TERUKUR": 0
+    },
+    "selisih_defisit_bukan_pertama": 0,
+    "selisih_defisit_calon_lawan_sisa": 0,
+    "selisih_defisit_sembilan": 0,
+    "selisih_invarian": {
+      "cacah_bukan_pertama": 0,
+      "cacah_hidup": 0,
+      "cacah_mati": 0,
+      "cacah_mati_penuh": 0,
+      "cacah_mati_tak_penuh": 0,
+      "cacah_sepi": 0,
+      "cacah_simbol": 0,
+      "defisit_bukan_pertama": 0,
+      "defisit_sembilan": 0,
+      "penyebut": 0
+    },
+    "selisih_sisa": 0,
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "sisa_tercatat": 712925,
+    "sisa_terukur": 712925,
+    "total_pecahan": 8,
+    "uji_r311": {
+      "butir_1": {
+        "berisiko": true,
+        "hasil": "kalah",
+        "pertanyaan": "cacah baris bukan-pertama bukan-MATI yang cacah_lilin kurang dari lilin penuh bulannya",
+        "pita": [
+          200,
+          12000
+        ],
+        "satuan": "baris simbol-bulan",
+        "terukur": 114
+      },
+      "butir_2": {
+        "berisiko": true,
+        "hasil": "menang",
+        "pertanyaan": "bagian defisit yang ditanggung sepuluh baris berdefisit terbesar, atas penyebut jumlah defisit baris berdefisit itu sendiri",
+        "pita": [
+          0.02,
+          0.45
+        ],
+        "satuan": "bagian antara 0 dan 1",
+        "terukur": 0.4087
+      },
+      "butir_3": {
+        "berisiko": false,
+        "hasil": "menang",
+        "mudah": true,
+        "pertanyaan": "seluruh selisih invarian nol dan ketiga kendali lolos",
+        "satuan": "cocok atau tidak"
+      },
+      "cacah_menang_berisiko": 1
+    }
+  },
+  "sidik_kode": "6211624ba9514d604d4dc510abca2e40386775c7aaa1279135f0baf666f044b0",
+  "sidik_sumber": "66916dd75bec168a2fabbc8fcc4a63e1c03b7c828454e629a1a1f043ac5765a6",
+  "versi_sisa_defisit": 1,
+  "waktu_utc": "2026-07-30T12:22:05Z"
+}

@@ -1,31 +1,40 @@
-# STATE lampiran UKUR — bagian 3 dari STATE (v11, milik STATE v51)
+# STATE lampiran UKUR — bagian 3 dari STATE (v12, milik STATE v52)
 
 **Kedudukan berkas ini.** STATE dipecah tiga sejak v43 (KC-42). Pembagian berlaku:
 
 1. **`STATE.md`** — bagian 1: kepala, aturan 1–81, 83, 84, dan **85**; KC-1..KC-51.
-2. **`STATE_LAMPIRAN_EKOR.md`** v11 (blob **`3d72a9e7aeb5123401065b225168c485d3e37963`**)
+2. **`STATE_LAMPIRAN_EKOR.md`** v12 (blob **`568dc877f69d6508b1db50a35877d34da76fc21e`**)
    — bagian 2: papan skor, ADR, catatan kejujuran.
-3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v11) — bagian 3: pengukuran, modul,
+3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v12) — bagian 3: pengukuran, modul,
    workflow, uji, API, hipotesis.
 4. `STATE_LAMPIRAN_ADR.md` (blob `a02ef271`) dan **`PROMPT_KELANJUTAN.md`** (blob
    `35beed44`) — **arsip; BUKAN sumber** (ADR-A018 kep. 9).
 
-Dasar v11: UKUR v10 (blob **`162c130592c723f7bde5862546982b8d8a5295af`**), dibaca UTUH
+Dasar v12: UKUR v11 (blob **`7f0221bfb548d04f464a5b8c67f0579214f97b54`**), dibaca UTUH
 pada giliran yang sama sebelum berkas ini ditulis (aturan 52, pencegahan KC-43).
-Yang ditambahkan v11: **`sisa_defisit` V1** (penutupan sisa 712.925); API penuhnya;
-CI **1341**; adjudikasi **R-311 SEPARUH**; **KC-51** dan **aturan 85** yang lahir dari
-kekalahannya; **H-A021 DIUSULKAN**; **cacah tangan direktori 49/53/44/18** yang
-melunasi utang 47/51/42; kepala berkas naik ke v11.
+**Yang ditambahkan v12 hanyalah ketertiban dokumen, BUKAN pengukuran baru:** dua salah
+ketik milik berkas ini sendiri dilunasi; kepala naik ke v12/STATE v52; ordinal aturan
+38 maju ke **ke-42** dengan dua blob CI baru; satu laporan CI yang **hangus** dicatat
+terbuka. **Tidak satu angka ukur pun berubah dari v11.**
 
-**KESERAIAN VERSI — ketiga bagian kini serasi pada v51 / v11 / v11.** Peringatan
-"UKUR v10 USANG SEBAGIAN" yang tertulis di kepala EKOR v11 — yang menyatakan UKUR
-belum memuat API `sisa_defisit`, 114 baris berdefisit, H-A021, dan cacah 49/53/44 —
-**DILUNASI oleh berkas ini**. Jejaknya sengaja tidak dihapus dari riwayat; jangan
-memperlakukannya sebagai utang hidup.
+## KESERASIAN VERSI — ketiga bagian kini serasi pada v52 / v12 / v12
+
+- `STATE.md` **v52** — blob **`635c24952637449d294a0f8035c8ed7e2f4932e4`**, commit
+  **`28afc9ae075befe1bc3c1ed474f42d7dae95626e`**.
+- `STATE_LAMPIRAN_EKOR.md` **v12** — blob **`568dc877f69d6508b1db50a35877d34da76fc21e`**,
+  commit **`e68deab7b9bc2a96b597ba58573aca358c707b21`**.
+- `STATE_LAMPIRAN_UKUR.md` **v12** — berkas ini.
+
+Ketimpangan nomor versi yang dicatat EKOR v12 ("UKUR masih v11") **LUNAS oleh berkas
+ini**. Jejaknya sengaja tidak dihapus dari riwayat; jangan memperlakukannya sebagai
+utang hidup. **Satu berkas per push tetap MENGIKAT** (KC-42, KC-43).
 
 **Tentang push berkas ini:** berkas ini di akar repo sehingga menyalakan `ci.yml`.
 Tidak satu pun `tests/**` berubah, jadi cacah uji tetap **1341** — ramalan
-deterministik (aturan 57), **MUDAH**, TIDAK masuk papan skor, TIDAK menambah beruntun.
+**deterministik** (aturan 57), **MUDAH**, TIDAK masuk papan skor, TIDAK menambah
+beruntun. **Laporannya WAJIB dibaca sebelum push akar berikutnya**, sebab dua push akar
+berturut tanpa pembacaan di antaranya sudah terbukti menghanguskan yang pertama (lihat
+bagian ordinal aturan 38).
 
 **Angka yang TIDAK berubah dari v44/v45/v6/v7** (tidak diulang): taksonomi 9 kelas,
 karantina 12, bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v44
@@ -34,7 +43,7 @@ karantina 12, bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v
 
 ## KOREKSI KC-41 — BACA SEBELUM MENGUTIP BERKAS INI
 
-Keenam koreksi di bawah **tetap dicantumkan** karena semuanya soal dokumen kami
+Kedelapan koreksi di bawah **tetap dicantumkan** karena semuanya soal dokumen kami
 sendiri, bukan soal data — menghapusnya berarti menghapus jejak cacat.
 
 **Koreksi 1 (kesalahan berkas ini pada v5).** UKUR v5 menulis bahwa
@@ -83,12 +92,28 @@ salah: `≉` berarti "tidak kira-kira sama dengan", kebalikan dari yang dimaksud
 **Bacaan yang benar: ≈49,7%.** EKOR v11 sudah memperbaikinya di badan berkas dengan
 jejak koreksi di kepalanya.
 
-**Koreksi 6 [BARU v11] — salah ketik di kepala EKOR v11, dokumen kami sendiri.**
+**Koreksi 6 [v11, KINI LUNAS DI SUMBERNYA] — salah ketik di kepala EKOR v11.**
 Kepala `STATE_LAMPIRAN_EKOR.md` v11 (blob `3d72a9e7`) menulis **"ramalan
-deretministik"**. Bacaan yang benar: **"ramalan deterministik"**. EKOR tidak didorong
-ulang untuk satu kata (preseden KC-42, sama seperti perlakuan atas salah ketik jurnal
-132 §3); koreksinya resmi di berkas ini, dan berkas ini menang atas EKOR **pada titik
-itu saja**. **EKOR v12 wajib memperbaikinya di sumbernya.**
+deretministik"**; bacaan yang benar **"ramalan deterministik"**. **EKOR v12
+(`568dc877`) sudah memperbaikinya di sumbernya** dengan jejak koreksi. Butir ini kini
+riwayat, bukan utang.
+
+**Koreksi 7 [BARU v12, LUNAS DI BERKAS INI] — salah ketik di kepala berkas ini
+sendiri.** UKUR v11 (blob `7f0221bf`) menulis kepala bagian **"KESERAIAN VERSI"**.
+Bacaan yang benar: **"KESERASIAN VERSI"**. Diperbaiki di atas.
+
+**Koreksi 8 [BARU v12, LUNAS DI BERKAS INI] — penanda tebal tak berpasangan.**
+Di daftar cacah per berkas uji, UKUR v11 membuka `**` dua kali pada baris
+`test_bentangan_kohort.py` tanpa menutupnya berpasangan, sehingga penandaan tebal
+bocor ke butir sesudahnya saat dirender. Diperbaiki di bagian "Modul, workflow, dan
+berkas uji". **Tidak ada angka yang berubah** — hanya penanda.
+
+**Bacaan yang jujur atas Koreksi 6–8:** ini **lima berkas berturut** (EKOR v11,
+UKUR v11 dua kali, STATE v52, dan cacat "Empat/Enam" yang masih terbuka) yang memuat
+salah ketik milik kami sendiri, meskipun setiap berkas dibaca ulang UTUH sesudah push.
+Dibaca sebagai **tanda ketelitian menurun pada giliran panjang** — peringatan
+operasional, bukan kelas cacat ilmiah. **Utang yang masih hidup: STATE v53 wajib
+mengubah "Empat salah ketik" menjadi "Enam".**
 
 ## Semesta riset = `perpetual_usdt` = penyebut 787 — tidak berubah
 
@@ -112,7 +137,7 @@ bukan-pertama. 787 + 18.799 = **19.586** ✅
 **Pembelahan atas kelas MATI [v10]:** dari 1.401 baris MATI, **1.392** berlilin PENUH
 dan **9** tidak penuh. 1.392 + 9 = **1.401** ✅
 
-**Pembelahan BARU [v11] — penyebut kerja R-311.** Dari 18.799 baris bukan-pertama,
+**Pembelahan [v11] — penyebut kerja R-311.** Dari 18.799 baris bukan-pertama,
 yang BUKAN berstatus MATI berjumlah **17.398** (18.799 − 1.401 = 17.398 ✅ — seluruh
 1.401 baris MATI ternyata bukan bulan pertama simbolnya). Dari 17.398 itu:
 **17.284** berlilin PENUH dan **114** berdefisit. 17.284 + 114 = **17.398** ✅
@@ -127,7 +152,7 @@ Rincian kelas 114: **HIDUP 111**, **SEPI 3**, **MATI 0**.
 - Lubang funding **880** semesta / **877** dalam penyebut / 3 tak dikenal. Irisan
   880 lawan 877 BELUM diukur.
 
-## SISA DEFISIT [BARU v11 — penutupan sisa 712.925 lilin]
+## SISA DEFISIT [v11 — penutupan sisa 712.925 lilin]
 
 Sumber: `sisa_defisit.py` V1 run modul **30542217951** (commit
 **`b1c7941db3e08ae8a6f06864d7f47a571abf5669`**, kode 0). Laporan
@@ -150,7 +175,7 @@ penuh.**
 | `defisit_teratas` (sepuluh baris) | **291.379** |
 | **`bagian_teratas`** | **0,4087** (= 291.379 / 712.925) |
 | `defisit_terbesar` (satu baris) | **42.510** |
-| `selisih_sisa` (712.925 − 95.237 − 712.925 tercatat) | **0** |
+| `selisih_sisa` | **0** |
 | `cacah_berdefisit_hidup` | **111** |
 | `cacah_berdefisit_sepi` | **3** |
 | `cacah_berdefisit_mati` | **0** |
@@ -381,12 +406,19 @@ Run **30524631435** (commit `84b11164`, kode 0), laporan blob `7d8883f5`. Penyeb
 
 ## Jumlah uji — terukur
 
-**1341** — `reports/ci_terakhir.json` blob
-**`bce1177ea21d7a4e01b59b2d4f4277a8584b4eed`**, run **30545364506**, commit
-**`8c30de51cc4d0098d4bd2922966684591bd7ce96`** (push STATE v51),
-2026-07-30T13:05:55Z, kode 0, `1341 tests collected in 0.45s`.
-Blob kedua dengan angka sama: **`2d32f814e5e426e1411559810b55b9f20176a22d`**, run
-**30542217837**, commit `b1c7941d` (push trio `sisa_defisit`), 12:22:10Z, 0.62s.
+**1341**, kini dengan **EMPAT** bacaan berjejak berturut-turut:
+
+1. blob **`2d32f814e5e426e1411559810b55b9f20176a22d`**, run **30542217837**, commit
+   `b1c7941d` (push trio `sisa_defisit`), 12:22:10Z, kode 0, 0.62s.
+2. blob **`bce1177ea21d7a4e01b59b2d4f4277a8584b4eed`**, run **30545364506**, commit
+   **`8c30de51cc4d0098d4bd2922966684591bd7ce96`** (push STATE v51), 13:05:55Z, kode 0,
+   0.45s.
+3. blob **`2c3290cb23097ab93f196f79e61c751221fe4b4d`**, run **30548418622**, commit
+   **`28afc9ae075befe1bc3c1ed474f42d7dae95626e`** (push STATE v52), 13:46:02Z, kode 0,
+   0.60s.
+4. **[BARU v12]** blob **`ed743bdf367d41ee0dcbd3d7b6cfc56244eeb662`**, run
+   **30549286062**, commit **`e68deab7b9bc2a96b597ba58573aca358c707b21`** (push EKOR
+   v12), **2026-07-30T13:57:06Z**, kode 0, `1341 tests collected in 0.64s`.
 
 Riwayat: 630 → 638 → 662×3 → 694×3 → 722×8 → 769 → 814 → 832 → 879 → 936 → 984 →
 1044 → 1100 → 1168 → 1233 → 1297 → **1341**.
@@ -395,19 +427,42 @@ Turunan: 1297 + **44** butir `tests/test_sisa_defisit.py` = **1341** ✅ (aturan
 Blob CI yang dicatat: 1168 = `2498e2cf6e6f6c7d0b8807bb5ba923ac1d803b6d` · 1233 =
 `0489d71101e451efe73d20fd8fe75ba6d41c5c27` (run 30532058688) · 1233 =
 `016fb2349a960100d270bec926e73d5b2c85e9cc` (run 30533500210) · 1297 =
-`3c07c9093d5232ce3852b2ac509fd9e9875f0f33` (run 30535202643) · 1341 = dua blob di
+`3c07c9093d5232ce3852b2ac509fd9e9875f0f33` (run 30535202643) · 1341 = keempat blob di
 atas. Run **30541051907** (1297, commit `5d7d8b96`) tercatat **TANPA blob** — diwarisi
 dari jurnal 135, blobnya sudah tertimpa dan tidak dapat dipulihkan.
 
-**Aturan 57: beruntun 3 dari 3** sesudah PUTUS di 26/27. Ramalan ketiga dibuat dengan
-daftar bernomor `test_01`..`test_44` tanpa rentang; dua helper `_baris` dan
-`_ringkasan_bersih` sengaja berawalan garis bawah agar tidak dikumpulkan pytest.
+**Aturan 57: beruntun 3 dari 3** sesudah PUTUS di 26/27. Tidak bertambah sejak v11:
+tidak ada push yang menyentuh `tests/**`. Ramalan ketiga dibuat dengan daftar bernomor
+`test_01`..`test_44` tanpa rentang; dua helper `_baris` dan `_ringkasan_bersih` sengaja
+berawalan garis bawah agar tidak dikumpulkan pytest.
 
-**Aturan 38 — ordinal.** Definisi yang berlaku (ADR-A018 kep. 8): pemakaian dihitung
-hanya untuk pembacaan `reports/ci_terakhir.json` yang **meninggalkan jejak tertulis**
-berupa nomor run, commit, dan blob. Dengan definisi itu pemakaian berjalan adalah
-**ke-40** (run `30545364506`). **Cacatnya disebut:** baris ke-38 tanpa blob, sehingga
-ordinal 40 sah relatif terhadap definisi itu, bukan sebagai pencacahan mutlak.
+### Aturan 38 — ordinal, kini sampai ke-42
+
+Definisi yang berlaku (ADR-A018 kep. 8): pemakaian dihitung **hanya** untuk pembacaan
+`reports/ci_terakhir.json` yang meninggalkan **jejak tertulis** berupa nomor run,
+commit, dan blob.
+
+| ke- | CI | run | commit | blob | jejak |
+| --- | --- | --- | --- | --- | --- |
+| 39 | 1341 | 30542217837 | `b1c7941d` | `2d32f814` | jurnal 135, STATE v51 |
+| 40 | 1341 | 30545364506 | `8c30de51` | `bce1177e` | EKOR v11, STATE v52 |
+| 41 | 1341 | 30548418622 | `28afc9ae` | `2c3290cb` | EKOR v12 |
+| **42** | **1341** | **30549286062** | **`e68deab7`** | **`ed743bdf`** | **berkas ini** |
+
+**Dua cacat tetap disebut, tidak dihaluskan:**
+
+- Baris ke-**38** (run `30541051907`, commit `5d7d8b96`) **tanpa blob**. Ordinal ini
+  karena itu sah **relatif terhadap definisi di atas**, bukan sebagai pencacahan
+  mutlak.
+- Run **30547842823** (commit bot `de2fc03d`, atas push UKUR v11 `f9c5d960`) **tidak
+  pernah dibaca** dan sudah **tertimpa**. Ramalan "CI tetap 1341" untuk push itu
+  **TIDAK TERUKUR — bukan menang, bukan kalah**, dan blobnya hilang permanen. Ia
+  **DILARANG dihitung** sebagai pemakaian aturan 38.
+
+**Aturan kerja yang lahir dari kerugian itu, dicatat sebagai calon, bukan aturan
+bernomor:** dua berkas akar yang didorong berturut tanpa membaca laporan di antaranya
+pasti menghanguskan yang pertama. Belum diangkat menjadi aturan karena baru **satu**
+kejadian terukur — mengangkatnya sekarang mengulang KC-48.
 
 **Koreksi resmi atas STATE v51** (ADR-A018 kep. 7): STATE v51 menulis bahwa ramalan
 "CI tetap" pada push dokumen **tidak pernah terukur**. Itu terbantah oleh run
@@ -415,7 +470,7 @@ ordinal 40 sah relatif terhadap definisi itu, bukan sebagai pencacahan mutlak.
 sebelum run berikutnya menimpanya**, tetap berlabel MUDAH, tetap tidak diskor, tetap
 tidak menambah beruntun aturan 57.
 
-## Modul, workflow, dan berkas uji [v11]
+## Modul, workflow, dan berkas uji [v11, tidak berubah di v12]
 
 **UTANG CACAH TANGAN LUNAS.** Pencacahan TANGAN satu per satu bernomor (aturan 66)
 dilakukan pada ref **`3196fd9809f23917ba819b4339cdfdd57bb808d1`**:
@@ -471,15 +526,17 @@ Blob trio v9 tetap: `bulan_pertama.py` `b9bd00ac` (19.349 B) ·
 journal/decisions/hipotesis/reports; push ke `lux_ai/**`, `tests/**`, `STATE*`,
 `PROMPT*` MENYALAKAN CI). `karantina_semesta.yml` = `de40fa4e` (**belum dibaca utuh**).
 
-Cacah per berkas uji yang diketahui: `test_irisan_byte.py` **68** ·
-`test_bulan_pertama.py` **65** · `test_keterisian_lilin.py` **64** ·
-**`test_bentangan_kohort.py` V2 **63** (blob `9f850ecdb25466d38c839004b36ff221db2cf7f8`,
-13.154 B — dibaca UTUH, dicacah TANGAN `test_01`..`test_63`, utang verifikasi LUNAS)** ·
-`test_lubang_tebing.py` **60** · `test_sebab_bangkit.py` **57** ·
-`test_byte_semesta.py` **56** · `test_lubang_awal.py` **48** ·
-`test_tersisip_semesta.py` **47** · `test_anatomi_tengah.py` **47** ·
-**`test_sisa_defisit.py` 44** · `test_terhenti.py` V4 **33** · `test_bulan_absen.py`
-**32** · `test_karantina_semesta.py` **28** · `test_silang_settled.py` **24**.
+Cacah per berkas uji yang diketahui — **milik repo riset ini, bukan repo warisan**
+(penanda tebal diperbaiki di v12, Koreksi 8; angkanya tidak berubah):
+`test_irisan_byte.py` **68** · `test_bulan_pertama.py` **65** ·
+`test_keterisian_lilin.py` **64** · `test_bentangan_kohort.py` V2 **63** (blob
+`9f850ecdb25466d38c839004b36ff221db2cf7f8`, 13.154 B — dibaca UTUH, dicacah TANGAN
+`test_01`..`test_63`, utang verifikasi LUNAS) · `test_lubang_tebing.py` **60** ·
+`test_sebab_bangkit.py` **57** · `test_byte_semesta.py` **56** ·
+`test_lubang_awal.py` **48** · `test_tersisip_semesta.py` **47** ·
+`test_anatomi_tengah.py` **47** · `test_sisa_defisit.py` **44** ·
+`test_terhenti.py` V4 **33** · `test_bulan_absen.py` **32** ·
+`test_karantina_semesta.py` **28** · `test_silang_settled.py` **24**.
 
 **Pola workflow trio (terbukti lagi pada `sisa_defisit.yml`):** `name`,
 `on.push.paths` SATU entri, `permissions: contents: write`, job `ukur` di
@@ -490,7 +547,7 @@ JSON ke `reports/<modul>_status.json`), langkah `dorong laporan` (git config bot
 add, commit `[skip ci]`, pull --rebase, push), langkah akhir
 `exit ${{ steps.jalan.outputs.kode }}`.
 
-## API terverifikasi — tambahan v11
+## API terverifikasi — tambahan v11 (tidak berubah di v12)
 
 API lama (v37–v10) tetap berlaku. Tambahan:
 
@@ -615,7 +672,7 @@ Keempatnya COCOK lagi pada run `sisa_defisit` (aturan 36, kini **lima** run bert
   `2024-05` adalah SATU peristiwa, bukan tujuh pengamatan bebas: jendelanya hanya
   sembilan lilin (39.308..39.317).* DILARANG menulis "tujuh simbol didelisting 28 Mei
   2024" sebagai temuan. Cara mengujinya: `lubang_tengah` atas gugus 2024-05.
-- **H-A021 [BARU v11, DIUSULKAN, BELUM DIUJI].** *Kekosongan **ANCUSDT `2022-05`**
+- **H-A021 [v11, DIUSULKAN, BELUM DIUJI].** *Kekosongan **ANCUSDT `2022-05`**
   (defisit **26.959**) dan **LUNAUSDT `2022-05`** (defisit **26.950**) adalah SATU
   peristiwa yang sama, bukan dua pengamatan bebas.* Dasarnya hanya selisih **sembilan
   lilin** di bulan yang sama — **kebetulan angka, bukan bukti**. Sampai diuji, **setiap
@@ -683,6 +740,8 @@ Empat kejadian berturut tanpa satu pun pembalikan arah:
 | R-311 butir 2 | pemusatan sepuluh teratas | 0,15 (0,02..0,45) | **0,4087** |
 
 **DILARANG oleh KC-51:** menyebut kemenangan butir 2 sebagai bukti kalibrasi membaik.
+**KC-51 kini RESMI** (ADR-A018 kep. 1, teks penuh di STATE v52), dan penangkalnya —
+**aturan 85** — RESMI berlaku mulai **R-312**.
 
 ## Praregistrasi R-312 — BELUM ADA
 
@@ -722,3 +781,9 @@ angka turunan sesudah trio berikutnya DILARANG dikutip); laporan WAJIB ringkas
    "kendala mengikat = kapasitas margin" yang belum diuji angkanya.
 7. **`PROMPT_KELANJUTAN.md`** belum diberi kepala "ARSIP — BUKAN SUMBER" dan belum
    dihapus (ADR-A018 kep. 9).
+8. **[BARU v12] `STATE.md` v53** wajib mengubah "Empat salah ketik kami sendiri"
+   menjadi **"Enam"** — tabelnya memuat enam baris dan paragraf di bawahnya sudah
+   menyebut "keenam".
+9. **[BARU v12] `PROMPT.md` v55** belum didorong ke repo.
+10. **[BARU v12] Jurnal 136 + praregistrasi R-312** belum ditulis; itulah pekerjaan
+    ukur berikutnya, dan pemakaian pertama **aturan 85**.

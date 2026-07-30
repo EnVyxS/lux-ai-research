@@ -1,34 +1,31 @@
-# STATE lampiran UKUR — bagian 3 dari STATE (v10, milik STATE v50)
+# STATE lampiran UKUR — bagian 3 dari STATE (v11, milik STATE v51)
 
 **Kedudukan berkas ini.** STATE dipecah tiga sejak v43 (KC-42). Pembagian berlaku:
 
-1. **`STATE.md`** — bagian 1: kepala, aturan 1–81, 83, dan 84; KC-1..KC-50.
-2. **`STATE_LAMPIRAN_EKOR.md`** v10 — bagian 2: papan skor, ADR, catatan kejujuran.
-3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v10) — bagian 3: pengukuran, modul,
+1. **`STATE.md`** — bagian 1: kepala, aturan 1–81, 83, 84, dan **85**; KC-1..KC-51.
+2. **`STATE_LAMPIRAN_EKOR.md`** v11 (blob **`3d72a9e7aeb5123401065b225168c485d3e37963`**)
+   — bagian 2: papan skor, ADR, catatan kejujuran.
+3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v11) — bagian 3: pengukuran, modul,
    workflow, uji, API, hipotesis.
-4. `STATE_LAMPIRAN_ADR.md` (blob `a02ef271`) — arsip lama; bukan sumber lagi.
+4. `STATE_LAMPIRAN_ADR.md` (blob `a02ef271`) dan **`PROMPT_KELANJUTAN.md`** (blob
+   `35beed44`) — **arsip; BUKAN sumber** (ADR-A018 kep. 9).
 
-Dasar v10: UKUR v9 (blob **`0b795fb48ababa61b318518ce1196ad90467e077`**), dibaca UTUH
-sebelum berkas ini ditulis (aturan 52). Yang ditambahkan v10: **keterisian lilin**
-(pengukuran pertama atas ISI bulan MATI); API `keterisian_lilin` V1; CI **1297**;
-adjudikasi **R-310 TEPAT**; **koreksi 516.135** yang meresmikan KC-50; kesembilan
-baris MATI tak penuh; **H-A020 DIUSULKAN**.
+Dasar v11: UKUR v10 (blob **`162c130592c723f7bde5862546982b8d8a5295af`**), dibaca UTUH
+pada giliran yang sama sebelum berkas ini ditulis (aturan 52, pencegahan KC-43).
+Yang ditambahkan v11: **`sisa_defisit` V1** (penutupan sisa 712.925); API penuhnya;
+CI **1341**; adjudikasi **R-311 SEPARUH**; **KC-51** dan **aturan 85** yang lahir dari
+kekalahannya; **H-A021 DIUSULKAN**; **cacah tangan direktori 49/53/44/18** yang
+melunasi utang 47/51/42; kepala berkas naik ke v11.
 
-**KESERASIAN VERSI — ketiga bagian kini serasi pada v50 / v10 / v10.**
-Peringatan di kepala v9 (yang menyebut ketimpangan sudah selesai pada v49/v9/v9)
-**GUGUR**: `STATE.md` sudah naik ke **v50** (blob
-**`095a4b2cd8b6b5cadeb3e887ab72fa7dde4c81c3`**, commit `0c8ddac8`) dan EKOR sudah naik
-ke **v10** (blob **`42fce0212c6f90581c39fc4df939616c479b6920`**, commit `7e7c3a65`).
-Peringatan USANG SEBAGIAN di kepala EKOR v10 — yang menyatakan UKUR masih v9 dan
-belum memuat `keterisian_lilin`, kesembilan baris, koreksi 516.135, dan H-A020 —
-**DILUNASI oleh berkas ini**. Jejak peringatan lama sengaja tidak dihapus dari
-riwayat; jangan memperlakukannya sebagai utang hidup. Pemecahan bertahap tetap
-SENGAJA: menulis tiga berkas besar dari satu konteks terpakai adalah cara paling
-pasti merusak aturan 1–84 (KC-42, KC-43).
+**KESERAIAN VERSI — ketiga bagian kini serasi pada v51 / v11 / v11.** Peringatan
+"UKUR v10 USANG SEBAGIAN" yang tertulis di kepala EKOR v11 — yang menyatakan UKUR
+belum memuat API `sisa_defisit`, 114 baris berdefisit, H-A021, dan cacah 49/53/44 —
+**DILUNASI oleh berkas ini**. Jejaknya sengaja tidak dihapus dari riwayat; jangan
+memperlakukannya sebagai utang hidup.
 
 **Tentang push berkas ini:** berkas ini di akar repo sehingga menyalakan `ci.yml`.
-Tidak satu pun `tests/**` berubah, jadi cacah uji tetap **1297** — ramalan
-deterministik (aturan 57), **MUDAH**, TIDAK masuk papan skor.
+Tidak satu pun `tests/**` berubah, jadi cacah uji tetap **1341** — ramalan
+deterministik (aturan 57), **MUDAH**, TIDAK masuk papan skor, TIDAK menambah beruntun.
 
 **Angka yang TIDAK berubah dari v44/v45/v6/v7** (tidak diulang): taksonomi 9 kelas,
 karantina 12, bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v44
@@ -37,7 +34,7 @@ karantina 12, bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v
 
 ## KOREKSI KC-41 — BACA SEBELUM MENGUTIP BERKAS INI
 
-Kelima koreksi di bawah **tetap dicantumkan** karena semuanya soal dokumen kami
+Keenam koreksi di bawah **tetap dicantumkan** karena semuanya soal dokumen kami
 sendiri, bukan soal data — menghapusnya berarti menghapus jejak cacat.
 
 **Koreksi 1 (kesalahan berkas ini pada v5).** UKUR v5 menulis bahwa
@@ -51,8 +48,10 @@ paths:
 
 Aturan yang diperkuat: bila bagian STATE bertentangan, **berkas sumber menang**.
 `lubang_tebing.yml` (`c8ae552a`), `byte_semesta.yml` (`45650ff9`),
-`irisan_byte.yml` (`7d98a267`), `bulan_pertama.yml` (`2242e3e4`), dan
-**`keterisian_lilin.yml` (`d821c63a`)** meniru berkas ASLI ini, bukan rumusan v5.
+`irisan_byte.yml` (`7d98a267`), `bulan_pertama.yml` (`2242e3e4`),
+`keterisian_lilin.yml` (`d821c63a`), dan **`sisa_defisit.yml`
+(`645112075e104a74d43f3e3d2185cfbd48b0b513`)** meniru berkas ASLI ini, bukan rumusan
+v5.
 
 **Koreksi 2 (kesalahan PROMPT v49).** PROMPT v49 menyebut poros R-307 "H-A017";
 yang benar **H-A018**. PROMPT v50 sudah memuat koreksi — **utang koreksi LUNAS**.
@@ -66,23 +65,30 @@ melawan hanya **TLMUSDT 2023-03 (80.394 byte)**. Kalimat v8 itu **DICABUT**
 (ADR-A016 kep. 4). Pelajaran: membaca daftar dengan mata lalu menyebutnya "tampak"
 adalah tebakan, bukan ukuran.
 
-**Koreksi 4 [BARU v10] — YANG TERBESAR SEJAUH INI. Angka 839.842.134 BUKAN jumlah
-lilin.** Angka itu adalah **total baris parquet semesta** dari run rilis 30404071324,
-dan dipakai berulang di jurnal serta lampiran seolah setara dengan jumlah lilin
-1 menit. `keterisian_lilin` V1 menghitung LANGSUNG dari medan `cacah_lilin` atas
-19.586 baris dan memperoleh **839.325.999**. **Selisih 516.135.** Seluruh aritmetika
-implikasi jurnal 131 §6 dibangun di atas penyamaan itu, sehingga cacat di bahan baku,
-meskipun R-310 tetap sah karena pitanya dikunci lebih dulu (aturan 29). Dari sinilah
-**KC-50 naik menjadi resmi di STATE v50**. Dugaan penyebab — 19.598 − 19.586 = 12
-simbol-bulan karantina, 516.135 / 12 = 43.011 ≈ sebulan penuh — **BELUM DIUJI dan
-DILARANG dikutip sebagai penjelasan**.
+**Koreksi 4 [v10] — Angka 839.842.134 BUKAN jumlah lilin.** Angka itu adalah **total
+baris parquet semesta** dari run rilis 30404071324, dan dipakai berulang di jurnal
+serta lampiran seolah setara dengan jumlah lilin 1 menit. `keterisian_lilin` V1
+menghitung LANGSUNG dari medan `cacah_lilin` atas 19.586 baris dan memperoleh
+**839.325.999**. **Selisih 516.135.** Seluruh aritmetika implikasi jurnal 131 §6
+dibangun di atas penyamaan itu, sehingga cacat di bahan baku, meskipun R-310 tetap
+sah karena pitanya dikunci lebih dulu (aturan 29). Dari sinilah **KC-50** naik menjadi
+resmi di STATE v50. Dugaan penyebab — 19.598 − 19.586 = 12 simbol-bulan karantina,
+516.135 / 12 = 43.011 ≈ sebulan penuh — **BELUM DIUJI dan DILARANG dikutip sebagai
+penjelasan**. **[v11] Ia kini menjadi poros calon (b) untuk R-312, dengan syarat
+porosnya berupa bentuk SEBARAN, bukan rata-rata (ADR-A018 kep. 12).**
 
-**Koreksi 5 [BARU v10] — salah ketik di EKOR v10, dokumen kami sendiri.** Bagian
+**Koreksi 5 [v10, DILUNASI di badan EKOR v11] — salah ketik di EKOR v10.** Bagian
 "Temuan sampingan" EKOR v10 (blob `42fce021`) menulis `terisi ≉49,7%`. Karakternya
 salah: `≉` berarti "tidak kira-kira sama dengan", kebalikan dari yang dimaksud.
-**Bacaan yang benar: ≈49,7%.** EKOR tidak didorong ulang untuk satu karakter
-(KC-42), persis seperti perlakuan atas salah ketik jurnal 132 §3; koreksinya resmi di
-berkas ini, dan berkas ini menang atas EKOR **pada titik itu saja**.
+**Bacaan yang benar: ≈49,7%.** EKOR v11 sudah memperbaikinya di badan berkas dengan
+jejak koreksi di kepalanya.
+
+**Koreksi 6 [BARU v11] — salah ketik di kepala EKOR v11, dokumen kami sendiri.**
+Kepala `STATE_LAMPIRAN_EKOR.md` v11 (blob `3d72a9e7`) menulis **"ramalan
+deretministik"**. Bacaan yang benar: **"ramalan deterministik"**. EKOR tidak didorong
+ulang untuk satu kata (preseden KC-42, sama seperti perlakuan atas salah ketik jurnal
+132 §3); koreksinya resmi di berkas ini, dan berkas ini menang atas EKOR **pada titik
+itu saja**. **EKOR v12 wajib memperbaikinya di sumbernya.**
 
 ## Semesta riset = `perpetual_usdt` = penyebut 787 — tidak berubah
 
@@ -90,21 +96,27 @@ berkas ini, dan berkas ini menang atas EKOR **pada titik itu saja**.
 - `cacah_perpetual_usdt_luar_penyebut` 0, `cacah_penyebut_bukan_perpetual_usdt` 0
 - Batas wajib disebut: token saham/ETF/komoditas ikut di dalam 787.
 
-## KC-18 — semesta kehidupan (dikonfirmasi ulang oleh R-307..R-310)
+## KC-18 — semesta kehidupan (dikonfirmasi ulang oleh R-307..R-311)
 
 Atas **19.586** simbol-bulan lolos: **1.401 MATI** (7,153%), **98 SEPI**, **18.087
 HIDUP**. Dari 1.401 MATI: 842 kehilangan funding, 559 tetap berfunding.
 `cacah_simbol_tanpa_hidup` **18**.
 
-`cacah_lain` = 0 pada keempat modul → seluruh 19.586 berstatus MATI/SEPI/HIDUP, tidak
+`cacah_lain` = 0 pada kelima modul → seluruh 19.586 berstatus MATI/SEPI/HIDUP, tidak
 ada TAK_TERUKUR. 18.087 + 98 = 18.185 TERUKUR, + 1.401 = 19.586 ✅
 
 **Pembelahan atas penyebut yang sama [v9]:** **787** baris adalah bulan PERTAMA
 simbolnya (tepat satu per simbol — identitas, bukan kebetulan), **18.799** baris
 bukan-pertama. 787 + 18.799 = **19.586** ✅
 
-**Pembelahan BARU [v10] atas kelas MATI:** dari 1.401 baris MATI, **1.392** berlilin
-PENUH dan **9** tidak penuh. 1.392 + 9 = **1.401** ✅
+**Pembelahan atas kelas MATI [v10]:** dari 1.401 baris MATI, **1.392** berlilin PENUH
+dan **9** tidak penuh. 1.392 + 9 = **1.401** ✅
+
+**Pembelahan BARU [v11] — penyebut kerja R-311.** Dari 18.799 baris bukan-pertama,
+yang BUKAN berstatus MATI berjumlah **17.398** (18.799 − 1.401 = 17.398 ✅ — seluruh
+1.401 baris MATI ternyata bukan bulan pertama simbolnya). Dari 17.398 itu:
+**17.284** berlilin PENUH dan **114** berdefisit. 17.284 + 114 = **17.398** ✅
+Rincian kelas 114: **HIDUP 111**, **SEPI 3**, **MATI 0**.
 
 ## Lubang funding — agregat semesta (tetap)
 
@@ -115,48 +127,111 @@ PENUH dan **9** tidak penuh. 1.392 + 9 = **1.401** ✅
 - Lubang funding **880** semesta / **877** dalam penyebut / 3 tak dikenal. Irisan
   880 lawan 877 BELUM diukur.
 
-## KETERISIAN LILIN [BARU v10 — pengukuran PERTAMA atas ISI bulan MATI]
+## SISA DEFISIT [BARU v11 — penutupan sisa 712.925 lilin]
 
-Sumber: `keterisian_lilin.py` V1 run **30535202643** (commit
-**`924b0d7afcf1f9e17965dff931d36489ad27f01b`**, kode 0). Laporan
-`reports/keterisian_lilin.json` blob **`14f1772070789dad603b132ece034ea4c19c6e3d`**
-(6.588 B, terbaca **UTUH** — `BATAS_BARIS_LAPORAN=40` berhasil untuk keempat kalinya
-berturut), `reports/keterisian_lilin_ringkas.json` blob **`f33714eda66e77d37a7024b52c433ead070b16c7`**.
+Sumber: `sisa_defisit.py` V1 run modul **30542217951** (commit
+**`b1c7941db3e08ae8a6f06864d7f47a571abf5669`**, kode 0). Laporan
+`reports/sisa_defisit.json` (11.069 B), ringkas blob
+**`91a05c0528050d0d37e4cf7711b6556f13fc8d16`**, status blob
+**`1c9c2c5fc5f14a3f0e5cadcf564e699c92f8cf0e`**.
 
-**Pertanyaan yang dijawab** — pertanyaan prioritas pertama ADR-A016 kep. 7, yang tiga
-giliran berturut tidak terjawab: **apa isi berkas bulan MATI.** Jawabannya tegas.
+**Pertanyaan yang dijawab** — pertanyaan terbuka nomor satu sejak R-310: **baris mana
+yang menanggung 712.925 lilin defisit bukan-pertama di luar kesembilan baris MATI tak
+penuh.**
 
 | besaran | nilai |
 | --- | --- |
-| `cacah_mati_penuh` (lilin = lilin penuh bulannya) | **1.392** |
+| `cacah_calon` (bukan-pertama, bukan-MATI) | **17.398** |
+| `cacah_calon_penuh` | **17.284** |
+| **`cacah_berdefisit`** | **114** |
+| bagian berdefisit atas calon | **0,006553** (0,66%) |
+| `defisit_calon` | **712.925** |
+| rata-rata defisit per baris berdefisit | **6.254** |
+| `defisit_teratas` (sepuluh baris) | **291.379** |
+| **`bagian_teratas`** | **0,4087** (= 291.379 / 712.925) |
+| `defisit_terbesar` (satu baris) | **42.510** |
+| `selisih_sisa` (712.925 − 95.237 − 712.925 tercatat) | **0** |
+| `cacah_berdefisit_hidup` | **111** |
+| `cacah_berdefisit_sepi` | **3** |
+| `cacah_berdefisit_mati` | **0** |
+
+- **KEKOSONGAN ITU LANGKA TETAPI TERPUSAT.** Hanya **114 dari 17.398** baris
+  (**0,66%**) yang kurang lilin, dan **dua per lima** dari seluruh kekurangan itu
+  ditanggung **sepuluh** baris saja.
+- **Baris terbesar: TLMUSDT `2023-03`, berstatus HIDUP, 2.130 dari 44.640 lilin —
+  95,2% KOSONG.** Inilah baris yang sejak R-309 menjadi satu-satunya lawan H-A019
+  dan yang R-310 gagal jelaskan. Sifatnya kini terukur: bukan bulan tepi, bukan bulan
+  pertama, melainkan bulan penuh kalender yang datanya nyaris tidak ada
+  (ADR-A018 kep. 6).
+- **Sepuluh baris teratas tersebar di TUJUH bulan berbeda**, kelompok terbesar dalam
+  satu bulan hanya **dua** baris: `2023-03` (TLMUSDT, puncak), `2022-09`, `2023-02`,
+  `2022-04` ×2, `2024-09`, **`2022-05` ×2**, `2022-02` ×2. Berbeda tajam dari R-310
+  yang tujuh dari sembilan barisnya berhimpit di `2024-05` dalam jendela sembilan
+  lilin. **Aturan 81 diperiksa dan TIDAK terpicu** (ADR-A018 kep. 4), sehingga **114
+  sah diperlakukan sebagai cacah baris**, bukan satu peristiwa yang menyamar.
+- **Dua baris `2022-05` nyaris kembar:** **ANCUSDT defisit 26.959** lawan **LUNAUSDT
+  defisit 26.950** — selisih **sembilan lilin**. Ini dan hanya ini dasar **H-A021**.
+  Ia **kebetulan angka, bukan bukti**; **setiap kalimat sebab untuk gugus `2022-05`
+  DILARANG** sampai diuji lewat lubang tengah.
+- **PENUTUPAN 712.925 DILARANG DISEBUT PENGUKURAN BEBAS.** `defisit_calon` = 712.925
+  dan `selisih_sisa` = 0 **terpaksa** muncul dari 808.162 − 95.237 begitu seluruh
+  1.401 baris MATI ternyata bukan bulan pertama. Itu tautologi (KC-50, KC-37,
+  ADR-A018 kep. 3).
+- **Kenyataan bahwa 114 baris seluruhnya HIDUP atau SEPI dan NOL MATI DILARANG
+  disebut temuan** — itu dipaksa oleh definisi penyebut kerja, yang memang membuang
+  seluruh baris MATI.
+- **Tidak satu kalimat pun boleh menyimpulkan apa pun tentang harga.** Keempat belas
+  medan `medan_baris_terlihat` tidak memuat harga (ADR-A017 kep. 2 berlaku penuh).
+- **Kendali:** `kendali_nol` membuktikan modul BISA mengembalikan nol pada semesta
+  buatan tanpa defisit (aturan 50); `JAWABAN_KENDALI` **17 medan** dengan
+  `bagian_teratas` **0,9677** = 600/620 dihitung TANGAN lebih dulu dan cocok;
+  `bagian_teratas` dikembalikan **null** bila baris berdefisit kurang dari 10.
+
+**Adjudikasi R-311: SEPARUH.**
+
+| butir | pita | terukur | hasil |
+| --- | --- | --- | --- |
+| 1 (BERISIKO) cacah baris berdefisit | 200 .. 12.000 | **114** | **KALAH** |
+| 2 (BERISIKO) `bagian_teratas` | 0,02 .. 0,45 | **0,4087** | MENANG (sisa 0,0413 ke tepi ATAS) |
+| 3 (MUDAH) invarian, kendali, kode 0, CI | — | — | MENANG |
+
+Butir 1 meleset **26,3 kali** dari taksiran titik 3.000 dan **1,75 kali** di bawah
+tepi bawah. **Kedua butir meleset ke arah fisik yang SAMA** (kekosongan lebih
+terpusat daripada dugaan); satu-satunya alasan butir 2 menang adalah pitanya kebetulan
+cukup lebar. Itu dasar **KC-51**.
+
+**Sidik kode `sisa_defisit` V1 =**
+`6211624ba9514d604d4dc510abca2e40386775c7aaa1279135f0baf666f044b0`
+
+## KETERISIAN LILIN [v10, tetap berlaku]
+
+Sumber: `keterisian_lilin.py` V1 run **30535202643** (commit
+**`924b0d7afcf1f9e17965dff931d36489ad27f01b`**, kode 0). Laporan
+`reports/keterisian_lilin.json` blob **`14f1772070789dad603b132ece034ea4c19c6e3d`**,
+ringkas blob **`f33714eda66e77d37a7024b52c433ead070b16c7`**.
+
+| besaran | nilai |
+| --- | --- |
+| `cacah_mati_penuh` | **1.392** |
 | `cacah_mati_tak_penuh` | **9** |
-| `jumlah_lilin_langsung` (atas 19.586 baris) | **839.325.999** |
+| `jumlah_lilin_langsung` (19.586 baris) | **839.325.999** |
 | `defisit_total` | **18.143.601** |
-| `defisit_pertama` (bulan pertama simbol) | **17.335.439** (95,5%) |
+| `defisit_pertama` | **17.335.439** (95,5%) |
 | `defisit_bukan_pertama` | **808.162** |
 | `bagian_defisit_bukan_pertama` | **0,0445** |
-| `cacah_baris_dengan_medan` | **19.586** |
-| `cacah_baris_tanpa_lilin` | **0** |
-| `cacah_defisit_negatif` | **0** |
-| `cacah_kunci_ganda` | **0** |
-| `cacah_laporan_dibaca` | **8** dari 8 |
-| `sidik_seragam` | **true** |
+| `cacah_baris_tanpa_lilin` / `defisit_negatif` / `kunci_ganda` | **0** / **0** / **0** |
+| `cacah_laporan_dibaca` | **8** dari 8 · `sidik_seragam` **true** |
 
 - **BULAN MATI PENUH DATANYA; YANG NOL ADALAH TRANSAKSINYA.** 1.392 dari 1.401
-  (**99,4%**) bulan MATI berisi lilin sebanyak-banyaknya bulan itu. Bulan MATI bukan
-  bulan yang datanya berhenti; ia bulan yang perdagangannya berhenti sementara
-  lilinnya terus dicetak. Ini menutup pertanyaan ADR-A016 kep. 7.
+  (**99,4%**) bulan MATI berisi lilin sebanyak-banyaknya bulan itu.
 - **DILARANG melanjutkan ke "harga beku" atau "lilin datar".** `medan_baris_terlihat`
   berisi **14** medan — `ada_di_arsip`, `bagian_volume_nol`, `bulan`, `byte_parquet`,
   `cacah_baris_cacat`, `cacah_lilin`, `cacah_lilin_terbaca`, `cacah_volume_nol`,
   `galat`, `gerbang_lolos`, `jalur`, `simbol`, `status`, `transaksi_total` — dan
-  **tak satu pun harga**. Bentuk harga di dalam bulan MATI BELUM DIUKUR.
-- **`cacah_baris_tanpa_lilin` = 0 sah dibaca** hanya karena kendali negatifnya
-  membuktikan modul BISA mendeteksi baris tanpa lilin (aturan 50).
-- **Defisit menumpuk di bulan pertama.** 17.335.439 dari 18.143.601 (**95,5%**) ada di
+  **tak satu pun harga**.
+- **Defisit menumpuk di bulan pertama:** 17.335.439 dari 18.143.601 (**95,5%**) ada di
   787 bulan pertama; rata-rata **22.027** lilin hilang per bulan pertama, yaitu
-  keterisian **≈49,7%**. Angka ini bersesuaian dengan nisbah byte 0,527179 dari R-309
-  — dua jalur ukur berbeda memberi gambaran bulan pertama yang sama: **separuh**.
+  keterisian **≈49,7%** — bersesuaian dengan nisbah byte 0,527179 dari R-309.
 - **Kesembilan baris MATI tak penuh, LENGKAP** (semuanya `pertama: false`):
 
 | # | simbol | bulan | `cacah_lilin` | lilin penuh | defisit |
@@ -172,56 +247,40 @@ giliran berturut tidak terjawab: **apa isi berkas bulan MATI.** Jawabannya tegas
 | 9 | COCOSUSDT | 2024-05 | 39.317 | 44.640 | 5.323 |
 
   Jumlah defisit kesembilan **95.237** — hanya **0,1178** dari 808.162.
-- **DUA ANOMALI LAMA LUNAS, DUA DARI DUA.** Baris 1 dan 2 adalah tepat kedua
-  `cacah_mati_byte_kecil` R-308 (LENDUSDT 2020-11 = 97.634 byte, minimum kelas MATI;
-  FRONTUSDT 2024-09 = 109.120 byte). Berkas MATI yang kecil itu kecil **karena
-  lilinnya memang sedikit**, bukan karena hal lain. Meski begitu **larangan ADR-A015
-  kep. 5 TIDAK dibalik**: menjelaskan dua kasus bukan membangun detektor, dan besar
-  berkas tetap DILARANG dipakai sebagai penanda status ke arah mana pun.
+  808.162 − 95.237 = **712.925**, yang kini ditanggung 114 baris di atas.
+- **DUA ANOMALI LAMA LUNAS.** Baris 1 dan 2 adalah tepat kedua `cacah_mati_byte_kecil`
+  R-308 (LENDUSDT 2020-11 = 97.634 byte; FRONTUSDT 2024-09 = 109.120 byte). Meski
+  begitu **larangan ADR-A015 kep. 5 TIDAK dibalik**: besar berkas tetap DILARANG
+  dipakai sebagai penanda status ke arah mana pun. **[v11] R-311 tidak membaliknya.**
 - **TUJUH dari sembilan berbulan `2024-05` dengan jendela hanya SEMBILAN lilin**
-  (39.308..39.317). Numerator 9 karena itu **BUKAN sembilan pengamatan bebas**; paling
-  banter **tiga** (gugus 2024-05, LENDUSDT, FRONTUSDT). Ini kasus baru KC-47 dan
-  penerapan aturan 81. **Kalimat "tujuh simbol didelisting 28 Mei 2024" DILARANG
-  ditulis sebagai temuan** — yang terukur hanya jendela sembilan lilin.
-- **SISA 712.925 LILIN BELUM DIJELASKAN.** 808.162 − 95.237 = **712.925** lilin
-  defisit di baris bukan-pertama yang BUKAN baris MATI tak penuh. Baris mana yang
-  menanggungnya belum diukur; ini pertanyaan terbuka nomor satu.
-- **Lima penggugur bersih:** `sidik_seragam` true · 8/8 laporan dibaca ·
-  `cacah_kunci_ganda` 0 · `cacah_defisit_negatif` 0 · `cacah_baris_tanpa_lilin` 0.
+  (39.308..39.317) → KC-47, aturan 81, **H-A020**. **Kalimat "tujuh simbol didelisting
+  28 Mei 2024" DILARANG ditulis sebagai temuan.**
 - **Kendali data sah:** tiga kendali BTCUSDT — 2021-05, 2021-08, 2021-01 — semuanya
-  `cacah_lilin` **44.640** (bulan 31 hari penuh) dan berstatus HIDUP.
-- **Delapan selisih invarian seluruhnya NOL dan seluruhnya BEBAS.** Seperti
-  `bulan_pertama` dan berbeda dari `irisan_byte`, tidak ada medan turunan di dalam
-  cacah itu; `jumlah_lilin_langsung` dihitung lewat jalur LANGSUNG dari baris —
-  dan justru itulah yang memunculkan selisih 516.135 (Koreksi 4).
-- **Adjudikasi R-310:** butir 1 **MENANG** (9 dalam 1..120), butir 2 **MENANG**
-  (0,0445 dalam 0,02..0,25), butir 3 **MENANG** (MUDAH) → **TEPAT**. Bacaan jujurnya
-  di EKOR v10 § Catatan kejujuran, termasuk peringatan bahwa **kedua kemenangan tipis
-  ke tepi BAWAH** pita sehingga lebih murah daripada tampaknya.
+  `cacah_lilin` **44.640** dan berstatus HIDUP.
+- **Adjudikasi R-310: TEPAT** (9 dalam 1..120; 0,0445 dalam 0,02..0,25; MUDAH menang)
+  — **kedua kemenangan tipis ke tepi BAWAH**, dan itu kini terbaca sebagai gejala
+  KC-51, bukan sebagai kalibrasi baik.
 
-**Sidik kode `keterisian_lilin` V1 =**
+**Sidik `keterisian_lilin` V1 =**
 `1cd98f4fa22c24b30f31f5b36dac0ea0bb3fa9de44e5e15ae73cbf11cdca08bb`
-**Sidik kode laporan (`sidik_kode_laporan`) =**
+**Sidik laporan (`sidik_kode_laporan`) =**
 `24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595`
 
 ## IRISAN BULAN PERTAMA [v9, tetap berlaku]
 
 Sumber: `bulan_pertama.py` V1 run **30532058657** (commit `09ce9853`, kode 0).
-Laporan `reports/bulan_pertama.json` blob
-**`0a2aa6ae15d949b44803dffdc9e97dbd322bbc85`**, `_status.json` blob
+Laporan blob **`0a2aa6ae15d949b44803dffdc9e97dbd322bbc85`**, status blob
 **`0c8ea41a5a1aea4090d0dd2de65c9652088fc462`**.
 
-Definisi "bulan pertama" yang dipakai: bulan TERKECIL milik simbol itu **di dalam
-penyebut 19.586** (yaitu yang lolos gerbang 1m) — bukan bulan pertama simbol itu di
-bursa. Perbedaan keduanya BELUM diukur dan dicatat sebagai lubang ukur
+Definisi "bulan pertama": bulan TERKECIL milik simbol itu **di dalam penyebut
+19.586** — bukan bulan pertama simbol itu di bursa. Perbedaan keduanya BELUM diukur
 (ADR-A016 kep. 6).
 
 | besaran | nilai |
 | --- | --- |
 | `cacah_hidup_kecil_sebagian` (dari 38) | **37** |
 | `bagian_hidup_kecil_sebagian` | **0,973684** |
-| `cacah_pertama` (dari 19.586) | **787** |
-| `cacah_bukan_pertama` | **18.799** |
+| `cacah_pertama` | **787** · `cacah_bukan_pertama` **18.799** |
 | `jumlah_byte_pertama` | **706.233.745** |
 | `jumlah_byte_bukan_pertama` | **32.000.028.630** |
 | `rata_byte_pertama` | **897.374,517** |
@@ -229,25 +288,23 @@ bursa. Perbedaan keduanya BELUM diukur dan dicatat sebagai lubang ukur
 | `nisbah_rata` | **0,527179** |
 
 - **Irisan NYATA tetapi ASIMETRIS TAJAM.** 37 dari 38 berkas kecil adalah bulan
-  pertama (**97,4%**); tetapi hanya 37 dari 787 bulan pertama yang berkas kecil
-  (**±4,7%**). Rumusan resmi satu-satunya ada di **ADR-A016 kep. 1**.
-- **Bulan pertama SEPARUH, bukan sepersepuluh** (0,527179) — **[v10] dikuatkan dari
-  jalur ukur lain:** keterisian lilin bulan pertama ≈49,7%.
-- **Klausa tepi `2026-06` menyumbang NOL secara bebas** (SQQQUSDT, TQQQUSDT,
-  MVLLUSDT juga bulan pertama) — **DICABUT** (ADR-A016 kep. 2), melahirkan aturan 84
-  yang kini RESMI di STATE v50.
-- **Satu lawan tersisa:** **TLMUSDT 2023-03 (80.394 byte)** — bukan pertama, bukan
-  tepi, tetap kecil. **[v10] TIDAK terjelaskan oleh R-310** — TLMUSDT 2023-03
-  berstatus HIDUP, jadi ia tidak muncul di kesembilan baris MATI tak penuh. Belum
-  dijelaskan; DILARANG dibuang sebagai pencilan.
+  pertama (**97,4%**); hanya 37 dari 787 bulan pertama yang berkas kecil (**±4,7%**).
+  Rumusan resmi satu-satunya di **ADR-A016 kep. 1**.
+- **Bulan pertama SEPARUH, bukan sepersepuluh** (0,527179), dikuatkan keterisian
+  lilin ≈49,7%.
+- **Klausa tepi `2026-06` menyumbang NOL secara bebas** — DICABUT (ADR-A016 kep. 2),
+  melahirkan aturan 84.
+- **Satu lawan tersisa: TLMUSDT 2023-03 (80.394 byte).** **[v11] KINI TERJELASKAN
+  SIFATNYA oleh R-311** — ia baris berdefisit terbesar di seluruh semesta, HIDUP,
+  2.130/44.640 lilin, 95,2% kosong. Tafsir "byte kecil = bulan sebagian di tepi
+  rentang" karena itu **MELEMAH**: ada jalan ketiga. **Tafsir penggantinya TIDAK
+  ditegakkan** karena sebab kekosongannya belum diukur (ADR-A018 kep. 6).
 - Kendali dua lapis sah: tiga parquet terbesar seluruhnya BTCUSDT (2021-05 2.770.666,
-  2021-08 2.730.341, 2021-01 2.722.266, semuanya HIDUP); detektor semesta buatan lima
-  baris dua simbol dengan jawaban dihitung TANGAN lebih dulu — `DETEKSI_PERTAMA` 2,
-  `DETEKSI_HIDUP_KECIL` 2, `DETEKSI_SEBAGIAN` 2, `DETEKSI_NISBAH` 0,75,
-  `DETEKSI_TOTAL_BYTE` 1.500 — seluruhnya cocok.
+  2021-08 2.730.341, 2021-01 2.722.266, semuanya HIDUP); detektor semesta buatan
+  dengan jawaban dihitung TANGAN — `DETEKSI_PERTAMA` 2, `DETEKSI_HIDUP_KECIL` 2,
+  `DETEKSI_SEBAGIAN` 2, `DETEKSI_NISBAH` 0,75, `DETEKSI_TOTAL_BYTE` 1.500 — cocok.
 
-**`daftar_kecil_bertanda` (38, LENGKAP, urut byte menaik; `pertama` true untuk semua
-kecuali TLMUSDT; `tepi` true untuk tiga baris `2026-06`):** JUPUSDT 2024-01 22.440 ·
+**`daftar_kecil_bertanda` (38, LENGKAP, urut byte menaik):** JUPUSDT 2024-01 22.440 ·
 TIAUSDT 2023-10 24.551 · REZUSDT 2024-04 32.164 · SLPUSDT 2023-10 33.257 ·
 PORTALUSDT 2024-02 34.175 · NAORISUSDT 2025-07 34.673 · TROYUSDT 2024-10 35.511 ·
 MDTUSDT 2023-06 36.580 · COSUSDT 2024-09 36.742 · GUNUSDT 2025-03 36.768 · CCUSDT
@@ -262,29 +319,26 @@ RLCUSDT 2020-07 46.447 · FUNUSDT 2025-03 47.831 · MTLUSDT 2021-03 51.322 · YF
 2026-06 82.330 (tepi)** · **MVLLUSDT 2026-06 86.126 (tepi)** · LEVERUSDT 2023-03
 89.724 · INXUSDT 2026-01 94.575 · ENJUSDT 2020-09 94.658.
 
-**Sidik kode `bulan_pertama` V1 =**
+**Sidik `bulan_pertama` V1 =**
 `0d3530f69ad51a22e038c17616411b56e4518698ff14c9b635131ec1e2a66562`
 
 ## LEBAR ZONA IRISAN BYTE [v8, tetap berlaku]
 
 Sumber: `irisan_byte.py` V1 run **30529294165** (commit `d22364b9`, kode 0). Laporan
-`reports/irisan_byte.json` blob **`4c13bf6afc36c9afbeb1c662d6098258a6b750dd`**,
-`_status.json` blob **`863dc4cb266b2fcee56fb733960722d37bd931e7`**.
+blob **`4c13bf6afc36c9afbeb1c662d6098258a6b750dd`**, status blob
+**`863dc4cb266b2fcee56fb733960722d37bd931e7`**.
 
 | besaran | nilai |
 | --- | --- |
-| `cacah_hidup_byte_kecil` (HIDUP, byte < **97.634**, STRIKT) | **38** |
-| `bagian_hidup_byte_kecil` (penyebut 18.087) | **0.0021009564880853653** |
-| `cacah_mati_byte_kecil` (MATI, byte < **150.000**, STRIKT) | **2** |
-| `bagian_mati_byte_kecil` (penyebut 1.401) | **0.0014275517487508922** |
+| `cacah_hidup_byte_kecil` (< **97.634**, STRIKT) | **38** |
+| `bagian_hidup_byte_kecil` | **0.0021009564880853653** |
+| `cacah_mati_byte_kecil` (< **150.000**, STRIKT) | **2** |
+| `bagian_mati_byte_kecil` | **0.0014275517487508922** |
 
 - **Zona 22.440–97.634 byte berisi 38 baris HIDUP dan NOL baris MATI.** Tafsir
   "kecil = mati" di zona itu **TERBALIK** (ADR-A015 kep. 5).
-- **Ekor bawah MATI nyaris kosong.** Hanya **2** baris di bawah 150.000: LENDUSDT
-  2020-11 = 97.634 dan FRONTUSDT 2024-09 = 109.120. Sebab kekalahan butir 2 R-308 →
-  **KC-49**. **[v10] keduanya kini TERJELASKAN** sebagai dua baris MATI tak penuh
-  dengan lilin paling sedikit di seluruh semesta.
-- **Sebaran per kelas IDENTIK dari TIGA modul berbeda** (aturan 36):
+- **Sebaran per kelas IDENTIK dari TIGA modul berbeda** (aturan 36; kini **lima** run
+  berturut bila `keterisian_lilin` dan `sisa_defisit` dihitung):
 
 | kelas | cacah | byte | byte_min | byte_maks | byte_rata |
 | --- | --- | --- | --- | --- | --- |
@@ -293,12 +347,10 @@ Sumber: `irisan_byte.py` V1 run **30529294165** (commit `d22364b9`, kode 0). Lap
 | MATI | 1.401 | 579.041.399 | **97.634** | 451.875 | 413.305,781 |
 
   `cacah_lain` 0 · `byte_lain` 0 · `total_byte` **32.706.262.375**.
-- **Sembilan medan selisih semuanya 0 — tetapi hanya DELAPAN di antaranya bebas**
-  (`total_byte` turunan). Menyebut "sembilan pemeriksaan bebas" DILARANG; ini kasus
-  pertama **KC-50** yang kini resmi.
-- `laporan_hilang` [] · `cacah_laporan_hilang` 0.
+- **Sembilan medan selisih semuanya 0 — tetapi hanya DELAPAN bebas** (`total_byte`
+  turunan). Menyebut "sembilan pemeriksaan bebas" DILARANG (KC-50).
 
-**Sidik kode `irisan_byte` V1 =**
+**Sidik `irisan_byte` V1 =**
 `0e7103ef46a37d1e442d8e7fc5b9771b1ef7cdc3956ea57d584d84f6f73ea2c6`
 
 ## BYTE PARQUET ATAS SELURUH SEMESTA [v7, tetap berlaku]
@@ -307,11 +359,8 @@ Sumber: `byte_semesta.py` V1 run **30526358811** (commit `d3bc2039`, kode 0), la
 blob `8b7f2077`. **Total byte parquet = 32.706.262.375** (≈32,7 GB) atas 19.586
 simbol-bulan. `bagian_byte_mati` = **0.017704297493883234**;
 `cacah_terukur_byte_kecil` (< 10.000) = 0; `cacah_byte_nol` = 0 → **dasar keras ≈22
-KB**, sebab langsung KC-48. Kalimat v9 "bulan MATI bukan bulan KOSONG — APA ISINYA
-BELUM DIUKUR" **kini DIJAWAB oleh R-310**: isinya lilin penuh dengan transaksi nol.
-Adjudikasi R-307: **MELESET**.
-Sidik `byte_semesta` V1 =
-`e02aca2b3967069b500b01d27a1d2d1553f47b912ea41ddbecd9e4e6c33883c7`
+KB**, sebab langsung KC-48. Adjudikasi R-307: **MELESET**.
+Sidik = `e02aca2b3967069b500b01d27a1d2d1553f47b912ea41ddbecd9e4e6c33883c7`
 
 ## Arah waktu kematian lawan lubang funding [v6, `lubang_tebing` V1 — tetap]
 
@@ -327,75 +376,113 @@ Run **30524631435** (commit `84b11164`, kode 0), laporan blob `7d8883f5`. Penyeb
 `cacah_tebing_butir_2` **39**, bagian **0.3305** (`2025-07`); **39 dari 40**
 `mati_dulu` ada di tebing (0.975); satu-satunya bukan-tebing **BTCSTUSDT** (lubang
 2022-01, MATI 2021-04, `cacah_mati` 63) → KC-47, aturan 81. Adjudikasi R-306: TEPAT
-3/3 — kemenangan sah, klaim ilmiah hampir kosong. Sidik `lubang_tebing` V1 =
+3/3 — kemenangan sah, klaim ilmiah hampir kosong. Sidik =
 `4a5c2e4279eb1554dc119b48d6a8db61f6ea4ee11b7539efd70ee71d1ae18bf3`
 
 ## Jumlah uji — terukur
 
-**1297** — `reports/ci_terakhir.json` blob
-**`3c07c9093d5232ce3852b2ac509fd9e9875f0f33`**, run **30535202643**, commit
-**`924b0d7afcf1f9e17965dff931d36489ad27f01b`**, 2026-07-30T10:35:00Z, kode 0,
-`1297 tests collected in 0.60s`. Riwayat: 814 → 832 → 879 → 936 → 984 → 1044 → 1100 →
-1168 → 1233 → **1297**. Turunan: 1233 + **64** butir `tests/test_keterisian_lilin.py`
-= **1297** ✅ (aturan 21).
+**1341** — `reports/ci_terakhir.json` blob
+**`bce1177ea21d7a4e01b59b2d4f4277a8584b4eed`**, run **30545364506**, commit
+**`8c30de51cc4d0098d4bd2922966684591bd7ce96`** (push STATE v51),
+2026-07-30T13:05:55Z, kode 0, `1341 tests collected in 0.45s`.
+Blob kedua dengan angka sama: **`2d32f814e5e426e1411559810b55b9f20176a22d`**, run
+**30542217837**, commit `b1c7941d` (push trio `sisa_defisit`), 12:22:10Z, 0.62s.
+
+Riwayat: 630 → 638 → 662×3 → 694×3 → 722×8 → 769 → 814 → 832 → 879 → 936 → 984 →
+1044 → 1100 → 1168 → 1233 → 1297 → **1341**.
+Turunan: 1297 + **44** butir `tests/test_sisa_defisit.py` = **1341** ✅ (aturan 21).
 
 Blob CI yang dicatat: 1168 = `2498e2cf6e6f6c7d0b8807bb5ba923ac1d803b6d` · 1233 =
-`0489d71101e451efe73d20fd8fe75ba6d41c5c27` (run 30532058688, commit `09ce9853`) ·
-1233 = `016fb2349a960100d270bec926e73d5b2c85e9cc` (run 30533500210, commit
-`f8098980`) · **1297 = `3c07c909…`**.
+`0489d71101e451efe73d20fd8fe75ba6d41c5c27` (run 30532058688) · 1233 =
+`016fb2349a960100d270bec926e73d5b2c85e9cc` (run 30533500210) · 1297 =
+`3c07c9093d5232ce3852b2ac509fd9e9875f0f33` (run 30535202643) · 1341 = dua blob di
+atas. Run **30541051907** (1297, commit `5d7d8b96`) tercatat **TANPA blob** — diwarisi
+dari jurnal 135, blobnya sudah tertimpa dan tidak dapat dipulihkan.
 
-**Aturan 57: beruntun 2 dari 2** sesudah PUTUS di 26/27. Ramalan kedua dibuat dengan
-daftar bernomor `test_01`..`test_64` tanpa rentang; dua helper sengaja berawalan garis
-bawah agar tidak dikumpulkan pytest.
-Aturan 38 pemakaian ke-**tiga puluh tujuh** (ke-36 untuk CI 1233 blob `016fb234`,
-ke-37 untuk CI 1297 blob `3c07c909`).
+**Aturan 57: beruntun 3 dari 3** sesudah PUTUS di 26/27. Ramalan ketiga dibuat dengan
+daftar bernomor `test_01`..`test_44` tanpa rentang; dua helper `_baris` dan
+`_ringkasan_bersih` sengaja berawalan garis bawah agar tidak dikumpulkan pytest.
 
-## Modul, workflow, dan berkas uji [v10]
+**Aturan 38 — ordinal.** Definisi yang berlaku (ADR-A018 kep. 8): pemakaian dihitung
+hanya untuk pembacaan `reports/ci_terakhir.json` yang **meninggalkan jejak tertulis**
+berupa nomor run, commit, dan blob. Dengan definisi itu pemakaian berjalan adalah
+**ke-40** (run `30545364506`). **Cacatnya disebut:** baris ke-38 tanpa blob, sehingga
+ordinal 40 sah relatif terhadap definisi itu, bukan sebagai pencacahan mutlak.
 
-**UTANG CACAH TANGAN HIDUP LAGI (aturan 66, KC-33).** Pencacahan TANGAN sah terakhir
-ada pada ref **`07a69d395ea7cbc07bda506b59f3e97b4574a11f`**: `lux_ai/serapan/` **47**,
-`tests/` **51**, `.github/workflows/` **42**. Sesudah trio `keterisian_lilin`, angka
-turunan menjadi 48 / 52 / 43 — **TURUNAN, DILARANG dikutip sebagai terukur** sampai
-dicacah satu per satu bernomor pada ref pasca-R-310. Ini utang verifikasi nomor 29 di
-EKOR v10.
+**Koreksi resmi atas STATE v51** (ADR-A018 kep. 7): STATE v51 menulis bahwa ramalan
+"CI tetap" pada push dokumen **tidak pernah terukur**. Itu terbantah oleh run
+30545364506. Rumusan yang benar: ramalan semacam itu **terukur bila laporannya dibaca
+sebelum run berikutnya menimpanya**, tetap berlabel MUDAH, tetap tidak diskor, tetap
+tidak menambah beruntun aturan 57.
 
-Blob trio R-310 (ketiganya dibaca ulang UTUH dari main sesudah push `924b0d7a`,
+## Modul, workflow, dan berkas uji [v11]
+
+**UTANG CACAH TANGAN LUNAS.** Pencacahan TANGAN satu per satu bernomor (aturan 66)
+dilakukan pada ref **`3196fd9809f23917ba819b4339cdfdd57bb808d1`**:
+
+| direktori | cacah TANGAN |
+| --- | --- |
+| `lux_ai/serapan/` (berkas `.py`) | **49** |
+| `tests/` | **53** |
+| `.github/workflows/` | **44** |
+| akar repo | **18** entri (6 direktori + 12 berkas) |
+
+Ini menggantikan angka sah lama 47/51/42 pada ref `07a69d39` dan angka 48/52/43 pada
+ref `5d7d8b96`. Keduanya tetap sah **untuk ref masing-masing**. Begitu trio ukur
+berikutnya didorong, 50/54/45 menjadi **TURUNAN dan DILARANG dikutip sebagai terukur**
+sampai dicacah tangan ulang.
+
+**PERINGATAN DUA CACAH `tests/` (ADR-A018 kep. 10).** `PETA_MODUL_BERKAS.md`
+(blob `3abe95f6`) mencatat **34** berkas uji milik repo **WARISAN `bot_v8`**. Repo
+riset ini punya **53**. Keduanya benar untuk repo masing-masing; **menyebut "cacah
+uji" tanpa menyebut repo-nya DILARANG**, karena selisihnya akan tampak seperti
+pelanggaran aturan 66 padahal bukan.
+
+**Peringatan dini aturan 48:** tiga modul terbesar `lux_ai/serapan/` menurut byte
+listing — `silang_funding.py` **29.873** · `funding.py` **28.121** ·
+`sisa_defisit.py` **25.949**.
+
+Blob trio R-311 (ketiganya dibaca ulang UTUH dari main sesudah push `b1c7941d`,
 aturan 52 dan 55):
 
-- `lux_ai/serapan/keterisian_lilin.py` V1 blob
-  **`3f80ffa72008008d567ef32f9f278b8931e91ac3`**.
-- `tests/test_keterisian_lilin.py` blob
-  **`f58912d0b1531dbf537de4c0b4f0a803a3ad1f69`** (**64** butir, dicacah TANGAN
-  `test_01`..`test_64`; daftar bernomor utuh di kepala berkas; dua helper
-  `_ringkasan_sehat` dan `_selisih_nol` berawalan garis bawah).
-- `.github/workflows/keterisian_lilin.yml` blob
-  **`d821c63a462a8338ccd63f8014f7c8847602fdff`** (`paths` **SATU** entri).
+- `lux_ai/serapan/sisa_defisit.py` V1 blob
+  **`7aa0e6d7003902e50806570ad112aae7f0345b07`** (25.949 B).
+- `tests/test_sisa_defisit.py` blob **`7004115acffd9c03c9ba4f9873bef40cb6b1375f`**
+  (12.640 B, **44** butir, dicacah TANGAN `test_01`..`test_44`; helper `_baris` dan
+  `_ringkasan_bersih` berawalan garis bawah).
+- `.github/workflows/sisa_defisit.yml` blob
+  **`645112075e104a74d43f3e3d2185cfbd48b0b513`** (`paths` **SATU** entri).
 
+Blob trio R-310 tetap: `keterisian_lilin.py` **`3f80ffa72008008d567ef32f9f278b8931e91ac3`** ·
+`test_keterisian_lilin.py` **`f58912d0b1531dbf537de4c0b4f0a803a3ad1f69`** (64 butir) ·
+`keterisian_lilin.yml` **`d821c63a462a8338ccd63f8014f7c8847602fdff`**.
 Blob trio v9 tetap: `bulan_pertama.py` `b9bd00ac` (19.349 B) ·
 `test_bulan_pertama.py` `75d87ba2` (13.375 B, 65 butir) · `bulan_pertama.yml`
-`2242e3e4`. Blob lain identik dengan v8/v9: `irisan_byte.py` `2dbe3d55`,
-`test_irisan_byte.py` `b6389051` (68 butir), `irisan_byte.yml` `7d98a267`,
-`kehidupan.py` `f49abb2b`, `kehidupan_arsip.py` `318a5cb1`, `silang_funding.py` V2
-`42c3aa9d`, `kohort_ekor.py` `c9b63bbe`, `lubang_awal.py` `8c36943d`,
-`lubang_tebing.py` `575e777e`, `lubang_tengah.py` `4d3beaf1`, `sebab_bangkit.py`
-`fd5a1dc4`, `tersisip_semesta.py` `8a648838`, `bentangan_kohort.py` V2 `f4eae57a`,
-`byte_semesta.py` `ff68e4be`, `funding.py` `8d4b1f82`, `arsip.py` `0104958b`,
-`gerbang_1m.py` `c8cc54c8`, `resample.py` `66a4b177`. `ci.yml` = `c79497b2`
-(paths-ignore journal/decisions/hipotesis/reports; push ke `lux_ai/**`, `tests/**`,
-`STATE*`, `PROMPT*` MENYALAKAN CI). `karantina_semesta.yml` = `de40fa4e` (belum
-dibaca utuh).
+`2242e3e4`. Lainnya identik: `irisan_byte.py` `2dbe3d55`, `test_irisan_byte.py`
+`b6389051` (68 butir), `irisan_byte.yml` `7d98a267`, `kehidupan.py` `f49abb2b`,
+`kehidupan_arsip.py` `318a5cb1`, `silang_funding.py` V2 `42c3aa9d`, `kohort_ekor.py`
+`c9b63bbe`, `lubang_awal.py` `8c36943d`, `lubang_tebing.py` `575e777e`,
+`lubang_tengah.py` `4d3beaf1`, `sebab_bangkit.py` `fd5a1dc4`, `tersisip_semesta.py`
+`8a648838`, `bentangan_kohort.py` V2 `f4eae57a`, `byte_semesta.py` `ff68e4be`,
+`funding.py` `8d4b1f82`, `arsip.py` `0104958b`, `gerbang_1m.py` `c8cc54c8`,
+`resample.py` `66a4b177`, `semesta_kuota.py` `7288b030`, `bulan_absen.py` `10279d72`,
+`kebangkitan.py` `446321ee`, `penyebut_tahun.py` `265aad00`, `anatomi_tengah.py`
+`04279335`, `__init__.py` `64d85584`. `ci.yml` = `c79497b2` (paths-ignore
+journal/decisions/hipotesis/reports; push ke `lux_ai/**`, `tests/**`, `STATE*`,
+`PROMPT*` MENYALAKAN CI). `karantina_semesta.yml` = `de40fa4e` (**belum dibaca utuh**).
 
 Cacah per berkas uji yang diketahui: `test_irisan_byte.py` **68** ·
 `test_bulan_pertama.py` **65** · `test_keterisian_lilin.py` **64** ·
-`test_bentangan_kohort.py` V2 **63** · `test_lubang_tebing.py` **60** ·
-`test_sebab_bangkit.py` **57** · `test_byte_semesta.py` **56** ·
-`test_lubang_awal.py` **48** · `test_tersisip_semesta.py` **47** ·
-`test_anatomi_tengah.py` **47** · `test_terhenti.py` V4 **33** ·
-`test_bulan_absen.py` **32** · `test_karantina_semesta.py` **28** ·
-`test_silang_settled.py` **24**.
+**`test_bentangan_kohort.py` V2 **63** (blob `9f850ecdb25466d38c839004b36ff221db2cf7f8`,
+13.154 B — dibaca UTUH, dicacah TANGAN `test_01`..`test_63`, utang verifikasi LUNAS)** ·
+`test_lubang_tebing.py` **60** · `test_sebab_bangkit.py` **57** ·
+`test_byte_semesta.py` **56** · `test_lubang_awal.py` **48** ·
+`test_tersisip_semesta.py` **47** · `test_anatomi_tengah.py` **47** ·
+**`test_sisa_defisit.py` 44** · `test_terhenti.py` V4 **33** · `test_bulan_absen.py`
+**32** · `test_karantina_semesta.py` **28** · `test_silang_settled.py` **24**.
 
-**Pola workflow trio (terbukti lagi pada `keterisian_lilin.yml`, dibaca UTUH):**
-`name`, `on.push.paths` SATU entri, `permissions: contents: write`, job `ukur` di
+**Pola workflow trio (terbukti lagi pada `sisa_defisit.yml`):** `name`,
+`on.push.paths` SATU entri, `permissions: contents: write`, job `ukur` di
 `ubuntu-latest`, checkout@v4 + setup-python@v5 (3.11), `pip install numpy pandas
 pyarrow pyyaml`, langkah `jalan` id=`jalan` dengan `set +e` → `KODE=$?` →
 `echo "kode=$KODE" >> "$GITHUB_OUTPUT"` → `exit 0`, langkah `catat status` (printf
@@ -403,81 +490,86 @@ JSON ke `reports/<modul>_status.json`), langkah `dorong laporan` (git config bot
 add, commit `[skip ci]`, pull --rebase, push), langkah akhir
 `exit ${{ steps.jalan.outputs.kode }}`.
 
-## API terverifikasi — tambahan v10
+## API terverifikasi — tambahan v11
 
-API lama (v37–v9) tetap berlaku. Tambahan:
+API lama (v37–v10) tetap berlaku. Tambahan:
 
-**`keterisian_lilin` V1** (blob `3f80ffa7`, dibaca UTUH dari `924b0d7a` sesudah push):
-mengimpor `kehidupan`, `kehidupan_arsip`, `silang_funding`.
-Tetapan: `VERSI=1`, `TOTAL_PECAHAN=kehidupan_arsip.TOTAL_PECAHAN`,
-`KELUARAN="reports/keterisian_lilin.json"`,
-`KELUARAN_RINGKAS="reports/keterisian_lilin_ringkas.json"`,
-`BATAS_BARIS_LAPORAN=40`, **`MENIT_PER_HARI=1440`**, **`MEDAN_LILIN="cacah_lilin"`**,
-`KENDALI_SIMBOL="BTCUSDT"`, `KENDALI_CACAH=3`, `AMBANG_HIDUP_KECIL=97634`,
-**`R310_PITA_BUTIR_1=(1,120)`**, **`R310_PITA_BUTIR_2=(0.02,0.25)`**,
-`BERKAS_DICAP=["kehidupan.py","kehidupan_arsip.py","keterisian_lilin.py",
-"silang_funding.py"]`, `INVARIAN` **delapan** kunci (19586, 787, 18087, 98, 1401,
-32706262375, 32049492952, 38) — **seluruhnya BEBAS**, `JAWABAN_KENDALI`
-(3, 1, 1160, 520, 640, 213400, 0, 0.5517).
+**`sisa_defisit` V1** (blob `7aa0e6d7`, dibaca UTUH dari `b1c7941d` sesudah push):
+mengimpor `kehidupan`, `kehidupan_arsip`, `silang_funding`, dan **menurunkan
+`lilin_penuh`/`hari_dalam_bulan` dari `keterisian_lilin`** (pemakaian ulang, bukan
+salinan — KC-43 terjaga untuk kelima kalinya).
+Tetapan: `VERSI=1`, `KELUARAN="reports/sisa_defisit.json"`,
+`KELUARAN_RINGKAS="reports/sisa_defisit_ringkas.json"`, `BATAS_BARIS_LAPORAN=40`,
+`MENIT_PER_HARI=1440`, `MEDAN_LILIN="cacah_lilin"`, `CACAH_TERATAS=10`,
+`R311_PITA_BUTIR_1=(200,12000)`, `R311_PITA_BUTIR_2=(0.02,0.45)`,
+`DEFISIT_SEMBILAN_TERCATAT=95237`, `DEFISIT_BUKAN_PERTAMA_TERCATAT=808162`,
+`SISA_TERCATAT=712925`, `BERKAS_DICAP` 4 nama, `INVARIAN` delapan kunci seluruhnya
+BEBAS, **`JAWABAN_KENDALI` 17 medan** (dengan `bagian_teratas` **0,9677** = 600/620,
+dihitung TANGAN lebih dulu).
 Fungsi: `nama_keluaran`, `nama_ringkas`, `daftar_sumber`, `sidik_kode`,
-**`hari_dalam_bulan`**, **`lilin_penuh`**, **`defisit`**, `peta_bulan_pertama`,
-`kumpulkan`, `ringkas_defisit`, **`baris_mati_tak_penuh`**, `cacah_mati_tak_penuh`,
-`cacah_mati_penuh`, `bagian_defisit_bukan_pertama`, `potong`, `dalam_pita`,
-`dalam_pita_pecahan`, `invarian_terukur`, `selisih_invarian`, `kendali_data`,
-`kendali_data_sah`, `semesta_kendali`, `kendali_deteksi`, **`kendali_negatif`**,
-`uji_r310`, `kode_keluar`, `jalankan(akar=".", total=None)`, `berkas_ringkas`, `main`.
-**Yang wajib disebut:** `jumlah_lilin_langsung` dihitung LANGSUNG dari baris, bukan
-disalin dari angka tercatat — penerapan wajib KC-50 (ADR-A016 kep. 5), dan justru itu
-yang memunculkan selisih 516.135. `kendali_negatif` membuktikan modul BISA melihat
-baris tanpa lilin, sehingga `cacah_baris_tanpa_lilin = 0` boleh dibaca (aturan 50).
+`peta_bulan_pertama`, `kumpulkan`, **`baris_calon`**, **`baris_berdefisit`**,
+**`teratas`** (mengembalikan **None** untuk `bagian_teratas` bila baris berdefisit
+< 10 — bukan 0, bukan galat), `ringkas`, `selisih_sisa`, `sebaran_kelas`,
+`invarian_terukur`, `selisih_invarian`, `kendali_data`, `kendali_data_sah`,
+`semesta_kendali`, `kendali_deteksi`, **`kendali_nol`**, `dalam_pita`,
+`dalam_pita_pecahan`, `uji_r311`, `kode_keluar`, `jalankan(akar=".", total=None)`,
+`berkas_ringkas`, `main`.
+**Yang wajib disebut:** penyebut kerja **17.398** dihitung LANGSUNG dari baris, bukan
+disalin; `selisih_sisa` = 0 **tautologis** dan DILARANG disebut pengukuran bebas
+(KC-50); `kendali_nol` yang membuat `cacah_berdefisit` bermakna (aturan 50).
 
-**`bulan_pertama` V1** (blob `b9bd00ac`): `VERSI=1`,
-`KELUARAN="reports/bulan_pertama.json"`, `BATAS_BARIS_LAPORAN=40`,
-`AMBANG_HIDUP_KECIL=97634`, `BULAN_TEPI="2026-06"`, `R309_PITA_BUTIR_1=(22,38)`,
-`R309_PITA_BUTIR_2=(0.10,0.60)`, `INVARIAN` delapan kunci, `MEDAN_SELISIH` 8
-(seluruhnya BEBAS), `KENDALI_DATA` 3 baris BTCUSDT, `DETEKSI_AMBANG=250`,
+**`keterisian_lilin` V1** (blob `3f80ffa7`): `VERSI=1`,
+`TOTAL_PECAHAN=kehidupan_arsip.TOTAL_PECAHAN`, `BATAS_BARIS_LAPORAN=40`,
+`MENIT_PER_HARI=1440`, `MEDAN_LILIN="cacah_lilin"`, `KENDALI_SIMBOL="BTCUSDT"`,
+`KENDALI_CACAH=3`, `AMBANG_HIDUP_KECIL=97634`, `R310_PITA_BUTIR_1=(1,120)`,
+`R310_PITA_BUTIR_2=(0.02,0.25)`, `INVARIAN` delapan kunci BEBAS, `JAWABAN_KENDALI`
+(3, 1, 1160, 520, 640, 213400, 0, 0.5517). Fungsi kunci: `hari_dalam_bulan`,
+`lilin_penuh`, `defisit`, `baris_mati_tak_penuh`, `kendali_negatif`, `uji_r310`,
+`jalankan(akar=".", total=None)`.
+
+**`bulan_pertama` V1** (blob `b9bd00ac`): `R309_PITA_BUTIR_1=(22,38)`,
+`R309_PITA_BUTIR_2=(0.10,0.60)`, `BULAN_TEPI="2026-06"`, `AMBANG_HIDUP_KECIL=97634`,
 `DETEKSI_PERTAMA=2`, `DETEKSI_HIDUP_KECIL=2`, `DETEKSI_SEBAGIAN=2`,
-`DETEKSI_NISBAH=0.75`, `DETEKSI_TOTAL_BYTE=1500`. Fungsi: `nama_keluaran`,
-`sidik_kode`, `_bagian`, `kelas_status`, `peta_bulan_pertama`, `penanda_baris`,
-`sebaran_per_kelas`, **`total_byte_langsung`**, `cacah_di_bawah`, `cacah_sebagian`,
-`daftar_kecil_bertanda`, `nisbah_pertama` (penyebut kosong → **None**),
-`selisih_invarian`, `dalam_pita`, `dalam_pita_pecahan`, `kendali_data`,
-`kendali_deteksi`, `ringkaskan`, `uji_r309`, `kode_keluar`,
-`jalankan(akar=".", total=None)`, `main`.
+`DETEKSI_NISBAH=0.75`, `DETEKSI_TOTAL_BYTE=1500`, `nisbah_pertama` (penyebut kosong →
+**None**), `total_byte_langsung`.
 
 **`irisan_byte` V1** (blob `2dbe3d55`): `AMBANG_HIDUP_KECIL=97634`,
 `AMBANG_MATI_KECIL=150000`, `R308_PITA_BUTIR_1=(20,600)`,
-`R308_PITA_BUTIR_2=(10,300)`, `INVARIAN` 9 kunci, `MEDAN_SELISIH` **9** (delapan
-bebas + satu turunan), `DETEKSI_TOTAL=1922`. Rincian penuh di v8.
+`R308_PITA_BUTIR_2=(10,300)`, `MEDAN_SELISIH` **9** (delapan bebas + satu turunan),
+`DETEKSI_TOTAL=1922`.
 
 **`silang_funding` V2** (blob `42c3aa9d`, 29.873 B): `baca_laporan_kehidupan(akar,
 total)` → **TIGA** nilai `(status, byte_parquet, meta)`, kunci tuple
-`(simbol, bulan)`; **`baca_medan_baris(akar, total, medan)`** → `(nilai, meta)`,
-MELEWATI baris ber-medan `None` — dipakai `keterisian_lilin` dengan
-`medan="cacah_lilin"`, terbukti lagi (KC-43 terjaga); `bulan_per_simbol(status)`;
-`lubang_funding(funding)`; `kendali_silang`; `kendali_sah`; `bentuk_lubang_lokal`;
+`(simbol, bulan)`; `baca_medan_baris(akar, total, medan)` → `(nilai, meta)`, MELEWATI
+baris ber-medan `None` — dipakai `keterisian_lilin` dan **`sisa_defisit`** dengan
+`medan="cacah_lilin"`; `bulan_per_simbol(status)`; `lubang_funding(funding)`;
+`bentuk_lubang_lokal(bulan_urut, bulan_berlubang, bulan)` →
+bukan_lubang/awal/ekor/seluruh/tengah; `kendali_silang`; `kendali_sah`;
 `SUMBER_FUNDING="reports/funding_semesta.json"`, `KENDALI_CACAH=3`,
 `PENYEBUT_TERCATAT=19586`, `MATI_TERCATAT=1401`, `KOHORT_TERCATAT=456`,
 `HIDUP_TANPA_FUNDING_TERCATAT=33`, `LUBANG_TAK_DIKENAL_TERCATAT=3`,
 `BENTUK_TERBITAN_FUNDING={"awal":48,"ekor":826,"tengah":6}`.
 
-**`byte_semesta` V1** (blob `ff68e4be`): `R307_PITA_BUTIR_1=(0.02,0.15)`,
-`R307_AMBANG_BYTE_KECIL=10000`, `R307_PITA_BUTIR_2_CACAH=(20,400)`,
-`BATAS_BARIS_LAPORAN=40`, `MEDAN_SELISIH` 9. Rincian penuh di v7.
+**`bentangan_kohort` V2** (blob `f4eae57a`, uji `9f850ecd`): `VERSI==2`; `TEBING`,
+`BULAN_DIHARAPKAN`, `KENDALI_HIDUP` diwarisi `kohort_ekor`; `MEDAN_LILIN` dan
+`SUMBER_FUNDING` diwarisi `silang_funding`; `R301_BUTIR_1_HIDUP_SESUDAH_TEBING=0`,
+`R301_BUTIR_2_MINIMAL_SATU_TERSISIP=1`, `R301_BUTIR_3_BANGKIT=0`; `BERKAS_DICAP` 4
+nama. Butir uji 09 menolak `str(tuple)` sebagai kunci (penangkal cacat V1); butir
+59–61 memanggil `silang_funding` asli untuk memeriksa BENTUK kembalian; butir 63
+melarang nama kohort tertulis di dalam modul (aturan 73); butir 37 menuntut `None`,
+bukan nol.
 
-**`lubang_awal` V1** (`8c36943d`): `peta_status`, `ringkas`, `himpun`, `bulan_urut`,
-`bangkit_lokal`, `kendali_deteksi`, `dalam_pita`, `uji_r305`, `kode_keluar`;
-`POLA_BULAN=re.compile(r"^\d{4}-\d{2}$")`; `BATAS_BARIS_LAPORAN=60`. Medan
-`mati_tidak_setelah_lubang_bukan_awal` memakai `<=` — **DILARANG dipakai untuk klaim
-arah** (aturan 80). Sidik `156499ce…`.
-`lubang_tebing` V1 (`575e777e`): rincian di v6; `BATAS_BARIS_LAPORAN=60`.
-`kohort_ekor` V4 (`c9b63bbe`): `TEBING="2025-07"`, `BULAN_DIHARAPKAN="2026-06"`,
+**`byte_semesta` V1** (`ff68e4be`): `R307_PITA_BUTIR_1=(0.02,0.15)`,
+`R307_AMBANG_BYTE_KECIL=10000`, `R307_PITA_BUTIR_2_CACAH=(20,400)`.
+**`lubang_awal` V1** (`8c36943d`): medan `mati_tidak_setelah_lubang_bukan_awal`
+memakai `<=` — **DILARANG dipakai untuk klaim arah** (aturan 80). Sidik `156499ce…`.
+**`kohort_ekor` V4** (`c9b63bbe`): `TEBING="2025-07"`, `BULAN_DIHARAPKAN="2026-06"`,
 `BATAS_SIMBOL=10`, `PAGU_MUNDUR=60`, `AMBANG_SEPI=0.5`,
 `KENDALI_HIDUP=("BTCUSDT","ETHUSDT")`.
-`kehidupan_arsip` (`318a5cb1`): `TOTAL_PECAHAN=8`, `AKAR_UNDUH="data/unduh"`,
+**`kehidupan_arsip`** (`318a5cb1`): `TOTAL_PECAHAN=8`, `AKAR_UNDUH="data/unduh"`,
 `AKAR_BONGKAR="data/kehidupan_arsip"`, `KOLOM_VOLUME="volume"`,
-`KOLOM_TRANSAKSI="trades"`, `nama_keluaran(i)`.
-`kehidupan` (`f49abb2b`): `AMBANG_SEPI=0.5`, `STATUS_MATI/SEPI/HIDUP/TAK_TERUKUR`,
+`KOLOM_TRANSAKSI="trades"`.
+**`kehidupan`** (`f49abb2b`): `AMBANG_SEPI=0.5`, `STATUS_MATI/SEPI/HIDUP/TAK_TERUKUR`,
 `BULAN_MULAI="2025-07"`, `BULAN_AKHIR="2026-06"`, `deret_bulan`, `klasifikasi`,
 `penyebut_ganda`.
 
@@ -489,8 +581,8 @@ Sidik lain: `sebab_bangkit` V1 `bafe4359e8f36f0402d4be4a4e4aef4a28f224f6419f06f7
 `8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4d3231b1` ·
 laporan kehidupan seragam
 `24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595`.
-Keempatnya COCOK lagi pada run `keterisian_lilin` (aturan 36, kini empat run
-berturut) → semesta SAMA.
+Keempatnya COCOK lagi pada run `sisa_defisit` (aturan 36, kini **lima** run berturut)
+→ semesta SAMA.
 
 ## Hipotesis
 
@@ -500,89 +592,133 @@ berturut) → semesta SAMA.
   6–0, TAFSIR DICABUT · H-A014 BENTUK BARU MENANG 9 dari 9 · H-A015 MENANG sebagai
   angka, DIBATASI sebagai tafsir (KC-45) · H-A016 PENGAMATAN, BELUM DIUJI.
 - **H-A017** DICABUT sebagai pola semesta (ADR-A011/A012, dilemahkan R-306): bukti
-  lepas-tebing tinggal **1** simbol. TIDAK dipulihkan oleh R-307..R-310 — keempatnya
-  tidak menyentuh arah sebab.
+  lepas-tebing tinggal **1** simbol. TIDAK dipulihkan oleh R-307..R-311.
 - **H-A018 — byte parquet sebagai gejala kehidupan. DIUKUR DUA KALI (R-307, R-308).**
   **Bunyi yang BOLEH dipakai:** "bulan MATI menempati bagian KECIL dari byte semesta
   (**0,0177** dari 32,7 GB) dan rata-rata sekitar **4,3×** lebih kecil daripada bulan
   HIDUP (413.306 lawan 1.771.963 byte)".
   **Bunyi yang DILARANG:** "berkas kecil berarti pasar mati" — di zona 22.440–97.634
-  byte ada **38 HIDUP dan 0 MATI**. **[v10] R-310 TIDAK membalik larangan ini**,
-  meski ia menjelaskan kedua berkas MATI terkecil lewat cacah lilinnya.
+  byte ada **38 HIDUP dan 0 MATI**. **[v11] R-311 justru memperkuat larangan itu:**
+  baris paling kosong di seluruh semesta (TLMUSDT 2023-03, 95,2% kosong) berstatus
+  **HIDUP**.
 - **H-A019 [DIUJI R-309 — DITERIMA TERBATAS oleh ADR-A016 kep. 1].**
-  **Rumusan resmi satu-satunya yang boleh dikutip:** *hampir setiap baris HIDUP di
-  zona byte kecil adalah bulan pertama simbol itu di dalam penyebut (**37 dari 38**),
-  sementara hampir setiap bulan pertama BUKAN berkas kecil (**37 dari 787, ±4,7%**).*
-  Irisan asimetris, bukan sebab. Klausa `2026-06` DICABUT (kep. 2). Batas tafsir:
-  "bulan pertama" = di dalam penyebut 19.586, bukan di bursa (kep. 6). Lawan yang
-  tersisa: **TLMUSDT 2023-03**, dan R-310 tidak menjelaskannya.
-  **[v10] DIKUATKAN dari jalur ukur kedua:** bulan pertama menanggung **95,5%**
-  defisit lilin semesta dan terisi **≈49,7%** — sebangun dengan nisbah byte 0,527179.
-- **H-A020 [DIUSULKAN di STATE v50, BELUM DIUJI].** *Ketujuh baris MATI tak penuh
-  berbulan `2024-05` adalah SATU peristiwa, bukan tujuh pengamatan bebas: jendelanya
-  hanya sembilan lilin (39.308..39.317).* Larangan yang menyertainya: DILARANG
-  menulis "tujuh simbol didelisting 28 Mei 2024" sebagai temuan — tanggal itu TIDAK
-  terukur, yang terukur hanya lebar jendela. Cara mengujinya: `lubang_tengah` atas
-  gugus 2024-05 untuk melihat apakah lilin yang hilang berada di posisi yang sama.
-- Hipotesis berikutnya **H-A021**.
-
-## Praregistrasi R-309 — SUDAH TERADJUDIKASI: TEPAT
-
-Disimpan apa adanya sebagai jejak (aturan 29). Poros **H-A019**.
-
-- **Butir 1 (BERISIKO).** Dari 38 baris HIDUP ber-byte < 97.634, cacah yang merupakan
-  bulan PERTAMA simbol ATAU bulan `2026-06`. Pita **22 .. 38** → **37** → **MENANG**.
-- **Butir 2 (BERISIKO).** Nisbah rata byte bulan PERTAMA terhadap bulan BUKAN-pertama
-  atas 19.586 baris. Pita **0.10 .. 0.60** → **0,527179** → **MENANG** (tipis ke tepi
-  atas).
-- **Butir 3 (MUDAH).** Delapan invarian nol, dua kendali sah, kode 0, CI → **MENANG**.
-
-**Cacat praregistrasi yang ditemukan SESUDAH menang:** butir 1 memakai klausa ATAU
-yang salah satu cabangnya menyumbang NOL secara bebas — dasar **aturan 84**, kini
-RESMI di STATE v50.
+  **Rumusan resmi satu-satunya:** *hampir setiap baris HIDUP di zona byte kecil adalah
+  bulan pertama simbol itu di dalam penyebut (**37 dari 38**), sementara hampir setiap
+  bulan pertama BUKAN berkas kecil (**37 dari 787, ±4,7%**).* Irisan asimetris, bukan
+  sebab. Klausa `2026-06` DICABUT. Batas tafsir: "bulan pertama" = di dalam penyebut,
+  bukan di bursa.
+  **[v11] Perlawanan TLMUSDT 2023-03 TIDAK LAGI tak terjelaskan** — sifatnya terukur
+  (baris berdefisit terbesar semesta). Tafsir "byte kecil = bulan sebagian di tepi"
+  **MELEMAH**; tafsir pengganti **TIDAK ditegakkan** (ADR-A018 kep. 6). H-A019 tetap
+  DITERIMA TERBATAS.
+- **H-A020 [DIUSULKAN, BELUM DIUJI].** *Ketujuh baris MATI tak penuh berbulan
+  `2024-05` adalah SATU peristiwa, bukan tujuh pengamatan bebas: jendelanya hanya
+  sembilan lilin (39.308..39.317).* DILARANG menulis "tujuh simbol didelisting 28 Mei
+  2024" sebagai temuan. Cara mengujinya: `lubang_tengah` atas gugus 2024-05.
+- **H-A021 [BARU v11, DIUSULKAN, BELUM DIUJI].** *Kekosongan **ANCUSDT `2022-05`**
+  (defisit **26.959**) dan **LUNAUSDT `2022-05`** (defisit **26.950**) adalah SATU
+  peristiwa yang sama, bukan dua pengamatan bebas.* Dasarnya hanya selisih **sembilan
+  lilin** di bulan yang sama — **kebetulan angka, bukan bukti**. Sampai diuji, **setiap
+  kalimat sebab untuk gugus `2022-05` DILARANG.** Bila kelak DITERIMA, cacah pengamatan
+  bebas dalam sepuluh baris teratas turun dari 10 menjadi 9, dan `bagian_teratas`
+  **tidak berubah** karena ia dihitung atas lilin, bukan atas baris.
+- Hipotesis berikutnya **H-A022**.
 
 ## Praregistrasi R-310 — SUDAH TERADJUDIKASI: TEPAT
 
-Disimpan apa adanya sebagai jejak (aturan 29); teks disalin dari jurnal 131 §7 dan
-TIDAK diubah sesudah pengukuran. Poros: **isi berkas bulan MATI** (ADR-A016 kep. 7).
-Aritmetika implikasi ditulis lebih dulu (aturan 83) dan **tiga calon butir dibuang
-karena jawabannya sudah tertentu**; kedua butir berisiko sengaja berklausa TUNGGAL
-(aturan 84).
+Disimpan apa adanya sebagai jejak (aturan 29). Poros: isi berkas bulan MATI.
 
-- **Butir 1 (BERISIKO).** Cacah baris MATI ber-`cacah_lilin` KURANG dari lilin penuh
-  bulannya, dari penyebut **1.401**. Pita **1 .. 120**. Penyebut 0 → TIDAK
-  TERADJUDIKASI (aturan 41). → terukur **9** → **MENANG** (tipis ke tepi BAWAH).
-- **Butir 2 (BERISIKO).** Bagian defisit lilin semesta yang ditanggung baris
-  BUKAN-pertama. Pita **0.02 .. 0.25**. → terukur **0,0445** → **MENANG** (tipis ke
-  tepi BAWAH).
-- **Butir 3 (MUDAH).** Delapan selisih invarian nol, TIGA kendali sah, lima penggugur
-  bersih, kode keluar 0, CI diukur. → **MENANG**.
+- **Butir 1 (BERISIKO).** Cacah baris MATI berlilin kurang dari penuh, dari 1.401.
+  Pita **1 .. 120** → **9** → **MENANG** (tipis ke tepi BAWAH).
+- **Butir 2 (BERISIKO).** Bagian defisit yang ditanggung baris BUKAN-pertama.
+  Pita **0.02 .. 0.25** → **0,0445** → **MENANG** (tipis ke tepi BAWAH).
+- **Butir 3 (MUDAH).** → **MENANG**.
 
-**Tiga calon butir yang DIBUANG sebelum pita dikunci** (jejak aturan 83 bekerja
-sebagai pencegah): (a) cacah baris MATI berlilin PENUH — dihitung ≈1.370–1.401
-sebelum mengukur, **terukur 1.392**, akan menjadi kemenangan murahan; (b) cacah MATI
-ber-`cacah_lilin` < 1.440 — hampir pasti 0; (c) nisbah byte-per-lilin MATI:HIDUP —
-tersirat 0,233.
+**Tiga calon butir yang DIBUANG sebelum pita dikunci** (jejak aturan 83 bekerja):
+(a) cacah baris MATI berlilin PENUH — tersirat ≈1.370–1.401, terukur 1.392;
+(b) cacah MATI ber-`cacah_lilin` < 1.440 — hampir pasti 0; (c) nisbah byte-per-lilin
+MATI:HIDUP — tersirat 0,233.
 
 **Cacat yang ditemukan SESUDAH menang:** numerator 9 bukan sembilan pengamatan bebas
-(KC-47, tujuh di antaranya gugus `2024-05`), dan bahan baku taksirannya memakai
-839.842.134 yang ternyata bukan jumlah lilin (Koreksi 4, KC-50).
+(KC-47), dan bahan baku taksirannya memakai 839.842.134 yang ternyata bukan jumlah
+lilin (Koreksi 4, KC-50).
 
-## Praregistrasi R-311 — BELUM ADA
+## Praregistrasi R-311 — SUDAH TERADJUDIKASI: SEPARUH
 
-Poros belum ditetapkan; ADR-A016 menolak penyusunan percobaan pada giliran yang sama
-dengan adjudikasi. Calon urut kekuatan, dari jurnal 132 §14:
+Disimpan apa adanya sebagai jejak (aturan 29); teks disalin dari jurnal 134 dan TIDAK
+diubah sesudah pengukuran. Poros: **sisa 712.925 lilin**.
 
-1. **Sisa 712.925 lilin** — baris mana yang menanggung defisit bukan-pertama di luar
-   kesembilan baris MATI tak penuh. Ini pertanyaan terbuka nomor satu dan porosnya
-   paling bersih karena angkanya sama sekali belum tersirat.
-2. **Selisih 516.135** lawan dugaan 12 simbol-bulan karantina (516.135 / 12 = 43.011).
-   Peringatan aturan 83: dugaan itu sudah menghasilkan satu angka; bila pita disusun
-   di sekitar 43.011 maka butirnya hampir tidak berisiko — porosnya harus dipindahkan
-   ke bentuk sebaran, bukan ke rata-rata.
-3. **Lubang tengah gugus `2024-05`** untuk menegakkan atau meruntuhkan **H-A020**.
+- **Butir 1 (BERISIKO).** Cacah baris bukan-pertama bukan-MATI yang `cacah_lilin`-nya
+  kurang dari lilin penuh bulannya. Pita **200 .. 12.000**, taksiran titik 3.000.
+  → terukur **114** → **KALAH**, meleset **26,3 kali** dari taksiran dan **1,75 kali**
+  di bawah tepi bawah.
+- **Butir 2 (BERISIKO).** Bagian defisit sisa yang ditanggung **sepuluh** baris
+  teratas. Pita **0,02 .. 0,45**, taksiran titik 0,15. → terukur **0,4087** →
+  **MENANG**, sisa hanya **0,0413** ke tepi ATAS; meleset **+172%** dari taksiran.
+- **Butir 3 (MUDAH).** Delapan invarian nol, kendali sah, `kendali_nol` bekerja, kode
+  keluar 0, CI diukur. → **MENANG**.
 
-Sebelum pita dikunci: aturan 83 WAJIB dipenuhi di jurnal lebih dulu; aturan 84 WAJIB
-diperhatikan bila ada butir berklausa ATAU; nama modul WAJIB dicek lewat pencacahan
-direktori TANGAN lebih dulu (aturan 66 — utang 48/52/43 masih hidup); laporan WAJIB
-ringkas (`BATAS_BARIS_LAPORAN`).
+**Aturan 83 DITAATI PENUH dan TETAP KALAH.** Lantai aritmetis **16** dihitung sendiri
+di jurnal 134 dan rentang implikasinya (16 .. 18.790) benar. Tepi bawah tetap
+diletakkan di **200** — dua belas setengah kali lantai — **tanpa satu kalimat pun yang
+membenarkannya**. Aturan 83 menuntut aritmetikanya dihitung; ia tidak pernah menuntut
+hasilnya **dipakai**. Lubang itu ditutup **aturan 85** (ADR-A018 kep. 2), yang berlaku
+mulai **R-312** dan **tidak berlaku surut**; R-311 **tidak** diadjudikasi ulang
+(aturan 29).
+
+**KC-51 — bias taksiran pemusatan. Rumusan resmi:**
+
+> Ketika sebuah besaran belum pernah diukur sebarannya, taksiran yang saya buat secara
+> sistematis mengandaikan besaran itu **lebih menyebar** daripada kenyataannya.
+> Akibatnya tepi pita di sisi "terpusat" diletakkan terlalu jauh dari lantai
+> aritmetis, dan pita kalah ke sisi itu.
+
+Empat kejadian berturut tanpa satu pun pembalikan arah:
+
+| ramalan | besaran | taksiran / pita | terukur |
+| --- | --- | --- | --- |
+| R-308 butir 2 | cacah MATI ber-byte kecil | 10 .. 300 | **2** |
+| R-310 butir 2 | bagian defisit bukan-pertama | 0,073 (0,02..0,25) | **0,0445** |
+| R-311 butir 1 | cacah baris berdefisit | 3.000 (200..12.000) | **114** |
+| R-311 butir 2 | pemusatan sepuluh teratas | 0,15 (0,02..0,45) | **0,4087** |
+
+**DILARANG oleh KC-51:** menyebut kemenangan butir 2 sebagai bukti kalibrasi membaik.
+
+## Praregistrasi R-312 — BELUM ADA
+
+Poros sudah **ditetapkan** di ADR-A018 kep. 12, tetapi **praregistrasinya DILARANG
+ditulis di lampiran ini**; ia wajib ditulis di **jurnal** lebih dulu (aturan 79), pada
+giliran yang BERBEDA dari adjudikasi (ADR-A016).
+
+1. **(a) Lubang tengah gugus `2022-05` dan `2024-05`** — menguji **H-A021 dan H-A020
+   sekaligus**: apakah baris berdefisit yang berhimpit bulan itu berbagi satu jendela
+   lilin yang sama.
+2. **(b) Selisih 516.135** lawan dugaan 12 simbol-bulan karantina
+   (516.135 / 12 = 43.011 — **DUGAAN, BELUM DIUJI**). Porosnya **wajib berupa bentuk
+   SEBARAN, bukan rata-rata**, sebab rata-rata 43.011 akan selalu benar secara
+   aritmetis dan karena itu tidak berisiko.
+
+Sebelum pita dikunci: aturan 83 WAJIB dipenuhi di jurnal lebih dulu; **aturan 85 WAJIB
+diterapkan pada tiap butir cacah/bagian yang sebarannya belum diukur — tepi "terpusat"
+di lantai aritmetis atau paling banyak satu orde di atasnya, dengan alasan tertulis**;
+aturan 84 WAJIB (satu klausa per butir); nama modul WAJIB dicek lewat pencacahan
+direktori TANGAN lebih dulu (aturan 66 — 49/53/44 sah untuk ref `3196fd98`, dan
+angka turunan sesudah trio berikutnya DILARANG dikutip); laporan WAJIB ringkas
+(`BATAS_BARIS_LAPORAN`).
+
+## Utang ukur yang masih hidup
+
+1. **`karantina_semesta.yml`** (`de40fa4e`) belum dibaca utuh; begitu pula
+   `test_pulihkan.py` (`11c43533`), `test_rilis_karantina.py` (`739c8da9`),
+   `test_karantina_a006.py` (`a5a3d82f`).
+2. **Lima ADR belum dibaca utuh:** A002, A004, A006, A007, A008.
+3. **Irisan 880 lawan 877 lubang funding** belum diukur.
+4. **Perbedaan "bulan pertama di penyebut" lawan "bulan pertama di bursa"** belum
+   diukur (ADR-A016 kep. 6).
+5. **Sebab kekosongan TLMUSDT 2023-03** belum diukur; tidak ada tafsir yang ditegakkan.
+6. **Tiga butir `PETA_MODUL.md` bertanda "memerlukan verifikasi"** (repo WARISAN,
+   bukan repo ini): atribut `enable_hs` yang tidak ditemukan di `config.py` padahal
+   dipakai `strategy.py`; klaim "30 pair dipilih alfabetis" tanpa bukti; klaim
+   "kendala mengikat = kapasitas margin" yang belum diuji angkanya.
+7. **`PROMPT_KELANJUTAN.md`** belum diberi kepala "ARSIP — BUKAN SUMBER" dan belum
+   dihapus (ADR-A018 kep. 9).

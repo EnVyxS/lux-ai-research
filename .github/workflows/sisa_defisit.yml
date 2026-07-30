@@ -1,0 +1,56 @@
+name: sisa_defisit
+
+on:
+  push:
+    paths:
+      - lux_ai/serapan/sisa_defisit.py
+
+permissions:
+  contents: write
+
+jobs:
+  ukur:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: pasang
+        run: pip install numpy pandas pyarrow pyyaml
+      - name: jalan
+        id: jalan
+        run: |
+          set +e
+          python -m lux_ai.serapan.sisa_defisit
+          KODE=$?
+          set -e
+          echo "kode=$KODE" >> $GITHUB_OUTPUT
+          exit 0
+      - name: catat status
+        env:
+          KODE: ${{ steps.jalan.outputs.kode }}
+        run: |
+          mkdir -p reports
+          python - <<'PY'
+          import json, os
+          json.dump(
+              {
+                  "run_id": os.environ.get("GITHUB_RUN_ID"),
+                  "commit": os.environ.get("GITHUB_SHA"),
+                  "kode_keluar": int(os.environ.get("KODE") or 1),
+              },
+              open("reports/sisa_defisit_status.json", "w"),
+              indent=2,
+          )
+          PY
+      - name: dorong laporan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/sisa_defisit.json reports/sisa_defisit_ringkas.json reports/sisa_defisit_status.json
+          git commit -m "laporan sisa_defisit [skip ci]" || exit 0
+          git pull --rebase
+          git push
+      - name: kode
+        run: exit ${{ steps.jalan.outputs.kode }}

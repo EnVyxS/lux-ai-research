@@ -1,0 +1,67 @@
+{
+  "bulan_diharapkan": "2026-06",
+  "bulan_tebing": "2025-07",
+  "cacah_baris_dengan_medan": 19586,
+  "cacah_kunci_gagal_pisah": 0,
+  "cacah_kunci_ganda": 0,
+  "cacah_laporan_dibaca": 8,
+  "cacah_lubang_funding": 880,
+  "cacah_lubang_ganda": 0,
+  "cacah_simbol_dikelompokkan": 787,
+  "cacah_simbol_kohort": 38,
+  "cacah_simbol_kohort_tanpa_label": 0,
+  "kendali": [
+    {
+      "bulan": "2026-06",
+      "hidup": true,
+      "simbol": "BTCUSDT",
+      "status": "HIDUP"
+    },
+    {
+      "bulan": "2026-06",
+      "hidup": true,
+      "simbol": "ETHUSDT",
+      "status": "HIDUP"
+    }
+  ],
+  "kendali_sah": true,
+  "laporan_hilang": [],
+  "medan_baris_terlihat": [
+    "ada_di_arsip",
+    "bagian_volume_nol",
+    "bulan",
+    "byte_parquet",
+    "cacah_baris_cacat",
+    "cacah_lilin",
+    "cacah_lilin_terbaca",
+    "cacah_volume_nol",
+    "galat",
+    "gerbang_lolos",
+    "jalur",
+    "simbol",
+    "status",
+    "transaksi_total"
+  ],
+  "medan_diminta": "cacah_lilin",
+  "penyebut_kehidupan": 19586,
+  "r301": {
+    "butir_1": true,
+    "butir_2": false,
+    "butir_3": true,
+    "cacah_butir_menang": 2,
+    "cacah_simbol_bangkit": 0,
+    "cacah_simbol_hidup_sesudah_tebing": 0,
+    "cacah_simbol_mati_tersisip": 0,
+    "pembatal_a008_menyala": false,
+    "penyebut_simbol": 38
+  },
+  "selisih_penyebut": 0,
+  "sidik_kode_laporan": [
+    "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+  ],
+  "sidik_seragam": true,
+  "simbol_kohort_tanpa_label": [],
+  "sumber_funding_ada": true,
+  "total_pecahan": 8,
+  "versi_bentangan_kohort": 2
+}

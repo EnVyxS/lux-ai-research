@@ -1,0 +1,151 @@
+{
+  "berkas_sumber": "reports/selisih_lilin.json",
+  "byte_sumber": 6834,
+  "catatan_harga": "laporan kehidupan TIDAK menyimpan harga maupun cap waktu per menit; modul ini tidak dapat mengatakan lilin MANA yang hilang, hanya berapa dan di baris mana",
+  "definisi": {
+    "bagian_teratas": "jumlah sepuluh selisih positif terbesar dibagi jumlah seluruh selisih positif; null bila baris positif kurang dari sepuluh",
+    "berselisih": "selisih bukan nol, arah mana pun",
+    "jalur_langsung": "seluruh jumlah dihitung dari baris, bukan dari total per kelas status",
+    "jumlah_selisih_negatif": "jumlah BESARAN selisih negatif, bertanda positif",
+    "selisih": "cacah_lilin_terbaca dikurangi cacah_lilin; null bila salah satu tak ada"
+  },
+  "ringkasan": {
+    "bagian_teratas": null,
+    "cacah_baris": 19586,
+    "cacah_baris_dengan_medan": 19586,
+    "cacah_baris_tanpa_klaim": 0,
+    "cacah_baris_tanpa_terbaca": 0,
+    "cacah_berselisih": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_selisih_negatif": 0,
+    "cacah_selisih_positif": 0,
+    "dua_jalur_bertemu": true,
+    "galat_medan_terbaca": null,
+    "invarian_tercatat": {
+      "byte_hidup": 32049492952,
+      "cacah_hidup": 18087,
+      "cacah_hidup_byte_kecil": 38,
+      "cacah_mati": 1401,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "penyebut": 19586,
+      "total_byte": 32706262375
+    },
+    "invarian_terukur": {
+      "byte_hidup": 32049492952,
+      "cacah_hidup": 18087,
+      "cacah_hidup_byte_kecil": 38,
+      "cacah_mati": 1401,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "penyebut": 19586,
+      "total_byte": 32706262375
+    },
+    "jumlah_klaim_langsung": 839325999,
+    "jumlah_selisih_bersih": 0,
+    "jumlah_selisih_negatif": 0,
+    "jumlah_selisih_positif": 0,
+    "jumlah_terbaca_langsung": 839325999,
+    "kendali_deteksi_lolos": true,
+    "kendali_negatif_terdeteksi": true,
+    "kendali_nol_lolos": true,
+    "kendali_teratas_lolos": true,
+    "laporan_hilang": [],
+    "medan_baris_terlihat": [
+      "ada_di_arsip",
+      "bagian_volume_nol",
+      "bulan",
+      "byte_parquet",
+      "cacah_baris_cacat",
+      "cacah_lilin",
+      "cacah_lilin_terbaca",
+      "cacah_volume_nol",
+      "galat",
+      "gerbang_lolos",
+      "jalur",
+      "simbol",
+      "status",
+      "transaksi_total"
+    ],
+    "medan_diminta": "cacah_lilin",
+    "meta_medan_terbaca": {
+      "cacah_baris_dengan_medan": 19586,
+      "medan_baris_terlihat": [
+        "ada_di_arsip",
+        "bagian_volume_nol",
+        "bulan",
+        "byte_parquet",
+        "cacah_baris_cacat",
+        "cacah_lilin",
+        "cacah_lilin_terbaca",
+        "cacah_volume_nol",
+        "galat",
+        "gerbang_lolos",
+        "jalur",
+        "simbol",
+        "status",
+        "transaksi_total"
+      ],
+      "medan_diminta": "cacah_lilin_terbaca"
+    },
+    "sebaran_kelas": {},
+    "selisih_invarian": {
+      "byte_hidup": 0,
+      "cacah_hidup": 0,
+      "cacah_hidup_byte_kecil": 0,
+      "cacah_mati": 0,
+      "cacah_sepi": 0,
+      "cacah_simbol": 0,
+      "penyebut": 0,
+      "total_byte": 0
+    },
+    "selisih_terhadap_warisan": {
+      "bersih_dikurangi_tercatat": -516135,
+      "klaim_dikurangi_tercatat": 0,
+      "terbaca_dikurangi_tercatat": -516135
+    },
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8,
+    "uji_r312": {
+      "butir_1": {
+        "berisiko": true,
+        "menang": false,
+        "pertanyaan": "cacah simbol-bulan yang selisihnya bukan nol",
+        "pita": [
+          12,
+          120
+        ],
+        "satuan": "simbol-bulan",
+        "terukur": 0
+      },
+      "butir_2": {
+        "berisiko": true,
+        "menang": false,
+        "pertanyaan": "bagian sepuluh baris berselisih positif terbesar terhadap jumlah seluruh selisih positif",
+        "pita": [
+          0.5,
+          0.865
+        ],
+        "satuan": "bagian antara 0 dan 1",
+        "terukur": null
+      },
+      "butir_3": {
+        "berisiko": false,
+        "menang": true,
+        "mudah": true,
+        "pertanyaan": "kedelapan invarian semesta terbaca ulang identik",
+        "satuan": "cocok atau tidak"
+      },
+      "cacah_menang_berisiko": 0,
+      "teradjudikasi": false
+    }
+  },
+  "sidik_kode": "e6c77965cc40f40ae5a11c3af3422d5939bb580ca005cf55df7c7d7bb96257e7",
+  "sidik_sumber": "53ff54b2fc3dced38229c9729e09a9b4365cf2b98c1ca722698d838d8157b2f9",
+  "versi_selisih_lilin": 1,
+  "waktu_utc": "2026-07-30T15:56:59Z"
+}

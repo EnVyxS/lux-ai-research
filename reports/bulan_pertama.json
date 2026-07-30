@@ -1,0 +1,440 @@
+{
+  "ambang_hidup_kecil": 97634,
+  "bagian_hidup_kecil_sebagian": 0.973684,
+  "bulan_tepi": "2026-06",
+  "byte_hidup": 32049492952,
+  "byte_lain": 0,
+  "byte_mati": 579041399,
+  "byte_sepi": 77728024,
+  "cacah_bukan_pertama": 18799,
+  "cacah_hidup": 18087,
+  "cacah_hidup_byte_kecil": 38,
+  "cacah_hidup_kecil_sebagian": 37,
+  "cacah_lain": 0,
+  "cacah_laporan_hilang": 0,
+  "cacah_mati": 1401,
+  "cacah_pertama": 787,
+  "cacah_sepi": 98,
+  "daftar_hidup_kecil": [
+    {
+      "bulan": "2024-01",
+      "byte": 22440,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "JUPUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-10",
+      "byte": 24551,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "TIAUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2024-04",
+      "byte": 32164,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "REZUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-10",
+      "byte": 33257,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "SLPUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2024-02",
+      "byte": 34175,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "PORTALUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-07",
+      "byte": 34673,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "NAORISUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2024-10",
+      "byte": 35511,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "TROYUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-06",
+      "byte": 36580,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "MDTUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2024-09",
+      "byte": 36742,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "COSUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 36768,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "GUNUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-10",
+      "byte": 37116,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "CCUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-12",
+      "byte": 37327,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "MAGMAUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-12",
+      "byte": 38486,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "COLLECTUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-02",
+      "byte": 39079,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "CKBUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-04",
+      "byte": 39749,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "EDUUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-04",
+      "byte": 41514,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "AIOTUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-04",
+      "byte": 42561,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "PUNDIXUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2020-01",
+      "byte": 42678,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "ADAUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-09",
+      "byte": 44460,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "VFYUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-07",
+      "byte": 44508,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "PLAYUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2020-06",
+      "byte": 44898,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "COMPUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 45246,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "MLNUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-09",
+      "byte": 45883,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "EDENUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2020-07",
+      "byte": 46447,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "RLCUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2025-03",
+      "byte": 47831,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "FUNUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2021-03",
+      "byte": 51322,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "MTLUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2020-08",
+      "byte": 54929,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "YFIUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2021-08",
+      "byte": 58161,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "ATAUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2021-11",
+      "byte": 62845,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "ENSUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2021-12",
+      "byte": 63592,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "ROSEUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 72819,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "SQQQUSDT",
+      "tepi": true
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 80394,
+      "pertama": false,
+      "sebagian": false,
+      "simbol": "TLMUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 81419,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "AMBUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 82330,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "TQQQUSDT",
+      "tepi": true
+    },
+    {
+      "bulan": "2026-06",
+      "byte": 86126,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "MVLLUSDT",
+      "tepi": true
+    },
+    {
+      "bulan": "2023-03",
+      "byte": 89724,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "LEVERUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2026-01",
+      "byte": 94575,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "INXUSDT",
+      "tepi": false
+    },
+    {
+      "bulan": "2020-09",
+      "byte": 94658,
+      "pertama": true,
+      "sebagian": true,
+      "simbol": "ENJUSDT",
+      "tepi": false
+    }
+  ],
+  "hasil": {
+    "butir1": {
+      "menang": true,
+      "nilai": 37,
+      "penyebut": 38,
+      "pita": [
+        22,
+        38
+      ],
+      "teradjudikasi": true
+    },
+    "butir2": {
+      "cacah_bukan_pertama": 18799,
+      "cacah_pertama": 787,
+      "menang": true,
+      "nilai": 0.527179,
+      "pita": [
+        0.1,
+        0.6
+      ],
+      "teradjudikasi": true
+    },
+    "butir3": {
+      "cacah_medan_selisih": 8,
+      "kendali_data_sah": true,
+      "kendali_deteksi_sah": true,
+      "menang": true,
+      "selisih_semua_nol": true,
+      "teradjudikasi": true
+    },
+    "butir3_menang": true,
+    "menang_semua": true
+  },
+  "jumlah_byte_bukan_pertama": 32000028630,
+  "jumlah_byte_pertama": 706233745,
+  "kendali_data": [
+    {
+      "bulan": "2021-01",
+      "cocok": true,
+      "harap": 2722266,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2722266
+    },
+    {
+      "bulan": "2021-05",
+      "cocok": true,
+      "harap": 2770666,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2770666
+    },
+    {
+      "bulan": "2021-08",
+      "cocok": true,
+      "harap": 2730341,
+      "kelas": "HIDUP",
+      "simbol": "BTCUSDT",
+      "terukur": 2730341
+    }
+  ],
+  "kendali_data_sah": true,
+  "kendali_deteksi": {
+    "ambang": 250,
+    "cacah_simbol": 2,
+    "harap_cacah_simbol": 2,
+    "harap_hidup_kecil": 2,
+    "harap_nisbah_rata": 0.75,
+    "harap_sebagian": 2,
+    "harap_total_byte": 1500,
+    "hidup_kecil": 2,
+    "nisbah_rata": 0.75,
+    "sebagian": 2,
+    "total_byte": 1500
+  },
+  "kendali_deteksi_sah": true,
+  "laporan_hilang": [],
+  "nisbah_rata": 0.527179,
+  "penyebut": 19586,
+  "rata_byte_bukan_pertama": 1702219.726,
+  "rata_byte_pertama": 897374.517,
+  "sebaran": {
+    "HIDUP": {
+      "cacah": 18087,
+      "jumlah": 32049492952,
+      "maks": 2770666,
+      "min": 22440,
+      "rata": 1771962.899
+    },
+    "MATI": {
+      "cacah": 1401,
+      "jumlah": 579041399,
+      "maks": 451875,
+      "min": 97634,
+      "rata": 413305.781
+    },
+    "SEPI": {
+      "cacah": 98,
+      "jumlah": 77728024,
+      "maks": 1231408,
+      "min": 259327,
+      "rata": 793143.102
+    }
+  },
+  "selisih_byte_hidup": 0,
+  "selisih_cacah_hidup": 0,
+  "selisih_cacah_hidup_byte_kecil": 0,
+  "selisih_cacah_mati": 0,
+  "selisih_cacah_sepi": 0,
+  "selisih_penyebut": 0,
+  "selisih_simbol": 0,
+  "selisih_total_byte": 0,
+  "sidik_kode": "0d3530f69ad51a22e038c17616411b56e4518698ff14c9b635131ec1e2a66562",
+  "simbol": 787,
+  "total_byte": 32706262375,
+  "versi": 1
+}

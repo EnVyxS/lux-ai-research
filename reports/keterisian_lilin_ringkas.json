@@ -1,0 +1,141 @@
+{
+  "berkas_sumber": "reports/keterisian_lilin.json",
+  "byte_sumber": 6588,
+  "catatan_harga": "laporan kehidupan TIDAK menyimpan harga; dugaan harga beku atau lilin datar TIDAK diuji di sini dan dilarang disimpulkan",
+  "definisi": {
+    "defisit": "lilin_penuh dikurangi cacah_lilin; null bila lilin tak ada",
+    "jumlah_lilin_langsung": "dijumlah LANGSUNG dari baris, bukan dari total per kelas status",
+    "lilin_penuh": "hari kalender bulan itu dikali 1440 menit",
+    "penuh": "defisit tepat nol, tanpa toleransi",
+    "pertama": "bulan terkecil simbol itu DI DALAM penyebut 19.586"
+  },
+  "ringkasan": {
+    "bagian_defisit_bukan_pertama": 0.0445,
+    "cacah_baris_dengan_medan": 19586,
+    "cacah_baris_tanpa_lilin": 0,
+    "cacah_defisit_negatif": 0,
+    "cacah_kunci_ganda": 0,
+    "cacah_laporan_dibaca": 8,
+    "cacah_mati_penuh": 1392,
+    "cacah_mati_tak_penuh": 9,
+    "defisit_bukan_pertama": 808162,
+    "defisit_pertama": 17335439,
+    "defisit_total": 18143601,
+    "invarian_tercatat": {
+      "byte_hidup": 32049492952,
+      "cacah_hidup": 18087,
+      "cacah_hidup_byte_kecil": 38,
+      "cacah_mati": 1401,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "penyebut": 19586,
+      "total_byte": 32706262375
+    },
+    "invarian_terukur": {
+      "byte_hidup": 32049492952,
+      "cacah_hidup": 18087,
+      "cacah_hidup_byte_kecil": 38,
+      "cacah_mati": 1401,
+      "cacah_sepi": 98,
+      "cacah_simbol": 787,
+      "penyebut": 19586,
+      "total_byte": 32706262375
+    },
+    "jumlah_lilin_langsung": 839325999,
+    "kendali_data": [
+      {
+        "bulan": "2021-05",
+        "byte_parquet": 2770666,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-08",
+        "byte_parquet": 2730341,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      },
+      {
+        "bulan": "2021-01",
+        "byte_parquet": 2722266,
+        "cacah_lilin": 44640,
+        "simbol": "BTCUSDT",
+        "status": "HIDUP"
+      }
+    ],
+    "kendali_data_sah": true,
+    "kendali_deteksi_lolos": true,
+    "kendali_negatif_terdeteksi": true,
+    "laporan_hilang": [],
+    "medan_baris_terlihat": [
+      "ada_di_arsip",
+      "bagian_volume_nol",
+      "bulan",
+      "byte_parquet",
+      "cacah_baris_cacat",
+      "cacah_lilin",
+      "cacah_lilin_terbaca",
+      "cacah_volume_nol",
+      "galat",
+      "gerbang_lolos",
+      "jalur",
+      "simbol",
+      "status",
+      "transaksi_total"
+    ],
+    "medan_diminta": "cacah_lilin",
+    "selisih_invarian": {
+      "byte_hidup": 0,
+      "cacah_hidup": 0,
+      "cacah_hidup_byte_kecil": 0,
+      "cacah_mati": 0,
+      "cacah_sepi": 0,
+      "cacah_simbol": 0,
+      "penyebut": 0,
+      "total_byte": 0
+    },
+    "sidik_kode_laporan": [
+      "24b6bb265525e81c2e571b46e401f36903383f1e3738c487850861adc3e8c595"
+    ],
+    "sidik_seragam": true,
+    "total_pecahan": 8,
+    "uji_r310": {
+      "butir_1": {
+        "berisiko": true,
+        "menang": true,
+        "pertanyaan": "cacah simbol-bulan MATI yang lilinnya TIDAK penuh",
+        "pita": [
+          1,
+          120
+        ],
+        "satuan": "simbol-bulan",
+        "terukur": 9
+      },
+      "butir_2": {
+        "berisiko": true,
+        "menang": true,
+        "pertanyaan": "defisit_bukan_pertama dibagi defisit_total",
+        "pita": [
+          0.02,
+          0.25
+        ],
+        "satuan": "bagian antara 0 dan 1",
+        "terukur": 0.0445
+      },
+      "butir_3": {
+        "berisiko": false,
+        "menang": true,
+        "mudah": true,
+        "pertanyaan": "kedelapan invarian semesta terbaca ulang identik",
+        "satuan": "cocok atau tidak"
+      },
+      "cacah_menang_berisiko": 2
+    }
+  },
+  "sidik_kode": "1cd98f4fa22c24b30f31f5b36dac0ea0bb3fa9de44e5e15ae73cbf11cdca08bb",
+  "sidik_sumber": "436741f9ae3a2b96c37e410eeaf4cb798df9f6110a99989fdb85ba586360e0e1",
+  "versi_keterisian_lilin": 1,
+  "waktu_utc": "2026-07-30T10:34:58Z"
+}

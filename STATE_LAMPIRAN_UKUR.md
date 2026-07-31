@@ -1,23 +1,23 @@
-# STATE LAMPIRAN UKUR - v23
+# STATE LAMPIRAN UKUR - v24
 
-Lampiran ukur bagi `STATE.md` v65 (commit `c251d920`). Berisi angka terukur **beserta status
-utang dan larangan yang melekat padanya**. Indeks, rantai, dan registri ada di
-`STATE_LAMPIRAN_EKOR.md` v22 (commit `c282a438`).
+Lampiran ukur bagi `STATE.md` **v66** (commit `95021cda`). Berisi angka terukur **beserta
+status utang dan larangan yang melekat padanya**. Indeks, rantai, dan registri ada di
+`STATE_LAMPIRAN_EKOR.md` **v23** (commit `25970a88`).
 
-**Ditulis:** 2026-07-31, menggantikan v22 (commit `ae483de8`).
+**Ditulis:** 2026-07-31, menggantikan v23 (commit `a88a4631`, blob `59326334`).
 
-> **PERINGATAN KEUTUHAN.** Berkas ini ditulis ulang. Butir tertentu dari v22 mungkin tidak
-> terbawa kata demi kata. **v22 tetap ada di riwayat git pada commit `ae483de8`** - tetapi
-> lihat peringatan di bawah sebelum memakainya.
+> **PERINGATAN KEUTUHAN.** Berkas ini ditulis ulang, bukan ditambal. Butir tertentu dari v23
+> mungkin tidak terbawa kata demi kata. **v23 tetap sah di riwayat git pada commit
+> `a88a4631`** dan menjadi rujukan bagi apa pun yang tidak muncul di sini.
 
-> ## PERINGATAN TERGANTI - WAJIB DIBACA
-> **v22 memuat dua pernyataan yang kini SALAH** karena keadaan berubah sesudah ia ditulis:
-> 1. Bagian 9 menulis **TIDAK TERADJUDIKASI 16**. Nilai sah kini **21**.
-> 2. Bagian 10 menulis **"DAFTAR UTANG DITUTUP PAKSA: masih KOSONG"**. Daftar itu kini
->    **terisi tiga belas butir** (STATE v65 bagian 6).
+> ## PERINGATAN TERGANTI ATAS v22 - MASIH BERLAKU
+> **v22 (`ae483de8`) memuat dua pernyataan yang SALAH** karena keadaan berubah sesudahnya:
+> 1. Bagian 9 menulis **TIDAK TERADJUDIKASI 16**. Nilai sah **21**.
+> 2. Bagian 10 menulis **"DAFTAR UTANG DITUTUP PAKSA: masih KOSONG"**. Daftar itu terisi
+>    **tiga belas butir**.
 >
-> Daftar utang hidup di v22 bagian 10 juga sudah tidak berlaku.
 > **DILARANG mengutip v22 bagian 9 dan 10.** Bagian lain v22 tetap sah.
+> Larangan ini **diteruskan**, bukan dicabut, oleh v24.
 
 > **ATURAN PEMAKAIAN BERKAS INI (aturan 94 / ADR-A024 keputusan 5).**
 > *Tidak ada angka boleh dikutip di tahap mana pun tanpa status utangnya.*
@@ -161,6 +161,10 @@ berdampingan** dan setiap kutipan wajib menyebut yang mana.
 | 13.247.705 | byte parquet karantina |
 | 20.533.802 | `byte_manifes_total` |
 
+**KC-50 - jangan lupa.** 839.842.134 **BUKAN** jumlah lilin; ia total baris parquet rilis
+penuh. Jumlah lilin yang dihitung LANGSUNG adalah **839.325.999**. **Selisih 516.135.**
+Kedua besaran itu bukan besaran yang sama.
+
 **Boolean manifes:** `berheader` **17.646** = 17.257 + 389 sehingga 1.952 tanpa header -
 `dikemas` 19.586 - `gerbang_lolos` 19.586 - `karantina` 12 - `gagal_unduh` 0 -
 `gagal_checksum` 0 - `baris_dibuang` 0 - **`terhenti` 587**.
@@ -215,32 +219,58 @@ sebagai bukti apa pun. Jangkauan sesungguhnya, **19.586**, datang dari butir 5.
 
 ---
 
-## 8. Kesalahan dokumen 22, 23, 24
+## 8. Kesalahan dokumen 22 sampai 25
 
 **22** - taksiran turunan **45** bagi `.github/workflows/` terbantah; cacah tangan **46**;
-selisih +1 tidak terjelaskan (utang ukur 34, kini ditutup paksa C-1).
+selisih +1 tidak terjelaskan (utang ukur 34, ditutup paksa C-1).
 **DILARANG** mengutip **44** sebagai cacah tangan sah.
 
 **23** - prosa rusak di jurnal 162 bagian 2. Angkanya benar, kalimatnya rusak.
 
 **24** - celah pencacah aturan 52 di EKOR v22: bagian 6 mencatat ke-66 sementara bagian 14
 menyebut berikutnya ke-68, sehingga ke-67 tidak bernama. Sebabnya **batas rekam-diri**,
-bukan kelalaian.
+bukan kelalaian. Penangkalnya kini dipakai tersurat: nomor bacaan-diri **dinamai di muka**.
 
-**Berikutnya: butir 25.**
+### 8.1 Butir 25 - PENGENAL TERTUKAR, sebab TERUKUR
+
+Registri EKOR v22 bagian 5 mencatat, bagi **lima ADR berurutan**, nilai yang tidak cocok
+dengan blob terukur pada tip `470acfbb`. Sembilan belas entri lain cocok persis.
+
+Dibayar dengan `list_commits` berparameter `path` atas kelima berkas:
+
+| ADR | tercatat EKOR v22 | commit **tunggal** penyentuh berkas | blob SAH pada `470acfbb` |
+| --- | --- | --- | --- |
+| A009 | `17a594b6` | `17a594b69e243a83884862122f01b5e1ade4278a` | `85796418` |
+| A010 | `c4bccf21` | `c4bccf219ddcc3495265331b4cbce9a3ea806eb5` | `6de941f7` |
+| A011 | `645fd5df` | `645fd5df1c973cc5c6336ebc6cee3786a6eb347a` | `312638e9` |
+| A012 | `f9f564d1` | `f9f564d17d7ec688b613679e77f67d7974d0091f` | `0c474067` |
+| A013 | `8ba4f989` | `8ba4f989be545783e885caa21b9834e0456da4b7` | `3a7f8612` |
+
+**SEBAB TERUKUR: keliru JENIS pengenal, bukan keliru nilai.** Kolom berjudul blob memuat
+**SHA commit**. Kelima nilai cocok sempurna sebagai commit dan **nol** sebagai blob.
+
+**Kemungkinan tandingan TERBANTAH:** tiap berkas disentuh **tepat satu commit**, jadi tidak
+pernah diubah sesudah dibuat, jadi blobnya tidak mungkin pernah berganti.
+
+**Kelas cacat: PENGENAL TERTUKAR - sekerabat KC-50, kesunyian bukan galat.** Dua jenis
+pengenal sama panjang dan sama bentuk dalam satu kolom; tidak ada alat yang berteriak.
+Penangkalnya: **adu registri dengan daftar direktori**, bukan membaca registri sendirian.
+**Registri yang rapi bukan registri yang benar.**
+
+**Berikutnya: butir 26.**
 
 Cacat lama yang tetap berlaku:
 **19** - UKUR v19 (`c28202df`) terdorong terpotong tanpa peringatan (utang verifikasi 47,
-kini ditutup paksa C-2). **DILARANG** menyatakan butir 19 kejadian tunggal.
+ditutup paksa C-2). **DILARANG** menyatakan butir 19 kejadian tunggal.
 **20 / KOREKSI 17** - `ADR-A004.md` bagian 2.2 mencacah LIMA klausa, `gerbang_1m.py` ENAM
-(utang verifikasi 48, kini ditutup paksa B-1).
+(utang verifikasi 48, ditutup paksa B-1).
 **21** - ruang vonis jurnal 155 hanya tiga sisi; aturan 89 dipertegas menjadi empat sisi.
 
 ---
 
-## 9. Papan skor - DIMUTAKHIRKAN
+## 9. Papan skor
 
-**350 - SAH.**
+**350 - SAH.** Tidak berubah sejak v23.
 
 | vonis | cacah |
 | --- | --- |
@@ -251,7 +281,7 @@ kini ditutup paksa C-2). **DILARANG** menyatakan butir 19 kejadian tunggal.
 | MENUNGGU | **1** |
 
 **TIDAK TERADJUDIKASI naik 16 -> 21** oleh penutupan paksa C-4: R-305, R-288, R-290, R-228,
-R-291. **Kenaikan ini wajib disebut.** Nilai **16** di UKUR v22 sudah **TIDAK BERLAKU**.
+R-291. **Kenaikan ini wajib disebut.** Nilai **16** di UKUR v22 **TIDAK BERLAKU**.
 
 | ramalan | vonis |
 | --- | --- |
@@ -278,16 +308,21 @@ Kelima butir R-320 TIDAK TERADJUDIKASI **permanen**.
 
 ---
 
-## 10. Utang - DIMUTAKHIRKAN
+## 10. Utang
 
 ### 10.1 LAPIS A - KOSONG
 
 Blokir 4 **TERPECAHKAN** - utang ukur 32 **LUNAS** - utang ukur 35 **LUNAS** -
-utang verifikasi 50 **LUNAS**. Keempatnya **dibayar dengan pengukuran**, nol ditutup paksa.
+utang verifikasi 50 **LUNAS** - **utang ukur 37 LUNAS** (bagian 8.1).
+Seluruhnya **dibayar dengan pengukuran**, nol ditutup paksa.
 
-### 10.2 DAFTAR UTANG DITUTUP PAKSA - TERISI TIGA BELAS BUTIR
+Utang ukur **37** lahir di EKOR v23 dan dibayar pada giliran berikutnya. Ia **tidak pernah
+digolongkan lapis** dan **tidak pernah ditutup paksa**, sehingga menyebutnya lunas sah dan
+tidak melanggar larangan atas daftar mati.
 
-Pernyataan "masih KOSONG" di UKUR v22 **TIDAK BERLAKU**.
+### 10.2 DAFTAR UTANG DITUTUP PAKSA - TIGA BELAS BUTIR
+
+Pernyataan "masih KOSONG" di UKUR v22 **TIDAK BERLAKU**. Cacah **tidak berubah** di v24.
 
 **LAPIS B (berlabel mengikat):** B-1 ukur 31 + verifikasi 48 - B-2 verifikasi 51 -
 B-3 verifikasi 52 - B-4 verifikasi 53 - B-5 ukur 36 - B-6 bacaan `pulihkan.py`.
@@ -297,22 +332,53 @@ B-3 verifikasi 52 - B-4 verifikasi 53 - B-5 ukur 36 - B-6 bacaan `pulihkan.py`.
 C-7 manifes pecahan dan `kehidupan_arsip_*`.
 
 Label penuh ada di **jurnal 165** (`e915041e`, blob `31505537`) dan ringkasnya di
-**STATE v65 bagian 6**.
+**STATE v66 bagian 6**.
 
 **Penutupan paksa BUKAN pelunasan.** DILARANG menulisnya lunas - DILARANG mengurangkannya
-dari cacah utang - DILARANG mengutip angka yang bergantung padanya tanpa labelnya.
+dari cacah utang - DILARANG mengutip angka yang bergantung padanya tanpa labelnya -
+DILARANG memakai jurnal 165 untuk menutup utang yang lahir sesudahnya.
+
+**Catatan C-6.** `PROMPT.md` v55 kini **ADA** (`91d90c3f`, blob `5fd36c6f`, 16.780 B).
+**C-6 tetap DITUTUP PAKSA**; keberadaan v55 tidak menjadikannya lunas dan tidak mengurangi
+cacah tiga belas butir.
 
 ### 10.3 Utang HIDUP
 
-**Utang ukur hidup:** 6 - 7 - 17 - 21 - 22 - 26 - 27 - 30. Berikutnya **37**.
+**Utang ukur hidup:** 6 - 7 - 17 - 21 - 22 - 26 - 27 - 30. Berikutnya **38**.
+(31, 33, 34, 36 ditutup paksa; 32, 35, **37** lunas.)
 **Utang verifikasi hidup:** 24 - 45 - 46 - 49. Berikutnya **54**.
+(47, 48, 51, 52, 53 ditutup paksa; 50 lunas.)
 
 **DILARANG** membaca pendeknya daftar ini sebagai kematangan bila tiga belas butir yang
-ditutup paksa tidak ikut disebut.
+ditutup paksa tidak ikut disebut pada napas yang sama.
 
 ---
 
-## 11. Angka lain yang mengikat
+## 11. Cacah tangan - angka terukur beserta tipnya
+
+| cacah | nilai | tip | status |
+| --- | --- | --- | --- |
+| `lux_ai/serapan/` | **51** (50 tanpa `__init__.py`) | `9d30060e` | SAH |
+| `.github/workflows/` | **46** | `9d30060e` | SAH |
+| `journal/` | **165** | `470acfbb` | SAH, baru di v24 |
+| `decisions/` | **23** | `470acfbb` | SAH, baru di v24 |
+| akar repo | **18** = 12 berkas + 6 direktori | `470acfbb` | SAH, baru di v24 |
+| `tests/` | 53 | lama | **KEDALUWARSA** |
+
+- `journal/` 165: penomoran 01..165 **utuh tanpa lubang** (59+40+13+28+3+4+18 = 165).
+  Cacah berkas dan nomor terakhir bersepakat, tetapi lahir dari **satu daftar** -
+  **bukan dua saksi bebas**.
+- `decisions/` 23: A001..A024 **tanpa A003**. Menguatkan secara terukur bahwa
+  **ADR-A003 belum ada**, bukan sekadar belum ditemukan.
+- akar 18: angka lamanya juga 18 dan **KEDALUWARSA** (C-3). **Kesamaan itu BUKAN
+  konfirmasi** - angka sama lewat jalan berbeda bukan saksi. C-3 tetap ditutup paksa.
+
+**TURUNAN, DILARANG dikutip sebagai cacah tangan:** serapan **52** - workflows **48**.
+**DILARANG** mengutip **44** sebagai cacah tangan sah.
+
+---
+
+## 12. Angka lain yang mengikat
 
 **R-315 FINAL:** `lubang_tak_dikenal` tiga butir, seluruhnya BNXUSDT - 2022-04, 2022-06,
 2022-08. `bulan_klines_pertama` 2022-05, `cacah_bulan_klines_simbol` 48.
@@ -344,6 +410,8 @@ PEMOTONGAN OLEH MODUL (`BATAS_BARIS_LAPORAN = 60`), tidak berteriak.
 
 **Gerbang 1m:** **ENAM** klausa; `tests/test_gerbang_1m.py` menegaskan
 `assert len(g.KLAUSA) == 6`, 16 uji. Jumlah uji semesta **1377** = 1341 + 36.
+Cacah uji **1377** dikonfirmasi ulang oleh CI pada bacaan aturan 38 ke-82, ke-83, dan ke-84;
+ketiganya **satu pengukur yang sama**, bukan tiga saksi bebas.
 **DILARANG** menjumlahkan 1377 + 16.
 **DILARANG** menyebut gerbang 1m "berlapis enam" di artefak mengikat seolah keenamnya punya
 dasar keputusan - lihat B-1.
@@ -356,7 +424,7 @@ dasar keputusan - lihat B-1.
 
 ---
 
-## 12. Enam syarat penyeberangan ke klasifikasi
+## 13. Enam syarat penyeberangan ke klasifikasi
 
 Wajib ikut setiap kali angka serapan dikutip di tahap mana pun:
 
@@ -369,11 +437,18 @@ Wajib ikut setiap kali angka serapan dikutip di tahap mana pun:
 
 ---
 
-## 13. Penomoran
+## 14. Penomoran
 
-UKUR berikutnya **v24**. Koreksi berikutnya **22**. Kesalahan dokumen berikutnya **25**.
-Utang ukur berikutnya **37**. Utang verifikasi berikutnya **54**. Papan skor **350 - SAH**.
-Aturan 38 berikutnya **ke-81**. Aturan 52 berikutnya **ke-72**.
-Penomoran lengkap ada di `STATE.md` v65 bagian 15.
+UKUR berikutnya **v25**. Koreksi berikutnya **22**. Kesalahan dokumen berikutnya **26**.
+Utang ukur berikutnya **38**. Utang verifikasi berikutnya **54**. Papan skor **350 - SAH**.
 
-- akhir UKUR v23 -
+Aturan 38 berikutnya **ke-85** (deret ke-42..ke-84 = **43 berturut**).
+**Nilai BASI yang wajib DITOLAK pada bacaan ke-85:** run **30628719235** - commit
+`95021cda` - blob `fedd1e89...`.
+
+Aturan 52 berikutnya **ke-76**, yaitu pembacaan ulang UTUH berkas ini pada giliran yang sama
+(batas rekam-diri; sesudahnya **ke-77**).
+
+Penomoran lengkap ada di `STATE.md` **v66** bagian 16.
+
+- akhir UKUR v24 -

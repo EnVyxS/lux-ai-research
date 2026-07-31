@@ -18,6 +18,22 @@ Jalan ketiga adalah modul ini: runner membaca kedelapan manifes dari cakram -
 berkas itu ADA di git - lalu menulis NILAI skalarnya ke laporan kecil yang muat
 dibaca alat.
 
+## VERSI 2 - dan mengapa ia ada
+
+Versi 1 memecahkan blokir ketujuh (jurnal 182), tetapi ia LALAI: ia tidak
+memasukkan `cacah_parquet_ditulis` dan `cacah_karantina` ke medan yang dibaca,
+sehingga butir 4 dan butir 5 ramalan R-324 **tidak terukur**. Kelalaian itu
+sudah ditulis tersurat dan melahirkan **utang ukur 39**. Versi 2 melunasinya.
+
+Dua batas mengikat atas versi 2:
+
+- Pengukuran ini **TIDAK mengubah vonis R-324**. Vonis **MELESET** sudah sah
+  dan final berdasarkan dua butir yang gagal (butir 1 dan butir 3). Vonis
+  DILARANG diubah oleh pengukuran susulan.
+- Angka `dikemas` 19.586 dan `karantina` 12 di `reports/peta_manifes.json`
+  **DILARANG** dipakai sebagai pengganti medan ini. Yang dicari adalah medan di
+  KUNCI ATAS manifes, bukan angka turunan dari laporan lain.
+
 ## Batas kejujuran yang ditegakkan modul ini
 
 - Ia **tidak menghitung ulang apa pun**. Ia menyalin nilai apa adanya. Bila
@@ -49,7 +65,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-VERSI = 1
+VERSI = 2
 TOTAL_PECAHAN = 8
 POLA_MANIFES = "reports/manifes_pecahan_{i}.json"
 KELUARAN = "reports/kunci_manifes.json"
@@ -65,6 +81,7 @@ MEDAN_PENENTU = (
 )
 
 # Medan pendamping: bukan penentu, tetapi menerangkan keempatnya.
+# Enam nama terakhir DITAMBAHKAN di VERSI 2 untuk melunasi utang ukur 39.
 MEDAN_PENDAMPING = (
     "verifikasi_rilis_karantina",
     "karantina_dipersistenkan",
@@ -75,6 +92,21 @@ MEDAN_PENDAMPING = (
     "sidik_kode",
     "pecahan",
     "total_pecahan",
+    "cacah_parquet_ditulis",
+    "cacah_karantina",
+    "cacah_parquet_karantina_ditulis",
+    "penyebut",
+    "gerbang",
+    "status",
+)
+
+# Medan yang jumlahnya lintas pecahan dipakai menguji butir 4 dan 5 R-324.
+MEDAN_DIJUMLAH = (
+    "cacah_parquet_ditulis",
+    "cacah_karantina",
+    "cacah_parquet_karantina_ditulis",
+    "cacah_parquet_tak_terkemas",
+    "cacah_karantina_tak_terkemas",
 )
 
 
@@ -175,7 +207,28 @@ def himpun(pecahan: List[Dict[str, Any]]) -> Dict[str, Any]:
         v = p["nilai"].get("verifikasi_rilis_karantina")
         sah_karantina.append(v.get("sah") if isinstance(v, dict) else None)
 
-    return {
+    # VERSI 2: nilai dan jumlah medan yang R-324 butir 4 dan 5 tanyakan.
+    # jumlah_aman mengembalikan null bila ADA satu saja nilai bukan bilangan
+    # bulat, sebab menjumlahkan daftar yang memuat null adalah mengarang.
+    dijumlah: Dict[str, Any] = {}
+    for medan in MEDAN_DIJUMLAH:
+        nilai = kumpul(medan)
+        dijumlah[medan + "_nilai"] = nilai
+        dijumlah[medan + "_jumlah"] = jumlah_aman(nilai)
+        dijumlah[medan + "_cacah_nol"] = sum(
+            1 for v in nilai if isinstance(v, int) and not isinstance(v, bool) and v == 0
+        )
+        dijumlah[medan + "_pecahan_nol"] = [
+            p["pecahan"]
+            for p in pecahan
+            if not p["rusak"]
+            and p["ada"]
+            and isinstance(p["nilai"].get(medan), int)
+            and not isinstance(p["nilai"].get(medan), bool)
+            and p["nilai"].get(medan) == 0
+        ]
+
+    hasil = {
         "versi_pecahan_nilai": versi,
         "versi_pecahan_unik": sorted({str(v) for v in versi}),
         "versi_pecahan_seragam": len({str(v) for v in versi}) == 1 and bool(versi),
@@ -190,8 +243,13 @@ def himpun(pecahan: List[Dict[str, Any]]) -> Dict[str, Any]:
         "karantina_dipersistenkan_nilai": kumpul("karantina_dipersistenkan"),
         "selisih_cacah_bulan_nilai": kumpul("selisih_cacah_bulan"),
         "cacah_entri_nilai": kumpul("cacah_entri"),
+        "status_nilai": kumpul("status"),
+        "gerbang_nilai": kumpul("gerbang"),
+        "penyebut_nilai": kumpul("penyebut"),
         "sidik_kode_manifes_unik": sorted({str(v) for v in kumpul("sidik_kode")}),
     }
+    hasil.update(dijumlah)
+    return hasil
 
 
 def jalankan(akar: str = ".") -> Dict[str, Any]:
@@ -220,6 +278,7 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
         "medan_absen": absen,
         "byte_manifes_total": sum(int(p["byte"]) for p in pecahan),
         "medan_penentu": list(MEDAN_PENENTU),
+        "medan_dijumlah": list(MEDAN_DIJUMLAH),
         "ringkasan": himpun(pecahan),
         "pecahan": pecahan,
         "catatan_penggugur": (
@@ -238,6 +297,19 @@ def jalankan(akar: str = ".") -> Dict[str, Any]:
             "manifes; akibat seperti dikemas_karantina BUKAN pengganti medan "
             "versi_pecahan"
         ),
+        "catatan_versi_2": (
+            "VERSI 2 menambahkan cacah_parquet_ditulis, cacah_karantina, "
+            "cacah_parquet_karantina_ditulis, penyebut, gerbang, dan status untuk "
+            "melunasi utang ukur 39 - butir 4 dan 5 R-324 yang tidak terukur "
+            "karena kelalaian VERSI 1. Pengukuran ini TIDAK mengubah vonis "
+            "R-324; vonis MELESET sudah sah dan final atas butir 1 dan butir 3. "
+            "Medan yang absen tetap dilaporkan absen, dan absen BUKAN nol"
+        ),
+        "catatan_jumlah": (
+            "setiap _jumlah bernilai null bila ada satu saja nilai yang bukan "
+            "bilangan bulat, sebab menjumlahkan daftar yang memuat null adalah "
+            "mengarang (aturan 21 dan 30)"
+        ),
     }
     return laporan
 
@@ -253,9 +325,8 @@ def main() -> int:
     print("dibaca:", laporan["cacah_manifes_dibaca"], "hilang:", laporan["cacah_manifes_hilang"], "rusak:", laporan["cacah_manifes_rusak"])
     print("versi_pecahan:", r["versi_pecahan_nilai"])
     print("verifikasi_rilis.sah:", r["verifikasi_rilis_sah"])
-    print("verifikasi_rilis_karantina.sah:", r["verifikasi_rilis_karantina_sah"])
-    print("cacah_parquet_tak_terkemas:", r["cacah_parquet_tak_terkemas_nilai"])
-    print("cacah_karantina_tak_terkemas:", r["cacah_karantina_tak_terkemas_nilai"])
+    print("cacah_parquet_ditulis:", r["cacah_parquet_ditulis_nilai"], "jumlah:", r["cacah_parquet_ditulis_jumlah"])
+    print("cacah_karantina:", r["cacah_karantina_nilai"], "jumlah:", r["cacah_karantina_jumlah"])
     print("medan_absen:", laporan["medan_absen"])
     return 0
 

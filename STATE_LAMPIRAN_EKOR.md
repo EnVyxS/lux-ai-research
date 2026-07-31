@@ -1,21 +1,20 @@
-# STATE LAMPIRAN EKOR - v23
+# STATE LAMPIRAN EKOR - v24
 
-Lampiran ekor bagi `STATE.md` **v65** (commit `c251d920`). Berisi indeks, rantai, dan registri.
-Angka terukur beserta larangannya ada di `STATE_LAMPIRAN_UKUR.md` **v23** (commit `a88a4631`).
+Lampiran ekor bagi `STATE.md` **v66** (commit `95021cda`). Berisi indeks, rantai, dan registri.
+Angka terukur beserta larangannya ada di `STATE_LAMPIRAN_UKUR.md` **v24** (commit `e3cef37b`).
 
-**Ditulis:** 2026-07-31, menggantikan v22 (commit `c282a438`).
+**Ditulis:** 2026-07-31, menggantikan v23 (commit `25970a88`, blob `569c7c3a`, 28.033 B).
 
-> **PERINGATAN KEUTUHAN.** Berkas ini **ditulis ulang**, bukan ditambal, dan disusun dari
-> pengukuran giliran 2026-07-31 sesudah serah terima. Butir tertentu dari v22 mungkin tidak
-> terbawa kata demi kata. **v22 tetap sah di riwayat git pada commit `c282a438`** dan menjadi
-> rujukan bagi apa pun yang tidak muncul di sini. Disebut supaya batas keandalan berkas ini
-> diketahui.
+> **PERINGATAN KEUTUHAN.** Berkas ini **ditulis ulang**, bukan ditambal. Butir tertentu dari
+> v23 mungkin tidak terbawa kata demi kata. **v23 tetap sah di riwayat git pada commit
+> `25970a88`** dan menjadi rujukan bagi apa pun yang tidak muncul di sini.
 
-> **CATATAN KETERTINGGALAN v22 - TERTINGGAL, BUKAN SALAH.** v22 berkepala "lampiran bagi
-> STATE v64", pencacahnya berhenti di aturan 38 **ke-78** dan aturan 52 **ke-66**, dan
-> bagian 4 berhenti di jurnal 164. Itu keadaan sah pada saat ia ditulis. Berkas inilah yang
-> menutup ketertinggalan tersebut. **DILARANG** membaca ketertinggalan v22 sebagai kesalahan
-> pengukuran.
+> **CATATAN KETERTINGGALAN v23 - TERTINGGAL, BUKAN SALAH.** Bagian 5.1 v23 menyatakan utang
+> ukur 37 **HIDUP** dan sebabnya **belum diukur**, serta melarang menduga mana dari dua
+> kemungkinan yang benar. Itu **benar pada saat ia ditulis**. Sebabnya kini **terukur** dan
+> utang itu **LUNAS** (bagian 5.1 berkas ini). **DILARANG** membaca ketertinggalan v23
+> sebagai kesalahan pengukuran, dan **DILARANG** mengutip v23 bagian 5.1 sebagai keadaan
+> mutakhir.
 
 > **ATURAN PEMAKAIAN BERKAS INI (aturan 94 / ADR-A024 keputusan 5).**
 > *Tidak ada angka boleh dikutip di tahap mana pun tanpa status utangnya.*
@@ -24,50 +23,60 @@ Angka terukur beserta larangannya ada di `STATE_LAMPIRAN_UKUR.md` **v23** (commi
 
 ## 1. Rantai commit sesi 2026-07-31
 
-Terbaru ke lama. Bot CI ditandai `[bot]`. Sembilan teratas **diukur langsung** dengan
-`list_commits` pada giliran ini; sisanya diwarisi dari v22.
+Terbaru ke lama. Bot CI ditandai `[bot]`. **Sepuluh teratas diukur langsung** dengan
+`list_commits` pada giliran ini; berikutnya diwarisi dari v23 dan v22.
 
-| commit | isi |
-| --- | --- |
-| **`470acfbb1c6b7f29148fb552ad0c132773c824c5`** | **[bot]** laporan CI 30626985954 - 11:26:08Z - **TIP saat serah terima** |
-| **`a88a463155bcec04ec59d379af0cd1e7279e0878`** | **UKUR v23** - 11:25:36Z |
-| **`febd41e624c36d6c7700bd96454f4790a813a659`** | **[bot]** laporan CI 30626827028 - 11:23:18Z |
-| **`c251d9206f0cdbd2a8400eb706198a3328aa1398`** | **STATE v65** - 11:22:52Z |
-| **`e915041e3f9758ff16435cc5d8cd92e42f4f6935`** | jurnal 165 - penutupan paksa tiga lapis - 11:19:04Z |
-| `69ebad8f5ea6382d8700bf15c31c48d9a6d5caec` | [bot] laporan CI 30626303664 - 11:14:25Z |
-| `ae483de8e4dfdb63f9b6733204d5784344cf3d6f` | **UKUR v22** - 11:13:56Z |
-| **`a155ba88962ad38bb9ac1639422e01dec08efbd1`** | **[bot]** laporan CI 30626157117 - 11:11:52Z |
-| `c282a438...` | **EKOR v22** |
-| `7c479f1a0362d75eb64e472b9404e9cfdbead474` | **STATE v64** |
-| `f0ca69ecfc1f10ede233887e79b4d7a5e1bdfe4b` | jurnal 164 - ADJ R-323 |
-| `4f98bef834433e5a3f3e270301ba5ea2f561e29b` | `.github/workflows/sumber_funding.yml` |
-| `d0a7c3272500a8d6653be1101464ac62a1565f10` | `lux_ai/serapan/sumber_funding.py` |
-| `f1fd5d8d75fddb10843e074e91c3f8247e41f509` | jurnal 163 - PRAREG R-323 |
-| `c91d1ac8947beda8e435bfb596a77f86f7bac3ea` | jurnal 162 - ADJ R-322 |
-| `41000f5d214109576735aee46f93648806522bee` | `.github/workflows/peta_funding.yml` |
-| `386381f692ec3f7109cb2dba81ede76aa05e8cf5` | jurnal 161 - PRAREG R-322 |
-| `f0807165280557d102b4e0cd963a44869034de61` | `lux_ai/serapan/peta_funding.py` |
-| `20c78e08` | ADR-A024 |
-| `5d0a3438` | jurnal 160 |
-| `9d30060e` | jurnal 159 - ADJ R-321 - **ref cacah tangan sah** |
-| `c2fd93f5` | `peta_manifes.yml` v2 |
-| `02be565f` | jurnal 158 - PRAREG R-321 |
-| `c766852d` | [bot] |
-| `3439c2b9` | `peta_manifes.yml` v1 - **kegagalan bisu** |
-| `e513d0ec` | `lux_ai/serapan/peta_manifes.py` |
-| `884790ce` | [bot] |
-| `e86f468f` | UKUR v21 |
-| `d2455b83` | [bot] |
-| `40448545` | **EKOR v21** |
-| `4ec4eed8` | [bot] |
-| `3f5ec7e4` | **STATE v63** |
-| `a8acbeba` | ADR-A023 |
-| `4dc444f0` | [bot] |
-| `8e6f583d` | UKUR v20 |
-| `713825d6` | [bot] |
-| `b1d1ed36` | EKOR v20 |
-| `27c7a7eb` | [bot] |
-| `f5019bb6` | STATE v62 |
+| commit | isi | waktu UTC |
+| --- | --- | --- |
+| **`d005b634ad35c01bed8815e57ecd6bbb1643fb85`** | **jurnal 167** - utang ukur 37 dibayar, BERHENTI ke-71 | 12:00:44Z |
+| **`5923e761467dbf9ce01bf595e5121538cca6d816`** | **[bot]** laporan CI 30628918966 | 11:59:00Z |
+| **`e3cef37b85483a287fcdbd7067bd82d05c74efcd`** | **UKUR v24** | 11:58:34Z |
+| **`8ae478a0e546ecb15fd162c4141b398b5eda237a`** | **[bot]** laporan CI 30628719235 | 11:55:38Z |
+| **`95021cda3463569d4a955a7b90b1d70806eab7b3`** | **STATE v66** | 11:55:12Z |
+| **`5a21493e5991bf1619939976aac1bd91f1a32ddd`** | **jurnal 166** - BERHENTI ke-70 | 11:49:11Z |
+| **`d0f1401938edf1e1e88811f83ea038f714ccb6d9`** | **[bot]** laporan CI 30628245614 | 11:47:21Z |
+| **`91d90c3f39b3f9bd6a21eb5b61e862dae7be94e4`** | **PROMPT v55** | 11:46:56Z |
+| **`fbdfa43eb519cd2393c41b196f46b9752b5806eb`** | **[bot]** laporan CI 30628050382 | 11:44:11Z |
+| **`25970a88334f6eff9dab2e1b566c681de598a33b`** | **EKOR v23** | 11:43:40Z |
+| `470acfbb1c6b7f29148fb552ad0c132773c824c5` | [bot] laporan CI 30626985954 - **tip saat serah terima** | 11:26:08Z |
+| `a88a463155bcec04ec59d379af0cd1e7279e0878` | **UKUR v23** | 11:25:36Z |
+| `febd41e624c36d6c7700bd96454f4790a813a659` | [bot] laporan CI 30626827028 | 11:23:18Z |
+| `c251d9206f0cdbd2a8400eb706198a3328aa1398` | **STATE v65** | 11:22:52Z |
+| `e915041e3f9758ff16435cc5d8cd92e42f4f6935` | jurnal 165 - penutupan paksa tiga lapis | 11:19:04Z |
+| `69ebad8f5ea6382d8700bf15c31c48d9a6d5caec` | [bot] laporan CI 30626303664 | 11:14:25Z |
+| `ae483de8e4dfdb63f9b6733204d5784344cf3d6f` | **UKUR v22** | 11:13:56Z |
+| `a155ba88962ad38bb9ac1639422e01dec08efbd1` | [bot] laporan CI 30626157117 | 11:11:52Z |
+| `c282a438...` | **EKOR v22** | - |
+| `7c479f1a0362d75eb64e472b9404e9cfdbead474` | **STATE v64** | - |
+| `f0ca69ecfc1f10ede233887e79b4d7a5e1bdfe4b` | jurnal 164 - ADJ R-323 | - |
+| `4f98bef834433e5a3f3e270301ba5ea2f561e29b` | `.github/workflows/sumber_funding.yml` | - |
+| `d0a7c3272500a8d6653be1101464ac62a1565f10` | `lux_ai/serapan/sumber_funding.py` | - |
+| `f1fd5d8d75fddb10843e074e91c3f8247e41f509` | jurnal 163 - PRAREG R-323 | - |
+| `c91d1ac8947beda8e435bfb596a77f86f7bac3ea` | jurnal 162 - ADJ R-322 | - |
+| `41000f5d214109576735aee46f93648806522bee` | `.github/workflows/peta_funding.yml` | - |
+| `386381f692ec3f7109cb2dba81ede76aa05e8cf5` | jurnal 161 - PRAREG R-322 | - |
+| `f0807165280557d102b4e0cd963a44869034de61` | `lux_ai/serapan/peta_funding.py` | - |
+| `20c78e08` | ADR-A024 | - |
+| `5d0a3438` | jurnal 160 | - |
+| `9d30060e` | jurnal 159 - **ref cacah tangan sah** | - |
+| `c2fd93f5` | `peta_manifes.yml` v2 | - |
+| `02be565f` | jurnal 158 - PRAREG R-321 | - |
+| `c766852d` | [bot] | - |
+| `3439c2b9` | `peta_manifes.yml` v1 - **kegagalan bisu** | - |
+| `e513d0ec` | `lux_ai/serapan/peta_manifes.py` | - |
+| `884790ce` | [bot] | - |
+| `e86f468f` | UKUR v21 | - |
+| `d2455b83` | [bot] | - |
+| `40448545` | EKOR v21 | - |
+| `4ec4eed8` | [bot] | - |
+| `3f5ec7e4` | STATE v63 | - |
+| `a8acbeba` | ADR-A023 | - |
+| `4dc444f0` | [bot] | - |
+| `8e6f583d` | UKUR v20 | - |
+| `713825d6` | [bot] | - |
+| `b1d1ed36` | EKOR v20 | - |
+| `27c7a7eb` | [bot] | - |
+| `f5019bb6` | STATE v62 | - |
 
 Sebelumnya: `9654890e` (157) - `a5b4ab70` (156) - `65b77d39` (155) - `6326a18d` (154) -
 `a90d543a` (153) - `1aa3fe3a` (152) - `f92c0dcf` (ADR-A022) - `72e49824` [bot] -
@@ -85,30 +94,56 @@ Sebelumnya: `9654890e` (157) - `a5b4ab70` (156) - `65b77d39` (155) - `6326a18d` 
 ### 1.1 Dua commit bot yang TIDAK disebut serah terima
 
 **`febd41e6`** (run 30626827028) dan **`a155ba88`** (run 30626157117) tidak muncul di rantai
-STATE v65 bagian 13 maupun di serah terima. Keduanya **terukur langsung** di sini.
-
-`febd41e6` adalah pengangkut laporan bagi bacaan aturan 38 **ke-80**.
-`a155ba88` (11:11:52Z) mendahului UKUR v22 (`ae483de8`, 11:13:56Z); **blobnya belum dibaca**,
-sehingga ia **BUKAN** bagian deret aturan 38 dan **DILARANG** dihitung sebagai bacaan.
+STATE v65 maupun di serah terima. `febd41e6` adalah pengangkut laporan bagi bacaan aturan 38
+**ke-80**. `a155ba88` (11:11:52Z) mendahului UKUR v22 (11:13:56Z); **blobnya belum dibaca**,
+sehingga ia **BUKAN** bagian deret aturan 38.
 **DILARANG** menyimpulkan commit mana yang diukur run 30626157117 - itu dugaan, bukan ukuran.
-**DILARANG** memakainya untuk mengklaim CI EKOR v22 (`c282a438`) pernah diperiksa; klaim itu
-tetap terlarang (STATE v65 bagian 8.5).
+**DILARANG** memakainya untuk mengklaim CI EKOR v22 (`c282a438`) pernah diperiksa.
+
+### 1.2 Bentuk commit bot - TERUKUR, baru di v24
+
+Keempat commit bot giliran terakhir diukur langsung: penulis dan pengirim **`lux-ci`**
+(`lux-ci@users.noreply.github.com`), pesan berpola **`laporan CI <run_id> [skip ci]`**.
+
+Dua akibat yang **terukur, bukan diandaikan**:
+
+1. **`[skip ci]` itulah sebab laporan CI tidak beranak.** Tanpa penanda itu, tiap laporan
+   akan menyalakan CI lagi tanpa henti.
+2. **Tidak ada commit bot antara jurnal 166 (11:49:11Z) dan STATE v66 (11:55:12Z).**
+   Ini mengukuhkan `paths-ignore` bekerja atas `journal/**` - push jurnal memang tidak
+   menyalakan CI.
+
+**DILARANG** membaca dua kejadian ini sebagai bukti `paths-ignore` bekerja atas keempat
+jalur (`journal/**`, `decisions/**`, `hipotesis/**`, `reports/**`). Yang terukur hanya
+`journal/**`.
 
 ---
 
 ## 2. Registri blob - artefak
 
-### 2.1 Trio akar - keadaan mutakhir
+> **PERINGATAN PENGENAL (kesalahan dokumen 25).** Kolom di bawah berjudul **blob** dan berisi
+> **blob**. SHA commit dan SHA blob **sama panjang dan sama bentuk**; menukarnya tidak
+> memicu galat apa pun. Setiap entri baru wajib diambil dari **daftar direktori**, bukan dari
+> hasil `push_files` yang mengembalikan **commit**. Lihat bagian 5.1.
+
+### 2.1 Trio akar dan prompt - keadaan mutakhir
 
 | berkas | versi | blob | commit | byte |
 | --- | --- | --- | --- | --- |
-| `STATE.md` | **v65** | `308789664f67045bbfb03f8bf823ba252caa7323` | `c251d920` | 15.955 |
-| `STATE_LAMPIRAN_UKUR.md` | **v23** | `59326334bd0ca5f6395406e245658d53fb3f66bb` | `a88a4631` | 16.055 |
-| `STATE_LAMPIRAN_EKOR.md` | **v22** | `cefb3cde25ff762144c80cb46cdbc7ed74e640a6` | `c282a438` | 18.173 |
-| `PROMPT.md` | **v54** | `e1aecf77fdf8edbbbb3240762fbf1624877107c0` | - | 30.816 |
-| `STATE.md` | v64 | `75a5d2965a54af83a620fb2bf9a06e388bbf97ae` | `7c479f1a` | - |
+| `STATE.md` | **v66** | `40e8920269b48f3c80f81156d39ff7251432d167` | `95021cda` | 22.242 |
+| `STATE_LAMPIRAN_UKUR.md` | **v24** | `7096616c8f5047bfdaa72a18edd9201f747afbab` | `e3cef37b` | 20.048 |
+| `STATE_LAMPIRAN_EKOR.md` | **v23** | `569c7c3afce3ea84319a7e49a792a95f151a6ae4` | `25970a88` | 28.033 |
+| `PROMPT.md` | **v55** | `5fd36c6f36141e4a62a422d750b1a3830e2755bf` | `91d90c3f` | 16.780 |
 
-Byte diukur dari daftar direktori akar pada tip `470acfbb`.
+**Blob v24 berkas ini belum dapat dicatat di sini** - batas rekam-diri (bagian 6.1).
+Ia akan tercatat di EKOR v25 dan terukur dari daftar direktori pada giliran ini.
+
+Versi terdahulu: `STATE.md` v65 `308789664f67045bbfb03f8bf823ba252caa7323` (`c251d920`,
+15.955) - v64 `75a5d2965a54af83a620fb2bf9a06e388bbf97ae` (`7c479f1a`) -
+`STATE_LAMPIRAN_UKUR.md` v23 `59326334bd0ca5f6395406e245658d53fb3f66bb` (`a88a4631`,
+16.055) - `STATE_LAMPIRAN_EKOR.md` v22 `cefb3cde25ff762144c80cb46cdbc7ed74e640a6`
+(`c282a438`, 18.173) - `PROMPT.md` v54 `e1aecf77fdf8edbbbb3240762fbf1624877107c0` (30.816).
+
 Blob **UKUR v22** (`ae483de8`) **belum pernah dicatat** - utang catat, bukan utang ukur.
 
 ### 2.2 Modul dan workflow
@@ -149,17 +184,23 @@ sebagai dua saksi bebas - satu runner, dua tempat.
 | `journal/2026-07-31-162.md` | `9e69ac56dc0d647f8ebe4a72d95c6b73f7277f22` | `c91d1ac8` |
 | `journal/2026-07-31-163.md` | `ce00cfadde06b428f1fcec7bd279191d0cdf2131` | `f1fd5d8d` |
 | `journal/2026-07-31-164.md` | `cee2a53ecf37ef86a3972b6ee03009577bb6f345` | `f0ca69ec` |
-| **`journal/2026-07-31-165.md`** | **`31505537defcab310bfcc559e233843b66396b50`** | **`e915041e`** |
+| `journal/2026-07-31-165.md` | `31505537defcab310bfcc559e233843b66396b50` | `e915041e` |
+| **`journal/2026-07-31-166.md`** | **`c5e98dd9a335bd21f15471eb8b73a889a3187f83`** | **`5a21493e`** |
+| **`journal/2026-07-31-167.md`** | **`977ea86829f2c614ee23aeb81c3af4d598c41a97`** | **`d005b634`** |
 
 ---
 
-## 3. Deret aturan 38 - ke-42 sampai ke-81, **40 pembacaan berturut**
+## 3. Deret aturan 38 - ke-42 sampai ke-85, **44 pembacaan berturut**
 
 | ke- | blob `ci_terakhir.json` | run | commit | waktu UTC |
 | --- | --- | --- | --- | --- |
-| **81** | `7d89e919...` | 30626985954 | `a88a4631` (UKUR v23) | 11:26:08Z |
-| **80** | `8391c269...` | 30626827028 | `c251d920` (STATE v65) | 11:23:18Z |
-| **79** | `b2a8a465...` | 30626303664 | `ae483de8` (UKUR v22) | 11:14:25Z |
+| **85** | `ea956de7429345ae6875faa5f2803e85a2be08e9` | 30628918966 | `e3cef37b` (UKUR v24) | 11:59:00Z |
+| **84** | `fedd1e894c2ec6de4e60fcef9e941550ede70914` | 30628719235 | `95021cda` (STATE v66) | 11:55:38Z |
+| **83** | `087317a3cd3c5b879477d7b87c17b3e139029939` | 30628245614 | `91d90c3f` (PROMPT v55) | 11:47:21Z |
+| **82** | `1c696ea933a77569a0e896cc61769f36ae99e37d` | 30628050382 | `25970a88` (EKOR v23) | 11:44:11Z |
+| 81 | `7d89e9192ec45ef1902a8bba895ef33370668198` | 30626985954 | `a88a4631` (UKUR v23) | 11:26:08Z |
+| 80 | `8391c269...` | 30626827028 | `c251d920` (STATE v65) | 11:23:18Z |
+| 79 | `b2a8a465...` | 30626303664 | `ae483de8` (UKUR v22) | 11:14:25Z |
 | 78 | `8ad4f4b9a53dc08d7e1a367c833e66d32d73d2d9` | 30625536901 | `7c479f1a` (STATE v64) | 11:01:20Z |
 | 77 | `edbd1756701d39f635ad05b786884550c027a21b` | 30624776589 | `4f98bef8` | 10:48:10Z |
 | 76 | `36ccbdf3bb5e9d29f96902ad616700730c9ce476` | 30623991546 | `41000f5d` | 10:34:30Z |
@@ -177,25 +218,36 @@ ke-55 `8ea8cc46` - ke-54 `340c3c7f` - ke-53 `5f4282f6` - ke-52 `19785af1` - ke-5
 ke-50 `04bfa2ed` - ke-49 `94d270e7` - ke-48 `8ec97de5` - ke-47 `8cbbd4ce` - ke-46 `effb3a46` -
 ke-45 `cdfdee25`.
 
-**Ke-79, ke-80, dan ke-81 diwarisi dari serah terima**, bukan diukur ulang di giliran ini.
-Dicatat apa adanya dengan asal-usulnya, sesuai aturan 55.
+**Ke-79, ke-80, dan ke-81 diwarisi dari serah terima**, bukan diukur ulang. Dicatat apa adanya
+dengan asal-usulnya (aturan 55).
 
-**Cacah uji tetap `1377` pada ke-73 sampai ke-78.** Nilai pada ke-79..ke-81 **belum dicatat
-di berkas ini**; **DILARANG** mengandaikannya 1377 tanpa membaca.
+**Cacah uji `1377` pada ke-73..ke-78 dan pada ke-82..ke-85.** Nilai pada ke-79..ke-81 tetap
+**belum tercatat**; **DILARANG** mengandaikannya 1377 tanpa membaca.
+Keempat konfirmasi 1377 terbaru lahir dari **satu pengukur yang sama** - **bukan** empat
+saksi bebas.
+
+### 3.1 Empat penolakan bacaan basi - dibukukan
+
+Pada ke-82, ke-84, dan ke-85, **percobaan pertama mengembalikan nilai basi persis** yang
+diumumkan di muka, dan **ditolak**. Percobaan kedua sah pada ketiganya.
+
+**Penolakan bukan kegagalan alat.** Penangkalnya bekerja karena nilai basi ditulis
+**sebelum** menunggu, sehingga tidak ada ruang bagi mata menerima yang lama sebagai yang
+baru. **Praktik ini WAJIB diteruskan:** umumkan run, commit, dan blob basi sebelum membaca.
 
 **Cacat deret yang dibukukan:** ke-38 tanpa blob - run `30547842823` tertimpa - laporan
 `c28202df` tertimpa. **DILARANG** menghitung laporan CI `c28202df`.
 
-**Pasangan run yang DILARANG dihitung sebagai dua saksi bebas** (lahir dari commit yang sama):
+**Pasangan run yang DILARANG dihitung sebagai dua saksi bebas** (lahir dari commit sama):
 30620019935 / 30620019905 - 30623991546 / 30623991561 - 30624776589 / 30624776552.
 
-**Nilai BASI yang wajib DITOLAK pada bacaan ke-82:** run **30626985954** - commit
-`a88a4631` - blob `7d89e919...`. Bila ketiganya yang terbaca, laporan itu **belum berganti**
-dan bacaan ke-82 **belum sah**.
+**Nilai BASI yang wajib DITOLAK pada bacaan ke-86:** run **30628918966** - commit
+`e3cef37b` - blob `ea956de7...`. Bila ketiganya yang terbaca, laporan **belum berganti**
+dan bacaan ke-86 **belum sah**.
 
 ---
 
-## 4. Indeks jurnal 144 sampai 165
+## 4. Indeks jurnal 144 sampai 167
 
 | no | blob | commit | isi |
 | --- | --- | --- | --- |
@@ -220,27 +272,29 @@ dan bacaan ke-82 **belum sah**.
 | 162 | `9e69ac56...` | `c91d1ac8` | ADJ R-322, papan 346, KOREKSI 20, butir 23 |
 | 163 | `ce00cfad...` | `f1fd5d8d` | PRAREG R-323 - lima butir, empat sisi |
 | 164 | `cee2a53e...` | `f0ca69ec` | ADJ R-323, papan 350, KOREKSI 21, utang ukur 36 |
-| **165** | **`31505537...`** | **`e915041e`** | **LAPIS B + LAPIS C, tiga belas butir ditutup paksa; TIDAK TERADJUDIKASI 16 -> 21; syarat 5 dan 6 lahir** |
+| 165 | `31505537...` | `e915041e` | LAPIS B + C, tiga belas butir ditutup paksa; TIDAK TERADJUDIKASI 16 -> 21 |
+| **166** | **`c5e98dd9...`** | **`5a21493e`** | EKOR v23 + PROMPT v55; butir 25 dan utang ukur 37 lahir; **BERHENTI ke-70** |
+| **167** | **`977ea868...`** | **`d005b634`** | **utang ukur 37 LUNAS**; STATE v66 + UKUR v24; kelas PENGENAL TERTUKAR; **BERHENTI ke-71** |
 
-**Cacah tangan direktori `journal/` pada tip `470acfbb` (aturan 66): 165 berkas.**
-Penomoran 01..165 **utuh tanpa lubang**: 01-59 (59) + 60-99 (40) + 100-112 (13) +
-113-140 (28) + 141-143 (3) + 144-147 (4) + 148-165 (18) = **165**.
-Cacah jurnal dan nomor jurnal terakhir **bersepakat**; keduanya lahir dari satu daftar,
-jadi **bukan dua saksi bebas**.
+**Cacah tangan `journal/` = 165 berkas, SAH pada tip `470acfbb`** (aturan 66).
+Penomoran 01..165 utuh tanpa lubang: 59+40+13+28+3+4+18 = **165**.
+Cacah jurnal dan nomor terakhir bersepakat, tetapi lahir dari **satu daftar** - bukan dua
+saksi bebas.
+
+**Turunan kini 167** dengan jurnal 166 dan 167. **DILARANG mengutip 167 sebagai cacah
+tangan** - ia hasil penambahan, bukan pencacahan.
 
 **BELUM DIBACA:** `journal/2026-07-30-125.md` (R-305, 11.418 B).
 
 ---
 
-## 5. Indeks ADR - **DIUKUR ULANG pada tip `470acfbb`**
-
-Seluruh blob di bawah diukur dari daftar direktori `decisions/` pada giliran ini.
+## 5. Indeks ADR - diukur pada tip `470acfbb`
 
 | ADR | blob terukur | byte | pokok |
 | --- | --- | --- | --- |
-| **A024** | `cb5a07105b594278a73f486c8906ad873358b59e` | 5.903 | aturan 94, penutupan paksa tiga lapis, delapan keputusan |
-| A023 | `d2a5302f08442c44176a177baacc2eee0ee5df58` | 21.444 | aturan 77, 78, 93 RESMI; 89 DIPERTEGAS empat sisi |
-| A022 | `fd24bb5bbbba24e7e01bcb3d0b9050f83147d017` | 16.412 | 88/89/91 RESMI; 92 DIPERSEMPIT; KC-56/57 DIBUANG |
+| **A024** | `cb5a07105b594278a73f486c8906ad873358b59e` | 5.903 | aturan 94, penutupan paksa tiga lapis |
+| A023 | `d2a5302f08442c44176a177baacc2eee0ee5df58` | 21.444 | 77, 78, 93 RESMI; 89 DIPERTEGAS empat sisi |
+| A022 | `fd24bb5bbbba24e7e01bcb3d0b9050f83147d017` | 16.412 | 88/89/91 RESMI; 92 DIPERSEMPIT |
 | A021 | `3e756672ca355ea976bf2931d278e37fe9057d0d` | 7.811 | LANGKAH 0 |
 | A020 | `200c7e7d737fdfa0b8d689e35482d9ae249b90ee` | 7.424 | - |
 | A019 | `9cd7d25e7a61207343e60233887d06b441aa3cbf` | 16.911 | - |
@@ -249,11 +303,11 @@ Seluruh blob di bawah diukur dari daftar direktori `decisions/` pada giliran ini
 | A016 | `209802d7b5eeff9a0d66f13d552b83145acb9dd6` | 5.303 | - |
 | A015 | `387d551051da4f0d539f7c9c26e438a9ac84c9a3` | 3.613 | - |
 | A014 | `6d77c2cde76882ead1bb08d9d6d227ab01a35ade` | 4.642 | - |
-| **A013** | **`3a7f86122f6f8d420657cbbd88b6ded787ba4b16`** | 3.832 | taksonomi lubang tiga kelas |
-| **A012** | **`0c474067d834ab99e452f7daf0e00fb9e1f7ef37`** | 3.097 | - |
-| **A011** | **`312638e9c8cf5da2a91d2adf70c9df13ea6e2753`** | 3.460 | - |
-| **A010** | **`6de941f7ff4dcb39f97eba4f3ff1207e8968afe3`** | 3.974 | - |
-| **A009** | **`8579641886ab20be7cd4381a3221a6e5bdf22b82`** | 3.882 | **DICABUT** |
+| A013 | `3a7f86122f6f8d420657cbbd88b6ded787ba4b16` | 3.832 | taksonomi lubang tiga kelas |
+| A012 | `0c474067d834ab99e452f7daf0e00fb9e1f7ef37` | 3.097 | - |
+| A011 | `312638e9c8cf5da2a91d2adf70c9df13ea6e2753` | 3.460 | - |
+| A010 | `6de941f7ff4dcb39f97eba4f3ff1207e8968afe3` | 3.974 | - |
+| A009 | `8579641886ab20be7cd4381a3221a6e5bdf22b82` | 3.882 | **DICABUT** |
 | A008 | `4c3632d6a65eb6ee089d824e2884da46c65d14e4` | 8.199 | BELUM DIBACA |
 | A007 | `89c99729deb1123a7d4f53aed8b2de6f2394b8c9` | 5.239 | BELUM DIBACA |
 | A006 | `6cce39f743e8a45403ba0652d0e3cca4cbb7f6e1` | 4.315 | BELUM DIBACA |
@@ -262,32 +316,40 @@ Seluruh blob di bawah diukur dari daftar direktori `decisions/` pada giliran ini
 | A002 | `3017056456087297e0a83bacbc0d12e7d8e66d36` | 9.578 | BELUM DIBACA |
 | A001 | `d5bb2f64862b0e2f4b49a3591b3b65e662469e2f` | 3.569 | - |
 
-**Cacah tangan `decisions/` pada tip `470acfbb` (aturan 66): 23 berkas**, A001..A024
-**tanpa A003**. **ADR-A003 BELUM ADA** - blokir 1, murni tulisan. Berikutnya **A025**.
+**Cacah tangan `decisions/` = 23 berkas** pada tip `470acfbb`, A001..A024 **tanpa A003**.
+**ADR-A003 BELUM ADA** - blokir 1, dan **DITAHAN**: isi keputusannya tidak ada dalam konteks
+mana pun. **DILARANG mengarang isinya.** Berikutnya **A025**.
 
-### 5.1 KESALAHAN DOKUMEN 25 - lima blob ADR di EKOR v22 tidak cocok
+### 5.1 KESALAHAN DOKUMEN 25 - PENGENAL TERTUKAR, sebab TERUKUR, utang ukur 37 LUNAS
 
-Ditemukan dengan mengadu registri v22 bagian 5 terhadap daftar direktori terukur:
+Ditemukan dengan mengadu registri EKOR **v22** bagian 5 terhadap daftar direktori terukur:
+lima ADR berurutan tidak cocok, sembilan belas entri lain cocok persis.
 
-| ADR | tertulis di EKOR v22 | terukur pada `470acfbb` |
-| --- | --- | --- |
-| A009 | `17a594b6` | **`85796418`** |
-| A010 | `c4bccf21` | **`6de941f7`** |
-| A011 | `645fd5df` | **`312638e9`** |
-| A012 | `f9f564d1` | **`0c474067`** |
-| A013 | `8ba4f989` | **`3a7f8612`** |
+Dibayar dengan `list_commits` berparameter `path` atas kelima berkas:
 
-Sembilan belas blob lain **cocok persis**. Kelima ini tidak.
+| ADR | tertulis di v22 | commit **tunggal** penyentuh berkas | pengangkut | blob SAH |
+| --- | --- | --- | --- | --- |
+| A009 | `17a594b6` | `17a594b69e243a83884862122f01b5e1ade4278a` | jurnal 123 | `85796418` |
+| A010 | `c4bccf21` | `c4bccf219ddcc3495265331b4cbce9a3ea806eb5` | jurnal 124 | `6de941f7` |
+| A011 | `645fd5df` | `645fd5df1c973cc5c6336ebc6cee3786a6eb347a` | jurnal 125 | `312638e9` |
+| A012 | `f9f564d1` | `f9f564d17d7ec688b613679e77f67d7974d0091f` | jurnal 126 | `0c474067` |
+| A013 | `8ba4f989` | `8ba4f989be545783e885caa21b9834e0456da4b7` | jurnal 127 | `3a7f8612` |
 
-**Yang terukur:** kelima nilai berbeda. **Yang TIDAK diukur:** sebabnya. Dua kemungkinan
-yang sama-sama belum diuji - berkasnya pernah diubah sesudah v22 mencatatnya, atau v22
-mencatat blob yang keliru sejak awal. **DILARANG menduga yang mana.**
+**SEBAB TERUKUR: keliru JENIS pengenal, bukan keliru nilai.** Kolom berjudul blob memuat
+**SHA commit**. Kelima nilai cocok **sempurna sebagai commit**, **nol sebagai blob**.
 
-Ini **kesalahan dokumen butir 25** dan melahirkan **utang ukur 37**: telusuri riwayat git
-kelima berkas ADR itu dan tentukan mana dari kedua kemungkinan yang benar.
-**Utang ukur 37 HIDUP** - belum digolongkan lapisnya. Aturan 94 menuntut penggolongan
-sebelum ia boleh disentuh penutupan paksa, dan penggolongan itu **bukan** pekerjaan berkas
-ini. **DILARANG** memakai jurnal 165 untuk menutupnya - ia lahir sesudah jurnal itu.
+**Kemungkinan tandingan TERBANTAH:** tiap berkas disentuh **tepat satu commit**, jadi tidak
+pernah diubah sesudah dibuat, jadi blobnya tidak mungkin pernah berganti.
+
+Keteraturan lima nomor **berurutan** kini terjelaskan: kelimanya lahir pada lima giliran
+berurutan (jurnal 123..127), dengan penyalinan pengenal yang keliru secara konsisten.
+
+**Utang ukur 37: LUNAS**, dibayar dengan pengukuran, **nol ditutup paksa**. Ia tidak pernah
+digolongkan lapis dan tidak pernah masuk daftar mati.
+
+**Kelas cacat PENGENAL TERTUKAR** - sekerabat KC-50, **kesunyian bukan galat**. Penangkal:
+adu registri dengan daftar direktori; jangan pernah menyalin pengenal dari hasil
+`push_files`, yang mengembalikan commit. **Registri yang rapi bukan registri yang benar.**
 
 **Kesalahan dokumen berikutnya: 26. Utang ukur berikutnya: 38.**
 
@@ -295,17 +357,18 @@ ini. **DILARANG** memakai jurnal 165 untuk menutupnya - ia lahir sesudah jurnal 
 
 ## 6. Pemakaian aturan - pencacah
 
-| aturan | pemakaian | nyala |
+| aturan | pemakaian | catatan |
 | --- | --- | --- |
-| 38 | **ke-81** | deret ke-42..ke-81 = **40 berturut** |
-| 52 | **ke-71** | tiap berkas didorong dibaca ulang segiliran |
-| 66 | cacah tangan sah: serapan **51**, workflows **46** pada `9d30060e`; journal **165**, decisions **23**, akar **18** pada `470acfbb` | - |
+| 38 | **ke-85** | deret ke-42..ke-85 = **44 berturut**; tiga penolakan basi dibukukan |
+| 52 | **ke-77** | tiap berkas didorong dibaca ulang segiliran |
+| 66 | serapan **51**, workflows **46** pada `9d30060e`; journal **165**, decisions **23**, akar **18** pada `470acfbb` | - |
 | 77 | dua | nol nyala sejak |
 | 79 | rekor delapan (R-314..R-321) | **BERAKHIR** di R-322; tidak ada rekor berjalan |
 | 85 | empat | - |
-| 90 | **empat belas** | **DUA** - nyala kedua atas run 30626827028 yang terbaca dua kali |
+| 90 | **empat belas** | **DUA** nyala - nyala kedua atas run 30626827028 yang terbaca dua kali |
 | 91 | dua pemakaian + satu penyebutan | - |
-| 93 | dipakai pada R-322, R-323, dan giliran ini | mencegah pelanggaran aturan 21 |
+| 93 | dipakai pada R-322, R-323, dan lima giliran terakhir | mencegah pelanggaran aturan 21 |
+| berhenti eksplisit | **ke-71** dipakai (jurnal 167 bagian 7) | **BUKAN** penutupan paksa |
 
 **DILARANG** menyebut aturan 77 / 78 / 89 / 90 / 91 / 93 sebagai "teruji".
 **DILARANG** menjumlahkan aturan 90 dan 77 - kedua alasan berkorelasi.
@@ -314,17 +377,21 @@ ini. **DILARANG** memakai jurnal 165 untuk menutupnya - ia lahir sesudah jurnal 
 
 ### 6.1 Batas rekam-diri - penangkal kesalahan dokumen 24
 
-Kesalahan dokumen **24** lahir karena v22 mencatat aturan 52 ke-66 di bagian 6 sementara
-bagian 14 menyebut berikutnya ke-68, sehingga **ke-67 tidak bernama**. Sebabnya batas
-rekam-diri: sebuah berkas tidak dapat mencatat pembacaan ulang atas dirinya sendiri.
+Kesalahan dokumen **24** lahir karena sebuah berkas tidak dapat mencatat pembacaan ulang atas
+dirinya sendiri, sehingga satu nomor tidak bernama.
 
-**Penangkal, dipakai di sini secara tersurat:** berkas ini mencatat aturan 52 **ke-71**
-sebagai pemakaian terakhir yang sudah selesai, dan menamai **ke-72** di muka sebagai
-**pembacaan ulang UTUH berkas ini sendiri pada giliran yang sama**. Ke-72 karena itu
-**bernama meski tak terekam isinya**. Celah penomoran tertutup; pengukurannya tidak.
+**Penangkal, dipakai di sini secara tersurat:** berkas ini mencatat aturan 52 **ke-77**
+sebagai pemakaian terakhir yang selesai, dan menamai **ke-78** di muka sebagai **pembacaan
+ulang UTUH berkas ini sendiri pada giliran yang sama**. Sesudahnya **ke-79**.
+
+**Gejala yang sama terjadi lagi dan sengaja dibukukan, BUKAN sebagai butir 26:**
+jurnal 167 bagian 8 menamai aturan 52 berikutnya **ke-77**, dan ke-77 itu **langsung
+terpakai** oleh pembacaan ulang jurnal 167 sendiri. Pernyataan itu benar saat ditulis dan
+habis seketika. **Tidak ada celah penomoran** karena ke-77 bernama. Ini batas rekam-diri,
+bukan kesalahan.
 
 Hal yang sama berlaku bagi aturan 38: push berkas ini menyentuh akar repo, jadi CI menyala
-dan bacaan **ke-82** menyusul di giliran yang sama.
+dan bacaan **ke-86** menyusul di giliran yang sama.
 
 ---
 
@@ -336,13 +403,19 @@ dan bacaan **ke-82** menyusul di giliran yang sama.
 2. `parameter fields could not be coerced to []string, is string`.
    Sebab: `fields` dikirim sebagai teks; menuntut **larik**.
 3. `JSON parse error ... Expected ',' or '}' after property value at position 27317`.
-   Terjadi pada percobaan mendorong EKOR v22 rumusan pertama. Sebab: muatan tulis terlalu
-   besar untuk satu panggilan. **Penangkal: memadatkan muatan, bukan mengulang apa adanya.**
+   Sebab: muatan tulis terlalu besar untuk satu panggilan.
+   **Penangkal: memadatkan muatan, bukan mengulang apa adanya.**
 
 **DILARANG** mengutip "tidak ada kegagalan panggilan alat GitHub sepanjang sesi ini" dari
 versi mana pun sesudah v20.
-**DILARANG** membaca batas tulis aman 25-45 KB sebagai jaminan - kejadian 3 membuktikannya
-bukan jaminan.
+**DILARANG** membaca batas tulis aman 25-45 KB sebagai jaminan. EKOR v23 lolos pada
+**28.033 B**, STATE v66 pada **22.242 B**, UKUR v24 pada **20.048 B**, masing-masing sekali
+jalan - **tiga kejadian berhasil bukan jaminan**, dan kejadian 3 tetap berlaku sebagai bukti
+tandingannya.
+
+**Bentuk panggilan yang TERUKUR bekerja:** `list_commits` menerima `path` dan **benar-benar
+menyaring** - diuji satu berkas dahulu dan diverifikasi spesifik-berkas sebelum diparalelkan.
+`search_code` tetap selalu 0 hasil. Tidak ada alat GitHub Actions.
 
 ---
 
@@ -360,27 +433,26 @@ silang_settled - sisa_defisit - survei_semesta - taksonomi_semesta - terhenti_se
 tersisip_semesta - uji_resample - ukur_baris.
 
 Kini turunan **48** dengan `peta_funding.yml` dan `sumber_funding.yml`.
-**DILARANG** mengutip 48 sebagai cacah tangan sah. **DILARANG** mengutip **44**
-sebagai cacah tangan sah (C-1, ditutup paksa).
+**DILARANG** mengutip 48 sebagai cacah tangan sah. **DILARANG** mengutip **44** sebagai
+cacah tangan sah (C-1, ditutup paksa).
 
 **`karantina_semesta.yml`** blob `de40fa4e68dc2e8dd76fd6700a4deed60f147cc2` -
 **masih memakai `git add -f` gabungan yang cacat**. Satu-satunya pewaris cacat yang tersisa.
 
 ### 8.1 Cacah tangan akar repo pada tip `470acfbb` - **18 entri**
 
-**12 berkas:** `PETA_MODUL.md` 8.691 - `PETA_MODUL_BERKAS.md` 6.890 - `PROMPT.md` 30.816 -
-`PROMPT_KELANJUTAN.md` 10.777 - `README.md` 1.910 - `STATE.md` 15.955 -
-`STATE_LAMPIRAN.md` 2.350 - `STATE_LAMPIRAN_ADR.md` 8.333 - `STATE_LAMPIRAN_ANGKA.md` 1.841 -
-`STATE_LAMPIRAN_EKOR.md` 18.173 - `STATE_LAMPIRAN_UKUR.md` 16.055 - `requirements.txt` 71.
+**12 berkas** dan **6 direktori** (`.github`, `decisions`, `journal`, `lux_ai`, `reports`,
+`tests`). Cacah lama 18 dinyatakan KEDALUWARSA di C-3; cacah baru **kebetulan juga 18**,
+tetapi kini terpilah 12 + 6 dan terikat pada tip yang disebut.
+**DILARANG** membaca kesamaan angka itu sebagai bukti cacah lama masih berlaku - angka sama
+lewat jalan berbeda **bukan konfirmasi**. **C-3 tetap DITUTUP PAKSA**; `tests/` **tetap
+KEDALUWARSA**.
 
-**6 direktori:** `.github` - `decisions` - `journal` - `lux_ai` - `reports` - `tests`.
-
-Cacah lama **18** untuk akar dinyatakan KEDALUWARSA di C-3; cacah baru **kebetulan juga 18**,
-tetapi kini **terpilah 12 + 6** dan terikat pada tip yang disebut.
-**DILARANG** membaca kesamaan angka itu sebagai bukti bahwa cacah lama masih berlaku -
-angka yang sama lewat jalan berbeda bukan konfirmasi.
-**C-3 tetap DITUTUP PAKSA.** Pengukuran ini **TIDAK** menjadikannya lunas, dan
-`tests/` **tetap KEDALUWARSA** - belum dicacah ulang.
+**Ukuran akar mutakhir** (daftar direktori pada `e3cef37b`, **bukan** cacah tangan baru):
+`STATE_LAMPIRAN_EKOR.md` 28.033 - `STATE.md` 22.242 - `STATE_LAMPIRAN_UKUR.md` 20.048 -
+`PROMPT.md` 16.780 - `PROMPT_KELANJUTAN.md` 10.777 (**bukan sumber**) - `PETA_MODUL.md`
+8.691 - `STATE_LAMPIRAN_ADR.md` 8.333 - `PETA_MODUL_BERKAS.md` 6.890 - `STATE_LAMPIRAN.md`
+2.350 - `README.md` 1.910 - `STATE_LAMPIRAN_ANGKA.md` 1.841 - `requirements.txt` 71.
 
 ---
 
@@ -397,13 +469,13 @@ angka yang sama lewat jalan berbeda bukan konfirmasi.
 
 Jumlah uji semesta **1377** = 1341 + 36. **DILARANG** menjumlahkan 1377 + 16.
 
-**Tiga modul tanpa pasangan uji:** `peta_manifes.py` (utang verifikasi 51, **B-2**) -
+**Tiga modul tanpa pasangan uji:** `peta_manifes.py` (verifikasi 51, **B-2**) -
 `peta_funding.py` (52, **B-3**) - `sumber_funding.py` (53, **B-4**). Ketiganya ditutup paksa
 berlabel; **syarat 5 penyeberangan ke klasifikasi**.
 
 ---
 
-## 10. Ukuran berkas `reports/` - daftar utuh ber-`fields`
+## 10. Ukuran berkas `reports/`
 
 Delapan manifes pecahan: 2.530.465 - 2.587.577 - 2.446.093 - **2.257.314** - 2.615.515 -
 2.865.596 - 2.780.523 - 2.450.719. Jumlah **20.533.802**.
@@ -439,6 +511,10 @@ Besar ke kecil (pilihan): `funding_semesta.json` **394.142** - `kehidupan.json` 
 
 **Zona ambang alat baca:** **DILARANG** menginterpolasi pada 194.728 B sampai 2.257.314 B.
 **DILARANG** menyatakan berkas di bawah 110.662 B pasti aman.
+
+**Bentuk `ci_terakhir.json`:** `{"run_id", "commit", "waktu_utc", "kode_keluar",
+"cacah_uji"}` - **hanya menyimpan jalan TERAKHIR**, sehingga bacaan yang tertunda dapat
+tertimpa (bagian 3.1 dan STATE v66 bagian 8.5).
 
 ---
 
@@ -494,35 +570,39 @@ Besar ke kecil (pilihan): `funding_semesta.json` **394.142** - `kehidupan.json` 
 
 - `karantina_semesta.py` dan `karantina_semesta.yml` - **TERLARANG sebagai bahan ramalan**
   (sudah dibaca sebelum praregistrasi R-321).
-- `semesta_rentang.json` - **BAHAN TAK BERSAKSI** (ADR-A022). Dilarang dikutip tanpa
-  menyebut status itu. 5% terakhir belum terbaca.
+- `semesta_rentang.json` - **BAHAN TAK BERSAKSI** (ADR-A022). 5% terakhir belum terbaca.
 - Delapan `kehidupan_arsip_*.json` - **DILARANG dibuka**.
 - Delapan manifes pecahan - ditolak penuh oleh alat baca (C-7).
 - `PROMPT_KELANJUTAN.md` (10.777 B) - **bukan sumber**.
 - `uji_r305`, `uji_r288`, `uji_r291` - **vonis alat BUKAN adjudikasi**.
 - `jangkauan_maksimum_funding` dan butir 3 R-323 - **DILARANG sebagai bukti apa pun**
   (KOREKSI 21).
+- **EKOR v22 bagian 5** sebagai sumber blob ADR A009..A013 - **DICABUT**, memuat SHA commit
+  (bagian 5.1).
+- **UKUR v22 bagian 9 dan 10** - TERGANTI, **DILARANG dikutip**.
+- **EKOR v23 bagian 5.1** sebagai keadaan mutakhir utang ukur 37 - **TERTINGGAL**.
 
 ---
 
 ## 14. Penomoran
 
-EKOR berikutnya **v24**. Penomoran lengkap ada di `STATE.md` v65 bagian 15, dengan dua
-perubahan yang lahir di berkas ini:
-
-- **kesalahan dokumen berikutnya 26** (butir 25 dipakai di bagian 5.1)
-- **utang ukur berikutnya 38** (utang ukur 37 dipakai di bagian 5.1, **HIDUP**, belum
-  digolongkan lapisnya)
+EKOR berikutnya **v25**. Penomoran lengkap ada di `STATE.md` **v66** bagian 16.
 
 Papan skor **350 - SAH**: TEPAT 240 - MELESET 68 - SEPARUH 22 -
 **TIDAK TERADJUDIKASI 21** - MENUNGGU 1. Kenaikan 16 -> 21 **wajib disebut**.
+Tidak ada ramalan diregistrasi maupun diadjudikasi pada tiga giliran terakhir.
 
-Aturan 38 berikutnya **ke-82**. Aturan 52 berikutnya **ke-72** - yaitu pembacaan ulang UTUH
-berkas ini pada giliran yang sama (lihat bagian 6.1).
-Berhenti eksplisit berikutnya **ke-70**.
+Aturan 38 berikutnya **ke-86**; nilai basi yang wajib ditolak ada di bagian 3.1.
+Aturan 52 berikutnya **ke-78** - pembacaan ulang UTUH berkas ini pada giliran yang sama
+(bagian 6.1); sesudahnya **ke-79**.
+Berhenti eksplisit berikutnya **ke-72**.
 
-STATE berikutnya **v66** - UKUR berikutnya **v24** - jurnal berikutnya **166** -
-PROMPT **v55** (C-6) - ADR **A025** dan **A003** - KC **KC-60** - aturan **95** -
-hipotesis **H-A024** - ramalan **R-324** - koreksi **22** - utang verifikasi **54**.
+STATE **v67** - UKUR **v25** - jurnal **168** - PROMPT **v56** - ADR **A025** (dan **A003**,
+DITAHAN) - KC **KC-60** - aturan **95** - hipotesis **H-A024** - ramalan **R-324** -
+koreksi **22** - kesalahan dokumen **26** - utang ukur **38** - utang verifikasi **54**.
 
-- akhir EKOR v23 -
+**Utang ukur HIDUP:** 6 - 7 - 17 - 21 - 22 - 26 - 27 - 30.
+**Utang verifikasi HIDUP:** 24 - 45 - 46 - 49.
+**Ditutup paksa: tetap tiga belas butir.** Daftar mati tidak menyusut.
+
+- akhir EKOR v24 -

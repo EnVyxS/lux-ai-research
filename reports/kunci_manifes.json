@@ -1,0 +1,1044 @@
+{
+  "bukan_bukti": false,
+  "byte_manifes_total": 20533802,
+  "cacah_manifes_dibaca": 8,
+  "cacah_manifes_hilang": 0,
+  "cacah_manifes_rusak": 0,
+  "catatan_arti_sah": "verifikasi_rilis.sah didefinisikan di rilis.verifikasi(): ada bagian, nol sha tak cocok, nol bagian hilang, cacah_anggota_terbaca sama dengan cacah_berkas, cacah_bagian_melebihi_batas nol, dan cacah_bagian_taksiran_terlampaui nol",
+  "catatan_batas": "modul ini menyalin nilai apa adanya dan TIDAK menghitung ulang isi manifes; akibat seperti dikemas_karantina BUKAN pengganti medan versi_pecahan",
+  "catatan_penggugur": "cacah_manifes_hilang > 0, cacah_manifes_rusak > 0, atau medan_absen tidak kosong berarti laporan ini TIDAK cukup untuk memutuskan blokir ketujuh (aturan 24)",
+  "medan_absen": {
+    "cacah_entri": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "total_pecahan": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "medan_penentu": [
+    "versi_pecahan",
+    "verifikasi_rilis",
+    "cacah_parquet_tak_terkemas",
+    "cacah_karantina_tak_terkemas"
+  ],
+  "pecahan": [
+    {
+      "ada": true,
+      "byte": 2530465,
+      "jalur": "reports/manifes_pecahan_0.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2295,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2408,
+          "cacah_anggota_terbaca": 2408,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 3,
+          "cacah_anggota_terbaca": 3,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 0,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2587577,
+      "jalur": "reports/manifes_pecahan_1.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2268,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2465,
+          "cacah_anggota_terbaca": 2465,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 3,
+          "cacah_anggota_terbaca": 3,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 1,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2446093,
+      "jalur": "reports/manifes_pecahan_2.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2293,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2337,
+          "cacah_anggota_terbaca": 2337,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": null,
+        "versi_pecahan": 6
+      },
+      "pecahan": 2,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2257314,
+      "jalur": "reports/manifes_pecahan_3.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2356,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2153,
+          "cacah_anggota_terbaca": 2153,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 2,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 1,
+          "cacah_anggota_terbaca": 1,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 3,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2615515,
+      "jalur": "reports/manifes_pecahan_4.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2327,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2496,
+          "cacah_anggota_terbaca": 2496,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 1,
+          "cacah_anggota_terbaca": 1,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 4,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2865596,
+      "jalur": "reports/manifes_pecahan_5.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2341,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2741,
+          "cacah_anggota_terbaca": 2741,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": null,
+        "versi_pecahan": 6
+      },
+      "pecahan": 5,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2780523,
+      "jalur": "reports/manifes_pecahan_6.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2399,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2649,
+          "cacah_anggota_terbaca": 2649,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 3,
+          "cacah_anggota_terbaca": 3,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 6,
+      "rusak": false,
+      "sebab_rusak": null
+    },
+    {
+      "ada": true,
+      "byte": 2450719,
+      "jalur": "reports/manifes_pecahan_7.json",
+      "kunci_atas": [
+        "bukan_bukti",
+        "byte_parquet_karantina_total",
+        "byte_parquet_total",
+        "byte_zip_total",
+        "cacah_gagal_checksum",
+        "cacah_gagal_unduh",
+        "cacah_karantina",
+        "cacah_karantina_tak_terkemas",
+        "cacah_parquet_ditulis",
+        "cacah_parquet_karantina_ditulis",
+        "cacah_parquet_tak_terkemas",
+        "cacah_simbol_bulan_dengan_baris_dibuang",
+        "catatan_bulan_parsial",
+        "catatan_karantina_persistensi",
+        "catatan_parquet",
+        "catatan_rentang",
+        "daftar_karantina",
+        "gerbang",
+        "jenis_instrumen_unik",
+        "jumlah_baris",
+        "jumlah_baris_dibuang",
+        "karantina",
+        "karantina_dipersistenkan",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "manifes",
+        "mengemas",
+        "nisbah_parquet_per_zip",
+        "parquet_dipersistenkan",
+        "pecahan",
+        "penyebut",
+        "rilis",
+        "rilis_karantina",
+        "selisih_cacah_bulan",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "verifikasi_rilis",
+        "verifikasi_rilis_karantina",
+        "versi_pecahan",
+        "waktu_utc"
+      ],
+      "medan_absen": [
+        "cacah_entri",
+        "total_pecahan"
+      ],
+      "nilai": {
+        "cacah_entri": null,
+        "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_tak_terkemas": 0,
+        "karantina_dipersistenkan": true,
+        "nisbah_parquet_per_zip": 1.2334,
+        "parquet_dipersistenkan": true,
+        "pecahan": {
+          "__kunci": [
+            "cacah_simbol",
+            "cacah_simbol_gagal_daftar",
+            "contoh_gagal_daftar",
+            "indeks",
+            "total"
+          ]
+        },
+        "selisih_cacah_bulan": {
+          "__kunci": [
+            "cacah_simbol_berselisih",
+            "catatan",
+            "contoh"
+          ]
+        },
+        "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "total_pecahan": null,
+        "verifikasi_rilis": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 2337,
+          "cacah_anggota_terbaca": 2337,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 3,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "verifikasi_rilis_karantina": {
+          "anggota_cocok": true,
+          "cacah_anggota_diharap": 1,
+          "cacah_anggota_terbaca": 1,
+          "cacah_bagian_hilang": 0,
+          "cacah_sha_cocok": 1,
+          "cacah_sha_tak_cocok": 0,
+          "nama_bagian_hilang": [],
+          "nama_bagian_hilang__cacah": 0,
+          "nama_sha_tak_cocok": [],
+          "nama_sha_tak_cocok__cacah": 0,
+          "sah": true
+        },
+        "versi_pecahan": 6
+      },
+      "pecahan": 7,
+      "rusak": false,
+      "sebab_rusak": null
+    }
+  ],
+  "pecahan_hilang": [],
+  "pecahan_rusak": [],
+  "ringkasan": {
+    "cacah_entri_nilai": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cacah_karantina_tak_terkemas_jumlah": 0,
+    "cacah_karantina_tak_terkemas_nilai": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cacah_parquet_tak_terkemas_jumlah": 0,
+    "cacah_parquet_tak_terkemas_nilai": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "karantina_dipersistenkan_nilai": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "parquet_dipersistenkan_nilai": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "selisih_cacah_bulan_nilai": [
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      },
+      {
+        "__kunci": [
+          "cacah_simbol_berselisih",
+          "catatan",
+          "contoh"
+        ]
+      }
+    ],
+    "sidik_kode_manifes_unik": [
+      "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601"
+    ],
+    "verifikasi_rilis_karantina_sah": [
+      true,
+      true,
+      null,
+      true,
+      true,
+      null,
+      true,
+      true
+    ],
+    "verifikasi_rilis_sah": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "verifikasi_rilis_sah_semua": true,
+    "versi_pecahan_nilai": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "versi_pecahan_seragam": true,
+    "versi_pecahan_unik": [
+      "6"
+    ]
+  },
+  "sidik_kode": "8dcbe826a1c710385f5cda29636125544ba43f35e252b5f2daa585e87077153d",
+  "total_pecahan_diminta": 8,
+  "versi_kunci_manifes": 1,
+  "waktu_utc": "2026-07-31T13:30:52Z"
+}

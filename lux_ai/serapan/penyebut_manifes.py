@@ -1,37 +1,38 @@
 """penyebut_manifes.py - pembaca NILAI medan BERSARANG pada manifes pecahan.
 
-VERSI 1. Lahir untuk melunasi UTANG UKUR 41 (jurnal 184 bagian 6):
-`kunci_manifes.py` VERSI 2 hanya melaporkan DAFTAR KUNCI untuk medan yang
-bernilai objek (`penyebut`, `gerbang`, `selisih_cacah_bulan`, `pecahan`),
-bukan NILAI di dalamnya. Tanpa NILAI itu, penghalang baris 1 (ketakseimbangan
-33 : 19.553), pasangan penyebut 787 lawan 937, dan penghalang baris 6 (gerbang
-LIMA lawan ENAM klausa) tidak dapat diukur dari manifes.
+VERSI 2. VERSI 1 melunasi UTANG UKUR 41 (penyebut.simbol_bulan_diminta dan
+penyebut.simbol_bulan_terunduh terbaca lewat log runner), tetapi laporan
+penuhnya 116.538 B dengan badan `pecahan` mendahului `ringkasan` secara
+alfabetis, sehingga bagian yang paling dibutuhkan justru berisiko terpotong
+saat dibaca alat. VERSI 2 menambah keluaran KEDUA yang ramping:
+`reports/penyebut_manifes_ringkas.json`, berisi HANYA ringkasan lintas pecahan
+(tanpa badan per-pecahan). Laporan penuh tetap ditulis dan tidak dikurangi.
 
-SASARAN UTAMA (utang ukur 41):
+SASARAN UTAMA (utang ukur 41, sudah terbaca pada VERSI 1):
   penyebut.simbol_bulan_diminta
   penyebut.simbol_bulan_terunduh
-SASARAN IKUTAN (bukan sasaran utama, dilaporkan bila terbaca):
-  gerbang.pelanggaran_per_klausa (NAMA klausa dan cacahnya)
+SASARAN VERSI 2 (menyentuh penghalang baris 6):
+  gerbang.pelanggaran_per_klausa  -> NAMA klausa dan cacah pelanggarannya
   gerbang.simbol_bulan_dinilai / _lolos / _gagal / persen_lolos
+  gerbang.baris_diperiksa / slot_diperiksa
   selisih_cacah_bulan.cacah_simbol_berselisih
-  pecahan.cacah_simbol / indeks / total
 
 BATAS YANG DITULIS DI MUKA (aturan 21, 24, 30):
 - Modul ini MENYALIN nilai apa adanya. Ia TIDAK menghitung ulang isi manifes.
 - Medan yang absen dilaporkan absen. ABSEN BUKAN NOL. Null BUKAN nol.
 - Penjumlahan lintas pecahan hanya dilakukan bila KEDELAPAN nilai adalah
   bilangan bulat. Bila ada satu saja yang bukan, hasilnya null.
-- DILARANG memakai angka `reports/peta_manifes.json` (dikemas 19.586,
-  dikemas_karantina 12, sensus 787 simbol) sebagai pengganti medan puncak
-  manifes. Akibat bukan medan.
+- DILARANG memakai angka `reports/peta_manifes.json` sebagai pengganti medan
+  puncak manifes. Akibat bukan medan.
+- DILARANG menulis "gerbang punya N klausa" dari cacah kunci saja; yang sah
+  hanyalah NAMA klausa yang benar-benar terbaca di pelanggaran_per_klausa,
+  dan itu pun adalah klausa yang DILAPORKAN, belum tentu seluruh klausa yang
+  DIPERIKSA. Perbedaan itu wajib diuji terpisah, bukan disimpulkan di sini.
 - Laporan ini TIDAK mengubah vonis ramalan mana pun yang sudah sah, termasuk
   R-324 (MELESET, final sejak jurnal 182 bagian 4).
-- `bukan_bukti` = False: laporan ini adalah pengukuran langsung atas berkas
-  manifes, bukan taksiran.
 
-Medan `manifes` dan `daftar_karantina` SENGAJA tidak dirambah: keduanya adalah
-badan data raksasa, bukan kunci atas, dan merambahnya akan meledakkan laporan
-melewati ambang baca alat (280.587 B pernah lolos; 2.257.314 B tertolak).
+Medan `manifes` dan `daftar_karantina` SENGAJA tidak dirambah: keduanya badan
+data raksasa, bukan kunci atas.
 """
 
 from __future__ import annotations
@@ -42,8 +43,9 @@ import json
 import os
 import sys
 
-VERSI = 1
+VERSI = 2
 KELUARAN = "reports/penyebut_manifes.json"
+KELUARAN_RINGKAS = "reports/penyebut_manifes_ringkas.json"
 POLA_MANIFES = "reports/manifes_pecahan_{}.json"
 TOTAL_PECAHAN = 8
 
@@ -53,7 +55,6 @@ BATAS_LARIK = 16
 BATAS_KUNCI = 64
 BATAS_TEKS = 240
 
-# Medan bersarang yang dirambah sampai daunnya.
 MEDAN_BERSARANG = (
     "penyebut",
     "gerbang",
@@ -68,7 +69,6 @@ MEDAN_BERSARANG = (
     "kelas_risiko_kosong",
 )
 
-# Medan skalar kunci atas yang ikut disalin sebagai jangkar silang.
 MEDAN_SKALAR = (
     "versi_pecahan",
     "status",
@@ -87,18 +87,18 @@ MEDAN_SKALAR = (
     "waktu_utc",
 )
 
-# DILARANG dirambah.
 MEDAN_DILARANG = ("manifes", "daftar_karantina")
 
-# Dua medan yang menjadi alasan modul ini lahir.
 SASARAN_UTANG_41 = (
     "penyebut.simbol_bulan_diminta",
     "penyebut.simbol_bulan_terunduh",
 )
 
+# Awalan daun yang wajib ikut dicetak ke log VERSI 2.
+AWALAN_SOROT = ("penyebut.", "gerbang.", "selisih_cacah_bulan.")
+
 
 def sidik_kode() -> str:
-    """Sidik jari kode modul ini sendiri, supaya laporan tahu asal-usulnya."""
     try:
         with open(os.path.abspath(__file__), "rb") as f:
             return hashlib.sha256(f.read()).hexdigest()
@@ -123,11 +123,7 @@ def skalar(nilai) -> bool:
 
 
 def ratakan(nilai, awalan: str, keluar: dict, sisa: int) -> None:
-    """Ratakan objek bersarang menjadi daun berjalur titik.
-
-    Larik dan pemetaan besar dilaporkan cacahnya, bukan isinya, supaya laporan
-    tidak meledak. Cacah BUKAN isi; itu ditulis tersurat pada kuncinya.
-    """
+    """Ratakan objek bersarang menjadi daun berjalur titik."""
     if skalar(nilai):
         keluar[awalan] = potong(nilai) if isinstance(nilai, str) else nilai
         return
@@ -226,7 +222,6 @@ def baca_pecahan(indeks: int) -> dict:
 
 
 def rangkum(pecahan: list) -> dict:
-    """Susun tiap daun menjadi deret delapan nilai, plus jumlah bila utuh."""
     kunci = set()
     for satu in pecahan:
         kunci.update(satu["daun"])
@@ -303,13 +298,29 @@ def jalankan() -> dict:
             "final atas butir 1 dan butir 3 sejak jurnal 182 bagian 4."
         ),
         "catatan_penyebut": (
-            "bila simbol_bulan_diminta dan simbol_bulan_terunduh terbaca, "
-            "angkanya adalah penyebut UNDUHAN per pecahan, BUKAN penyebut "
-            "semesta 787 maupun 937. Menyamakannya tanpa uji adalah "
-            "mengarang."
+            "simbol_bulan_diminta dan simbol_bulan_terunduh adalah penyebut "
+            "UNDUHAN per pecahan, BUKAN penyebut semesta 787 maupun 937. "
+            "Menyamakannya tanpa uji adalah mengarang."
+        ),
+        "catatan_gerbang": (
+            "nama klausa yang muncul di pelanggaran_per_klausa adalah klausa "
+            "yang DILAPORKAN, belum tentu seluruh klausa yang DIPERIKSA. "
+            "DILARANG menyimpulkan cacah klausa gerbang dari sini saja."
         ),
     }
     return laporan
+
+
+def ringkaskan(laporan: dict) -> dict:
+    """Salinan laporan tanpa badan per-pecahan, supaya terbaca utuh oleh alat."""
+    kurus = {k: v for k, v in laporan.items() if k != "pecahan"}
+    kurus["catatan_ringkas"] = (
+        "berkas ini adalah laporan yang SAMA tanpa badan per-pecahan; "
+        "badan penuh ada di " + KELUARAN + ". Tidak ada nilai yang diubah."
+    )
+    kurus["jalur_penuh"] = KELUARAN
+    kurus["cacah_daun_ringkasan"] = len(laporan.get("ringkasan", {}))
+    return kurus
 
 
 def main() -> int:
@@ -319,12 +330,19 @@ def main() -> int:
         json.dump(laporan, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
 
+    with open(KELUARAN_RINGKAS, "w", encoding="utf-8") as f:
+        json.dump(
+            ringkaskan(laporan), f, ensure_ascii=False, indent=2, sort_keys=True
+        )
+        f.write("\n")
+
     print("keluaran:", KELUARAN, os.path.getsize(KELUARAN), "B")
+    print("ringkas:", KELUARAN_RINGKAS, os.path.getsize(KELUARAN_RINGKAS), "B")
     print("pecahan dibaca:", laporan["cacah_pecahan_dibaca"])
     print("hilang:", laporan["pecahan_hilang"], "rusak:", laporan["pecahan_rusak"])
-    for jalur in SASARAN_UTANG_41:
-        print(jalur, "=>", json.dumps(laporan["sasaran_utang_41"][jalur],
-                                      ensure_ascii=False)[:400])
+    for jalur, catatan in sorted(laporan["ringkasan"].items()):
+        if jalur.startswith(AWALAN_SOROT):
+            print(jalur, "=>", json.dumps(catatan, ensure_ascii=False)[:400])
     return 0
 
 

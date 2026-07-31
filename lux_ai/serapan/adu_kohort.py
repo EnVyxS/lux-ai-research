@@ -4,6 +4,13 @@ Utang ukur 38. Modul ini TIDAK menghitung ulang apa pun dan TIDAK menulis ke
 manifes mana pun. Ia hanya MEMBACA daftar anggota yang sudah tertulis di
 laporan yang ada, lalu mengadukan keanggotaannya sebagai himpunan.
 
+VERSI 2. Versi 1 gagal terukur pada sisi funding: ia hanya melihat larik
+string di PUNCAK dokumen, sedangkan funding_semesta.json menyimpan anggota di
+dalam struktur bersarang (mis. kohort_puncak, per_simbol, selisih_kohort).
+Kegagalan itu ditulis, bukan ditutupi. Versi ini menelusuri dokumen sampai
+kedalaman terbatas dan mengumpulkan nama simbol dari TIGA bentuk yang benar
+benar ditemui, tanpa mengarang nama kunci mana pun.
+
 Aturan yang ditegakkan:
 - aturan 7  : keluaran selalu lahir, walau bahan tidak lengkap.
 - aturan 16 : sebab kegagalan ditulis, bukan disembunyikan.
@@ -12,8 +19,8 @@ Aturan yang ditegakkan:
 - aturan 24 : penggugur ditulis tersurat.
 - aturan 30 : tidak ada pembagian oleh nol.
 - aturan 32 : sidik kode modul ikut diterbitkan.
-- aturan 36 : nama kunci sumber TIDAK dikarang; kunci puncak dilaporkan apa
-              adanya dan daftar kandidat ditemukan dari BENTUK nilainya.
+- aturan 36 : nama kunci sumber TIDAK dikarang; jalur temuan dilaporkan apa
+              adanya bersama bentuk yang membuatnya terkumpul.
 - aturan 46 : batas tafsir ditulis di dalam laporan.
 """
 
@@ -25,7 +32,7 @@ import json
 import os
 from typing import Any
 
-VERSI = 1
+VERSI = 2
 
 KELUARAN = "reports/adu_kohort.json"
 
@@ -38,8 +45,12 @@ BERKAS_DICAP = ("adu_kohort.py",)
 # Batas cetak daftar mentah supaya laporan tetap terbaca alat.
 BATAS_DAFTAR = 64
 
-# Sebuah nilai dianggap KANDIDAT daftar kohort bila ia larik berisi hanya
-# string, dan setidaknya satu di antaranya berakhiran akhiran pasar berikut.
+# Jalur dengan anggota lebih banyak daripada ini tetap DICATAT cacahnya,
+# tetapi tidak diadu satu per satu supaya laporan tidak meledak.
+BATAS_ADU = 200
+
+KEDALAMAN = 4
+
 AKHIRAN = ("USDT",)
 
 
@@ -65,19 +76,52 @@ def baca_json(jalan: str) -> tuple[Any, str | None, int]:
         return None, f"rusak: {type(galat).__name__}: {galat}", byte
 
 
-def daftar_kandidat(muatan: Any) -> dict[str, list[str]]:
-    """Temukan daftar simbol di puncak dokumen tanpa mengarang nama kunci."""
-    hasil: dict[str, list[str]] = {}
-    if not isinstance(muatan, dict):
-        return hasil
-    for kunci, nilai in muatan.items():
-        if not isinstance(nilai, list) or not nilai:
-            continue
-        if not all(isinstance(x, str) for x in nilai):
-            continue
-        if any(x.endswith(AKHIRAN) for x in nilai):
-            hasil[kunci] = list(nilai)
-    return hasil
+def simbol_ish(teks: Any) -> bool:
+    return isinstance(teks, str) and teks.endswith(AKHIRAN)
+
+
+def kumpulkan(
+    simpul: Any,
+    jalur: str,
+    dalam: int,
+    hasil: dict[str, dict[str, Any]],
+) -> None:
+    """Kumpulkan daftar nama simbol dari tiga bentuk yang benar benar ada."""
+    if dalam > KEDALAMAN:
+        return
+
+    if isinstance(simpul, list) and simpul:
+        # bentuk 1: larik string simbol
+        if all(isinstance(x, str) for x in simpul) and any(
+            simbol_ish(x) for x in simpul
+        ):
+            hasil[jalur] = {"bentuk": "larik_string", "nama": list(simpul)}
+            return
+        # bentuk 2: larik objek yang punya medan simbol
+        if all(isinstance(x, dict) for x in simpul):
+            for medan in ("simbol", "symbol"):
+                nama = [x[medan] for x in simpul if simbol_ish(x.get(medan))]
+                if nama:
+                    hasil[f"{jalur}[].{medan}"] = {
+                        "bentuk": "larik_objek",
+                        "nama": nama,
+                    }
+                    break
+        for i, anak in enumerate(simpul[:8]):
+            kumpulkan(anak, f"{jalur}[{i}]", dalam + 1, hasil)
+        return
+
+    if isinstance(simpul, dict) and simpul:
+        # bentuk 3: pemetaan yang KUNCInya adalah simbol
+        kunci_simbol = [k for k in simpul if simbol_ish(k)]
+        if kunci_simbol:
+            hasil[f"{jalur}{{}}"] = {
+                "bentuk": "kunci_pemetaan",
+                "nama": list(kunci_simbol),
+            }
+            return
+        for kunci, anak in simpul.items():
+            kumpulkan(anak, f"{jalur}.{kunci}" if jalur else str(kunci), dalam + 1, hasil)
 
 
 def adu(kiri: list[str], kanan: list[str]) -> dict[str, Any]:
@@ -99,7 +143,6 @@ def adu(kiri: list[str], kanan: list[str]) -> dict[str, Any]:
         "hanya_kiri": hanya_kiri[:BATAS_DAFTAR],
         "hanya_kanan": hanya_kanan[:BATAS_DAFTAR],
         "irisan": irisan[:BATAS_DAFTAR],
-        "urutan_sama": list(kiri) == list(kanan),
     }
 
 
@@ -108,31 +151,52 @@ def jalankan() -> dict[str, Any]:
     kehidupan, galat_kehidupan, byte_kehidupan = baca_json(SUMBER_KEHIDUPAN)
     ekor, galat_ekor, byte_ekor = baca_json(SUMBER_EKOR)
 
-    kandidat_funding = daftar_kandidat(funding)
-    kandidat_kehidupan = daftar_kandidat(kehidupan)
-    kandidat_ekor = daftar_kandidat(ekor)
+    temuan_funding: dict[str, dict[str, Any]] = {}
+    temuan_kehidupan: dict[str, dict[str, Any]] = {}
+    temuan_ekor: dict[str, dict[str, Any]] = {}
+    kumpulkan(funding, "", 0, temuan_funding)
+    kumpulkan(kehidupan, "", 0, temuan_kehidupan)
+    kumpulkan(ekor, "", 0, temuan_ekor)
 
-    # Sisi kanan adu: daftar anggota kohort yang SUDAH terukur di kehidupan.
-    kanan = kandidat_kehidupan.get("simbol_diukur")
-    kanan_absen = kanan is None
-    kanan = list(kanan or [])
+    sisi_kanan = temuan_kehidupan.get("simbol_diukur")
+    kanan_absen = sisi_kanan is None
+    kanan = list(sisi_kanan["nama"]) if sisi_kanan else []
 
-    aduan = {
-        nama: adu(daftar, kanan)
-        for nama, daftar in sorted(kandidat_funding.items())
-        if not kanan_absen
-    }
+    def adu_semua(temuan: dict[str, dict[str, Any]]) -> dict[str, Any]:
+        keluar: dict[str, Any] = {}
+        if kanan_absen:
+            return keluar
+        for jalur, isi in sorted(temuan.items()):
+            nama = isi["nama"]
+            if len(set(nama)) > BATAS_ADU:
+                keluar[jalur] = {
+                    "bentuk": isi["bentuk"],
+                    "cacah_kiri_unik": len(set(nama)),
+                    "tidak_diadu": True,
+                    "sebab": f"lebih dari {BATAS_ADU} anggota",
+                    "cacah_irisan": len(set(nama) & set(kanan)),
+                    "cacah_hanya_kanan": len(set(kanan) - set(nama)),
+                    "kanan_bagian_kiri": not (set(kanan) - set(nama)),
+                }
+                continue
+            hasil = adu(nama, kanan)
+            hasil["bentuk"] = isi["bentuk"]
+            keluar[jalur] = hasil
+        return keluar
 
-    aduan_ekor = {}
-    for nama, daftar in sorted(kandidat_ekor.items()):
-        if not kanan_absen:
-            aduan_ekor[nama] = adu(daftar, kanan)
+    aduan_funding = adu_semua(temuan_funding)
+    aduan_ekor = adu_semua(temuan_ekor)
 
-    cocok_penuh = sorted(n for n, h in aduan.items() if h["himpunan_identik"])
+    identik = sorted(
+        j for j, h in aduan_funding.items() if h.get("himpunan_identik")
+    )
 
-    def cacah(muatan: Any, kunci: str) -> Any:
+    def ambil(muatan: Any, kunci: str) -> Any:
         if isinstance(muatan, dict) and kunci in muatan:
-            return muatan[kunci]
+            nilai = muatan[kunci]
+            if isinstance(nilai, (str, int, float, bool)) or nilai is None:
+                return nilai
+            return f"<{type(nilai).__name__}>"
         return None
 
     laporan: dict[str, Any] = {
@@ -142,6 +206,7 @@ def jalankan() -> dict[str, Any]:
         ),
         "sidik_kode": sidik_kode(),
         "bukan_bukti": False,
+        "kedalaman_telusur": KEDALAMAN,
         "sumber": {
             "funding": {
                 "jalan": SUMBER_FUNDING,
@@ -159,32 +224,32 @@ def jalankan() -> dict[str, Any]:
                 "galat": galat_ekor,
             },
         },
-        "kunci_atas_funding": sorted(funding.keys())
-        if isinstance(funding, dict)
-        else None,
-        "kunci_atas_kehidupan": sorted(kehidupan.keys())
-        if isinstance(kehidupan, dict)
-        else None,
-        "kunci_atas_ekor": sorted(ekor.keys()) if isinstance(ekor, dict) else None,
-        "nama_kandidat_funding": sorted(kandidat_funding),
-        "nama_kandidat_kehidupan": sorted(kandidat_kehidupan),
-        "nama_kandidat_ekor": sorted(kandidat_ekor),
-        "cacah_kandidat_funding": {
-            n: len(v) for n, v in sorted(kandidat_funding.items())
+        "jalur_funding": {
+            j: {"bentuk": i["bentuk"], "cacah_unik": len(set(i["nama"]))}
+            for j, i in sorted(temuan_funding.items())
+        },
+        "jalur_kehidupan": {
+            j: {"bentuk": i["bentuk"], "cacah_unik": len(set(i["nama"]))}
+            for j, i in sorted(temuan_kehidupan.items())
+        },
+        "jalur_ekor": {
+            j: {"bentuk": i["bentuk"], "cacah_unik": len(set(i["nama"]))}
+            for j, i in sorted(temuan_ekor.items())
         },
         "kanan_absen": kanan_absen,
         "kanan_nama": None if kanan_absen else "kehidupan.simbol_diukur",
         "kanan_cacah": len(kanan),
         "kanan_daftar": sorted(kanan)[:BATAS_DAFTAR],
-        "cacah_simbol_kohort_funding": cacah(funding, "cacah_simbol_kohort"),
-        "cacah_simbol_kohort_kehidupan": cacah(kehidupan, "cacah_simbol_kohort"),
-        "cacah_simbol_kohort_ekor": cacah(ekor, "cacah_simbol_kohort"),
-        "sumber_kohort_kehidupan": cacah(kehidupan, "sumber_kohort"),
-        "sumber_kohort_ekor": cacah(ekor, "sumber_kohort"),
-        "adu_funding_lawan_kehidupan": aduan,
+        "cacah_simbol_kohort_funding": ambil(funding, "cacah_simbol_kohort"),
+        "cacah_simbol_kohort_kehidupan": ambil(kehidupan, "cacah_simbol_kohort"),
+        "cacah_simbol_kohort_ekor": ambil(ekor, "cacah_simbol_kohort"),
+        "sumber_kohort_kehidupan": ambil(kehidupan, "sumber_kohort"),
+        "sumber_kohort_ekor": ambil(ekor, "sumber_kohort"),
+        "versi_funding": ambil(funding, "versi_funding"),
+        "adu_funding_lawan_kehidupan": aduan_funding,
         "adu_ekor_lawan_kehidupan": aduan_ekor,
-        "nama_yang_identik": cocok_penuh,
-        "ada_yang_identik": bool(cocok_penuh),
+        "jalur_yang_identik": identik,
+        "ada_yang_identik": bool(identik),
         "catatan_bukan_bukti": (
             "laporan ini membaca daftar anggota yang sudah tertulis; ia TIDAK "
             "mengunduh apa pun, TIDAK menjatuhkan simbol-bulan, dan TIDAK "
@@ -193,14 +258,17 @@ def jalankan() -> dict[str, Any]:
         "catatan_penggugur": (
             "galat != null pada sumber mana pun berarti aduan atas sumber itu "
             "TIDAK terukur dan DILARANG dibaca sebagai perbedaan; kanan_absen "
-            "true berarti tidak ada aduan sama sekali; nama_kandidat kosong "
-            "berarti daftar anggota tidak tersimpan di puncak dokumen dan "
-            "harus dicari di tempat lain, bukan disimpulkan"
+            "true berarti tidak ada aduan sama sekali; jalur_funding kosong "
+            "berarti penelusuran sedalam kedalaman_telusur tidak menemukan "
+            "daftar nama, sehingga adu TETAP BELUM TERUKUR dan DILARANG "
+            "dibaca sebagai bukti perbedaan maupun kesamaan"
         ),
         "catatan_tafsir": (
             "himpunan_identik hanya menyatakan bahwa DAFTAR NAMA-nya sama. Ia "
             "TIDAK membuktikan bahwa kedua laporan mengukur hal yang sama, dan "
-            "TIDAK membuat keduanya menjadi dua saksi bebas"
+            "TIDAK membuat keduanya menjadi dua saksi bebas. Kesamaan yang "
+            "lahir karena satu laporan MEMBACA laporan lain sebagai sumber "
+            "kohort adalah kesamaan turunan, bukan kesaksian kedua"
         ),
     }
     return laporan
@@ -212,13 +280,11 @@ def main() -> int:
     with open(KELUARAN, "w", encoding="utf-8") as f:
         json.dump(laporan, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
-    galat = [
-        nama
-        for nama, isi in laporan["sumber"].items()
-        if isi["galat"] is not None
-    ]
-    print(f"adu_kohort v{VERSI}: kanan={laporan['kanan_cacah']} "
-          f"identik={laporan['nama_yang_identik']} galat={galat}")
+    print(
+        f"adu_kohort v{VERSI}: kanan={laporan['kanan_cacah']} "
+        f"jalur_funding={list(laporan['jalur_funding'])} "
+        f"identik={laporan['jalur_yang_identik']}"
+    )
     return 0
 
 

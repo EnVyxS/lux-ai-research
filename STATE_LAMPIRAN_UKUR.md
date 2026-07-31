@@ -1,47 +1,49 @@
-# STATE lampiran UKUR — bagian 3 dari STATE (v17, milik STATE v58)
+# STATE lampiran UKUR — bagian 3 dari STATE (v18, milik STATE v59)
 
 **Kedudukan berkas ini.** STATE dipecah tiga sejak v43 (KC-42). Pembagian berlaku:
 
 1. **`STATE.md`** — bagian 1: kepala, aturan 1–81, 83, 84, 85, 86 (a) dan (b), **87**;
-   KC-1..**KC-55**.
-2. **`STATE_LAMPIRAN_EKOR.md`** v17 (blob **`29981b68314264f7897408f31b08bad91e32d4d8`**)
+   KC-1..**KC-55** resmi, **KC-56 diusulkan**.
+2. **`STATE_LAMPIRAN_EKOR.md`** v18 (blob **`217beaeebd367309ea1a4a4d5ea3234887788b2b`**)
    — bagian 2: papan skor, ADR, catatan kejujuran.
-3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v17) — bagian 3: pengukuran, modul,
+3. **`STATE_LAMPIRAN_UKUR.md`** (berkas ini, v18) — bagian 3: pengukuran, modul,
    workflow, uji, API, hipotesis, koreksi bernomor.
 4. `STATE_LAMPIRAN_ADR.md` (blob `a02ef271`) dan **`PROMPT_KELANJUTAN.md`** (blob
    `35beed44`) — **arsip; BUKAN sumber** (ADR-A018 kep. 9).
 
-Dasar v17: UKUR v16 (blob **`510addd24bdd7dc04205b622fdda252e69c284f2`**, commit
-**`9b01c06ec5f2a58e0c083f4a924515c92475356b`**), dibaca UTUH pada giliran yang sama
+Dasar v18: UKUR v17 (blob **`94be0d2863a1a0972311cec9fd8ecb06d5720261`**, commit
+**`72fe177c352f94f340574d0a0eaf0291a6408fda`**), dibaca UTUH pada giliran yang sama
 sebelum berkas ini ditulis (aturan 52, pencegahan KC-43).
 
-**Apa yang v17 bawa, disebut di muka:** v16 mengubah lubang tak dikenal dari angka
-menjadi tiga baris bernama. **v17 membawa angka yang membatalkan gambaran yang baru
-saja tersusun itu: `bulan_per_simbol["BNXUSDT"] = 51.`** Bukan 48, bukan 50 — **51**,
-lebih besar daripada rentang kalender klines simbol itu sendiri. Ia juga membawa
-**pembacaan utuh `gerbang_1m.py`** (utang ukur 18 LUNAS) yang menutup satu jalan riset
-sekaligus: modul itu **tidak berkeluaran**.
+**Apa yang v18 bawa, disebut di muka.** v17 membawa angka **51** yang membatalkan
+gambaran yang baru saja tersusun. **v18 membawa sesuatu yang lebih tajam: sebuah medan
+yang selama satu giliran penuh hampir dibaca salah, dan yang menyelamatkannya bukan
+kepandaian melainkan memeriksa simbol kedua.** `cacah_bulan` pada
+`reports/semesta_rentang.json` **bukan** bentangan kalender — dan bila hanya BNXUSDT
+yang diperiksa (51 = 51), kesimpulan sebaliknya akan lahir dan terdengar meyakinkan.
+v18 juga membawa **pencabutan SEBAGIAN** sebuah larangan, **Koreksi 15**, dan
+**pengakuan bahwa utang ukur 20 tidak terbayar** — hanya dipertajam.
 
-## KESERASIAN VERSI — PULIH PENUH pada v58 / v17 / v17
+## KESERASIAN VERSI — PULIH PENUH pada v59 / v18 / v18
 
-- `STATE.md` **v58** — blob **`986b138f400bfcd1fcd9f3592f50bef1b12f867c`**, commit
-  **`839a0f17b558a6359c9746944c70bcbf9c33e61e`**.
-- `STATE_LAMPIRAN_EKOR.md` **v17** — blob **`29981b68314264f7897408f31b08bad91e32d4d8`**,
-  commit **`c0877746c3193d1a7ae708d2015d9d1093452627`**.
-- `STATE_LAMPIRAN_UKUR.md` **v17** — berkas ini.
+- `STATE.md` **v59** — blob **`8f5bc472b81865bdabcb5be7c16bbdbac6505ec1`**, commit
+  **`05f6f72e3bde9dd634ad6494eca0bc397bc0c7f1`**.
+- `STATE_LAMPIRAN_EKOR.md` **v18** — blob **`217beaeebd367309ea1a4a4d5ea3234887788b2b`**,
+  commit **`bb565f4cb2bc0ef8d7b2c72ece8f835c74613422`**.
+- `STATE_LAMPIRAN_UKUR.md` **v18** — berkas ini.
 
-Keserasian **PECAH** begitu STATE v58 naik (v58/v16/v16 lalu v58/v17/v16) dan
-**dipulihkan oleh berkas ini**. Ketertinggalan yang dicatat STATE v58 dan EKOR v17 —
-bahwa berkas ini masih berkepala "milik STATE v57" dan **tidak memuat** R-316, papan
-skor **321**, KC-55, usulan aturan 89, kesalahan dokumen butir 16, angka **51** dan
-**6**, temuan `gerbang_1m.py` pustaka murni, **Koreksi 14**, maupun aturan 38
-ke-57..ke-59 — **LUNAS oleh berkas ini**. **Satu berkas per push tetap MENGIKAT**
-(KC-42, KC-43).
+Keserasian **PECAH** begitu STATE v59 naik (v59/v17/v17 lalu v59/v18/v17) dan
+**dipulihkan oleh berkas ini**. Ketertinggalan yang dicatat STATE v59 dan EKOR v18 —
+bahwa berkas ini masih berkepala "milik STATE v58" dan **tidak memuat** pembacaan
+`semesta_rentang.json`, definisi terukur `cacah_bulan`, BNXUSDT kontinu **51**, TLMUSDT
+kontinu **60**, **Koreksi 15**, usulan **KC-56**, kesalahan dokumen butir **17**, status
+baru H-A023, maupun aturan 38 ke-60..ke-62 — **LUNAS oleh berkas ini**. **Satu berkas
+per push tetap MENGIKAT** (KC-42, KC-43).
 
 **Tentang push berkas ini:** ia di akar repo sehingga menyalakan `ci.yml`. Tidak satu
 pun `tests/**` berubah, jadi cacah uji tetap **1377** — ramalan **deterministik**,
 **MUDAH**, TIDAK masuk papan skor, TIDAK menambah beruntun aturan 57. **Laporannya
-WAJIB dibaca sebelum push akar berikutnya** (aturan 38 ke-60).
+WAJIB dibaca sebelum push akar berikutnya** (aturan 38 **ke-63**).
 
 **Angka yang TIDAK berubah dari v44/v45/v6/v7** (tidak diulang): taksonomi 9 kelas,
 bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v44 (blob
@@ -49,8 +51,8 @@ bulan ABSEN 11, H-A013..H-A015, terhenti, SETTLED. Rinciannya di v44 (blob
 
 ## KOREKSI KC-41 — BACA SEBELUM MENGUTIP BERKAS INI
 
-Keempat belas koreksi di bawah **tetap dicantumkan** karena semuanya soal dokumen kami
-sendiri, bukan soal data — menghapusnya berarti menghapus jejak cacat.
+Kelima belas koreksi **tetap dicantumkan** karena semuanya soal dokumen kami sendiri,
+bukan soal data — menghapusnya berarti menghapus jejak cacat.
 
 **Koreksi 1 (v5).** UKUR v5 menulis `lubang_awal.yml` ber-`paths` tiga entri. **SALAH**
 — berkas asli (blob `3134bc9f6f91c83ed39ff8424506ac253317edee`) memuat **SATU** entri.
@@ -109,32 +111,57 @@ bentuk halus: mengumumkan sebagai baru apa yang sudah tertulis di dokumen sendir
 "lubang di luar penyebut = bulan sebelum simbol lahir" **DICABUT**: dari tiga lubang
 BNXUSDT, hanya **2022-04** yang mendahului `bulan_klines_pertama`; **2022-06 dan
 2022-08 duduk DI DALAM** rentang klines. **KC-54 kejadian KEDUA.**
+**[v18] Pencabutan itu kini punya penyangkalan TERUKUR, bukan sekadar penalaran:**
+ketiga bulan itu **ADA** pada `semesta_rentang.json`, di dalam rentang kontinu
+2022-04..2026-06.
 
-### **Koreksi 14 [BARU v17] — `bulan_per_simbol` dibaca sebagai DAFTAR, isinya CACAH**
-
-Praregistrasi R-316 (jurnal 146 §5) memilih `reports/semesta_bulan_1m.json` sebagai
-bahan dan menulis butir 1 yang menanyakan **kehadiran dua bulan bernama**. Pembacaan
-utuh membuktikan berkas itu **tidak memuat satu nama bulan pun**, untuk simbol mana
-pun: nilai `bulan_per_simbol` adalah **satu bilangan bulat per simbol**.
-
-**KC-54 kejadian KETIGA — tiga kejadian dalam tiga giliran akar berturut.**
+**Koreksi 14 [v17] — `bulan_per_simbol` dibaca sebagai DAFTAR, isinya CACAH.**
+Praregistrasi R-316 menanyakan kehadiran dua bulan **bernama**; berkasnya **tidak
+memuat satu nama bulan pun**. **KC-54 kejadian KETIGA.**
 
 | kejadian | medan | dibaca sebagai | sebenarnya |
 | --- | --- | --- | --- |
 | 1 (Koreksi 11 butir 2) | label gugus `2022-05` / `2024-05` | bulan lubang tengah | `bulan_klines_pertama` BNXUSDT |
 | 2 (Koreksi 13) | `lubang_tak_dikenal` | posisi **waktu** lubang | kegagalan pasangan terhadap penyebut 19.586 |
-| **3 (Koreksi 14)** | **`bulan_per_simbol`** | **daftar bulan** | **cacah bulan** |
+| 3 (Koreksi 14) | `bulan_per_simbol` | daftar bulan | **cacah** bulan |
 
-**Yang menyelamatkan giliran itu bukan kepandaian melainkan syarat gugur (c) yang
-ditulis sebelum berkas dibuka.** Tanpa syarat itu, butir 1 akan disulap menjadi SEPARUH.
-**Konsekuensi mengikat:** bila definisi sebuah medan **tidak dapat ditemukan** sebelum
-pita dikunci, ramalan atas medan itu **WAJIB** disertai syarat gugur tersurat.
+### **Koreksi 15 [BARU v18] — `cacah_bulan` nyaris dibaca sebagai BENTANGAN KALENDER**
 
-**Bacaan jujur atas Koreksi 4, 9, 10, 11, 12, 13, dan 14 bersama-sama:** cacat yang
+`reports/semesta_rentang.json` memberi tiap simbol tiga medan: `bulan_pertama`,
+`bulan_terakhir`, `cacah_bulan`. **Definisi `cacah_bulan` tidak tertulis di berkas itu,
+dan tidak ada modul yang diketahui menulisnya** (utang ukur 22 baru).
+
+Untuk **BNXUSDT** angkanya cocok sempurna dengan bentangan: 2022-04..2026-06 →
+(2026−2022)×12 = 48; +(6−4) = 50; +1 = **51**, dan `cacah_bulan` juga **51**. Bila
+pemeriksaan berhenti di situ, kesimpulan "`cacah_bulan` = bentangan kalender" akan
+ditulis, terdengar masuk akal, dan **salah**.
+
+**Dua tandingan hitung tangan membatalkannya:**
+
+| simbol | bentangan (tangan) | `cacah_bulan` | selisih |
+| --- | --- | --- | --- |
+| BNXUSDTSETTLED | 2022-04..2023-02 → **11** | **6** | **5** |
+| TLMUSDTSETTLED | 2022-01..2023-03 → **15** | **9** | **6** |
+
+**Maka `cacah_bulan` mencacah bulan yang BENAR-BENAR ADA, bukan panjang rentang.**
+Konsekuensinya justru menguatkan: karena medan ini **mampu** menunjukkan selisih, maka
+selisih **nol** pada BNXUSDT adalah **pengukuran, bukan ketiadaan alat** — penerapan
+aturan 50 dengan **kendali positif tertulis**.
+
+**Beda dengan Koreksi 11, 13, dan 14:** ketiganya cacat **nama medan** (KC-54). Koreksi
+15 bukan itu — nama `cacah_bulan` sudah jujur menyebut dirinya "cacah". Yang hampir
+menipu adalah **kemiripan angka pada satu simbol**. Karena itu ia **TIDAK** dihitung
+sebagai KC-54 kejadian keempat, dan pencatatan itu disengaja agar cacah kejadian KC-54
+tidak digelembungkan demi kesan pola.
+
+**Kelas cacatnya:** kerabat **KC-47** (satu simbol menyamar sebagai bukti umum).
+**Penangkal yang bekerja:** memeriksa simbol kedua **sebelum** menulis definisi.
+
+**Bacaan jujur atas Koreksi 4, 9, 10, 11, 12, 13, 14, dan 15 bersama-sama:** cacat yang
 bertahan paling lama di riset ini bukan salah hitung, melainkan **tafsir yang terdengar
-masuk akal atas angka yang benar** — dan, sejak v15, **label yang terdengar masuk akal
-atas medan yang benar**. Tiga kejadian terakhir satu keluarga, dan keluarga itu bernama
-**KC-54**.
+masuk akal atas angka yang benar**; sejak v15 bertambah **label yang terdengar masuk
+akal atas medan yang benar**; dan sejak v18 bertambah lagi **kecocokan angka pada satu
+contoh yang terdengar seperti definisi**.
 
 ## BATAS KEKUATAN ATURAN 52 — DIPERSEMPIT, BUKAN DICABUT
 
@@ -143,19 +170,107 @@ atas medan yang benar**. Tiga kejadian terakhir satu keluarga, dan keluarga itu 
 
 **[v16] Bukti ketiga:** bacaan `lubang_tak_dikenal` bertahan melewati **empat** berkas
 akar dan runtuh dalam **satu** pembacaan laporan.
-**[v17] Bukti keempat, bentuk baru:** R-316 butir 1 **tidak dapat diadili sama sekali**,
-sebab bahannya tidak memuat jenis informasi yang diramalkan. **DILARANG** menulis bahwa
-aturan 52 menjaga mutu penalaran **atas dokumen**; yang dijaganya **kesetiaan salinan**.
+**[v17] Bukti keempat:** R-316 butir 1 tidak dapat diadili sama sekali.
+**[v18] Bukti kelima, dan yang paling telanjang:** kalimat "Tujuh belas pembacaan
+berturut (ke-42..ke-57)" lolos dari **dua puluh empat** pembacaan ulang berturut,
+padahal 57 − 42 = 15; 15 + 1 = **enam belas**. Angkanya dikutip benar; yang salah
+aritmetika di antaranya. **Yang menangkapnya bukan pembacaan melainkan aritmetika
+tangan yang dipaksakan atas angka yang sudah ada di kalimat itu sendiri.**
+**DILARANG** menulis bahwa aturan 52 menjaga mutu penalaran **atas dokumen**; yang
+dijaganya **kesetiaan salinan**.
 
-## [BARU v17] SEMESTA BULAN 1M — angka 51 dan apa yang TIDAK dikatakannya
+**Penangkal wajib sejak v59:** setiap panjang deret ditulis bersama aritmetika
+`akhir − awal + 1` secara terbuka. Diterapkan di seluruh berkas ini.
+
+## [BARU v18] SEMESTA RENTANG — bahan baru, terbaca 95%
+
+Sumber: **`reports/semesta_rentang.json`**, blob
+**`8d5bd06ca4073dac8a8ef7841d81824427cc8e63`**, **110.662 B**, dibaca pada ref
+**`24b53ba5d1bab273c0ac457c3ee8f65b94915ecb`**.
+
+**BATAS ALAT YANG WAJIB DISEBUT SETIAP KALI BERKAS INI DIKUTIP.** Verbatim:
+`This result has been truncated (showing 95% of full).` Potongan hilang di **tengah**,
+kira-kira abjad **P–R** (antara `PLTRUSDT` dan `ROBOUSDT`). **Cacah entri `rentang`
+DILARANG diklaim terukur** dan tidak dihitung (aturan 66).
+
+**Struktur, disalin apa adanya sebelum ditafsirkan:** satu kunci akar `rentang`; tiap
+simbol → tiga medan `bulan_pertama`, `bulan_terakhir`, `cacah_bulan`. Entri terakhir
+yang terbaca: `"龙虾USDT"`.
+
+**TANPA `waktu_utc`. TANPA medan sidik apa pun.** Ketiadaan itu **terukur**, sebab ekor
+berkas terbaca utuh — bukan dugaan dari bagian yang hilang.
+
+| simbol | `bulan_pertama` | `bulan_terakhir` | `cacah_bulan` | bentangan (TURUNAN, tangan) | lubang |
+| --- | --- | --- | --- | --- | --- |
+| **BNXUSDT** | **2022-04** | **2026-06** | **51** | **51** | **0** |
+| BNXUSDTSETTLED | 2022-04 | 2023-02 | **6** | 11 | **5** |
+| TLMUSDT | 2021-07 | 2026-06 | **60** | 60 | **0** |
+| TLMUSDTSETTLED | 2022-01 | 2023-03 | **9** | 15 | **6** |
+| MATICUSDT | 2020-10 | 2024-09 | 48 | 48 | 0 |
+| BTCSTUSDT | 2021-03 | 2026-06 | 64 | 64 | 0 |
+| SXPUSDT | 2020-07 | 2026-05 | 71 | 71 | 0 |
+| FTTUSDT | 2022-04 | 2026-06 | 51 | 51 | 0 |
+| 1000LUNCBUSD | 2022-05 | 2023-12 | 20 | 20 | 0 |
+| ICPUSDT_SETTLED | 2022-01 | 2022-09 | 9 | 9 | 0 |
+
+**Tiga temuan terukur:**
+
+1. **`cacah_bulan` bukan bentangan** (Koreksi 15) — dua tandingan SETTLED.
+2. **BNXUSDT KONTINU, nol lubang.** Aritmetika tangan: (2026−2022)×12 = 48; +(6−4) =
+   50; +1 = **51** = `cacah_bulan`. Maka **2022-04, 2022-06, dan 2022-08 SEMUANYA ADA**
+   pada semesta rentang.
+3. **TLMUSDT KONTINU 60 bulan**, sehingga kekosongan **2023-03** **bukan** absennya
+   bulan melainkan **kekosongan isi**. Utang ukur 7 **menyempit, tidak lunas**.
+
+**Kecocokan silang dengan semesta 1m:** `bulan_per_simbol` = `cacah_bulan` pada **dua**
+simbol — BNXUSDT **51 = 51**, BNXUSDTSETTLED **6 = 6**. **PETUNJUK, BUKAN BUKTI
+identitas medan** (KC-23, KC-52 tetap terbuka). Dua titik bukan sebaran, dan salah satu
+berkas tak bertanggal.
+
+### Yang DILARANG disimpulkan dari berkas ini
+
+1. **DILARANG** menyebutnya mengukur "semesta 1m"; hubungannya dengan
+   `semesta_bulan_1m.json` **belum diukur**.
+2. **DILARANG** menyimpulkan hanya simbol SETTLED yang berlubang — empat simbol
+   dihitung tangan, tidak ada pemindaian, dan 5% berkas tak terbaca (KC-47).
+3. **DILARANG** mengklaim berapa banyak simbol berlubang.
+4. **DILARANG** membandingkan angkanya secara keserempakan dengan laporan lain — ia
+   **tak bertanggal** (**KC-56**).
+5. **DILARANG** memindahkan sifat `cacah_bulan` ke `bulan_per_simbol` atau sebaliknya.
+6. **DILARANG** menyatakan gerbang menjatuhkan bulan mana pun.
+7. **DILARANG** menyamakan "ada di semesta rentang" dengan "ada di penyebut 19.586".
+
+### PENCABUTAN SEBAGIAN — larangan "51 mencakup 2022-04"
+
+UKUR v17 melarang menyatakan bahwa **51 mencakup 2022-04** dengan alasan "belum
+diukur". **Larangan itu kini DICABUT SEBAGIAN:**
+
+- **DICABUT** untuk medan **`cacah_bulan` pada `semesta_rentang.json`**: di sana 51
+  terbukti kontinu 2022-04..2026-06, sehingga **2022-04 termasuk**. Ini **terukur**.
+- **TETAP BERLAKU PENUH** untuk medan **`bulan_per_simbol` pada
+  `semesta_bulan_1m.json`**: berkas itu **tidak memuat satu nama bulan pun**, sehingga
+  cakupan 51-nya **tidak dapat diperiksa** dan **DILARANG diklaim**.
+
+**Kedua angka kebetulan sama-sama 51. Kesamaan itu DILARANG dipakai untuk memindahkan
+pencabutan dari medan pertama ke medan kedua.**
+
+### [BARU v18] KC-56 [DIUSULKAN] — laporan tak bertanggal dianggap serempak
+
+Bila sebuah laporan tidak memuat `waktu_utc`, jaraknya terhadap laporan lain **tidak
+diketahui — bukan nol**. **Angka kasus asal (aturan 42):** `semesta_rentang.json`
+**tanpa** `waktu_utc`; `semesta_bulan_1m.json` **2026-07-28T09:44:48Z`**;
+`silang_funding.json` **2026-07-29T08:17:55Z** — dua yang bertanggal saja berjarak
+hampir **23 jam**. **Penangkal:** cari `waktu_utc` sebelum membandingkan; bila tidak
+ada, tulis **"tak bertanggal"** di sebelah setiap angka yang dikutip. Baru **satu**
+kejadian — ADR-A019 kep. 3 melarang meresmikannya. **KC berikutnya KC-57.**
+
+## SEMESTA BULAN 1M — angka 51 dan apa yang TIDAK dikatakannya (dari v17)
 
 Sumber: **`reports/semesta_bulan_1m.json`**, blob
 **`a1a6d3f0f13dd7100a91853cadfcaa9a5620fee3`**, **18.884 B**, `waktu_utc`
-**2026-07-28T09:44:48Z**. **TERBACA UTUH, tanpa pemotongan alat.**
-
-**Struktur, disalin apa adanya:** dua kunci tingkat atas — `bulan_per_simbol` (peta nama
-simbol → **satu bilangan bulat**) dan `waktu_utc`. Tidak ada kunci lain, **tidak ada nama
-bulan**. **Cacah entri peta TIDAK dihitung tangan; DILARANG dikutip terukur** (aturan 66).
+**2026-07-28T09:44:48Z**. **TERBACA UTUH.** Dua kunci tingkat atas: `bulan_per_simbol`
+(peta simbol → **satu bilangan bulat**) dan `waktu_utc`. **Tidak ada nama bulan.**
+Cacah entri peta **TIDAK dihitung tangan; DILARANG dikutip terukur** (aturan 66).
 
 | medan | nilai |
 | --- | --- |
@@ -172,20 +287,23 @@ bulan**. **Cacah entri peta TIDAK dihitung tangan; DILARANG dikutip terukur** (a
 
 **51 − 48 = 3**, dan `cacah_lubang_tak_dikenal` juga **3**.
 
-**CATATAN KESERAMPAKAN yang WAJIB disebut setiap kali kedua angka dibandingkan:** bahan
-ini lahir **2026-07-28T09:44:48Z**, `silang_funding.json` lahir **2026-07-29T08:17:55Z**
-— selisih hampir **23 jam**. **Keduanya bukan pengukuran serempak.**
+**[v18] Sumber KEEMPAT kini setuju dengan 51** (`cacah_bulan`, tak bertanggal) — tetapi
+**kesepakatan dua sumber BUKAN pendamaian**: keduanya mengukur himpunan yang belum
+terbukti sama dengan penyebut 19.586, dan **48 tetap tidak terdamaikan**.
+
+**CATATAN KESERAMPAKAN yang WAJIB disebut:** semesta 1m lahir 2026-07-28T09:44:48Z,
+`silang_funding.json` lahir 2026-07-29T08:17:55Z — selisih hampir **23 jam**; semesta
+rentang **tak bertanggal**. **Ketiganya bukan pengukuran serempak.**
 
 ### Yang DILARANG disimpulkan
 
 1. **DILARANG** menyatakan tiga bulan selisih itu **adalah** 2022-04 / 2022-06 /
-   2022-08. **Kesamaan cacah bukan kesamaan identitas** — berbentuk sama persis dengan
-   bacaan yang dicabut Koreksi 13.
-2. **DILARANG** menyatakan gerbang menjatuhkan bulan mana pun (lihat bagian berikut).
-3. **DILARANG** menyatakan 51 mencakup 2022-04. Belum diukur.
-4. **DILARANG** menyamakan "tidak ada di penyebut" dengan "dijatuhkan gerbang".
-5. **Aturan 36 TIDAK diberi kasus keempat** oleh kesamaan 3 = 3: dua laporan berjarak
-   23 jam yang belum terbukti mengukur himpunan sama. Memasukkannya = KC-38.
+   2022-08. **Kesamaan cacah bukan kesamaan identitas.**
+2. **DILARANG** menyatakan gerbang menjatuhkan bulan mana pun.
+3. **DILARANG** menyamakan "tidak ada di penyebut" dengan "dijatuhkan gerbang".
+4. **Aturan 36 TIDAK diberi kasus keempat** oleh kesamaan 3 = 3, **maupun** oleh
+   kecocokan 6 = 6 dan 51 = 51: satu berkas tak bertanggal, dua titik bukan sebaran.
+   Memasukkannya = KC-38.
 
 ### Adjudikasi R-316 — FINAL
 
@@ -196,64 +314,56 @@ ini lahir **2026-07-28T09:44:48Z**, `silang_funding.json` lahir **2026-07-29T08:
 | 3 [TURUNAN] | cacah **< 50** | **51** | **MELESET** (pita cacat → KC-55) |
 | 4 (MUDAH) | berkas terbaca utuh | terbaca utuh | tidak masuk lajur |
 
-Papan skor **321**, disahkan di EKOR v17. **Kemenangan harfiah butir 3 DITOLAK sendiri**
-di jurnal 147; penolakan itu **FINAL**.
+Papan skor **321**, disahkan di EKOR v17, **tidak bergerak di v18** — tidak ada
+adjudikasi, sebab bahan dibuka tanpa praregistrasi (aturan 29).
 
-## [BARU v17] `gerbang_1m.py` — DIBACA UTUH, utang ukur 18 LUNAS
+## `gerbang_1m.py` — DIBACA UTUH, utang ukur 18 LUNAS (dari v17)
 
 Blob **`c8cc54c84a57173ef2e426c317d6ac50734e9b4a`**. Modul menyatakan dirinya penerapan
 **ADR-A004 §2**.
 
-**Enam klausa `KLAUSA`:** `deret_tidak_kosong` (baris > 0) · `tanpa_duplikat`
-(duplikat == 0) · `tanpa_menit_hilang` (`menit_hilang_dalam_rentang` == 0) ·
-`jarak_60_detik` · `selaras_menit` · `satuan_milidetik`.
+**Enam klausa `KLAUSA`:** `deret_tidak_kosong` · `tanpa_duplikat` ·
+`tanpa_menit_hilang` · `jarak_60_detik` · `selaras_menit` · `satuan_milidetik`.
 `nilai_deret` → `lolos = not pelanggaran` — **satu klausa gagal cukup menjatuhkan**.
-
-Tetapan: `MS_BAWAH=1_000_000_000_000`, `MS_ATAS=100_000_000_000_000`.
-`sidik_kode()` mencap **dua** berkas: `gerbang_1m.py` + `resample.py` (`66a4b177`).
+Tetapan `MS_BAWAH=1_000_000_000_000`, `MS_ATAS=100_000_000_000_000`. `sidik_kode()`
+mencap **dua** berkas: `gerbang_1m.py` + `resample.py` (`66a4b177`).
 
 Rumus yang wajib dikutip persis:
 `rentang = (unik[-1] - unik[0]) // MS_MENIT + 1`;
 `menit_hilang_dalam_rentang = rentang - len(unik)`
 — dihitung **dari rentang yang ada di berkas**, **bukan** dari panjang bulan kalender.
 Rumus itu **DISALIN**, bukan diimpor dari `diagnosa_kc6.celah_menit` (aturan 10);
-penjaganya `tests/test_gerbang_1m.py`. Docstring **mengaku nilainya dapat negatif** dan
-sengaja tidak ditambal.
+penjaganya `tests/test_gerbang_1m.py`. Docstring **mengaku nilainya dapat negatif**.
 
 Fungsi lain: `persen` · `satuan_stempel_dari_besaran` · `ukur_deret` · `nilai_klausa` ·
-`ringkas_gerbang` (medan `simbol_bulan_dinilai`/`lolos`/`gagal`, `persen_lolos`,
-`pelanggaran_per_klausa`, `baris_diperiksa`, `slot_diperiksa`, `contoh_gagal` maks 10).
+`ringkas_gerbang`.
 
 **TEMUAN STRUKTURAL YANG MENGIKAT.** Modul ini **PUSTAKA MURNI** — tanpa `KELUARAN`,
-tanpa `jalankan`/`main`, **tidak menulis laporan apa pun**, tidak menyentuh jaringan
-(aturan 13). Maka:
+tanpa `jalankan`/`main`, **tidak menulis laporan apa pun**.
 
 > **Pertanyaan poros tentang gerbang TIDAK dapat dijawab dari keluaran gerbang, sebab
 > tidak ada keluaran.** Ia harus lewat laporan **modul pemanggil**.
 
-**Tidak ada satu medan pun di repo yang saat ini menamai klausa pelanggaran per
-simbol-bulan.** Menyebut salah satu dari enam klausa sebagai penyebab hilangnya sebuah
-bulan adalah **KC-54 yang diulang**.
+**[v18] Catatan yang menguat:** karena `semesta_rentang.json` **tanpa sidik kode**, ia
+**tidak dapat** dipastikan sebagai keluaran modul pemanggil gerbang — atau modul mana
+pun. **Tidak ada satu medan pun di repo yang menamai klausa pelanggaran per
+simbol-bulan.**
 
-**Catatan pembeda:** `gerbang_1m.py` **tidak memuat praregistrasi R apa pun** di
-docstring-nya — berbeda dari `lubang_tengah.py` yang memuat enam. Aturan 86 (b) karena
-itu tidak menghasilkan apa-apa untuk poros ini.
-
-## SILANG FUNDING — tiga lubang tak dikenal (tidak berubah dari v16)
+## SILANG FUNDING — tiga lubang tak dikenal (tidak berubah)
 
 Sumber: **`reports/silang_funding.json`**, blob
 **`b61fe8b3bcabbfce435dd5e5f78fc367f6bef617`**, `waktu_utc` **2026-07-29T08:17:55Z**.
 
-**BATAS ALAT YANG WAJIB DISEBUT SETIAP KALI LAPORAN INI DIKUTIP.** Verbatim:
+**BATAS ALAT YANG WAJIB DISEBUT SETIAP KALI.** Verbatim:
 `This result has been truncated (showing 54% of full).` Bagian tengah larik
 **`baris_mati`** TIDAK TERLIHAT → **cacah total `baris_mati` DILARANG diklaim terukur**
-(utang verifikasi 39, utang ukur 17). Medan agregat di bawah terbaca penuh.
+(utang verifikasi 39, utang ukur 17).
 
-| # | simbol | bulan | di dalam rentang klines? |
-| --- | --- | --- | --- |
-| 1 | **BNXUSDT** | **2022-04** | **TIDAK** |
-| 2 | **BNXUSDT** | **2022-06** | **YA** |
-| 3 | **BNXUSDT** | **2022-08** | **YA** |
+| # | simbol | bulan | di dalam rentang klines? | **[v18] ada di semesta rentang?** |
+| --- | --- | --- | --- | --- |
+| 1 | **BNXUSDT** | **2022-04** | **TIDAK** | **YA** |
+| 2 | **BNXUSDT** | **2022-06** | **YA** | **YA** |
+| 3 | **BNXUSDT** | **2022-08** | **YA** | **YA** |
 
 `bulan_klines_pertama` **2022-05** · `bulan_klines_terakhir` **2026-06** ·
 `cacah_bulan_klines_simbol` **48**.
@@ -292,23 +402,20 @@ Sidik: `sidik_kode` **`8a9b859c09cd64e30e203e6f8dc53411b8e341c44f112805b3041e5d4
 
 ### Adjudikasi R-315 — FINAL, DILARANG DIADILI ULANG
 
-Butir 1 **TEPAT** (**1**, BNXUSDT) · butir 2 **MELESET** (**1 dari 3**) · butir 3 MUDAH,
-tidak diskor. **DILARANG ditulis ulang sebagai SEPARUH.** Syarat gugur (e) MENYALA.
+Butir 1 **TEPAT** (**1**, BNXUSDT) · butir 2 **MELESET** (**1 dari 3**) · butir 3 MUDAH.
+**DILARANG ditulis ulang sebagai SEPARUH.** Syarat gugur (e) MENYALA.
 
-## KC-18 — semesta kehidupan (dikonfirmasi ulang oleh R-307..R-316)
+## KC-18 — semesta kehidupan
 
 Atas **19.586** simbol-bulan lolos gerbang: **1.401 MATI** (7,153%), **98 SEPI**,
 **18.087 HIDUP**. Dari 1.401 MATI: 842 kehilangan funding, 559 tetap berfunding.
-`cacah_simbol_tanpa_hidup` **18**. `cacah_lain` = 0 pada kelima modul.
-18.087 + 98 = 18.185, + 1.401 = **19.586** ✅
+`cacah_simbol_tanpa_hidup` **18**. 18.087 + 98 = 18.185, + 1.401 = **19.586** ✅
 
 **Pembelahan [v9]:** **787** bulan PERTAMA + **18.799** bukan-pertama = 19.586 ✅
 **Pembelahan MATI [v10]:** 1.392 penuh + **9** tak penuh = 1.401 ✅
 **Pembelahan [v11]:** 18.799 − 1.401 = **17.398**; 17.284 penuh + **114** berdefisit ✅
-(114 = HIDUP 111 · SEPI 3 · MATI 0)
 **Pembelahan [v13]:** rilis parquet **19.598** = 19.586 lolos + **12** karantina;
-sebabnya terukur dari kode: `kehidupan_arsip.peta_parquet` **melewatkan baris
-`parquet_karantina`**.
+`kehidupan_arsip.peta_parquet` **melewatkan baris `parquet_karantina`**.
 
 **Pembelahan ketiga atas lubang funding:**
 
@@ -319,14 +426,14 @@ sebabnya terukur dari kode: `kehidupan_arsip.peta_parquet` **melewatkan baris
 | tengah | **6** | **6** | 0 |
 | **jumlah** | **880** | **877** | **3** |
 
-Seluruh selisih 3 di kelas **AWAL**, ketiganya BNXUSDT dan bernama.
+**[v18] PERINGATAN YANG MENGERAS.** **19.586** adalah penyebut **lolos gerbang**.
+Semesta 1m **bukan** himpunan yang sama, dan semesta rentang **juga belum terbukti**
+sama dengan keduanya. BNXUSDT: **51** (rentang, tak bertanggal) · **51** (1m) · **48**
+(penyebut). **Selisih untuk simbol lain BELUM DIUKUR dan DILARANG DITAKSIR.**
+**Yang belum diperiksa dan menjadi utang baru:** apakah setiap bulan penyebut BNXUSDT
+termuat di dalam semesta rentang (utang ukur 23).
 
-**[v17] PERINGATAN BARU atas seluruh bagian ini:** angka **19.586** adalah penyebut
-**lolos gerbang**. Semesta 1m **bukan** himpunan yang sama — BNXUSDT sendiri punya
-**51** bulan 1m lawan **48** di penyebut. **Berapa besar selisih itu untuk simbol lain
-BELUM DIUKUR dan DILARANG DITAKSIR.**
-
-## LUBANG TENGAH — POROS TUNTAS (tidak berubah)
+## LUBANG TENGAH — POROS TUNTAS
 
 Sumber: **`reports/lubang_tengah.json`**, blob
 **`39cd1caacedc4d49ba23c91c80f553bb9fb135a6`**, **11.014 B**, dibaca UTUH.
@@ -334,9 +441,8 @@ Sumber: **`reports/lubang_tengah.json`**, blob
 
 `cacah_lubang_tengah` **6** · `selisih_lubang_tengah` **0** · `cacah_lubang_ganda` /
 `cacah_kunci_ganda` **0** / **0** · `cacah_laporan_dibaca` **8** ·
-`cacah_per_simbol_funding` **787** · sebaran {HIDUP 0 · MATI **6** · SEPI 0 ·
-TAK_TERUKUR 0} · `h_a010_menang` true (5–0) · `h_a011_menang` true, `cacah_bulan` **6**,
-`cacah_hidup` **6**. Sidik
+`cacah_per_simbol_funding` **787** · sebaran {HIDUP 0 · MATI **6** · SEPI 0} ·
+`h_a010_menang` true (5–0) · `h_a011_menang` true. Sidik
 **`c9372bd763b86cfeb2adcf0a0c0c43dae8d9aa9a6508e9c32f7671d5ec7b3f4e`**.
 
 | # | simbol | bulan | status | byte_parquet | `cacah_lilin` |
@@ -348,12 +454,13 @@ TAK_TERUKUR 0} · `h_a010_menang` true (5–0) · `h_a011_menang` true, `cacah_b
 | 5 | **LITUSDT** | **2025-10** | MATI | 434.201 | 44.640 |
 | 6 | **LITUSDT** | **2025-11** | MATI | 389.479 | 43.200 |
 
-BTCSTUSDT rentetan **1**, tetangga 2021-12 → 2022-02, klines pertama **2021-03**, **64**
-bulan. LITUSDT rentetan **5**, tetangga 2025-06 → 2026-01, klines pertama **2021-02**,
-**64** bulan. **TIDAK SATU PUN berbulan `2022-05` atau `2024-05`.**
+BTCSTUSDT rentetan **1**, klines pertama **2021-03**, **64** bulan. LITUSDT rentetan
+**5**, klines pertama **2021-02**, **64** bulan. **TIDAK SATU PUN berbulan `2022-05`
+atau `2024-05`.**
 
-**H-A011** — LITUSDT 2026-01..2026-06 keenamnya HIDUP sesudah lima bulan MATI.
-Generalisasi **DILARANG** (KC-47); sebab **DILARANG**.
+**[v18] BTCSTUSDT terukur KONTIGU 64 bulan pada semesta rentang** (2021-03..2026-06 →
+bentangan 64 = `cacah_bulan` 64). **Keserian dengan tebing tetap BELUM diukur dan
+DILARANG diklaim.**
 
 **H-A010 MENANG 5–0:**
 
@@ -365,32 +472,32 @@ Generalisasi **DILARANG** (KC-47); sebab **DILARANG**.
 | QTUMUSDT | 2020-02 → 2020-03 | 77 | 1 |
 | TLMUSDT | 2021-07 → 2023-03 | 60 | 20 |
 
-**[v17] CATATAN SILANG YANG WAJIB DITAHAN, kini BERLIPAT.** Baris BNXUSDT pada tabel ini
-— `cacah_bulan_klines` **48**, rentang mulai **2022-05** — adalah medan yang **sama**
-yang: (a) di UKUR v15 berpindah menjadi nama poros "gugus 2022-05" (Koreksi 11 butir 2);
-(b) di v16 menutup jembatan 50 lawan 48; **(c) di v17 dibantah oleh angka 51 dari semesta
-1m.** Satu medan, **empat** pemakaian, **dua** di antaranya keliru sebelum diukur, dan
-yang keempat memperlihatkan medan itu **tidak pernah mengukur seluruh bulan simbolnya**.
+**[v18] CATATAN SILANG YANG WAJIB DITAHAN, kini BERLIPAT LIMA.** Baris BNXUSDT —
+`cacah_bulan_klines` **48**, mulai **2022-05** — adalah medan yang sama yang: (a) di v15
+berpindah menjadi nama poros "gugus 2022-05" (Koreksi 11); (b) di v16 menutup jembatan
+50 lawan 48; (c) di v17 dibantah oleh **51** dari semesta 1m; **(d) di v18 dibantah lagi
+oleh semesta rentang yang mulai 2022-04, bukan 2022-05.** Satu medan, lima pemakaian,
+dua di antaranya keliru sebelum diukur.
+**Perhatikan bulan mulanya:** semesta rentang **2022-04**, klines penyebut **2022-05**.
+**Selisih satu bulan itu terukur, dan sebabnya DILARANG diklaim.**
 
-Kendali: tiga baris **BTCUSDT** (2021-05, 2021-08, 2021-01) semuanya HIDUP dengan
-`funding_ada` true. Sumber: `reports/funding_semesta.json` +
-`reports/kehidupan_arsip_0..7.json`.
+Kendali: tiga baris **BTCUSDT** semuanya HIDUP dengan `funding_ada` true.
 
-**Uji H-A020 dan H-A021 MUSTAHIL** — bukan mahal, bukan tertunda, **tidak ada bahannya**.
+**Uji H-A020 dan H-A021 MUSTAHIL** — bukan mahal, **tidak ada bahannya**.
 
 ## VONIS `ukur_kolom` [v13] — dasar runtuhnya R-312
 
-Dari `kehidupan_arsip.py` (blob `318a5cb1`): **`cacah_lilin` = `n`** dari
+Dari `kehidupan_arsip.py` (`318a5cb1`): **`cacah_lilin` = `n`** dari
 `pq.ParquetFile(...).metadata.num_rows`; **`cacah_lilin_terbaca`** = baris yang KEDUA
-kolomnya (`volume`, `trades`) terurai; identitas paksa
+kolomnya terurai; identitas paksa
 `cacah_lilin = cacah_lilin_terbaca + cacah_baris_cacat`. **Bukan dua pengukuran bebas.**
-`cacah_berselisih` = 0 pada 19.586 memaksa **`cacah_baris_cacat` = 0 di seluruh semesta**.
+`cacah_berselisih` = 0 memaksa **`cacah_baris_cacat` = 0 di seluruh semesta**.
 
 ## ARAH SELISIH R-312 MUSTAHIL [v14, tetap]
 
-Docstring `selisih_lilin.py`: `selisih = cacah_lilin_terbaca − cacah_lilin`, dipilih agar
-POSITIF. Identitas `ukur_kolom` memaksa `cacah_lilin_terbaca` ≤ `cacah_lilin` pada setiap
-baris → **butir 2 R-312 tidak dapat dimenangkan secara struktural**.
+`selisih = cacah_lilin_terbaca − cacah_lilin`, dipilih agar POSITIF; identitas
+`ukur_kolom` memaksa `cacah_lilin_terbaca` ≤ `cacah_lilin` → **butir 2 R-312 tidak dapat
+dimenangkan secara struktural**.
 
 ## SISA DEFISIT [v11, tetap]
 
@@ -407,10 +514,12 @@ baris → **butir 2 R-312 tidak dapat dimenangkan secara struktural**.
 | `selisih_sisa` | **0** |
 
 - **Terbesar: TLMUSDT `2023-03`, HIDUP, 2.130 dari 44.640 lilin — 95,2% KOSONG.**
+  **[v18] Bulannya terukur ADA** pada semesta rentang (TLMUSDT kontinu 60);
+  **kekosongan itu soal ISI, bukan soal keberadaan bulan.**
 - Sepuluh teratas tersebar di **TUJUH** bulan → aturan 81 **TIDAK** terpicu.
 - ANCUSDT `2022-05` **26.959** lawan LUNAUSDT `2022-05` **26.950** — selisih **sembilan
   lilin**; dasar **H-A021**; **kebetulan angka, bukan bukti**.
-- **712.925 DILARANG DISEBUT PENGUKURAN BEBAS** (tautologi 808.162 − 95.237, KC-50).
+- **712.925 DILARANG DISEBUT PENGUKURAN BEBAS** (tautologi, KC-50).
 
 Sidik `6211624ba9514d604d4dc510abca2e40386775c7aaa1279135f0baf666f044b0`.
 
@@ -422,10 +531,9 @@ Sidik `6211624ba9514d604d4dc510abca2e40386775c7aaa1279135f0baf666f044b0`.
 / kunci ganda **0** / **0** / **0**.
 
 - **BULAN MATI PENUH DATANYA; YANG NOL ADALAH TRANSAKSINYA** — 1.392 dari 1.401 (99,4%).
-- **DILARANG** melanjutkan ke "harga beku" / "lilin datar": `medan_baris_terlihat` **14**
-  medan, **tak satu pun harga**.
-- Bulan pertama rata kehilangan **22.027** lilin; keterisian **≈49,7%**, bersesuaian
-  dengan nisbah byte 0,527179.
+- **DILARANG** melanjutkan ke "harga beku": `medan_baris_terlihat` **14** medan, **tak
+  satu pun harga**.
+- Bulan pertama rata kehilangan **22.027** lilin; keterisian **≈ 49,7%**.
 
 **Kesembilan baris MATI tak penuh, LENGKAP** (semuanya `pertama: false`):
 
@@ -451,7 +559,8 @@ Sidik `1cd98f4fa22c24b30f31f5b36dac0ea0bb3fa9de44e5e15ae73cbf11cdca08bb`.
 
 Definisi "bulan pertama": bulan TERKECIL milik simbol **di dalam penyebut 19.586** —
 **bukan** bulan pertama simbol itu di bursa. Perbedaan keduanya BELUM diukur (ADR-A016
-kep. 6). **[v17] Angka 51 memperkuat mengapa utang ini penting.**
+kep. 6). **[v18] Utang ini NAIK NILAI LAGI dan kini punya contoh terukur:** BNXUSDT
+mulai **2022-04** pada semesta rentang tetapi **2022-05** pada klines penyebut.
 
 `cacah_hidup_kecil_sebagian` **37** dari 38 (0,973684) · `cacah_pertama` /
 `cacah_bukan_pertama` **787** / **18.799** · `rata_byte_pertama` **897.374,517** ·
@@ -513,57 +622,65 @@ dikenal. Dari 945 MATI di luar kohort: **386** kehilangan funding, **559** berfu
 
 ## Jumlah uji — terukur
 
-**1377, kini LIMA BELAS bacaan berjejak di berkas ini.** Sembilan pertama tercatat di
-v16 dan tidak diulang; yang terbaru:
+**1377, kini DELAPAN BELAS bacaan berjejak di berkas ini.** Bacaan 1–12 tercatat di v16
+dan v17 dan tidak diulang; yang terbaru:
 
-10. blob **`340c3c7f425d49859e6ae659cca38d0ee7770aaa`**, run **30585269231**, commit
-    **`d551f471`** (UKUR v15), 21:55:58Z, kode 0, `… in 0.60s`.
-11. blob **`8ea8cc463ff58246b363e47458e9355d26a5ea79`**, run **30587658376**, commit
-    **`ebe6f373`** (STATE v57), 22:36:15Z, kode 0, **`… in 0.40s`** — tercepat.
-12. blob **`34f88b3744e4d9733a731f3f97056584344ddc33`**, run **30588460935**, commit
-    **`32413935`** (EKOR v16), 22:49:39Z, kode 0, `… in 0.61s`.
-13. **[v17]** blob **`5b433a93a3f0d3bb2cded75a5c0379c4a557ae3d`**, run **30589452976**,
-    commit **`9b01c06e`** (UKUR v16), **23:07:02Z**, kode 0, `… in 0.55s`.
-14. **[v17]** blob **`9718bf98caafc59349465ff55b9755e4ea309ac3`**, run **30590593816**,
-    commit **`839a0f17`** (STATE v58), **23:28:30Z**, kode 0, `… in 0.61s`.
-15. **[v17]** blob **`5f62452da6ba9e52f1324f796b2dbb552332c8bc`**, run **30590948580**,
-    commit **`c0877746c3193d1a7ae708d2015d9d1093452627`** (EKOR v17),
-    **2026-07-30T23:35:07Z**, kode 0, `1377 tests collected in 0.49s`.
+13. blob **`5b433a93a3f0d3bb2cded75a5c0379c4a557ae3d`**, run **30589452976**, commit
+    **`9b01c06e`** (UKUR v16), **23:07:02Z**, kode 0, `… in 0.55s`.
+14. blob **`9718bf98caafc59349465ff55b9755e4ea309ac3`**, run **30590593816**, commit
+    **`839a0f17`** (STATE v58), **23:28:30Z**, kode 0, `… in 0.61s`.
+15. blob **`5f62452da6ba9e52f1324f796b2dbb552332c8bc`**, run **30590948580**, commit
+    **`c0877746`** (EKOR v17), **23:35:07Z**, kode 0, `… in 0.49s`.
+16. **[v18]** blob **`990502c707237fa0ef8e5314471ea5277dac19c5`**, run **30591338909**,
+    commit **`72fe177c`** (UKUR v17), **23:42:47Z**, kode 0, `… in 0.56s`.
+17. **[v18]** blob **`b6d02273aa15ebee7736f79883283f4906c447b7`**, run **30592159959**,
+    commit **`05f6f72e`** (STATE v59), **2026-07-30T23:59:10Z**, kode 0, `… in 0.52s`.
+18. **[v18]** blob **`3f299eaf4383604666f30c3448a32d38e57b1742`**, run **30592559253**,
+    commit **`bb565f4cb2bc0ef8d7b2c72ece8f835c74613422`** (EKOR v18),
+    **2026-07-31T00:06:48Z**, kode 0, `1377 tests collected in 0.62s`.
 
 Turunan: 1341 + **36** butir `tests/test_selisih_lilin.py` = **1377** ✅
 **Rentang waktu kutip 0,40s–0,67s DILARANG dibaca sebagai pengukuran apa pun tentang
 repo** — ia keadaan mesin CI, bukan besaran riset.
 
 Riwayat: 630 → 638 → 662×3 → 694×3 → 722×8 → 769 → 814 → 832 → 879 → 936 → 984 →
-1044 → 1100 → 1168 → 1233 → 1297 → 1341 (enam run) → **1377** (lima belas run berjejak).
+1044 → 1100 → 1168 → 1233 → 1297 → 1341 (enam run) → **1377** (delapan belas run
+berjejak di berkas ini).
 
 **Aturan 57: beruntun 4 dari 4** sesudah PUTUS di 26/27. Ia **mencacah, bukan menaksir**.
 
-### Aturan 38 — ordinal, kini sampai ke-59
+### Aturan 38 — ordinal, kini sampai ke-62
 
 | ke- | CI | run | commit | blob | jejak |
 | --- | --- | --- | --- | --- | --- |
-| 53 | 1377 | 30584737431 | `94c7d9da` | `5f4282f6` | UKUR v15 |
-| 54 | 1377 | 30585269231 | `d551f471` | `340c3c7f` | jurnal 144, STATE v57 |
-| 55 | 1377 | 30587658376 | `ebe6f373` | `8ea8cc46` | EKOR v16 |
 | 56 | 1377 | 30588460935 | `32413935` | `34f88b37` | UKUR v16 |
 | 57 | 1377 | 30589452976 | `9b01c06e` | `5b433a93` | jurnal 146, STATE v58 |
 | 58 | 1377 | 30590593816 | `839a0f17` | `9718bf98` | EKOR v17 |
-| **59** | **1377** | **30590948580** | **`c0877746c3193d1a7ae708d2015d9d1093452627`** | **`5f62452da6ba9e52f1324f796b2dbb552332c8bc`** | **berkas ini** |
+| 59 | 1377 | 30590948580 | `c0877746` | `5f62452d` | UKUR v17, STATE v59 |
+| **60** | **1377** | **30591338909** | **`72fe177c`** | **`990502c707237fa0ef8e5314471ea5277dac19c5`** | **STATE v59, EKOR v18** |
+| **61** | **1377** | **30592159959** | **`05f6f72e`** | **`b6d02273aa15ebee7736f79883283f4906c447b7`** | **EKOR v18** |
+| **62** | **1377** | **30592559253** | **`bb565f4cb2bc0ef8d7b2c72ece8f835c74613422`** | **`3f299eaf4383604666f30c3448a32d38e57b1742`** | **berkas ini** |
 
-**Pemakaian berjalan = ke-lima puluh sembilan.** Ke-59 dibaca **2026-07-30T23:35:07Z**,
-kode keluar **0**, atas push EKOR v17 — **dibaca sebelum tertimpa**.
+**Pemakaian berjalan = ke-enam puluh dua.** Ke-62 dibaca **2026-07-31T00:06:48Z**, kode
+keluar **0**, atas push **EKOR v18** — `commit` **COCOK**.
 
-**[v17] SEMBILAN BELAS pembacaan berturut (ke-42..ke-59) tanpa satu pun laporan hangus.**
+**[v18] Panjang deret berjejak tanpa laporan hangus, dengan aritmetika terbuka
+(kesalahan dokumen butir 17):** ke-42..ke-62 → 62 − 42 = 20; 20 + 1 = **21 pembacaan
+berturut**.
 
-**[v17] JEBAKAN YANG TERBUKTI NYATA.** Sesudah push STATE v58, pembacaan pertama
-mengembalikan blob `5b433a93` dengan `commit` `9b01c06e` — **laporan ke-57 yang lama**,
-karena bot belum menerbitkan. Ia **tidak dicatat** sebagai ke-58. **Laporan sah hanya
-bila medan `commit` cocok dengan commit push yang baru.**
+**[v18] JEBAKAN CI — KINI TIGA KEJADIAN.** Sesudah push STATE v58, pembacaan pertama
+mengembalikan blob `5b433a93` (commit `9b01c06e`) — laporan ke-57 lama. Sesudah push
+STATE v59, mengembalikan `990502c7` (commit `72fe177c`) — laporan ke-60 lama. Sesudah
+push EKOR v18, mengembalikan `b6d02273` (commit `05f6f72e`) — laporan ke-61 lama.
+**Ketiganya dikenali dan TIDAK dicatat.** **Laporan sah hanya bila medan `commit` cocok
+dengan commit push yang baru.** Dengan tiga kejadian, ADR-A019 kep. 3 **terpenuhi**:
+ini layak diajukan sebagai **aturan resmi** pada ADR-A022, dan **belum** diresmikan di
+berkas ini karena peresmian aturan bukan wewenang lampiran UKUR.
 
 **Bot CI** menambah satu commit di atas tiap push pemicu — deterministik, **DILARANG
-dihitung kemenangan**. Yang terlihat pada rangkaian ini: `ff89f688` (STATE v57) ·
-`47769b18` (EKOR v16) · `e271a711` (STATE v58) · `14f3316e` (EKOR v17).
+dihitung kemenangan**. Yang terlihat pada rangkaian ini: `e271a711` (STATE v58) ·
+`14f3316e` (EKOR v17) · `24b53ba5` (UKUR v17) · `9e43911b` (STATE v59) · `64b03bdb`
+(EKOR v18).
 
 **Dua cacat tetap disebut:** ke-**38** (run `30541051907`, commit `5d7d8b96`) **tanpa
 blob**; run **30547842823** (bot `de2fc03d`) **tidak pernah dibaca**, tertimpa,
@@ -582,14 +699,13 @@ blob**; run **30547842823** (bot `de2fc03d`) **tidak pernah dibaca**, tertimpa,
 · `funding.py` **28.121** · `sisa_defisit.py` **25.949** · `semesta_kuota.py` **24.987**
 · `lubang_tengah.py` V2 **23.745**.
 
-**Blob modul — [v17] `gerbang_1m.py` kini DIBACA UTUH:**
-`gerbang_1m.py` **`c8cc54c84a57173ef2e426c317d6ac50734e9b4a` (DIBACA UTUH, pustaka
-murni)** · `resample.py` `66a4b177` (ikut dicap `sidik_kode` gerbang) ·
-`silang_funding.py` V2 `42c3aa9dc2c16220b79cf9c9e46979dd000fd393` (DIBACA UTUH) ·
-`lubang_tengah.py` V2 `4d3beaf18c070d2931044c50dd5a354d75eaceb8` (DIBACA UTUH) ·
-`kehidupan_arsip.py` `318a5cb187406d16cfd3385d653bed905f632934` (DIBACA UTUH) ·
-`pulihkan.py` `a9e6eab7cc47555dfed919ac63044ff2eadc4893` (DIBACA UTUH) ·
-`ukur_baris.py` V5 `3ebaa9f9` (DIBACA UTUH) · `selisih_lilin.py`
+**Blob modul:** `gerbang_1m.py` **`c8cc54c84a57173ef2e426c317d6ac50734e9b4a` (DIBACA
+UTUH, pustaka murni)** · `resample.py` `66a4b177` · `silang_funding.py` V2
+`42c3aa9dc2c16220b79cf9c9e46979dd000fd393` (DIBACA UTUH) · `lubang_tengah.py` V2
+`4d3beaf18c070d2931044c50dd5a354d75eaceb8` (DIBACA UTUH) · `kehidupan_arsip.py`
+`318a5cb187406d16cfd3385d653bed905f632934` (DIBACA UTUH) · `pulihkan.py`
+`a9e6eab7cc47555dfed919ac63044ff2eadc4893` (DIBACA UTUH) · `ukur_baris.py` V5
+`3ebaa9f9` (DIBACA UTUH) · `selisih_lilin.py`
 `d19bdb5fe67e0bd9c1b141d7fb7cc6dcd089c5f2` · `sisa_defisit.py` `7aa0e6d7` ·
 `keterisian_lilin.py` `3f80ffa7` · `bulan_pertama.py` `b9bd00ac` · `irisan_byte.py`
 `2dbe3d55` · `byte_semesta.py` `ff68e4be` · `lubang_tebing.py` `575e777e` ·
@@ -601,9 +717,13 @@ murni)** · `resample.py` `66a4b177` (ikut dicap `sidik_kode` gerbang) ·
 `penyebut_tahun.py` `265aad00` · `anatomi_tengah.py` `04279335` · `__init__.py`
 `64d85584`.
 
+**[v18] TIDAK ADA modul yang diketahui menulis `reports/semesta_rentang.json`.** Tidak
+satu pun nama di daftar di atas terbukti sebagai penulisnya, dan berkas itu tanpa sidik
+kode. **Utang ukur 22.**
+
 `ci.yml` = **`c79497b2c812679eaa69aee5b3160eac9f5c5fb7`** (paths-ignore `journal/**`,
 `decisions/**`, `hipotesis/**`, `reports/**`; push ke `lux_ai/**`, `tests/**`, `STATE*`,
-`PROMPT*` MENYALAKAN CI — **terkonfirmasi sebelas kali berturut**).
+`PROMPT*` MENYALAKAN CI — **terkonfirmasi lima belas kali berturut**).
 `karantina_semesta.yml` = `de40fa4e` (**belum dibaca utuh**).
 Trio R-312: `selisih_lilin.yml` `de2fd4fd346c9e13213fcc9a410d4aea8460d67a` ·
 `test_selisih_lilin.py` `2d903a4a6f544eacd26b82bdb177680fa78bdffd` (**36** butir).
@@ -622,9 +742,7 @@ Cacah per berkas uji — **repo riset ini**: `test_irisan_byte.py` **68** ·
 **33** · `test_bulan_absen.py` **32** · `test_karantina_semesta.py` **28** ·
 `test_silang_settled.py` **24** · `test_ukur_baris.py` **3**.
 **`tests/test_lubang_tengah.py` — 56 butir menurut R-228, BELUM DIBACA, DILARANG dikutip
-terukur.**
-**[v17] `tests/test_gerbang_1m.py` — penjaga penyimpangan salinan rumus
-`menit_hilang_dalam_rentang`. BELUM DIBACA; cacah butirnya TIDAK DIKETAHUI.**
+terukur.** **`tests/test_gerbang_1m.py` — BELUM DIBACA; cacah butirnya TIDAK DIKETAHUI.**
 
 **POLA WORKFLOW TRIO — TERVERIFIKASI DARI SUMBER** (`selisih_lilin.yml`): `name`,
 `on.push.paths` **SATU** entri, `permissions: contents: write`, job `ukur` di
@@ -636,40 +754,36 @@ terukur.**
 
 ## API terverifikasi
 
-API lama (v37–v12) tetap berlaku. **[v17] Tambahan: `gerbang_1m` (lihat bagian
-tersendiri di atas) — satu-satunya pembacaan kode baru pada versi ini.**
+API lama (v37–v12) tetap berlaku. `gerbang_1m` diuraikan di bagiannya sendiri di atas.
 
 **`lubang_tengah` V2** (`4d3beaf1…`, 23.745 B): `VERSI=2` ·
 `KELUARAN="reports/lubang_tengah.json"` · `TENGAH_TERCATAT=6` · `SIMBOL_H_A010` lima
 nama · `SIMBOL_TENGAH_TERCATAT=["BTCSTUSDT","LITUSDT"]` · `SIMBOL_H_A011="LITUSDT"` ·
 `RENTANG_H_A011=("2026-01","2026-06")` · `BERKAS_DICAP` empat nama. **Enam belas
-fungsi**; **lima penggugur**; **enam praregistrasi di docstring** (R-221/222/223 TEPAT;
-R-229 TEPAT; R-230 MELESET; R-228 belum diadjudikasi).
+fungsi**; **lima penggugur**; **enam praregistrasi di docstring**.
 
 **`pulihkan` V2** (`a9e6eab7…`, 14.839 B): `VERSI=2`, `TOTAL_PECAHAN=8`,
 `AKAR_UNDUH="data/unduh"`, `AKAR_PULIH="data/pulih"`; `sidik_kode()` mencap
 `["pulihkan.py","rilis.py"]`; **`cacah_baris_parquet` = `metadata.num_rows`**;
-`periksa_keluarga` dipanggil **dua kali** (`rilis` dan **`rilis_karantina`**).
+`periksa_keluarga` dipanggil **dua kali**.
 
 **`kehidupan_arsip` V1** (`318a5cb1…`, 19.281 B): `VERSI=1`, `TOTAL_PECAHAN=8`,
 `KENDALI_CACAH=3`, `KOLOM_VOLUME="volume"`, `KOLOM_TRANSAKSI="trades"`;
-`peta_parquet` **melewatkan baris `parquet_karantina`**.
-**[v17] Keluarannya `reports/kehidupan_arsip_<i>.json` berukuran 991.422–1.261.637 B —
-MUSTAHIL dibaca utuh lewat alat. DICORET dari daftar bahan ramalan.**
+`peta_parquet` **melewatkan baris `parquet_karantina`**. Keluarannya
+`reports/kehidupan_arsip_<i>.json` **991.422–1.261.637 B — MUSTAHIL dibaca utuh lewat
+alat. DICORET dari daftar bahan ramalan.**
 
 **`selisih_lilin` V1** (`d19bdb5f…`): `LILIN_LANGSUNG_TERCATAT=839325999` ·
 `BARIS_PARQUET_TERCATAT=839842134` · `SELISIH_TERCATAT=516135` ·
 `AMBANG_HIDUP_KECIL=97634` · `INVARIAN` **8** kunci · `R312_PITA_BUTIR_1=(12,120)` ·
-`R312_PITA_BUTIR_2=(0.50,0.865)`. `kode_keluar` mengembalikan **2** bila
-`cacah_berselisih <= 0` — **dirancang**.
+`R312_PITA_BUTIR_2=(0.50,0.865)`. `kode_keluar` **2** bila `cacah_berselisih <= 0`.
 
 **`silang_funding` V2** (`42c3aa9d`): `PENYEBUT_TERCATAT=19586`, `MATI_TERCATAT=1401`,
 `KOHORT_TERCATAT=456`, `HIDUP_TANPA_FUNDING_TERCATAT=33`,
 **`LUBANG_TAK_DIKENAL_TERCATAT=3`**,
 `BENTUK_TERBITAN_FUNDING={"awal":48,"ekor":826,"tengah":6}`, `KENDALI_CACAH=3`.
-**PERINGATAN KC-54:** `LUBANG_TAK_DIKENAL_TERCATAT=3` memuat **cacah**, bukan identitas
-dan bukan arah waktu. **Kode tidak pernah menjanjikan apa pun tentang waktu;
-dokumenlah yang menambahkannya.**
+**PERINGATAN KC-54:** medan itu memuat **cacah**, bukan identitas dan bukan arah waktu.
+**Kode tidak pernah menjanjikan apa pun tentang waktu; dokumenlah yang menambahkannya.**
 
 **`keterisian_lilin` V1** (`3f80ffa7`): `INVARIAN` delapan kunci ·
 `AMBANG_HIDUP_KECIL=97634` · `MENIT_PER_HARI=1440` · `KENDALI_SIMBOL="BTCUSDT"` ·
@@ -714,114 +828,128 @@ seragam `76c27e3c…62d700`, manifes seragam `237ccf42…ba601`. Sidik manifes p
   dan rata sekitar **4,3×** lebih kecil". **DILARANG:** "berkas kecil berarti pasar mati".
 - **H-A019** DITERIMA TERBATAS; DILEMAHKAN oleh ADR-A018 kep. 6 tanpa tafsir pengganti.
 - **H-A020, H-A021 [DIUSULKAN]** — uji **MUSTAHIL**, tidak ada bahannya.
-- **H-A022 [TERBUKTI lewat R-313]** — yang terbukti **identitas himpunan**, bukan sebab
-  karantina.
-- **[v17] H-A023 [DIUSULKAN, BELUM DIREGISTRASI, TIDAK DISKOR]** — *selisih 51 − 48 = 3
-  pada BNXUSDT dan `cacah_lubang_tak_dikenal` = 3 menunjuk himpunan simbol-bulan yang
-  sama.* Ujinya menuntut sumber yang menyebut **nama bulan** per simbol; sumber itu
-  **belum ditemukan**. Calon: `reports/semesta_rentang.json`
-  (`8d5bd06ca4073dac8a8ef7841d81824427cc8e63`, 110.662 B), **belum dibuka**. **Bila
-  kelak terbukti, ia TIDAK membuktikan sebab** — ia hanya memindahkan pertanyaan dari
-  "bulan mana" ke "mengapa". Hipotesis berikutnya **H-A024**.
+- **H-A022 [TERBUKTI lewat R-313]** — yang terbukti **identitas himpunan**, bukan sebab.
+- **[v18] H-A023 [DIUSULKAN, BELUM DIREGISTRASI, TIDAK DISKOR — status BERUBAH menjadi
+  BERSYARAT]** — *selisih 51 − 48 = 3 pada BNXUSDT dan `cacah_lubang_tak_dikenal` = 3
+  menunjuk himpunan simbol-bulan yang sama.*
+  **Yang kini TERUKUR:** ketiga bulan (2022-04, 2022-06, 2022-08) **ADA** pada semesta
+  rentang, dan **tidak ada** di penyebut 19.586. Arahnya konsisten dengan hipotesis.
+  **Yang BELUM terukur, dan karenanya bukti bersifat BERSYARAT:** apakah **seluruh** 48
+  bulan penyebut BNXUSDT termuat di dalam 51 bulan semesta rentang. Bila ada satu bulan
+  penyebut yang tidak termuat, selisih 3 **tidak** sama dengan ketiga bulan itu.
+  **DILARANG ditulis TERBUKTI.** Ujinya menuntut sumber yang menyebut **nama bulan
+  penyebut** per simbol — sumber itu **masih belum ditemukan**.
+  Hipotesis berikutnya **H-A024**.
 
 ## Aturan 87 RESMI; usulan 88 dan 89
 
-**Aturan 87 [RESMI].** Butir ramalan **turunan** wajib ditandai **TURUNAN** pada
-praregistrasi; kemenangannya wajib diperkecil sendiri secara tertulis; kekalahannya
-dihitung penuh. **[v17] Ditaati:** butir 3 R-316 ditandai TURUNAN di muka dan kalah.
+**Aturan 87 [RESMI].** Butir ramalan **turunan** wajib ditandai **TURUNAN**;
+kemenangannya wajib diperkecil sendiri; kekalahannya dihitung penuh.
+**[v18] Ditaati:** seluruh bentangan kalender di berkas ini ditandai **TURUNAN**.
 
 **Usulan aturan 88 [BELUM RESMI].** Ramalan keseragaman tanpa mekanisme tertulis wajib
-ditulis sebagai **sebaran**. **[v17] TIDAK mendapat kejadian kedua** — butir 1 R-316
-gugur karena bahan, bukan kalah karena keseragaman.
+ditulis sebagai **sebaran**. **[v18] TIDAK mendapat kejadian kedua** — tidak ada ramalan
+baru.
 
-**Usulan aturan 89 [BARU v17, BELUM RESMI].** Setiap pita ramalan atas bilangan wajib
-menutup **ketiga sisi** ruang nilainya, atau menyatakan tertulis mengapa satu sisi
-mustahil. Satu kejadian (R-316 butir 3 → **KC-55**).
+**Usulan aturan 89 [BELUM RESMI].** Setiap pita ramalan wajib menutup **ketiga sisi**
+ruang nilainya, atau menyatakan mengapa satu sisi mustahil. **[v18] TIDAK bertambah.**
 
-**Catatan kejujuran melekat pada 88 dan 89:** keduanya lahir **sesudah** kekalahan.
-**Utang yang dibayar, bukan laba.**
+**Catatan kejujuran melekat:** keduanya lahir **sesudah** kekalahan. **Utang yang
+dibayar, bukan laba.** Hal yang sama berlaku untuk **KC-56**.
 
-## Praregistrasi R-317 — BELUM ADA
+## Praregistrasi R-317 — BELUM ADA, BAHAN LAMA BATAL
 
-Porosnya **wajib ditulis di jurnal lebih dulu** (aturan 79), pada giliran BERBEDA dari
-adjudikasi (ADR-A016). Urutan poros:
+**[v18] `reports/semesta_rentang.json` sudah dibuka, maka ia TIDAK BOLEH lagi menjadi
+bahan R-317** (aturan 29). Bahan penggantinya **belum dipilih**, dan **dilarang** berupa
+berkas yang sudah dibuka pada sesi ini. Porosnya **wajib ditulis di jurnal lebih dulu**
+(aturan 79), pada giliran BERBEDA dari adjudikasi (ADR-A016).
 
-1. **BNXUSDT — identitas bulan.** **[v17] Pertanyaan BERUBAH BENTUK:** bukan "mengapa
-   dua bulan hilang", melainkan **"bulan mana saja yang dimiliki BNXUSDT pada semesta 1m
-   (51), dan mana yang tidak sampai ke penyebut (48)"**. Bahan calon
-   `reports/semesta_rentang.json`. **`kehidupan_arsip_*.json` DICORET.** **PERINGKAT
-   PERTAMA.**
-2. **Sebab kekosongan TLMUSDT 2023-03** (2.130/44.640, 95,2% kosong, HIDUP).
-3. **Tebing funding `2025-07`** (39 simbol) **dan BTCSTUSDT**.
+Urutan poros:
+
+1. **BNXUSDT — keanggotaan PENYEBUT.** **[v18] Pertanyaan BERUBAH BENTUK LAGI:** daftar
+   bulan semesta rentang kini **diketahui seluruhnya** (2022-04..2026-06, kontigu; boleh
+   diturunkan karena bentangan = cacah). Yang **tidak** diketahui: **bulan mana saja yang
+   masuk penyebut 19.586**. **PERINGKAT PERTAMA.**
+2. **Sebab kekosongan TLMUSDT 2023-03** — bulannya terukur ADA; isinya 95,2% kosong.
+3. **Tebing funding `2025-07`** (39 simbol) **dan BTCSTUSDT** (terukur kontigu 64).
 4. **Identitas dua belas simbol-bulan karantina** — menuntut **modul CI**; **BUKAN
    kandidat murah**.
-5. **"Bulan pertama di penyebut" lawan "bulan pertama di bursa"** — **[v17] naik nilai**
-   karena angka 51.
-6. Sisanya: selisih 40−38 `diagnosa_kc15`; bentangan 38 kohort; H-A016; `mati_tersisip`;
+5. **"Bulan pertama di penyebut" lawan "bulan pertama di bursa"** — **[v18] naik nilai
+   lagi**, kini dengan contoh terukur (2022-04 lawan 2022-05 pada BNXUSDT).
+6. **[BARU] Penulis `semesta_rentang.json`** — tanpa itu, medannya tak tertelusur.
+7. Sisanya: selisih 40−38 `diagnosa_kc15`; bentangan 38 kohort; H-A016; `mati_tersisip`;
    R-7/19/20/28/36/37; R-199; R-236..R-247; taksonomi lubang tiga kelas; bagian
    `baris_mati`.
 
-**DUA BELAS SYARAT KUMULATIF sebelum pita R-317 dikunci** (naik dari sebelas): aturan
-**79** · **83** · **84** · **85** · **86 (a)** — dengan penyebutan bahwa daftar `reports/`
-baru terbaca **76%** · **86 (b)** · **87** · **kebebasan tiap medan diperiksa terhadap
-kode** · **KC-50** · **KC-52** · **KC-53** · **KC-54** (definisi medan disalin dari
-sumber; bila tak ditemukan, **syarat gugur tersurat WAJIB**) · **KC-55** (pita menutup
-ketiga sisi) · aturan **66**.
+**TIGA BELAS SYARAT KUMULATIF sebelum pita R-317 dikunci** (naik dari dua belas):
+aturan **79** · **83** · **84** · **85** · **86 (a)** — dengan penyebutan bahwa daftar
+`reports/` baru terbaca **76%** · **86 (b)** · **87** · **kebebasan tiap medan diperiksa
+terhadap kode** · **KC-50** · **KC-52** · **KC-53** · **KC-54** (definisi medan disalin;
+bila tak ditemukan, **syarat gugur tersurat WAJIB**) · **KC-55** (pita menutup ketiga
+sisi) · **[BARU] KC-56** (bila bahan tak bertanggal, praregistrasi wajib menyatakan
+perbandingan waktu tidak dipakai) · aturan **66**.
 
 ## Utang ukur yang masih hidup
 
 1. **LUNAS [v14]** — aturan 52 atas trio `c1dc0009`.
 2. **`karantina_semesta.yml`** (`de40fa4e`), `test_pulihkan.py` (`11c43533`),
    `test_rilis_karantina.py` (`739c8da9`), `test_karantina_a006.py` (`a5a3d82f`),
-   `tests/test_lubang_tengah.py` belum dibaca utuh. **[v17] Ditambah
-   `tests/test_gerbang_1m.py`.**
-3. **Lima ADR belum dibaca utuh:** A002, **A004 (NAIK PERINGKAT — sumber keenam klausa
+   `tests/test_lubang_tengah.py`, **`tests/test_gerbang_1m.py`** belum dibaca utuh.
+3. **Lima ADR belum dibaca utuh:** A002, **A004 (peringkat tinggi — sumber keenam klausa
    gerbang)**, A006, A007, A008.
-4. **Identitas dua belas simbol-bulan karantina** belum didaftar; **20.533.802 B**;
-   menuntut modul CI.
+4. **Identitas dua belas simbol-bulan karantina** belum didaftar; **20.533.802 B**.
 5. **LUNAS [v16]** — irisan 880 lawan 877 diukur; ketiga lubang bernama.
-6. **"Bulan pertama di penyebut" lawan "bulan pertama di bursa"** belum diukur —
-   **[v17] naik nilai** oleh angka 51.
-7. **Sebab kekosongan TLMUSDT 2023-03** belum diukur.
-8. **Cacah tangan aturan 66 ulang** — 50/54/45 TURUNAN.
+6. **"Bulan pertama di penyebut" lawan "di bursa"** belum diukur — **[v18] kini punya
+   contoh terukur**: BNXUSDT 2022-04 (rentang) lawan 2022-05 (klines penyebut).
+7. **Sebab kekosongan TLMUSDT 2023-03** belum diukur — **[v18] MENYEMPIT**: bulannya
+   terukur ADA dan kontinu, sehingga yang dicari **sebab kekosongan isi**, bukan sebab
+   hilangnya bulan. **Tidak lunas.**
+8. **Cacah tangan aturan 66 ulang** — 50/54/45 TURUNAN. **[v18] Bertambah beban:** cacah
+   entri `rentang` tidak dapat dihitung selama pemotongan 95% berdiri.
 9. **`ukur_baris` V6** — `BERKAS_DIUKUR` 21 nama; `silang_funding.py` **705** baris.
 10. **Tiga butir `PETA_MODUL.md`** bertanda "memerlukan verifikasi" (repo WARISAN).
 11. **`PROMPT_KELANJUTAN.md`** belum berkepala "ARSIP — BUKAN SUMBER"; **`PROMPT.md`
-    v55** belum didorong. **Utang berumur delapan versi.**
+    v55** belum didorong. **[v18] Utang berumur SEMBILAN versi.**
 12. **LUNAS** — ADR-A020 dan ADR-A021 ada dan dibaca utuh.
-13. **LUNAS [v17]** — jurnal **146** (`1992c8ef…`, commit `440fe8ba`, praregistrasi
-    R-316) dan jurnal **147** (`eaf941f6…`, commit `e429e4fb`, adjudikasi R-316) ada dan
-    dibaca utuh. **Digantikan:** jurnal **148** belum ditulis.
-14. **LUNAS [v17]** — aturan 38 ke-57, ke-58, dan ke-59 dibaca, blob dicatat.
-    **Digantikan:** laporan atas push berkas ini (**ke-60**) wajib dibaca sebelum push
-    akar berikutnya.
+13. **LUNAS [v17]** — jurnal 146 dan 147 dibaca utuh. **Digantikan:** jurnal **148**
+    belum ditulis, dan **R-317 wajib dirancang ulang atas bahan lain**.
+14. **LUNAS [v18]** — aturan 38 ke-60, ke-61, ke-62 dibaca, blob dicatat, ketiga jebakan
+    CI dikenali. **Digantikan:** laporan atas push berkas ini (**ke-63**) wajib dibaca
+    sebelum push akar berikutnya.
 15. **R-228 belum diadjudikasi**; cacah 56 butir `test_lubang_tengah.py` DILARANG dikutip
     terukur.
 16. **Keserian tebing `2025-07`** belum diukur; **DILARANG diklaim**.
-17. **Bagian `baris_mati` `silang_funding.json` belum terbaca** (54%). Menuntut **modul
-    CI** atau **pembacaan berpotong terancang**. Utang verifikasi **39**.
-18. **LUNAS [v17]** — **`gerbang_1m.py` DIBACA UTUH** (`c8cc54c8…`). Hasilnya menutup
-    satu jalan: modul itu **tidak berkeluaran**, sehingga poros gerbang **tidak dapat
-    dijawab dari keluarannya**.
+17. **Bagian `baris_mati` `silang_funding.json` belum terbaca** (54%). Utang verifikasi
+    **39**.
+18. **LUNAS [v17]** — `gerbang_1m.py` dibaca utuh; modul **tidak berkeluaran**.
 19. **Prasyarat klasifikasi belum dipenuhi.** Serapan funding **matang sebagai
     pembukuan, belum matang sebagai landasan fitur**: ADR-A003 **belum ada**; irisan 787
-    lawan 787 belum diukur (KC-52); **87** "funding tanpa klines" atas 787 belum
-    didamaikan; kelas positif **33** dari **lima** simbol (KC-47); taksonomi lubang masih
-    **BENTUK, bukan MEKANISME**. **[v17] Blokir kedua MEMBURUK:** kini ada **tiga** angka
-    bersaing untuk satu simbol (48 / 50 / 51).
-20. **BARU [v17] — identitas 51 bulan 1m BNXUSDT belum diketahui.** Cacahnya terukur,
-    nama bulannya tidak. **Memblokir H-A023 dan poros peringkat pertama sekaligus.**
-    Utang verifikasi **40**.
-21. **BARU [v17] — daftar `reports/` baru terbaca 76%** (ref `8364ad92…`). Keputusan
-    bahan diambil hanya dari bagian yang terlihat; **melemahkan aturan 86 (a)** dan wajib
-    disebut setiap kali (a) dipakai. Utang verifikasi **41**.
+    lawan 787 belum diukur (KC-52); **87** "funding tanpa klines" belum didamaikan; kelas
+    positif **33** dari **lima** simbol (KC-47); taksonomi lubang masih **BENTUK, bukan
+    MEKANISME**. **[v18] Blokir kedua TIDAK membaik:** sumber keempat menguatkan **51**,
+    tetapi **48 tetap tidak terdamaikan**, dan sumber baru itu tak bertanggal.
+20. **TIDAK TERBAYAR [v18] — identitas bulan BNXUSDT.** Cacahnya kini terukur dari dua
+    sumber (51 dan 51); **nama bulan PENYEBUT tetap tidak diketahui**. Yang berubah:
+    daftar bulan **semesta rentang** dapat diturunkan seluruhnya. Yang tidak: daftar
+    bulan **penyebut**. **Utang dipertajam, bukan lunas.** Utang verifikasi **40**.
+21. **Daftar `reports/` baru terbaca 76%** (ref `8364ad92…`). **Melemahkan aturan 86 (a)**
+    dan wajib disebut setiap kali (a) dipakai. Utang verifikasi **41**.
+22. **BARU [v18] — penulis `reports/semesta_rentang.json` belum diidentifikasi.** Tanpa
+    `waktu_utc` dan tanpa sidik; **tak tertelusur ke kode maupun ke waktu**. Selama
+    terbuka, definisi medannya hanya dapat disimpulkan dari **bentuk data** — keadaan
+    yang tepat memicu KC-54. Utang verifikasi **42**.
+23. **BARU [v18] — keanggotaan penyebut BNXUSDT belum diukur.** Belum diperiksa apakah
+    seluruh 48 bulan penyebut termuat di dalam 51 bulan semesta rentang. **Ini yang
+    membuat H-A023 bersyarat** dan memblokir poros peringkat pertama. Utang verifikasi
+    **43**.
 
 ## Penomoran berikutnya
 
 Aturan resmi **1–81, 83, 84, 85, 86 (a) dan (b), 87** · usulan tersisa **77**, **78**,
 **82**, **88**, **89** · **aturan berikutnya yang bebas 90** · KC resmi sampai **KC-55**
-(KC-16 kosong selamanya) · **KC berikutnya KC-56** · Hipotesis berikutnya **H-A024** ·
-Jurnal berikutnya **148** (tanggal **UTC**) · `STATE.md` berikutnya **v59** · EKOR
-berikutnya **v18** · UKUR berikutnya **v18** · PROMPT berikutnya **v55 (belum didorong)**
-· ADR berikutnya **A022** · Ramalan berikutnya **R-317** · papan skor **321 SAH** (TEPAT
-**221** · MELESET **61** · SEPARUH **22** · TIDAK TERADJUDIKASI **10** · MENUNGGU **7**).
+(KC-16 kosong selamanya), **KC-56 DIUSULKAN** · **KC berikutnya KC-57** · Hipotesis
+berikutnya **H-A024** · Jurnal berikutnya **148** (tanggal **UTC**) · `STATE.md`
+berikutnya **v60** · EKOR berikutnya **v19** · UKUR berikutnya **v19** · PROMPT
+berikutnya **v55 (belum didorong)** · ADR berikutnya **A022** · Ramalan berikutnya
+**R-317 (bahan lama BATAL)** · papan skor **321 SAH dan TIDAK BERGERAK** (TEPAT **221** ·
+MELESET **61** · SEPARUH **22** · TIDAK TERADJUDIKASI **10** · MENUNGGU **7**).

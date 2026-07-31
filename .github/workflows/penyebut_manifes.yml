@@ -39,8 +39,10 @@ jobs:
           echo "kode=$kode" >> "$GITHUB_OUTPUT"
           echo "kode_keluar=$kode" >> reports/penyebut_manifes.log
           ls -l reports/penyebut_manifes.json >> reports/penyebut_manifes.log 2>&1 || \
-            echo "laporan TIDAK lahir" >> reports/penyebut_manifes.log
-          tail -n 80 reports/penyebut_manifes.log
+            echo "laporan penuh TIDAK lahir" >> reports/penyebut_manifes.log
+          ls -l reports/penyebut_manifes_ringkas.json >> reports/penyebut_manifes.log 2>&1 || \
+            echo "laporan ringkas TIDAK lahir" >> reports/penyebut_manifes.log
+          tail -n 120 reports/penyebut_manifes.log
           exit 0
 
       - name: tulis status
@@ -51,17 +53,23 @@ jobs:
           python - <<'PY'
           import datetime, json, os
 
-          try:
-              byte = os.path.getsize("reports/penyebut_manifes.json")
-          except OSError:
-              byte = 0
+          def byte(jalur):
+              try:
+                  return os.path.getsize(jalur)
+              except OSError:
+                  return 0
+
+          penuh = byte("reports/penyebut_manifes.json")
+          ringkas = byte("reports/penyebut_manifes_ringkas.json")
 
           status = {
               "run_id": os.environ.get("GITHUB_RUN_ID", ""),
               "commit": os.environ.get("GITHUB_SHA", ""),
               "kode_keluar": int(os.environ.get("KODE", "1") or 1),
-              "byte_laporan": byte,
-              "laporan_lahir": byte > 0,
+              "byte_laporan": penuh,
+              "byte_laporan_ringkas": ringkas,
+              "laporan_lahir": penuh > 0,
+              "laporan_ringkas_lahir": ringkas > 0,
               "waktu_utc": datetime.datetime.now(datetime.timezone.utc).strftime(
                   "%Y-%m-%dT%H:%M:%SZ"
               ),
@@ -81,6 +89,7 @@ jobs:
           git add -f reports/penyebut_manifes.log || true
           git add -f reports/penyebut_manifes_status.json || true
           git add -f reports/penyebut_manifes.json || true
+          git add -f reports/penyebut_manifes_ringkas.json || true
           git commit -m "laporan penyebut manifes run ${GITHUB_RUN_ID} [skip ci]" || exit 0
           for i in 1 2 3 4 5 6 7 8; do
             git pull --rebase origin main && git push origin HEAD:main && break

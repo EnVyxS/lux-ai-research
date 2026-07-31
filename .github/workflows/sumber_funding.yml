@@ -1,0 +1,104 @@
+name: sumber funding
+
+on:
+  push:
+    paths:
+      - 'lux_ai/serapan/sumber_funding.py'
+      - '.github/workflows/sumber_funding.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sumber-funding-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  jalankan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: ambil repo
+        uses: actions/checkout@v4
+
+      - name: siapkan python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: siapkan jejak
+        run: |
+          mkdir -p reports
+          echo "mulai $(date -u +%Y-%m-%dT%H:%M:%SZ)" > reports/sumber_funding.log
+          python -V >> reports/sumber_funding.log 2>&1
+          echo "--- ls -l kandidat ---" >> reports/sumber_funding.log
+          ls -l reports/funding_semesta.json reports/silang_funding.json reports/hidup_tanpa_funding.json reports/kehidupan.json reports/semesta_bulan_1m.json >> reports/sumber_funding.log 2>&1 || true
+          echo "--- mulai jalan ---" >> reports/sumber_funding.log
+
+      - name: jalan
+        id: jalan
+        continue-on-error: true
+        run: |
+          set +e
+          python -m lux_ai.serapan.sumber_funding >> reports/sumber_funding.log 2>&1
+          KODE=$?
+          echo "kode=$KODE" >> "$GITHUB_OUTPUT"
+          echo "--- selesai jalan kode=$KODE ---" >> reports/sumber_funding.log
+
+      - name: tulis status
+        if: always()
+        env:
+          KODE: ${{ steps.jalan.outputs.kode }}
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          from datetime import datetime, timezone
+
+          laporan = pathlib.Path("reports/sumber_funding.json")
+          ada = laporan.exists()
+          mentah = os.environ.get("KODE", "")
+          try:
+              kode = int(mentah)
+          except ValueError:
+              kode = -1
+          status = {
+              "laporan_lahir": ada,
+              "byte_laporan": laporan.stat().st_size if ada else 0,
+              "kode_keluar": kode,
+              "kode_mentah": mentah,
+              "run_id": os.environ.get("GITHUB_RUN_ID", ""),
+              "commit": os.environ.get("GITHUB_SHA", ""),
+              "waktu_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+          }
+          pathlib.Path("reports/sumber_funding_status.json").write_text(
+              json.dumps(status, indent=2, sort_keys=True) + "\n"
+          )
+          print(json.dumps(status, sort_keys=True))
+          PY
+
+      - name: commit laporan
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f reports/sumber_funding.json || true
+          git add -f reports/sumber_funding.log || true
+          git add -f reports/sumber_funding_status.json || true
+          if git diff --cached --quiet; then
+            echo "tidak ada perubahan untuk di-commit"
+          else
+            git commit -m "laporan sumber_funding (run ${GITHUB_RUN_ID})"
+            for percobaan in 1 2 3; do
+              git pull --rebase --autostash && git push && break
+              echo "percobaan push ke-$percobaan gagal"
+              sleep 5
+            done
+          fi
+
+      - name: kode keluar
+        if: always()
+        run: |
+          K="${{ steps.jalan.outputs.kode }}"
+          echo "kode langkah jalan = '${K}'"
+          exit "${K:-1}"

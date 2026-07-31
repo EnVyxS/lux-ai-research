@@ -13,32 +13,44 @@ permissions:
 jobs:
   tunggal:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      # Kegagalan DILARANG bisu. Log dibuat lebih dulu supaya ia selalu ada
+      # untuk di-commit, walau modulnya gagal pada baris pertama.
+      - name: siapkan jejak
+        run: |
+          mkdir -p reports
+          : > reports/peta_manifes.log
+          echo "mulai $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> reports/peta_manifes.log
+          python -V >> reports/peta_manifes.log 2>&1
+          ls -l reports/manifes_pecahan_*.json >> reports/peta_manifes.log 2>&1 || true
+
       - name: sensus simbol-bulan dari manifes
         id: jalan
         run: |
           set +e
-          mkdir -p reports
-          python -m lux_ai.serapan.peta_manifes > reports/peta_manifes.log 2>&1
+          python -m lux_ai.serapan.peta_manifes >> reports/peta_manifes.log 2>&1
           kode=$?
           echo "kode=$kode" >> "$GITHUB_OUTPUT"
+          echo "kode_keluar=$kode" >> reports/peta_manifes.log
+          ls -l reports/peta_manifes.json >> reports/peta_manifes.log 2>&1 || \
+            echo "laporan TIDAK lahir" >> reports/peta_manifes.log
           tail -n 60 reports/peta_manifes.log
           exit 0
 
       - name: tulis status
+        if: always()
         env:
           KODE: ${{ steps.jalan.outputs.kode }}
         run: |
           python - <<'PY'
           import datetime, json, os
 
-          byte = 0
           try:
               byte = os.path.getsize("reports/peta_manifes.json")
           except OSError:
@@ -49,6 +61,7 @@ jobs:
               "commit": os.environ.get("GITHUB_SHA", ""),
               "kode_keluar": int(os.environ.get("KODE", "1") or 1),
               "byte_laporan": byte,
+              "laporan_lahir": byte > 0,
               "waktu_utc": datetime.datetime.now(datetime.timezone.utc).strftime(
                   "%Y-%m-%dT%H:%M:%SZ"
               ),
@@ -58,11 +71,16 @@ jobs:
               f.write("\n")
           PY
 
+      # add per berkas: satu berkas yang tidak ada TIDAK boleh menggagalkan
+      # seluruh add, sebab itulah yang membuat kegagalan menjadi bisu.
       - name: commit laporan
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f reports/peta_manifes.json reports/peta_manifes.log reports/peta_manifes_status.json || true
+          git add -f reports/peta_manifes.log || true
+          git add -f reports/peta_manifes_status.json || true
+          git add -f reports/peta_manifes.json || true
           git commit -m "laporan peta manifes run ${GITHUB_RUN_ID} [skip ci]" || exit 0
           for i in 1 2 3 4 5 6 7 8; do
             git pull --rebase origin main && git push origin HEAD:main && break

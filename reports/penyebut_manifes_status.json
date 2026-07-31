@@ -1,8 +1,10 @@
 {
   "byte_laporan": 116722,
-  "commit": "8327000802d32a5919ecdd26dfe2e2234111e493",
+  "byte_laporan_ringkas": 57737,
+  "commit": "80ed0922f8f3cf3f6e3abe05595ce0a8e5a99079",
   "kode_keluar": 0,
   "laporan_lahir": true,
-  "run_id": "30637861083",
-  "waktu_utc": "2026-07-31T14:15:58Z"
+  "laporan_ringkas_lahir": true,
+  "run_id": "30637911271",
+  "waktu_utc": "2026-07-31T14:16:40Z"
 }

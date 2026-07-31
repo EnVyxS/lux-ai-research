@@ -1,13 +1,13 @@
-mulai 2026-07-31T14:15:57Z
+mulai 2026-07-31T14:16:39Z
 Python 3.11.15
--rw-r--r-- 1 runner runner 2530465 Jul 31 14:15 reports/manifes_pecahan_0.json
--rw-r--r-- 1 runner runner 2587577 Jul 31 14:15 reports/manifes_pecahan_1.json
--rw-r--r-- 1 runner runner 2446093 Jul 31 14:15 reports/manifes_pecahan_2.json
--rw-r--r-- 1 runner runner 2257314 Jul 31 14:15 reports/manifes_pecahan_3.json
--rw-r--r-- 1 runner runner 2615515 Jul 31 14:15 reports/manifes_pecahan_4.json
--rw-r--r-- 1 runner runner 2865596 Jul 31 14:15 reports/manifes_pecahan_5.json
--rw-r--r-- 1 runner runner 2780523 Jul 31 14:15 reports/manifes_pecahan_6.json
--rw-r--r-- 1 runner runner 2450719 Jul 31 14:15 reports/manifes_pecahan_7.json
+-rw-r--r-- 1 runner runner 2530465 Jul 31 14:16 reports/manifes_pecahan_0.json
+-rw-r--r-- 1 runner runner 2587577 Jul 31 14:16 reports/manifes_pecahan_1.json
+-rw-r--r-- 1 runner runner 2446093 Jul 31 14:16 reports/manifes_pecahan_2.json
+-rw-r--r-- 1 runner runner 2257314 Jul 31 14:16 reports/manifes_pecahan_3.json
+-rw-r--r-- 1 runner runner 2615515 Jul 31 14:16 reports/manifes_pecahan_4.json
+-rw-r--r-- 1 runner runner 2865596 Jul 31 14:16 reports/manifes_pecahan_5.json
+-rw-r--r-- 1 runner runner 2780523 Jul 31 14:16 reports/manifes_pecahan_6.json
+-rw-r--r-- 1 runner runner 2450719 Jul 31 14:16 reports/manifes_pecahan_7.json
 keluaran: reports/penyebut_manifes.json 116722 B
 ringkas: reports/penyebut_manifes_ringkas.json 57737 B
 pecahan dibaca: 8
@@ -42,4 +42,5 @@ selisih_cacah_bulan.catatan => {"nilai": ["daftar bulan diambil dari arsip; caca
 selisih_cacah_bulan.contoh => {"nilai": [[], [], [], [], [], [], [], []]}
 selisih_cacah_bulan.contoh.__cacah => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
 kode_keluar=0
--rw-r--r-- 1 runner runner 116722 Jul 31 14:15 reports/penyebut_manifes.json
+-rw-r--r-- 1 runner runner 116722 Jul 31 14:16 reports/penyebut_manifes.json
+-rw-r--r-- 1 runner runner 57737 Jul 31 14:16 reports/penyebut_manifes_ringkas.json

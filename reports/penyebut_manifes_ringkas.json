@@ -1,0 +1,2758 @@
+{
+  "bukan_bukti": false,
+  "byte_manifes_total": 20533802,
+  "cacah_daun_ringkasan": 126,
+  "cacah_pecahan_dibaca": 8,
+  "catatan_batas": "nilai disalin apa adanya; modul ini tidak menghitung ulang isi manifes dan tidak menambal medan absen. Absen BUKAN nol.",
+  "catatan_gerbang": "nama klausa yang muncul di pelanggaran_per_klausa adalah klausa yang DILAPORKAN, belum tentu seluruh klausa yang DIPERIKSA. DILARANG menyimpulkan cacah klausa gerbang dari sini saja.",
+  "catatan_penggugur": "pecahan_hilang atau pecahan_rusak tidak kosong berarti laporan ini TIDAK cukup untuk memutuskan apa pun (aturan 24).",
+  "catatan_penyebut": "simbol_bulan_diminta dan simbol_bulan_terunduh adalah penyebut UNDUHAN per pecahan, BUKAN penyebut semesta 787 maupun 937. Menyamakannya tanpa uji adalah mengarang.",
+  "catatan_ringkas": "berkas ini adalah laporan yang SAMA tanpa badan per-pecahan; badan penuh ada di reports/penyebut_manifes.json. Tidak ada nilai yang diubah.",
+  "catatan_vonis": "laporan ini TIDAK mengubah vonis R-324; MELESET sudah sah dan final atas butir 1 dan butir 3 sejak jurnal 182 bagian 4.",
+  "jalur_penuh": "reports/penyebut_manifes.json",
+  "medan_bersarang_dirambah": [
+    "penyebut",
+    "gerbang",
+    "selisih_cacah_bulan",
+    "pecahan",
+    "mengemas",
+    "rilis",
+    "rilis_karantina",
+    "karantina",
+    "sumber_rentang",
+    "kelas_risiko_tersentuh",
+    "kelas_risiko_kosong"
+  ],
+  "medan_dilarang_dirambah": [
+    "manifes",
+    "daftar_karantina"
+  ],
+  "pecahan_hilang": [],
+  "pecahan_rusak": [],
+  "ringkasan": {
+    "__ada_daftar_karantina": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "__ada_manifes": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "byte_parquet_karantina_total": {
+      "jumlah": 13247705,
+      "nilai": [
+        3286672,
+        3167212,
+        0,
+        442398,
+        837910,
+        0,
+        4420728,
+        1092785
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        442398,
+        837910,
+        1092785,
+        3167212,
+        3286672,
+        4420728
+      ]
+    },
+    "byte_parquet_total": {
+      "jumlah": 32706262375,
+      "nilai": [
+        4120562805,
+        4269971639,
+        3834773373,
+        3382222173,
+        4199469659,
+        4574062521,
+        4449859316,
+        3875340889
+      ],
+      "seragam": false,
+      "unik": [
+        3382222173,
+        3834773373,
+        3875340889,
+        4120562805,
+        4199469659,
+        4269971639,
+        4449859316,
+        4574062521
+      ]
+    },
+    "byte_zip_total": {
+      "jumlah": 26532925083,
+      "nilai": [
+        3351290433,
+        3480701577,
+        3119597818,
+        2737326723,
+        3406744121,
+        3706400014,
+        3588759783,
+        3142104614
+      ],
+      "seragam": false,
+      "unik": [
+        2737326723,
+        3119597818,
+        3142104614,
+        3351290433,
+        3406744121,
+        3480701577,
+        3588759783,
+        3706400014
+      ]
+    },
+    "cacah_gagal_checksum": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "cacah_gagal_unduh": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "cacah_simbol_bulan_dengan_baris_dibuang": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "gerbang.__cacah_kunci": {
+      "jumlah": 64,
+      "nilai": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "seragam": true,
+      "unik": [
+        8
+      ]
+    },
+    "gerbang.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "gerbang.baris_diperiksa": {
+      "jumlah": 839842134,
+      "nilai": [
+        103264917,
+        105765980,
+        100058416,
+        91884319,
+        106865397,
+        117671896,
+        114013851,
+        100317358
+      ],
+      "seragam": false,
+      "unik": [
+        91884319,
+        100058416,
+        100317358,
+        103264917,
+        105765980,
+        106865397,
+        114013851,
+        117671896
+      ]
+    },
+    "gerbang.contoh_gagal": {
+      "nilai": [
+        null,
+        null,
+        [],
+        null,
+        null,
+        [],
+        null,
+        null
+      ],
+      "pecahan_absen": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    "gerbang.contoh_gagal.__cacah": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "gerbang.contoh_gagal.__kunci_anggota": {
+      "nilai": [
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ],
+        null,
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ],
+        null,
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "bulan",
+          "pelanggaran",
+          "simbol"
+        ]
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.__cacah_kunci": {
+      "jumlah": 48,
+      "nilai": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "seragam": true,
+      "unik": [
+        6
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.deret_tidak_kosong": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.jarak_60_detik": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.satuan_milidetik": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.selaras_menit": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.tanpa_duplikat": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "gerbang.pelanggaran_per_klausa.tanpa_menit_hilang": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "gerbang.persen_lolos": {
+      "jumlah": null,
+      "nilai": [
+        99.88,
+        99.88,
+        100.0,
+        99.95,
+        99.96,
+        100.0,
+        99.89,
+        99.96
+      ],
+      "seragam": false,
+      "unik": [
+        "100.0",
+        "99.88",
+        "99.89",
+        "99.95",
+        "99.96"
+      ]
+    },
+    "gerbang.simbol_bulan_dinilai": {
+      "jumlah": 19598,
+      "nilai": [
+        2411,
+        2468,
+        2337,
+        2154,
+        2497,
+        2741,
+        2652,
+        2338
+      ],
+      "seragam": false,
+      "unik": [
+        2154,
+        2337,
+        2338,
+        2411,
+        2468,
+        2497,
+        2652,
+        2741
+      ]
+    },
+    "gerbang.simbol_bulan_gagal": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "gerbang.simbol_bulan_lolos": {
+      "jumlah": 19586,
+      "nilai": [
+        2408,
+        2465,
+        2337,
+        2153,
+        2496,
+        2741,
+        2649,
+        2337
+      ],
+      "seragam": false,
+      "unik": [
+        2153,
+        2337,
+        2408,
+        2465,
+        2496,
+        2649,
+        2741
+      ]
+    },
+    "gerbang.slot_diperiksa": {
+      "jumlah": 839855709,
+      "nilai": [
+        103266792,
+        105768140,
+        100058416,
+        91884934,
+        106866447,
+        117671896,
+        114021051,
+        100318033
+      ],
+      "seragam": false,
+      "unik": [
+        91884934,
+        100058416,
+        100318033,
+        103266792,
+        105768140,
+        106866447,
+        114021051,
+        117671896
+      ]
+    },
+    "jenis_instrumen_unik": {
+      "nilai": [
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ],
+        [
+          "perpetual_usdt"
+        ]
+      ]
+    },
+    "jumlah_baris": {
+      "jumlah": 839842134,
+      "nilai": [
+        103264917,
+        105765980,
+        100058416,
+        91884319,
+        106865397,
+        117671896,
+        114013851,
+        100317358
+      ],
+      "seragam": false,
+      "unik": [
+        91884319,
+        100058416,
+        100317358,
+        103264917,
+        105765980,
+        106865397,
+        114013851,
+        117671896
+      ]
+    },
+    "jumlah_baris_dibuang": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "karantina.__cacah_kunci": {
+      "jumlah": 80,
+      "nilai": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "seragam": true,
+      "unik": [
+        10
+      ]
+    },
+    "karantina.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "karantina.batas_daftar": {
+      "jumlah": 4000,
+      "nilai": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "seragam": true,
+      "unik": [
+        500
+      ]
+    },
+    "karantina.byte_parquet_karantina": {
+      "jumlah": 13247705,
+      "nilai": [
+        3286672,
+        3167212,
+        0,
+        442398,
+        837910,
+        0,
+        4420728,
+        1092785
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        442398,
+        837910,
+        1092785,
+        3167212,
+        3286672,
+        4420728
+      ]
+    },
+    "karantina.cacah_dibuang": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "karantina.cacah_ditambal": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "karantina.cacah_karantina": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "karantina.cacah_tak_terunduh": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "karantina.catatan_penggugur": {
+      "jumlah": null,
+      "nilai": [
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)",
+        "cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)"
+      ],
+      "seragam": true,
+      "unik": [
+        "'cacah_dibuang atau cacah_ditambal tidak nol berarti ADR-A006 dilanggar; interpolasi, forward-fill, dan penurunan ambang gerbang DILARANG (aturan 23, 24)'"
+      ]
+    },
+    "karantina.daftar_karantina": {
+      "nilai": [
+        null,
+        null,
+        [],
+        null,
+        null,
+        [],
+        null,
+        null
+      ],
+      "pecahan_absen": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ]
+    },
+    "karantina.daftar_karantina.__cacah": {
+      "jumlah": 12,
+      "nilai": [
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        3,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        3
+      ]
+    },
+    "karantina.daftar_karantina.__kunci_anggota": {
+      "nilai": [
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ],
+        null,
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ],
+        null,
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ],
+        [
+          "baris",
+          "bulan",
+          "checksum_zip_sha256",
+          "parquet_karantina",
+          "pelanggaran",
+          "simbol"
+        ]
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ]
+    },
+    "karantina.daftar_terpotong": {
+      "jumlah": null,
+      "nilai": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "seragam": true,
+      "unik": [
+        "False"
+      ]
+    },
+    "karantina.kebijakan": {
+      "jumlah": null,
+      "nilai": [
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal",
+        "ADR-A006: disisihkan, bukan dibuang dan bukan ditambal"
+      ],
+      "seragam": true,
+      "unik": [
+        "'ADR-A006: disisihkan, bukan dibuang dan bukan ditambal'"
+      ]
+    },
+    "kelas_risiko_kosong": {
+      "nilai": [
+        [],
+        [],
+        [],
+        [
+          "non_ascii"
+        ],
+        [
+          "non_ascii"
+        ],
+        [
+          "non_ascii"
+        ],
+        [
+          "non_ascii"
+        ],
+        [
+          "non_ascii"
+        ]
+      ]
+    },
+    "kelas_risiko_kosong.__cacah": {
+      "jumlah": 5,
+      "nilai": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1
+      ]
+    },
+    "kelas_risiko_tersentuh.__cacah_kunci": {
+      "jumlah": 40,
+      "nilai": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "seragam": true,
+      "unik": [
+        5
+      ]
+    },
+    "kelas_risiko_tersentuh.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "kelas_risiko_tersentuh.bulan_awal_2020_2021": {
+      "jumlah": 1889,
+      "nilai": [
+        229,
+        204,
+        189,
+        164,
+        296,
+        297,
+        269,
+        241
+      ],
+      "seragam": false,
+      "unik": [
+        164,
+        189,
+        204,
+        229,
+        241,
+        269,
+        296,
+        297
+      ]
+    },
+    "kelas_risiko_tersentuh.kendali_baru": {
+      "jumlah": 10007,
+      "nilai": [
+        1214,
+        1302,
+        1317,
+        1151,
+        1227,
+        1307,
+        1311,
+        1178
+      ],
+      "seragam": false,
+      "unik": [
+        1151,
+        1178,
+        1214,
+        1227,
+        1302,
+        1307,
+        1311,
+        1317
+      ]
+    },
+    "kelas_risiko_tersentuh.non_ascii": {
+      "jumlah": 19,
+      "nilai": [
+        9,
+        6,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        4,
+        6,
+        9
+      ]
+    },
+    "kelas_risiko_tersentuh.pra_header": {
+      "jumlah": 1952,
+      "nilai": [
+        235,
+        216,
+        196,
+        166,
+        308,
+        305,
+        278,
+        248
+      ],
+      "seragam": false,
+      "unik": [
+        166,
+        196,
+        216,
+        235,
+        248,
+        278,
+        305,
+        308
+      ]
+    },
+    "kelas_risiko_tersentuh.terhenti": {
+      "jumlah": 587,
+      "nilai": [
+        110,
+        15,
+        10,
+        137,
+        119,
+        21,
+        56,
+        119
+      ],
+      "seragam": false,
+      "unik": [
+        10,
+        15,
+        21,
+        56,
+        110,
+        119,
+        137
+      ]
+    },
+    "mengemas": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "nisbah_parquet_per_zip": {
+      "jumlah": null,
+      "nilai": [
+        1.2295,
+        1.2268,
+        1.2293,
+        1.2356,
+        1.2327,
+        1.2341,
+        1.2399,
+        1.2334
+      ],
+      "seragam": false,
+      "unik": [
+        "1.2268",
+        "1.2293",
+        "1.2295",
+        "1.2327",
+        "1.2334",
+        "1.2341",
+        "1.2356",
+        "1.2399"
+      ]
+    },
+    "pecahan.__cacah_kunci": {
+      "jumlah": 40,
+      "nilai": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "seragam": true,
+      "unik": [
+        5
+      ]
+    },
+    "pecahan.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "pecahan.cacah_simbol": {
+      "jumlah": 787,
+      "nilai": [
+        99,
+        99,
+        99,
+        98,
+        98,
+        98,
+        98,
+        98
+      ],
+      "seragam": false,
+      "unik": [
+        98,
+        99
+      ]
+    },
+    "pecahan.cacah_simbol_gagal_daftar": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "pecahan.contoh_gagal_daftar": {
+      "nilai": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "pecahan.contoh_gagal_daftar.__cacah": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "pecahan.indeks": {
+      "jumlah": 28,
+      "nilai": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "seragam": false,
+      "unik": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "pecahan.total": {
+      "jumlah": 64,
+      "nilai": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "seragam": true,
+      "unik": [
+        8
+      ]
+    },
+    "penyebut.__cacah_kunci": {
+      "jumlah": 16,
+      "nilai": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "seragam": true,
+      "unik": [
+        2
+      ]
+    },
+    "penyebut.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "penyebut.simbol_bulan_diminta": {
+      "jumlah": 19598,
+      "nilai": [
+        2411,
+        2468,
+        2337,
+        2154,
+        2497,
+        2741,
+        2652,
+        2338
+      ],
+      "seragam": false,
+      "unik": [
+        2154,
+        2337,
+        2338,
+        2411,
+        2468,
+        2497,
+        2652,
+        2741
+      ]
+    },
+    "penyebut.simbol_bulan_terunduh": {
+      "jumlah": 19598,
+      "nilai": [
+        2411,
+        2468,
+        2337,
+        2154,
+        2497,
+        2741,
+        2652,
+        2338
+      ],
+      "seragam": false,
+      "unik": [
+        2154,
+        2337,
+        2338,
+        2411,
+        2468,
+        2497,
+        2652,
+        2741
+      ]
+    },
+    "rilis.__cacah_kunci": {
+      "jumlah": 160,
+      "nilai": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "seragam": true,
+      "unik": [
+        20
+      ]
+    },
+    "rilis.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "rilis.bagian.__cacah": {
+      "jumlah": 23,
+      "nilai": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "seragam": false,
+      "unik": [
+        2,
+        3
+      ]
+    },
+    "rilis.bagian.__kunci_anggota": {
+      "nilai": [
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ]
+      ]
+    },
+    "rilis.batas_byte": {
+      "jumlah": 14400000000,
+      "nilai": [
+        1800000000,
+        1800000000,
+        1800000000,
+        1800000000,
+        1800000000,
+        1800000000,
+        1800000000,
+        1800000000
+      ],
+      "seragam": true,
+      "unik": [
+        1800000000
+      ]
+    },
+    "rilis.berkas_sums": {
+      "jumlah": null,
+      "nilai": [
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS",
+        "data/rilis/SHA256SUMS"
+      ],
+      "seragam": true,
+      "unik": [
+        "'data/rilis/SHA256SUMS'"
+      ]
+    },
+    "rilis.byte_anggota_total": {
+      "jumlah": 32706262375,
+      "nilai": [
+        4120562805,
+        4269971639,
+        3834773373,
+        3382222173,
+        4199469659,
+        4574062521,
+        4449859316,
+        3875340889
+      ],
+      "seragam": false,
+      "unik": [
+        3382222173,
+        3834773373,
+        3875340889,
+        4120562805,
+        4199469659,
+        4269971639,
+        4449859316,
+        4574062521
+      ]
+    },
+    "rilis.byte_bagian_total": {
+      "jumlah": 32741447680,
+      "nilai": [
+        4124907520,
+        4274391040,
+        3838976000,
+        3386091520,
+        4203950080,
+        4578979840,
+        4454615040,
+        3879536640
+      ],
+      "seragam": false,
+      "unik": [
+        3386091520,
+        3838976000,
+        3879536640,
+        4124907520,
+        4203950080,
+        4274391040,
+        4454615040,
+        4578979840
+      ]
+    },
+    "rilis.cacah_bagian": {
+      "jumlah": 23,
+      "nilai": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "seragam": false,
+      "unik": [
+        2,
+        3
+      ]
+    },
+    "rilis.cacah_bagian_melebihi_batas": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "rilis.cacah_bagian_taksiran_terlampaui": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "rilis.cacah_berkas": {
+      "jumlah": 19586,
+      "nilai": [
+        2408,
+        2465,
+        2337,
+        2153,
+        2496,
+        2741,
+        2649,
+        2337
+      ],
+      "seragam": false,
+      "unik": [
+        2153,
+        2337,
+        2408,
+        2465,
+        2496,
+        2649,
+        2741
+      ]
+    },
+    "rilis.cacah_berkas_hilang": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "rilis.cacah_berkas_melebihi_batas": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "rilis.catatan_kompresi": {
+      "jumlah": null,
+      "nilai": [
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte"
+      ],
+      "seragam": true,
+      "unik": [
+        "'tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte'"
+      ]
+    },
+    "rilis.catatan_penggugur": {
+      "jumlah": null,
+      "nilai": [
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]"
+      ],
+      "seragam": true,
+      "unik": [
+        "'cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]'"
+      ]
+    },
+    "rilis.kepala_anggota": {
+      "jumlah": 12288,
+      "nilai": [
+        1536,
+        1536,
+        1536,
+        1536,
+        1536,
+        1536,
+        1536,
+        1536
+      ],
+      "seragam": true,
+      "unik": [
+        1536
+      ]
+    },
+    "rilis.margin_rekam": {
+      "jumlah": 163840,
+      "nilai": [
+        20480,
+        20480,
+        20480,
+        20480,
+        20480,
+        20480,
+        20480,
+        20480
+      ],
+      "seragam": true,
+      "unik": [
+        20480
+      ]
+    },
+    "rilis.nama_dasar": {
+      "jumlah": null,
+      "nilai": [
+        "pecahan_0",
+        "pecahan_1",
+        "pecahan_2",
+        "pecahan_3",
+        "pecahan_4",
+        "pecahan_5",
+        "pecahan_6",
+        "pecahan_7"
+      ],
+      "seragam": false,
+      "unik": [
+        "'pecahan_0'",
+        "'pecahan_1'",
+        "'pecahan_2'",
+        "'pecahan_3'",
+        "'pecahan_4'",
+        "'pecahan_5'",
+        "'pecahan_6'",
+        "'pecahan_7'"
+      ]
+    },
+    "rilis.nama_sums": {
+      "jumlah": null,
+      "nilai": [
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS",
+        "SHA256SUMS"
+      ],
+      "seragam": true,
+      "unik": [
+        "'SHA256SUMS'"
+      ]
+    },
+    "rilis.nisbah_bagian_per_anggota": {
+      "jumlah": null,
+      "nilai": [
+        1.001054,
+        1.001035,
+        1.001096,
+        1.001144,
+        1.001067,
+        1.001075,
+        1.001069,
+        1.001083
+      ],
+      "seragam": false,
+      "unik": [
+        "1.001035",
+        "1.001054",
+        "1.001067",
+        "1.001069",
+        "1.001075",
+        "1.001083",
+        "1.001096",
+        "1.001144"
+      ]
+    },
+    "rilis.rekam_tar": {
+      "jumlah": 81920,
+      "nilai": [
+        10240,
+        10240,
+        10240,
+        10240,
+        10240,
+        10240,
+        10240,
+        10240
+      ],
+      "seragam": true,
+      "unik": [
+        10240
+      ]
+    },
+    "rilis.status": {
+      "jumlah": null,
+      "nilai": [
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS",
+        "TERKEMAS"
+      ],
+      "seragam": true,
+      "unik": [
+        "'TERKEMAS'"
+      ]
+    },
+    "rilis_karantina": {
+      "jumlah": null,
+      "nilai": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pecahan_absen": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "seragam": true,
+      "unik": [
+        "None"
+      ]
+    },
+    "rilis_karantina.__cacah_kunci": {
+      "jumlah": null,
+      "nilai": [
+        20,
+        20,
+        null,
+        20,
+        20,
+        null,
+        20,
+        20
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "20",
+        "None"
+      ]
+    },
+    "rilis_karantina.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        null,
+        true,
+        true,
+        null,
+        true,
+        true
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "None",
+        "True"
+      ]
+    },
+    "rilis_karantina.bagian.__cacah": {
+      "jumlah": null,
+      "nilai": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1",
+        "None"
+      ]
+    },
+    "rilis_karantina.bagian.__kunci_anggota": {
+      "nilai": [
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        null,
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        null,
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ],
+        [
+          "byte",
+          "byte_taksir",
+          "byte_taksir_dibulatkan",
+          "cacah_berkas",
+          "jalur",
+          "melebihi_batas",
+          "nama",
+          "sha256",
+          "taksiran_terlampaui"
+        ]
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ]
+    },
+    "rilis_karantina.batas_byte": {
+      "jumlah": null,
+      "nilai": [
+        1800000000,
+        1800000000,
+        null,
+        1800000000,
+        1800000000,
+        null,
+        1800000000,
+        1800000000
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1800000000",
+        "None"
+      ]
+    },
+    "rilis_karantina.berkas_sums": {
+      "jumlah": null,
+      "nilai": [
+        "data/rilis/SHA256SUMS_KARANTINA",
+        "data/rilis/SHA256SUMS_KARANTINA",
+        null,
+        "data/rilis/SHA256SUMS_KARANTINA",
+        "data/rilis/SHA256SUMS_KARANTINA",
+        null,
+        "data/rilis/SHA256SUMS_KARANTINA",
+        "data/rilis/SHA256SUMS_KARANTINA"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'data/rilis/SHA256SUMS_KARANTINA'",
+        "None"
+      ]
+    },
+    "rilis_karantina.byte_anggota_total": {
+      "jumlah": null,
+      "nilai": [
+        3286672,
+        3167212,
+        null,
+        442398,
+        837910,
+        null,
+        4420728,
+        1092785
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1092785",
+        "3167212",
+        "3286672",
+        "4420728",
+        "442398",
+        "837910",
+        "None"
+      ]
+    },
+    "rilis_karantina.byte_bagian_total": {
+      "jumlah": null,
+      "nilai": [
+        3297280,
+        3174400,
+        null,
+        450560,
+        849920,
+        null,
+        4433920,
+        1095680
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1095680",
+        "3174400",
+        "3297280",
+        "4433920",
+        "450560",
+        "849920",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_bagian": {
+      "jumlah": null,
+      "nilai": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_bagian_melebihi_batas": {
+      "jumlah": null,
+      "nilai": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "0",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_bagian_taksiran_terlampaui": {
+      "jumlah": null,
+      "nilai": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "0",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_berkas": {
+      "jumlah": null,
+      "nilai": [
+        3,
+        3,
+        null,
+        1,
+        1,
+        null,
+        3,
+        1
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1",
+        "3",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_berkas_hilang": {
+      "jumlah": null,
+      "nilai": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "0",
+        "None"
+      ]
+    },
+    "rilis_karantina.cacah_berkas_melebihi_batas": {
+      "jumlah": null,
+      "nilai": [
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "0",
+        "None"
+      ]
+    },
+    "rilis_karantina.catatan_kompresi": {
+      "jumlah": null,
+      "nilai": [
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        null,
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        null,
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte",
+        "tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'tar tanpa gzip: parquet sudah terkompresi, jadi nisbah bagian per anggota mendekati 1 dan selisihnya adalah kepala 1.536 byte per anggota (termasuk pax 1.024), pembulatan rekam 10.240 byte, dan margin 20.480 byte'",
+        "None"
+      ]
+    },
+    "rilis_karantina.catatan_penggugur": {
+      "jumlah": null,
+      "nilai": [
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        null,
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        null,
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]",
+        "cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'cacah_bagian_melebihi_batas > 0 berarti ada aset yang akan ditolak batas 2 GB rilis GitHub; cacah_bagian_taksiran_terlampaui > 0 berarti model ukuran lebih kecil daripada tar nyata dan tidak boleh dipercaya; cacah_berkas_hilang > 0 berarti ...[dipotong 342 aksara]'",
+        "None"
+      ]
+    },
+    "rilis_karantina.kepala_anggota": {
+      "jumlah": null,
+      "nilai": [
+        1536,
+        1536,
+        null,
+        1536,
+        1536,
+        null,
+        1536,
+        1536
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1536",
+        "None"
+      ]
+    },
+    "rilis_karantina.margin_rekam": {
+      "jumlah": null,
+      "nilai": [
+        20480,
+        20480,
+        null,
+        20480,
+        20480,
+        null,
+        20480,
+        20480
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "20480",
+        "None"
+      ]
+    },
+    "rilis_karantina.nama_dasar": {
+      "jumlah": null,
+      "nilai": [
+        "pecahan_0_karantina",
+        "pecahan_1_karantina",
+        null,
+        "pecahan_3_karantina",
+        "pecahan_4_karantina",
+        null,
+        "pecahan_6_karantina",
+        "pecahan_7_karantina"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'pecahan_0_karantina'",
+        "'pecahan_1_karantina'",
+        "'pecahan_3_karantina'",
+        "'pecahan_4_karantina'",
+        "'pecahan_6_karantina'",
+        "'pecahan_7_karantina'",
+        "None"
+      ]
+    },
+    "rilis_karantina.nama_sums": {
+      "jumlah": null,
+      "nilai": [
+        "SHA256SUMS_KARANTINA",
+        "SHA256SUMS_KARANTINA",
+        null,
+        "SHA256SUMS_KARANTINA",
+        "SHA256SUMS_KARANTINA",
+        null,
+        "SHA256SUMS_KARANTINA",
+        "SHA256SUMS_KARANTINA"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'SHA256SUMS_KARANTINA'",
+        "None"
+      ]
+    },
+    "rilis_karantina.nisbah_bagian_per_anggota": {
+      "jumlah": null,
+      "nilai": [
+        1.003228,
+        1.00227,
+        null,
+        1.018449,
+        1.014333,
+        null,
+        1.002984,
+        1.002649
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "1.00227",
+        "1.002649",
+        "1.002984",
+        "1.003228",
+        "1.014333",
+        "1.018449",
+        "None"
+      ]
+    },
+    "rilis_karantina.rekam_tar": {
+      "jumlah": null,
+      "nilai": [
+        10240,
+        10240,
+        null,
+        10240,
+        10240,
+        null,
+        10240,
+        10240
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "10240",
+        "None"
+      ]
+    },
+    "rilis_karantina.status": {
+      "jumlah": null,
+      "nilai": [
+        "TERKEMAS",
+        "TERKEMAS",
+        null,
+        "TERKEMAS",
+        "TERKEMAS",
+        null,
+        "TERKEMAS",
+        "TERKEMAS"
+      ],
+      "pecahan_absen": [
+        2,
+        5
+      ],
+      "seragam": false,
+      "unik": [
+        "'TERKEMAS'",
+        "None"
+      ]
+    },
+    "selisih_cacah_bulan.__cacah_kunci": {
+      "jumlah": 24,
+      "nilai": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "seragam": true,
+      "unik": [
+        3
+      ]
+    },
+    "selisih_cacah_bulan.__dirambah": {
+      "jumlah": null,
+      "nilai": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "seragam": true,
+      "unik": [
+        "True"
+      ]
+    },
+    "selisih_cacah_bulan.cacah_simbol_berselisih": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "selisih_cacah_bulan.catatan": {
+      "jumlah": null,
+      "nilai": [
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).",
+        "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36)."
+      ],
+      "seragam": true,
+      "unik": [
+        "'daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).'"
+      ]
+    },
+    "selisih_cacah_bulan.contoh": {
+      "nilai": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
+    },
+    "selisih_cacah_bulan.contoh.__cacah": {
+      "jumlah": 0,
+      "nilai": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "seragam": true,
+      "unik": [
+        0
+      ]
+    },
+    "sidik_data": {
+      "jumlah": null,
+      "nilai": [
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806",
+        "6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806"
+      ],
+      "seragam": true,
+      "unik": [
+        "'6128fbb0ceac0c8e5dfbfefd2bd9e49c66aa77af15d4b0082243a8f7f7e43806'"
+      ]
+    },
+    "sidik_kode": {
+      "jumlah": null,
+      "nilai": [
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601"
+      ],
+      "seragam": true,
+      "unik": [
+        "'237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601'"
+      ]
+    },
+    "status": {
+      "jumlah": null,
+      "nilai": [
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR",
+        "TERUKUR"
+      ],
+      "seragam": true,
+      "unik": [
+        "'TERUKUR'"
+      ]
+    },
+    "sumber_rentang": {
+      "jumlah": null,
+      "nilai": [
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json",
+        "reports/semesta_rentang.json"
+      ],
+      "seragam": true,
+      "unik": [
+        "'reports/semesta_rentang.json'"
+      ]
+    },
+    "versi_pecahan": {
+      "jumlah": 48,
+      "nilai": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "seragam": true,
+      "unik": [
+        6
+      ]
+    },
+    "waktu_utc": {
+      "jumlah": null,
+      "nilai": [
+        "2026-07-28T21:22:42Z",
+        "2026-07-28T21:44:49Z",
+        "2026-07-28T21:39:12Z",
+        "2026-07-28T21:35:18Z",
+        "2026-07-28T21:31:36Z",
+        "2026-07-28T21:55:48Z",
+        "2026-07-28T21:28:28Z",
+        "2026-07-28T21:37:54Z"
+      ],
+      "seragam": false,
+      "unik": [
+        "'2026-07-28T21:22:42Z'",
+        "'2026-07-28T21:28:28Z'",
+        "'2026-07-28T21:31:36Z'",
+        "'2026-07-28T21:35:18Z'",
+        "'2026-07-28T21:37:54Z'",
+        "'2026-07-28T21:39:12Z'",
+        "'2026-07-28T21:44:49Z'",
+        "'2026-07-28T21:55:48Z'"
+      ]
+    }
+  },
+  "sasaran_utang_41": {
+    "penyebut.simbol_bulan_diminta": {
+      "jumlah": 19598,
+      "nilai": [
+        2411,
+        2468,
+        2337,
+        2154,
+        2497,
+        2741,
+        2652,
+        2338
+      ],
+      "seragam": false,
+      "unik": [
+        2154,
+        2337,
+        2338,
+        2411,
+        2468,
+        2497,
+        2652,
+        2741
+      ]
+    },
+    "penyebut.simbol_bulan_terunduh": {
+      "jumlah": 19598,
+      "nilai": [
+        2411,
+        2468,
+        2337,
+        2154,
+        2497,
+        2741,
+        2652,
+        2338
+      ],
+      "seragam": false,
+      "unik": [
+        2154,
+        2337,
+        2338,
+        2411,
+        2468,
+        2497,
+        2652,
+        2741
+      ]
+    }
+  },
+  "sidik_kode": "f213eb84b70f05ba7f0dceaae8ad387d61ef4295bdd938ad252ea76fdcb79198",
+  "total_pecahan_diminta": 8,
+  "versi_penyebut_manifes": 2,
+  "waktu_utc": "2026-07-31T14:16:39Z"
+}

@@ -3,8 +3,9 @@
   "byte_manifes_total": 20533802,
   "cacah_pecahan_dibaca": 8,
   "catatan_batas": "nilai disalin apa adanya; modul ini tidak menghitung ulang isi manifes dan tidak menambal medan absen. Absen BUKAN nol.",
+  "catatan_gerbang": "nama klausa yang muncul di pelanggaran_per_klausa adalah klausa yang DILAPORKAN, belum tentu seluruh klausa yang DIPERIKSA. DILARANG menyimpulkan cacah klausa gerbang dari sini saja.",
   "catatan_penggugur": "pecahan_hilang atau pecahan_rusak tidak kosong berarti laporan ini TIDAK cukup untuk memutuskan apa pun (aturan 24).",
-  "catatan_penyebut": "bila simbol_bulan_diminta dan simbol_bulan_terunduh terbaca, angkanya adalah penyebut UNDUHAN per pecahan, BUKAN penyebut semesta 787 maupun 937. Menyamakannya tanpa uji adalah mengarang.",
+  "catatan_penyebut": "simbol_bulan_diminta dan simbol_bulan_terunduh adalah penyebut UNDUHAN per pecahan, BUKAN penyebut semesta 787 maupun 937. Menyamakannya tanpa uji adalah mengarang.",
   "catatan_vonis": "laporan ini TIDAK mengubah vonis R-324; MELESET sudah sah dan final atas butir 1 dan butir 3 sejak jurnal 182 bagian 4.",
   "medan_bersarang_dirambah": [
     "penyebut",
@@ -4009,8 +4010,8 @@
       ]
     }
   },
-  "sidik_kode": "55fc60016f5e0b0c4e9a4ff801ce3e80b45bafad5e04cef83602ea5e1a956a1e",
+  "sidik_kode": "f213eb84b70f05ba7f0dceaae8ad387d61ef4295bdd938ad252ea76fdcb79198",
   "total_pecahan_diminta": 8,
-  "versi_penyebut_manifes": 1,
-  "waktu_utc": "2026-07-31T14:13:08Z"
+  "versi_penyebut_manifes": 2,
+  "waktu_utc": "2026-07-31T14:15:58Z"
 }

@@ -1,17 +1,45 @@
-mulai 2026-07-31T14:13:08Z
+mulai 2026-07-31T14:15:57Z
 Python 3.11.15
--rw-r--r-- 1 runner runner 2530465 Jul 31 14:13 reports/manifes_pecahan_0.json
--rw-r--r-- 1 runner runner 2587577 Jul 31 14:13 reports/manifes_pecahan_1.json
--rw-r--r-- 1 runner runner 2446093 Jul 31 14:13 reports/manifes_pecahan_2.json
--rw-r--r-- 1 runner runner 2257314 Jul 31 14:13 reports/manifes_pecahan_3.json
--rw-r--r-- 1 runner runner 2615515 Jul 31 14:13 reports/manifes_pecahan_4.json
--rw-r--r-- 1 runner runner 2865596 Jul 31 14:13 reports/manifes_pecahan_5.json
--rw-r--r-- 1 runner runner 2780523 Jul 31 14:13 reports/manifes_pecahan_6.json
--rw-r--r-- 1 runner runner 2450719 Jul 31 14:13 reports/manifes_pecahan_7.json
-keluaran: reports/penyebut_manifes.json 116538 B
+-rw-r--r-- 1 runner runner 2530465 Jul 31 14:15 reports/manifes_pecahan_0.json
+-rw-r--r-- 1 runner runner 2587577 Jul 31 14:15 reports/manifes_pecahan_1.json
+-rw-r--r-- 1 runner runner 2446093 Jul 31 14:15 reports/manifes_pecahan_2.json
+-rw-r--r-- 1 runner runner 2257314 Jul 31 14:15 reports/manifes_pecahan_3.json
+-rw-r--r-- 1 runner runner 2615515 Jul 31 14:15 reports/manifes_pecahan_4.json
+-rw-r--r-- 1 runner runner 2865596 Jul 31 14:15 reports/manifes_pecahan_5.json
+-rw-r--r-- 1 runner runner 2780523 Jul 31 14:15 reports/manifes_pecahan_6.json
+-rw-r--r-- 1 runner runner 2450719 Jul 31 14:15 reports/manifes_pecahan_7.json
+keluaran: reports/penyebut_manifes.json 116722 B
+ringkas: reports/penyebut_manifes_ringkas.json 57737 B
 pecahan dibaca: 8
 hilang: [] rusak: []
+gerbang.__cacah_kunci => {"nilai": [8, 8, 8, 8, 8, 8, 8, 8], "jumlah": 64, "unik": [8], "seragam": true}
+gerbang.__dirambah => {"nilai": [true, true, true, true, true, true, true, true], "unik": ["True"], "seragam": true, "jumlah": null}
+gerbang.baris_diperiksa => {"nilai": [103264917, 105765980, 100058416, 91884319, 106865397, 117671896, 114013851, 100317358], "jumlah": 839842134, "unik": [91884319, 100058416, 100317358, 103264917, 105765980, 106865397, 114013851, 117671896], "seragam": false}
+gerbang.contoh_gagal => {"nilai": [null, null, [], null, null, [], null, null], "pecahan_absen": [0, 1, 3, 4, 6, 7]}
+gerbang.contoh_gagal.__cacah => {"nilai": [3, 3, 0, 1, 1, 0, 3, 1], "jumlah": 12, "unik": [0, 1, 3], "seragam": false}
+gerbang.contoh_gagal.__kunci_anggota => {"nilai": [["bulan", "pelanggaran", "simbol"], ["bulan", "pelanggaran", "simbol"], null, ["bulan", "pelanggaran", "simbol"], ["bulan", "pelanggaran", "simbol"], null, ["bulan", "pelanggaran", "simbol"], ["bulan", "pelanggaran", "simbol"]], "pecahan_absen": [2, 5]}
+gerbang.pelanggaran_per_klausa.__cacah_kunci => {"nilai": [6, 6, 6, 6, 6, 6, 6, 6], "jumlah": 48, "unik": [6], "seragam": true}
+gerbang.pelanggaran_per_klausa.__dirambah => {"nilai": [true, true, true, true, true, true, true, true], "unik": ["True"], "seragam": true, "jumlah": null}
+gerbang.pelanggaran_per_klausa.deret_tidak_kosong => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
+gerbang.pelanggaran_per_klausa.jarak_60_detik => {"nilai": [3, 3, 0, 1, 1, 0, 3, 1], "jumlah": 12, "unik": [0, 1, 3], "seragam": false}
+gerbang.pelanggaran_per_klausa.satuan_milidetik => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
+gerbang.pelanggaran_per_klausa.selaras_menit => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
+gerbang.pelanggaran_per_klausa.tanpa_duplikat => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
+gerbang.pelanggaran_per_klausa.tanpa_menit_hilang => {"nilai": [3, 3, 0, 1, 1, 0, 3, 1], "jumlah": 12, "unik": [0, 1, 3], "seragam": false}
+gerbang.persen_lolos => {"nilai": [99.88, 99.88, 100.0, 99.95, 99.96, 100.0, 99.89, 99.96], "unik": ["100.0", "99.88", "99.89", "99.95", "99.96"], "seragam": false, "jumlah": null}
+gerbang.simbol_bulan_dinilai => {"nilai": [2411, 2468, 2337, 2154, 2497, 2741, 2652, 2338], "jumlah": 19598, "unik": [2154, 2337, 2338, 2411, 2468, 2497, 2652, 2741], "seragam": false}
+gerbang.simbol_bulan_gagal => {"nilai": [3, 3, 0, 1, 1, 0, 3, 1], "jumlah": 12, "unik": [0, 1, 3], "seragam": false}
+gerbang.simbol_bulan_lolos => {"nilai": [2408, 2465, 2337, 2153, 2496, 2741, 2649, 2337], "jumlah": 19586, "unik": [2153, 2337, 2408, 2465, 2496, 2649, 2741], "seragam": false}
+gerbang.slot_diperiksa => {"nilai": [103266792, 105768140, 100058416, 91884934, 106866447, 117671896, 114021051, 100318033], "jumlah": 839855709, "unik": [91884934, 100058416, 100318033, 103266792, 105768140, 106866447, 114021051, 117671896], "seragam": false}
+penyebut.__cacah_kunci => {"nilai": [2, 2, 2, 2, 2, 2, 2, 2], "jumlah": 16, "unik": [2], "seragam": true}
+penyebut.__dirambah => {"nilai": [true, true, true, true, true, true, true, true], "unik": ["True"], "seragam": true, "jumlah": null}
 penyebut.simbol_bulan_diminta => {"nilai": [2411, 2468, 2337, 2154, 2497, 2741, 2652, 2338], "jumlah": 19598, "unik": [2154, 2337, 2338, 2411, 2468, 2497, 2652, 2741], "seragam": false}
 penyebut.simbol_bulan_terunduh => {"nilai": [2411, 2468, 2337, 2154, 2497, 2741, 2652, 2338], "jumlah": 19598, "unik": [2154, 2337, 2338, 2411, 2468, 2497, 2652, 2741], "seragam": false}
+selisih_cacah_bulan.__cacah_kunci => {"nilai": [3, 3, 3, 3, 3, 3, 3, 3], "jumlah": 24, "unik": [3], "seragam": true}
+selisih_cacah_bulan.__dirambah => {"nilai": [true, true, true, true, true, true, true, true], "unik": ["True"], "seragam": true, "jumlah": null}
+selisih_cacah_bulan.cacah_simbol_berselisih => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
+selisih_cacah_bulan.catatan => {"nilai": ["daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).", "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json berasal dari survei terdahulu. Selisih dicatat, tidak dibulatkan hilang (aturan 36).", "daftar bulan diambil dari arsip; cacah_bulan di semesta_rentang.json beras
+selisih_cacah_bulan.contoh => {"nilai": [[], [], [], [], [], [], [], []]}
+selisih_cacah_bulan.contoh.__cacah => {"nilai": [0, 0, 0, 0, 0, 0, 0, 0], "jumlah": 0, "unik": [0], "seragam": true}
 kode_keluar=0
--rw-r--r-- 1 runner runner 116538 Jul 31 14:13 reports/penyebut_manifes.json
+-rw-r--r-- 1 runner runner 116722 Jul 31 14:15 reports/penyebut_manifes.json

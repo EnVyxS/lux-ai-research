@@ -1,0 +1,21 @@
+mulai 2026-07-31T10:47:58Z
+Python 3.11.15
+--- ls -l kandidat ---
+-rw-r--r-- 1 runner runner 394142 Jul 31 10:47 reports/funding_semesta.json
+-rw-r--r-- 1 runner runner  10843 Jul 31 10:47 reports/hidup_tanpa_funding.json
+-rw-r--r-- 1 runner runner 280587 Jul 31 10:47 reports/kehidupan.json
+-rw-r--r-- 1 runner runner  18884 Jul 31 10:47 reports/semesta_bulan_1m.json
+-rw-r--r-- 1 runner runner 194728 Jul 31 10:47 reports/silang_funding.json
+--- mulai jalan ---
+kandidat_hilang=[]
+kandidat_bergalat=[]
+jangkauan_maksimum_funding=500
+funding_semesta: puncak=peta kard_puncak=47 wadah=3201 maks=787 maks_funding=500 w33=0
+silang_funding: puncak=peta kard_puncak=17 wadah=1459 maks=1401 maks_funding=33 w33=1
+hidup_tanpa_funding: puncak=peta kard_puncak=17 wadah=43 maks=33 maks_funding=33 w33=1
+kehidupan: puncak=peta kard_puncak=21 wadah=928 maks=456 maks_funding=0 w33=0
+semesta_bulan_1m: puncak=peta kard_puncak=2 wadah=2 maks=937 maks_funding=0 w33=0
+lima_simbol_htf={"BNXUSDT": 10, "ICPUSDT": 13, "JUPUSDT": 1, "QTUMUSDT": 1, "TLMUSDT": 11}
+byte_laporan=24963
+kode_keluar=0
+--- selesai jalan kode=0 ---

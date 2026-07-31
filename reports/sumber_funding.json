@@ -1,0 +1,913 @@
+{
+  "bukan_bukti": false,
+  "jangkauan_maksimum_funding": 500,
+  "kandidat": {
+    "funding_semesta": {
+      "ada": true,
+      "byte": 394142,
+      "cacah_enam_sel": {
+        "18054": 0,
+        "2": 120,
+        "33": 25,
+        "559": 0,
+        "842": 0,
+        "96": 0
+      },
+      "cacah_kardinalitas_penting_sebagai_bilangan": {
+        "19586": 0,
+        "19598": 1,
+        "33": 25,
+        "787": 2
+      },
+      "cacah_lima_simbol": {
+        "BNXUSDT": 4,
+        "ICPUSDT": 1,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 1
+      },
+      "cacah_lima_simbol_dalam_wadah_33": {},
+      "cacah_lima_simbol_jumlah": 8,
+      "cacah_lima_simbol_sebagai_kunci": {},
+      "cacah_lima_simbol_sebagai_nilai": {
+        "BNXUSDT": 4,
+        "ICPUSDT": 1,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 1
+      },
+      "cacah_wadah": 3201,
+      "jalur_enam_sel": {
+        "18054": [],
+        "2": [
+          ".kelas_risiko_tersentuh.kendali_baru",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang",
+          ".per_simbol[].jarak_bulan_terakhir",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].bentuk_lubang.ekor",
+          ".per_simbol[].bentuk_lubang.hilang"
+        ],
+        "33": [
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines",
+          ".per_simbol[].cacah_bulan_funding",
+          ".per_simbol[].cacah_bulan_klines"
+        ],
+        "559": [],
+        "842": [],
+        "96": []
+      },
+      "kardinalitas_maksimum": 787,
+      "kardinalitas_maksimum_funding": 500,
+      "kardinalitas_puncak": 47,
+      "kedalaman_terpotong": 0,
+      "kunci_puncak": [
+        "batas_daftar",
+        "bentuk_lubang",
+        "berkas_daftar_penuh",
+        "berkas_dicap",
+        "bukan_bukti",
+        "byte_zip_sampel_maks",
+        "byte_zip_sampel_min",
+        "cacah_bulan_funding_tanpa_klines",
+        "cacah_bulan_klines_tanpa_funding",
+        "cacah_sampel",
+        "cacah_sampel_gagal_checksum",
+        "cacah_sampel_gagal_unduh",
+        "cacah_simbol_gagal_daftar",
+        "cacah_simbol_tanpa_funding_sama_sekali",
+        "catatan_bentuk_lubang",
+        "catatan_bukan_bukti",
+        "catatan_jarak",
+        "catatan_kelas_kosong",
+        "catatan_kohort",
+        "catatan_metode",
+        "catatan_penggugur",
+        "catatan_rentang",
+        "catatan_uji_cdn",
+        "contoh_gagal_daftar",
+        "daftar_funding_tanpa_klines",
+        "daftar_klines_tanpa_funding",
+        "daftar_terpotong",
+        "histogram_jarak_bulan_terakhir",
+        "histogram_mulai_lubang_ekor",
+        "kelas_risiko_kosong",
+        "kelas_risiko_tersentuh",
+        "kohort_puncak",
+        "penyebut",
+        "per_simbol",
+        "puncak_mulai_lubang_ekor",
+        "sampel",
+        "sampel_ringkas",
+        "selisih_histogram",
+        "selisih_klasifikasi",
+        "selisih_kohort",
+        "sidik_data",
+        "sidik_kode",
+        "status",
+        "sumber_rentang",
+        "uji_cdn",
+        "versi_funding",
+        "waktu_utc"
+      ],
+      "kunci_puncak_dipotong": false,
+      "kunci_puncak_penyebut": 47,
+      "sebaran_kardinalitas_dipotong": false,
+      "sebaran_kardinalitas_penyebut": 24,
+      "sebaran_kardinalitas_teratas": [
+        {
+          "cacah_wadah": 1434,
+          "kardinalitas": 0
+        },
+        {
+          "cacah_wadah": 798,
+          "kardinalitas": 4
+        },
+        {
+          "cacah_wadah": 789,
+          "kardinalitas": 10
+        },
+        {
+          "cacah_wadah": 38,
+          "kardinalitas": 12
+        },
+        {
+          "cacah_wadah": 31,
+          "kardinalitas": 7
+        },
+        {
+          "cacah_wadah": 24,
+          "kardinalitas": 2
+        },
+        {
+          "cacah_wadah": 19,
+          "kardinalitas": 1
+        },
+        {
+          "cacah_wadah": 15,
+          "kardinalitas": 3
+        },
+        {
+          "cacah_wadah": 13,
+          "kardinalitas": 5
+        },
+        {
+          "cacah_wadah": 7,
+          "kardinalitas": 9
+        },
+        {
+          "cacah_wadah": 7,
+          "kardinalitas": 8
+        },
+        {
+          "cacah_wadah": 7,
+          "kardinalitas": 6
+        },
+        {
+          "cacah_wadah": 4,
+          "kardinalitas": 14
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 21
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 20
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 13
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 11
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 787
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 500
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 87
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 47
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 38
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 22
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 16
+        }
+      ],
+      "tipe_puncak": "peta",
+      "wadah_panjang_33": [],
+      "wadah_panjang_33_dipotong": false,
+      "wadah_panjang_33_penyebut": 0,
+      "wadah_penting": [
+        {
+          "jalur": ".per_simbol",
+          "kardinalitas": 787,
+          "tipe": "larik"
+        }
+      ],
+      "wadah_penting_dipotong": false,
+      "wadah_penting_penyebut": 1
+    },
+    "hidup_tanpa_funding": {
+      "ada": true,
+      "byte": 10843,
+      "cacah_enam_sel": {
+        "18054": 0,
+        "2": 1,
+        "33": 2,
+        "559": 0,
+        "842": 0,
+        "96": 0
+      },
+      "cacah_kardinalitas_penting_sebagai_bilangan": {
+        "19586": 1,
+        "19598": 0,
+        "33": 2,
+        "787": 0
+      },
+      "cacah_lima_simbol": {
+        "BNXUSDT": 10,
+        "ICPUSDT": 13,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 11
+      },
+      "cacah_lima_simbol_dalam_wadah_33": {
+        "BNXUSDT": 7,
+        "ICPUSDT": 13,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 11
+      },
+      "cacah_lima_simbol_jumlah": 36,
+      "cacah_lima_simbol_sebagai_kunci": {},
+      "cacah_lima_simbol_sebagai_nilai": {
+        "BNXUSDT": 10,
+        "ICPUSDT": 13,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 11
+      },
+      "cacah_wadah": 43,
+      "jalur_enam_sel": {
+        "18054": [],
+        "2": [
+          ".versi_silang_funding"
+        ],
+        "33": [
+          ".cacah_hidup_tanpa_funding",
+          ".sebaran_bentuk_hidup_tanpa_funding.awal"
+        ],
+        "559": [],
+        "842": [],
+        "96": []
+      },
+      "kardinalitas_maksimum": 33,
+      "kardinalitas_maksimum_funding": 33,
+      "kardinalitas_puncak": 17,
+      "kedalaman_terpotong": 0,
+      "kunci_puncak": [
+        "baris_hidup_tanpa_funding",
+        "bentuk_terbitan_funding",
+        "cacah_baris_dengan_medan",
+        "cacah_hidup_tanpa_funding",
+        "cacah_lubang_tak_dikenal",
+        "catatan_bentuk",
+        "definisi_bentuk_lubang_lokal",
+        "lubang_tak_dikenal",
+        "medan_baris_terlihat",
+        "sebaran_bentuk_hidup_tanpa_funding",
+        "sebaran_bentuk_semua_lubang",
+        "selisih_hidup_tanpa_funding",
+        "selisih_lubang_tak_dikenal",
+        "sidik_data_funding",
+        "sidik_kode",
+        "versi_silang_funding",
+        "waktu_utc"
+      ],
+      "kunci_puncak_dipotong": false,
+      "kunci_puncak_penyebut": 17,
+      "sebaran_kardinalitas_dipotong": false,
+      "sebaran_kardinalitas_penyebut": 7,
+      "sebaran_kardinalitas_teratas": [
+        {
+          "cacah_wadah": 33,
+          "kardinalitas": 8
+        },
+        {
+          "cacah_wadah": 3,
+          "kardinalitas": 6
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 4
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 3
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 33
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 17
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 14
+        }
+      ],
+      "tipe_puncak": "peta",
+      "wadah_panjang_33": [
+        {
+          "jalur": ".baris_hidup_tanpa_funding",
+          "kardinalitas": 33,
+          "tipe": "larik"
+        }
+      ],
+      "wadah_panjang_33_dipotong": false,
+      "wadah_panjang_33_penyebut": 1,
+      "wadah_penting": [
+        {
+          "jalur": ".baris_hidup_tanpa_funding",
+          "kardinalitas": 33,
+          "tipe": "larik"
+        }
+      ],
+      "wadah_penting_dipotong": false,
+      "wadah_penting_penyebut": 1
+    },
+    "kehidupan": {
+      "ada": true,
+      "byte": 280587,
+      "cacah_enam_sel": {
+        "18054": 0,
+        "2": 0,
+        "33": 0,
+        "559": 0,
+        "842": 0,
+        "96": 0
+      },
+      "cacah_kardinalitas_penting_sebagai_bilangan": {
+        "19586": 0,
+        "19598": 0,
+        "33": 0,
+        "787": 0
+      },
+      "cacah_lima_simbol": {
+        "BNXUSDT": 13,
+        "ICPUSDT": 0,
+        "JUPUSDT": 0,
+        "QTUMUSDT": 0,
+        "TLMUSDT": 0
+      },
+      "cacah_lima_simbol_dalam_wadah_33": {},
+      "cacah_lima_simbol_jumlah": 13,
+      "cacah_lima_simbol_sebagai_kunci": {},
+      "cacah_lima_simbol_sebagai_nilai": {
+        "BNXUSDT": 13
+      },
+      "cacah_wadah": 928,
+      "jalur_enam_sel": {
+        "18054": [],
+        "2": [],
+        "33": [],
+        "559": [],
+        "842": [],
+        "96": []
+      },
+      "kardinalitas_maksimum": 456,
+      "kardinalitas_maksimum_funding": 0,
+      "kardinalitas_puncak": 21,
+      "kedalaman_terpotong": 0,
+      "kunci_puncak": [
+        "ambang_sepi",
+        "baris",
+        "bulan_akhir",
+        "bulan_diminta",
+        "bulan_mulai",
+        "cacah_bulan_per_simbol",
+        "cacah_simbol_kohort",
+        "catatan_bukan_bukti",
+        "catatan_penggugur",
+        "catatan_penyebut",
+        "catatan_rentang",
+        "catatan_satuan",
+        "definisi",
+        "galat_kohort",
+        "kendali",
+        "ringkasan",
+        "sidik_kode",
+        "simbol_diukur",
+        "simbol_kendali_hidup",
+        "sumber_kohort",
+        "versi_kehidupan"
+      ],
+      "kunci_puncak_dipotong": false,
+      "kunci_puncak_penyebut": 21,
+      "sebaran_kardinalitas_dipotong": false,
+      "sebaran_kardinalitas_penyebut": 8,
+      "sebaran_kardinalitas_teratas": [
+        {
+          "cacah_wadah": 461,
+          "kardinalitas": 21
+        },
+        {
+          "cacah_wadah": 460,
+          "kardinalitas": 0
+        },
+        {
+          "cacah_wadah": 2,
+          "kardinalitas": 4
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 456
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 38
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 23
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 12
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 2
+        }
+      ],
+      "tipe_puncak": "peta",
+      "wadah_panjang_33": [],
+      "wadah_panjang_33_dipotong": false,
+      "wadah_panjang_33_penyebut": 0,
+      "wadah_penting": [],
+      "wadah_penting_dipotong": false,
+      "wadah_penting_penyebut": 0
+    },
+    "semesta_bulan_1m": {
+      "ada": true,
+      "byte": 18884,
+      "cacah_enam_sel": {
+        "18054": 0,
+        "2": 36,
+        "33": 14,
+        "559": 0,
+        "842": 0,
+        "96": 0
+      },
+      "cacah_kardinalitas_penting_sebagai_bilangan": {
+        "19586": 0,
+        "19598": 0,
+        "33": 14,
+        "787": 0
+      },
+      "cacah_lima_simbol": {
+        "BNXUSDT": 1,
+        "ICPUSDT": 1,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 1
+      },
+      "cacah_lima_simbol_dalam_wadah_33": {},
+      "cacah_lima_simbol_jumlah": 5,
+      "cacah_lima_simbol_sebagai_kunci": {
+        "BNXUSDT": 1,
+        "ICPUSDT": 1,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 1
+      },
+      "cacah_lima_simbol_sebagai_nilai": {},
+      "cacah_wadah": 2,
+      "jalur_enam_sel": {
+        "18054": [],
+        "2": [
+          ".bulan_per_simbol.AMDUSDT",
+          ".bulan_per_simbol.ARMUSDT",
+          ".bulan_per_simbol.BEUSDT",
+          ".bulan_per_simbol.BILLUSDT",
+          ".bulan_per_simbol.BRKBUSDT",
+          ".bulan_per_simbol.BTCUSD1",
+          ".bulan_per_simbol.BTCUSDT_210326",
+          ".bulan_per_simbol.CBRSUSDT",
+          ".bulan_per_simbol.COHRUSDT",
+          ".bulan_per_simbol.CRWVUSDT",
+          ".bulan_per_simbol.CSCOUSDT",
+          ".bulan_per_simbol.CTRUSDT",
+          ".bulan_per_simbol.DISUSDT",
+          ".bulan_per_simbol.DOTECOUSDT",
+          ".bulan_per_simbol.DRAMUSDT",
+          ".bulan_per_simbol.ETHUSDT_210326",
+          ".bulan_per_simbol.FLNCUSDT",
+          ".bulan_per_simbol.HDUSDT",
+          ".bulan_per_simbol.JPMUSDT",
+          ".bulan_per_simbol.LITEUSDT",
+          ".bulan_per_simbol.MRVLUSDT",
+          ".bulan_per_simbol.NBISUSDT",
+          ".bulan_per_simbol.OPENAIUSDT",
+          ".bulan_per_simbol.ORCLUSDT",
+          ".bulan_per_simbol.PHAROSUSDT",
+          ".bulan_per_simbol.QCOMUSDT",
+          ".bulan_per_simbol.QNTXUSDT",
+          ".bulan_per_simbol.RKLBUSDT",
+          ".bulan_per_simbol.SOXLUSDT",
+          ".bulan_per_simbol.SPCXUSDT",
+          ".bulan_per_simbol.STARUSDT",
+          ".bulan_per_simbol.UBERUSDT",
+          ".bulan_per_simbol.USARUSDT",
+          ".bulan_per_simbol.VUSDT",
+          ".bulan_per_simbol.WDCUSDT",
+          ".bulan_per_simbol.WMTUSDT"
+        ],
+        "33": [
+          ".bulan_per_simbol.BIGTIMEUSDT",
+          ".bulan_per_simbol.BONDUSDT",
+          ".bulan_per_simbol.BSVUSDT",
+          ".bulan_per_simbol.GASUSDT",
+          ".bulan_per_simbol.LOOMUSDT",
+          ".bulan_per_simbol.ORBSUSDT",
+          ".bulan_per_simbol.POLYXUSDT",
+          ".bulan_per_simbol.POWRUSDT",
+          ".bulan_per_simbol.RIFUSDT",
+          ".bulan_per_simbol.SLPUSDT",
+          ".bulan_per_simbol.STPTUSDT",
+          ".bulan_per_simbol.STRAXUSDT",
+          ".bulan_per_simbol.TIAUSDT",
+          ".bulan_per_simbol.WAXPUSDT"
+        ],
+        "559": [],
+        "842": [],
+        "96": []
+      },
+      "kardinalitas_maksimum": 937,
+      "kardinalitas_maksimum_funding": 0,
+      "kardinalitas_puncak": 2,
+      "kedalaman_terpotong": 0,
+      "kunci_puncak": [
+        "bulan_per_simbol",
+        "waktu_utc"
+      ],
+      "kunci_puncak_dipotong": false,
+      "kunci_puncak_penyebut": 2,
+      "sebaran_kardinalitas_dipotong": false,
+      "sebaran_kardinalitas_penyebut": 2,
+      "sebaran_kardinalitas_teratas": [
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 937
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 2
+        }
+      ],
+      "tipe_puncak": "peta",
+      "wadah_panjang_33": [],
+      "wadah_panjang_33_dipotong": false,
+      "wadah_panjang_33_penyebut": 0,
+      "wadah_penting": [],
+      "wadah_penting_dipotong": false,
+      "wadah_penting_penyebut": 0
+    },
+    "silang_funding": {
+      "ada": true,
+      "byte": 194728,
+      "cacah_enam_sel": {
+        "18054": 1,
+        "2": 2,
+        "33": 3,
+        "559": 2,
+        "842": 1,
+        "96": 1
+      },
+      "cacah_kardinalitas_penting_sebagai_bilangan": {
+        "19586": 2,
+        "19598": 1,
+        "33": 3,
+        "787": 0
+      },
+      "cacah_lima_simbol": {
+        "BNXUSDT": 25,
+        "ICPUSDT": 15,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 19
+      },
+      "cacah_lima_simbol_dalam_wadah_33": {
+        "BNXUSDT": 7,
+        "ICPUSDT": 13,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 11
+      },
+      "cacah_lima_simbol_jumlah": 61,
+      "cacah_lima_simbol_sebagai_kunci": {},
+      "cacah_lima_simbol_sebagai_nilai": {
+        "BNXUSDT": 25,
+        "ICPUSDT": 15,
+        "JUPUSDT": 1,
+        "QTUMUSDT": 1,
+        "TLMUSDT": 19
+      },
+      "cacah_wadah": 1459,
+      "jalur_enam_sel": {
+        "18054": [
+          ".ringkasan.tabel_silang.HIDUP.funding_ada"
+        ],
+        "2": [
+          ".ringkasan.tabel_silang.SEPI.funding_hilang",
+          ".versi_silang_funding"
+        ],
+        "33": [
+          ".ringkasan.cacah_hidup_tanpa_funding",
+          ".ringkasan.sebaran_bentuk_hidup_tanpa_funding.awal",
+          ".ringkasan.tabel_silang.HIDUP.funding_hilang"
+        ],
+        "559": [
+          ".ringkasan.cacah_mati_luar_kohort_funding_ada",
+          ".ringkasan.tabel_silang.MATI.funding_ada"
+        ],
+        "842": [
+          ".ringkasan.tabel_silang.MATI.funding_hilang"
+        ],
+        "96": [
+          ".ringkasan.tabel_silang.SEPI.funding_ada"
+        ]
+      },
+      "kardinalitas_maksimum": 1401,
+      "kardinalitas_maksimum_funding": 33,
+      "kardinalitas_puncak": 17,
+      "kedalaman_terpotong": 0,
+      "kunci_puncak": [
+        "baris_hidup_tanpa_funding",
+        "baris_mati",
+        "bukan_bukti",
+        "catatan_bentuk",
+        "catatan_penggugur",
+        "catatan_penyebut",
+        "catatan_tafsir",
+        "definisi",
+        "lubang_tak_dikenal",
+        "ringkasan",
+        "sidik_data_funding",
+        "sidik_kode",
+        "sidik_kode_funding",
+        "sumber",
+        "versi_funding",
+        "versi_silang_funding",
+        "waktu_utc"
+      ],
+      "kunci_puncak_dipotong": false,
+      "kunci_puncak_penyebut": 17,
+      "sebaran_kardinalitas_dipotong": false,
+      "sebaran_kardinalitas_penyebut": 14,
+      "sebaran_kardinalitas_teratas": [
+        {
+          "cacah_wadah": 1405,
+          "kardinalitas": 4
+        },
+        {
+          "cacah_wadah": 33,
+          "kardinalitas": 8
+        },
+        {
+          "cacah_wadah": 4,
+          "kardinalitas": 2
+        },
+        {
+          "cacah_wadah": 3,
+          "kardinalitas": 6
+        },
+        {
+          "cacah_wadah": 3,
+          "kardinalitas": 5
+        },
+        {
+          "cacah_wadah": 3,
+          "kardinalitas": 3
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 1401
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 35
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 33
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 17
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 14
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 9
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 1
+        },
+        {
+          "cacah_wadah": 1,
+          "kardinalitas": 0
+        }
+      ],
+      "tipe_puncak": "peta",
+      "wadah_panjang_33": [
+        {
+          "jalur": ".baris_hidup_tanpa_funding",
+          "kardinalitas": 33,
+          "tipe": "larik"
+        }
+      ],
+      "wadah_panjang_33_dipotong": false,
+      "wadah_panjang_33_penyebut": 1,
+      "wadah_penting": [
+        {
+          "jalur": ".baris_hidup_tanpa_funding",
+          "kardinalitas": 33,
+          "tipe": "larik"
+        }
+      ],
+      "wadah_penting_dipotong": false,
+      "wadah_penting_penyebut": 1
+    }
+  },
+  "kandidat_bergalat": [],
+  "kandidat_diperiksa": [
+    "funding_semesta",
+    "silang_funding",
+    "hidup_tanpa_funding",
+    "kehidupan",
+    "semesta_bulan_1m"
+  ],
+  "kandidat_hilang": [],
+  "ringkas": {
+    "funding_semesta_punya_wadah_787": true,
+    "funding_semesta_tipe_puncak": "peta",
+    "hidup_tanpa_funding_cacah_wadah_33": 1,
+    "hidup_tanpa_funding_punya_wadah_33": true,
+    "jangkauan_kurang_dari_semesta": true,
+    "jangkauan_sama_dengan_lolos": false
+  },
+  "sidik_kode": "ef5be4edd8b980efe461828137f0ff80161235134c53bc62f62bb0deab76af29",
+  "silang": {
+    "cacah_enam_sel_di_silang_funding": {
+      "18054": 1,
+      "2": 2,
+      "33": 3,
+      "559": 2,
+      "842": 1,
+      "96": 1
+    },
+    "enam_sel_ditemukan_di_mana_pun": {
+      "18054": true,
+      "2": true,
+      "33": true,
+      "559": true,
+      "842": true,
+      "96": true
+    },
+    "enam_sel_lengkap": true,
+    "enam_sel_tercatat": [
+      18054,
+      33,
+      559,
+      842,
+      96,
+      2
+    ],
+    "jumlah_cocok_19586": true,
+    "jumlah_enam_sel": 19586,
+    "jumlah_enam_sel_tercatat": 19586
+  },
+  "versi_sumber_funding": 1,
+  "waktu_utc": "2026-07-31T10:47:58Z"
+}

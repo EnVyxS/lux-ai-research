@@ -6,7 +6,9 @@
   "cacah_manifes_rusak": 0,
   "catatan_arti_sah": "verifikasi_rilis.sah didefinisikan di rilis.verifikasi(): ada bagian, nol sha tak cocok, nol bagian hilang, cacah_anggota_terbaca sama dengan cacah_berkas, cacah_bagian_melebihi_batas nol, dan cacah_bagian_taksiran_terlampaui nol",
   "catatan_batas": "modul ini menyalin nilai apa adanya dan TIDAK menghitung ulang isi manifes; akibat seperti dikemas_karantina BUKAN pengganti medan versi_pecahan",
+  "catatan_jumlah": "setiap _jumlah bernilai null bila ada satu saja nilai yang bukan bilangan bulat, sebab menjumlahkan daftar yang memuat null adalah mengarang (aturan 21 dan 30)",
   "catatan_penggugur": "cacah_manifes_hilang > 0, cacah_manifes_rusak > 0, atau medan_absen tidak kosong berarti laporan ini TIDAK cukup untuk memutuskan blokir ketujuh (aturan 24)",
+  "catatan_versi_2": "VERSI 2 menambahkan cacah_parquet_ditulis, cacah_karantina, cacah_parquet_karantina_ditulis, penyebut, gerbang, dan status untuk melunasi utang ukur 39 - butir 4 dan 5 R-324 yang tidak terukur karena kelalaian VERSI 1. Pengukuran ini TIDAK mengubah vonis R-324; vonis MELESET sudah sah dan final atas butir 1 dan butir 3. Medan yang absen tetap dilaporkan absen, dan absen BUKAN nol",
   "medan_absen": {
     "cacah_entri": [
       0,
@@ -29,6 +31,13 @@
       7
     ]
   },
+  "medan_dijumlah": [
+    "cacah_parquet_ditulis",
+    "cacah_karantina",
+    "cacah_parquet_karantina_ditulis",
+    "cacah_parquet_tak_terkemas",
+    "cacah_karantina_tak_terkemas"
+  ],
   "medan_penentu": [
     "versi_pecahan",
     "verifikasi_rilis",
@@ -90,8 +99,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 3,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2408,
+        "cacah_parquet_karantina_ditulis": 3,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2295,
         "parquet_dipersistenkan": true,
@@ -104,6 +128,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -112,6 +142,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -199,8 +230,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 3,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2465,
+        "cacah_parquet_karantina_ditulis": 3,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2268,
         "parquet_dipersistenkan": true,
@@ -213,6 +259,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -221,6 +273,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -308,8 +361,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 0,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2337,
+        "cacah_parquet_karantina_ditulis": 0,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2293,
         "parquet_dipersistenkan": true,
@@ -322,6 +390,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -330,6 +404,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -405,8 +480,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 1,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2153,
+        "cacah_parquet_karantina_ditulis": 1,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2356,
         "parquet_dipersistenkan": true,
@@ -419,6 +509,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -427,6 +523,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -514,8 +611,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 1,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2496,
+        "cacah_parquet_karantina_ditulis": 1,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2327,
         "parquet_dipersistenkan": true,
@@ -528,6 +640,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -536,6 +654,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -623,8 +742,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 0,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2741,
+        "cacah_parquet_karantina_ditulis": 0,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2341,
         "parquet_dipersistenkan": true,
@@ -637,6 +771,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -645,6 +785,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -720,8 +861,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 3,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2649,
+        "cacah_parquet_karantina_ditulis": 3,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2399,
         "parquet_dipersistenkan": true,
@@ -734,6 +890,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -742,6 +904,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -829,8 +992,23 @@
       ],
       "nilai": {
         "cacah_entri": null,
+        "cacah_karantina": 1,
         "cacah_karantina_tak_terkemas": 0,
+        "cacah_parquet_ditulis": 2337,
+        "cacah_parquet_karantina_ditulis": 1,
         "cacah_parquet_tak_terkemas": 0,
+        "gerbang": {
+          "__kunci": [
+            "baris_diperiksa",
+            "contoh_gagal",
+            "pelanggaran_per_klausa",
+            "persen_lolos",
+            "simbol_bulan_dinilai",
+            "simbol_bulan_gagal",
+            "simbol_bulan_lolos",
+            "slot_diperiksa"
+          ]
+        },
         "karantina_dipersistenkan": true,
         "nisbah_parquet_per_zip": 1.2334,
         "parquet_dipersistenkan": true,
@@ -843,6 +1021,12 @@
             "total"
           ]
         },
+        "penyebut": {
+          "__kunci": [
+            "simbol_bulan_diminta",
+            "simbol_bulan_terunduh"
+          ]
+        },
         "selisih_cacah_bulan": {
           "__kunci": [
             "cacah_simbol_berselisih",
@@ -851,6 +1035,7 @@
           ]
         },
         "sidik_kode": "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601",
+        "status": "TERUKUR",
         "total_pecahan": null,
         "verifikasi_rilis": {
           "anggota_cocok": true,
@@ -898,6 +1083,23 @@
       null,
       null
     ],
+    "cacah_karantina_cacah_nol": 2,
+    "cacah_karantina_jumlah": 12,
+    "cacah_karantina_nilai": [
+      3,
+      3,
+      0,
+      1,
+      1,
+      0,
+      3,
+      1
+    ],
+    "cacah_karantina_pecahan_nol": [
+      2,
+      5
+    ],
+    "cacah_karantina_tak_terkemas_cacah_nol": 8,
     "cacah_karantina_tak_terkemas_jumlah": 0,
     "cacah_karantina_tak_terkemas_nilai": [
       0,
@@ -909,6 +1111,46 @@
       0,
       0
     ],
+    "cacah_karantina_tak_terkemas_pecahan_nol": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cacah_parquet_ditulis_cacah_nol": 0,
+    "cacah_parquet_ditulis_jumlah": 19586,
+    "cacah_parquet_ditulis_nilai": [
+      2408,
+      2465,
+      2337,
+      2153,
+      2496,
+      2741,
+      2649,
+      2337
+    ],
+    "cacah_parquet_ditulis_pecahan_nol": [],
+    "cacah_parquet_karantina_ditulis_cacah_nol": 2,
+    "cacah_parquet_karantina_ditulis_jumlah": 12,
+    "cacah_parquet_karantina_ditulis_nilai": [
+      3,
+      3,
+      0,
+      1,
+      1,
+      0,
+      3,
+      1
+    ],
+    "cacah_parquet_karantina_ditulis_pecahan_nol": [
+      2,
+      5
+    ],
+    "cacah_parquet_tak_terkemas_cacah_nol": 8,
     "cacah_parquet_tak_terkemas_jumlah": 0,
     "cacah_parquet_tak_terkemas_nilai": [
       0,
@@ -919,6 +1161,114 @@
       0,
       0,
       0
+    ],
+    "cacah_parquet_tak_terkemas_pecahan_nol": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "gerbang_nilai": [
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      },
+      {
+        "__kunci": [
+          "baris_diperiksa",
+          "contoh_gagal",
+          "pelanggaran_per_klausa",
+          "persen_lolos",
+          "simbol_bulan_dinilai",
+          "simbol_bulan_gagal",
+          "simbol_bulan_lolos",
+          "slot_diperiksa"
+        ]
+      }
     ],
     "karantina_dipersistenkan_nilai": [
       true,
@@ -939,6 +1289,56 @@
       true,
       true,
       true
+    ],
+    "penyebut_nilai": [
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      },
+      {
+        "__kunci": [
+          "simbol_bulan_diminta",
+          "simbol_bulan_terunduh"
+        ]
+      }
     ],
     "selisih_cacah_bulan_nilai": [
       {
@@ -1001,6 +1401,16 @@
     "sidik_kode_manifes_unik": [
       "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601"
     ],
+    "status_nilai": [
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR",
+      "TERUKUR"
+    ],
     "verifikasi_rilis_karantina_sah": [
       true,
       true,
@@ -1037,8 +1447,8 @@
       "6"
     ]
   },
-  "sidik_kode": "8dcbe826a1c710385f5cda29636125544ba43f35e252b5f2daa585e87077153d",
+  "sidik_kode": "b1123f77d66d5a324fcc10fabff12d4cc5ec2290065922539a67f0a063d32e60",
   "total_pecahan_diminta": 8,
-  "versi_kunci_manifes": 1,
-  "waktu_utc": "2026-07-31T13:30:52Z"
+  "versi_kunci_manifes": 2,
+  "waktu_utc": "2026-07-31T13:59:22Z"
 }

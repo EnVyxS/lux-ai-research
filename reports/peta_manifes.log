@@ -1,0 +1,73 @@
+mulai 2026-07-31T09:28:05Z
+Python 3.11.15
+-rw-r--r-- 1 runner runner 2530465 Jul 31 09:28 reports/manifes_pecahan_0.json
+-rw-r--r-- 1 runner runner 2587577 Jul 31 09:28 reports/manifes_pecahan_1.json
+-rw-r--r-- 1 runner runner 2446093 Jul 31 09:28 reports/manifes_pecahan_2.json
+-rw-r--r-- 1 runner runner 2257314 Jul 31 09:28 reports/manifes_pecahan_3.json
+-rw-r--r-- 1 runner runner 2615515 Jul 31 09:28 reports/manifes_pecahan_4.json
+-rw-r--r-- 1 runner runner 2865596 Jul 31 09:28 reports/manifes_pecahan_5.json
+-rw-r--r-- 1 runner runner 2780523 Jul 31 09:28 reports/manifes_pecahan_6.json
+-rw-r--r-- 1 runner runner 2450719 Jul 31 09:28 reports/manifes_pecahan_7.json
+{
+  "ringkasan": {
+    "bukan_adjudikasi": "laporan ini tidak memuat blok uji apa pun; vonis alat bukan adjudikasi (KC-49)",
+    "byte_manifes_total": 20533802,
+    "cacah_entri_per_jalur": {
+      "daftar_karantina": 12,
+      "gerbang.contoh_gagal": 12,
+      "karantina.daftar_karantina": 12,
+      "manifes": 19598,
+      "rilis.bagian": 23,
+      "rilis_karantina.bagian": 6
+    },
+    "cacah_manifes_dibaca": 8,
+    "cacah_manifes_diminta": 8,
+    "catatan_medan": "medan_simbol dan medan_bulan DITEMUKAN dari bentuk nilai, bukan ditebak dari nama; nama yang dilaporkan di sini sah dikutip sebagai nama terbaca (aturan 71)",
+    "catatan_penggugur": "yang menggugurkan hanya cacat bahan baku: manifes hilang, sidik tak seragam, simbol-bulan ganda, simbol muncul lintas pecahan, atau daftar utama tidak ditemukan. Selisih terhadap 19.598, 19.586, dan 787 TIDAK menggugurkan apa pun (aturan 24, 72)",
+    "catatan_penyebut": "cacah_simbol_bulan_unik adalah cacah entri simbol-bulan yang TERDAFTAR di manifes, bukan cacah parquet yang LOLOS gerbang; keduanya penyebut berbeda dan angkanya dilarang dipertukarkan (aturan 76, KC-39)",
+    "daftar_utama_hilang": false,
+    "jalur_berpasangan": [
+      "daftar_karantina",
+      "gerbang.contoh_gagal",
+      "karantina.daftar_karantina",
+      "manifes"
+    ],
+    "kendali": [
+      {
+        "cacah_bulan": 78,
+        "sah": true,
+        "simbol": "BTCUSDT"
+      },
+      {
+        "cacah_bulan": 78,
+        "sah": true,
+        "simbol": "ETHUSDT"
+      }
+    ],
+    "kendali_sah": true,
+    "manifes_hilang": [],
+    "sensus": {
+      "bulan_paling_akhir": "2026-06",
+      "bulan_paling_awal": "2020-01",
+      "cacah_entri": 19598,
+      "cacah_simbol_bulan_ganda": 0,
+      "cacah_simbol_bulan_unik": 19598,
+      "cacah_simbol_lintas_pecahan": 0,
+      "cacah_simbol_unik": 787,
+      "jalur_utama": "manifes",
+      "medan_bulan": "bulan",
+      "medan_simbol": "simbol",
+      "selisih_terhadap_cacah_simbol": 0,
+      "selisih_terhadap_penyebut_lolos": 12,
+      "selisih_terhadap_penyebut_semesta": 0,
+      "simbol_lintas_pecahan": []
+    },
+    "sidik_kode_manifes": [
+      "237ccf427faf9d48e9c0904433a56e8902de64de6552daee5d3053093bfba601"
+    ],
+    "sidik_seragam": true
+  }
+}
+byte_laporan=69736
+kode_keluar=0
+-rw-r--r-- 1 runner runner 69736 Jul 31 09:28 reports/peta_manifes.json

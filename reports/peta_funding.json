@@ -1,0 +1,421 @@
+{
+  "bukan_bukti": false,
+  "cacah_entri": 19598,
+  "cacah_entri_per_pecahan": {
+    "0": 2411,
+    "1": 2468,
+    "2": 2337,
+    "3": 2154,
+    "4": 2497,
+    "5": 2741,
+    "6": 2652,
+    "7": 2338
+  },
+  "funding": {
+    "cacah_bulan_funding_true": 0,
+    "cacah_kunci_hilang": 0,
+    "cacah_simbol_funding_true": 0,
+    "cocok_33": false,
+    "cocok_lima_simbol": false,
+    "lima_simbol_tercatat": {
+      "BNXUSDT": {
+        "null": 51
+      },
+      "ICPUSDT": {
+        "null": 62
+      },
+      "JUPUSDT": {
+        "null": 30
+      },
+      "QTUMUSDT": {
+        "null": 77
+      },
+      "TLMUSDT": {
+        "null": 60
+      }
+    },
+    "sebaran_nilai": {
+      "null": 19598
+    },
+    "sebaran_per_pecahan": {
+      "0": {
+        "null": 2411
+      },
+      "1": {
+        "null": 2468
+      },
+      "2": {
+        "null": 2337
+      },
+      "3": {
+        "null": 2154
+      },
+      "4": {
+        "null": 2497
+      },
+      "5": {
+        "null": 2741
+      },
+      "6": {
+        "null": 2652
+      },
+      "7": {
+        "null": 2338
+      }
+    },
+    "simbol_funding_true": [],
+    "simbol_funding_true_dipotong": false,
+    "simbol_funding_true_penyebut": 0
+  },
+  "keanggotaan": {
+    "bulan_tak_berpola": [],
+    "cacah_bulan_pada_simbol_tak_berpola": 246,
+    "cacah_simbol_tak_berpola": 18,
+    "cacah_simbol_unik": 787,
+    "cocok_787": true,
+    "simbol_berpola_ikut_dalam_cacah": 769,
+    "simbol_tak_berpola": [
+      {
+        "cacah_bulan": 41,
+        "simbol": "TUSDT"
+      },
+      {
+        "cacah_bulan": 27,
+        "simbol": "WUSDT"
+      },
+      {
+        "cacah_bulan": 23,
+        "simbol": "GUSDT"
+      },
+      {
+        "cacah_bulan": 18,
+        "simbol": "DUSDT"
+      },
+      {
+        "cacah_bulan": 18,
+        "simbol": "SUSDT"
+      },
+      {
+        "cacah_bulan": 14,
+        "simbol": "AUSDT"
+      },
+      {
+        "cacah_bulan": 14,
+        "simbol": "BUSDT"
+      },
+      {
+        "cacah_bulan": 13,
+        "simbol": "FUSDT"
+      },
+      {
+        "cacah_bulan": 13,
+        "simbol": "HUSDT"
+      },
+      {
+        "cacah_bulan": 12,
+        "simbol": "CUSDT"
+      },
+      {
+        "cacah_bulan": 12,
+        "simbol": "MUSDT"
+      },
+      {
+        "cacah_bulan": 10,
+        "simbol": "QUSDT"
+      },
+      {
+        "cacah_bulan": 9,
+        "simbol": "4USDT"
+      },
+      {
+        "cacah_bulan": 9,
+        "simbol": "币安人生USDT"
+      },
+      {
+        "cacah_bulan": 6,
+        "simbol": "我踏马来了USDT"
+      },
+      {
+        "cacah_bulan": 4,
+        "simbol": "龙虾USDT"
+      },
+      {
+        "cacah_bulan": 2,
+        "simbol": "VUSDT"
+      },
+      {
+        "cacah_bulan": 1,
+        "simbol": "OUSDT"
+      }
+    ],
+    "simbol_tak_berpola_dipotong": false,
+    "simbol_tak_berpola_penyebut": 18
+  },
+  "kendali": {
+    "BTCUSDT": 78,
+    "ETHUSDT": 78
+  },
+  "kendali_sah": true,
+  "manifes_hilang": [],
+  "selisih_penyebut_lolos": 12,
+  "selisih_penyebut_semesta": 0,
+  "sidik_kode": "ed9c3c4e985dc4320011cb47cd0ae2cb68b0209505ac27559396748d3c7cbdfc",
+  "terhenti": {
+    "baris_saat_terhenti": {
+      "cacah": 587,
+      "jumlah": 24801034,
+      "maks": 44640,
+      "min": 3900
+    },
+    "baris_saat_tidak_terhenti": {
+      "cacah": 19011,
+      "jumlah": 815041100,
+      "maks": 44640,
+      "min": 330
+    },
+    "cacah_kunci_hilang": 0,
+    "cacah_simbol_terhenti": 27,
+    "cacah_terhenti_true": 587,
+    "cocok_587": true,
+    "sebaran_bulan": {
+      "2020-01": 1,
+      "2020-02": 1,
+      "2020-03": 1,
+      "2020-04": 1,
+      "2020-05": 1,
+      "2020-06": 1,
+      "2020-07": 2,
+      "2020-08": 2,
+      "2020-09": 6,
+      "2020-10": 8,
+      "2020-11": 8,
+      "2020-12": 7,
+      "2021-01": 10,
+      "2021-02": 12,
+      "2021-03": 11,
+      "2021-04": 12,
+      "2021-05": 12,
+      "2021-06": 13,
+      "2021-07": 13,
+      "2021-08": 14,
+      "2021-09": 14,
+      "2021-10": 15,
+      "2021-11": 15,
+      "2021-12": 16,
+      "2022-01": 16,
+      "2022-02": 15,
+      "2022-03": 14,
+      "2022-04": 14,
+      "2022-05": 13,
+      "2022-06": 9,
+      "2022-07": 9,
+      "2022-08": 9,
+      "2022-09": 10,
+      "2022-10": 10,
+      "2022-11": 10,
+      "2022-12": 10,
+      "2023-01": 10,
+      "2023-02": 12,
+      "2023-03": 12,
+      "2023-04": 12,
+      "2023-05": 12,
+      "2023-06": 12,
+      "2023-07": 12,
+      "2023-08": 12,
+      "2023-09": 13,
+      "2023-10": 13,
+      "2023-11": 14,
+      "2023-12": 14,
+      "2024-01": 14,
+      "2024-02": 14,
+      "2024-03": 14,
+      "2024-04": 14,
+      "2024-05": 14,
+      "2024-06": 5,
+      "2024-07": 5,
+      "2024-08": 3,
+      "2024-09": 3,
+      "2024-10": 1,
+      "2024-11": 1,
+      "2024-12": 1,
+      "2025-01": 1,
+      "2025-02": 1,
+      "2025-03": 1,
+      "2025-04": 1,
+      "2025-05": 1,
+      "2025-06": 1,
+      "2025-07": 1,
+      "2025-08": 1,
+      "2025-09": 1,
+      "2025-10": 1,
+      "2025-11": 1,
+      "2025-12": 1,
+      "2026-01": 1,
+      "2026-02": 1,
+      "2026-03": 1
+    },
+    "silang": {
+      "terhenti=False": {
+        "berheader=False": 1754,
+        "berheader=True": 17257,
+        "dikemas=True": 18999,
+        "gagal_unduh=False": 19011,
+        "gerbang_lolos=False": 12,
+        "gerbang_lolos=True": 18999,
+        "karantina=False": 18999,
+        "karantina=True": 12
+      },
+      "terhenti=True": {
+        "berheader=False": 198,
+        "berheader=True": 389,
+        "dikemas=True": 587,
+        "gagal_unduh=False": 587,
+        "gerbang_lolos=True": 587,
+        "karantina=False": 587
+      }
+    },
+    "simbol_terhenti": [
+      {
+        "bulan_simbol": 65,
+        "cacah": 65,
+        "simbol": "EOSUSDT"
+      },
+      {
+        "bulan_simbol": 48,
+        "cacah": 48,
+        "simbol": "MATICUSDT"
+      },
+      {
+        "bulan_simbol": 45,
+        "cacah": 45,
+        "simbol": "HNTUSDT"
+      },
+      {
+        "bulan_simbol": 45,
+        "cacah": 45,
+        "simbol": "SRMUSDT"
+      },
+      {
+        "bulan_simbol": 44,
+        "cacah": 44,
+        "simbol": "TOMOUSDT"
+      },
+      {
+        "bulan_simbol": 40,
+        "cacah": 40,
+        "simbol": "BTSUSDT"
+      },
+      {
+        "bulan_simbol": 34,
+        "cacah": 34,
+        "simbol": "AUDIOUSDT"
+      },
+      {
+        "bulan_simbol": 30,
+        "cacah": 30,
+        "simbol": "ANTUSDT"
+      },
+      {
+        "bulan_simbol": 27,
+        "cacah": 27,
+        "simbol": "GALUSDT"
+      },
+      {
+        "bulan_simbol": 21,
+        "cacah": 21,
+        "simbol": "FOOTBALLUSDT"
+      },
+      {
+        "bulan_simbol": 20,
+        "cacah": 20,
+        "simbol": "YFIIUSDT"
+      },
+      {
+        "bulan_simbol": 18,
+        "cacah": 18,
+        "simbol": "RNDRUSDT"
+      },
+      {
+        "bulan_simbol": 17,
+        "cacah": 17,
+        "simbol": "LUNAUSDT"
+      },
+      {
+        "bulan_simbol": 17,
+        "cacah": 17,
+        "simbol": "AKROUSDT"
+      },
+      {
+        "bulan_simbol": 16,
+        "cacah": 16,
+        "simbol": "DODOUSDT"
+      },
+      {
+        "bulan_simbol": 16,
+        "cacah": 16,
+        "simbol": "BZRXUSDT"
+      },
+      {
+        "bulan_simbol": 16,
+        "cacah": 16,
+        "simbol": "COCOSUSDT"
+      },
+      {
+        "bulan_simbol": 13,
+        "cacah": 13,
+        "simbol": "FRONTUSDT"
+      },
+      {
+        "bulan_simbol": 10,
+        "cacah": 10,
+        "simbol": "BDXNUSDT"
+      },
+      {
+        "bulan_simbol": 10,
+        "cacah": 10,
+        "simbol": "BTTUSDT"
+      },
+      {
+        "bulan_simbol": 9,
+        "cacah": 9,
+        "simbol": "KEEPUSDT"
+      },
+      {
+        "bulan_simbol": 7,
+        "cacah": 7,
+        "simbol": "MBLUSDT"
+      },
+      {
+        "bulan_simbol": 5,
+        "cacah": 5,
+        "simbol": "NUUSDT"
+      },
+      {
+        "bulan_simbol": 5,
+        "cacah": 5,
+        "simbol": "LENDUSDT"
+      },
+      {
+        "bulan_simbol": 4,
+        "cacah": 4,
+        "simbol": "1000BTTCUSDT"
+      },
+      {
+        "bulan_simbol": 3,
+        "cacah": 3,
+        "simbol": "ANCUSDT"
+      },
+      {
+        "bulan_simbol": 2,
+        "cacah": 2,
+        "simbol": "DOTECOUSDT"
+      }
+    ],
+    "simbol_terhenti_dipotong": false,
+    "simbol_terhenti_penyebut": 27,
+    "terhenti_bukan_bulan_terakhir": 560,
+    "terhenti_pada_bulan_terakhir": 27
+  },
+  "versi_peta_funding": 1,
+  "waktu_utc": "2026-07-31T10:34:13Z"
+}

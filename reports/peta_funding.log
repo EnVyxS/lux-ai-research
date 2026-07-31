@@ -1,0 +1,23 @@
+mulai 2026-07-31T10:34:13Z
+Python 3.11.15
+--- ls -l manifes ---
+-rw-r--r-- 1 runner runner 2530465 Jul 31 10:34 reports/manifes_pecahan_0.json
+-rw-r--r-- 1 runner runner 2587577 Jul 31 10:34 reports/manifes_pecahan_1.json
+-rw-r--r-- 1 runner runner 2446093 Jul 31 10:34 reports/manifes_pecahan_2.json
+-rw-r--r-- 1 runner runner 2257314 Jul 31 10:34 reports/manifes_pecahan_3.json
+-rw-r--r-- 1 runner runner 2615515 Jul 31 10:34 reports/manifes_pecahan_4.json
+-rw-r--r-- 1 runner runner 2865596 Jul 31 10:34 reports/manifes_pecahan_5.json
+-rw-r--r-- 1 runner runner 2780523 Jul 31 10:34 reports/manifes_pecahan_6.json
+-rw-r--r-- 1 runner runner 2450719 Jul 31 10:34 reports/manifes_pecahan_7.json
+--- mulai jalan ---
+cacah_entri=19598
+cacah_simbol_unik=787
+funding.sebaran_nilai={"null": 19598}
+funding.cacah_simbol_funding_true=0
+funding.cacah_bulan_funding_true=0
+terhenti.cacah_terhenti_true=587
+terhenti.pada_bulan_terakhir=27
+keanggotaan.cacah_simbol_tak_berpola=18
+byte_laporan=8392
+kode_keluar=0
+--- selesai jalan kode=0 ---
